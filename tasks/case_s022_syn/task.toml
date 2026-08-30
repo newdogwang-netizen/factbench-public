@@ -1,0 +1,39 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "factbench/case-s022-syn"
+version = "1.0.0"
+description = "Write a factually consistent clinical note from a fictional pain clinic follow-up consultation transcript (deterministic factuality scoring)."
+keywords = ["clinical-notes", "factual-consistency", "medical", "pain"]
+[[task.authors]]
+name = "Heidi Health"
+
+[metadata]
+protocol = "detfact-v2.0"
+fictional = true
+difficulty = "hard"
+gold_pipeline = "note-consensus v2 (7-model fact-level consensus, quote gate, transcript anchoring, arbitration)"
+gold_facts = 39
+must_cover = 36
+domain_gate = "valid"
+pass_rule = "critical_wrong == 0 and coverage >= 0.43 (oracle-calibrated)"
+
+[verifier]
+timeout_sec = 600.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 600.0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

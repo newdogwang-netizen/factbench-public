@@ -1,0 +1,173 @@
+History of Presenting Complaints:
+- Symptoms began approximately eight months ago in February.
+- Onset was not associated with a specific injury.
+- Symptoms began after a weekend of overhead yard work trimming hedges.
+- Patient woke the following Monday with neck locked up.
+- Over the next couple of weeks, pain began radiating down the right arm.
+- Patient underwent a right C6 epidural injection four weeks ago.
+- Patient reports being approximately sixty percent better overall since the injection.
+- The burning pain from the neck into the shoulder blade is essentially resolved.
+- Right-sided neck pain was previously 7/10 and constant.
+- Right-sided neck pain is now approximately 3/10.
+- Right-sided neck pain is approximately 2/10 on good days.
+- Neck pain is no longer constant.
+- Neck pain now occurs primarily at the end of the day.
+- Neck pain now occurs after prolonged computer use.
+- Relief from the injection began around day three post-procedure.
+- Relief from the injection began around day four post-procedure.
+- By day three or four, patient could turn head to check blind spot while driving without severe pain.
+- The injection site was sore for the first two days post-procedure.
+- Shooting/electric pain down the right arm was previously constant.
+- Shooting/electric pain down the right arm is now intermittent.
+- Patient experiences brief zings down the right arm a few times daily.
+- Persistent tingling and numbness in the right thumb.
+- Persistent tingling and numbness in the right pointer finger.
+- Tingling and numbness sometimes extend into the right middle finger.
+- Finger tingling and numbness come and go.
+- Finger tingling and numbness are worse at night when lying in bed.
+- Finger tingling and numbness worsen after typing at work.
+- Patient wakes at night with right hand feeling asleep.
+- Patient must shake out the right hand to restore sensation.
+- Weakness has improved.
+- Patient dropped a coffee mug twice in June.
+- Patient has not dropped anything in approximately three weeks.
+- Grip strength remains impaired.
+- Patient has difficulty opening jars.
+- Sleep quality is much improved.
+- Patient previously woke three to four times nightly due to arm pain.
+- Patient now wakes approximately once nightly.
+- Nortriptiline is reported to help with sleep depth.
+- Occipital headaches have resolved completely.
+- No headaches for approximately three weeks.
+- No fever.
+- No chills.
+- No unexplained weight loss.
+- No bowel or bladder dysfunction.
+- No balance problems.
+- No unsteadiness walking.
+- No dropping things with legs.
+- No tripping.
+- Patient walks the dog 1.5 miles every morning without difficulty.
+- Left arm is unaffected.
+
+Past Medical & Psychiatric History:
+- Hypertension.
+- Borderline high cholesterol.
+- High cholesterol is managed with diet without medication.
+- Heartburn is intermittent and has been present for years.
+- Blood sugar was once slightly elevated.
+- No diabetes.
+- Appendectomy at age 25.
+- Two prior cesarean sections.
+- No prior neck or spine surgeries.
+- Penicillin allergy causes hives.
+- Penicillin allergy known since childhood.
+- No latex allergy.
+- No contrast dye allergy.
+- Prior injection was tolerated without issue.
+
+Medications:
+- Nortriptiline 25 mg at bedtime.
+- Nortriptiline was titrated from 10 mg daily for two weeks.
+- Nortriptiline was increased to 25 mg approximately five to six weeks ago.
+- Nortriptiline dose to be increased to 50 mg at bedtime starting tonight.
+- Naproxin 500 mg as needed.
+- Naproxin is taken approximately three to four days per week.
+- Naproxin is typically taken once on the days it is used.
+- Naproxin is always taken with food.
+- Licinopril 10 mg once daily in the morning.
+- Licinopril has been taken for six years.
+- Vitamin D 2000 units daily.
+- Vitamin D was prescribed last year by the patient's regular doctor.
+- Acetaminophen 500 mg occasionally.
+- Acetaminophen is used once or twice weekly as an alternative to naproxin.
+- Omeprazol 20 mg once daily in the morning before breakfast.
+- Previous gabapentin 300 mg was discontinued last spring.
+- Gabapentin was discontinued due to ankle edema.
+- Gabapentin was discontinued due to cognitive fogginess.
+- Gabapentin provided minimal pain relief.
+- Nortriptiline causes mild dry mouth.
+- Transient morning grogginess occurred when starting 25 mg nortriptiline.
+- Morning grogginess resolved after the first few days.
+- Occasional heartburn occurs with naproxin use.
+- Heartburn history predates current naproxin use.
+
+Family History:
+- Father survived a myocardial infarction at age 63.
+- Father passed away a few years ago from unrelated causes.
+- Mother has osteoporosis.
+- Mother has osteoarthritis.
+- Mother's arthritis is the wear and tear kind.
+- Mother's arthritis is not the rheumatoid kind.
+- Brother has a bad back.
+- Brother worked construction for thirty years.
+
+Social History:
+- Occupation is administrative assistant at a school district.
+- Work involves frequent typing and computer use.
+- Patient is married.
+- Patient has two children.
+- Patient has a dog.
+- Smoking history of approximately one pack per day for ten years during twenties.
+- Patient quit smoking twelve years ago.
+- Alcohol use consists of one glass of wine on weekends.
+- Alcohol use occasionally consists of two glasses of wine during book club.
+- No recreational drug use.
+- No marijuana use.
+- Patient walks the dog 1.5 miles every morning.
+
+Physical Examination:
+- Gait is steady.
+- Right cervical rotation catches slightly at the end of range.
+- Chin down to chest produces little pull.
+- Looking up at the ceiling produces little pull.
+- Arm abduction strength is strong bilaterally.
+- Arm adduction strength is strong bilaterally.
+- Right grip is slightly weaker than left.
+- Right grip is improved compared to the prior visit.
+- Neck compression and tilt reproduce mild tingling into the right thumb.
+- Neck compression and tilt response is mildly positive.
+- Neck compression and tilt response is much less than before.
+- Deep tendon reflexes are symmetric.
+- Light touch sensation is decreased on the right thumb.
+- Decreased sensation on the right thumb is consistent with C6 distribution.
+- Overall examination is meaningfully better than four weeks ago.
+
+Diagnosis:
+- Right C6 radiculopathy.
+- Possible mild carpal tunnel syndrome.
+
+Treatment Plan:
+- Schedule second epidural injection in approximately three weeks on a Tuesday.
+- Discontinue naproxin three days before the procedure.
+- Acetaminophen is permitted as needed for pain prior to the procedure.
+- Nothing by mouth after midnight the night before the procedure.
+- Procedure will involve a little sedation.
+- Patient requires a driver for transportation home.
+- Procedure is expected to take approximately two hours total.
+- Second injection is planned because the first provided approximately sixty percent relief.
+- Physician discussed that a second injection often provides additional relief.
+- Increase nortriptiline to 50 mg at bedtime.
+- If morning grogginess persists beyond four to five days after dose increase, return to 25 mg and contact the clinic.
+- Start omeprazol 20 mg once daily before breakfast.
+- Continue naproxin as needed with food.
+- Maintain current as-needed naproxin pattern.
+- Order electromyography and nerve conduction study of the right arm.
+- EMG is ordered to confirm C6 radiculopathy.
+- EMG is ordered to assess remaining nerve root irritation.
+- EMG is ordered to differentiate C6 radiculopathy from carpal tunnel syndrome.
+- Continue physical therapy twice weekly for four additional weeks.
+- Likely transition to home program only after four additional weeks of physical therapy.
+- Continue home exercise program approximately five days per week.
+- Maintain workstation monitor at eye level.
+- Stand and roll shoulders every 30 to 45 minutes for approximately sixty seconds.
+- Continue daily dog walking.
+- Follow-up appointment in six weeks.
+- Patient instructed to contact the clinic sooner if weakness worsens.
+- Patient instructed to contact the clinic sooner if dropping objects resumes.
+- Patient instructed to contact the clinic sooner if fever develops.
+- Patient instructed to contact the clinic sooner if a bad headache occurs after the injection.
+- Patient instructed to contact the clinic sooner if a post-procedure headache is worse when standing up.
+- If EMG confirms carpal tunnel, initiate nighttime wrist bracing to start.
+- Nortriptiline may be tapered once patient is stable and feeling good for a few months.
+- Omeprazol will be reassessed in six weeks and may be discontinued if naproxin use is minimal.

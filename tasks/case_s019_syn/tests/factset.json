@@ -1,0 +1,3867 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_s019_syn",
+    "version": "1",
+    "sha256": "a2398527f02d460a3f16343791e8fef6428a68f35cfd0724e931652e50dd79c2",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_s019_syn",
+    "path": "case_s019_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 7,
+      "n_facts": 401,
+      "certain": 11,
+      "strict_certain": 10,
+      "low_conf": 64,
+      "unique": 326,
+      "unanimous": 14,
+      "low_support": 326
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 37,
+    "unstable_skipped": 33
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "400",
+        "unit": "mg",
+        "time": "weekly",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg as needed, two to three times per week for knee pain."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg as needed, 2 to 3 times a week for knee pain."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg is taken as needed for knee pain."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg is taken as needed approximately two to three times weekly for knee pain."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg by mouth as needed"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg as needed, about 2-3 times per week, for knee pain."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes ibuprofen 400 mg as needed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain for approximately six months, worse with stairs and squatting, better with rest and ibuprofen."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain for about 6 months, worse with stairs and squatting, better with rest and ibuprofen."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain is the main current concern."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain began approximately six months ago."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain present for approximately six months"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain for approximately 6 months, beginning in the spring."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The main current issue was right knee pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.improved",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.right_knee_pain_for_approximately_six_months_worse_with_stairs_and_squatting_better_with_rest_and_ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain for approximately six months, worse with stairs and squatting, better with rest and ibuprofen."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.right_knee_pain_for_about_6_months_worse_with_stairs_and_squatting_better_with_rest_and_ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain for about 6 months, worse with stairs and squatting, better with rest and ibuprofen."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.right_knee_pain_is_better_with_rest",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain is better with rest."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.right_knee_pain_better_with_rest",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain better with rest"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.knee_pain_is_aching_worse_with_stairs_and_squatting_and_better_with_rest_and_ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Knee pain is aching, worse with stairs and squatting, and better with rest and ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Seasonal allergies",
+      "canonical_anchor": "diagnosis.seasonal.seasonal_allergie.present",
+      "kind": "diagnosis",
+      "subtype": "seasonal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "seasonal allergie",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Seasonal allergies."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Seasonal allergies."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Seasonal allergies"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Seasonal allergies."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.seasonal_allergies_are_part_of_the_medical_history",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Seasonal allergies are part of the medical history."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.seasonal_allergies_are_present",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Seasonal allergies are present."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.seasonal_allergies_are_ongoing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Seasonal allergies are ongoing."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "unspecified osteoarthritis, unspecified site (m19 90)",
+      "canonical_anchor": "diagnosis.unspecified.unspecified_osteoarthritis_unspecified_site_m.present",
+      "kind": "diagnosis",
+      "subtype": "unspecified",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "osteoarthritis",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain, suspected early osteoarthritis"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Early osteoarthritis of the right knee, based on clinical exam showing crepitus, no swelling, no warmth, no fluid, stable ligaments"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain pattern was described as sounding like early osteoarthritis"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee symptoms and examination are consistent with suspected mild osteoarthritis"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Early osteoarthritis, right knee"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father: heart attack at age 62; alive and on multiple medications; also had knee osteoarthritis"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The right knee pain pattern was assessed as early osteoarthritis"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "diagnosis.pain.pain.present",
+      "kind": "diagnosis",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.right_knee_pain_suspected_early_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain, suspected early osteoarthritis."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.right_knee_pain_pattern_was_described_as_sounding_like_early_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain pattern was described as sounding like early osteoarthritis."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_right_knee_pain_pattern_was_assessed_as_early_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The right knee pain pattern was assessed as early osteoarthritis."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once daily at bedtime."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once daily at bedtime."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg is taken once daily at night."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg is taken once daily at bedtime."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg by mouth once daily at bedtime"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once daily at bedtime; tolerated well with no muscle aches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes atorvastatin 20 mg once daily at bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily with breakfast and dinner (increased from 500 mg once daily about three months ago)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily, one with breakfast and one with dinner; increased from 500 mg once daily about 3 months ago."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg is taken twice a day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg is taken twice daily with breakfast and dinner."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg by mouth twice daily"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily with breakfast and dinner; increased from 500 mg once daily about 3 months ago after an elevated A1c; mild loose stools during the first week after the increase, since resolved."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes metformin 500 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Vitamin",
+      "canonical_anchor": "med.medication.vitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 2000 units daily over the counter."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 2000 units daily, over the counter."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 2000 units is taken daily over the counter."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 2,000 units is taken daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 2000 units by mouth daily over-the-counter"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 2000 units daily, over the counter."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F024",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Cetirizine",
+      "canonical_anchor": "med.medication.cetirizine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "cetirizine",
+        "value": "10",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg once daily, seasonal, springtime only."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg once daily, seasonal, springtime only."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg is taken once daily in the spring when allergies are bad."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg is taken once daily during the spring allergy season."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg by mouth once daily"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg once daily, spring season only; not currently taking."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine is used only in spring when allergies are bad."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Omeprazole",
+      "canonical_anchor": "med.medication.omeprazole.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "omeprazole",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "resolved",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg once daily, stopped about eight months ago due to resolved heartburn."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg once daily, stopped about 8 months ago due to resolved reflux symptoms."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg by mouth once daily"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole stopped approximately eight months ago"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole stopped because heartburn resolved"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg once daily — discontinued about 8 months ago after heartburn resolved; no rebound symptoms."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole was stopped about eight months ago."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole was stopped because heartburn resolved."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg once daily was stopped about 8 months ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg daily was stopped approximately eight months ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max",
+          "gpt-5_4",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_type_2_diabetes_and_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has type 2 diabetes and high blood pressure."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Borderline blood pressure"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.home_blood_pressure_monitoring_twice_daily_morning_and_evening_for_two_weeks_with_log_to_bring_to_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure monitoring twice daily (morning and evening) for two weeks, with log to bring to follow-up."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_type_2_diabetes_and_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has type 2 diabetes and high blood pressure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Borderline elevated blood pressure, based on office readings of 138/84 and 134/82"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.home_blood_pressure_monitoring_purchase_automatic_upper_arm_cuff_check_twice_daily_morning_and_evening_sitting_and_rested_for_5_minutes_feet_on_floor_arm_supported_for_2_weeks_bring_log_to_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure monitoring: purchase automatic upper arm cuff, check twice daily (morning and evening), sitting and rested for 5 minutes, feet on floor, arm supported, for 2 weeks; bring log to follow-up."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.patient_was_advised_to_get_an_automatic_upper_arm_blood_pressure_cuff",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was advised to get an automatic upper arm blood pressure cuff."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His mother has hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.his_mother_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His mother has hypertension."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Initial blood pressure was 138/84 mmHg in the left arm"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.obtain_an_automatic_upper_arm_blood_pressure_cuff",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Obtain an automatic upper-arm blood pressure cuff."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.home_blood_pressure_monitoring_with_automatic_upper_arm_cuff",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure monitoring with automatic upper arm cuff"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_type_2_diabetes_and_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: type 2 diabetes and high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Borderline office blood pressure (138/84, repeated 134/82"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "followup_appointment.follow_up_appointment_in_3_months_to_review_the_blood_pressure_log_a1c_result_and_knee_to_be_booked_at_the_front_desk",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow-up appointment in 3 months to review the blood pressure log, A1c result, and knee; to be booked at the front desk."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has high blood pressure"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.the_patient_does_not_have_a_home_blood_pressure_cuff",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient does not have a home blood pressure cuff."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Occupation: accountant",
+      "canonical_anchor": "sochist.sochist.occupation_accountant.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "occupation: accountant",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "social_history.occupation_accountant",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: accountant."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "social_history.occupation_accountant",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: accountant."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "social_history.occupation_accountant",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: accountant"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.occupation_accountant",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: accountant."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.patient_is_an_accountant",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is an accountant."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_is_an_accountant",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is an accountant."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "No recreational drug or marijuana use",
+      "canonical_anchor": "sochist.sochist.recreational_drug_or_marijuana_use.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no recreational drug or marijuana use",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "social_history.no_recreational_drug_or_marijuana_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No recreational drug or marijuana use."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "social_history.no_recreational_drugs_or_marijuana_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No recreational drugs or marijuana use."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.no_recreational_drug_or_marijuana_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No recreational drug or marijuana use."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "social_history.no_recreational_drug_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No recreational drug use"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "social_history.no_marijuana_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No marijuana use"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F036",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily with food."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily with food; draw A1C today to assess response to dose increase."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice a day with food."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily with food."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "A1c drawn today to assess response to the metformin dose increase."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily with food."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F041",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "dose change",
+      "canonical_anchor": "instruct.med_dose_change.dose_change.present.after_metformin_increase",
+      "kind": "instruct",
+      "subtype": "med_dose_change",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "metformin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.a1c_blood_draw_today_to_assess_metformin_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "A1c blood draw today to assess metformin dose increase."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_metformin_500_mg_twice_daily_with_food_draw_a1c_today_to_assess_response_to_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily with food; draw A1C today to assess response to dose increase."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.a1c_drawn_today_to_assess_response_to_the_metformin_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "A1c drawn today to assess response to the metformin dose increase."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F042",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime; recheck lipid panel in 1 year at next annual visit."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at night."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F048",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Continue atorvastatin 20 mg once daily at bedtime",
+      "canonical_anchor": "instruct.continue.continue_atorvastatin_at_bedtime.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "atorvastatin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_atorvastatin_20_mg_once_daily_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_atorvastatin_20_mg_once_daily_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_atorvastatin_20_mg_once_daily_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_atorvastatin_20_mg_once_daily_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_atorvastatin_20_mg_once_daily_at_bedtime_recheck_lipid_panel_in_1_year_at_next_annual_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at bedtime; recheck lipid panel in 1 year at next annual visit."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_atorvastatin_20_mg_once_daily_at_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg once daily at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F049",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max",
+          "glm-5p2",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue metformin 500 mg twice daily with food",
+      "canonical_anchor": "instruct.continue.continue_metformin_with_food.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "metformin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_metformin_500_mg_twice_daily_with_food",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily with food."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_metformin_500_mg_twice_a_day_with_food",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice a day with food."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_metformin_500_mg_twice_daily_with_food",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily with food."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_metformin_500_mg_twice_daily_with_food",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily with food."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_metformin_500_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "instruct.cardiovascular.blood_pressure.planned",
+      "kind": "instruct",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.no_blood_pressure_medication_started_today",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No blood pressure medication started today."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.no_blood_pressure_medication_started_today_will_discuss_at_follow_up_if_home_average_is_above_130_80",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No blood pressure medication started today; will discuss at follow-up if home average is above 130/80."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.no_blood_pressure_medication_will_be_started_today",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No blood pressure medication will be started today."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.no_blood_pressure_medication_was_started_today",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No blood pressure medication was started today."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.home_blood_pressure_monitoring_automatic_upper_arm_cuff_not_wrist_type_twice_daily_morning_and_evening_seated_after_5_minutes_of_rest_with_feet_on_the_floor_and_arm_supported_record_readings_for_2_weeks_and_bring_the_log_to_follow_up_if_the_home_average_runs_above_about_130_80_blood_pressure_medication_will_be_discussed_at_that_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure monitoring: automatic upper-arm cuff (not wrist type); twice daily, morning and evening, seated after 5 minutes of rest with feet on the floor and arm supported; record readings for 2 weeks and bring the log to follow-up; if the home average runs above about 130/80, blood pressure medication will be discussed at that visit."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.do_not_start_blood_pressure_medication_today",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Do not start blood pressure medication today."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F057",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Nguyen at Riverside Endoscopy",
+      "canonical_anchor": "instruct.nguyen.nguyen_at_riverside_endoscopy.present",
+      "kind": "instruct",
+      "subtype": "nguyen",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "nguyen at riverside endoscopy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.treatment_nguyen_at_riverside_endoscopy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nguyen at Riverside Endoscopy"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.treatment_nguyen_at_riverside_endoscopy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nguyen at Riverside Endoscopy"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.treatment_nguyen_at_riverside_endoscopy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nguyen at Riverside Endoscopy"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.treatment_nguyen_at_riverside_endoscopy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nguyen at Riverside Endoscopy"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.treatment_nguyen_at_riverside_endoscopy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nguyen at Riverside Endoscopy"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.treatment_nguyen_at_riverside_endoscopy_average_risk_screening_never_previously_screened",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nguyen at Riverside Endoscopy; average-risk screening (never previously screened"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F064",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "feeling pretty good overall",
+      "canonical_anchor": "symptom.symptom.pretty_good_overall.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "feeling pretty good overall",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.feeling_pretty_good_overall",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported feeling pretty good overall."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.feeling_pretty_good_overall",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reports feeling “pretty good” overall."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.feeling_pretty_good_overall",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports feeling pretty good overall"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.feeling_pretty_good_overall",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported feeling pretty good overall."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.overall_feeling_pretty_good",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reports overall feeling \"pretty good.\""
+        }
+      ],
+      "provenance": {
+        "audit_id": "F088",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.ordered",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.right_knee_pain_started_about_6_months_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain started about 6 months ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.right_knee_pain_began_approximately_six_months_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain began approximately six months ago."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.right_knee_pain_began_in_spring",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain began in spring"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.right_knee_pain_began_about_six_months_ago_in_the_spring",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain began about six months ago in the spring."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F089",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.worsened",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.right_knee_pain_is_worse_with_stairs",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain is worse with stairs."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.right_knee_pain_is_worse_with_stairs_and_squatting",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain is worse with stairs and squatting."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.right_knee_pain_worse_with_stairs",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain worse with stairs"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.right_knee_pain_is_worse_with_stairs",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right knee pain is worse with stairs."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F090",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "vision changes with the headaches",
+      "canonical_anchor": "symptom.symptom.vision_change_with_headache.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "vision change with the headache",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.vision_changes_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There are no vision changes with the headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.vision_changes_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There are no vision changes with the headaches."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.vision_changes_associated_with_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No vision changes associated with headaches"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F103",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "nausea with the headaches",
+      "canonical_anchor": "symptom.symptom.nausea_with_headache.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "nausea with the headache",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.nausea_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no nausea with the headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.nausea_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no nausea with the headaches."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.nausea_associated_with_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No nausea associated with headaches"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F104",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "weak urinary stream",
+      "canonical_anchor": "symptom.symptom.weak_urinary_stream.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "weak urinary stream",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.weak_urinary_stream",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no weak urinary stream."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.a_weak_urinary_stream",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He denies a weak urinary stream."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.weak_urinary_stream",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No weak urinary stream"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.weak_urinary_stream",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no weak urinary stream."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F113",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "blood in the urine",
+      "canonical_anchor": "symptom.symptom.blood_in_urine.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood in the urine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.blood_in_the_urine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no blood in the urine."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.blood_in_urine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No blood in urine"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.blood_in_the_urine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no blood in the urine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F115",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Prediabetes",
+      "canonical_anchor": "demo.demo.prediabete.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "prediabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.prediabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prediabetes was diagnosed about a year ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.prediabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prediabetes was diagnosed approximately one year ago."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.prediabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prediabetes was diagnosed about one year ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F125",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Metformin",
+      "canonical_anchor": "demo.demo.metformin.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "metformin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin is taken with breakfast and dinner."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin was increased from 500 mg once daily approximately three months ago."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin was increased from 500 mg once daily to 500 mg twice daily about three months ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F130",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Ibuprofen",
+      "canonical_anchor": "demo.demo.ibuprofen.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen is used about 2 to 3 times a week."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen is also used occasionally for headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen is used two to three times per week when the knee acts up."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F131",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue ibuprofen 400 mg as needed",
+      "canonical_anchor": "instruct.continue.continue_ibuprofen_needed.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_ibuprofen_as_needed_with_food",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue ibuprofen as needed with food."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_ibuprofen_400_mg_as_needed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue ibuprofen 400 mg as needed."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_ibuprofen_400_mg_as_needed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue ibuprofen 400 mg as needed"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_ibuprofen_400_mg_as_needed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue ibuprofen 400 mg as needed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F147",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Colonoscopy",
+      "canonical_anchor": "demo.demo.colonoscopy.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "colonoscopy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.colonoscopy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Colonoscopy was recommended."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.colonoscopy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Colonoscopy was selected for colorectal cancer screening."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.colonoscopy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Colonoscopy was recommended."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F149",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "The endoscopy office will call with prep instructions",
+      "canonical_anchor": "instruct.endoscopy.endoscopy_office_will_call_with_prep_instruction.planned",
+      "kind": "instruct",
+      "subtype": "endoscopy",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "the endoscopy office will call with prep instruction",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.the_endoscopy_office_will_call_with_prep_instructions",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The endoscopy office will call with prep instructions."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.the_endoscopy_office_will_call_with_prep_instructions",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The endoscopy office will call with prep instructions."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.treatment_symptoms_endoscopy_office_will_call_with_bowel_prep_instructions_procedure_is_sedated_and_requires_a_driver_wife_will_drive_patient_to_call_the_office_if_not_contacted_about_prep_within_a_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "no symptoms); endoscopy office will call with bowel prep instructions; procedure is sedated and requires a driver (wife will drive); patient to call the office if not contacted about prep within a week"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F154",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "instruct.pain.pain.worsened",
+      "kind": "instruct",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.patient_was_advised_to_come_back_sooner_if_the_knee_pain_gets_a_lot_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was advised to come back sooner if the knee pain gets a lot worse."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.return_sooner_if_right_knee_pain_becomes_substantially_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Return sooner if right knee pain becomes substantially worse."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.if_knee_pain_gets_a_lot_worse_patient_to_return_sooner",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If knee pain gets a lot worse, patient to return sooner"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.return_sooner_if_knee_pain_becomes_significantly_worse_or_swelling_develops",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Return sooner if knee pain becomes significantly worse or swelling develops."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.return_sooner_if_knee_pain_gets_much_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Return sooner if knee pain gets much worse."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F166",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Avoid taking ibuprofen every single day",
+      "canonical_anchor": "instruct.avoid.avoid_taking_ibuprofen_single.present",
+      "kind": "instruct",
+      "subtype": "avoid",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.avoid_taking_ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid taking ibuprofen every day."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.avoid_taking_ibuprofen_every_single_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid taking ibuprofen every single day"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.avoid_taking_ibuprofen_every_single_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid taking ibuprofen every single day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F227",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Remain off omeprazole",
+      "canonical_anchor": "instruct.remain.remain_omeprazole.present",
+      "kind": "instruct",
+      "subtype": "remain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "remain off omeprazole",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.remain_off_omeprazole_while_reflux_symptoms_remain_resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Remain off omeprazole while reflux symptoms remain resolved."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.remain_off_omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Remain off omeprazole"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.remain_off_omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Remain off omeprazole."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F228",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    }
+  ]
+}

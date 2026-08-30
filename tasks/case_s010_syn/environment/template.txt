@@ -1,0 +1,48 @@
+History of Presenting Complaints: 
+ - [Describe current issues with all available details, reasons for visit, and complete history of presenting complaints.] (Only include if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - [Describe any other associated symptoms with details.] (Only include [associated symptoms with details] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Past Medical & Psychiatric History: 
+ - [Describe past psychiatric diagnoses, treatments, hospitalizations.] (Only include [past psychiatric diagnoses, treatments, hospitalizations] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - [List chronic medical conditions.] (Only include [chronic medical conditions] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Medications:
+ - [List current medications.] (Only include [current medications] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Family History: 
+ - [Note any psychiatric illnesses within the family, specifying the relationship to the patient and the nature of the illnesses.] (Only include [psychiatric illnesses within the family] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Social History: 
+ - [Occupation, level of education.] (Only include [occupation and level of education] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - [Substance use such as smoking, alcohol, recreational drugs.] (Only include [substance use such as smoking, alcohol, recreational drugs] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - [Social support.] (Only include [social support] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Mental Status Examination: 
+ - Appearance: [Describe the patient's clothing, hygiene, and any notable physical characteristics.] (Only include appearance details if they have been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Behaviour: [Observe the patient's activity level, interaction with their surroundings, and any unique or notable behaviors.] (Only include behaviour details if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Speech: [Note the rate, volume, clarity, and coherence of the patient's speech.] (Only include speech characteristics if they have been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Mood: [Record the patient's self-described emotional state, using their own words if possible.] (Only include self-described emotional state if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Affect: [Describe the range and appropriateness of the patient's emotional response during the examination, noting any discrepancies with the stated mood.] (Only include [emotional response] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Thoughts: [Assess the patient's thought process and thought content, noting any distortions, delusions, or preoccupations.] (Only include thought process and content if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Perceptions: [Note any reported hallucinations or sensory misinterpretations, specifying type and impact on the patient.] (Only include perception details if they have been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Cognition: [Describe the patient's memory, orientation to time/place/person, concentration, and comprehension.] (Only include cognitive observations if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Insight: [Describe the patient's understanding of their own condition and symptoms, noting any lack of awareness or denial.] (Only include insight observations if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - Judgment: [Describe the patient's decision-making ability and understanding of the consequences of their actions.] (Only include judgement observations if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Risk Assessment: 
+ - [Assessment of uicidality, homicidality, and other risks.] (Only include [Assessment of suicidality, homicidality, other risks] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Diagnosis: 
+ - [Insert the diagnosis, relevant DSM-5 criteria, psychological scales/questionnaires.] (Only include diagnosis details if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Treatment Plan: 
+ - [Planned investigations.] (Only include [investigations] if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - [Medication plans including changes, continuing medicatins, prescriptions, medications ceased or any other medication related plans.] (Only include medication plans if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - [Psychotherapy plans and strategies.] (Only include psychotherapy plans if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - [Planned family meetings & collateral information, psychosocial interventions.] (Only include family meetings and psychosocial interventions if they have been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ - [Follow-up appointments and referrals.] (Only include follow-up plans and referrals if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+ Safety Plan: 
+ - [Detail safety plan including steps to take in crisis.] (Only include safety plan details if it has been explicitly mentioned in the transcript, contextual notes, or clinical note, otherwise omit completely.)
+ 
+(Never come up with your own patient details, assessment, plan, interventions, evaluation, or plan for continuing care—use only the transcript, contextual notes, or clinical note as a reference for the information included in your note. If any information related to a placeholder has not been explicitly mentioned in the transcript, contextual notes, or clinical note, you must not state that the information has not been explicitly mentioned in your output—just leave the relevant placeholder or omit it completely. Use as many lines, paragraphs, or bullet points as needed to capture all the relevant information from the transcript.)

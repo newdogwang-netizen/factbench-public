@@ -1,0 +1,3462 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_s016_syn",
+    "version": "1",
+    "sha256": "e9a1897e3c1286640913ef7fcf7a602d8feb56a73794b1414c5fe7f718d57001",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_s016_syn",
+    "path": "case_s016_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 8,
+      "n_facts": 294,
+      "certain": 11,
+      "strict_certain": 10,
+      "low_conf": 31,
+      "unique": 252,
+      "unanimous": 11,
+      "low_support": 232
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 30,
+    "unstable_skipped": 31
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No discharge, odor, pain, or burning with urination associated with the genital itching."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tingling in toes of both feet, started approximately 2 years ago, stable, not progressing, non-painful, does not interfere with sleep"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies any associated discharge, odor, pain or burning with urination, or fever."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied pain with urination."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The toe tingling is stable and nonpainful."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No pain or burning with urination."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies pain or burning with urination."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No discharge, odor, pain, or burning with urination; no fever."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "fever",
+      "canonical_anchor": "symptom.symptom.fever.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "fever",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.fever_associated_with_the_genital_itching",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No fever associated with the genital itching."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied fever."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies fever."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No fever."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies fever."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F004",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "dizziness and giddiness",
+      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.present.after_lisinopril_increase",
+      "kind": "diagnosis",
+      "subtype": "neuro_vestibular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no dizziness or lightheadedness since the lisinopril dose increase"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.no_dizziness_or_lightheadedness_since_the_lisinopril_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no dizziness or lightheadedness since the lisinopril dose increase."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies dizziness or lightheadedness after the lisinopril increase"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies dizziness or lightheadedness since lisinopril dose increase"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.dizziness_or_lightheadedness_since_lisinopril_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies dizziness or lightheadedness since lisinopril dose increase."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies dizziness or lightheadedness since the lisinopril dose increase"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.dizziness_or_lightheadedness_since_the_lisinopril_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies dizziness or lightheadedness since the lisinopril dose increase."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No dizziness or lightheadedness since lisinopril dose increase"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.dizziness_or_lightheadedness_since_lisinopril_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No dizziness or lightheadedness since lisinopril dose increase."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F011",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once a day in the morning; increased from 5 mg once a day about three months ago by primary doctor Dr. Nguyen."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once a day in the morning, increased from 5 mg approximately 3 months ago by Dr. Nguyen due to elevated blood pressure"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg, once a day in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg is taken once daily in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg by mouth every morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily in the morning; increased from 5 mg once daily about three months ago by Dr. Nguyen because blood pressure was running high at her office."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily in the morning (increased from 5 mg about three months ago by Dr. Nguyen due to elevated blood pressure)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "type 2 dm without complications",
+      "canonical_anchor": "diagnosis.type.type_complication.present",
+      "kind": "diagnosis",
+      "subtype": "type",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes diagnosed about six years ago"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes diagnosed approximately 6 years ago"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is here for a 6-month follow-up for type 2 diabetes"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes was diagnosed about six years ago"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient presented for a 6-month follow-up for type 2 diabetes"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes mellitus diagnosed approximately six years ago"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes diagnosed about six years ago"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes diagnosed about six years ago"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Type 2 diabetes diagnosed about six years ago",
+      "canonical_anchor": "diagnosis.type.type_diagnosed_about_six_ago.present",
+      "kind": "diagnosis",
+      "subtype": "type",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.type_2_diabetes_diagnosed_about_six_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes diagnosed about six years ago."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.type_2_diabetes_was_diagnosed_about_six_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes was diagnosed about six years ago."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.type_2_diabetes_diagnosed_about_six_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes diagnosed about six years ago."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.type_2_diabetes_diagnosed_about_six_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes diagnosed about six years ago."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.type_2_diabetes_mellitus_diagnosed_approximately_six_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes mellitus (diagnosed approximately six years ago)."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.type_2_diabetes_mellitus_diagnosed_approximately_six_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes mellitus diagnosed approximately six years ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High blood pressure for about eight years"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Office blood pressure today 128/78, heart rate 72"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.office_blood_pressure_today_128_78_heart_rate_72",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Office blood pressure today 128/78, heart rate 72"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension, well-controlled"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High blood pressure, diagnosed approximately 8 years ago"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.mother_is_81_years_old_and_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is 81 years old and has high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High blood pressure has been present for about eight years"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension was diagnosed approximately 8 years ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension was diagnosed approximately 8 years ago"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.hypertension_was_diagnosed_approximately_8_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension was diagnosed approximately 8 years ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.her_mother_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother has hypertension."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure checks at pharmacy machine are usually 125 to 130 over high 70s"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.blood_pressure_checks_at_pharmacy_machine_are_usually_125_to_130_over_high_70s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure checks at pharmacy machine are usually 125 to 130 over high 70s."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension for approximately eight years"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure checked at the pharmacy machine is usually 125–130 over the high 70s"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.home_blood_pressure_checked_at_the_pharmacy_machine_is_usually_125130_over_the_high_70s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure checked at the pharmacy machine is usually 125–130 over the high 70s."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension for about eight years"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_is_alive_at_81_and_has_high_blood_pressure_but_no_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is alive at 81 and has high blood pressure but no diabetes."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pharmacy blood pressure readings usually 125-130 over high 70s"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pharmacy_blood_pressure_readings_usually_125_130_over_high_70s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pharmacy blood pressure readings usually 125-130 over high 70s."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension (approximately eight years)"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "High cholesterol",
+      "canonical_anchor": "diagnosis.high.high_cholesterol.present",
+      "kind": "diagnosis",
+      "subtype": "high",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "high cholesterol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High cholesterol."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High cholesterol"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High cholesterol."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.high_cholesterol_is_part_of_the_medical_history",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High cholesterol is part of the medical history."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High cholesterol."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High cholesterol."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High cholesterol."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High cholesterol."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "1000",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice a day (with breakfast and dinner)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice a day, with breakfast and dinner"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg, twice a day with meals."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg is taken with breakfast."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1,000 mg by mouth twice daily with breakfast and dinner."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily with breakfast and dinner."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily, with breakfast and dinner."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily (with breakfast and dinner)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Empagliflozin",
+      "canonical_anchor": "med.medication.empagliflozin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "empagliflozin",
+        "value": "10",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin (Jardiance) 10 mg once a day in the morning."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin (Jardiance) 10 mg once a day in the morning"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin (Jardiance) 10 mg, once a day in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin 10 mg is taken once daily in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin 10 mg by mouth every morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin (Jardiance) 10 mg once daily in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin (Jardiance) 10 mg once daily in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin (Jardiance) 10 mg once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "LDL cholesterol 82 on atorvastatin 20 mg, at goal for someone with diabetes"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg, at bedtime."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg is taken at bedtime."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg by mouth at bedtime."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "LDL cholesterol is 82 on atorvastatin 20 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg at bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin when remembered."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin occasionally, when remembered"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin, taken occasionally."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin taken occasionally when remembered."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin when she remembers."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin when remembered."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Mother",
+      "canonical_anchor": "demo.demo.mother.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "mother",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.mother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is alive at age 81 and has high blood pressure but no diabetes."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "demo.mother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is 81 years old and has high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.mother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is alive at age 81."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.mother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is alive at 81 and has high blood pressure but no diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "1000",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Diabetes medications to stay the same: metformin 1000 mg twice a day and empagliflozin 10 mg once a day."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice a day"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1,000 mg twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily; no change."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F036",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril to stay at 10 mg once a day."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once a day"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F038",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin to stay at 20 mg at bedtime."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F040",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "diarrhea",
+      "canonical_anchor": "instruct.gastrointestinal.diarrhea.present",
+      "kind": "instruct",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "diarrhea",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.sick_day_rules_hold_empagliflozin_and_metformin_if_sick_with_vomiting_diarrhea_unable_to_keep_fluids_down_or_not_eating_until_eating_and_drinking_normally_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sick day rules: hold empagliflozin and metformin if sick with vomiting, diarrhea, unable to keep fluids down, or not eating, until eating and drinking normally again."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "risk.patient_advised_to_hold_empagliflozin_and_metformin_during_illness_with_vomiting_diarrhea_or_inability_to_keep_fluids_down",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to hold empagliflozin and metformin during illness with vomiting, diarrhea, or inability to keep fluids down."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.sick_day_rules_hold_jardiance_and_metformin_if_sick_with_vomiting_diarrhea_unable_to_keep_fluids_down_or_not_eating_resume_when_eating_and_drinking_normally",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sick day rules: hold Jardiance and metformin if sick with vomiting, diarrhea, unable to keep fluids down, or not eating; resume when eating and drinking normally"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.the_patient_was_instructed_on_sick_day_rules_hold_metformin_and_empagliflozin_if_ill_with_vomiting_diarrhea_or_unable_to_eat_drink",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was instructed on sick day rules: hold metformin and empagliflozin if ill with vomiting/diarrhea or unable to eat/drink."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.hold_empagliflozin_and_metformin_during_illness_with_vomiting_diarrhea_inability_to_keep_fluids_down_or_poor_oral_intake_until_eating_and_drinking_normalize",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hold empagliflozin and metformin during illness with vomiting, diarrhea, inability to keep fluids down, or poor oral intake until eating and drinking normalize."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.sick_day_rules_reviewed_hold_empagliflozin_and_metformin_if_vomiting_diarrhea_unable_to_keep_fluids_down_or_not_eating_until_eating_and_drinking_normally_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sick day rules reviewed: hold empagliflozin and metformin if vomiting, diarrhea, unable to keep fluids down, or not eating, until eating and drinking normally again."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.sick_day_rules_hold_empagliflozin_and_metformin_if_sick_with_vomiting_diarrhea_unable_to_keep_fluids_down_or_not_eating_until_eating_and_drinking_normally_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sick day rules: hold empagliflozin and metformin if sick with vomiting, diarrhea, unable to keep fluids down, or not eating, until eating and drinking normally again."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "risk.if_sick_with_vomiting_diarrhea_inability_to_keep_fluids_down_or_not_eating_hold_empagliflozin_until_eating_and_drinking_normally_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If sick with vomiting, diarrhea, inability to keep fluids down, or not eating, hold empagliflozin until eating and drinking normally again."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "risk.hold_empagliflozin_and_metformin_during_illness_involving_vomiting_diarrhea_inability_to_maintain_fluids_or_inability_to_eat",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hold empagliflozin and metformin during illness involving vomiting, diarrhea, inability to maintain fluids, or inability to eat."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F047",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_4",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "LDL cholesterol 82 on atorvastatin 20 mg, at goal for someone with diabetes",
+      "canonical_anchor": "symptom.symptom.ldl_cholesterol_atorvastatin_at_goal_for_someone_with.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "atorvastatin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.ldl_cholesterol_82_on_atorvastatin_20_mg_at_goal_for_someone_with_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "LDL cholesterol 82 on atorvastatin 20 mg, at goal for someone with diabetes"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.ldl_cholesterol_is_82",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "LDL cholesterol is 82."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.ldl_cholesterol_is_82_on_atorvastatin_20_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "LDL cholesterol is 82 on atorvastatin 20 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F071",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "hyperlipidemia, unspecified",
+      "canonical_anchor": "diagnosis.hyperlipidemia.hyperlipidemia_unspecified.present",
+      "kind": "diagnosis",
+      "subtype": "hyperlipidemia",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "hyperlipidemia, unspecified",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.hyperlipidemia_unspecified",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hyperlipidemia, at goal, LDL 82"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.hyperlipidemia_unspecified",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has hyperlipidemia"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hyperlipidemia_unspecified",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hyperlipidemia"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hyperlipidemia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hyperlipidemia."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F080",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue metformin 1000 mg twice daily",
+      "canonical_anchor": "instruct.continue.continue_metformin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "metformin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_metformin_1000_mg_twice_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice a day"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_metformin_1000_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_metformin_1000_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_metformin_1_000_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1,000 mg twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_metformin_1000_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_metformin_1000_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_metformin_1000_mg_twice_daily_no_change",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily; no change."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F084",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "minimax-m3",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue empagliflozin 10 mg once daily",
+      "canonical_anchor": "instruct.continue.continue_empagliflozin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue empagliflozin 10 mg once daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_empagliflozin_10_mg_once_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue empagliflozin 10 mg once a day"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_empagliflozin_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue empagliflozin 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_empagliflozin_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue empagliflozin 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_empagliflozin_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue empagliflozin 10 mg once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_empagliflozin_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue empagliflozin 10 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_empagliflozin_10_mg_once_daily_no_change",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue empagliflozin 10 mg once daily; no change."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_empagliflozin_jardiance_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue empagliflozin (Jardiance) 10 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F085",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue lisinopril 10 mg once daily",
+      "canonical_anchor": "instruct.continue.continue_lisinopril.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_lisinopril_10_mg_once_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once a day"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_lisinopril_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_lisinopril_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_lisinopril_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_lisinopril_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_lisinopril_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_lisinopril_10_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F086",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue atorvastatin 20 mg at bedtime",
+      "canonical_anchor": "instruct.continue.continue_atorvastatin_at_bedtime.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "atorvastatin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F087",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Get flu shot at pharmacy",
+      "canonical_anchor": "instruct.get.get_flu_shot_at_pharmacy.present",
+      "kind": "instruct",
+      "subtype": "get",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "get flu shot at pharmacy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.get_flu_shot_at_pharmacy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Get flu shot at pharmacy"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.get_flu_shot_at_pharmacy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Get flu shot at pharmacy."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "risk.get_a_flu_shot_at_the_pharmacy_if_not_already_done",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Get a flu shot at the pharmacy if not already done."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F090",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "minimax-m3",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Mother does not have diabetes",
+      "canonical_anchor": "famhist.famhist.mother_doe_diabete.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "mother doe not have diabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.mother_does_not_have_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother does not have diabetes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_does_not_have_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother does not have diabetes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.her_mother_does_not_have_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother does not have diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F108",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Patient now drinks diet soda or water",
+      "canonical_anchor": "symptom.symptom.now_drink_diet_soda_or_water.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "patient now drink diet soda or water",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.patient_now_drinks_diet_soda_or_water",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient now drinks diet soda or water."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.patient_now_drinks_diet_soda_or_water",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient now drinks diet soda or water."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.she_now_drinks_diet_soda_or_water",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She now drinks diet soda or water."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F145",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Glipizide",
+      "canonical_anchor": "demo.demo.glipizide.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "glipizide",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.glipizide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Glipizide was stopped about a year ago when empagliflozin was started."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.glipizide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Glipizide was stopped due to hypoglycemic episodes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.glipizide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Glipizide was stopped about a year ago when she was switched to empagliflozin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F155",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Wear loose-fitting cotton underwear",
+      "canonical_anchor": "instruct.wear.wear_loose_fitting_cotton_underwear.present",
+      "kind": "instruct",
+      "subtype": "wear",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "wear loose-fitting cotton underwear",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.wear_loose_fitting_cotton_underwear",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wear loose-fitting cotton underwear."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.wear_loose_fitting_cotton_underwear",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wear loose-fitting cotton underwear."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.wear_loose_fitting_cotton_underwear_and_change_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wear loose-fitting cotton underwear and change daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F175",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "instruct.pain.pain.present",
+      "kind": "instruct",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.call_if_pain_develops",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call if pain develops."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.contact_the_clinic_if_discharge_or_pain_develops",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Contact the clinic if discharge or pain develops."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.contact_clinic_if_symptoms_do_not_improve_in_two_weeks_worsen_or_if_discharge_pain_or_fever_develop",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Contact clinic if symptoms do not improve in two weeks, worsen, or if discharge, pain, or fever develop."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F180",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Repeat hemoglobin A1c in three months",
+      "canonical_anchor": "instruct.repeat.repeat_hemoglobin_in_three.present",
+      "kind": "instruct",
+      "subtype": "repeat",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "repeat hemoglobin a1c in three month",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.repeat_hemoglobin_a1c_in_three_months",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Repeat hemoglobin A1c in three months."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.repeat_hemoglobin_a1c_in_three_months",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Repeat hemoglobin A1c in three months."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.repeat_hemoglobin_a1c_in_3_months",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Repeat hemoglobin A1c in 3 months."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F181",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,4389 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_s008_syn",
+    "version": "1",
+    "sha256": "379c5599f604fa5c0e0babe7a7e6c9cdb632409b1c7190f2a1d408221b0da231",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_s008_syn",
+    "path": "case_s008_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 9,
+      "n_facts": 592,
+      "certain": 3,
+      "strict_certain": 3,
+      "low_conf": 55,
+      "unique": 534,
+      "unanimous": 6,
+      "low_support": 496
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 44,
+    "unstable_skipped": 45
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "Bloating",
+      "canonical_anchor": "demo.demo.bloating.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "bloating",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is still present, mostly in the afternoons, slightly improved since starting fiber."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is somewhat improved since starting fiber."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is still present."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is slightly improved since starting fiber."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is slightly better since starting fiber."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is still present."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Cramping",
+      "canonical_anchor": "demo.demo.cramping.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "cramping",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.cramping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cramping is still mostly in the lower left abdomen and improves after bowel movements."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.cramping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cramping is better."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.cramping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cramping is located in the lower left abdomen."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.cramping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cramping was the same after stopping dicyclomine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": "7",
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No trouble swallowing, pain with swallowing, vomiting, black stools, coffee-ground stools, or fevers."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain_severity_decreased_from_6_7_out_of_10_to_3_out_of_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain severity decreased from 6-7 out of 10 to 3 out of 10."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain remains in the lower left abdomen and is relieved by a bowel movement."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied pain with swallowing."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No pain with swallowing."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is located in the lower left abdomen and improves after bowel movements."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no pain when swallowing."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Hypothyroidism, diagnosed around 2016",
+      "canonical_anchor": "diagnosis.hypothyroidism.hypothyroidism_diagnosed_around.present",
+      "kind": "diagnosis",
+      "subtype": "hypothyroidism",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "hypothyroidism, diagnosed around 2016",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.hypothyroidism_diagnosed_around_2016",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism, diagnosed around 2016."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.hypothyroidism",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.hypothyroidism_diagnosed_around_2016",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism, diagnosed around 2016."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_patient_has_hypothyroidism",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has hypothyroidism."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Celiac blood work was negative",
+      "canonical_anchor": "diagnosis.celiac.celiac_blood_work_negative.present",
+      "kind": "diagnosis",
+      "subtype": "celiac",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "celiac blood work was negative",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.celiac_blood_work_was_negative",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Celiac blood work was negative."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.celiac_blood_work_negative",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Celiac blood work: negative."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.celiac_blood_work_last_year_was_negative",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Celiac blood work last year was negative."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.celiac_blood_work_was_negative",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Celiac blood work was negative."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.celiac_blood_work_was_negative",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Celiac blood work was negative."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Omeprazole",
+      "canonical_anchor": "med.medication.omeprazole.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "omeprazole",
+        "value": "40",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily, taken every morning, sometimes with breakfast and sometimes before breakfast."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40mg once daily, every morning (timing varies—sometimes with breakfast, sometimes before)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg by mouth every morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily every morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily, taken variably before or with breakfast."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg orally once daily (currently taken in the morning; timing relative to breakfast variable)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily every morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "9/9",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 9,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "75",
+        "unit": "mcg",
+        "time": "every morning",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 mcg every morning, taken first thing upon waking, before other medications."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75mcg every morning, taken first thing on waking."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 mcg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 mcg every morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms by mouth every morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms once daily every morning upon waking."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 mcg every morning, taken alone first thing on waking."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 mcg orally once daily (taken first thing in the morning, separated from coffee and other medications)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms every morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "9/9",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 9,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Metamucil",
+      "canonical_anchor": "med.medication.metamucil.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metamucil",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil (fiber) one tablespoon in a large glass of water once daily at dinner, started approximately mid-June (about 6 weeks ago)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil (fiber) 1 tablespoon in a glass of water once daily, usually at dinner (started mid-June, approximately 6 weeks ago)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil 1 tablespoon in water once daily with dinner (started mid-June)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil was started about 6 weeks ago in mid-June."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil was started approximately six weeks ago (mid-June)."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil 1 tablespoon in a large glass of water once daily, usually at dinner, started about 6 weeks ago (mid-June)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2,000 units by mouth daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units orally once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "9/9",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 9,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "tums tums",
+      "canonical_anchor": "med.medication.tums_tum.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tums",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice a week",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums (calcium carbonate 500 mg) two tablets as needed, approximately twice a week at night."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums (calcium carbonate 500mg) 2 tablets as needed, approximately twice a week at night."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Calcium Carbonate (Tums) 500 mg, two tablets as needed about twice a week at night."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums are used maybe twice a week at night."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Calcium carbonate (Tums) 500 mg, two tablets as needed."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Calcium carbonate (Tums) 500 mg, 2 tablets as needed, about twice a week at night."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Calcium carbonate (Tums) 500 mg, 2 tablets chewed as needed (approximately twice weekly at night)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Cetirizine",
+      "canonical_anchor": "med.medication.cetirizine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "cetirizine",
+        "value": "10",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine (Zyrtec) 10 mg as needed for allergies, approximately a couple of times per month."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed for allergies (a couple of times per month)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg is taken only when allergies act up."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed for allergies, approximately a couple of times per month."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed for allergies."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed for allergies, about a couple of times per month."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine (Zyrtec) 10 mg as needed for allergies (approximately a couple of times per month)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed when allergies act up."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tylenol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol as needed for headaches, infrequent."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol as needed for headaches (not often); avoids ibuprofen/NSAIDs due to stomach upset."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Uses Tylenol for occasional headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes Tylenol if she has a headache."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol) as needed for occasional headaches; avoids NSAIDs due to stomach upset."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes Tylenol for headaches if needed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Dicyclomine",
+      "canonical_anchor": "med.medication.dicyclomine.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "dicyclomine",
+        "value": "20",
+        "unit": "mg",
+        "time": "three times daily",
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine 20 mg three times daily before meals was tried in the spring but stopped after about two weeks in mid-May due to severe dry mouth, blurry vision when reading, and perceived lack of benefit for cramping."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine 20mg three times daily before meals: stopped mid-May after approximately 2 weeks due to severe dry mouth, blurry vision when reading, and lack of efficacy for cramping."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine was stopped after about 2 weeks."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine 20 mg three times daily before meals was discontinued after approximately two weeks."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine was stopped after approximately two weeks around mid-May."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine 20 mg three times daily before meals was stopped in mid-May after about 2 weeks due to severe dry mouth, mild blurry vision when reading, and lack of benefit for cramping; no problems after stopping."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine 20 mg three times daily — discontinued mid-May due to adverse effects."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Mother had gallbladder removal",
+      "canonical_anchor": "famhist.famhist.mother_gallbladder_removal.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "mother had gallbladder removal",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_had_gallbladder_removal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother had gallbladder removal."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.mother_had_gallbladder_removal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother had gallbladder removal."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_cholecystectomy_gallbladder_removal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: cholecystectomy (gallbladder removal)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k2p6",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Irritable bowel syndrome (IBS), improving with fiber supplementation",
+      "canonical_anchor": "diagnosis.irritable.irritable_bowel_syndrome_ibs_improving_with_fiber_supplementation.improved",
+      "kind": "diagnosis",
+      "subtype": "irritable",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "irritable bowel syndrome (ibs), improving with fiber supplementation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.irritable_bowel_syndrome_ibs_improving_with_fiber_supplementation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Irritable bowel syndrome (IBS), improving with fiber supplementation."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.irritable_bowel_syndrome_ibs_improving_with_fiber_supplementation_cramping_and_bowel_irregularity_reduced",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Irritable bowel syndrome (IBS): improving with fiber supplementation; cramping and bowel irregularity reduced."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.irritable_bowel_syndrome_ibs_improving_with_fiber_supplementation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Irritable bowel syndrome (IBS), improving with fiber supplementation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F044",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Omeprazole",
+      "canonical_anchor": "demo.demo.omeprazole.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "omeprazole",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole was increased from 20mg to 40mg at the April visit; patient started the higher dose end of April right after the visit."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole was increased from 20 mg to 40 mg at the April visit."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole was increased from 20 mg daily to 40 mg daily at the end of April."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole was increased from 20 mg to 40 mg at the April visit."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F057",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Heartburn",
+      "canonical_anchor": "demo.demo.heartburn.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "heartburn",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.heartburn",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heartburn was daily before the dose increase; now occurs 2-3 times per week."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.heartburn",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heartburn is described as a burning sensation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.heartburn",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heartburn is a burning sensation with a sour taste and regurgitation into the back of the throat."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F059",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "The patient added dairy back",
+      "canonical_anchor": "symptom.symptom.added_dairy_back.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient added dairy back",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.change_in_symptoms_added_dairy_back",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient tried cutting out dairy for 2 weeks last month with no change in symptoms; added dairy back."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_added_dairy_back",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient added dairy back."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_added_dairy_back",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient added dairy back."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F064",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "instruct.gastrointestinal.constipation.worsened",
+      "kind": "instruct",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.bowel_movements_are_more_regular_with_fiber_previously_alternating_constipation_for_3_days_or_loose_stools_now_mostly_once_a_day_and_formed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bowel movements are more regular with fiber: previously alternating constipation for 3 days or loose stools; now mostly once a day and formed."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.if_constipation_recurs_fiber_can_be_increased_to_twice_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If constipation recurs, fiber can be increased to twice a day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.psyllium_may_be_increased_to_twice_daily_if_constipation_recurs",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Psyllium may be increased to twice daily if constipation recurs."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.metamucil_may_be_increased_to_twice_daily_if_constipation_recurs",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil may be increased to twice daily if constipation recurs."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.if_constipation_recurs_fiber_can_be_increased_to_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If constipation recurs, fiber can be increased to twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F066",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Morning hoarseness is better",
+      "canonical_anchor": "symptom.symptom.morning_hoarseness_better.improved",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "morning hoarseness is better",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.morning_hoarseness_is_better_but_not_100_resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Morning hoarseness is better but not 100% resolved."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.morning_hoarseness_is_better",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Morning hoarseness is better."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.morning_hoarseness_is_better",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Morning hoarseness is better."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F068",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "black stools",
+      "canonical_anchor": "symptom.symptom.black_stool.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "black stool",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.black_stools_or_coffee_ground_appearance",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No black stools or coffee-ground appearance."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.black_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied black stools."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.black_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies black stools."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.black_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No black stools."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.coffee_ground_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No coffee-ground stools."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.black_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There are no black stools."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.black_stools_or_anything_resembling_coffee_grounds",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Denies black stools or anything resembling coffee grounds."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F069",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "fevers",
+      "canonical_anchor": "symptom.symptom.fever.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "fever",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.fevers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No fevers."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.fevers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied fevers."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies fever."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.fevers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No fevers."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.fevers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Denies fevers."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.fevers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There are no fevers."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F070",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Team dinners with wine and spicy food are the worst nights for heartburn",
+      "canonical_anchor": "symptom.symptom.team_dinner_with_wine_and_spicy_food_worst.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "team dinner with wine and spicy food are the worst night for heartburn",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.team_dinners_with_wine_and_spicy_food_are_the_worst_nights_for_heartburn",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Team dinners with wine and spicy food are the worst nights for heartburn."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.team_dinners_with_wine_and_spicy_food_are_the_worst_nights_for_heartburn",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Team dinners with wine and spicy food are the worst nights for heartburn."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.late_team_dinners_involving_wine_and_spicy_food_are_associated_with_the_worst_heartburn_nights",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Late team dinners involving wine and spicy food are associated with the worst heartburn nights."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F072",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Hypothyroidism since approximately 2016",
+      "canonical_anchor": "diagnosis.hypothyroidism.hypothyroidism_since_approximately.present",
+      "kind": "diagnosis",
+      "subtype": "hypothyroidism",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "hypothyroidism since approximately 2016",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.hypothyroidism_since_approximately_2016",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism since approximately 2016."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.hypothyroidism_since_approximately_2016",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism since approximately 2016."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.hypothyroidism_since_approximately_2016",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism since approximately 2016."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F073",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "75",
+        "unit": "mcg",
+        "time": "morning",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75mcg first thing in the morning, separate from coffee, vitamins, and Tums."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine by itself first thing in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue taking levothyroxine by itself first thing in the morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 mcg every morning first thing upon waking."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine alone first thing in the morning, kept away from coffee, vitamins, and Tums."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 mcg in the morning, taken alone and separated from coffee, vitamins, and Tums."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine by itself first thing in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F087",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "tums tums",
+      "canonical_anchor": "med.medication.tums_tum.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tums",
+        "value": "500",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75mcg first thing in the morning, separate from coffee, vitamins, and Tums."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine should be kept away from Tums."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine alone first thing in the morning, kept away from coffee, vitamins, and Tums."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue calcium carbonate (Tums) 500 mg, 2 tablets as needed."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Keep levothyroxine away from Tums."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F088",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Physical exam findings: abdomen soft, no tenderness (including lower left), normal bowel sounds, no masses or organomegaly; weight 148 lbs (2 lbs up from April); blood pressure 118/74"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.physical_exam_findings_abdomen_soft_no_tenderness_including_lower_left_normal_bowel_sounds_no_masses_or_organomegaly_weight_148_lbs_2_lbs_up_from_april_blood_pressure_118_74",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Physical exam findings: abdomen soft, no tenderness (including lower left), normal bowel sounds, no masses or organomegaly; weight 148 lbs (2 lbs up from April); blood pressure 118/74."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure was 118/74"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 118/74 mmHg"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 118/74 mmHg"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.blood_pressure_is_118_74_mmhg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 118/74 mmHg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure 118/74"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.blood_pressure_118_74",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure 118/74."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure in the hallway was 118/74"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.blood_pressure_in_the_hallway_was_118_74",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure in the hallway was 118/74."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F094",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Bloating is mostly in the afternoons",
+      "canonical_anchor": "symptom.symptom.bloating_mostly_in_afternoon.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "bloating is mostly in the afternoon",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.bloating_continues_to_be_an_issue_occurring_mostly_in_the_afternoons",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating continues to be an issue, occurring mostly in the afternoons."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.bloating_is_mostly_in_the_afternoons",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is mostly in the afternoons."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.bloating_is_mostly_in_the_afternoons",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is mostly in the afternoons."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F103",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Beans trigger bloating",
+      "canonical_anchor": "symptom.symptom.bean_trigger_bloating.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "bean trigger bloating",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.identified_food_triggers_for_bloating_include_beans_onions_and_large_salads",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Identified food triggers for bloating include beans, onions, and large salads."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.beans_trigger_bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Beans trigger bloating."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.onions_trigger_bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Onions trigger bloating."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.beans_trigger_bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Beans trigger bloating."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.onions_trigger_bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Onions trigger bloating."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.beans_trigger_bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Beans trigger bloating."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.onions_trigger_bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Onions trigger bloating."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F105",
+        "support": "4/4",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "symptom.gastrointestinal.constipation.present",
+      "kind": "symptom",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.alternating_constipation_and_loose_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously, she experienced alternating constipation and loose stools."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.before_fiber_bowel_habits_alternated_between_constipation_for_3_days_and_loose_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Before fiber, bowel habits alternated between constipation for 3 days and loose stools."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.before_fiber_supplementation_she_alternated_between_constipation_for_three_days_and_loose_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Before fiber supplementation, she alternated between constipation for three days and loose stools."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.bowel_movements_are_now_about_once_daily_and_formed_with_fiber_previously_alternated_between_3_days_of_constipation_and_loose_stools",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bowel movements are now about once daily and formed with fiber; previously alternated between 3 days of constipation and loose stools."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F107",
+        "support": "4/4",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Surgical history: appendectomy and two cesarean sections",
+      "canonical_anchor": "diagnosis.surgical.surgical_appendectomy_and_two_cesarean_section.present",
+      "kind": "diagnosis",
+      "subtype": "surgical",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "surgical history: appendectomy and two cesarean section",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.surgical_history_appendectomy_and_two_c_sections",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Surgical History: Appendectomy and two C-sections."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.surgical_history_appendectomy_and_two_cesarean_sections",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Surgical history: appendectomy and two cesarean sections."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.surgical_history_appendectomy_and_two_cesarean_sections",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Surgical history: appendectomy and two cesarean sections."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F111",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "vitamin b12 vitamin b12",
+      "canonical_anchor": "med.medication.vitamin_b12_vitamin_b.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_b12",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labs ordered: CBC, TSH, Vitamin B12."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_b12",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin B12."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_b12",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Obtain a vitamin B12 level because of long-term omeprazole use."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin_b12",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Laboratory tests ordered: vitamin B12."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F123",
+        "support": "4/4",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Bloating is a little better since starting fiber",
+      "canonical_anchor": "symptom.symptom.bloating_little_better_since_starting_fiber.improved",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "bloating is a little better since starting fiber",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.bloating_is_a_little_better_since_starting_fiber",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is a little better since starting fiber."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.bloating_is_a_little_better_since_starting_fiber",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is a little better since starting fiber."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.bloating_is_slightly_better_since_starting_fiber",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is slightly better since starting fiber."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F156",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "There",
+      "canonical_anchor": "demo.demo.there.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "there",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.there",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no blood in the stool."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.there",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of colon cancer."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.there",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no blood in the stool."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F167",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "trouble swallowing",
+      "canonical_anchor": "symptom.symptom.trouble_swallowing.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "trouble swallowing",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.trouble_swallowing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied trouble swallowing."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.trouble_swallowing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No trouble swallowing."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.trouble_swallowing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no trouble swallowing."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.trouble_swallowing_or_food_getting_stuck",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Denies trouble swallowing or food getting stuck."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F170",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "recent antibiotic use",
+      "canonical_anchor": "symptom.symptom.recent_antibiotic_use.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "recent antibiotic use",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.recent_antibiotic_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied recent antibiotic use."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.recent_antibiotic_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies recent antibiotic use."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.been_no_recent_antibiotic_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There has been no recent antibiotic use."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F172",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Metamucil",
+      "canonical_anchor": "med.medication.metamucil.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metamucil",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil 1 tablespoon in a big glass of water once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil one tablespoon in a large glass of water once daily at dinner."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil fiber one tablespoon in a large glass of water once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F182",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Cetirizine",
+      "canonical_anchor": "demo.demo.cetirizine.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "cetirizine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine is used a couple of times a month."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine is used approximately a couple of times per month."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine is used about a couple of times per month."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F185",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Dicyclomine",
+      "canonical_anchor": "demo.demo.dicyclomine.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "dicyclomine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine was stopped after about 2 weeks."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine was associated with mildly blurred vision while reading."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine was stopped after approximately two weeks around mid-May."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.dicyclomine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dicyclomine was stopped around mid-May."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F189",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "There is no family history of colon cancer",
+      "canonical_anchor": "famhist.famhist.there_family_of_colon_cancer",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "there is no family history of colon cancer",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.there_is_no_family_history_of_colon_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of colon cancer."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.there_is_no_family_history_of_esophageal_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of esophageal cancer."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.there_is_no_family_history_of_stomach_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of stomach cancer."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.there_is_no_family_history_of_colon_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of colon cancer."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.there_is_no_family_history_of_esophageal_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of esophageal cancer."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.there_is_no_family_history_of_stomach_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of stomach cancer."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.there_is_no_family_history_of_colon_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of colon cancer."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.there_is_no_family_history_of_esophageal_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of esophageal cancer."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.there_is_no_family_history_of_stomach_cancer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of stomach cancer."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F193",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "There is no family history of colitis",
+      "canonical_anchor": "famhist.famhist.there_family_of_colitis",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "there is no family history of colitis",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.there_is_no_family_history_of_colitis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of colitis."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.there_is_no_family_history_of_colitis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of colitis."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.there_is_no_family_history_of_ulcerative_colitis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no family history of ulcerative colitis."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F194",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue levothyroxine by itself first thing",
+      "canonical_anchor": "instruct.continue.continue_levothyroxine_by_itself_first_thing.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_levothyroxine_by_itself_first_thing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine by itself first thing in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_levothyroxine_by_itself_first_thing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine by itself first thing in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_taking_levothyroxine_by_itself_first_thing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue taking levothyroxine by itself first thing in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F220",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue fiber",
+      "canonical_anchor": "instruct.continue.continue_fiber.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue fiber",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_fiber",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue fiber."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_fiber",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue fiber."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_psyllium_fiber_once_daily_with_adequate_water",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue psyllium fiber once daily with adequate water."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F231",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Acetaminophen",
+      "canonical_anchor": "med.medication.acetaminophen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "acetaminophen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen is used infrequently for headaches."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen is used as needed for headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen as needed for headaches, which is infrequent."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F294",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,5364 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_s001_syn",
+    "version": "1",
+    "sha256": "355ad03690ec28339062e42110de1cc94a554194982b13eb07b2704450ce1857",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_s001_syn",
+    "path": "case_s001_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 8,
+      "n_facts": 539,
+      "certain": 17,
+      "strict_certain": 15,
+      "low_conf": 35,
+      "unique": 487,
+      "unanimous": 18,
+      "low_support": 448
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 46,
+    "unstable_skipped": 43
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "100",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow-up visit approximately six weeks after increasing sertraline from 50 mg to 100 mg daily."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 100 mg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 100 mg is taken once daily in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow-up occurred approximately 6 weeks after sertraline was increased from 50 mg to 100 mg daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow-up visit approximately six weeks after sertraline dose increase from 50 mg to 100 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow-up visit six weeks after sertraline was increased from 50 mg to 100 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 100 mg orally once daily in the morning (increased from 50 mg at last visit 6 weeks ago)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 100 mg once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.improved.after_sertraline_increase",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is approximately 30–40% better than before the dose increase, but still present and \"humming in the background all the time.\""
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.anxiety_is_approximately_3040_better_than_before_the_dose_increase_but_still_present_and_humming_in_the_background_all_the_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is approximately 30–40% better than before the dose increase, but still present and \"humming in the background all the time.\""
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports her anxiety is approximately 30-40% better since the medication increase"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.her_anxiety_is_approximately_30_40_better_since_the_medication_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports her anxiety is approximately 30-40% better since the medication increase."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported anxiety was about 30% to 40% better than before the sertraline increase"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.anxiety_was_about_30_to_40_better_than_before_the_sertraline_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported anxiety was about 30% to 40% better than before the sertraline increase."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety has improved by approximately 30–40% since the dose increase"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.she_has_a_history_of_panic_attacks_with_none_since_the_spring",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has a history of panic attacks, with none since the spring."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety reported as 30–40% better since the dose increase but still present, described as \"humming in the background.\""
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is approximately 30–40% better than before the dose increase"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.anxiety_is_approximately_3040_better_than_before_the_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is approximately 30–40% better than before the dose increase."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.history_of_panic_attacks_with_none_since_approximately_february_march",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "History of panic attacks, with none since approximately February/March."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is approximately 30-40% better than before the dose increase"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.anxiety_is_approximately_30_40_better_than_before_the_dose_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is approximately 30-40% better than before the dose increase."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports anxiety is 30-40% better than before the sertraline increase"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.anxiety_is_30_40_better_than_before_the_sertraline_increase",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports anxiety is 30-40% better than before the sertraline increase."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "symptom.mood_anxiety.anxiety.present",
+      "kind": "symptom",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": "current",
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.been_fine_and_that_the_issue_is_worry_and_sleep_not_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "PHQ-9 score today is 6; patient states mood has been fine and that the issue is worry and sleep, not depression."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety (officially diagnosed, on medication) and hypothyroid/Hashimoto's, taking levothyroxine"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_anxiety_officially_diagnosed_on_medication_and_hypothyroid_hashimoto_s_taking_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety (officially diagnosed, on medication) and hypothyroid/Hashimoto's, taking levothyroxine."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She describes a persistent underlying anxiety, stating it is \"humming in the background all the time.\""
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.she_describes_a_persistent_underlying_anxiety_stating_it_is_humming_in_the_background_all_the_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She describes a persistent underlying anxiety, stating it is \"humming in the background all the time.\""
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.mother_has_diagnosed_anxiety_on_medication_and_hashimoto_s_hypothyroidism_on_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has diagnosed anxiety (on medication) and Hashimoto's hypothyroidism (on levothyroxine)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported anxiety was still present and \"humming in the background\" all the time"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.anxiety_was_still_present_and_humming_in_the_background_all_the_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported anxiety was still present and \"humming in the background\" all the time."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_mother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has anxiety."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety was described by the clinician as better but not controlled."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Persistent anxiety remains in the background"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.persistent_anxiety_remains_in_the_background",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Persistent anxiety remains in the background."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work and around filing deadlines."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.her_mother_has_diagnosed_anxiety_and_takes_medication_for_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother has diagnosed anxiety and takes medication for it."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety reported as 30–40% better since the dose increase but still present, described as \"humming in the background.\""
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.day_to_day_worry_loops_cycle_through_concerns_about_case_deadlines_mother_s_health_and_money",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Day-to-day worry loops cycle through concerns about case deadlines, mother's health, and money."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.last_panic_attack_occurred_in_february_march_approximately_eight_to_nine_months_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Last panic attack occurred in February/March (approximately eight to nine months ago)."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.mother_anxiety_officially_diagnosed_on_medication_and_hashimoto_s_hypothyroidism_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: anxiety (officially diagnosed, on medication) and Hashimoto's hypothyroidism (takes levothyroxine)."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Investigations: TSH with reflex free T4, plus CBC and basic metabolic panel; rationale includes fatigue, maternal Hashimoto's, and that thyroid problems can cause fatigue and worsen anxiety"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.anxiety_is_still_present_described_as_humming_in_the_background_all_the_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is still present, described as \"humming in the background all the time.\""
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work, especially around filing deadlines."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_anxiety_and_is_on_medication_for_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety and is on medication for it."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.investigations_tsh_with_reflex_free_t4_plus_cbc_and_basic_metabolic_panel_rationale_includes_fatigue_maternal_hashimoto_s_and_that_thyroid_problems_can_cause_fatigue_and_worsen_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Investigations: TSH with reflex free T4, plus CBC and basic metabolic panel; rationale includes fatigue, maternal Hashimoto's, and that thyroid problems can cause fatigue and worsen anxiety."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety remains present, described as \"humming in the background all the time.\""
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.anxiety_remains_present_described_as_humming_in_the_background_all_the_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety remains present, described as \"humming in the background all the time.\""
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_anxiety_disorder_on_medication_hashimoto_s_hypothyroidism_on_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: Anxiety disorder (on medication); Hashimoto's hypothyroidism (on levothyroxine)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.cannabis_tried_a_gummy_approximately_1_year_ago_caused_significant_anxiety_increase_no_current_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cannabis: Tried a gummy approximately 1 year ago; caused significant anxiety increase; no current use."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports anxiety is still present"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.anxiety_is_still_present",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports anxiety is still present."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.her_mother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother has anxiety."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.refer_for_cognitive_behavioral_therapy_for_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer for cognitive behavioral therapy for anxiety."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "icd_value_cleared": "t4",
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.worsened",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.ongoing_worry_described_as_a_loop_of_thinking_through_everything_that_could_go_wrong_including_case_deadlines_mother_s_health_and_money_worse_at_work_especially_around_filing_deadlines",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports ongoing worry, described as a \"loop\" of thinking through everything that could go wrong, including case deadlines, mother's health, and money; worse at work, especially around filing deadlines."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prior trial of cannabis gummy about a year ago at a friend's house; caused significantly worsened anxiety, with feeling that her heart would explode; never used again"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.experiencing_worry_loops_about_case_deadlines_her_mother_s_health_and_money_which_are_worse_at_work",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports experiencing worry loops about case deadlines, her mother's health, and money, which are worse at work."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reports a negative experience with a cannabis gummy a year ago that increased her anxiety"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "social_history.social_history_a_negative_experience_with_a_cannabis_gummy_a_year_ago_that_increased_her_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reports a negative experience with a cannabis gummy a year ago that increased her anxiety"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported anxiety is worse at work"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.anxiety_is_worse_at_work",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported anxiety is worse at work."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work and around filing deadlines"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.anxiety_is_worse_at_work_and_around_filing_deadlines",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work and around filing deadlines."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.a_cannabis_gummy_used_approximately_one_year_ago_markedly_worsened_her_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "A cannabis gummy used approximately one year ago markedly worsened her anxiety."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work, especially around filing deadlines"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.anxiety_is_worse_at_work_especially_around_filing_deadlines",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work, especially around filing deadlines."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "social_history.social_history_tried_a_cannabis_gummy_approximately_one_year_ago_which_worsened_anxiety_has_not_used_since",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tried a cannabis gummy approximately one year ago which worsened anxiety; has not used since"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work, especially around filing deadlines"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.anxiety_is_worse_at_work_especially_around_filing_deadlines",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work, especially around filing deadlines."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.anxiety_is_worse_at_work",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is worse at work."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.thyroid_problems_can_make_anxiety_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Thyroid problems can make anxiety worse."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No CBD or cannabis gummies (tried cannabis gummy approximately 1 year ago; worsened anxiety significantly)"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "400",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg four to five days per week for headaches."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg, taken 4-5 days per week for headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg has been taken lately for headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg is used approximately 4–5 days per week for headaches."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg, 4–5 days per week lately for headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg four to five days per week for headaches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg, 4-5 days per week (for headaches)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg four to five days per week lately for headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "hydroxyzine",
+      "canonical_anchor": "med.medication.hydroxyzine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "hydroxyzine",
+        "value": "25",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg at bedtime as needed, taken two to three nights per week, usually Sunday nights and nights before big days."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg at bedtime as needed for sleep, taken 2-3 nights per week."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg is taken at bedtime as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg by mouth at bedtime as needed."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg orally at bedtime as needed (taken 2–3 nights per week, usually Sundays and before big days)."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg at bedtime as needed, two to three nights per week, usually Sunday nights and before big days."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg at bedtime as needed, approximately 2-3 nights per week (typically Sunday nights and before big days)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg at bedtime as needed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": "3",
+        "unit": "mg",
+        "time": "nightly",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg nightly."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg at bedtime, taken most nights."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg is taken pretty much every night."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg by mouth nightly."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg nightly."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg every night."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg nightly."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg pretty much every night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "every morning",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1,000 units every morning."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 IU once daily in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 units is taken every morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1,000 units by mouth every morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 units every morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 units every morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 units every morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 units every morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety (officially diagnosed, on medication) and hypothyroid/Hashimoto's, taking levothyroxine."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has diagnosed anxiety (on medication) and Hashimoto's hypothyroidism (on levothyroxine)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother takes levothyroxine."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother takes levothyroxine."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: anxiety (officially diagnosed, on medication) and Hashimoto's hypothyroidism (takes levothyroxine)."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has Hashimoto's hypothyroidism and takes levothyroxine."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: Anxiety disorder (on medication); Hashimoto's hypothyroidism (on levothyroxine)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother takes levothyroxine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her father has high blood pressure"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.her_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her father has high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her father has hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.her_father_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her father has hypertension."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father: hypertension"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.father_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father: hypertension."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has hypertension"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has hypertension."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father: Hypertension"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father: Hypertension."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches assessed as tension-type headaches, consistent with shoulder tension, jaw clenching, screen time, and stress; clinician noted concern about possible medication overuse headache given ibuprofen frequency."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to limit Ibuprofen use to a maximum of 2-3 days per week."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician expressed concern about possible medication overuse headache from ibuprofen use 4 to 5 days per week."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Limit ibuprofen use to 2–3 days per week."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Cap ibuprofen at a maximum of 2–3 days per week."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cap ibuprofen at two to three days per week due to risk of medication overuse headache; acetaminophen may be used on the other days."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cap ibuprofen at 2-3 days per week maximum to avoid medication overuse headache."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Limit ibuprofen to two to three days per week maximum."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F042",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "150",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Increase sertraline to 150 mg once daily in the morning; possible transient nausea or jitteriness in first week, usually fading in five to seven days; patient advised to message rather than stop medication if side effects are worse."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase Sertraline to 150 mg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "A plan was made to increase sertraline to 150 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline to 150 mg by mouth once daily in the morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Increase sertraline to 150 mg orally once daily in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline to 150 mg once daily, taken in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100 mg to 150 mg orally once daily in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline to 150 mg once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F045",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "hydroxyzine",
+      "canonical_anchor": "med.medication.hydroxyzine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "hydroxyzine",
+        "value": "25",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed, two to three nights per week; trazodone not restarted."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Hydroxyzine 25 mg at bedtime as needed, 2-3 nights per week."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to continue hydroxyzine as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue hydroxyzine 25 mg at bedtime as needed (2–3 nights per week)."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed, two to three nights per week."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed, 2-3 nights per week."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed two to three nights per week."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F048",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "trazodone",
+      "canonical_anchor": "med.medication.trazodone.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "trazodone",
+        "value": "50",
+        "unit": "mg",
+        "time": "morning",
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed, two to three nights per week; trazodone not restarted."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was discontinued after approximately two weeks due to significant next-day grogginess."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was stopped after about two weeks."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was discontinued because of morning grogginess."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previous medication trial: trazodone 50 mg at bedtime in April, discontinued after approximately two weeks due to morning grogginess/hungover feeling lasting until 11 AM or noon."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime was tried in the spring and discontinued after about two weeks in April due to morning grogginess lasting until 11 AM–noon; it has not been restarted and the patient does not want to restart it."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past psychiatric treatment: Trial of trazodone 50 mg at bedtime in April (approximately 2 weeks), discontinued due to morning grogginess (\"felt like a zombie until 11 AM-noon\")."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was stopped after about two weeks."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F049",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "every morning",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg and vitamin D 1,000 units."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Vitamin D 1000 IU daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to keep vitamin D."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D 1,000 units every morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue vitamin D 1000 units every morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg nightly and vitamin D 1000 units daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D 1000 units every morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": "3",
+        "unit": "mg",
+        "time": "nightly",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg and vitamin D 1,000 units."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Melatonin 3 mg nightly."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to keep melatonin 3 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg nightly."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue melatonin 3 mg nightly."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg nightly and vitamin D 1000 units daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg nightly."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F052",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Continue melatonin 3 mg and vitamin D 1,000 units",
+      "canonical_anchor": "instruct.continue.continue_vitamin_d.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_melatonin_3_mg_and_vitamin_d_1_000_units",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg and vitamin D 1,000 units."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_vitamin_d_1000_iu_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Vitamin D 1000 IU daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_vitamin_d_1_000_units",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D 1,000 units every morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_vitamin_d_1000_units",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D 1000 units every morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_melatonin_3_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_melatonin_3_mg_nightly_and_vitamin_d_1000_units_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg nightly and vitamin D 1000 units daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F053",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "insomnia / sleep difficulty",
+      "canonical_anchor": "diagnosis.sleep.insomnia.present",
+      "kind": "diagnosis",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Psychotherapy plans: Referral for cognitive behavioral therapy (CBT) and CBT for insomnia (CBT-I) with psychologist Dr"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Psychotherapy plans: Referral for cognitive behavioral therapy (CBT) and CBT for insomnia (CBT-I) with psychologist Dr. Mara Ellison in the behavioral health group; referral placed today; expected call within one to two weeks; patient to message if no contact within two weeks."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.treatment_referral_for_cognitive_behavioral_therapy_cbt_and_cbt_for_insomnia_cbt_i_with_psychologist_dr",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Psychotherapy plans: Referral for cognitive behavioral therapy (CBT) and CBT for insomnia (CBT-I) with psychologist Dr"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep onset insomnia is a primary complaint, with it taking one to two hours to fall asleep"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep onset insomnia is a primary complaint, with it taking one to two hours to fall asleep."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.referral_to_be_placed_for_cognitive_behavioral_therapy_cbt_and_cbt_for_insomnia_cbt_i",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Referral to be placed for Cognitive Behavioral Therapy (CBT) and CBT for Insomnia (CBT-I)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.her_main_problems_were_worry_and_poor_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported her main problems were worry and poor sleep."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported sleep onset insomnia"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.she_identifies_worry_and_poor_sleep_as_her_primary_concerns",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She identifies worry and poor sleep as her primary concerns."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has sleep-onset insomnia"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.the_referral_is_for_anxiety_focused_cbt_and_cbt_for_insomnia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The referral is for anxiety-focused CBT and CBT for insomnia."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep onset insomnia: takes approximately one to two hours to fall asleep after getting in bed around 10:30 PM"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep onset insomnia: takes approximately one to two hours to fall asleep after getting in bed around 10:30 PM."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.mood_has_been_fine_identifies_the_main_problems_as_worry_and_poor_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports mood has been fine; identifies the main problems as worry and poor sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Referral to CBT, specifically including CBT-I for insomnia, with Dr"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.treatment_referral_to_cbt_specifically_including_cbt_i_for_insomnia_with_dr",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Referral to CBT, specifically including CBT-I for insomnia, with Dr"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep onset insomnia"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep onset insomnia."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.treatment_mara_ellison_psychologist_in_behavioral_health_group_for_cognitive_behavioral_therapy_cbt_for_anxiety_and_cbt_i_cbt_for_insomnia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mara Ellison (psychologist in behavioral health group) for Cognitive Behavioral Therapy (CBT) for anxiety and CBT-I (CBT for insomnia)"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.she_states_the_problem_is_not_sleeping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She states the problem is not sleeping."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer for CBT-I for insomnia"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.refer_for_cbt_i_for_insomnia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer for CBT-I for insomnia."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F054",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "mood has been fine",
+      "canonical_anchor": "symptom.mood_behavior.mood_been_fine.present",
+      "kind": "symptom",
+      "subtype": "mood_behavior",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "mood has been fine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.her_mood_has_been_fine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her PHQ-9 score was 6, and she reports her mood has been \"fine.\""
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.mood_has_been_fine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported mood has been fine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.mood_has_been_fine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports mood has been fine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F061",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "jaw clenching",
+      "canonical_anchor": "symptom.symptom.jaw_clenching.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "jaw clenching",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.her_dentist_commented_on_the_jaw_clenching_in_september_and_suggested_a_night_guard",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her dentist commented on the jaw clenching in September and suggested a night guard."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.jaw_clenching",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported jaw clenching."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.jaw_clenching",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports jaw clenching."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.jaw_clenching",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports jaw clenching."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.her_dentist_commented_on_jaw_clenching_at_a_cleaning_in_september",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her dentist commented on jaw clenching at a cleaning in September."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.jaw_clenching_her_dentist_commented_on_it_at_a_september_cleaning_and_suggested_a_possible_night_guard",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports jaw clenching; her dentist commented on it at a September cleaning and suggested a possible night guard."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F062",
+        "support": "5/5",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "fatigue",
+      "canonical_anchor": "symptom.symptom.fatigue.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "fatigue",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.constant_fatigue_described_as_being_wired_tired",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports constant fatigue, described as being \"wired tired.\""
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported fatigue."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_described_the_fatigue_as_wired_tired",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient described the fatigue as \"wired tired.\""
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports fatigue."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F065",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": "5",
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.pain_is_rated_as_a_4_or_5_out_of_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is rated as a 4 or 5 out of 10."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient described the pain as a dull ache."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headache pain is dull rather than throbbing."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.headaches_described_as_band_like_tight_dull_ache_around_whole_head_both_sides_severity_45_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches described as band-like, tight, dull ache around whole head, both sides, severity 4–5/10."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches are never present on waking; mornings are fine and the pain builds through the workday."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain_rated_4_5_out_of_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain rated 4-5 out of 10."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_headaches_are_a_dull_ache",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The headaches are a dull ache."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F072",
+        "support": "7/7",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Headaches are worse when she skips lunch",
+      "canonical_anchor": "symptom.symptom.headache_worse_when_she_skip_lunch.worsened",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "headache are worse when she skip lunch",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.headaches_are_worse_on_stressful_work_days_when_she_skips_lunch_and_after_prolonged_screen_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches are worse on stressful work days, when she skips lunch, and after prolonged screen time."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.headaches_are_worse_when_she_skips_lunch",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches are worse when she skips lunch."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.headaches_are_worse_when_she_skips_lunch",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches are worse when she skips lunch."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F076",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Trazodone",
+      "canonical_anchor": "demo.demo.trazodone.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "trazodone",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "demo.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was discontinued after approximately two weeks due to significant next-day grogginess."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was stopped after about two weeks."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was effective for sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was stopped after about two weeks."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F080",
+        "support": "4/4",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "vaping",
+      "canonical_anchor": "sochist.sochist.vaping.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "vaping",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "social_history.social_history_vaping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No vaping"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "social_history.social_history_vaping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No vaping"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_denied_vaping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied vaping."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F088",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "kimi-k2p6",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Patient denies thoughts of hurting herself",
+      "canonical_anchor": "diagnosis.denie.denie_thought_of_hurting_herself.present",
+      "kind": "diagnosis",
+      "subtype": "denie",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "patient denie thought of hurting herself",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.patient_denies_any_thoughts_of_hurting_herself_or_that_life_is_not_worth_living",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies any thoughts of hurting herself or that life is not worth living."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.patient_denies_any_thoughts_of_hurting_others",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies any thoughts of hurting others."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.patient_denies_thoughts_of_hurting_herself",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies thoughts of hurting herself."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.patient_denies_thoughts_of_hurting_herself",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies thoughts of hurting herself."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F092",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Planned investigations",
+      "canonical_anchor": "instruct.planned.planned_investigation.planned",
+      "kind": "instruct",
+      "subtype": "planned",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "planned investigation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.planned_investigations",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Planned investigations:"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.planned_investigations",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Planned investigations:"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.planned_investigation_tsh_with_reflex_free_t4",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Planned investigation: TSH with reflex free T4."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.planned_investigation_cbc",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Planned investigation: CBC."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.planned_investigation_basic_metabolic_panel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Planned investigation: basic metabolic panel."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F094",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Medication plans",
+      "canonical_anchor": "instruct.plan.plan.present",
+      "kind": "instruct",
+      "subtype": "plan",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "medication plan",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.medication_plans",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans:"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.medication_plans",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans:"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.medication_plans_increase_sertraline_to_150_mg_orally_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Increase sertraline to 150 mg orally once daily in the morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.medication_plans_continue_hydroxyzine_25_mg_at_bedtime_as_needed_23_nights_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue hydroxyzine 25 mg at bedtime as needed (2–3 nights per week)."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.medication_plans_continue_melatonin_3_mg_nightly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue melatonin 3 mg nightly."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.medication_plans_continue_vitamin_d_1000_units",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue vitamin D 1000 units every morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.medication_plans_cap_ibuprofen_at_a_maximum_of_23_days_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Cap ibuprofen at a maximum of 2–3 days per week."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.medication_plans_use_acetaminophen_on_days_when_ibuprofen_is_not_taken",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Use acetaminophen on days when ibuprofen is not taken."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.medication_plans_do_not_restart_trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Do not restart trazodone."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.medication_plans_usual_maximum_dose_for_sertraline_is_200_mg_150_mg_is_not_the_top_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Usual maximum dose for sertraline is 200 mg; 150 mg is not the top dose."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F097",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "minimax-m3",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Increase Sertraline to 150 mg once daily",
+      "canonical_anchor": "instruct.increase.increase_sertraline_to.present",
+      "kind": "instruct",
+      "subtype": "increase",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "sertraline",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.increase_sertraline_to_150_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase Sertraline to 150 mg once daily in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.increase_sertraline_to_150_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline to 150 mg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.increase_sertraline_to_150_mg_by_mouth_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline to 150 mg by mouth once daily in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.increase_sertraline_to_150_mg_once_daily_taken",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline to 150 mg once daily, taken in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.increase_sertraline_from_100_mg_to_150_mg_orally_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100 mg to 150 mg orally once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F098",
+        "support": "5/5",
+        "models": [
+          "google_gemini-2_5-pro",
+          "qwen3p8-max",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue Hydroxyzine 25 mg at bedtime as needed, 2-3 nights per week",
+      "canonical_anchor": "instruct.continue.continue_hydroxyzine_at_bedtime_needed.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "hydroxyzine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_hydroxyzine_25_mg_at_bedtime_as_needed_2_3_nights_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Hydroxyzine 25 mg at bedtime as needed, 2-3 nights per week."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_hydroxyzine_25_mg_at_bedtime_as_needed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_hydroxyzine_25_mg_at_bedtime_as_needed_2_3_nights_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed, 2-3 nights per week."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_hydroxyzine_25_mg_at_bedtime_as_needed_two_to_three_nights_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed, two to three nights per week."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_hydroxyzine_25_mg_at_bedtime_as_needed_two_to_three_nights_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue hydroxyzine 25 mg at bedtime as needed two to three nights per week."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F099",
+        "support": "5/5",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue melatonin 3 mg nightly",
+      "canonical_anchor": "instruct.continue.continue_melatonin_nightly.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "melatonin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_melatonin_3_mg_nightly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Melatonin 3 mg nightly."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_melatonin_3_mg_nightly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg nightly."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_melatonin_3_mg_nightly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg nightly."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F100",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "resolved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The visit was after sertraline had been increased at the prior appointment."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline-associated nausea has fully resolved."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nausea occurred during the first week after the sertraline increase and resolved after five to six days."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nausea from sertraline dose increase: resolved after 5-6 days."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F113",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "nausea with the headaches",
+      "canonical_anchor": "symptom.symptom.nausea_with_headache.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "nausea with the headache",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.nausea_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied nausea with the headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.nausea_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies nausea with the headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.aura_no_nausea_no_light_sensitivity_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No aura, no nausea, no light sensitivity with the headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F147",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "headaches that wake her from sleep",
+      "canonical_anchor": "symptom.sleep.headache_that_wake_her_from_sleep.present",
+      "kind": "symptom",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "headache that wake her from sleep",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.headaches_that_wake_her_from_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied headaches that wake her from sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.headaches_that_wake_her_from_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies headaches that wake her from sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.headache_awakening_her_from_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies headache awakening her from sleep."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F158",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "weakness",
+      "canonical_anchor": "symptom.symptom.weakness.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "weakness",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.weakness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied weakness."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.weakness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies weakness."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.weakness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies weakness."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.associated_weakness_numbness_trouble_speaking_vision_loss_fever_or_stiff_neck",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No associated weakness, numbness, trouble speaking, vision loss, fever, or stiff neck."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F160",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "numbness",
+      "canonical_anchor": "symptom.symptom.numbness.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "numbness",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied numbness."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies numbness."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies numbness."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F161",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "vision loss",
+      "canonical_anchor": "symptom.symptom.vision_loss.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "vision loss",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.vision_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied vision loss."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.vision_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies vision loss."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.vision_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies vision loss."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F163",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "fever",
+      "canonical_anchor": "symptom.symptom.fever.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "fever",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied fever."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies fever."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies fever."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F164",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "stiff neck",
+      "canonical_anchor": "symptom.symptom.stiff_neck.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "stiff neck",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.stiff_neck",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied stiff neck."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.stiff_neck",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies stiff neck."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.stiff_neck",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies stiff neck."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F165",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "trazodone",
+      "canonical_anchor": "med.medication.trazodone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "trazodone",
+        "value": "50",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime was tried in the spring."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime was tried for approximately 2 weeks in April."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The trazodone dose was 50 mg at bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F174",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Trazodone 50 mg at bedtime was tried in the spring",
+      "canonical_anchor": "diagnosis.trazodone.trazodone_at_bedtime_tried_in_spring.present",
+      "kind": "diagnosis",
+      "subtype": "trazodone",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "trazodone",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.trazodone_50_mg_at_bedtime_was_tried_in_the_spring",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime was tried in the spring."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.trazodone_50_mg_at_bedtime_was_tried_for_approximately_2_weeks_in_april",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime was tried for approximately 2 weeks in April."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.trazodone_50_mg_at_bedtime_was_tried_in_the_spring_and_discontinued_after_about_two_weeks_in_april_due_to_morning_grogginess_lasting_until_11_amnoon_it_has_not_been_restarted_and_the_patient_does_not_want_to_restart_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime was tried in the spring and discontinued after about two weeks in April due to morning grogginess lasting until 11 AM–noon; it has not been restarted and the patient does not want to restart it."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F175",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Trazodone caused morning grogginess",
+      "canonical_anchor": "diagnosis.trazodone.trazodone_caused_morning_grogginess.present",
+      "kind": "diagnosis",
+      "subtype": "trazodone",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "trazodone",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.trazodone_caused_morning_grogginess",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone caused morning grogginess."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.trazodone_caused_morning_grogginess_lasting_until_approximately_11_am_or_noon",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone caused morning grogginess lasting until approximately 11 AM or noon."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.trazodone_caused_next_day_grogginess",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone caused next-day grogginess."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F177",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Sertraline",
+      "canonical_anchor": "demo.demo.sertraline.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sertraline",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline was increased from 50 mg at the last visit six weeks ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline was increased from 50 mg daily 6 weeks ago."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline was increased from 50 mg at the last visit six weeks ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F190",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Her mother takes levothyroxine",
+      "canonical_anchor": "famhist.famhist.her_mother_take_levothyroxine.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_mother_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother takes levothyroxine."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.her_mother_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother takes levothyroxine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.her_mother_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother takes levothyroxine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_hashimoto_s_hypothyroidism_and_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has Hashimoto's hypothyroidism and takes levothyroxine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F194",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Her workplace has been short-staffed since the summer",
+      "canonical_anchor": "sochist.sochist.her_workplace_been_short_staffed_since_summer.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "her workplace has been short-staffed since the summer",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_reported_the_workplace_has_been_short_staffed_since_the_summer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported the workplace has been short-staffed since the summer."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.her_workplace_has_been_short_staffed_since_the_summer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her workplace has been short-staffed since the summer."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.her_workplace_has_been_short_staffed_since_the_summer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her workplace has been short-staffed since the summer."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F197",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Do not restart trazodone",
+      "canonical_anchor": "instruct.do.do_restart_trazodone.present",
+      "kind": "instruct",
+      "subtype": "do",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "trazodone",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.do_not_restart_trazodone_because_of_prior_morning_grogginess",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Do not restart trazodone because of prior morning grogginess."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.do_not_restart_trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Do not restart trazodone."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.do_not_restart_trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Do not restart trazodone."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F306",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    }
+  ]
+}

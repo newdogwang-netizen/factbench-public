@@ -1,0 +1,1000 @@
+#!/usr/bin/env python3
+"""Deterministic detfact scorer.
+
+Inputs:
+- a detfact/factset/v1 JSON exported by detfact_factset.py, or an audit JSON
+- a JSON object with claims[]
+
+The scorer uses no LLM and no fuzzy semantic matching. Claim identity is the
+canonical anchor produced by detfact_consensus.canonicalize_claim.
+"""
+import argparse
+import hashlib
+import json
+import os
+import re
+import sys
+from collections import Counter, defaultdict
+
+from detfact_consensus import FIELDS, STABLE_FIELDS, canonicalize_claim, norm_field, relevant
+from detfact_factset import PROTOCOL_VERSION, RULES_VERSION, make_factset
+from detfact.schema import ValidationError, validate_claims_doc, validate_factset
+import detfact_oracle as oracle
+
+REPORT_PROTOCOL = "detfact/report/v1"
+EVALUATOR_VERSION = "detfact-scorer/0.2"
+UNMATCHED_POLICIES = {"auto", "hallucination", "not_in_factset"}
+IDENTITY_RULE = "canonical_anchor tiered deterministic match (exact > base > group-key > token-overlap); direction compared as a check"
+
+# direction segments a canonical_anchor may carry after scope.anchor_key
+DIRECTION_SEGMENTS = {
+    "present", "absent", "active", "improved", "worsened",
+    "ordered", "planned", "stop", "done", "decreased", "increased",
+}
+# only truly contradictory direction pairs count as wrong_fact; a claim saying
+# "present" against a gold "active" (or one side missing) is compatible
+OPPOSITE_DIRECTIONS = [
+    ({"present", "active", "done"}, {"absent"}),
+    ({"improved"}, {"worsened"}),
+    ({"increased"}, {"decreased"}),
+]
+COMPAT_GROUPS = {"symptom": ["diagnosis"], "diagnosis": ["symptom"]}
+
+
+def split_anchor(anchor):
+    parts = [p for p in (anchor or "").split(".") if p]
+    if len(parts) < 3:
+        return {"scope": ".".join(parts[:-1]), "anchor_key": parts[-1] if parts else "",
+                "direction": "", "condition": ""}
+    scope = ".".join(parts[:2])
+    anchor_key = parts[2]
+    direction = ""
+    cond_parts = []
+    for seg in parts[3:]:
+        if not direction and not cond_parts and seg in DIRECTION_SEGMENTS:
+            direction = seg
+        else:
+            cond_parts.append(seg)
+    return {"scope": scope, "anchor_key": anchor_key,
+            "direction": direction, "condition": ".".join(cond_parts)}
+
+
+# 自指代词归一:"feeling not himself" 与 gold "not myself" 是同一断言,
+# 代词人称随叙述视角变化,不构成身份差异
+_SELF_PRONOUNS = {"myself", "himself", "herself", "themselves", "oneself"}
+
+
+def identity_tokens(anchor_key, condition):
+    toks = set(anchor_key.split("_")) | set(condition.replace(".", "_").split("_"))
+    toks.discard("")
+    toks.discard("after")
+    if toks & _SELF_PRONOUNS:
+        toks = (toks - _SELF_PRONOUNS) | {"self"}
+    return toks
+
+
+def directions_conflict(a, b):
+    if not a or not b or a == b:
+        return False
+    for s1, s2 in OPPOSITE_DIRECTIONS:
+        if (a in s1 and b in s2) or (a in s2 and b in s1):
+            return True
+    return False
+
+
+# status values are paraphrase-prone ("present" vs "active"); only genuinely
+# contradictory pairs count as wrong_fact, everything else is compatible
+CONTRA_STATUS = [
+    ({"active", "present", "done"}, {"stop", "past", "never", "absent"}),
+    # "已缓解"断言终止,与现患构成真矛盾(past 因可与现患并存而豁免,resolved 不豁免)
+    ({"active", "present"}, {"resolved"}),
+    ({"improved"}, {"worsened"}),
+    ({"increased"}, {"decreased"}),
+]
+
+
+def status_conflict(a, b):
+    if not a or not b or a == b:
+        return False
+    for s1, s2 in CONTRA_STATUS:
+        if (a in s1 and b in s2) or (a in s2 and b in s1):
+            return True
+    return False
+
+
+# ---- 时间字段的维度化比较 ----
+# 频次(每日几次)、钟点(几点服)、病程(何时起)是三个正交维度:
+# 只有同维度且不同才构成矛盾;跨维度是互补信息(daily + bedtime = 每晚一次)。
+_RATE_PATTERNS = [
+    (re.compile(r"\btwice daily\b|\b2 times daily\b|\bbid\b|\bevery 12 hours\b"), 2),
+    (re.compile(r"\bthree times daily\b|\b3 times daily\b|\btid\b|\bevery 8 hours\b"), 3),
+    (re.compile(r"\bfour times daily\b|\b4 times daily\b|\bqid\b|\bevery 6 hours\b"), 4),
+    (re.compile(r"\bdaily\b|\bnightly\b|\bevery 24 hours\b|\bevery day\b"), 1),
+    (re.compile(r"\bweekly\b|\bonce a week\b"), 7),
+]
+# 钟点词归并到时段桶再比较(bedtime 和 night 不矛盾)
+_TIME_POINT_BUCKETS = {
+    "morning": "morning", "breakfast": "morning",
+    "noon": "midday", "lunch": "midday",
+    "afternoon": "afternoon",
+    "evening": "evening", "dinner": "evening",
+    "night": "night", "bedtime": "night", "midnight": "night",
+}
+_TIME_POINT_RE = re.compile(
+    r"\b(morning|afternoon|evening|night|bedtime|noon|midnight|breakfast|lunch|dinner)\b")
+
+
+def _freq_rate(t):
+    for rx, rate in _RATE_PATTERNS:
+        if rx.search(t):
+            return rate
+    return None
+
+
+def _time_buckets(t):
+    return {_TIME_POINT_BUCKETS[w] for w in _TIME_POINT_RE.findall(t)}
+
+
+def time_mismatch(cv, fv):
+    """维度化时间比较;True = 矛盾。频次先比(保 FREQ_FLIP 注入召回),
+    钟点按时段桶比,单侧频次/钟点对另一维度视为互补,病程类回退到
+    token 子集(子集 = 欠具体,非矛盾)。"""
+    if cv == "current" or fv == "current":
+        return False  # "current" 是 parser 的现在时默认值,不携带信息
+    cr, fr = _freq_rate(cv), _freq_rate(fv)
+    if cr is not None and fr is not None:
+        return cr != fr
+    cp, fp = _time_buckets(cv), _time_buckets(fv)
+    if cp and fp:
+        return not (cp & fp)
+    if cr is not None or fr is not None or cp or fp:
+        return False
+    ct, ft = set(cv.split()), set(fv.split())
+    return not (ct <= ft or ft <= ct)
+
+
+# 医嘱/计划框架:与"当前(未)服用"的现状事实分属不同事件,不比极性
+PLAN_STATUSES = {"ordered", "plan", "planned", "prescribed", "recommended"}
+# 疗效框架("gabapentin 对下午的渴求有帮助"):时间指生效时段而非服药时段
+EFFICACY_STATUSES = {"helping", "effective"}
+# 症状/诊断组:"有既往史"与"现患"临床上并存,past↔active 非矛盾
+SYMPTOM_GROUPS = {"symptom", "diagnosis", "condition"}
+
+
+def canonical_bytes(doc):
+    return json.dumps(doc, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+
+
+def sha256_doc(doc):
+    return hashlib.sha256(canonical_bytes(doc)).hexdigest()
+
+
+def file_sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def load_json(path):
+    with open(path) as f:
+        return json.load(f)
+
+
+def load_factset(path, audit_statuses=None):
+    doc = load_json(path)
+    if doc.get("protocol_version") == PROTOCOL_VERSION:
+        try:
+            validate_factset(doc)
+        except ValidationError as exc:
+            raise SystemExit(exc.code + ": " + exc.message)
+        return doc
+    if "facts" in doc and "stats" in doc:
+        return make_factset(doc, source_path=path, statuses=audit_statuses or ["certain"])
+    raise SystemExit("unsupported factset/audit JSON: " + path)
+
+
+def load_claims(path):
+    doc = load_json(path)
+    try:
+        return validate_claims_doc(doc)
+    except ValidationError as exc:
+        raise SystemExit(exc.code + ": " + exc.message)
+
+
+def fact_key(fact):
+    return fact.get("canonical_anchor") or fact.get("key")
+
+
+def build_fact_index(factset):
+    """Tiered deterministic indexes: exact anchor, base (scope.anchor_key),
+    group-key (group.anchor_key), and per-group parsed rows for token overlap."""
+    idx = {
+        "exact": defaultdict(list),
+        "base": defaultdict(list),
+        "group_key": defaultdict(list),
+        "by_group": defaultdict(list),
+        "all": [],
+    }
+    for pos, fact in enumerate(factset.get("facts", [])):
+        key = fact_key(fact)
+        if not key:
+            continue
+        parsed = split_anchor(key)
+        group = parsed["scope"].split(".")[0] if parsed["scope"] else ""
+        entry = (pos, fact, parsed)
+        idx["all"].append(entry)
+        idx["exact"][key].append(entry)
+        idx["base"][parsed["scope"] + "." + parsed["anchor_key"]].append(entry)
+        idx["group_key"][group + "." + parsed["anchor_key"]].append(entry)
+        idx["by_group"][group].append(entry)
+    return idx
+
+
+def claim_canon(claim):
+    return canonicalize_claim(claim.get("kind"), claim)
+
+
+def match_fact(idx, canon):
+    """Return (tier_name, [entries]) for the first tier with candidates."""
+    anchor = canon.get("canonical_anchor") or ""
+    group = canon.get("group") or ""
+    scope = canon.get("scope") or ""
+    anchor_key = canon.get("anchor_key") or ""
+    tiers = [
+        ("exact_anchor", idx["exact"].get(anchor, [])),
+        ("base_anchor", idx["base"].get(scope + "." + anchor_key, [])),
+        ("group_key", idx["group_key"].get(group + "." + anchor_key, [])),
+    ]
+    for name, entries in tiers:
+        if entries:
+            if name == "base_anchor" and group == "med":
+                # 同药多框架(在服/停药/换量)常散布在不同 scope:合并 group_key
+                # 候选一起消歧,方向兼容的框架优先,避免家用药清单撞停药事实
+                merged = {id(e): e for e in entries}
+                for e in idx["group_key"].get(group + "." + anchor_key, []):
+                    merged[id(e)] = e
+                return name, list(merged.values())
+            return name, entries
+    ctoks = identity_tokens(anchor_key, canon.get("condition_anchor") or "")
+    overlap = []
+    # symptom/diagnosis are clinically adjacent: models often report the same
+    # finding under either kind, so token overlap may cross that pair only
+    groups = [group]
+    if group in COMPAT_GROUPS:
+        groups += [g for g in COMPAT_GROUPS[group] if g != group]
+    for g in groups:
+        for entry in idx["by_group"].get(g, []):
+            ftoks = identity_tokens(entry[2]["anchor_key"], entry[2]["condition"])
+            if ctoks and ftoks and relevant(" ".join(sorted(ctoks)), " ".join(sorted(ftoks))):
+                overlap.append(entry)
+    if overlap:
+        return "token_overlap", overlap
+    # oracle 锚同义层(纯查表,零 LLM 调用;表由离线构建器扩充):
+    # 深度改写(NKDA ↔ no known drug allergies)在 token 层不可见,
+    # 三模型一致判 SAME 的判例可救援。单向契约:假 DIFFERENT 只损召回。
+    syn = []
+    canon_obj = (canon.get("object") or canon.get("anchor_key") or "").replace("_", " ")
+    if canon_obj:
+        for g in groups:
+            for entry in idx["by_group"].get(g, []):
+                fo = ((entry[1].get("fields") or {}).get("object") or
+                      entry[2]["anchor_key"].replace("_", " "))
+                if oracle.anchor_equivalent(canon_obj, str(fo)) is True:
+                    syn.append(entry)
+    if syn:
+        return "oracle_synonym", syn
+    return "", []
+
+
+# 通用症状/泛称:字面相等不足以确证"同一事件"(同词常指不同事件)
+GENERIC_OBJECTS = {
+    "pain", "anxiety", "depression", "insomnia", "sleep difficulty",
+    "fatigue", "nausea", "dizziness", "headache", "blood pressure",
+    "medication", "symptom", "dolor", "ansiedad", "depresion",
+    "memory impairment", "vitamin", "supplement",
+}
+
+
+def _tokens_subset(short, long_):
+    """short 的全部 token(去复数 s、去标点)是否含于 long_。"""
+    def toks(s):
+        out = set()
+        for w in s.replace("'s", " ").replace("’s", " ").split():
+            w = w.strip("\"'“”().,;:!?").rstrip("s")
+            # 轻词干:长词去 ed/ing 屈折(startled/startles → startl)
+            if len(w) > 5 and w.endswith("ed"):
+                w = w[:-2]
+            elif len(w) > 6 and w.endswith("ing"):
+                w = w[:-3]
+            if w:
+                out.add(w)
+        return out
+    st, lt = toks(short), toks(long_)
+    st.discard("")
+    lt.discard("")
+    return bool(st) and st <= lt
+
+
+def _frames_compatible(cdir, fdir):
+    """身份确证要求事件框架一致:方向相同或同属现行态。
+    done/stop(单次给药/停药)是排他框架:对方方向不同(含为空)即不同事件。"""
+    if fdir in {"done", "stop"} or cdir in {"done", "stop"}:
+        return cdir == fdir
+    if not cdir or not fdir or cdir == fdir:
+        return not directions_conflict(cdir, fdir)
+    if {cdir, fdir} <= {"present", "active"}:
+        return True
+    return False
+
+
+# 单次给药框架标记:具体过去时点(钟点/last night)= 一次性事件,
+# 与常规用药方案(claim 无此类时点)不是同一事件
+_SINGLE_DOSE_RE = re.compile(
+    r"\b(last night|yesterday|tonight|this (?:morning|afternoon|evening))\b|\b\d{1,2}:\d{2}\b")
+
+
+def _single_dose_frame(doc):
+    t = norm_field("time", (doc.get("fields") or {}).get("time"))
+    return bool(_SINGLE_DOSE_RE.search(t))
+
+
+def identity_certain(claim, fact, claim_dir="", fact_dir="", index=None):
+    """token 层匹配的身份确证:object 具体且相等(或 oracle 判同),
+    且事件框架兼容。通用症状词与跨框架同药不予确证。"""
+    co = norm_field("object", (claim.get("fields") or {}).get("object"))
+    fo = norm_field("object", (fact.get("fields") or {}).get("object"))
+    if not co or not fo:
+        return False
+    if co in GENERIC_OBJECTS or fo in GENERIC_OBJECTS:
+        # 例外:同一泛指词在 factset 内唯一指认一个事实时,同词即同实体
+        # (泛指禁证的本意是"同词常指不同事件";全 case 只有一个 anxiety
+        # 事实时不存在歧义)。复用子集身份的唯一性原则。
+        if index is not None and co == fo:
+            hits = sum(1 for _p, f2, _pr in index["all"]
+                       if norm_field("object", (f2.get("fields") or {}).get("object")) == co)
+            if hits == 1 and _frames_compatible(claim_dir, fact_dir)                     and _single_dose_frame(claim) == _single_dose_frame(fact):
+                return True
+        return False
+    if not _frames_compatible(claim_dir, fact_dir):
+        return False
+    if _single_dose_frame(claim) != _single_dose_frame(fact):
+        return False  # 住院单次 PRN 撞常规方案(Klonopin 0.5 单次 vs 1mg BID)
+    # 同首词且 token 子集 = 同一实体的欠具体写法(potassium ⊂ potassium
+    # gluconate);metoprolol tartrate vs succinate 非子集,不会误证。
+    # 子集须在 factset 内唯一指认一个事实:裸家族词("Vitamin"截自
+    # Vitamin B12)能命中多个 vitamin 事实时身份不确证。
+    ctoks, ftoks = co.split(), fo.split()
+    if ctoks[0] == ftoks[0] and (set(ctoks) <= set(ftoks) or set(ftoks) <= set(ctoks)):
+        shorter = min(set(ctoks), set(ftoks), key=len)
+        if index is not None:
+            hits = 0
+            for _pos, fact2, _parsed in index["all"]:
+                fo2 = norm_field("object", (fact2.get("fields") or {}).get("object"))
+                if fo2 and shorter <= set(fo2.split()):
+                    hits += 1
+            if hits > 1:
+                return False
+        return True
+    if co == fo:
+        return True
+    return oracle.equivalent("object", co, fo) is True
+
+
+def selected_check_fields(fact, mode):
+    if mode == "none":
+        return []
+    if mode == "stable":
+        return sorted(STABLE_FIELDS)
+    if mode == "all":
+        return list(FIELDS)
+    return fact.get("check_fields") or sorted(STABLE_FIELDS)
+
+
+_MASS_UNITS = {"mg", "mcg", "g"}
+_CONTAINER_RE = re.compile(r"\b(caps?|capsules?|tabs?|tablets?|pills?|drops?|gtt)\b")
+
+
+def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
+    cfields = claim.get("fields") or {}
+    ffields = fact.get("fields") or {}
+    wrong = []
+    extra = []
+    # 计划框架(医嘱/待执行)与现状框架(在服/未服)是不同事件:
+    # 一侧是计划、另一侧是现状时,状态/极性/数值/时间不可比
+    _cstat = norm_field("status", cfields.get("status"))
+    _fstat = norm_field("status", ffields.get("status"))
+    plan_xor = (_cstat in PLAN_STATUSES) != (_fstat in PLAN_STATUSES)
+    for fld in fields:
+        cv = norm_field(fld, cfields.get(fld))
+        if not cv:
+            continue
+        fv = norm_field(fld, ffields.get(fld))
+        if not fv:
+            if strict_extra_fields:
+                extra.append({"field": fld, "claim": cv, "fact": None})
+            continue
+        if fld == "status":
+            if plan_xor:
+                continue
+            cpol = norm_field("polarity", cfields.get("polarity"))
+            fpol = norm_field("polarity", ffields.get("polarity"))
+            if cpol == "negative" and fpol == "negative":
+                continue  # 双向否定一致,status 差异是 parser 默认值噪音
+            if (len({cv, fv}) > 1 and {cv, fv} <= {"past", "active", "present"}
+                    and norm_field("kind", fact.get("kind")) in SYMPTOM_GROUPS | {"vital"}):
+                continue  # 症状/体征既往与现况并存;真矛盾走极性/数值通道
+            if cpol == "negative" and fv in {"stop", "past", "on hold", "held"}:
+                continue  # "not taking X"(否定现在时)与"已停用/暂停"是同一现实
+            if status_conflict(cv, fv):
+                # 剂量变更叙事豁免:引文含 "from <旧值> to <新值>" 且两值分属
+                # claim/fact 的 value 时,新旧帧 status 差异是同一事件的两面
+                _q = (claim.get("evidence_quote") or "").lower()
+                _cv2 = norm_field("value", cfields.get("value"))
+                _fv2 = norm_field("value", ffields.get("value"))
+                if _cv2 and _fv2 and (re.search(
+                        r"from\s+" + re.escape(_fv2) + r"\s*(?:mg|mcg|g)?\s+(?:to|down to|up to)\s+" + re.escape(_cv2), _q)
+                        or re.search(
+                        r"from\s+" + re.escape(_cv2) + r"\s*(?:mg|mcg|g)?\s+(?:to|down to|up to)\s+" + re.escape(_fv2), _q)):
+                    continue
+                wrong.append({"field": fld, "claim": cv, "fact": fv})
+            continue
+        if fld == "polarity":
+            if plan_xor:
+                continue  # 医嘱开始用药与"当前未服用"并存,跨框架不比极性
+            if _cstat == "recorded":
+                continue  # 清单成员框架("在药单上/未在服")不断言在服与否
+            if cv == "negative" and fv == "positive" and _fstat in {"stop", "past", "on hold", "held"} \
+                    and _cstat in {"active", "present", "stop", "past", "prior instance", "recorded", ""}:
+                continue  # "not currently taking"与 gold"已停药/暂停(polarity 正)"同义
+            if cv == "negative" and _cstat == "past" and fv == "positive" \
+                    and _fstat not in {"stop", "past"}:
+                continue  # 过去一段时间没用(曾停)与现在在用并存,非矛盾
+            if cv == "positive" and fv == "negative" \
+                    and _cstat in {"past", "stop"} and _fstat in {"stop", "past"}:
+                continue  # "曾服用(已停)"与 gold"负极性停药"是同一现实的对称写法
+            if cv != fv:
+                wrong.append({"field": fld, "claim": cv, "fact": fv})
+            continue
+        if fld == "time":
+            if plan_xor:
+                continue
+            fstat = norm_field("status", ffields.get("status"))
+            if fstat in EFFICACY_STATUSES:
+                continue  # 疗效框架的时间是生效时段,与服药时段不可比
+            if time_mismatch(cv, fv) and oracle.equivalent(fld, cv, fv) is not True:
+                wrong.append({"field": fld, "claim": cv, "fact": fv})
+            continue
+        if fld == "value":
+            if plan_xor:
+                continue
+            # 单次给药时点(7:51 PM)与常规频次(BID)是不同给药事件:
+            # 住院单次 0.5mg 与门诊常规 1mg BID 并存,剂量不可比(case_021 双帧)
+            ctime = norm_field("time", cfields.get("time")) or ""
+            ftime = norm_field("time", ffields.get("time")) or ""
+            _clock = re.compile(r"\d{1,2}:\d{2}|\b(?:am|pm)\b|\blast night\b|\btonight\b", re.I)
+            c_clock, f_clock = bool(_clock.search(ctime)), bool(_clock.search(ftime))
+            c_rate, f_rate = _freq_rate(ctime), _freq_rate(ftime)
+            if (c_clock and f_rate is not None) or (f_clock and c_rate is not None):
+                continue
+            # 量纲守卫:质量剂量(100 mg)与数量(2 capsules)是两个维度,
+            # 不可比("CoQ10 100mg, 2 capsules" 同时为真)
+            cu = norm_field("unit", cfields.get("unit"))
+            fu = norm_field("unit", ffields.get("unit"))
+            c_raw = str(cfields.get("value") or "")
+            f_raw = str(ffields.get("value") or "")
+            if (cu in _MASS_UNITS and (_CONTAINER_RE.search(f_raw.lower()) or _CONTAINER_RE.search(fu))) or \
+               (fu in _MASS_UNITS and (_CONTAINER_RE.search(c_raw.lower()) or _CONTAINER_RE.search(cu))) or \
+               (not cu and _CONTAINER_RE.search(f_raw.lower())) or \
+               (not fu and (_CONTAINER_RE.search(c_raw.lower()) or _CONTAINER_RE.search(cu))) or \
+               (not cu and _CONTAINER_RE.search(fu)):
+                continue
+            if not fu and cu in _MASS_UNITS and fv:
+                # gold 值无单位:去 claim 引文找该值的邻接词——"2 capsules"
+                # 是数量维度,与 claim 的质量剂量(100mg)同真不矛盾;
+                # 邻接 mg(如 "600 mg (1200 mg)")则同维度,矛盾照判
+                q = (claim.get("evidence_quote") or "").lower()
+                if re.search(r"\b" + re.escape(fv) + r"\s*(capsules?|caps?|tablets?|tabs?|pills?)\b", q):
+                    continue
+            # 总量/单片剂量:"300 mg as two 150 mg tablets"、"100mg (two 50mg pills)"
+            # 同句含总量与单片强度,取数分歧不是事实矛盾
+            q0 = (claim.get("evidence_quote") or "").lower()
+            if cv and fv and cv in q0 and fv in q0 and re.search(
+                    r"\b(?:two|three|2|3)\s+\d+\s*(?:mg|mcg)\s+(?:tablets?|pills?|caps?)", q0):
+                continue
+            # 剂量变更叙述:"decreased from 10 mg to 5 mg" 同句含新旧两值,
+            # claim 取到旧值不是主张不同剂量
+            q = (claim.get("evidence_quote") or "").lower()
+            if cv and fv and re.search(
+                    r"from\s+" + re.escape(cv) + r"\s*(?:mg|mcg|g)?\s+(?:to|down to|up to)\s+" + re.escape(fv),
+                    q) or re.search(
+                    r"from\s+" + re.escape(fv) + r"\s*(?:mg|mcg|g)?\s+(?:to|down to|up to)\s+" + re.escape(cv),
+                    q):
+                continue
+            # claim 值在引文中带容器词("1 tablet")而 gold 是质量强度(mg):
+            # 数量与强度是两个维度(sennosides-docusate 1 tablet vs 50mg)
+            if cv and re.search(r"\b" + re.escape(cv) + r"\s*(?:tablets?|tabs?|caps?|capsules?|pills?)\b", q0) \
+                    and (fu in _MASS_UNITS or re.search(r"\d\s*(?:mg|mcg)\b", f_raw.lower())):
+                continue
+            if cv != fv and oracle.equivalent(fld, cv, fv) is not True:
+                wrong.append({"field": fld, "claim": cv, "fact": fv})
+            continue
+        if fld == "object":
+            anchored = tier in {"exact_anchor", "base_anchor", "group_key"}
+            if anchored and (cv in GENERIC_OBJECTS or fv in GENERIC_OBJECTS):
+                # 泛指词(pain/depression)不携带可矛盾的信息,只欠具体;
+                # 仅限锚定层——token_overlap 层身份本就不确定,豁免会把
+                # 不相干 claim 洗成 supported
+                continue
+            if fv and (_tokens_subset(fv, cv)
+                       or _tokens_subset(fv, str(cfields.get("object") or "").lower())):
+                # 电报体长句 object 包含事实实体名("having brain zaps today
+                # despite..." ⊇ "brain zap"):是叙述展开,不是矛盾。
+                # norm_object 会把长句坍缩成药名,故同时对原始 object 检查
+                continue
+            if fv.replace(".", "").isdigit():
+                craw_obj = str(cfields.get("object") or "")
+                if re.search(r"\b" + re.escape(fv) + r"\b", cv) or not re.search(r"\d", craw_obj):
+                    # 数值型 gold object:叙述包含该数(60-year woman ⊇ 60),
+                    # 或叙述完全不含数字(不主张数值,无从矛盾)
+                    continue
+            # 否认句 object 与事实 object 零重叠 = 同组的另一件陈述,非矛盾:
+            # "denies suicide plan"(现风险否认)≠ 错写 gold"家族自杀史"(既往事件)
+            _cpol = norm_field("polarity", cfields.get("polarity"))
+            if anchored and _cpol == "negative" and cv != fv and not relevant(cv, fv):
+                continue
+            # free-text field: paraphrase with high token overlap is compatible;
+            # divergent tokens (e.g. "2 bedroom" vs "3 bedroom") still mismatch
+            if cv != fv and not relevant(cv, fv) and oracle.equivalent(fld, cv, fv) is not True:
+                wrong.append({"field": fld, "claim": cv, "fact": fv})
+            continue
+        if fld == "subject":
+            craw = (str(cfields.get("subject") or "") + " " + str(cfields.get("object") or "")).lower()
+            if fv and fv != "patient" and _tokens_subset(fv, craw):
+                continue  # 事实主语(cousin's boyfriend)包含于 claim 叙述本身
+            if cv != fv and oracle.equivalent(fld, cv, fv) is not True:
+                wrong.append({"field": fld, "claim": cv, "fact": fv})
+            continue
+        if cv != fv and oracle.equivalent(fld, cv, fv) is not True:
+            wrong.append({"field": fld, "claim": cv, "fact": fv})
+    return wrong, extra
+
+
+def count_potential_fabrications(claims, per_claim, factset):
+    """界外虚构通道(借鉴生产系统 PotentialHallucination):
+    带剂量的 medication claim,gold 中不存在任何同实体事实 → 潜在虚构。
+    这是"需人工复核"的报警而非定罪:gold 是高精度子集,模型可能合法
+    提到 gold 未收录的药;consult_note 参照读数即本通道的噪音底。
+    同实体判定用 token 子集(防止把改写/锚缺失当虚构)。"""
+    gold_objs = []
+    for f in factset.get("facts", []):
+        fo = norm_field("object", (f.get("fields") or {}).get("object"))
+        if fo:
+            gold_objs.append(fo)
+    n = 0
+    flagged = []
+    for row, claim in zip(per_claim, claims):
+        if row.get("verdict") not in {"not_in_factset", "hallucination"}:
+            continue
+        if claim.get("kind") != "medication":
+            continue
+        cfields = claim.get("fields") or {}
+        if not norm_field("value", cfields.get("value")):
+            continue  # 只看带剂量的:剂量+无名可依 = 患者安全风险最高的虚构形态
+        co = norm_field("object", cfields.get("object"))
+        if not co:
+            continue
+        if any(_tokens_subset(co, fo) or _tokens_subset(fo, co) for fo in gold_objs):
+            continue  # gold 有同实体事实:是匹配缺口,不是虚构
+        n += 1
+        flagged.append(row.get("index"))
+    return n, flagged
+
+
+def rescue_rematch(index, claim, canon, matched_pos, wrong_fields,
+                   check_mode, strict_extra_fields):
+    """跨框架救援:在全事实集中找 object 严格相等、方向兼容、
+    零字段冲突的兄弟事实。兄弟必须对每个原冲突字段自身有值
+    (欠说明的事实"零冲突"是因为它什么也没主张,不得用于洗白;
+    注入的假错误因此不存在合法救援目标)。找不到返回 None。"""
+    co = norm_field("object", (claim.get("fields") or {}).get("object"))
+    if not co or co in GENERIC_OBJECTS:
+        return None
+    claim_dir = canon.get("direction") or ""
+    need = {w.get("field") for w in wrong_fields if w.get("field") != "direction"}
+    for pos, fact, parsed in index["all"]:
+        if pos == matched_pos:
+            continue
+        ffields = fact.get("fields") or {}
+        fo = norm_field("object", ffields.get("object"))
+        if fo != co:
+            continue
+        if directions_conflict(claim_dir, parsed["direction"]):
+            continue
+        # 跨计划/现状帧不得救援:plan_xor 会把 value/status/time 全豁免,
+        # "零冲突"形同虚设——笔记别处的正确计划剂量不能洗白现用药的错剂量
+        # (实测 cheat trial:apixaban 5→10 曾被 plan 帧 sibling 救援漏过)
+        cstat = norm_field("status", (claim.get("fields") or {}).get("status"))
+        fstat = norm_field("status", ffields.get("status"))
+        if (cstat in PLAN_STATUSES) != (fstat in PLAN_STATUSES):
+            continue
+        if any(not norm_field(f, ffields.get(f)) for f in need):
+            continue
+        w, e = field_mismatches(claim, fact, selected_check_fields(fact, check_mode),
+                                strict_extra_fields)
+        if not w and not e:
+            return pos, fact, parsed
+    return None
+
+
+def default_unmatched_policy(factset):
+    selection = factset.get("selection") or {}
+    scope = selection.get("gold_scope") or selection.get("scope")
+    if scope in {"high_precision_subset", "non_exhaustive", "partial"}:
+        return "not_in_factset"
+    if (
+        selection.get("policy") == "auto_best_full_support_stable"
+        and selection.get("statuses") == ["release"]
+    ):
+        return "not_in_factset"
+    return "hallucination"
+
+
+def resolve_unmatched_policy(factset, policy):
+    policy = policy or "auto"
+    if policy not in UNMATCHED_POLICIES:
+        raise ValueError("invalid unmatched_policy: " + str(policy))
+    if policy == "auto":
+        return default_unmatched_policy(factset)
+    return policy
+
+
+def covered_fact_fields(fact, supported_claims):
+    ffields = fact.get("fields") or {}
+    missing = []
+    for fld in fact.get("coverage_fields") or []:
+        target = norm_field(fld, ffields.get(fld))
+        if not target:
+            continue
+        found = False
+        for claim in supported_claims:
+            cv = norm_field(fld, (claim.get("fields") or {}).get(fld))
+            if cv == target:
+                found = True
+                break
+        if not found:
+            missing.append(fld)
+    return missing
+
+
+def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
+             unmatched_policy="auto"):
+    from detfact_consensus import derive_patient_names, set_case_subject_aliases
+    set_case_subject_aliases(derive_patient_names(factset.get("facts") or []))
+    index = build_fact_index(factset)
+    resolved_unmatched_policy = resolve_unmatched_policy(factset, unmatched_policy)
+    per_claim = []
+    supported_by_fact = defaultdict(list)
+    counts = Counter()
+    counts["total"] = len(claims)
+    counts["total_claims"] = len(claims)
+    counts["total_facts"] = len(factset.get("facts", []))
+
+    for i, claim in enumerate(claims):
+        canon = claim_canon(claim)
+        anchor = canon.get("canonical_anchor") or ""
+        tier, matches = match_fact(index, canon) if anchor else ("", [])
+        if len(matches) > 1:
+            # deterministic disambiguation: prefer candidates whose direction
+            # does not contradict the claim's
+            compatible = [m for m in matches
+                          if not directions_conflict(canon.get("direction") or "", m[2]["direction"])]
+            if len(compatible) == 1:
+                matches = compatible
+            elif len(compatible) > 1:
+                # 二级消歧:唯一零字段冲突的候选获选(确定性:按事实位次;
+                # 多个零冲突取位次最先——彼此一致,判 supported 语义相同;
+                # 无零冲突候选则维持 ambiguous → unknown,不开新 wrong 路径)
+                zero = []
+                for m in compatible:
+                    w2, e2 = field_mismatches(claim, m[1],
+                                              selected_check_fields(m[1], check_mode),
+                                              strict_extra_fields, tier=tier)
+                    if not w2 and not e2:
+                        zero.append(m)
+                if zero:
+                    pick = min(zero, key=lambda m: m[0])
+                    # 带值 claim 不得借"值未经对质"的零冲突候选洗白(欠说明
+                    # 不得洗白,与救援同一原则)。所选候选值为空、或因
+                    # plan_xor 值被豁免时,转与同帧带值候选对质;无同帧带值
+                    # 候选则维持原选(合法跨帧场景不受扰)。
+                    cval = norm_field("value", (claim.get("fields") or {}).get("value"))
+                    _cstat = norm_field("status", (claim.get("fields") or {}).get("status"))
+                    def _same_frame(m):
+                        fstat = norm_field("status", (m[1].get("fields") or {}).get("status"))
+                        return (_cstat in PLAN_STATUSES) == (fstat in PLAN_STATUSES)
+                    _pv = norm_field("value", (pick[1].get("fields") or {}).get("value"))
+                    if cval and (not _pv or not _same_frame(pick)):
+                        samef_valued = [
+                            m for m in compatible
+                            if norm_field("value", (m[1].get("fields") or {}).get("value"))
+                            and _same_frame(m)]
+                        if samef_valued:
+                            szero = [m for m in samef_valued if m in zero]
+                            pick = min(szero or samef_valued, key=lambda m: m[0])
+                    matches = [pick]
+                else:
+                    matches = compatible
+        row = {
+            "index": i,
+            "key": claim.get("key"),
+            "canonical_anchor": anchor,
+            "match_tier": tier or None,
+            "verdict": None,
+            "matched_fact_key": None,
+            "reasons": [],
+        }
+        if not anchor:
+            row["verdict"] = "unknown"
+            row["reasons"].append({"code": "missing_identity", "message": "claim has no canonical anchor"})
+            counts["unknown"] += 1
+        elif not matches:
+            row["verdict"] = resolved_unmatched_policy
+            if resolved_unmatched_policy == "hallucination":
+                message = "canonical anchor not present in exhaustive FactSet"
+            else:
+                message = "canonical anchor not present in non-exhaustive FactSet"
+            row["reasons"].append({
+                "code": "no_matching_fact",
+                "message": message,
+                "unmatched_policy": resolved_unmatched_policy,
+            })
+            counts[resolved_unmatched_policy] += 1
+        elif len(matches) > 1:
+            row["verdict"] = "unknown"
+            row["reasons"].append({"code": "ambiguous_fact", "message": "canonical anchor matched multiple facts"})
+            counts["unknown"] += 1
+        else:
+            fact_pos, fact, fact_parsed = matches[0]
+            row["matched_fact_key"] = fact.get("key")
+            fields = selected_check_fields(fact, check_mode)
+            wrong, extra = field_mismatches(claim, fact, fields, strict_extra_fields,
+                                            tier=tier)
+            claim_direction = canon.get("direction") or ""
+            if directions_conflict(claim_direction, fact_parsed["direction"]):
+                wrong.append({"field": "direction", "claim": claim_direction,
+                              "fact": fact_parsed["direction"]})
+            # 值对质围栏:claim 主张值而所配事实不主张值时,"零冲突"是欠说明,
+            # 不得洗白(与救援同一原则)。存在 object 相等、同帧、带值的兄弟
+            # 事实时,强制与其对质;对质出值冲突则改判该事实的 wrong。
+            _cval = norm_field("value", (claim.get("fields") or {}).get("value"))
+            _fval = norm_field("value", (fact.get("fields") or {}).get("value"))
+            _q_low = (claim.get("evidence_quote") or "").lower()
+            _fact_is_fromside = bool(_fval and re.search(
+                r"from\s+" + re.escape(_fval) + r"\b", _q_low))
+            if not wrong and not extra and _cval \
+                    and canon.get("group") == "med" \
+                    and re.match(r"^\d+(?:\.\d+)?$", _cval) \
+                    and (not _fval or _fact_is_fromside):
+                _co = norm_field("object", (claim.get("fields") or {}).get("object"))
+                _cstat = norm_field("status", (claim.get("fields") or {}).get("status"))
+                for _pos2, _f2, _p2 in index["all"]:
+                    if _pos2 == fact_pos:
+                        continue
+                    _ff = _f2.get("fields") or {}
+                    if norm_field("object", _ff.get("object")) != _co:
+                        continue
+                    if not norm_field("value", _ff.get("value")):
+                        continue
+                    _fstat2 = norm_field("status", _ff.get("status"))
+                    if (_cstat in PLAN_STATUSES) != (_fstat2 in PLAN_STATUSES):
+                        continue
+                    _w2, _e2 = field_mismatches(claim, _f2,
+                                                selected_check_fields(_f2, check_mode),
+                                                strict_extra_fields, tier=tier)
+                    if any(x.get("field") == "value" for x in _w2):
+                        fact_pos, fact, fact_parsed = _pos2, _f2, _p2
+                        row["matched_fact_key"] = _f2.get("key")
+                        wrong, extra = _w2, _e2
+                        row["reasons"].append({
+                            "code": "unvetted_value_confront",
+                            "message": "value-bearing claim confronted with valued sibling fact",
+                        })
+                    break
+            if wrong and not extra:
+                # 一致优先重匹配:同实体多框架散布在不同锚下时(家庭药单在服
+                # vs 今日停用),若存在 object 严格相等且零字段冲突的兄弟事实,
+                # 判 supported 而非 wrong。注入的假错误不存在零冲突候选,
+                # 因此该规则构造上不损伤注入召回。
+                rescued = rescue_rematch(index, claim, canon, fact_pos, wrong,
+                                         check_mode, strict_extra_fields)
+                if rescued is not None:
+                    fact_pos, fact, fact_parsed = rescued
+                    row["matched_fact_key"] = fact.get("key")
+                    row["reasons"].append({
+                        "code": "cross_frame_rematch",
+                        "message": "consistent sibling fact preferred over mismatched frame",
+                    })
+                    wrong = []
+            if extra:
+                row["verdict"] = "hallucination"
+                row["reasons"].append({"code": "unsupported_field", "fields": extra})
+                counts["hallucination"] += 1
+            elif wrong and tier in ("token_overlap", "oracle_synonym") and not identity_certain(
+                    claim, fact, canon.get("direction") or "", fact_parsed["direction"],
+                    index=index):
+                # 最松匹配层且身份不确证时,不支撑"矛盾"判定(红队证实该层
+                # 贡献 2/3 的假 wrong_fact);身份确证(object 归一相等或
+                # oracle 判同,如 Potassium gluconate 撞名)则照常严打。
+                row["verdict"] = "not_in_factset"
+                row["reasons"].append({
+                    "code": "weak_tier_mismatch",
+                    "message": "token_overlap tier with field mismatch: identity too uncertain for wrong_fact",
+                    "fields": wrong,
+                })
+                counts["not_in_factset"] += 1
+            elif wrong:
+                row["verdict"] = "wrong_fact"
+                row["reasons"].append({"code": "field_mismatch", "fields": wrong})
+                counts["wrong_fact"] += 1
+            else:
+                _cs = norm_field("status", (claim.get("fields") or {}).get("status"))
+                _fs = norm_field("status", (fact.get("fields") or {}).get("status"))
+                if (_cs in PLAN_STATUSES) != (_fs in PLAN_STATUSES):
+                    # 计划框架与现状框架互不作证:只写医嘱不算覆盖了现状事实,
+                    # 也不判 wrong(框架不同,真值独立)。同时恢复虚构医嘱
+                    # 经"覆盖跌落"次级通道可见。
+                    row["verdict"] = "not_in_factset"
+                    row["reasons"].append({
+                        "code": "frame_mismatch_plan",
+                        "message": "plan-frame claim does not evidence a current-state fact",
+                    })
+                    counts["not_in_factset"] += 1
+                else:
+                    row["verdict"] = "supported"
+                    counts["supported"] += 1
+                    supported_by_fact[fact_pos].append(claim)
+        per_claim.append(row)
+
+    per_fact = []
+    omitted = 0
+    anchor_supported = 0
+    partial = 0
+    fully = 0
+    no_anchor = 0
+    for pos, fact in enumerate(factset.get("facts", [])):
+        supported_claims = supported_by_fact.get(pos, [])
+        missing = covered_fact_fields(fact, supported_claims) if supported_claims else list(fact.get("coverage_fields") or [])
+        covered = bool(supported_claims) and not missing
+        has_anchor_support = bool(supported_claims)
+        if covered:
+            coverage_status = "fully_covered"
+            fully += 1
+        elif has_anchor_support:
+            coverage_status = "partial"
+            partial += 1
+            anchor_supported += 1
+        else:
+            coverage_status = "omitted"
+            no_anchor += 1
+        if covered:
+            anchor_supported += 1
+        if not covered:
+            omitted += 1
+        per_fact.append({
+            "index": pos,
+            "key": fact.get("key"),
+            "canonical_anchor": fact_key(fact),
+            "covered": covered,
+            "anchor_supported": has_anchor_support,
+            "coverage_status": coverage_status,
+            "supporting_claim_indexes": [
+                i for i, row in enumerate(per_claim)
+                if row.get("verdict") == "supported" and row.get("matched_fact_key") == fact.get("key")
+            ],
+            "missing_coverage_fields": missing,
+        })
+    counts["omitted_facts"] = omitted
+    counts["anchor_supported_facts"] = anchor_supported
+    counts["partial_covered_facts"] = partial
+    counts["fully_covered_facts"] = fully
+    counts["no_anchor_facts"] = no_anchor
+
+    # 两轴关键指标:仅当 gold 携带 salience 标签时输出
+    # must_cover: 医生取舍定义的必须覆盖集;must_not_err: 写错即灾难的事实
+    labeled = [f for f in factset.get("facts", []) if isinstance(f.get("salience"), dict)]
+    if labeled:
+        mc_total = mc_hit = 0
+        err_fact_keys = set()
+        for pos, fact in enumerate(factset.get("facts", [])):
+            sal = fact.get("salience") or {}
+            if sal.get("must_cover"):
+                mc_total += 1
+                if supported_by_fact.get(pos):
+                    mc_hit += 1
+            if sal.get("must_not_err"):
+                err_fact_keys.add(fact.get("key"))
+        critical_wrong = sum(
+            1 for row in per_claim
+            if row.get("verdict") == "wrong_fact"
+            and row.get("matched_fact_key") in err_fact_keys)
+        counts["must_cover_total"] = mc_total
+        counts["must_cover_hit"] = mc_hit
+        counts["critical_wrong"] = critical_wrong
+
+    fab_n, fab_rows = count_potential_fabrications(claims, per_claim, factset)
+    counts["potential_fabrication"] = fab_n
+    for i in fab_rows:
+        per_claim[i]["reasons"].append({
+            "code": "potential_fabrication",
+            "message": "dose-bearing medication claim with no same-entity gold fact",
+        })
+
+    verdict = "fail" if counts["wrong_fact"] + counts["hallucination"] + counts["unknown"] > 0 else "pass"
+    report = {
+        "protocol_version": REPORT_PROTOCOL,
+        "factset": factset.get("factset") or {},
+        "rules": {
+            "version": RULES_VERSION,
+            "identity": IDENTITY_RULE,
+            "check_fields": check_mode,
+            "strict_extra_fields": bool(strict_extra_fields),
+            "unmatched_policy": resolved_unmatched_policy,
+            "requested_unmatched_policy": unmatched_policy or "auto",
+            "semantic_oracle": "on" if oracle.enabled() else "off",
+            "equivalence_table_sha256": oracle.table_sha256() if oracle.enabled() else None,
+        },
+        "evaluator": {
+            "version": EVALUATOR_VERSION,
+            "build_hash": file_sha256(__file__),
+        },
+        "verdict": verdict,
+        "counts": dict(counts),
+        "per_claim": per_claim,
+        "per_fact": per_fact,
+        "report_sha256": None,
+    }
+    tmp = json.loads(json.dumps(report, ensure_ascii=False))
+    tmp["report_sha256"] = None
+    report["report_sha256"] = sha256_doc(tmp)
+    return report
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--factset", required=True, help="detfact factset JSON, or audit consensus JSON")
+    ap.add_argument("--claims", required=True, help="claims JSON with claims[]")
+    ap.add_argument("--out", default=None)
+    ap.add_argument("--audit-statuses", default="certain",
+                    help="when --factset points to audit JSON, statuses to include, or all")
+    ap.add_argument("--check-fields", choices=["factset", "stable", "all", "none"], default="factset")
+    ap.add_argument("--strict-extra-fields", action="store_true")
+    ap.add_argument("--no-fail-exit", action="store_true")
+    args = ap.parse_args()
+
+    statuses = [s.strip() for s in args.audit_statuses.split(",") if s.strip()]
+    factset = load_factset(args.factset, audit_statuses=statuses)
+    claims = load_claims(args.claims)
+    report = evaluate(factset, claims, check_mode=args.check_fields,
+                      strict_extra_fields=args.strict_extra_fields)
+    body = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
+    if args.out:
+        os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
+        with open(args.out, "w") as f:
+            f.write(body)
+    else:
+        sys.stdout.write(body)
+    c = report["counts"]
+    print("verdict={verdict} supported={supported} wrong={wrong_fact} hallucination={hallucination} unknown={unknown} omitted={omitted_facts} report_sha256={sha}".format(
+        verdict=report["verdict"], supported=c.get("supported", 0),
+        wrong_fact=c.get("wrong_fact", 0), hallucination=c.get("hallucination", 0),
+        unknown=c.get("unknown", 0), omitted_facts=c.get("omitted_facts", 0),
+        sha=report["report_sha256"],
+    ), file=sys.stderr)
+    if report["verdict"] == "fail" and not args.no_fail_exit:
+        raise SystemExit(2)
+
+
+if __name__ == "__main__":
+    main()

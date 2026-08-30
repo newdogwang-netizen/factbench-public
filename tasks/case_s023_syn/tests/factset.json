@@ -1,0 +1,2064 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_s023_syn",
+    "version": "1",
+    "sha256": "bb820ef2018413ceaabeaf57dadbcdd3427db8d1658616db6feba7e486a3cb28",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_s023_syn",
+    "path": "case_s023_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 8,
+      "n_facts": 149,
+      "certain": 5,
+      "strict_certain": 4,
+      "low_conf": 20,
+      "unique": 124,
+      "unanimous": 7,
+      "low_support": 115
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 18,
+    "unstable_skipped": 15
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "resolved",
+      "canonical_anchor": "symptom.symptom.resolved.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "resolved",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "resolved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.resolved_gone_for_approximately_two_months",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nighttime cough has resolved; gone for approximately two months."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The nighttime cough that was present at the last visit has resolved."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her nighttime cough has resolved."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Wheezing",
+      "canonical_anchor": "demo.demo.wheezing.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "wheezing",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.wheezing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wheezing is rare, approximately once a week, typically triggered by exertion such as running around the classroom."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.wheezing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wheezing is rare, maybe once a week when running around the classroom."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.wheezing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wheezing is rare, occurring approximately once weekly with exertion such as running around the classroom."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Fatigue",
+      "canonical_anchor": "demo.demo.fatigue.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "fatigue",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fatigue is improved compared to the fall but still not fully resolved."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fatigue is better than it was in the fall but still not great."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fatigue is improved compared to the fall but still present."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fatigue is better than in the fall."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F011",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Asthma",
+      "canonical_anchor": "diagnosis.asthma.asthma.present",
+      "kind": "diagnosis",
+      "subtype": "asthma",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "asthma",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.asthma_managed_with_fluticasone_inhaler_and_albuterol_rescue_inhaler",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Asthma (managed with fluticasone inhaler and albuterol rescue inhaler)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Asthma."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Asthma."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Asthma."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Asthma."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Fluticasone",
+      "canonical_anchor": "med.medication.fluticasone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "fluticasone",
+        "value": "110",
+        "unit": "mcg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler, 2 puffs once daily in the morning."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone (Flovent) 110 mcg inhaler, 2 puffs once daily in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler 2 puffs in the morning once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler, 2 puffs every morning."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler: two puffs once daily in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler, two puffs once a day in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler, 2 puffs once daily in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler 110 mcg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Albuterol",
+      "canonical_anchor": "med.medication.albuterol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "albuterol",
+        "value": "90",
+        "unit": "mcg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol rescue inhaler, used as needed approximately twice a week or less."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol 90 mcg rescue inhaler, 2 puffs as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol rescue inhaler as needed, currently used approximately twice weekly or less."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol rescue inhaler: as needed, currently used approximately twice per week (sometimes less)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol rescue inhaler, 2 puffs as needed, used approximately twice weekly, sometimes less."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol rescue inhaler 90 mcg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Loratadine",
+      "canonical_anchor": "med.medication.loratadine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "loratadine",
+        "value": "10",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.loratadine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Loratadine 10 mg once daily for allergies."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.loratadine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Loratadine 10 mg, once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.loratadine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Loratadine 10 mg once daily for allergies."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.loratadine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Loratadine 10 mg once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.loratadine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Loratadine: 10 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.loratadine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Loratadine 10 mg once a day for allergies."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.loratadine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Loratadine 10 mg orally once daily for allergies."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.loratadine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Loratadine 10 mg once daily for allergies."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 IU daily."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 IU, daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 IU daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1,000 IU daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D: 1000 IU once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 IU daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 IU orally once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 1000 IU daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tylenol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occasional acetaminophen (Tylenol) for headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occasional Tylenol for headaches."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol: occasional use for headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occasional Tylenol for headaches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol) orally as needed for occasional headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occasional Tylenol is used for headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Montelukast",
+      "canonical_anchor": "demo.demo.montelukast.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "montelukast",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped in August due to vivid dreams and feeling \"a little off.\""
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped in August because of vivid dreams and feeling “a little off.”"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was discontinued in August due to vivid dreams and feeling \"a little off\"."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped in August because it was giving her weird, vivid dreams and she felt a little off."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped in August."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Montelukast",
+      "canonical_anchor": "med.medication.montelukast.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "montelukast",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped in August due to vivid dreams and feeling \"a little off.\""
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped in August because of vivid dreams and feeling “a little off.”"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast was stopped in August because it was giving her weird, vivid dreams and she felt a little off."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.montelukast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Montelukast: discontinued in August due to vivid dreams and feeling \"off\"; patient declined to continue this medication."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Mother has asthma",
+      "canonical_anchor": "famhist.famhist.mother_asthma.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "mother has asthma",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has asthma."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.mother_has_asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has asthma."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has asthma."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.mother_has_asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has asthma."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.mother_has_asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has asthma."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has asthma."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: asthma."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.mother_has_asthma",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has asthma."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Father",
+      "canonical_anchor": "demo.demo.father.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "father",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.father",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.father",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.father",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.father",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medication."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F024",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.father_is_on_blood_pressure_medications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.father_is_on_blood_pressure_medications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father takes blood pressure medications"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.father_takes_blood_pressure_medications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father takes blood pressure medications."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_is_on_blood_pressure_medications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medications."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has hypertension"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.father_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has hypertension."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is on blood pressure medication"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has hypertension and is on blood pressure medication"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.father_has_hypertension_and_is_on_blood_pressure_medication",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has hypertension and is on blood pressure medication."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father takes medication for hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.father_takes_medication_for_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father takes medication for hypertension."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father: hypertension, on blood pressure medication"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_hypertension_on_blood_pressure_medication",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father: hypertension, on blood pressure medication."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Sister",
+      "canonical_anchor": "demo.demo.sister.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sister",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.sister",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.sister",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.sister",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.sister",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.sister",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.sister",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Sister is healthy",
+      "canonical_anchor": "famhist.famhist.sister_healthy.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sister is healthy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "family_history.sister_is_healthy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.sister_is_healthy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.sister_is_healthy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.sister_is_healthy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.sister_is_healthy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.sister_healthy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister: healthy."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.sister_is_healthy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister is healthy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Referral for allergy testing",
+      "canonical_anchor": "instruct.for.for_allergy_testing.present",
+      "kind": "instruct",
+      "subtype": "for",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "referral for allergy testing",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.referral_for_allergy_testing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Referral for allergy testing."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.referral_for_allergy_testing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Referral for allergy testing."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.referral_for_allergy_testing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Referral for allergy testing."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.referral_for_allergy_testing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Referral for allergy testing."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.referral_for_allergy_testing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Referral for allergy testing."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Omeprazole",
+      "canonical_anchor": "med.medication.omeprazole.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "omeprazole",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg, once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole: 20 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg (current dose)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg orally once daily (recently self-adjusted from a self-initiated increase to 40 mg daily for approximately three weeks during November, then returned to 20 mg daily)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "7/7",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    }
+  ]
+}

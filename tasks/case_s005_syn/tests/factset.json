@@ -1,0 +1,2668 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_s005_syn",
+    "version": "1",
+    "sha256": "1275c03d9d7097c34058b00a4995b03240fa82519ab5918a9ef4e39f2be259cd",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_s005_syn",
+    "path": "case_s005_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 8,
+      "n_facts": 313,
+      "certain": 5,
+      "strict_certain": 4,
+      "low_conf": 30,
+      "unique": 278,
+      "unanimous": 6,
+      "low_support": 261
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 24,
+    "unstable_skipped": 24
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches are shorter and less severe: previously 8/10 pain intensity, now 5–6/10."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The pain is a throbbing sensation located behind the right eye."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient now waits until the headache pain starts before taking sumatriptan."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headache pain is throbbing and located behind the right eye."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She now takes sumatriptan when the headache pain starts rather than during the aura, per prior advice."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "The patient brought a headache diary",
+      "canonical_anchor": "symptom.symptom.brought_headache_diary.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient brought a headache diary",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.patient_brought_headache_diary_as_requested",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient brought headache diary as requested."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_brought_a_headache_diary",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient brought a headache diary."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_brought_a_headache_diary",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient brought a headache diary."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "word finding / expressive language",
+      "canonical_anchor": "symptom.cognition_language.word_finding.worsened",
+      "kind": "symptom",
+      "subtype": "cognition_language",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "word finding",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.topiramate_side_effects_tingling_in_fingers_and_toes_resolved_after_2_weeks_mild_word_finding_difficulty_persists_worse_when_tired_not_interfering_with_work_noticed_by_husband_decreased_appetite_with_56_pound_weight_loss_since_february_leveled_off_soda_tastes_metallic",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate side effects: tingling in fingers and toes resolved after 2 weeks; mild word-finding difficulty persists (worse when tired, not interfering with work, noticed by husband); decreased appetite with 5–6 pound weight loss since February (leveled off); soda tastes metallic."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.mild_persistent_word_finding_difficulty_tip_of_the_tongue_word_loss_mid_sentence_worse_when_tired",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mild persistent word-finding difficulty: tip-of-the-tongue word loss mid-sentence, worse when tired."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_word_finding_difficulty_is_worse_when_the_patient_is_tired",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The word-finding difficulty is worse when the patient is tired."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.the_clinician_stated_that_if_word_finding_difficulty_gets_worse_treatment_would_be_reconsidered",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician stated that if word-finding difficulty gets worse, treatment would be reconsidered."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "propranolol",
+      "canonical_anchor": "med.medication.propranolol.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "propranolol",
+        "value": "60",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 60mg was stopped approximately one year ago due to fatigue, lightheadedness, low blood pressure (90/60), and ineffectiveness (still having 6–7 headaches per month)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 60mg was discontinued about a year ago due to ineffectiveness, fatigue, lightheadedness, and low blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol was stopped about a year ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol was stopped approximately one year ago."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol stopped approximately one year ago; was taking approximately 60 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol (about 60 mg) was stopped about a year ago due to fatigue, dizziness on standing, blood pressure running around 90/60, and lack of efficacy (she was still having 6-7 migraines per month on it); she felt better within about a week of stopping."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol discontinued approximately one year ago."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol was stopped about a year ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "No known drug allergies",
+      "canonical_anchor": "diagnosis.known.known_drug_allergie.present",
+      "kind": "diagnosis",
+      "subtype": "known",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no known drug allergie",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.no_known_drug_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known drug allergies."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.no_known_drug_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known drug allergies."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.no_known_drug_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known drug allergies."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_patient_has_no_known_drug_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has no known drug allergies."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "allergy.no_known_drug_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known drug allergies."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "allergy.no_known_drug_allergies_including_no_reactions_to_penicillin_or_sulfa",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known drug allergies (including no reactions to penicillin or sulfa)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Topiramate",
+      "canonical_anchor": "med.medication.topiramate.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "topiramate",
+        "value": "50",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 50mg twice daily (morning and night); increased from 50mg once daily to 100mg daily in February."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 50 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 50 mg by mouth twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 50 mg twice daily (increased in February from 50 mg once daily)."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 50 mg twice daily (morning and night); increased in February from 50 mg once daily to 100 mg total per day."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 50 mg orally twice daily (one tablet morning, one tablet evening); increased from 50 mg once daily at February visit."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 50 mg in the morning and 50 mg at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Sumatriptan",
+      "canonical_anchor": "med.medication.sumatriptan.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sumatriptan",
+        "value": "100",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan 100mg at headache onset (after pain starts, not during aura); may repeat once after 2 hours if needed (has never needed to repeat)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan 100 mg at headache onset."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan 100 mg by mouth at headache onset."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan 100 mg at headache onset; may repeat once after two hours if needed, though patient has never needed to repeat a dose."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan 100 mg at headache onset; may repeat once after two hours if needed, though she has never needed to repeat."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan 100 mg orally at headache onset; may repeat once after 2 hours if needed (patient has not needed to repeat)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan 100 mg at headache onset."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "magnesium glycinate",
+      "canonical_anchor": "med.medication.magnesium_glycinate.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "magnesium glycinate",
+        "value": "400",
+        "unit": "mg",
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400mg at night (two 200mg capsules); started in February."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400mg at night (two 200mg capsules); started in February."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night. Started in February."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night. Started in February."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg by mouth nightly."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg by mouth nightly."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night (two 200 mg capsules); started in February."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night (two 200 mg capsules); started in February."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg (two 200 mg capsules) at night; started in February, the same week the topiramate was increased."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg (two 200 mg capsules) at night; started in February, the same week the topiramate was increased."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg orally at bedtime (two 200 mg capsules); started in February."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg orally at bedtime (two 200 mg capsules); started in February."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes magnesium glycinate 400 mg at night."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes magnesium glycinate 400 mg at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "magnesium glycinate",
+      "canonical_anchor": "med.medication.magnesium_glycinate.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "magnesium glycinate",
+        "value": "400",
+        "unit": "mg",
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400mg at night (two 200mg capsules); started in February."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium glycinate 400mg at night."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate was started in February."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate was started in February."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night (two 200 mg capsules); started in February."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg (two 200 mg capsules) at night; started in February, the same week the topiramate was increased."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg orally at bedtime (two 200 mg capsules); started in February."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium glycinate 400 mg at bedtime."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.magnesium_glycinate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night is part of the medication plan."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium glycinate 400 mg at night is part of the medication plan."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium was started in February during the same week as the topiramate dose increase."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Cetirizine",
+      "canonical_anchor": "med.medication.cetirizine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "cetirizine",
+        "value": "10",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10mg daily (generic Zyrtec) for allergies."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg by mouth daily for environmental allergies."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg daily for allergies."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg daily (generic Zyrtec) for allergies."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg orally daily (generic Zyrtec) for allergies."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Norethindrone",
+      "canonical_anchor": "med.medication.norethindrone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "norethindrone",
+        "value": "0.35",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.norethindrone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Norethindrone 0.35mg daily (progestin-only mini pill); taken at same time every day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.norethindrone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Norethindrone 0.35 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.norethindrone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Norethindrone 0.35 mg by mouth daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.norethindrone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Norethindrone (mini-pill) 0.35 mg daily at the same time every day; progestin-only formulation chosen due to aura, as estrogen plus aura increases stroke risk."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.norethindrone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Norethindrone 0.35 mg (progestin-only mini pill) daily, taken at the same time every day."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.norethindrone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Norethindrone 0.35 mg orally daily (progestin-only mini pill); taken at the same time each day."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.norethindrone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Norethindrone 0.35 mg daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "7/7",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "400",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400mg occasionally with sumatriptan for severe headaches."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg, taken occasionally with sumatriptan for a bad headache."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes ibuprofen 400 mg with sumatriptan for bad headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg is sometimes taken with sumatriptan for a more severe migraine."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg sometimes taken with sumatriptan for severe headaches, not more than a couple of times per week."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occasional ibuprofen 400 mg taken with sumatriptan for bad headaches; the clinician noted this is a reasonable combination, not more than a couple of times a week."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg occasionally used in combination with sumatriptan for severe headaches; limited to a couple of times per week."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg sometimes with sumatriptan for bad headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D occasionally (patient reports forgetting to take it regularly)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D, taken sometimes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes vitamin D."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D is taken inconsistently."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D taken occasionally, though patient frequently forgets."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occasional vitamin D, which she keeps forgetting."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D taken occasionally (patient reports forgetting frequently)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D sometimes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Occupation: graphic designer",
+      "canonical_anchor": "sochist.sochist.occupation_graphic_designer.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "occupation: graphic designer",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "social_history.occupation_graphic_designer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: graphic designer."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "social_history.occupation_graphic_designer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: graphic designer."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.occupation_graphic_designer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: graphic designer."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.occupation_graphic_designer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: graphic designer."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_is_a_graphic_designer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is a graphic designer."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_is_a_graphic_designer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is a graphic designer."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F038",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "word finding / expressive language",
+      "canonical_anchor": "instruct.cognition_language.word_finding.present",
+      "kind": "instruct",
+      "subtype": "cognition_language",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "word finding",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "social_history.married_husband_notices_word_finding_difficulty_and_sometimes_finishes_her_sentences",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Married; husband notices word-finding difficulty and sometimes finishes her sentences."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_topiramate_50mg_twice_daily_word_finding_difficulty_is_tolerable_if_it_worsens_medication_would_be_reconsidered",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue topiramate 50mg twice daily; word-finding difficulty is tolerable, if it worsens medication would be reconsidered."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.the_clinician_stated_that_mild_and_tolerable_word_finding_difficulty_on_topiramate_could_be_observed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician stated that mild and tolerable word-finding difficulty on topiramate could be observed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.reconsider_the_topiramate_regimen_if_word_finding_difficulty_worsens",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reconsider the topiramate regimen if word-finding difficulty worsens."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_topiramate_at_current_dose_as_long_as_word_finding_difficulty_remains_mild_and_tolerable_would_reconsider_if_it_worsens",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue topiramate at current dose as long as word-finding difficulty remains mild and tolerable; would reconsider if it worsens."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.her_husband_notices_the_word_finding_difficulty_and_finishes_her_sentences_it_does_not_interfere_with_work",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her husband notices the word-finding difficulty and finishes her sentences; it does not interfere with work."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_topiramate_50_mg_twice_daily_the_word_finding_side_effect_is_mild_and_tolerable_and_the_medication_would_be_rethought_if_it_worsens",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue topiramate 50 mg twice daily; the word-finding side effect is mild and tolerable, and the medication would be rethought if it worsens."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_topiramate_50_mg_twice_daily_current_mild_word_finding_difficulty_deemed_tolerable_and_dose_related",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue topiramate 50 mg twice daily; current mild word-finding difficulty deemed tolerable and dose-related."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.symptom_reports_mild_word_finding_difficulty_which_she_attributes_to_topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cognition: Reports mild word-finding difficulty, which she attributes to topiramate"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.mild_word_finding_difficulty_persists",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mild word-finding difficulty persists."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F044",
+        "support": "8/8",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "google_gemini-2_5-pro",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "400",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400mg with sumatriptan for severe headaches is acceptable; not more than a couple times per week."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician stated ibuprofen with sumatriptan is a reasonable combination."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg may be combined with sumatriptan for a severe migraine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg may be combined with sumatriptan, limited to no more than a couple of times per week."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 400 mg may be used with sumatriptan for bad headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "The headaches are shorter than before",
+      "canonical_anchor": "symptom.symptom.headache_shorter_than_before.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the headache are shorter than before",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_headaches_are_shorter_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The headaches are shorter than before."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_headaches_are_shorter_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The headaches are shorter than before."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.headaches_are_shorter_than_previously",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches are shorter than previously."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F068",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "The",
+      "canonical_anchor": "med.medication.medication.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "the",
+        "value": "50",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.the",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The topiramate dose was increased in February from 50 mg once daily to 100 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.the",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The word-finding difficulty does not interfere with work and is currently tolerable."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.the",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has not needed to repeat sumatriptan."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F100",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Sumatriptan",
+      "canonical_anchor": "demo.demo.sumatriptan.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sumatriptan",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is used three to four times per month."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is used approximately 3 times per month and occasionally 4 times per month."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is to be taken as 100 mg at headache onset."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F102",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Propranolol",
+      "canonical_anchor": "demo.demo.propranolol.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "propranolol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol was stopped about a year ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol was stopped approximately one year ago."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol was stopped about a year ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F104",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "propranolol",
+      "canonical_anchor": "med.medication.propranolol.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "propranolol",
+        "value": "60",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient had been on propranolol 60 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Symptoms resolved within approximately one week of stopping propranolol."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "While on propranolol, the patient felt tired and dragging all day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F105",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "propranolol",
+      "canonical_anchor": "med.medication.propranolol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "propranolol",
+        "value": "60",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol caused fatigue."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 60 mg caused fatigue, orthostatic lightheadedness, and blood pressure around 90/60."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Felt better within approximately one week of stopping propranolol."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol course: 60 mg dose, associated with fatigue, lightheadedness on standing, low blood pressure (approximately 90/60), and lack of efficacy (6-7 headaches per month while on it)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F106",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "The patient drinks one cup of coffee",
+      "canonical_anchor": "sochist.sochist.drink_one_cup_of_coffee.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient drink one cup of coffee",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_drinks_one_cup_of_coffee",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient drinks one cup of coffee every morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_drinks_one_cup_of_coffee",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient drinks one cup of coffee every morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.she_drinks_one_cup_of_coffee_at_a_consistent_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She drinks one cup of coffee every morning at a consistent time."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F114",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Mild",
+      "canonical_anchor": "med.medication.mild.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "mild",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.mild",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mild ongoing word-finding difficulty occurs with topiramate and is worse when tired."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.mild",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mild ongoing word-finding difficulty with topiramate, worse when tired; described as feeling like her brain is a little slower."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.mild",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mild word-finding difficulty persists; worse with fatigue; not interfering with work; husband occasionally finishes her sentences."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F149",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    }
+  ]
+}

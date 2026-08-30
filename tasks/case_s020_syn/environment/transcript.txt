@@ -1,0 +1,639 @@
+The user wants a fictional neurology epilepsy follow-up consultation transcript in ASR style. Let me carefully review the requirements:
+
+1. ENTIRELY FICTIONAL - invented patient (first name only), invented clinician, invented details
+2. ASR style: run-on dialogue without speaker labels, natural disfluencies, occasional ASR-style misspellings of drug names, small-talk fragments at start
+3. Clinically dense:
+   - 3-5 current medications WITH doses and frequencies
+   - At least one recent dose change with old and new dose
+   - At least one past medication stopped with reason
+   - 4-6 current symptoms with time course, at least one resolved symptom
+   - Relevant history (medical, family, social - smoking/alcohol), at least one allergy statement or denial
+   - Plan: medication adjustment, test or referral, follow-up interval
+4. Difficulty hard: contradicting-then-clarified statements, interruption mid-topic, medication discussed both as past trial AND current use in different frames
+5. Length: 2500-3500 words
+
+Scenario: Adult with focal epilepsy; levetiracetam increased from 500 to 750 mg BID after breakthrough seizure during missed-dose weekend, discussed with corrected timeline; irritability side effect managed with vitamin B6; lamotrigine cross-titration planned if irritability persists; driving restrictions reviewed; plan orders trough level and EEG.
+
+Interesting challenge: "a medication discussed both as past trial and current use in different frames" - this could be lamotrigine: tried in the past (stopped due to rash, say), and now being considered again for cross-titration. Or vitamin B6. Actually lamotrigine works well - past trial stopped (maybe due to rash or it was during pregnancy planning or something), and now planned as current/future use. Wait, "current use in different frames" - hmm, "discussed both as past trial and current use" - so maybe the patient says "I was on lamotrigine before" and then later it's discussed as a new planned medication. Or levetiracetam could be discussed... Actually the cleanest: lamotrigine was a past trial (stopped due to rash years ago, or stopped due to insurance), and now it's being planned as the cross-titration medication. That creates the "different frames" confusion that makes note-writing hard.
+
+Contradicting-then-clarified statements: The timeline of the seizure - patient first says the seizure was "about two weeks ago" then clarifies it was actually six weeks ago, or says "I missed doses Friday" then corrects "no wait, it was Saturday and Sunday." The brief says "discussed with corrected timeline" - so the breakthrough seizure timeline needs correction. E.g., patient initially says seizure happened after the dose increase, then clarifies no, the seizure was BEFORE the increase and the increase was the response to it. Or says the missed-dose weekend was last month, then corrects to two months ago.
+
+Interruption mid-topic: e.g., a phone rings, or a nurse knocks, or the patient interrupts the doctor mid-explanation about driving.
+
+Let me plan the clinical content:
+
+Patient: first name only - "Marcus" or "Dana" or "Priya". Let's use "Elena" or "Tom". Let me pick "Daniel" — actually first name only, let's say "Mark" or "Sofia". I'll go with "Derek" — hmm, let me pick something neutral: "Sam" could be ambiguous. Let's use "Nadia" or "Colin". I'll go with "Colin."
+
+Clinician: Dr. Alvarez? Dr. Petrov? Let's say Dr. Halloran or Dr. Nguyen. I'll use "Dr. Renner" or "Dr. Okafor". Let's go with "Dr. Okafor" — wait, need invented. Any name is fine as it's fictional. "Dr. Marsh" maybe. I'll use Dr. Whitfield... Let me just pick "Dr. Kessler."
+
+Patient: Colin, age 34 or so, focal epilepsy (right temporal focus maybe), diagnosed ~3 years ago after a head injury or cryptogenic. Seizures: focal impaired awareness seizures with déjà vu aura, occasional secondary generalization.
+
+Current medications (3-5 with doses/frequencies):
+1. Levetiracetam (Keppra) - recently increased from 500 mg BID to 750 mg BID (the dose change)
+2. Vitamin B6 (pyridoxine) - 100 mg daily (for irritability)
+3. Maybe lacosamide 100 mg BID as second AED? Or keep it simpler: levetiracetam, B6, plus a non-AED med like sertraline 50 mg daily, and maybe a PRN like lorazepam? Or vitamin D. Let's do:
+   - Levetiracetam 750 mg BID (increased from 500 BID ~6 weeks ago)
+   - Pyridoxine (vitamin B6) 100 mg daily
+   - Sertraline 50 mg daily (for mood/anxiety) — hmm, could confound irritability. Maybe better: 
+   - Loratadine 10 mg daily PRN allergies? That's nice because it ties to allergy statement.
+   - Maybe a PRN nasal spray. Or oral contraceptive? If patient is male, no.
+   
+Let me make patient male, Colin, 34. Meds:
+   1. Levetiracetam 750 mg twice daily (up from 500 twice daily)
+   2. Vitamin B6 (pyridoxine) 100 mg once daily
+   3. Lacosamide? Hmm — if he's on two AEDs, the lamotrigine plan becomes a third. Maybe keep him on levetiracetam monotherapy, that's cleaner for the scenario. So other meds non-AED:
+   3. Cetirizine 10 mg daily as needed for seasonal allergies
+   4. Ibuprofen 400 mg PRN headaches? Or a statin? At 34, maybe not. Let's add:
+   4. Vitamin D3 1000 IU daily (or 2000)
+   Maybe also mention he uses a multivitamin. That's 4 meds. Good: levetiracetam, B6, cetirizine PRN, vitamin D. Could add a 5th: "occasional ibuprofen 400 mg for headaches."
+
+Past medication stopped: 
+- Lamotrigine: tried ~2 years ago, developed a rash (or was stopped during slow titration because of rash), so discontinued. NOW being reconsidered — this creates the "past trial and current use in different frames" requirement. Wait, but if he had a rash on lamotrigine, re-trial would be contraindicated typically (rechallenge after rash is risky). Hmm. Maybe the past trial was stopped for a non-rash reason: e.g., stopped because of insurance/cost, or because it wasn't helping at low dose and they switched, or because of dizziness. If stopped for dizziness at 200 mg, re-trial with slower titration is plausible. Or the past "trial" was actually that lamotrigine was started first-line and he couldn't tolerate the titration headaches. Let me make it: lamotrigine was his first medication, titrated up to 100 mg BID, caused persistent headaches and insomnia, so switched to levetiracetam. Now, given levetiracetam irritability, they plan cross-titration back to lamotrigine with slower titration. That's clinically plausible and creates the dual-frame discussion.
+
+Alternatively, the dual-frame medication could be levetiracetam itself: discussed as current med AND... no. Or B6: "we tried B6 before and stopped, now restarted." Hmm, the lamotrigine one is cleanest and matches the brief (cross-titration planned).
+
+Also another past med: maybe topiramate? No, keep it focused. One past med stopped with reason: lamotrigine stopped due to headaches/insomnia. Could also mention a brief trial of something else. Actually requirement says "at least one past medication that was stopped, with the reason" — lamotrigine covers it. Maybe also mention carbamazepine? No, don't overcomplicate. Actually, wait — if lamotrigine is the planned cross-titration drug AND the past stopped drug, that satisfies both. Good.
+
+Symptoms (4-6 current with time course, 1+ resolved):
+1. Breakthrough seizure (the index event) — focal impaired awareness seizure during missed-dose weekend. Timeline corrected: patient first says "about a month ago" then clarifies it was actually... let's say the visit is in, hmm, no dates needed but relative times. Patient says seizure was "three weeks ago" then corrects: "no wait, it was the weekend of the... it was more like six, seven weeks ago, because we increased the Keppra right after and I've been on the new dose about six weeks." Good contradiction-clarification.
+2. Irritability — started after dose increase, improved since B6 started but still present, worse in evenings.
+3. Sleep disruption / trouble falling asleep — maybe.
+4. Mild morning grogginess/fogginess — better since splitting dose timing? 
+5. Headaches — occasional, resolved? Let's make headaches the resolved symptom: he had daily headaches when first starting levetiracetam years ago, or more recently had headaches that resolved since B6? Hmm. Resolved symptom: "the dizziness I had right after the dose increase has gone away" — dizziness in first 1-2 weeks after increase, now resolved. Good.
+6. Déjà vu auras — he still gets brief déjà vu episodes (simple partial/focal aware seizures) maybe once or twice, no progression. Time course: had one aura since the increase vs. weekly before.
+7. Memory complaints — mild word-finding difficulty.
+
+Let me structure: current symptoms:
+- Irritability (onset after up-titration ~6 weeks ago, improving with B6, still present)
+- Vivid dreams / sleep disruption (started around dose increase, somewhat better)
+- Morning grogginess (worse on the higher dose, improving after moving evening dose earlier)
+- Brief déjà vu aura episodes (2 since increase, down from ~monthly before; no convulsive seizures since)
+- Mild word-finding/memory lapses (chronic, stable)
+Resolved: dizziness/unsteadiness in first 2 weeks after increase — resolved. Also maybe the nausea resolved.
+
+History:
+- Medical: focal epilepsy diagnosed 3 years ago, MRI showed right mesial temporal sclerosis? Or non-lesional. Let's say MRI showed possible right hippocampal sclerosis or was normal; EEG showed right temporal sharp waves. Also history of concussion as a teen? Mild asthma as kid. 
+- Family: cousin with epilepsy? Or mother with migraines. No family history of epilepsy — or a paternal uncle with seizures. Let's include: father with epilepsy? Keep it: "my uncle, my dad's brother, had seizures after a stroke" — nice nuance (provoked, not genetic). Mother migraines.
+- Social: works as an electrician? Driving matters — maybe delivery driver or sales rep who drives for work, making driving restrictions impactful. Let's say he's a regional sales rep or a HVAC technician who drives a work van. Smoking: former smoker, quit 2 years ago, or current social smoker "a couple on weekends" — include. Alcohol: 2-3 beers weekends, was drinking during the missed-dose weekend? Careful — the missed-dose weekend could involve a wedding with alcohol, which is a nice seizure-trigger discussion. Yes: friend's wedding weekend, forgot meds at home, drank more than usual, poor sleep — classic breakthrough seizure setup.
+- Allergy: penicillin allergy (rash as child) or NKDA. Let's do: allergic to penicillin — gets hives. And no known allergy to AEDs; lamotrigine past issue was headaches not rash (important to clarify for re-trial safety — doctor explicitly asks "it wasn't a rash, right?" — good clinical point).
+
+Plan:
+1. Medication adjustment: continue levetiracetam 750 BID; continue B6 100 mg daily (maybe increase B6 to 200? Hmm, keep 100). Plan: if irritability persists over next 4-6 weeks, begin lamotrigine cross-titration 25 mg daily for 2 weeks then 25 BID etc., with slow titration schedule given, and instructions about rash (stop and call). Actually the brief says "lamotrigine cross-titration planned if irritability persists" — so the plan is conditional. The med adjustment happening now: keep the increased levetiracetam dose (that was the recent adjustment), maybe adjust timing of evening dose, continue B6. Also could increase B6 from 50 to 100? Wait — B6 was presumably started already. Let me set: B6 100 mg started 3 weeks ago, irritability improved from 7/10 to 3/10. Plan: continue, and if still problematic at follow-up, start lamotrigine cross-taper.
+2. Test/referral: trough levetiracetam level (though levetiracetam levels aren't always clinically used, the brief says "plan orders trough level" — fine), and EEG (routine or sleep-deprived EEG). Also maybe referral to... the brief says one test or referral; we have trough level + EEG. Could add neuropsych referral? Keep to brief: trough level and EEG. Maybe also CBC/CMP? Optional.
+3. Follow-up interval: 3 months, sooner if seizures or rash. Also driving: state law — no driving until 6 months seizure-free (varies; use "six months" as the clinic's guidance), he hasn't driven since the seizure, wife drives, he reported to DMV or doctor discusses reporting requirements. Review: he can resume driving X months after the seizure date if no further events — recalculate with corrected timeline (seizure was 6-7 weeks ago, so ~4.5 months remaining... wait 6 months minus 6-7 weeks ≈ 4+ months). Good — the corrected timeline affects the driving clock, nice clinical density.
+
+Interruption mid-topic: during driving discussion, his phone rings (work calling) — he steps out or declines it; or a nurse knocks to say the EEG tech has a cancellation. Let's do: mid-driving-discussion, patient's phone buzzes loudly, he fumbles, apologizes, mentions it's work; or the MA interrupts with a message about the EEG scheduling. I'll do the phone one, plus maybe the doctor gets interrupted by a knock. One interruption is required; I'll include one clear one.
+
+Contradictions to include:
+1. Seizure timeline: "three weeks ago" → corrected to "six, almost seven weeks ago" (verified against when dose increased / pharmacy refill).
+2. Missed doses: first says "I only missed one dose" → clarifies "well, actually I missed the whole weekend, Friday night through Sunday morning, so like four doses."
+3. Alcohol: "I don't really drink" → "well, that weekend I had quite a bit at the wedding."
+4. Lamotrigine frame: "I was on lamotrigine before, it didn't work" → later "so we're trying lamotrigine? I thought I already took that" → doctor clarifies past trial was stopped for side effects (headaches), not inefficacy, and this time slower titration.
+5. Maybe: "I haven't had any auras" → "well, actually, two little déjà vu things, but they don't count, right?"
+
+ASR style details:
+- No speaker labels, run-on dialogue. Should I use paragraph breaks? "run-on dialogue without speaker labels" — I'll write it as flowing text with paragraph breaks for readability but no labels. Maybe minimal punctuation quirks, lowercase? ASR transcripts often have standard capitalization. I'll keep normal-ish capitalization but with disfluencies, false starts, repeated words.
+- Drug name misspellings ASR-style: "levetiracetam" → "levetirastem" or "leviteracetam"; "Keppra" fine; "lamotrigine" → "lamotrjine" or "lamictal" spelled "Lamictal" fine, maybe "lamotrogen"; "pyridoxine" → "pyridoxin" or "peridoxine"; "lacosamide" not used; "cetirizine" → "cetirizin" or "Zyrtec" as "Zyrtec"; "sertraline" not used. Use a few: "levetiracetam" misspelled once or twice as "levetiracetam"... I need actual misspellings: "levetirastam", "lamotrigine" as "lamotregine", "pyridoxine" as "pyridoxeen", "cetirizine" as "ceterizine". Sprinkle 3-5 misspellings but also correct spellings elsewhere (ASR inconsistency is realistic).
+- Small talk at start: weather, parking, "how was the drive in", coffee, sports team, dog, etc.
+
+Length: 2500-3500 words. That's long. I need to sustain a natural conversation that long. Let me plan sections:
+
+1. Small talk / settling in (~200 words): parking, weather, how's work, the dog, etc.
+2. Interval history / seizure event with timeline correction (~500 words)
+3. Missed doses clarification, triggers (alcohol, sleep) (~300 words)
+4. Medication review: current meds with doses, B6, cetirizine, vitamin D, ibuprofen PRN (~400 words)
+5. Symptom review: irritability, sleep, grogginess, auras, memory, resolved dizziness (~500 words)
+6. Past med history: lamotrigine trial, why stopped, allergy clarification (~250 words)
+7. PMH/family/social: smoking, alcohol, work, family history (~300 words)
+8. Exam briefly? ASR of exam — doctor verbalizes exam findings ("I'm going to check your reflexes...") (~150 words) — adds realism and length.
+9. Driving discussion with interruption (~300 words)
+10. Plan: continue dose, B6, conditional lamotrigine cross-titration explained with titration schedule and rash warning, trough level, EEG, follow-up 3 months, safety counseling (showers, swimming, ladders) (~500 words)
+11. Wrap-up small talk (~150 words)
+
+That totals ~3450. Good, aim for ~3000-3200.
+
+Let me think about the clinical details more:
+
+Patient: Colin, 34-year-old, focal epilepsy onset 3 years ago (age 31), semiology: déjà vu aura rising epigastric sensation then impaired awareness with lip smacking, ~1-2 min, occasional secondary generalization (had 2 GTCS ever, one at diagnosis). MRI: right mesial temporal sclerosis (or "the right side of the hippocampus looked a bit shrunken"). EEG: right temporal epileptiform discharges. 
+
+Index event: focal-to-bilateral tonic-clonic (or focal impaired awareness witnessed) at a friend's wedding weekend — he forgot his meds at home (Friday evening through Sunday morning = 4 missed doses), drank alcohol, slept poorly. Seizure Sunday afternoon after returning home? Or Saturday at the wedding? Let's say: he drove up Friday, forgot the pill box, had the seizure Sunday morning at home after getting back? Hmm, if he missed doses all weekend and seizure Sunday evening at home — witnessed by wife. Let's make it a focal impaired awareness seizure that secondarily generalized — his wife saw the whole thing, ~2 minutes, postictal confusion 20 min, bitten tongue, went to ED? Or didn't go to ED because wife knew the drill but called the on-call. Let's say they did go to the ER, CT fine, discharged, and the clinic increased levetiracetam from 500 BID to 750 BID via phone/portal the next day. Timeline: visit is ~6-7 weeks after the event. Patient initially says "about a month ago" or "three weeks ago," then corrects using anchor events (wedding date, refill date).
+
+Wait — contradiction: he first says seizure was "like three weeks ago," doctor notes the dose increase was six weeks ago, patient realizes: "oh no, you're right, it was the weekend before we upped the dose, so it's gotta be six, seven weeks — the wedding was the first weekend of [month]." Good.
+
+Also contradiction on missed doses: "I only missed like one or two doses" → "well, okay, honestly I left the whole pill box at home, so Friday night, Saturday morning, Saturday night, Sunday morning — four doses." 
+
+Alcohol: "I barely drink" → "I mean, that weekend was a wedding, so I had, you know, quite a few."
+
+Symptoms detail:
+- Irritability: started within a week of the dose increase (so ~5-6 weeks ago), snapping at wife/kids, road rage as passenger (can't drive), worse evenings; B6 100 mg started ~3 weeks ago, improved from "seven out of ten" to "three out of ten," still present.
+- Sleep: vivid dreams, trouble staying asleep since dose increase; somewhat better.
+- Morning grogginess: worse after increase; improved when he moved evening dose from bedtime (11pm) to dinner (6-7pm). Actually moving dose earlier might reduce morning grogginess? Levetiracetam isn't very sedating typically, but fine, it's fictional-plausible. Or grogginess improved on its own.
+- Auras: brief déjà vu episodes, 2 in the past 6 weeks, no progression, vs. about monthly before. He initially says "no seizures since" then admits the auras when asked specifically — "well, those little déjà vu things, but those don't count, right?" Doctor: they do count as focal aware seizures.
+- Memory/word-finding: mild, stable for a year+, not worse.
+- Resolved: dizziness/unsteadiness and mild nausea in first 10-14 days after the increase — resolved by week 3. Also maybe headaches he used to have with lamotrigine (past) — resolved when stopped.
+
+Meds list (current):
+1. Levetiracetam 750 mg twice daily (morning ~8am, evening with dinner ~6-7pm) — increased from 500 mg twice daily ~6-7 weeks ago.
+2. Pyridoxine (vitamin B6) 100 mg once daily in the morning — started ~3 weeks ago for irritability.
+3. Cetirizine 10 mg once daily as needed for seasonal allergies — uses a few times a week in spring.
+4. Vitamin D3 2000 IU daily (his PCP started it for low level last winter).
+5. Ibuprofen 400 mg occasionally for headaches/back pain, maybe twice a month.
+That's 5. Good.
+
+Past meds:
+- Lamotrigine: first AED, titrated to 100 mg twice daily over ~2 months, caused persistent daily headaches and insomnia/vivid dreams, so cross-tapered to levetiracetam ~2.5 years ago. NOT a rash — doctor explicitly confirms. This is the dual-frame med: past trial AND planned future cross-titration.
+- Maybe also mention he was briefly on lorazepam after diagnosis? Not needed.
+
+Allergies: Penicillin — hives as a kid. No AED allergies; explicitly no rash with lamotrigine. Seasonal pollen allergies (hence cetirizine).
+
+PMH: concussion at 16 (football), no LOC prolonged; mild intermittent asthma as child, outgrown; no surgeries except wisdom teeth; no diabetes/HTN.
+
+Family: father alive well; mother migraines; paternal uncle had seizures after a stroke in his 60s (provoked); no family history of epilepsy per se; no SUDEP family history obviously.
+
+Social: married, two kids (6 and 3); works as an HVAC technician / or sales — driving is essential to job; currently on light duty / wife driving him; former smoker — quit ~2 years ago, smoked ~half pack/day for 10 years; occasional vaping? Maybe "I'll have a cigar at a wedding." Alcohol: normally 1-2 beers on weekends, the wedding weekend was heavier; no drugs; caffeine: 2 coffees morning.
+
+Driving: state requires 6 months seizure-free (fictional state guidance); doctor must report or patient self-reports — keep it as "in this state you're required to self-report / the law says six months." He hasn't driven since the seizure; wife drives; work accommodated with shop duty. Recalculate: seizure ~7 weeks ago → eligible around... 6 months from seizure date ≈ about 4 months from now, contingent on no further events — and note the auras: do auras count? In many places focal aware seizures without impairment may not ground driving restrictions the same way, but to keep it simple and safe, doctor says if auras stay as pure brief déjà vu without awareness impairment, per state rules they may not reset the clock, but if any impaired-awareness event occurs, clock resets. Hmm, this is nuanced; I'll have the doctor say the déjà vu episodes, since they're brief and awareness preserved, don't necessarily reset the clock per the state guidance, but any event with impaired awareness or convulsion resets it. That's clinically realistic in some jurisdictions. Keep it as dialogue.
+
+Interruption: mid-driving discussion, his phone rings — it's his boss — he silences it, apologizes; or he takes it quickly "sorry, I have to— it's work about the schedule." Then resume. Good.
+
+Plan:
+1. Continue levetiracetam 750 mg BID — no further increase today since no convulsive seizures since and auras decreased; emphasize adherence, pillbox, phone alarms, travel rule (meds in carry-on, extra supply).
+2. Continue pyridoxine 100 mg daily; if irritability persists at 4-6 more weeks or worsens, start lamotrigine cross-titration: 25 mg once daily × 2 weeks, then 25 mg twice daily × 2 weeks, then 50 mg twice daily, etc., slow because of prior headaches and rash risk; stop and call immediately for rash, fever, mouth sores. Given past headaches, even slower titration and take with food. Once lamotrigine at ~100 BID and tolerated, would gradually reduce levetiracetam. But conditional — only if irritability persists.
+3. Labs: trough levetiracetam level tomorrow morning before AM dose (he should hold morning dose until blood drawn — good detail), plus maybe CBC/CMP baseline. Brief says trough level — include the hold-dose instruction.
+4. EEG: routine EEG with sleep deprivation (or ambulatory) to re-evaluate given breakthrough event; schedule within 2-3 weeks; sleep-deprived instructions (stay up after midnight, no caffeine morning of).
+5. Follow-up: 3 months (12 weeks), sooner/portal message if recurrent seizure, rash, or irritability worsens; bring seizure diary; wife welcome to join/video any events.
+6. Safety: showers over baths, no swimming alone, no ladders/heights at work until cleared, avoid sleep deprivation and binge drinking.
+7. Driving: as above.
+
+Also maybe discuss: the ER visit records reviewed; CT normal; prolactin? Not needed.
+
+Exam: brief verbalized neuro exam — cranial nerves, strength, reflexes, gait, no tongue bite healing? Tongue bite from the event healing fine.
+
+Now, ASR style: no speaker labels. How to make it readable but ASR-like? Write as continuous dialogue with paragraph breaks at topic shifts. Include "um," "uh," "mhmm," "yeah," "okay," "so," false starts, repetitions ("the the"), trailing off. Occasional bracketed ASR artifacts? The prompt says "as if produced by automatic speech recognition" — typically no bracketed annotations unless [inaudible] or [crosstalk]. I could include one or two "[inaudible]" or "[crosstalk]" for realism — that seems in keeping with ASR style. The interruption could include [crosstalk]. I'll use sparingly: maybe one [inaudible] and one [crosstalk].
+
+Drug misspellings: "levetiracetam" mostly correct but once "levetirastam" or "levetiracetam" → "levetiracetam"... Let me decide: use "levetiracetam" correct most times, once "levetirastem"; "Keppra" correct; "lamotrigine" once as "lamotregine" and once "lamotrigine"; "Lamictal" correct; "pyridoxine" once "pyridoxin"; "cetirizine" once "ceterizine"; "Zyrtec" fine. Also maybe "hippocampus" fine.
+
+Word count: I need 2500-3500. I'll write generously, keeping dialogue natural. Let me draft.
+
+Draft:
+
+---
+
+okay so I think we're good, the the door's closed, sorry about that, the parking lot's a mess today with the construction, did you find a spot okay — yeah yeah we parked across the street, my wife's circling with the kids actually, she's gonna pick me up after — oh nice, okay, and how's the, how's the dog, you got a puppy last time right — [small talk continues]
+
+Let me write it fully now, keeping track of required elements with a checklist:
+
+✓ Small talk start
+✓ 3-5 current meds with doses/frequencies: levetiracetam 750 BID (old 500 BID), B6 100 daily, cetirizine 10 PRN, vitamin D 2000 IU daily, ibuprofen 400 PRN
+✓ Dose change: levetiracetam 500→750 BID
+✓ Past med stopped with reason: lamotrigine (headaches/insomnia)
+✓ 4-6 current symptoms with time course: irritability, vivid dreams/poor sleep, morning grogginess, déjà vu auras, word-finding; resolved: dizziness/nausea post-increase
+✓ History: PMH (concussion, childhood asthma), family (uncle post-stroke seizures, mom migraines), social (former smoker, alcohol, work HVAC, married two kids)
+✓ Allergy: penicillin hives; no AED allergy; no rash with lamotrigine
+✓ Plan: med adjustment (continue 750, conditional lamotrigine cross-titration with schedule), tests (trough level with hold-dose instruction, sleep-deprived EEG), follow-up 3 months
+✓ Contradictions clarified: seizure timing (3 weeks → 6-7 weeks), missed doses (1-2 → 4), alcohol ("barely drink" → wedding binge), auras ("no seizures" → 2 déjà vu events)
+✓ Interruption mid-topic: phone rings during driving discussion
+✓ Dual-frame med: lamotrigine past trial + planned future
+✓ Driving restrictions reviewed
+✓ ASR misspellings of drug names
+✓ Length 2500-3500
+
+Let me now write the full transcript. I'll aim for ~3100 words. I need to be careful to keep it flowing and natural, with the doctor's turns and patient's turns distinguishable by context (using em-dashes or just paragraph flow). Since no speaker labels, I'll use paragraph breaks between speaker turns mostly, or run them together? "run-on dialogue without speaker labels" — I think paragraph breaks per turn are okay and typical of ASR diarization-less transcripts; or fully run-on. I'll do paragraph breaks at natural turn boundaries but keep some turns merged. Actually, to be safe and readable, I'll break paragraphs at speaker changes but without labels. That reads like an ASR transcript without diarization.
+
+Let me write:
+
+---
+
+okay, let's see, door closed, good. sorry about the wait, the clinic's running a bit behind today, the, the parking construction out front is a nightmare, did you guys find a spot okay
+
+yeah, yeah, we did, my wife actually just dropped me off, she's got the kids, she's gonna run to Target and come back, so
+
+oh nice, okay, well that works. and how's the, you got a new puppy last time, right, how's that going
+
+[laughs] oh man, yeah, Moose, he's, he's great, he's eating everything, he ate my, my pill box actually, like two months ago, chewed right through it, so I had to get a new one
+
+oh no. well, at least he didn't eat the pills I hope
+
+no no, thankfully, just the plastic
+
+okay good. alright, well, let's, let's get into it. so this is follow-up for the epilepsy, and I know the big thing since I saw you last was the, the seizure, so why don't you tell me in your own words kind of what happened and when
+
+yeah. so, um, it was about, like, three weeks ago? maybe a month? we were, we were up at my buddy's wedding, up in Traverse, and—
+
+wait, hold on, three weeks? because I'm looking at the note here and we increased your Keppra, your levetiracetam, after that seizure, and that was, that was back in, let me see, that was about six weeks ago that we made that change
+
+oh. oh, no, you're right, you're right. sorry, I'm, I'm bad with dates. no, the wedding was, it was the first weekend of, um, of last month— no, the month before. because we upped the dose right after, like that Monday, and I've been on the new dose for, yeah, about six weeks now. so the seizure was, like, six, seven weeks ago. not three. I don't know why I said three.
+
+okay, that's fine, that's why we go through it. so six or seven weeks ago, the wedding weekend. walk me through it.
+
+yeah so, um, we drove up Friday after work, and I, I forgot my pill box. like, the new one, after Moose ate the old one, I, I left it on the counter. so I missed, I think I missed one or two doses?
+
+okay, one or two, or—
+
+well, okay, honestly, it was the whole weekend. I didn't have it Friday night, Saturday morning, Saturday night, and then Sunday morning we drove home, so, so that's four doses. four doses missed.
+
+okay, I appreciate you being straight with me, that's, that's important for me to know. so four missed doses, Friday evening through Sunday morning. and then the seizure was when, Saturday?
+
+no, it was Sunday. we got home Sunday afternoon, and I was, I was actually feeling fine, and then Sunday evening, like after dinner, I was on the couch and I got that, that déjà vu feeling, the rising thing in my stomach, and then that's the last thing I remember. my wife said I, I stiffened up and shook for about two minutes, and I bit my tongue, and I was out of it for like twenty minutes after.
+
+okay. and did you go to the ER?
+
+yeah, yeah, we did, because it was the first one in, what, almost two years? so it scared her. they did a CT, it was fine, and they sent me home and said follow up with you guys, and then I messaged through the portal and that's when the dose went up.
+
+right, right, I've got the ER note here, CT was normal, they checked some labs which were fine. and, um, I want to ask about the weekend itself — were you drinking at all, at the wedding?
+
+I mean, I barely drink, you know that.
+
+mhmm.
+
+but, okay, it was a wedding, so, yeah, I had, I had quite a bit Saturday. like, more than I usually would. and we were up late both nights, I maybe got five hours of sleep.
+
+okay. so, and I'm not, I'm not saying this to lecture you, but just so we both understand what happened — you had kind of the perfect storm, right, four missed doses, plus alcohol, plus sleep deprivation, all three of those lower your seizure threshold. so in a way it's, it's almost reassuring, because it wasn't the medication failing you, it was, you know, circumstances.
+
+yeah. yeah, my wife said the same thing, in, in less nice words. [laughs]
+
+[laughs] okay. so since that Sunday, since the seizure and the dose increase, any more events?
+
+no. no seizures.
+
+no convulsions, and also no, like, little episodes? no auras, no déjà vu spells, no staring spells?
+
+well — I mean, I've had a couple of the, the little déjà vu things. but those don't count, right? those are just, like, thirty seconds, I'm totally with it.
+
+okay, so they do count, actually — those are focal aware seizures, little ones. how many, and when?
+
+um, two. two since the increase. one was, like, two weeks after we went up on the dose, and one was last week. both just the déjà vu and the stomach thing, thirty seconds, maybe less, and then gone. before, before all this, before the wedding, I was getting those maybe once a month, so, so it's not worse. if anything it's about the same or a little better.
+
+okay, that's actually helpful, so two brief focal aware seizures in six weeks, no impaired awareness, no convulsions since the event. and you're writing these down?
+
+my wife is, yeah, she's got the, the diary on her phone.
+
+good, good. alright, let's go through the medications carefully, because I want to make sure my list is right. so right now, the levetiracetam —
+
+the Keppra, yeah.
+
+— you're taking seven hundred and fifty milligrams twice a day, so one and a half of the five hundred tablets morning and night?
+
+yep. seven fifty in the morning, like eight a.m., and seven fifty at night. well, I moved the night one, I used to take it at bedtime, like eleven, but I was super groggy in the morning after we went up on the dose, so now I take it with dinner, like six, six thirty, and that's, that's helped a lot.
+
+okay, good, so seven fifty twice daily, and the evening dose is now with dinner rather than bedtime, and the morning grogginess improved with that. and before the increase you were on five hundred twice a day, is that right?
+
+five hundred twice a day, yeah, for like two years.
+
+okay. and then the vitamin B6, the pyridoxine, we started that, what, three weeks ago?
+
+yeah, about three weeks. a hundred milligrams, once a day, in the morning.
+
+and that's for the irritability, which I want to come back to in a second. what else are you taking? anything over the counter, vitamins, anything from your other doctors?
+
+um, let's see. I take the, the allergy pill, the generic Zyrtec —
+
+cetirizine?
+
+yeah, that. ten milligrams, but not every day, just when the allergies are bad, so like, lately with the spring stuff, maybe three, four times a week. and vitamin D, my primary put me on that in the winter, two thousand units a day, because my level was low. and that's it, oh, and ibuprofen sometimes, like four hundred milligrams, for my back or a headache, but that's maybe twice a month, not regular.
+
+okay, so let me read it back: levetiracetam seven fifty twice daily, pyridoxine a hundred daily, cetirizine ten as needed a few times a week, vitamin D two thousand daily, and ibuprofen four hundred occasionally. did I miss anything?
+
+no, that's everything.
+
+great. now, the irritability — this is the big one I wanted to check on, because when you messaged us, it sounded pretty rough. tell me where things are at now.
+
+yeah. so, um, it started, like, within a week of going up to the seven fifty. I was just, I was snapping at everybody. my wife, the kids, I got mad at the dog for, for nothing. I'm not, I'm not like that normally. and it was worst in the evenings, like after work I'd come home and just, everything annoyed me. my wife said it was like living with a, with a hornet. [laughs]
+
+okay.
+
+and then since the B6, honestly, it's, it's a lot better. like if it was a seven out of ten before, now it's maybe a three. I still get, I still get short, especially in the evenings, but I'm not, I'm not biting anyone's head off. my wife says I'm tolerable now. [laughs]
+
+[laughs] okay, well, "tolerable" is, is progress. so irritability started about a week after the dose increase, peaked, and improved maybe seventy percent on the B6 over three weeks, but it's not completely gone. any, any low mood with it, any depression, any thoughts of hurting yourself or anything like that? I have to ask.
+
+no, no, nothing like that. it's just the, the short fuse. my mood's fine otherwise.
+
+good. and sleep?
+
+sleep's been, eh. since the dose went up I get these really vivid dreams, like, movie dreams, and I wake up a couple times a night. it's gotten a little better, the first two weeks were worse. but I'm still not sleeping great. and then the grogginess in the morning, like I said, that's better since I moved the dose to dinner.
+
+okay. and the dizziness you mentioned in your message, right after the increase?
+
+oh, that's gone. yeah, the first, like, ten days, two weeks, I was kind of off-balance, a little nauseous, and that totally went away by week three. no dizziness at all now.
+
+good, so that resolved. any headaches?
+
+not really. I mean, the occasional one, that's what the ibuprofen's for, but nothing like — when I was on the, the other one, the lamotrigine, way back, those were headaches. this is nothing like that.
+
+right, okay, let's talk about that, because that's relevant to what I want to discuss today. so you were on lamotrigine — Lamictal — when you were first diagnosed, about three years ago?
+
+yeah, that was the first one they tried. we went up real slow, and I got to, I think a hundred milligrams twice a day, and I just, I had headaches every day, and I couldn't sleep, and so we switched to the Keppra. and the Keppra's been great, seizure-wise, until, you know, the wedding.
+
+and just to be clear, because this matters a lot — when we stopped the lamotrigine back then, it was headaches and insomnia. it was not a rash, correct?
+
+no, no rash. definitely no rash. I remember you, or, or the other doctor, asking me that back then too.
+
+okay good, because a rash would change the whole conversation. and allergies otherwise — you're allergic to penicillin, is that still right?
+
+yeah, penicillin gives me hives, since I was a kid. and pollen, obviously. [laughs] but no other drug allergies, nothing with any of the seizure meds.
+
+okay. let me just do a quick review of the rest of your history, make sure nothing's changed. medical history — the concussion in high school, football, and the childhood asthma, anything new? surgeries, hospitalizations other than the ER visit?
+
+no, nothing new. wisdom teeth, but that was years ago. no, I'm, I'm healthy otherwise.
+
+family history — I have your mom with migraines, and your uncle, your dad's brother, had seizures but those were after his stroke, in his sixties, so provoked, not genetic. any new family history?
+
+no, nothing new. my dad's fine, mom's fine, kids are fine.
+
+and the social stuff — smoking?
+
+quit two years ago. well, two years in, um, in March. I was about a half a pack a day for, like, ten years. now I'll have a cigar at a wedding, like, twice a year, that's it.
+
+and alcohol, normally?
+
+normally, like, one or two beers on a weekend. the wedding was, that was not normal. [laughs] lesson learned there.
+
+and no drugs, no, no marijuana, nothing?
+
+no. no, I know that's, with the seizures, I just, I don't mess with it.
+
+good. caffeine?
+
+two coffees in the morning. that's it, no energy drinks or anything.
+
+okay. and work — you're still doing the HVAC?
+
+yeah, still HVAC, but, so, that's kind of the thing I wanted to ask about, because obviously I'm not driving, and my whole job is driving the van between sites, so my boss has me on, like, shop duty, inventory and stuff, and he's been cool about it, but I can tell it's, you know, it's wearing thin.
+
+right, okay, let's talk about the driving, because that's, that's a big quality of life thing. so you have not driven at all since the seizure?
+
+no. nothing. my wife drives, or I get a ride. it's, honestly it's the worst part of all this.
+
+okay. so the rule in this state — and I know we've been through this before, but it's worth repeating — is that you need to be six months seizure-free before you can legally drive again. now, the good news with the corrected timeline we just figured out: the seizure was about seven weeks ago, not three, so you're actually further into that clock than you thought. if nothing else happens, you'd be looking at roughly, let me think, about four more months, so early fall, before—
+
+[phone rings loudly] oh, oh my god, sorry, sorry, that's — it's my boss, I, let me just — [muffled] hey, yeah, I'm in the appointment, can I call you in twenty? okay. okay, thanks. — sorry. sorry about that. he's probably calling about the schedule, which is, you know, the whole problem.
+
+no, that's okay. so, where were we — the six-month clock. so, one important nuance: the clock resets with any seizure where you lose awareness or have a convulsion. the little déjà vu spells, the focal aware ones where you're fully with it — under the state guidance, those don't necessarily reset the clock, as long as they stay exactly like that, brief, no impairment. but if you have another event like the wedding one, the clock goes back to zero. does that make sense?
+
+yeah. yeah, okay. so, like, four more months if nothing happens.
+
+correct. and I do have to document this discussion, and you know the state requires that I report — well, actually, in this state it's on you to self-report to the DMV, but I document that we counseled you, and I would strongly, strongly advise you not to push it, because if you drive and have an event and hurt someone, that's, that's a whole different level of bad.
+
+no, I know. I know. I'm not gonna drive. it just, it sucks. [laughs]
+
+I know it does. okay, let me do a quick exam, and then we'll talk plan. can you follow my finger with your eyes... good. smile... raise your eyebrows... okay. squeeze my fingers... good and strong. push against me, pull... good. reflexes are nice and symmetric. walk across the room for me... and heel to toe, like you're on a tightrope... good. any, how's the tongue, by the way, the bite healed?
+
+yeah, that healed up in like a week. it was sore but it's fine now.
+
+good. okay, exam's normal, which is great. so let's talk about where we go from here.
+
+okay.
+
+first, the levetiracetam. given that the breakthrough seizure happened in the setting of missed doses, alcohol, and no sleep — and you haven't had a convulsive event since — I don't think we need to increase the dose further. I want to keep you at seven fifty twice a day. the two little déjà vu spells are not nothing, but they're brief, they're not impairing you, and they're not more frequent than before. so we hold the dose.
+
+okay.
+
+second, adherence, because the wedding weekend can't happen again. so: pill box, which you have, a new one, away from the dog —
+
+[laughs] yeah, it's in a drawer now.
+
+— phone alarms, morning and dinner. and a travel rule: when you pack, the meds go in the bag first, before anything else, and if you're flying, they go in your carry-on, plus a couple extra days' worth in case you get stuck somewhere. and if you do ever miss a dose, take it as soon as you remember unless it's almost time for the next one — don't double up.
+
+okay.
+
+third, the irritability. it's better on the B6 but not gone. so here's what I want to do: we continue the pyridoxine, a hundred milligrams a day, and we give it another four to six weeks. if it keeps improving, great, we stay the course. but if it plateaus where it is, or gets worse, then I want to talk seriously about a cross-titration — slowly moving you from the levetiracetam over to lamotrigine.
+
+wait — lamotrigine? didn't I, didn't I already take that? I thought that didn't work.
+
+you did, and this is exactly why I asked about the rash earlier. so, it didn't not work — seizure-wise it was actually fine — we stopped it because of the headaches and the insomnia, which are side effects, not because it failed, and not because of anything dangerous like a rash. the thinking is: the levetiracetam is what's likely causing the irritability, that's a very well-known side effect of it, and lamotrigine is actually one of the best-tolerated mood-wise — it's even used as a mood stabilizer. so if the irritability doesn't settle, we'd do a very slow cross-taper: we'd start lamotrigine twenty-five milligrams once a day for two weeks, then twenty-five twice a day for two weeks, then fifty twice a day, and so on, even slower than the standard schedule because of how you did last time, and only once you're at a decent dose of that would we start inching the levetiracetam down.
+
+and the headaches? am I just gonna get the headaches again?
+
+maybe, honestly. it's possible. but sometimes a slower titration and taking it with food makes a difference, and you were, you know, three years younger, different situation. the deal would be: if the headaches come back and they're bad, we stop, no harm done, and we think about other options. and the one thing that is non-negotiable: if you get any rash, any rash at all, or fever, or sores in your mouth, you stop it and you call us the same day. that's the one dangerous side effect, and it's rare, but we don't mess around with it.
+
+okay. okay, that makes sense. so we're not starting it today?
+
+not today. today we hold, we give the B6 more time. if you message me in a month and say "doc, I'm still a hornet," then we start the cross-taper, and I'll send you the written schedule.
+
+[laughs] okay. deal.
+
+fourth, some tests. I want a trough levetiracetam level — that's a blood draw first thing in the morning, before your morning dose. so the instruction is: on the day you go to the lab, do not take your morning pill, bring it with you, get the blood drawn, then take the pill right after. that gives us the trough, the lowest level, which is the useful number. I'll put the order in today, and the lab downstairs can do it, or the one near your house, whatever's easier, sometime in the next week or two.
+
+okay, so, hold the morning dose, get the draw, then take it.
+
+exactly. and fifth, I want to repeat the EEG. it's been, what, almost two years since your last one, and given the breakthrough event, I want to see what the background looks like. I'm going to order a sleep-deprived EEG — so the night before, they'll want you to stay up late, I think it's no sleep after midnight, and no caffeine the morning of, because we want you drowsy, we get more information that way. scheduling will call you, and I'd like it done in the next two to three weeks.
+
+okay. is that the one with the, the wires and the strobe light?
+
+yep, that's the one. about an hour, hour and a half.
+
+fun. [laughs]
+
+[laughs] and then last thing, follow-up. I want to see you back in three months — so, twelve weeks — and sooner if anything happens. and by "anything" I mean: another convulsive seizure, any event where you're not fully with it, a rash if we do start the lamotrigine, or the irritability getting worse instead of better. any of those, you message or call, don't wait for the appointment. and keep the seizure diary going, your wife's doing a great job with that, and actually — if anyone ever sees an event and it's safe to do so, video it on a phone. I know that sounds morbid, but a video is worth a thousand descriptions for me.
+
+yeah, okay, that's, that's a good idea actually.
+
+and the usual safety stuff, quick version: showers over baths, no swimming alone, no ladders or roofs at work until you're further out from the last event — and I know with HVAC that's a real thing, so shop duty is actually the right call for now — and keep the sleep regular, and go easy on the alcohol, one or two, not the wedding special.
+
+[laughs] yeah. yeah, the wedding special is retired.
+
+okay. any questions for me? anything I didn't cover?
+
+um... I don't think so. oh — the level, the blood level, if it's low, does that mean we go up on the dose?
+
+not necessarily. we treat you, not the number. if you're doing well clinically, the number is just information. but if it comes back really low, it tells us maybe there's room to go up if we need to, or, you know, it might tell us something about absorption or timing. we'll look at it together with the EEG and how you're feeling.
+
+okay. and the, the driving, four months, that's, that's if the déjà vu things don't get worse.
+
+correct. brief, aware, no change — clock keeps running. anything more than that — clock resets, and you let me know.
+
+okay. alright. I think that's everything.
+
+good. so, to summarize: levetiracetam stays at seven fifty twice a day, B6 stays at a hundred, allergy pill and vitamin D as you are, ibuprofen as needed is fine. trough level in the next week or two, hold the morning dose that day. sleep-deprived EEG, scheduling will call. follow-up in three months, sooner if anything happens. and if the irritability's still bugging you in a month, message me and we'll start the lamotrigine cross-taper with the written schedule.
+
+sounds good.
+
+alright, Colin, good to see you. tell your wife I said hi, and, uh, good luck with Moose and the, the pill box situation.
+
+[laughs] will do. thanks, doc.
+
+take care. scheduling's right out front, they'll set you up for the three-month before you leave.
+
+---
+
+Now let me count words roughly. Let me estimate: this draft is probably around 2800-3000 words. Let me count more carefully by sections... Actually, let me count the draft. I'll estimate paragraph by paragraph. The draft above looks like roughly 2900-3100 words. That fits 2500-3500.
+
+Let me verify all requirements once more:
+
+1. Fictional: Colin (first name only), doctor unnamed mostly — should I give the clinician a name? "invented clinician" — the transcript may not need the name spoken, but I could have the patient say "Dr. ___" once. Let me add "doc" is used; maybe add a name like "Dr. Sato" or "Dr. Brandt" in small talk or when patient says "thanks, Dr. Brandt." I'll add a name at the end: "thanks, Dr. Brandt." Good.
+
+2. ASR style: disfluencies present ✓, no speaker labels ✓, small talk at start ✓, drug misspellings — I need to add some! Currently I spelled everything correctly. Let me add: "levetirastam" once, "lamotregine" once, "pyridoxin" or "peridoxine" once, "ceterizine" once. ASR would inconsistently spell. I'll sprinkle: first mention "levetiracetam" correct, later "levetirastam"; "lamotrigine" correct once, "lamotregine" once; "pyridoxine" correct once, "pyridoxin" once; "cetirizine" as "ceterizine" once. Also maybe "hippocampus" not needed. Also "Keppra" fine.
+
+3. Meds: levetiracetam 750 BID (old 500 BID) ✓, B6 100 daily ✓, cetirizine 10 PRN ✓, vitamin D 2000 daily ✓, ibuprofen 400 PRN ✓ — 5 meds. Dose change with old/new ✓. Past med stopped with reason: lamotrigine (headaches/insomnia) ✓.
+
+4. Symptoms: irritability (onset ~1 wk post-increase, improving) ✓, vivid dreams/poor sleep (since increase, somewhat better) ✓, morning grogginess (better after moving dose) ✓, déjà vu auras (2 in 6 wks, vs monthly before) ✓, occasional headaches (mild) ✓, tongue bite healed (event-related) — resolved: dizziness/nausea resolved by week 3 ✓. That's 5-6 current + 1 resolved. ✓
+
+5. History: PMH concussion, childhood asthma, wisdom teeth ✓; family: mom migraines, uncle post-stroke seizures ✓; social: former smoker (half pack/day × 10 yrs, quit 2 yrs, occasional cigar), alcohol (1-2 beers, wedding binge), no drugs, caffeine 2 coffees, HVAC work, married with kids, dog ✓. Allergy: penicillin hives ✓, no AED allergy, no rash with lamotrigine ✓.
+
+6. Plan: med adjustment — hold levetiracetam 750 (decision not to increase is a plan element), continue B6, conditional lamotrigine cross-titration with explicit schedule ✓; tests: trough level with hold-dose instruction ✓, sleep-deprived EEG ✓; follow-up 3 months ✓; driving reviewed ✓; safety counseling ✓.
+
+7. Difficulty: contradictions clarified — seizure timing (3 wks → 6-7 wks) ✓, missed doses (1-2 → 4) ✓, alcohol ("barely drink" → wedding binge) ✓, auras ("no seizures" → 2 déjà vu) ✓. Interruption mid-topic: phone rings during driving discussion ✓. Dual-frame med: lamotrigine past trial + planned future ✓ (patient even says "didn't I already take that?").
+
+8. Length: need to verify 2500-3500. Let me count my draft more carefully. I'll count words in chunks.
+
+Actually, let me count approximately. The draft has roughly... I'll count by lines. Each paragraph of dialogue averages maybe 40-80 words. There are about 90 paragraphs/turns. Hmm, many short turns (5-15 words) and many long ones (60-120 words). Estimate: ~3000 words. Should be fine. Let me do a rough count of a few sections to calibrate:
+
+Section 1 (small talk through "that's why we go through it"): ~250 words.
+Seizure narrative through ER: ~350 words.
+Alcohol/triggers: ~150.
+Events since/auras: ~250.
+Med review: ~400.
+Irritability/sleep/dizziness: ~350.
+Lamotrigine history/allergies: ~250.
+PMH/family/social: ~300.
+Driving + interruption: ~400.
+Exam: ~120.
+Plan: ~800.
+Wrap-up: ~200.
+Total: ~3820? Hmm, that might be over. Let me recount more carefully... Actually my estimates are rough. The plan section is long. Let me just count the actual draft words.
+
+I'll count the draft as written above. Let me count paragraph by paragraph (approximate):
+
+1. "okay, let's see, door closed..." ~45
+2. "yeah, yeah, we did..." ~30
+3. "oh nice, okay..." ~15
+4. "[laughs] oh man, yeah, Moose..." ~40
+5. "oh no. well..." ~10
+6. "no no, thankfully..." ~6
+7. "okay good. alright..." ~55
+8. "yeah. so, um, it was about..." ~35
+9. "wait, hold on, three weeks?..." ~60
+10. "oh. oh, no, you're right..." ~85
+11. "okay, that's fine..." ~20
+12. "yeah so, um, we drove up..." ~55
+13. "okay, one or two, or—" ~5
+14. "well, okay, honestly..." ~40
+15. "okay, I appreciate..." ~40
+16. "no, it was Sunday..." ~75
+17. "okay. and did you go to the ER?" ~8
+18. "yeah, yeah, we did..." ~60
+19. "right, right, I've got the ER note..." ~40
+20. "I mean, I barely drink..." ~7
+21. "mhmm." ~1
+22. "but, okay, it was a wedding..." ~35
+23. "okay. so, and I'm not..." ~75
+24. "yeah. yeah, my wife said..." ~15
+25. "[laughs] okay. so since..." ~20
+26. "no. no seizures." ~3
+27. "no convulsions, and also no..." ~20
+28. "well — I mean, I've had..." ~40
+29. "okay, so they do count..." ~25
+30. "um, two. two since the increase..." ~80
+31. "okay, that's actually helpful..." ~25
+32. "my wife is, yeah..." ~15
+33. "good, good. alright, let's go..." ~35
+34. "the Keppra, yeah." ~3
+35. "— you're taking seven hundred..." ~30
+36. "yep. seven fifty in the morning..." ~65
+37. "okay, good, so seven fifty..." ~45
+38. "five hundred twice a day, yeah..." ~12
+39. "okay. and then the vitamin B6..." ~20
+40. "yeah, about three weeks..." ~15
+41. "and that's for the irritability..." ~35
+42. "um, let's see. I take the..." ~15
+43. "cetirizine?" ~1
+44. "yeah, that. ten milligrams..." ~70
+45. "okay, so let me read it back..." ~50
+46. "no, that's everything." ~4
+47. "great. now, the irritability..." ~45
+48. "yeah. so, um, it started..." ~85
+49. "okay." ~1
+50. "and then since the B6..." ~70
+51. "[laughs] okay, well, 'tolerable'..." ~55
+52. "no, no, nothing like that..." ~20
+53. "good. and sleep?" ~3
+54. "sleep's been, eh..." ~60
+55. "okay. and the dizziness..." ~15
+56. "oh, that's gone..." ~40
+57. "good, so that resolved. any headaches?" ~7
+58. "not really. I mean..." ~50
+59. "right, okay, let's talk about that..." ~40
+60. "yeah, that was the first one..." ~70
+61. "and just to be clear..." ~35
+62. "no, no rash. definitely..." ~25
+63. "okay good, because a rash..." ~30
+64. "yeah, penicillin gives me hives..." ~30
+65. "okay. let me just do a quick review..." ~45
+66. "no, nothing new. wisdom teeth..." ~20
+67. "family history — I have your mom..." ~40
+68. "no, nothing new. my dad's fine..." ~12
+69. "and the social stuff — smoking?" ~5
+70. "quit two years ago..." ~40
+71. "and alcohol, normally?" ~4
+72. "normally, like, one or two beers..." ~20
+73. "and no drugs..." ~5
+74. "no. no, I know that's..." ~15
+75. "good. caffeine?" ~2
+76. "two coffees in the morning..." ~12
+77. "okay. and work — you're still..." ~10
+78. "yeah, still HVAC, but..." ~65
+79. "right, okay, let's talk about the driving..." ~30
+80. "no. nothing. my wife drives..." ~20
+81. "okay. so the rule in this state..." ~110
+82. "[phone rings loudly] oh, oh my god..." ~55
+83. "no, that's okay. so, where were we..." ~110
+84. "yeah. yeah, okay. so, like..." ~15
+85. "correct. and I do have to document..." ~85
+86. "no, I know. I know..." ~15
+87. "I know it does. okay, let me do a quick exam..." ~75
+88. "yeah, that healed up..." ~20
+89. "good. okay, exam's normal..." ~15
+90. "okay." ~1
+91. "first, the levetiracetam..." ~95
+92. "okay." ~1
+93. "second, adherence..." ~90
+94. "[laughs] yeah, it's in a drawer now." ~7
+95. "— phone alarms, morning and dinner..." ~60
+96. "okay." ~1
+97. "third, the irritability..." ~80
+98. "wait — lamotrigine? didn't I..." ~20
+99. "you did, and this is exactly why..." ~150
+100. "and the headaches?..." ~15
+101. "maybe, honestly. it's possible..." ~95
+102. "okay. okay, that makes sense..." ~12
+103. "not today. today we hold..." ~40
+104. "[laughs] okay. deal." ~4
+105. "fourth, some tests..." ~110
+106. "okay, so, hold the morning dose..." ~12
+107. "exactly. and fifth, I want to repeat the EEG..." ~100
+108. "okay. is that the one with..." ~12
+109. "yep, that's the one..." ~10
+110. "fun. [laughs]" ~2
+111. "[laughs] and then last thing, follow-up..." ~110
+112. "yeah, okay, that's..." ~12
+113. "and the usual safety stuff..." ~80
+114. "[laughs] yeah. yeah, the wedding special..." ~10
+115. "okay. any questions for me?..." ~10
+116. "um... I don't think so. oh — the level..." ~25
+117. "not necessarily. we treat you..." ~65
+118. "okay. and the, the driving..." ~20
+119. "correct. brief, aware, no change..." ~25
+120. "okay. alright. I think that's everything." ~8
+121. "good. so, to summarize..." ~100
+122. "sounds good." ~2
+123. "alright, Colin, good to see you..." ~30
+124. "[laughs] will do. thanks, doc." ~6
+125. "take care. scheduling's right out front..." ~20
+
+Sum: let me add roughly. Items 1-10: 45+30+15+40+10+6+55+35+60+85 = 381
+11-20: 20+55+5+40+40+75+8+60+40+7 = 350 → 731
+21-30: 1+35+75+15+20+3+20+40+25+80 = 314 → 1045
+31-40: 25+15+35+3+30+65+45+12+20+15 = 265 → 1310
+41-50: 35+15+1+70+50+4+45+85+1+70 = 376 → 1686
+51-60: 55+20+3+60+15+40+7+50+40+70 = 360 → 2046
+61-70: 35+25+30+30+45+20+40+12+5+40 = 282 → 2328
+71-80: 4+20+5+15+2+12+10+65+30+20 = 183 → 2511
+81-90: 110+55+110+15+85+15+75+20+15+1 = 501 → 3012
+91-100: 95+1+90+7+60+1+80+20+150+15 = 519 → 3531
+101-110: 95+12+40+4+110+12+100+12+10+2 = 397 → 3928
+111-120: 110+12+80+10+10+25+65+20+25+8 = 365 → 4293
+121-125: 100+2+30+6+20 = 158 → 4451
+
+Hmm, that estimate says ~4400 words, which is over 3500. But my per-paragraph estimates may be high. Let me sanity check a couple: paragraph 10: "oh. oh, no, you're right, you're right. sorry, I'm, I'm bad with dates. no, the wedding was, it was the first weekend of, um, of last month— no, the month before. because we upped the dose right after, like that Monday, and I've been on the new dose for, yeah, about six weeks now. so the seizure was, like, six, seven weeks ago. not three. I don't know why I said three." Count: oh(1) oh(2) no(3) you're(4) right(5) you're(6) right(7) sorry(8) I'm(9) I'm(10) bad(11) with(12) dates(13) no(14) the(15) wedding(16) was(17) it(18) was(19) the(20) first(21) weekend(22) of(23) um(24) of(25) last(26) month(27) no(28) the(29) month(30) before(31) because(32) we(33) upped(34) the(35) dose(36) right(37) after(38) like(39) that(40) Monday(41) and(42) I've(43) been(44) on(45) the(46) new(47) dose(48) for(49) yeah(50) about(51) six(52) weeks(53) now(54) so(55) the(56) seizure(57) was(58) like(59) six(60) seven(61) weeks(62) ago(63) not(64) three(65) I(66) don't(67) know(68) why(69) I(70) said(71) three(72). = 72 words. I estimated 85, close-ish, slightly high.
+
+Paragraph 99 (the long lamotrigine explanation): I estimated 150. Let me count: "you did, and this is exactly why I asked about the rash earlier. so, it didn't not work — seizure-wise it was actually fine — we stopped it because of the headaches and the insomnia, which are side effects, not because it failed, and not because of anything dangerous like a rash. the thinking is: the levetiracetam is what's likely causing the irritability, that's a very well-known side effect of it, and lamotrigine is actually one of the best-tolerated mood-wise — it's even used as a mood stabilizer. so if the irritability doesn't settle, we'd do a very slow cross-taper: we'd start lamotrigine twenty-five milligrams once a day for two weeks, then twenty-five twice a day for two weeks, then fifty twice a day, and so on, even slower than the standard schedule because of how you did last time, and only once you're at a decent dose of that would we start inching the levetiracetam down." Count: roughly... "you did(2) and(3) this(4) is(5) exactly(6) why(7) I(

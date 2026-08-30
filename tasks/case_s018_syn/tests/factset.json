@@ -1,0 +1,2313 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_s018_syn",
+    "version": "1",
+    "sha256": "88bc1e0e76fc9cd753f1b350be6d86202b4951de4e523aa47a7a35a303ca1e0e",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_s018_syn",
+    "path": "case_s018_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 8,
+      "n_facts": 471,
+      "certain": 4,
+      "strict_certain": 4,
+      "low_conf": 20,
+      "unique": 447,
+      "unanimous": 4,
+      "low_support": 415
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 23,
+    "unstable_skipped": 32
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": "7",
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.right_sided_neck_pain_was_rated_7_10_before_the_injection_and_is_now_rated_2_3_10_occurring_mostly_at_the_end_of_the_day_or_after_prolonged_computer_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right-sided neck pain was rated 7/10 before the injection and is now rated 2-3/10, occurring mostly at the end of the day or after prolonged computer use."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.right_sided_neck_pain_decreased_from_7_10_constant_to_3_10_sometimes_2_10_on_good_days",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right-sided neck pain decreased from 7/10 constant to 3/10, sometimes 2/10 on good days."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is here for a follow-up visit approximately 4 weeks after an epidural injection for right-sided neck and arm pain."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.before_treatment_the_right_sided_neck_pain_was_constant_and_rated_7_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Before treatment, the right-sided neck pain was constant and rated 7/10."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right-sided neck pain improved from a constant 7/10 to approximately 2–3/10."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.right_sided_neck_pain_was_7_10_and_constant_before_the_injection_it_is_now_23_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right-sided neck pain was 7/10 and constant before the injection; it is now 2–3/10."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.initial_neck_pain_was_constant_rated_7_10_on_the_right_side_now_rated_2_3_10_occurring_mostly_at_end_of_day_or_after_prolonged_computer_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Initial neck pain was constant, rated 7/10 on the right side; now rated 2-3/10, occurring mostly at end of day or after prolonged computer use."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.right_sided_neck_pain_was_previously_7_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right-sided neck pain was previously 7/10."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.turning_her_head_to_check_her_blind_spot_did_not_produce_the_previous_severe_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Turning her head to check her blind spot did not produce the previous severe pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Sleep",
+      "canonical_anchor": "demo.demo.sleep.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sleep",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is improved, waking about once per night instead of three to four times."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is much better."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is much improved: she was previously waking 3–4 times per night because of the arm and now wakes about once per night; she feels the nortriptyline helps her sleep deeper."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is much better."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Left arm is asymptomatic",
+      "canonical_anchor": "symptom.symptom.left_arm_asymptomatic.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "left arm is asymptomatic",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.left_arm_is_asymptomatic",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Left arm is asymptomatic."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_left_arm_is_asymptomatic",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The left arm is asymptomatic."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.left_arm_is_asymptomatic",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Left arm is asymptomatic."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Chronic medical conditions include high blood pressure, heartburn, and borderline high cholesterol"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High blood pressure"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension, treated with lisinopril for about 6 years; pharmacy checks usually around 120s/70s"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.hypertension_treated_with_lisinopril_for_about_6_years_pharmacy_checks_usually_around_120s_70s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension, treated with lisinopril for about 6 years; pharmacy checks usually around 120s/70s."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has high blood pressure"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Naproxen",
+      "canonical_anchor": "med.medication.naproxen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "naproxen",
+        "value": "500",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.naproxen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Naproxen 500 mg as needed, currently used three to four days per week, usually once daily, taken with food."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.naproxen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Naproxen 500mg as needed (3-4 days per week, usually once daily those days), taken with food."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.naproxen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Naproxen 500 mg is taken as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.naproxen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Naproxen 500 mg by mouth as needed, up to twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.naproxen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Naproxen 500 mg as needed, about 3–4 days per week, usually once on those days, always taken with food."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.naproxen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Naproxen 500 mg orally as needed, currently three to four days per week, usually once daily; always taken with food."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.naproxen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Naproxen may be taken up to twice a day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily in the morning for blood pressure (for about six years)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10mg once daily in the morning (for hypertension, approximately 6 years)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg by mouth every morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg orally once daily in the morning (approximately six years)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She takes lisinopril 10 mg once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units daily."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2,000 units by mouth daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2,000 units orally daily (prescribed by primary care last year)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She takes vitamin D 2000 units daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tylenol",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice a week",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol 500 mg occasionally (once or twice a week) for neck pain."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol) 500mg as needed for neck pain (once or twice a week)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol 500 mg as needed, once or twice a week."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol 500 mg is taken once or twice a week instead of naproxen when the neck is really acting up."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She occasionally takes Tylenol 500 mg instead of naproxen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "gabapentin",
+      "canonical_anchor": "med.medication.gabapentin.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "gabapentin",
+        "value": "300",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin 300 mg was previously stopped in the spring due to ankle swelling and brain fog; it was not significantly helping pain."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously tried gabapentin 300mg; stopped last spring due to ankle swelling and fogginess; inadequate pain relief."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Discontinued Medications: Gabapentin 300 mg was stopped in the spring due to ankle swelling and mental fogginess, with minimal pain relief."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient felt better within about a week after stopping gabapentin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin 300 mg was previously discontinued because of ankle swelling and cognitive fogginess."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin 300 mg was stopped last spring due to ankle swelling and mental fogginess; it was not helping the pain much."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously on gabapentin 300 mg; discontinued last spring due to ankle swelling and cognitive fogginess (\"brain in mud\"); minimal pain benefit."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously on gabapentin 300 mg; discontinued last spring due to ankle swelling and cognitive fogginess (\"brain in mud\"); minimal pain benefit."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin 300 mg was stopped last spring."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Right C6 radiculopathy",
+      "canonical_anchor": "diagnosis.right.right_c.present",
+      "kind": "diagnosis",
+      "subtype": "right",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "right c6 radiculopathy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.right_c6_radiculopathy_targeted_by_epidural_injection",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right C6 radiculopathy (targeted by epidural injection)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.right_c6_radiculopathy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right C6 radiculopathy."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.right_c6_radiculopathy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right C6 radiculopathy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Increase nortriptiline from 25 mg to 50 mg at bedtime (take two 25 mg capsules); if morning grogginess persists beyond four to five days, return to 25 mg and call. Add omeprazole 20 mg once daily in the morning before breakfast for stomach protection while using naproxen. Stop naproxen three days before the second injection; use Tylenol as needed instead. Continue lisinopril, vitamin D, and as-needed naproxen with food."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units daily (started by her primary doctor last year)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2,000 units orally daily (prescribed by primary care last year)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her regular doctor started vitamin D last year."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tylenol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Increase nortriptiline from 25 mg to 50 mg at bedtime (take two 25 mg capsules); if morning grogginess persists beyond four to five days, return to 25 mg and call. Add omeprazole 20 mg once daily in the morning before breakfast for stomach protection while using naproxen. Stop naproxen three days before the second injection; use Tylenol as needed instead. Continue lisinopril, vitamin D, and as-needed naproxen with food."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pre-procedure instructions: stop naproxen 3 days before procedure (may use Tylenol instead), nothing to eat after midnight, require a driver due to sedation, approximately 2 hours total time."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient may use Tylenol instead of naproxen before the procedure if needed."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol may be used instead of naproxen before the procedure."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F036",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "approximately 60% overall improvement since the injection",
+      "canonical_anchor": "symptom.symptom.approximately_improvement_since_injection.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "approximately 60% overall improvement since the injection",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.approximately_60_overall_improvement_since_the_injection",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports approximately 60% overall improvement since the injection."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.approximately_60_overall_improvement_since_the_injection",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports approximately 60% overall improvement since the injection."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.approximately_60_overall_improvement_since_the_injection",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports approximately 60% overall improvement since the injection."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.approximately_60_overall_improvement_after_the_injection",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports approximately 60% overall improvement after the injection."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F049",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.improved",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": "7",
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.shooting_electric_pain_down_right_arm_improved_from_constant_to_intermittent_a_few_times_per_day_shorter_duration",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Shooting/electric pain down right arm improved from constant to intermittent (a few times per day, shorter duration)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_shooting_electric_pain_down_the_arm_is_much_improved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The shooting electric pain down the arm is much improved."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.right_sided_neck_pain_improved_from_a_constant_7_10_to_approximately_23_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Right-sided neck pain improved from a constant 7/10 to approximately 2–3/10."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.shooting_electric_pain_down_the_right_arm_is_much_improved_it_is_now_intermittent_zings_a_few_times_a_day_of_shorter_duration_previously_constant",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Shooting/electric pain down the right arm is much improved; it is now intermittent \"zings\" a few times a day of shorter duration, previously constant."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "difficulty",
+      "canonical_anchor": "symptom.symptom.difficulty.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "difficulty",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.difficulty_opening_jars_husband_assists",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Difficulty opening jars; husband assists."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She walks her dog approximately 1.5 miles every morning without difficulty."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient walks the dog one and a half miles every morning without difficulty."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F055",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "No prior neck or spine surgeries",
+      "canonical_anchor": "diagnosis.prior.prior_neck_or_spine_surgerie",
+      "kind": "diagnosis",
+      "subtype": "prior",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no prior neck or spine surgerie",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.no_prior_neck_or_spine_surgeries",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No prior neck or spine surgeries."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.no_prior_neck_or_spine_surgeries",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No prior neck or spine surgeries."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.no_prior_neck_or_spine_surgeries",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No prior neck or spine surgeries."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.no_prior_neck_or_spine_surgery",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No prior neck or spine surgery."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F074",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "tripping",
+      "canonical_anchor": "symptom.symptom.tripping.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "tripping",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.symptom_any_issues_with_balance_unsteadiness_or_tripping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies any issues with balance, unsteadiness, or tripping"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.tripping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied tripping."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.tripping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies tripping."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F102",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "There",
+      "canonical_anchor": "demo.demo.there.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "there",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.there",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There was no specific injury at symptom onset."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.there",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There was no specific injury."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.there",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There was no specific injury at onset."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F114",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "fever",
+      "canonical_anchor": "symptom.symptom.fever.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "fever",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied fever."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies fever."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.fever",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies fever."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F142",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "chills",
+      "canonical_anchor": "symptom.symptom.chill.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "chill",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied chills."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies chills."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denies chills."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F143",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "gabapentin",
+      "canonical_anchor": "med.medication.gabapentin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "gabapentin",
+        "value": "300",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin 300 mg was used last spring."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin did not provide sufficient pain relief."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin caused ankle swelling."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F152",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Nortriptyline",
+      "canonical_anchor": "demo.demo.nortriptyline.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "nortriptyline",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.nortriptyline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nortriptyline is to be increased to 50 mg at bedtime."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.nortriptyline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nortriptyline was initiated at 10 mg nightly for two weeks before increasing to 25 mg nightly."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.nortriptyline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Nortriptyline is helping her sleep deeper."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F176",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Acetaminophen",
+      "canonical_anchor": "med.medication.acetaminophen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "acetaminophen",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice a week",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg is used instead of naproxen approximately once or twice per week."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg occasionally (about once or twice a week) instead of naproxen when the neck is really acting up."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg orally as needed, approximately one to two times per week."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F234",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    }
+  ]
+}

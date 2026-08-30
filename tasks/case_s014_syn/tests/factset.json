@@ -1,0 +1,4016 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_s014_syn",
+    "version": "1",
+    "sha256": "278a10631927ce9853a01af196b490eb887ff54347ff23a9e67e1840d2421655",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_s014_syn",
+    "path": "case_s014_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 8,
+      "n_facts": 472,
+      "certain": 8,
+      "strict_certain": 7,
+      "low_conf": 36,
+      "unique": 428,
+      "unanimous": 9,
+      "low_support": 404
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 34,
+    "unstable_skipped": 28
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "prenatal",
+      "canonical_anchor": "med.medication.prenatal.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "prenatal",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is a 28 weeks and 2 days pregnant female presenting for routine prenatal visit."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "28 weeks and 2 days gestation, prenatal visit, second pregnancy (G2P1)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is a female at 28 weeks and 2 days gestation for a routine prenatal visit and management of gestational hypertension."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prenatal follow-up visit at 28 weeks and 2 days gestation."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Marisol attended a prenatal visit at 28 weeks and 2 days of pregnancy."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Visit is a prenatal follow-up for blood pressure management and routine care."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prenatal vitamin with DHA, one tablet once daily with breakfast."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient presented for a prenatal visit at 28 weeks and 2 days."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "tums tums",
+      "canonical_anchor": "med.medication.tums_tum.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tums",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports heartburn since approximately 20 weeks gestation, worse at night and worse with tomato-based foods; Tums provide relief but wear off around 2 a.m."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heartburn since approximately 20 weeks; worse at night; worse with tomato-based foods; Tums help but wear off around 2 a.m."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She uses Tums for heartburn, but the relief wears off around 2 a.m."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums helps the heartburn."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums relieve heartburn temporarily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heartburn has been present since about 20 weeks, is worse at night and with tomato-containing foods, is relieved by Tums that wear off around 2 a.m., and sometimes causes her to sleep sitting up."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums helped the heartburn."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F004",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "docusate",
+      "canonical_anchor": "med.medication.docusate.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "docusate",
+        "value": "100",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports constipation that is improved but not resolved with Colace (docusate), and comes and goes."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate (Colace) 100 mg twice daily as needed for constipation."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue labetalol 200 mg twice daily without skipping doses; start famotidine (generic for Pepcid) 20 mg once daily at bedtime for heartburn, with Tums allowed as needed for breakthrough symptoms; change ferrous sulfate to 325 mg every other day to improve constipation while maintaining absorption; continue Colace (docusate) 100 mg twice daily as needed; continue prenatal vitamin one daily; continue vitamin D3 2000 IU daily; continue Tylenol as needed for headaches; avoid ibuprofen and all NSAIDs."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate (Colace) 100 mg twice daily as needed for constipation."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate (Colace) 100 mg twice daily as needed for constipation."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation has improved with docusate but has not resolved."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate 100 mg twice daily as needed for constipation."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue docusate as needed."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate sodium (Colace): 100 mg twice daily as needed for constipation."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue docusate as needed for constipation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate (Colace) 100 mg twice a day as needed for constipation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Change ferrous sulfate to 325 mg every other day, with continued docusate, as every-other-day iron absorbs as well and is easier on the gut."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate/Colace: 100 mg twice daily as needed for constipation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "symptom.gastrointestinal.constipation.improved",
+      "kind": "symptom",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.constipation_that_is_improved_but_not_resolved_with_colace_docusate_and_comes_and_goes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports constipation that is improved but not resolved with Colace (docusate), and comes and goes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.constipation_improved_with_colace_but_not_resolved_comes_and_goes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation improved with Colace but not resolved; comes and goes."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.ongoing_constipation_which_is_improved_with_docusate_but_still_comes_and_goes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports ongoing constipation, which is improved with docusate but still comes and goes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.constipation_improved_with_colace",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation improved with Colace."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.constipation_is_improved_but_not_fully_resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation is improved but not fully resolved."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.constipation_is_improved_on_docusate_but_persists_intermittently",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation is improved on docusate but persists intermittently."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.constipation_improved_with_colace",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation improved with Colace."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tylenol",
+        "value": "500",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports occasional mild headaches, a couple times this month, relieved with Tylenol."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol) 500 mg, occasionally for headache; taken approximately twice this month."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports occasional mild headaches that are relieved with Tylenol."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The mild headaches improved with Tylenol."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol): 500 mg as needed for headache."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has occasional mild headaches relieved by Tylenol."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The mild headaches responded to Tylenol."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports one headache last Tuesday that was worse than others, located behind the right eye, throbbing, lasting 3-4 hours, resolved with two 500 mg Tylenol and lying down in the dark; no visual changes, no nausea, no upper belly pain; home blood pressure during the headache was 134/82"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has chronic hypertension since her 40s and had preeclampsia with the patient"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_chronic_hypertension_since_her_40s_and_had_preeclampsia_with_the_patient",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has chronic hypertension since her 40s and had preeclampsia with the patient."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.follow_up_appointments_and_referrals_return_visit_in_2_weeks_30_weeks_gestation_for_blood_pressure_check_home_blood_pressure_log_review_and_tdap_vaccination_rhogam_injection_to_be_given_today_growth_ultrasound_at_32_weeks_front_desk_to_schedule_ultrasound_and_print_copy_of_prenatal_record_for_travel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow-up appointments and referrals: Return visit in 2 weeks (30 weeks gestation) for blood pressure check, home blood pressure log review, and Tdap vaccination; Rhogam injection to be given today; growth ultrasound at 32 weeks; front desk to schedule ultrasound and print copy of prenatal record for travel."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "risk.patient_instructed_to_call_labor_and_delivery_triage_and_come_in_immediately_for_headache_that_does_not_resolve_with_tylenol_vision_changes_spots_zigzag_lines_blurry_patches_home_blood_pressure_over_160_110_decreased_fetal_movement_vaginal_bleeding_leaking_fluid_or_regular_painful_contractions",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient instructed to call labor and delivery triage and come in immediately for: headache that does not resolve with Tylenol, vision changes (spots, zigzag lines, blurry patches), home blood pressure over 160/110, decreased fetal movement, vaginal bleeding, leaking fluid, or regular painful contractions."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "risk.patient_instructed_to_call_the_office_the_same_day_for_home_blood_pressure_over_140_90_that_persists_on_recheck_after_sitting_quietly_for_5_minutes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient instructed to call the office the same day for home blood pressure over 140/90 that persists on recheck after sitting quietly for 5 minutes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure today 136/84; previous visit reading was 142"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.blood_pressure_today_136_84_previous_visit_reading_was_142",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure today 136/84; previous visit reading was 142."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_chronic_high_blood_pressure_since_her_forties_and_had_preeclampsia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has chronic high blood pressure since her forties and had preeclampsia."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gestational hypertension, currently managed with labetalol 200 mg twice daily"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "risk.call_the_office_the_same_day_if_home_blood_pressure_stays_over_140_systolic_or_90_diastolic_on_recheck",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call the office the same day if home blood pressure stays over 140 systolic or 90 diastolic on recheck."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "referral.return_in_2_weeks_at_30_weeks_for_blood_pressure_check_review_of_home_blood_pressure_log_and_tdap_vaccination",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Return in 2 weeks (at 30 weeks) for blood pressure check, review of home blood pressure log, and Tdap vaccination."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is a female at 28 weeks and 2 days gestation for a routine prenatal visit and management of gestational hypertension"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.the_patient_is_a_female_at_28_weeks_and_2_days_gestation_for_a_routine_prenatal_visit_and_management_of_gestational_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is a female at 28 weeks and 2 days gestation for a routine prenatal visit and management of gestational hypertension."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports her home blood pressure readings are mostly in the 120s-130s over 70s-80s"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The prior pregnancy was not complicated by hypertension"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.diagnosis_the_prior_pregnancy_was_not_complicated_by_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The prior pregnancy was not complicated by hypertension"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.mother_has_a_history_of_chronic_hypertension_and_preeclampsia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has a history of chronic hypertension and preeclampsia."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.follow_up_in_the_clinic_in_2_weeks_for_a_blood_pressure_check",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow up in the clinic in 2 weeks for a blood pressure check."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "risk.blood_pressure_reading_greater_than_160_110_mmhg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure reading greater than 160/110 mmHg."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure at the visit was 136/84"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.blood_pressure_at_the_visit_was_136_84",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure at the visit was 136/84."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gestational hypertension"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient had no blood pressure issues in the prior pregnancy"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.the_follow_up_visit_was_for_blood_pressure_check_and_review_of_the_home_blood_pressure_log",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The follow-up visit was for blood pressure check and review of the home blood pressure log."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "risk.the_patient_was_instructed_to_call_immediately_for_home_blood_pressure_greater_than_160_110",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was instructed to call immediately for home blood pressure greater than 160/110."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has gestational hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.gestational_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has gestational hypertension."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Current home blood pressures are primarily in the 120s–130s/70s–80s"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She had no blood pressure problems during her previous pregnancy"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.her_mother_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her mother has hypertension."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.return_in_two_weeks_at_approximately_30_weeks_for_repeat_blood_pressure_assessment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Return in two weeks at approximately 30 weeks for repeat blood pressure assessment."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "risk.call_immediately_for_a_home_blood_pressure_of_160_110_or_higher",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call immediately for a home blood pressure of 160/110 or higher."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Visit is a prenatal follow-up for blood pressure management and routine care"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.visit_is_a_prenatal_follow_up_for_blood_pressure_management_and_routine_care",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Visit is a prenatal follow-up for blood pressure management and routine care."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gestational hypertension is being treated with labetalol"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.mother_has_high_blood_pressure_since_her_40s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure since her 40s."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "risk.call_labor_and_delivery_triage_immediately_for_a_home_blood_pressure_of_160_110_mmhg_or_higher",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call labor and delivery triage immediately for a home blood pressure of 160/110 mmHg or higher."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure log shows mostly 120s–130s over 70s–80s"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.home_blood_pressure_log_shows_mostly_120s130s_over_70s80s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure log shows mostly 120s–130s over 70s–80s."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gestational hypertension diagnosed this pregnancy, treated with labetalol since 24 weeks"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_high_blood_pressure_since_her_forties_and_had_preeclampsia_when_pregnant_with_the_patient",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure since her forties and had preeclampsia when pregnant with the patient."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.labs_drawn_today_cbc_creatinine_and_liver_enzymes_as_a_baseline_preeclampsia_panel_checked_every_few_weeks_given_gestational_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labs drawn today: CBC, creatinine, and liver enzymes as a baseline preeclampsia panel, checked every few weeks given gestational hypertension."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The visit included follow-up for gestational hypertension"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_visit_included_follow_up_for_gestational_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The visit included follow-up for gestational hypertension."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Today's blood pressure was 136/84"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The prior pregnancy had no blood pressure issues"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_chronic_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has chronic hypertension."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.labs_are_checked_every_few_weeks_because_of_gestational_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labs are checked every few weeks because of gestational hypertension."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "risk.call_labor_and_delivery_triage_day_or_night_for_home_blood_pressure_of_160_110_or_higher",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call labor and delivery triage day or night for home blood pressure of 160/110 or higher."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tylenol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "resolved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports one headache last Tuesday that was worse than others, located behind the right eye, throbbing, lasting 3-4 hours, resolved with two 500 mg Tylenol and lying down in the dark; no visual changes, no nausea, no upper belly pain; home blood pressure during the headache was 134/82."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She had one more severe headache last Tuesday, described as throbbing behind her right eye, which resolved with Tylenol and rest over 3-4 hours. There were no associated visual changes, and her blood pressure during the headache was 134/82 mmHg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The worse headache resolved after two 500 mg Tylenol."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.worsened",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.one_headache_last_tuesday_that_was_worse_than_others_located_behind_the_right_eye_throbbing_lasting_3_4_hours_resolved_with_two_500_mg_tylenol_and_lying_down_in_the_dark_no_visual_changes_no_nausea_no_upper_belly_pain_home_blood_pressure_during_the_headache_was_134_82",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports one headache last Tuesday that was worse than others, located behind the right eye, throbbing, lasting 3-4 hours, resolved with two 500 mg Tylenol and lying down in the dark; no visual changes, no nausea, no upper belly pain; home blood pressure during the headache was 134/82."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.no_upper_abdominal_pain_with_the_worse_headache",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient had no upper abdominal pain with the worse headache."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_worse_headache_was_not_associated_with_upper_belly_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The worse headache was not associated with upper belly pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.worsened",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol 200 mg twice daily (morning and night at 8 a.m. and 8 p.m.); previously 100 mg twice daily started at 24 weeks, increased to 200 mg twice daily at 26 weeks due to home blood pressure readings in the 140s/90s"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient measured her blood pressure during the worse headache"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_measured_her_blood_pressure_during_the_worse_headache",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient measured her blood pressure during the worse headache."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was increased at 26 weeks to 200 mg twice daily because home blood pressures were reaching the 140s/90s"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure during the worse headache was 134/82"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.blood_pressure_during_the_worse_headache_was_134_82",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure during the worse headache was 134/82."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Labetalol",
+      "canonical_anchor": "med.medication.labetalol.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "labetalol",
+        "value": "100",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol 200 mg twice daily (morning and night at 8 a.m. and 8 p.m.); previously 100 mg twice daily started at 24 weeks, increased to 200 mg twice daily at 26 weeks due to home blood pressure readings in the 140s/90s."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was previously 100 mg twice daily starting at 24 weeks."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol dose was previously 100 mg twice daily starting at 24 weeks gestation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 2000 IU once daily (started due to low level in winter)."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 was started because a winter level was low."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamins and vitamin D."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D 2,000 units daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue the prenatal vitamin once daily and vitamin D 2000 units once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k2p6",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "ferrous sulfate",
+      "canonical_anchor": "med.medication.ferrous_sulfate.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ferrous sulfate",
+        "value": "325",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ferrous sulfate 325 mg once daily, taken with orange juice, not with prenatal vitamin or coffee."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ferrous sulfate 325 mg once daily with orange juice; taken separately from prenatal vitamin and not with coffee."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ferrous sulfate 325 mg once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ferrous sulfate 325 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ferrous sulfate 325 mg once daily before the current visit."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ferrous sulfate: 325 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ferrous sulfate 325 mg once daily, taken with orange juice, not with the prenatal vitamin or coffee."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ferrous sulfate: 325 mg once daily with orange juice."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "400",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past medication: ibuprofen 400 mg as needed for cramps and headaches, stopped at 6 weeks gestation when pregnancy was confirmed due to NSAID safety concerns in pregnancy."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previous medication: ibuprofen 400 mg as needed for menstrual cramps and headaches; stopped at approximately 6 weeks gestation when pregnancy was confirmed due to NSAID contraindication in pregnancy."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "**Past Medication:** The patient was taking ibuprofen 400 mg as needed for cramps and headaches prior to pregnancy and stopped at 6 weeks gestation."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient stopped ibuprofen at about 6 weeks gestation after a positive pregnancy test."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She stopped ibuprofen at approximately 6 weeks of pregnancy because of NSAID risks during pregnancy."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen was stopped at approximately 6 weeks gestation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stopped medication: ibuprofen 400 mg as needed for cramps and headaches, stopped at about six weeks gestation after the positive pregnancy test because NSAIDs are contraindicated in pregnancy."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient stopped ibuprofen at about 6 weeks after the positive pregnancy test."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "instruct.gastrointestinal.constipation.present",
+      "kind": "instruct",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.switch_ferrous_sulfate_325_mg_from_daily_to_every_other_day_dosing_to_reduce_constipation_continue_colace",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Switch ferrous sulfate 325 mg from daily to every-other-day dosing to reduce constipation; continue Colace."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.change_ferrous_sulfate_regimen_to_325_mg_every_other_day_to_help_with_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Change ferrous sulfate regimen to 325 mg every other day to help with constipation."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.intermittent_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports intermittent constipation."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.change_ferrous_sulfate_from_325_mg_daily_to_325_mg_every_other_day_to_reduce_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Change ferrous sulfate from 325 mg daily to 325 mg every other day to reduce constipation."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation is improved but not fully resolved."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.constipation_comes_and_goes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation comes and goes."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_docusate_as_needed_for_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue docusate as needed for constipation."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported constipation."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation is still intermittent."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported constipation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation is improved on docusate but persists intermittently."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D deficiency (managed with vitamin D3 supplementation)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 IU once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2,000 units once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Low vitamin D level in the winter, on supplementation."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D: 2000 IU once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3 2000 IU once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D3: 2000 units once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F037",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max",
+          "glm-5p2",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.ordered.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Investigations: Blood draw today for CBC, creatinine, and liver enzymes (baseline preeclampsia panel); growth ultrasound scheduled at 32 weeks to assess fetal growth, amniotic fluid, and umbilical cord blood flow; repeat blood pressure check at next visit in 2 weeks"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "30-week visit will include a blood pressure check"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The mother's hypertension began in her 40s"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_mother_s_hypertension_began_in_her_40s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The mother's hypertension began in her 40s."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient will continue home blood pressure monitoring"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "referral.travel_was_considered_acceptable_with_controlled_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Travel was considered acceptable with controlled blood pressure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gestational hypertension diagnosed this pregnancy; labetalol started at 24 weeks"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.gestational_hypertension_diagnosed_this_pregnancy_labetalol_started_at_24_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gestational hypertension diagnosed this pregnancy; labetalol started at 24 weeks."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Marisol is 28 weeks 2 days pregnant, due at the end of June, presenting for a scheduled prenatal visit with ongoing management of gestational hypertension"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.marisol_is_28_weeks_2_days_pregnant_due_at_the_end_of_june_presenting_for_a_scheduled_prenatal_visit_with_ongoing_management_of_gestational_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Marisol is 28 weeks 2 days pregnant, due at the end of June, presenting for a scheduled prenatal visit with ongoing management of gestational hypertension."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F041",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k2p6",
+          "qwen3p8-max",
+          "glm-5p2",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "instruct.cardiovascular.blood_pressure.planned",
+      "kind": "instruct",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.investigations_blood_draw_today_for_cbc_creatinine_and_liver_enzymes_baseline_preeclampsia_panel_growth_ultrasound_scheduled_at_32_weeks_to_assess_fetal_growth_amniotic_fluid_and_umbilical_cord_blood_flow_repeat_blood_pressure_check_at_next_visit_in_2_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Investigations: Blood draw today for CBC, creatinine, and liver enzymes (baseline preeclampsia panel); growth ultrasound scheduled at 32 weeks to assess fetal growth, amniotic fluid, and umbilical cord blood flow; repeat blood pressure check at next visit in 2 weeks."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.order_growth_ultrasound_at_32_weeks_to_monitor_fetal_growth_due_to_gestational_hypertension_front_desk_to_schedule_before_patient_leaves_morning_slot_preferred",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order growth ultrasound at 32 weeks to monitor fetal growth due to gestational hypertension; front desk to schedule before patient leaves; morning slot preferred."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.30_week_visit_will_include_a_blood_pressure_check",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "30-week visit will include a blood pressure check."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.the_patient_will_continue_home_blood_pressure_monitoring",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient will continue home blood pressure monitoring."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "referral.the_follow_up_visit_will_include_a_blood_pressure_check",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The follow-up visit will include a blood pressure check."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F042",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "ferrous sulfate",
+      "canonical_anchor": "med.medication.ferrous_sulfate.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ferrous sulfate",
+        "value": "325",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue labetalol 200 mg twice daily without skipping doses; start famotidine (generic for Pepcid) 20 mg once daily at bedtime for heartburn, with Tums allowed as needed for breakthrough symptoms; change ferrous sulfate to 325 mg every other day to improve constipation while maintaining absorption; continue Colace (docusate) 100 mg twice daily as needed; continue prenatal vitamin one daily; continue vitamin D3 2000 IU daily; continue Tylenol as needed for headaches; avoid ibuprofen and all NSAIDs."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Switch ferrous sulfate 325 mg from daily to every-other-day dosing to reduce constipation; continue Colace."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Change ferrous sulfate regimen to 325 mg every other day to help with constipation."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Change ferrous sulfate 325 mg dosing to every other day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Change ferrous sulfate from 325 mg daily to 325 mg every other day to reduce constipation."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Switch ferrous sulfate from once daily to every other day."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ferrous_sulfate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Change ferrous sulfate to 325 mg every other day, with continued docusate, as every-other-day iron absorbs as well and is easier on the gut."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F043",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "prenatal",
+      "canonical_anchor": "med.medication.prenatal.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "prenatal",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue labetalol 200 mg twice daily without skipping doses; start famotidine (generic for Pepcid) 20 mg once daily at bedtime for heartburn, with Tums allowed as needed for breakthrough symptoms; change ferrous sulfate to 325 mg every other day to improve constipation while maintaining absorption; continue Colace (docusate) 100 mg twice daily as needed; continue prenatal vitamin one daily; continue vitamin D3 2000 IU daily; continue Tylenol as needed for headaches; avoid ibuprofen and all NSAIDs."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Print copy of prenatal record for patient to carry during upcoming travel."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamins and vitamin D."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamin with DHA."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamin once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Marisol is 28 weeks 2 days pregnant, due at the end of June, presenting for a scheduled prenatal visit with ongoing management of gestational hypertension."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The front desk will print a copy of the prenatal record for travel."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F045",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "tums tums",
+      "canonical_anchor": "med.medication.tums_tum.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tums",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue labetalol 200 mg twice daily without skipping doses; start famotidine (generic for Pepcid) 20 mg once daily at bedtime for heartburn, with Tums allowed as needed for breakthrough symptoms; change ferrous sulfate to 325 mg every other day to improve constipation while maintaining absorption; continue Colace (docusate) 100 mg twice daily as needed; continue prenatal vitamin one daily; continue vitamin D3 2000 IU daily; continue Tylenol as needed for headaches; avoid ibuprofen and all NSAIDs."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums may still be used on top of famotidine if needed."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient may continue Tums as needed for breakthrough heartburn."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start famotidine (generic Pepcid) 20 mg once daily at bedtime for heartburn; prescription sent to her pharmacy, the CVS on Route Nine; she may continue Tums on top for breakthrough symptoms."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums may be used in addition to famotidine if needed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F047",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "protein",
+      "canonical_anchor": "symptom.symptom.protein.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "protein",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.urine_dip_today_negative_for_protein",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Urine dip today negative for protein."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.protein",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Urine testing showed no protein."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.protein",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Urine dip today shows no protein."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.protein",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Urine dip showed no protein."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.protein",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Urine testing today showed no protein."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F053",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "frequent urination",
+      "canonical_anchor": "symptom.symptom.frequent_urination.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "frequent urination",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.frequent_urination",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Frequent urination."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.frequent_urination",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported frequent urination."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.frequent_urination",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports frequent urination."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.frequent_urination",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has frequent urination."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.frequent_urination_and_hip_aches_at_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports frequent urination and hip aches at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F059",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "google_gemini-2_5-pro"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Labetalol",
+      "canonical_anchor": "med.medication.labetalol.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "labetalol",
+        "value": "100",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol 200 mg twice daily at 8 a.m. and 8 p.m.; started at 24 weeks at 100 mg twice daily, increased to 200 mg twice daily at 26 weeks due to home readings in the 140s over 90s."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol dose change: started at 100 mg twice a day at 24 weeks and increased to 200 mg twice a day at 26 weeks because home readings were running in the 140s/90s."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F066",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "400",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previous medication: ibuprofen 400 mg as needed for menstrual cramps and headaches; stopped at approximately 6 weeks gestation when pregnancy was confirmed due to NSAID contraindication in pregnancy."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient previously took ibuprofen 400 mg for cramps and headaches before pregnancy."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She previously used ibuprofen 400 mg for cramps and headaches."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen: 400 mg as needed was used prior to pregnancy for cramps and headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient previously used ibuprofen 400 mg for cramps and headaches before pregnancy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F067",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Continue labetalol 200 mg twice daily",
+      "canonical_anchor": "instruct.continue.continue_labetalol.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue labetalol 200 mg twice daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_labetalol_200_mg_twice_daily_do_not_skip_doses_do_not_stop_when_feeling_well",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue labetalol 200 mg twice daily; do not skip doses; do not stop when feeling well."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_labetalol_200_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue labetalol 200 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_labetalol_200_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue labetalol 200 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_labetalol_200_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue labetalol 200 mg twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_labetalol_200_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue labetalol 200 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F076",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Labetalol",
+      "canonical_anchor": "med.medication.labetalol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "labetalol",
+        "value": "200",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol 200 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol 200 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol 200 mg twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol: 200 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol 200 mg twice a day, taken at 8 a.m. and 8 p.m. with phone alarms."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol: 200 mg twice daily at 8 a.m. and 8 p.m."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F108",
+        "support": "6/6",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Father has type 2 diabetes",
+      "canonical_anchor": "famhist.famhist.father_type.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "father has type 2 diabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.father_has_a_history_of_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has a history of type 2 diabetes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.father_has_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has type 2 diabetes."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.father_has_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has type 2 diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F110",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue prenatal vitamins and vitamin D",
+      "canonical_anchor": "instruct.continue.continue_prenatal_vitamin_and_vitamin_d.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "treatment.continue_prenatal_vitamins_and_vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamins and vitamin D."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_the_prenatal_vitamin_once_daily_and_vitamin_d_2000_units_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue the prenatal vitamin once daily and vitamin D 2000 units once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_vitamin_d_2_000_units_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D 2,000 units daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_prenatal_vitamin_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamin once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_vitamin_d3_2000_units_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue vitamin D3 2000 units once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F119",
+        "support": "4/4",
+        "models": [
+          "google_gemini-2_5-pro",
+          "kimi-k3",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Labetalol",
+      "canonical_anchor": "demo.demo.labetalol.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "labetalol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was started at 24 weeks gestation."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.labetalol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F132",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Labetalol was started at 24 weeks at 100 mg twice daily",
+      "canonical_anchor": "symptom.symptom.labetalol_started_at_at.ordered",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "labetalol was started at 24 week at 100 mg twice daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.labetalol_was_started_at_24_weeks_at_100_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.labetalol_was_started_at_24_weeks_at_100_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.labetalol_was_started_at_24_weeks_gestation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labetalol was started at 24 weeks gestation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F133",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Tums wears off around 2 a m",
+      "canonical_anchor": "symptom.symptom.tum_wear_around_m.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "tums",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.tums_wears_off_around_2_a_m",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums wears off around 2 a.m."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.tums_wear_off_around_2_am",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums wear off around 2 AM."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.tums_wore_off_around_2_a_m",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums wore off around 2 a.m."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F142",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "a worse headache last Tuesday",
+      "canonical_anchor": "symptom.symptom.worse_headache_tuesday.worsened",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "a worse headache last tuesday",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.a_worse_headache_last_tuesday",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported a worse headache last Tuesday."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.a_worse_headache_last_tuesday",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported a worse headache last Tuesday."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.one_worse_headache_last_tuesday_behind_the_right_eye_throbbing_starting_around_dinner_and_lasting_about_three_to_four_hours_resolving_with_two_500_mg_tylenol_tablets_and_lying_down_in_the_dark",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She had one worse headache last Tuesday behind the right eye, throbbing, starting around dinner and lasting about three to four hours, resolving with two 500 mg Tylenol tablets and lying down in the dark."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F151",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "RhoGAM",
+      "canonical_anchor": "demo.demo.rhogam.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "rhogam",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.rhogam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Rhogam was planned for that day."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.rhogam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "RhoGAM is indicated because the patient is A negative with a negative antibody screen."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.rhogam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "RhoGAM is the standard 28-week shot."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F205",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Heartburn",
+      "canonical_anchor": "demo.demo.heartburn.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "heartburn",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.heartburn",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heartburn is worse at night and after tomato-containing foods."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.heartburn",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heartburn is worse at night."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.heartburn",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heartburn was worse at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F223",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    }
+  ]
+}
