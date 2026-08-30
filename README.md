@@ -29,11 +29,16 @@ The transcript is never mined directly (ASR noise poisons facts). Instead:
 1. 7 independent models each write a note from the same transcript;
 2. one deterministic parser extracts atomic facts from each note (**the same parser
    scores contestants** — extraction bias cancels by symmetry);
-3. facts enter gold only with ≥3 independent supporters and no stable-field
-   disagreement; weak fields need a supporting quote; every fact must anchor back to
-   the transcript (fuzzy, ASR-tolerant);
-4. an arbitration loop (LLM + human spot-check) refines the set; all decisions are
-   keyed and replayable;
+3. facts enter gold only with **≥3 independent supporters** and no stable-field
+   disagreement (a high-precision consensus subset — *not* unanimous-only gold;
+   unanimity would starve gold, since generators are selective about what they write);
+   weak fields need a supporting quote; every fact must anchor back to the transcript
+   (fuzzy, ASR-tolerant);
+4. an arbitration loop refines the set (LLM arbiter from a model family isolated from
+   all generators; recorded human-override decisions take precedence). **Review
+   status**: public factsets are marked `reviewed: false` — LLM-arbitrated with human
+   overrides applied, but the systematic human spot-check for this synthetic track is
+   still pending. Treat gold as high-precision but challengeable (see CONTRIBUTING);
 5. importance is separated from existence: **must-cover** labels come from an
    independent reference note (its author model is excluded from the consensus pool).
 
@@ -98,7 +103,7 @@ comparable to the coverage column (same protocol, same verifier).
 
 ## How to run
 
-Three ways, from lightest to most standardized:
+Five ways, from lightest to most standardized:
 
 **1. Any OpenAI-compatible API (no install)** — see Quickstart below. One script,
 stdlib-only, works with OpenAI / Azure / vLLM / Ollama / any `/chat/completions`
@@ -115,7 +120,22 @@ harbor builds each task's environment image (agent sees only transcript + templa
 no network, no gold), collects `note.md`, then runs the deterministic verifier and
 writes per-trial rewards.
 
-**3. Custom agent / manual** — for your own harness:
+**3. Score-only** — you already generated notes with your own harness:
+
+```bash
+python3 scripts/run_api_model.py --notes-dir /path/to/notes --label my-model
+# expects <notes-dir>/<task_id>/note.md (or <task_id>.md); no API calls
+```
+
+**4. Scoring service (Docker)** — for product/CI integration:
+
+```bash
+docker build -f service/Dockerfile -t factbench-service .
+docker run -p 8830:8830 factbench-service
+curl -X POST localhost:8830/score -d '{"task_id":"case_s001_syn","note":"..."}'
+```
+
+**5. Custom agent / manual** — for your own harness:
 
 ```bash
 cd tasks/<case>
@@ -140,10 +160,19 @@ python3 scripts/run_api_model.py
 ```
 
 Per-task results and `results/<model>/summary.json` (pass rate, mean coverage,
-critical-error count) are produced locally; scoring is fully deterministic and
-offline. The runner uses the benchmark's canonical generation protocol (same
+critical-error count, case-level bootstrap CI, safety flags) are produced locally;
+scoring is fully deterministic and offline. Outputs missing the required
+`<final_generated_text>` tags are recorded as `invalid`/`salvaged` generations —
+raw chain-of-thought is never silently scored. The runner uses the benchmark's canonical generation protocol (same
 system prompt and output tags as the reference notes) so comparisons are fair.
 Alternatively, run through the official harbor harness: `harbor run -p tasks -a <agent>`.
+
+## Dataset manifest
+
+`manifest.json` is a dataset-style release manifest (task list, per-file sha256,
+difficulty tiers, pass rules, provenance, review status) for research pipelines,
+leaderboards, and third-party eval frameworks. Rebuild with
+`python3 scripts/build_manifest.py`; `CITATION.cff` has the citation entry.
 
 ## License
 
