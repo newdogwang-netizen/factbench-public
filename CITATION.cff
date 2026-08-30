@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "FactBench: a deterministic factual-consistency benchmark for clinical note generation"
+message: "If you use this benchmark, please cite it as below."
+type: dataset
+authors:
+  - name: "Heidi Health"
+license: Apache-2.0
+version: 1.0.0
+date-released: 2026-08-30
+abstract: >
+  25 fully synthetic clinical consultation transcripts with consensus-built,
+  arbitrated gold fact sets and a deterministic, self-contained verifier
+  (coverage of must-cover facts, zero critical errors, safety signals).
