@@ -136,8 +136,8 @@ def iter_section_items(text):
         line = raw.strip()
         if not line:
             continue
-        # 粗体整行标题(**History of ...:**)是常见模型输出形态:
-        # 仅识别"整行被 ** 包裹且以冒号收尾"的窄形态,不做全局重分段
+        # A bold full-line heading (**History of ...:**) is a common model output form:
+        # only match the narrow form "whole line wrapped in ** and ending with a colon"; no global re-segmentation
         bold_head = bool(re.match(r"^\*\*[^*]+:\*\*$", line))
         is_heading = bold_head or bool(re.match(r"^#+\s+\S", line)) or (
             line.endswith(":") and not re.match(r"^\s*(?:[-*+•]|\d+[.)])\s+", raw)
@@ -164,35 +164,35 @@ def object_slug(value):
 
 
 def polarity_for(text):
-    # 括号内容是旁注(设备/流程说明),其中的否定不指向主实体:
-    # "BP 117/74 (cuff ... has not been replaced)" 不是否认血压
+    # Parenthesized content is a side note (device/process remarks); its negation does not target the main entity:
+    # "BP 117/74 (cuff ... has not been replaced)" is not a denial of blood pressure
     text = re.sub(r"\([^)]*\)", " ", text)
-    # 引号内是转述用语("not ideal" but "manageable"),不是否认症状
+    # Quoted text is reported wording ("not ideal" but "manageable"), not a denial of a symptom
     text = re.sub(r'["“][^"”]*["”]', " ", text)
-    # 极性只看主句:分号/破折号/转折之后是补充叙述,其中的否定
-    # 不指向主实体("reports sadness, but is not blaming himself")
+    # Polarity looks only at the main clause: what follows a semicolon/dash/contrastive
+    # conjunction is supplementary narrative whose negation does not target the main entity ("reports sadness, but is not blaming himself")
     text = re.split(r";|—|—|\bbut\b|\bhowever\b", text, maxsplit=1, flags=re.I)[0]
-    # 意愿/认知否定不是症状否定:"does not want/remember/know/like/blame X"
+    # Volitional/cognitive negation is not symptom denial: "does not want/remember/know/like/blame X"
     text = re.sub(r"\b(?:do(?:es)?\s+not|don'?t|doesn'?t|did\s+not|didn'?t)\s+"
                   r"(?:want|remember|recall|know|like|blame|feel|think|believe)\b.*", " ", text,
                   flags=re.I)
-    # 伴随否认是限定语义:"palpitations ... no associated chest pain"
-    # 否认的是伴随物,不是全局否认该症状
+    # Associated-symptom denial is qualifying semantics: "palpitations ... no associated chest pain"
+    # denies the associated finding, not a global denial of the symptom
     text = re.sub(r"\bno\s+associated\b[^,;.]*", " ", text, flags=re.I)
-    # 诊断状态否定不是症状否定:"never diagnosed" 陈述的是确诊状态
+    # Negated diagnosis status is not symptom denial: "never diagnosed" states diagnostic status
     text = re.sub(r"\b(?:never|not)\s+(?:formally\s+|officially\s+)?diagnosed\b",
                   " ", text, flags=re.I)
-    # 情绪内容从句("anxiety about not being able to...")的否定
-    # 指向担忧内容,不指向情绪本身
+    # Negation inside an emotion-content clause ("anxiety about not being able to...")
+    # targets the worry content, not the emotion itself
     text = re.sub(r"\b(?:about|regarding|related to|over)\b.*$", " ", text, flags=re.I)
-    # "not myself/himself" 是症状名(解离感),不是对症状的否定
+    # "not myself/himself" is a symptom name (sense of dissociation), not a negation of a symptom
     text = re.sub(r"\bnot\s+(?:my|him|her|them|one)sel(?:f|ves)\b", " selfdissoc ", text,
                   flags=re.I)
-    # 质地描述的否定是性状信息,不是症状否认:"dull ache, not throbbing"
+    # A negated quality descriptor is character information, not symptom denial: "dull ache, not throbbing"
     text = re.sub(r"\b(?:not|non|no longer)[- ](?:throbbing|pulsating|pulsatile|sharp|"
                   r"stabbing|shooting|burning|radiating|positional|constant)\b",
                   " ", text, flags=re.I)
-    # 否定"改善/缓解"= 症状仍在,不是否认症状:"no subsequent improvement"
+    # Negating "improvement/relief" = the symptom persists; not a denial of the symptom: "no subsequent improvement"
     text = re.sub(r"\b(?:no|not|without)\s+(?:\w+\s+){0,2}"
                   r"(?:improvement|improvements|improving|improved?|relief|relieving|benefit|change|changes|changing)\b",
                   " ", text, flags=re.I)
@@ -202,12 +202,12 @@ def polarity_for(text):
 def medication_polarity_for(text, drug):
     folded = text.lower()
     drug_re = re.escape(drug.lower())
-    # "no muscle aches with atorvastatin":否定指向症状,伴随介词
-    # (with/on/while taking)后的药物不被否定
+    # "no muscle aches with atorvastatin": the negation targets the symptom; a drug
+    # after an accompanying preposition (with/on/while taking) is not negated
     if re.search(r"\b(?:no|not|without|denies|denied)\b[^.;]{0,45}\b(?:with|on|while\s+taking)\s+"
                  + drug_re + r"\b", folded):
         return "positive"
-    # 认知/意愿否定不指向药物本身:"does not remember why Prozac was stopped"
+    # Cognitive/volitional negation does not target the drug itself: "does not remember why Prozac was stopped"
     if re.search(r"\b(?:no|not|without|denies|denied)\b(?!\s+(?:remember|recall|know|want|like|sure|benefit|improvement|relief|change|longer\s+than|feel\b|think|believe|any\s+different))"
                  r".{0,30}\b" + drug_re + r"\b", folded):
         return "negative"
@@ -217,11 +217,11 @@ def medication_polarity_for(text, drug):
 
 
 def status_for(kind, text):
-    # "a discussion/meeting was held" 的 held 不是停药;先剥离该句式
+    # The "held" in "a discussion/meeting was held" is not a held medication; strip this pattern first
     text = re.sub(r"\b(?:discussion|meeting|visit|conversation|session)s?\s+"
                   r"(?:was|were|will be)\s+held\b", " ", text, flags=re.I)
-    # resolved 先于 improved:"resolved, no longer present" 的 no longer
-    # 会被 IMPROVED_RE 抢先吞掉
+    # Check resolved before improved: the "no longer" in "resolved, no longer present"
+    # would otherwise be swallowed first by IMPROVED_RE
     if re.search(r"\b(resolved|no longer present|abated|cleared up|fully subsided)\b",
                  text, re.I):
         return "resolved"
@@ -232,45 +232,45 @@ def status_for(kind, text):
     if kind in {"medication", "medication_change", "treatment"} and \
             re.search(r"\b(stopped|discontinued|ceased|held)\b", text, re.I):
         return "stop"
-    # 条件教育句是建议帧,不是现状断言:"(advised that) if she misses
-    # 4-5 days ... should not restart at 200 mg" → 医嘱帧(plan_xor 保护值)
+    # A conditional education sentence is an advice frame, not a current-state assertion: "(advised that) if she misses
+    # 4-5 days ... should not restart at 200 mg" → order frame (a plan_xor protected value)
     if kind in {"medication", "medication_change"} and re.match(
             r"\s*(?:patient\s+)?(?:advised|instructed|counseled|educated)?\s*(?:that\s+)?if\b",
             text, re.I):
         return "ordered"
-    # 过去时疗效叙事不是在服断言:"Gabapentin provided minimal relief"
-    # (无现在时标记时按既往记;past 与 stop 在 CONTRA 集合同侧)
+    # Past-tense efficacy narrative is not a currently-taking assertion: "Gabapentin provided minimal relief"
+    # (record as historical when there is no present-tense marker; past and stop sit on the same side of the CONTRA set)
     if kind in {"medication", "medication_change"} and re.search(
             r"\b(?:provided|produced|offered|yielded)\b[^.;]{0,30}"
             r"\b(?:relief|benefit|improvement|help)\b", text, re.I) and not re.search(
             r"\b(?:currently|continues?|is providing|provides)\b", text, re.I):
         return "past"
-    # 否定的重启不是重启:"has not been restarted" → 停用
+    # A negated restart is not a restart: "has not been restarted" → stopped
     if kind in {"medication", "medication_change"} and re.search(
             r"\b(?:not|never|hasn'?t|has not|won'?t|will not)\s+(?:be(?:en)?\s+)?restart", text, re.I):
         return "stop"
-    # 开药者主语 + "gave" 是历史开药事件叙述("Dr. X gave him buspirone",
-    # 原子 bullet 拆行后停药信息在别行)→ 既往。被动 "was given" 不算:
-    # 住院/急诊给药(...admitted, was given hydroxyzine)常延续为现用药。
+    # Prescriber subject + "gave" narrates a historical prescribing event ("Dr. X gave him buspirone";
+    # after atomic bullet splitting, the stop information sits on another line) → historical. Passive "was given" does not count:
+    # inpatient/ER administration (...admitted, was given hydroxyzine) often continues as a current medication.
     if kind in {"medication", "medication_change"} and re.search(
             r"\bgave\s+(?:him|her|them|me)\b", text, re.I) and not re.search(
             r"\b(?:currently|continues?|today|will start)\b", text, re.I):
         return "past"
-    # 现在进行时标记先于历史前缀:"Hx of obesity — ... currently on Zepbound"
-    # 行首 Hx 描述的是病史条目,药物自身状态由紧邻的 currently 决定
+    # Present-progressive markers take precedence over history prefixes: "Hx of obesity — ... currently on Zepbound"
+    # The leading Hx describes the history entry; the drug's own status is decided by the adjacent "currently"
     if kind in {"medication", "medication_change", "treatment"} and re.search(
             r"(?<!not )\b(?:currently\s+(?:on|taking|takes|using|uses|prescribed)"
             r"|remains?\s+on|maintained\s+on|continues?\s+on)\b",
             text, re.I):
         return "active"
-    # 既往标记(通用临床电报体,规则源自 held-out 病历语料):
-    # "history of X" / "trialed as a child" / "s/p" 等 → past
-    # "previously helped/worked" 是疗效史注释,不是用药史("以前有效"≠"已停用")
+    # Historical markers (generic clinical telegraphic style; rules derived from held-out chart corpora):
+    # "history of X" / "trialed as a child" / "s/p" etc. → past
+    # "previously helped/worked" is an efficacy-history note, not a medication history ("worked before" ≠ "has been stopped")
     if re.search(r"\b(history of|hx of|was on\b|had been on\b|prior(?!\s+dose\b)|previous(?:ly)?(?!\s+(?:helped|worked|effective|beneficial|taken\s+(?:in|at|with)\b|antidepressants?\b|medications?\b|meds?\b|drugs?\b|ssris?\b|snris?\b|agents?\b|regimens?\b|\d+\s*(?:mg|mcg|g)\b))|trialed|tried\b.{0,30}\b(?:as a child|in the past|years? ago)|deceased|s/p|no longer(?!\s+(?:effective|work\w*|help\w*|need\w*))|liked|used to take)\b",
                  text, re.I):
         return "past"
-    # 讨论中的选项/条件性计划:"considered / discussed as an option / may increase"
-    # 仅限用药/医嘱类——"considered suicide" 这类风险语句不得进此分支
+    # Options under discussion / conditional plans: "considered / discussed as an option / may increase"
+    # Restricted to medication/order kinds — risk statements like "considered suicide" must not enter this branch
     if kind in {"medication", "treatment", "medication_change", "test_ordered", "referral"} and re.search(
             r"\b(consider(?:ed|ing)?|possibl[ye]|discussed as|discuss\w*\b[^.;]{0,50}\b(?:option|alternative)|as an option|possible option|option to\b|adding\b|to be (?:added|started)|may\s+(?:increase|start|add|titrate)|(?:can|may) be used|add|suggested)\b",
             text, re.I):
@@ -348,42 +348,42 @@ def extract_dob(item):
 
 
 def norm_dose_value(v):
-    # 千位分隔逗号("2,000 units")不是欧式小数:先并千位,再转小数点
+    # A thousands-separator comma ("2,000 units") is not a European decimal: collapse thousands first, then convert commas to decimal points
     v = re.sub(r"(\d),(?=\d{3}\b)", r"\1", v)
     return v.replace(",", ".")
 
 
 def extract_dose_unit(text, drug=None):
-    # 认知帧从句是转述错觉,其中的数字不是剂量:"she believed X was 20 mg, but ..."
+    # A cognition frame clause reports a mistaken belief; its numbers are not doses: "she believed X was 20 mg, but ..."
     text = re.sub(r"\b(?:she|he|they|patient)?\s*(?:believed|thought|assumed)\b[^,;]*[,;]?",
                   " ", text, flags=re.I)
     hay = text
     if drug:
         m = re.search(re.escape(drug), text, re.I)
         if m:
-            # 窗口从药名之后开始:品牌名内的数字(Curcuplex 95)不是剂量
+            # The window starts after the drug name: digits inside a brand name (Curcuplex 95) are not a dose
             hay = text[m.end():m.end() + 60]
-    # 剂量变更句取【现值】:"increased from 5 mg to 10 mg" 的在服剂量是 10。
-    # 共识侧同吃此规则——旧值入 gold 是实测的系统性脏点(六家同踩)。
+    # For dose-change sentences take the CURRENT value: in "increased from 5 mg to 10 mg" the currently taking dose is 10.
+    # The consensus side applies the same rule — old values entering gold is a measured systemic dirty spot (all six models tripped on it).
     mc = re.search(r"\b(?:from|increased?|increasing|decreased?|decreasing|titrated?|up)\s+"
                    r"(?:from\s+)?(\d+(?:[.,]\d+)?)\s*(mg|mcg|g|ml|milligrams?|micrograms?)?\s*"
                    r"(?:\w+\s+){0,4}?to\s+(\d+(?:[.,]\d+)?)\s*(mg|mcg|g|ml|milligrams?|micrograms?)?\b",
                    hay, re.I)
     if mc:
         return norm_dose_value(mc.group(3)), (mc.group(4) or mc.group(2) or "mg")
-    # 检验数值不是剂量:"level was 18 ... 24 most recently; goal above 30"
+    # Lab values are not doses: "level was 18 ... 24 most recently; goal above 30"
     hay = re.sub(r"\b(?:level|levels|tsh|a1c|hba1c|ldl|score)s?\b[^.;]*", " ", hay, flags=re.I)
     dose = DOSE_RE.search(hay)
     if dose:
         return norm_dose_value(dose.group(1)), dose.group(2)
-    # 时长不是剂量:"filled 3 weeks ago" / "3 years ago"(无单位 fallback 前剥离)
+    # Durations are not doses: "filled 3 weeks ago" / "3 years ago" (strip before the unit-less fallback)
     hay = re.sub(r"\b\d+(?:\.\d+)?\s*(?:day|week|month|year)s?\b", " ", hay, flags=re.I)
-    hay = re.sub(r"\b\d{1,2}/\d{1,2}(?:/\d{2,4})?\b", " ", hay)  # 日期不是剂量
-    hay = re.sub(r"\b\d{1,2}(?:\s*[-–]\s*\d{1,2})?\s*(?:/|out of)\s*10\b", " ", hay)  # 疼痛评分(含区间)不是剂量
-    hay = re.sub(r"\b\d+(?:\.\d+)?\s*(?:lbs?|pounds?)\b", " ", hay, flags=re.I)  # 体重(lost 50 lbs)不是剂量
-    hay = re.sub(r"\b\d+\s*[- ]?(?:hour|hr)s?\b", " ", hay, flags=re.I)  # 剂型时长(24-hour formulation)不是剂量
-    # 无单位数字仅在带给药语境词时可信(gtt/po/频次);裸数字是垃圾值之源
-    # (实测:睡眠"2-3 times"、"3 years ago"、检验值都曾被当剂量)
+    hay = re.sub(r"\b\d{1,2}/\d{1,2}(?:/\d{2,4})?\b", " ", hay)  # dates are not doses
+    hay = re.sub(r"\b\d{1,2}(?:\s*[-–]\s*\d{1,2})?\s*(?:/|out of)\s*10\b", " ", hay)  # pain scores (including ranges) are not doses
+    hay = re.sub(r"\b\d+(?:\.\d+)?\s*(?:lbs?|pounds?)\b", " ", hay, flags=re.I)  # body weight (lost 50 lbs) is not a dose
+    hay = re.sub(r"\b\d+\s*[- ]?(?:hour|hr)s?\b", " ", hay, flags=re.I)  # formulation duration (24-hour formulation) is not a dose
+    # A unit-less number is trusted only with administration-context words (gtt/po/frequency); bare numbers are a source of garbage values
+    # (observed: sleep "2-3 times", "3 years ago", and lab values have all been taken as doses)
     m = re.search(r"\b(\d+(?:[.,]\d+)?(?:\s*gtt)?)\s*((?:po|eye|topical)\s*(?:daily|bid|qid|prn|qhs)?|(?:daily|bid|qid|prn|qhs))\b", hay, re.I)
     if m:
         value = norm_dose_value(m.group(1)).strip()
@@ -398,10 +398,10 @@ SINGLE_DOSE_TIME_RE = re.compile(
 
 
 def first_frequency(text):
-    # 睡眠叙事钟点不是给药时点:"wakes around 5-5:30 a.m."
+    # Clock times in sleep narratives are not dosing clock times: "wakes around 5-5:30 a.m."
     text = re.sub(r"\b(?:wakes?|woke|waking|wakes\s+up|awake(?:ns)?)\b[^,;.]*", " ", text, flags=re.I)
-    # 单次给药时点(last night at 7:51 pm)是最强的框架证据,优先于频次词:
-    # 一次性 PRN 给药与常规方案是不同事件,时点决定归属
+    # A single-dose clock time (last night at 7:51 pm) is the strongest framing evidence and takes precedence over frequency words:
+    # a one-off PRN dose and a regular regimen are different events; the clock time decides attribution
     m = SINGLE_DOSE_TIME_RE.search(text)
     if m:
         return m.group(1).lower()
@@ -523,8 +523,8 @@ def diagnosis_claims(item):
                               object=name, value=value, unit=unit, time=time,
                               location=location,
                               status=status_for("diagnosis", part),
-                              # ICD 编码行是诊断断言;病名内的 "without complications"
-                              # 是限定词不是否定(rules 0.4 已有同款锚规则)
+                              # An ICD-coded line is a diagnosis assertion; "without complications"
+                              # inside a disease name is a qualifier, not negation (rules 0.4 already has the same anchor rule)
                               polarity="positive" if icd else polarity_for(part),
                               condition=condition))
     return out
@@ -537,7 +537,7 @@ def medication_claims(item, section_kind_val="", section_name=""):
         if not re.search(r"\b" + re.escape(drug) + r"\b", item, re.I):
             continue
         value, unit = extract_dose_unit(item, drug=drug)
-        # 频次取该药附近的窗口:多药同行时整行第一个频次会张冠李戴
+        # Take the frequency from a window near this drug: with multiple drugs on one line, the line's first frequency would be misattributed
         wm = re.search(re.escape(drug) + r".{0,80}", item, re.I)
         drug_window = wm.group(0) if wm else item
         cond = None
@@ -545,12 +545,12 @@ def medication_claims(item, section_kind_val="", section_name=""):
             cond = "blood thinner"
         if drug in {"glucotrol xl", "invokana"} and has_any(item, ("type 2", "diabetes", "dm")):
             cond = "type 2 dm"
-        # "X-related/induced" 是副作用叙述的修饰语,不是用药断言
+        # "X-related/induced" is a modifier in a side-effect narrative, not a medication assertion
         if re.search(re.escape(drug) + r"[- ](?:related|induced|associated)\b", item, re.I) \
                 and not re.search(re.escape(drug) + r"\b(?![- ](?:related|induced|associated))", item, re.I):
             continue
-        # 状态/极性作用域:先取含药名的句子(多句 ROS 条目里别句的否定/
-        # 病史词不得污染本药);句内多药再按分号段隔离;单药句看整句
+        # Status/polarity scope: first take the sentence containing the drug name (negation/history
+        # words in other sentences of a multi-sentence ROS item must not contaminate this drug); with multiple drugs in the sentence, isolate by semicolon segment; a single-drug sentence uses the whole sentence
         sents = split_sentences(item) or [item]
         drug_sent = next((s for s in sents
                           if re.search(r"\b" + re.escape(drug) + r"\b", s, re.I)), item)
@@ -558,31 +558,31 @@ def medication_claims(item, section_kind_val="", section_name=""):
         si = next((i for i, s in enumerate(segs)
                    if re.search(r"\b" + re.escape(drug) + r"\b", s, re.I)), 0)
         drug_seg = segs[si]
-        # 延续段并入:下一分号段是本药的续述("; discontinued due to hot flashes")
-        # ——以续述动词开头且不含其他药名;远处无关段("; prior STD testing")不并入
+        # Merge continuation segments: the next semicolon segment continues this drug ("; discontinued due to hot flashes")
+        # — it starts with a continuation verb and contains no other drug name; distant unrelated segments ("; prior STD testing") are not merged
         for nxt in segs[si + 1:si + 2]:
             if re.match(r"\s*(?:discontinued|stopped|was\b|which\b|but\b|no longer|"
                         r"caused\b|not\b|d/c)", nxt, re.I) and not any(
                     re.search(r"\b" + re.escape(d2) + r"\b", nxt, re.I)
                     for d2 in DRUG_NAMES if d2 != drug):
                 drug_seg = drug_seg + ";" + nxt
-        # 完成时试药("has (also) tried A, B, C"):多药枚举是试药史清单,
-        # 与现用同药可并存(prior instance);单药完成时 tried 为既往
+        # Perfect-tense trials ("has (also) tried A, B, C"): a multi-drug enumeration is a trial-history list
+        # and can coexist with the same drug currently taken (prior instance); single-drug perfect-tense "tried" is historical
         if re.search(r"\b(?:has|have|had)\s+(?:also\s+|previously\s+)?tried\b", drug_seg, re.I):
             n_drugs = sum(1 for d2 in DRUG_NAMES
                           if re.search(r"\b" + re.escape(d2) + r"\b", drug_seg, re.I))
             _tried_status = "prior instance" if n_drugs >= 2 else "past"
         else:
             _tried_status = None
-        # 不指向本药的 history/hx of 短语是适应症/症状史,不毒染本药状态:
-        # "apixaban for history of DVT"、"History of wandering ... addition of X"
+        # A history/hx-of phrase not pointing at this drug is an indication/symptom history and does not contaminate this drug's status:
+        # "apixaban for history of DVT", "History of wandering ... addition of X"
         _dre = re.escape(drug.lower())
         drug_seg = re.sub(
             r"\b(?:history|hx)\s+(?:of|including)\s+"
             r"(?![^,;.]{0,45}\b" + _dre + r"\b)[^,;.]{0,50}",
             " ", drug_seg, flags=re.I)
-        # 认知帧从句是转述错觉,不是在服断言:"she believed X was 20 mg,
-        # but the bottle shows 10 mg"——剥离 believed 从句,保留事实从句
+        # A cognition frame clause reports a mistaken belief, not a currently-taking assertion: "she believed X was 20 mg,
+        # but the bottle shows 10 mg" — strip the believed clause, keep the factual clause
         drug_seg = re.sub(r"\b(?:she|he|they|patient)?\s*(?:believed|thought|assumed)\b[^,;]*[,;]?",
                           " ", drug_seg, flags=re.I)
         folded_seg = drug_seg.lower()
@@ -592,20 +592,20 @@ def medication_claims(item, section_kind_val="", section_name=""):
         advice_frame = bool(re.match(
             r"\s*(?:patient\s+)?(?:advised|instructed|counseled|educated)?\s*(?:that\s+)?if\b",
             item, re.I))
-        # 否定的重启不是重启:"has not been restarted" → 停用状态
+        # A negated restart is not a restart: "has not been restarted" → stop status
         if re.search(r"\b(?:not|never|hasn'?t|has not|won'?t|will not)\s+(?:be(?:en)?\s+)?restart", folded_seg):
             status = "stop"
-        # 完成态停药短语:"after/since stopping <drug>"(意图性 "trying to stop" 不算)
+        # Completed-stop phrase: "after/since stopping <drug>" (intent-only "trying to stop" does not count)
         elif re.search(r"\b(?:after|since)\s+stopping\b[^.;]{0,40}\b"
                        + re.escape(drug.lower()) + r"\b", folded_seg):
             status = "stop"
-        # 副作用叙事:"swelling occurred with <drug>" 是既往用药经历,非在服断言
+        # Side-effect narrative: "swelling occurred with <drug>" is a historical medication experience, not a currently-taking assertion
         elif re.search(r"\b(?:occurred|developed|happened|appeared)\s+"
                        r"(?:with|on|while\s+(?:taking|on))\b[^.;]{0,30}\b"
                        + re.escape(drug.lower()) + r"\b", folded_seg):
             status = "past"
-        # 强停药标记(明确、药向性强)允许全句扫描——弱标记(prior/past)
-        # 仍限分号段,防远处病史词污染
+        # Strong stop markers (explicit, strongly drug-directed) may scan the whole sentence — weak markers (prior/past)
+        # stay limited to the semicolon segment, guarding against contamination by distant history words
         if status == "active" and re.search(
                 r"\b(?:discontinued|no longer taking|not taking|stopped taking)\b",
                 drug_sent, re.I):
@@ -613,40 +613,40 @@ def medication_claims(item, section_kind_val="", section_name=""):
                                if re.search(r"\b" + re.escape(d2) + r"\b", drug_sent, re.I))
             if n_sent_drugs == 1:
                 status = "stop"
-        # 药名前有 "switched from / off / weaned off" = 该药已停,是既往药
+        # "switched from / off / weaned off" before the drug name = the drug has been stopped; it is a historical medication
         if re.search(r"\b(?:switched from|switch(?:ed)? off|off(?:\s+of)?|weaned off|"
                      r"tapered off|transitioned from|previously on)\b[^.;]{0,40}\b"
                      + re.escape(drug.lower()) + r"\b", folded_item):
             status = "past"
-        # 历史用药清单:"has been on multiple ... including X, Y" 是既往列表
+        # Historical medication list: "has been on multiple ... including X, Y" is a list of past drugs
         elif re.search(r"\b(?:has|have|had) been on\b[^.;]*\bincluding\b", folded_seg):
             status = "past"
-        # "recently started X" 是现行用药(即使行内有 previously 等历史注释)
+        # "recently started X" is a current medication (even if the line carries historical notes such as previously)
         elif re.search(r"\b(?:recently\s+(?:started|began|initiated)|(?<!not )(?<!be )(?<!been )(?<!never )restart(?:ed|ing)?)\b[^.;]{0,40}\b"
                        + re.escape(drug.lower()) + r"\b", folded_seg) or \
                 re.search(re.escape(drug.lower()) + r"\b[^.;]{0,20}\b(?:recently\s+(?:started|began|initiated)|(?<!not )(?<!be )(?<!been )(?<!never )restart(?:ed|ing)?)\b", folded_seg):
             status = "active"
-        # "listed/appears on medication list/record" 是清单成员陈述,非在服断言
+        # "listed/appears on medication list/record" states list membership, not a currently-taking assertion
         elif re.search(r"\b(?:listed|appears?|noted|documented)\b[^.;]{0,30}"
                        r"\b(?:medication list|med list|medications|records?)\b", folded_seg) \
                 or re.search(r"\bon (?:\w+ )?med(?:ication)? list\b", folded_seg):
             status = "recorded"
-        # "previous/prior <drug>" 指既往的另一实例(previous birth control pill),
-        # 与当前在用的同类药不构成矛盾
+        # "previous/prior <drug>" refers to a distinct historical instance (previous birth control pill)
+        # and does not contradict a currently used drug of the same class
         elif re.search(r"\b(?:previous|prior|former|old|different)\b[^.;]{0,15}\b"
                        + re.escape(drug.lower()) + r"\b", folded_seg):
             status = "prior instance"
-        # "<drug> trial(试药)"是既往试药史的标准写法
+        # "<drug> trial" is the standard phrasing for a historical medication trial
         elif re.search(re.escape(drug.lower()) + r"\s+trial\b", folded_seg):
             status = "past"
-        # "X caused <副作用>"(无剂量的因果叙述)是既往试药史;
-        # "gap in birth control caused her period..." 的 caused 主语不是药,不触发
+        # "X caused <side effect>" (a causal narrative without a dose) is a historical trial;
+        # in "gap in birth control caused her period..." the subject of caused is not the drug, so it does not trigger
         elif re.search(re.escape(drug.lower()) + r"\b[^.;]{0,15}\bcaused\b[^.;]{0,40}"
                        r"\b(?:side effects?|flashes?|nausea|rash|tired\w*|drows\w*|headaches?|"
                        r"sedation|dizz\w*|feeling)\b", folded_seg) \
                 and not DOSE_RE.search(drug_seg):
             status = "past"
-        # 药名后的既往体验叙述("Risperdal (felt tired)"/"the Seroquel experience")
+        # Historical-experience narrative after the drug name ("Risperdal (felt tired)"/"the Seroquel experience")
         elif re.search(re.escape(drug.lower()) + r"\b[^.;]{0,40}\b(?:felt|experiences?d?|"
                        r"made (?:me|her|him)|no improvement)\b", folded_seg) \
                 and not DOSE_RE.search(drug_seg):
@@ -654,34 +654,34 @@ def medication_claims(item, section_kind_val="", section_name=""):
         elif re.search(r"\bpast (?:medication|med|psychiatric medication)s? trials?\b",
                        folded_item):
             status = "past"
-        # 副作用/感受史提及("prior weird dreams with X"),无剂量:
-        # 陈述的是历史感受不是用药状态 → recorded(不与 active/past 冲突)
+        # Side-effect/sensation history mention ("prior weird dreams with X"), no dose:
+        # it states a historical sensation, not medication status → recorded (does not conflict with active/past)
         elif status == "past" and not DOSE_RE.search(drug_seg) and re.search(
                 r"\b(dreams?|flashes?|nausea|zaps?|tired\w*|drows\w*|dizz\w*|"
                 r"side effects?|sensation)\b", folded_seg):
             status = "recorded"
-        # 计划/医嘱段落里的药是待执行医嘱,不是"正在服用"的现状断言
+        # A drug in a plan/orders section is a pending order, not a "currently taking" current-state assertion
         elif status == "active" and section_kind_val == "treatment":
             status = "ordered"
-        # 既往试药小节标题("Past/Previous Medication Trials")下的药默认既往
+        # Drugs under a historical-trials section heading ("Past/Previous Medication Trials") default to historical
         elif status == "active" and re.search(
                 r"medication\s+trials?|(?:past|previous|prior)\s+(?:medication|med)\s+trials?"
                 r"|previous(?:ly)?\s+tried\s+medication",
                 (section_name or ""), re.I):
             status = "past"
-        # "prescribed by X"(处方归属叙述)且无现服标记:是处方事件的转述,
-        # 不是"正在服用"的现状断言——病史小节整体默认 past 会误伤在服药,
-        # 故只用行级窄规则
+        # "prescribed by X" (prescription-attribution narrative) with no currently-taking marker: it reports
+        # a prescribing event, not a "currently taking" current-state assertion — defaulting a whole history
+        # section to past would cause false positives on currently taken drugs, so use only this narrow line-level rule
         elif status == "active" and re.search(r"\bprescribed by\b", drug_seg, re.I) \
                 and not re.search(r"\b(continu\w*|current\w*|takes|taking|remains on|still on)\b",
                                   drug_seg, re.I):
             status = "ordered"
-        # "switched to <drug>" 是启用该药(停的是前药):stop/past 归属纠正
+        # "switched to <drug>" starts this drug (what was stopped is the prior drug): corrects stop/past attribution
         if status in {"stop", "past"} and re.search(
                 r"\bswitch(?:ed)?\s+to\b[^.;]{0,30}\b" + re.escape(drug.lower()) + r"\b",
                 folded_seg):
             status = "active"
-        # 终审:条件教育帧强制医嘱状态(链中 restart/stop 规则可能已污染)
+        # Final check: a conditional education frame forces ordered status (restart/stop rules earlier in the chain may have contaminated it)
         if advice_frame:
             status = "ordered"
         out.append(make_claim("medication", drug, item, subject="patient",
@@ -794,12 +794,12 @@ def extra_claims_from_item(item, section_kind_val="", section_name=""):
 def parse_medication(item, kind="medication"):
     med = find_medication(item)
     if med and med.lower() in {d.lower() for d in DRUG_NAMES}:
-        # 表内药用药向窗口取剂量,防多药行第一个剂量张冠李戴
+        # For known drugs, take the dose from a drug-directed window to keep a multi-drug line's first dose from being misattributed
         _v, _u = extract_dose_unit(item, drug=med)
     else:
         _v = _u = None
-    # 否定/兜底残渣不是药名:"No other prescriptions, supplements..." 的
-    # words[0] 兜底会返回 "No"——这类行是否认清单,不产出用药 claim
+    # Negation/fallback residue is not a drug name: for "No other prescriptions, supplements..."
+    # the words[0] fallback would return "No" — such lines are denial lists and yield no medication claim
     if med and med.lower() in {"no", "none", "not", "without", "denies", "denied",
                                "nil", "nkda", "other", "others", "patient",
                                "medication", "medications", "meds"}:
@@ -888,10 +888,10 @@ def parse_generic(item, kind):
     }
 
 
-# ---- 通用电报体层 (parser 0.2) --------------------------------------------
-# 规则全部来自 held-out 病历语料的语法归纳(非 active case),防过拟合:
-# R1/R2 主语省略的患者动词句;R12 临床医生动词覆盖患者规则;R4 既往标记;
-# R7 否定分配。仅对多句 item 生效,单句路径保持原行为。
+# ---- Generic telegraphic layer (parser 0.2) --------------------------------------------
+# All rules come from grammatical induction over held-out chart corpora (not active cases), to prevent overfitting:
+# R1/R2 patient verb sentences with elided subject; R12 clinician verbs override patient rules; R4 historical markers;
+# R7 negation distribution. Applies only to multi-sentence items; the single-sentence path keeps its original behavior.
 PATIENT_VERB_RE = re.compile(
     r"^(?:(?:the\s+)?(?:patient|pt|member|client|she|he)(?!['’]s)\s+)?"
     r"(reports?|reported|denies|denied|describes?|described|endorses?|endorsed|"
@@ -948,26 +948,26 @@ def telegraphic_claim(sentence, kind):
                           polarity="negative")
     pm = PATIENT_VERB_RE.match(text)
     if not pm:
-        # 名词短语回退:临床电报体主流是无动词断言("Chest pain, epigastric,
-        # burning in quality." / "Acid taste in back of throat.")——无动词
-        # 不等于无内容,按所在 kind 落为 has-claim。限叙述类 kind,
-        # 结构化 kind(med/lab/vital)有专用解析器,不走此回退。
+        # Noun-phrase fallback: mainstream clinical telegraphic style is verbless assertions ("Chest pain, epigastric,
+        # burning in quality." / "Acid taste in back of throat.") — having no verb
+        # does not mean having no content; emit a has-claim under the enclosing kind. Limited to narrative kinds;
+        # structured kinds (med/lab/vital) have dedicated parsers and skip this fallback.
         if kind not in {"symptom", "diagnosis", "social_history", "family_history",
                         "risk", "treatment"}:
             return None
         obj = strip_time_phrases(text)
-        # 只挡单词标签/裸标题("Assessment:"/"Current Suicidal Thoughts"),
-        # 不挡名词短语:标题特征 = ≤3 词全 TitleCase 且无句读
+        # Block only single-word labels/bare headings ("Assessment:"/"Current Suicidal Thoughts"),
+        # not noun phrases: heading signature = ≤3 words, all TitleCase, no punctuation
         if not obj or len(obj) < 4 or obj.endswith(":") or re.match(r"^[\w/-]+$", obj):
             return None
         if re.match(r"^\**(allergies|medications|assessment|plan|history|vitals|labs)\**:?$",
                     obj.strip(), re.I):
-            return None  # 裸小节词(常来自 markdown 加粗标题行)不是断言
+            return None  # a bare section word (often from a bold markdown heading line) is not an assertion
         words = obj.split()
         if len(words) <= 3 and all(w[:1].isupper() for w in words) \
                 and not re.search(r"[.,;()\d]", obj):
             return None
-        # 行内标签前缀剥离("Associated: intermittent nausea" → 后半)
+        # Strip inline label prefixes ("Associated: intermittent nausea" → the latter half)
         obj = re.sub(r"^[A-Za-z][A-Za-z /]{0,20}:\s*", "", obj) or obj
         return make_claim(kind, "{}.{}".format(kind, object_slug(obj)), sentence,
                           subject="patient", predicate="has", object=obj,
@@ -977,7 +977,7 @@ def telegraphic_claim(sentence, kind):
     obj = strip_time_phrases(rest)
     if not obj or len(obj) < 3:
         return None
-    # 极性经 polarity_for 的语用守卫(括号旁注/引语/转折从句/意愿否定)
+    # Polarity goes through polarity_for's pragmatic guards (parenthetical side notes/quotes/contrastive clauses/volitional negation)
     polarity = "negative" if verb in NEG_VERBS else polarity_for(rest)
     return make_claim(kind, "{}.{}".format(kind, object_slug(obj)), sentence,
                       subject="patient", predicate="has", object=obj,
@@ -991,8 +991,8 @@ def telegraphic_claims(item, kind):
         return []
     out = []
     for sent in sentences:
-        # 否定段独立拆分:"intermittent nausea, no vomiting" 必须产出
-        # 一正一负两条 claim,否则句尾的 no 会污染整句极性
+        # Split negated segments independently: "intermittent nausea, no vomiting" must yield
+        # one positive and one negative claim, otherwise the trailing no would contaminate the whole sentence's polarity
         parts = re.split(r",\s*(?=(?:no|without|denies|not|rather than)\b)", sent, flags=re.I)
         for part in parts:
             claim = telegraphic_claim(part, kind)
@@ -1028,11 +1028,11 @@ def parse_template_claims(text):
         extras = extra_claims_from_item(item, section_kind_val=kind, section_name=section)
         for extra in extras:
             claims.append(extra)
-        # HPI 类叙事段落常落在 other:按 symptom 语义做逐句电报体解析
+        # HPI-style narrative passages often land in other: parse them sentence by sentence telegraphically with symptom semantics
         tele = telegraphic_claims(item, "symptom" if kind == "other" else kind)
         claims.extend(tele)
         if tele:
-            # 多句 item 已逐句解析,整段拼接的粗粒度 claim 只会制造噪音
+            # A multi-sentence item was already parsed per sentence; a coarse whole-passage claim would only add noise
             continue
         claim = claim_from_item(section, item)
         if claim:
@@ -1053,8 +1053,8 @@ def parse_template_claims(text):
 
 
 def dedupe_claims(claims):
-    # 同锚去重,信息更全者胜:HPI 叙事先出现的无剂量 claim 不得遮蔽
-    # med-list 里带剂量的 claim(实测 cheat trial:剂量翻转因遮蔽而隐形)
+    # Dedupe by anchor, the more informative claim wins: a dose-less claim appearing earlier in HPI narrative
+    # must not shadow the dosed claim from the med list (observed in a cheat trial: a dose flip became invisible due to shadowing)
     seen = {}
     out = []
     for claim in claims:

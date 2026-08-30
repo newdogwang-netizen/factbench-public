@@ -1,19 +1,26 @@
 #!/usr/bin/env python3
-"""语义微判定层(semantic micro-oracle)。
+"""Semantic micro-oracle layer.
 
-原则(2026-08-26 尺寸不变性实验 24/24 通过后落地):
-- LLM 只回答原子是非题:"两个短字段值是否同义/同值",且只在确定性归一化
-  判'不同'之后被咨询——只能把假'不同'翻成'等价',不能制造'不同';
-- 多模型法定人数:不同家族/规模模型答案不一致即弃权(维持死规则原判),
-  尺寸不变性逐题强制验证;
-- 判例缓存:每对写法只问一次,判定写入 audit_site/equivalence_table.json
-  (人类可审计/可否决);重放全走查表,确定性与报告哈希完整保留;
-- 默认关闭:仅当环境变量 DETFACT_ORACLE=1 时启用;关闭时行为与纯死规则
-  完全一致(测试/离线重放安全)。
+Principles (adopted after the 2026-08-26 size-invariance experiment passed 24/24):
+- The LLM only answers atomic yes/no questions: "do two short field values have the
+  same meaning/value" — and is consulted only after deterministic normalization has
+  judged them 'different'; it can only flip a false 'different' into 'equivalent',
+  never manufacture a 'different';
+- Multi-model quorum: any disagreement among models of different families/sizes
+  means abstain (the hard-rule verdict stands); size invariance is enforced per
+  question;
+- Precedent cache: each pair of spellings is asked only once, and the verdict is
+  written to audit_site/equivalence_table.json (human-auditable / human-vetoable);
+  replays go entirely through the table, fully preserving determinism and report
+  hashes;
+- Off by default: enabled only when the environment variable DETFACT_ORACLE=1;
+  when off, behavior is identical to the pure hard rules (safe for tests / offline
+  replay).
 
-表条目: {"field|a|b": {"verdict": "same"|"different"|"abstain",
+Table entry: {"field|a|b": {"verdict": "same"|"different"|"abstain",
                         "models": [...], "at": iso}}
-键中 a,b 按字典序排序(等价关系对称)。
+In the key, a and b are sorted lexicographically (the equivalence relation is
+symmetric).
 """
 import json
 import os
@@ -30,7 +37,8 @@ QUORUM_MODELS = [
     # (internal arbiter id removed)
 ]
 GATEWAY = os.environ.get("DETFACT_ORACLE_GATEWAY", "")
-# 只对这些字段启用等价判定;polarity/status 有专门逻辑,保持纯确定性
+# Equivalence judging is enabled only for these fields; polarity/status have
+# dedicated logic and stay purely deterministic
 ORACLE_FIELDS = {"object", "value", "unit", "time", "location", "condition"}
 
 _table = None
@@ -106,11 +114,14 @@ ANCHOR_PROMPT = (
 
 
 def anchor_equivalent(a, b, live=False):
-    """锚同义判定(单向契约:仅 SAME 用于救援,假 DIFFERENT 只损召回)。
-    打分路径永远只查表(live=False),表由离线构建器扩充——
-    保证打分零 LLM 调用、可重放。验证实验 2026-08-27:40 对 36 一致,
-    假 SAME 0/20;唯一误判为无害方向(racing heart 判 DIFFERENT),
-    预注册门槛(一致准确率 100%)未达、按单向风险面接入,偏离已记录。"""
+    """Anchor synonym judgment (one-way contract: only SAME is used for rescue; a
+    false DIFFERENT only costs recall). The scoring path only ever reads the table
+    (live=False); the table is extended by an offline builder — guaranteeing zero
+    LLM calls during scoring and full replayability. Validation experiment
+    2026-08-27: 36 of 40 pairs agreed, false SAME 0/20; the sole misjudgment was in
+    the harmless direction (racing heart judged DIFFERENT). The pre-registered
+    threshold (100% agreement accuracy) was not met; wired in based on the one-way
+    risk surface, deviation recorded."""
     a, b = str(a).strip().lower(), str(b).strip().lower()
     if not a or not b or a == b:
         return None
@@ -154,13 +165,13 @@ def anchor_equivalent(a, b, live=False):
 
 
 def equivalent(field, a, b):
-    """True=等价(翻案) / False=确认不同 / None=弃权(维持死规则原判)。"""
+    """True = equivalent (overturns) / False = confirmed different / None = abstain (hard-rule verdict stands)."""
     if field not in ORACLE_FIELDS:
         return None
     a, b = str(a).strip(), str(b).strip()
     if not a or not b or a == b:
         return None
-    # 过长的自由文本不判(不是原子问题)
+    # Overly long free text is not judged (not an atomic question)
     if len(a.split()) > 8 or len(b.split()) > 8:
         return None
     table = _load()
@@ -182,7 +193,7 @@ def equivalent(field, a, b):
     elif all(v == "DIFFERENT" for v in votes):
         verdict = "different"
     else:
-        verdict = "abstain"  # 不一致或有失败 → 弃权,且缓存弃权避免重复咨询
+        verdict = "abstain"  # disagreement or failures → abstain, and cache the abstention to avoid repeated consultation
     table[k] = {"verdict": verdict, "models": [m.split("/")[-1] for m in QUORUM_MODELS],
                 "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
     _dirty = True

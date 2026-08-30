@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""detfact 共识对齐器(确定性,无 LLM):合并多模型 claims 为 gold 候选 + 仲裁清单。
-用法: python3 detfact_consensus.py --gen gold_candidates/<case> --case-meta <cases dir>/<case>/meta.json --out audit_site/data/<case>.json
+"""detfact consensus aligner (deterministic, no LLM): merges multi-model claims into gold candidates plus an adjudication worklist.
+Usage: python3 detfact_consensus.py --gen gold_candidates/<case> --case-meta <cases dir>/<case>/meta.json --out audit_site/data/<case>.json
 """
 import argparse, collections, json, os, re, unicodedata
 
@@ -20,7 +20,7 @@ STABLE_FIELDS = {"subject", "object", "polarity"}
 # PHI and must live in a local, non-distributed file: detfact_local/patient_aliases.json
 # (override path with DETFACT_SUBJECT_ALIASES_FILE).
 GENERIC_SUBJECT_ALIASES = {"patient", "member", "client", "self", "paciente",
-                           # 儿科场景患者角色词
+                           # patient role words in pediatric scenarios
                            "infant", "baby", "newborn", "toddler", "child",
                            "adolescent", "teen", "bebe", "nino", "nina"}
 
@@ -38,8 +38,9 @@ def _load_local_subject_aliases():
 
 PATIENT_SUBJECT_ALIASES = GENERIC_SUBJECT_ALIASES | _load_local_subject_aliases()
 
-# 每 case 动态患者别名:从该 case 自身的 demographic/name 事实推导,
-# 抽取模型用患者名字当 subject 时也能归一到 "patient"。
+# Per-case dynamic patient aliases: derived from the case's own demographic/name
+# facts, so that when an extraction model uses the patient's name as the subject it
+# still normalizes to "patient".
 CASE_SUBJECT_ALIASES = set()
 
 
@@ -58,7 +59,7 @@ def set_case_subject_aliases(names):
 
 
 def derive_patient_names(rows):
-    """rows: claims 或 facts 列表;取 demographic name 类条目的 object 值。"""
+    """rows: a list of claims or facts; takes the object value of demographic name entries."""
     names = []
     for r in rows or []:
         kind = norm_tok(r.get("kind") or r.get("canonical_kind") or "")
@@ -71,7 +72,7 @@ def derive_patient_names(rows):
             v = fields_.get("object") or fields_.get("value")
             if v:
                 names.append(str(v))
-        # demo 类事实的 subject 通常就是患者本人("kelsey has age 34")
+        # the subject of a demo fact is usually the patient themselves ("kelsey has age 34")
         subj = fields_.get("subject")
         if subj and word_key(subj) not in GENERIC_SUBJECT_ALIASES:
             names.append(str(subj))
@@ -193,7 +194,7 @@ SPELLED_NUM = {
 }
 
 def spelled_to_number(t):
-    """'three hundred'→300, 'twenty five'→25;不可解析返回 None。"""
+    """'three hundred'→300, 'twenty five'→25; returns None when unparseable."""
     toks = [w for w in t.replace("-", " ").split() if w]
     if not toks or any(w not in SPELLED_NUM for w in toks):
         return None
@@ -216,13 +217,13 @@ def norm_val(s):
     if d:
         return d
     t = norm_tok(s)
-    # "1 gram"/"25 mg"/"4 mg/0.1ml":gold 残留单位词的 value 归一到纯数
+    # "1 gram"/"25 mg"/"4 mg/0.1ml": gold values with leftover unit words normalize to a bare number
     m = re.match(r"^(\d+(?:[.,]\d+)?)\s*(milligrams?|grams?|micrograms?|milliliters?"
                  r"|mg|mcg|g|ml|tablets?|tabs?|units?)(?:\s*/\s*[\d.]*\s*(?:ml|l))?$", t)
     if m:
         t = m.group(1)
     else:
-        # "two caps":拼写数字 + 容器词 → 纯数
+        # "two caps": spelled-out number + container word → bare number
         m2 = re.match(r"^([a-z][a-z ]*?)\s+(caps?|capsules?|tabs?|tablets?|pills?)$", t)
         if m2:
             n2 = spelled_to_number(m2.group(1))
@@ -249,13 +250,14 @@ def norm_field(name, v):
         return norm_tok(v)
     if name == "unit":
         t = norm_tok(v)
-        # "mg/0.1ml" 浓度单位:以质量单位为准(数值在 value 字段比)
+        # "mg/0.1ml" concentration units: keep the mass unit (the number is compared in the value field)
         m = re.match(r"^(mg|mcg|g)\s*/\s*[\d.]*\s*m?l$", t)
         if m:
             t = m.group(1)
         if t not in UNITS and " " in t:
-            # "twenty five milligrams":剔除混入 unit 字段的数字词后再归一;
-            # "po daily":给药途径/频次不是单位,剔除后为空则视为无单位
+            # "twenty five milligrams": strip number words that leaked into the unit
+            # field, then normalize; "po daily": route/frequency are not units — if
+            # nothing remains after stripping, treat as having no unit
             toks = [w for w in t.split() if w not in SPELLED_NUM
                     and not re.match(r"^\d+(?:\.\d+)?$", w)]
             if toks and " ".join(toks) in UNITS:
@@ -328,8 +330,9 @@ DRUG_NAMES = {"vyvanse", "effexor", "venlafaxine", "adderall", "ritalin", "lexap
               "abilify", "aripiprazole", "strattera", "atomoxetine", "wegovy",
               "semaglutide", "warfarin", "artificial tears", "artificial tear",
               "aspirin", "cyanocobalamin", "glucotrol xl", "icee hot", "invokana",
-              # 词典扩展 2026-08-27:gold med 实体中缺失的真实药物/补充剂
-              # (人工筛选,剔除脏 gold 词;显式冻结,可审计,统一作用于所有模型)
+              # Dictionary extension 2026-08-27: real drugs/supplements missing from
+              # gold med entities (manually screened, dirty gold terms removed;
+              # explicitly frozen, auditable, applied uniformly to all models)
               "buprenorphine", "buspar", "clonidine", "concerta", "coq10", "pqq",
               "curcuplex 95", "dhea", "diphenhydramine", "duloxetine", "ertapenem",
               "fluoxetine", "hydrocodone", "ibuprofen", "keppra", "lamictal",
@@ -687,10 +690,12 @@ def identity(kind, f):
         base = subj + "/" + PRED_MAP.get(pred, pred)
     return norm_field("kind", kind) + "||" + base
 
-# unit 只对给药/测量类语义成立;诊断/症状携带 unit 是共识投票混入的噪音
+# unit is only semantically valid for dosing/measurement kinds; a unit carried by a
+# diagnosis/symptom is noise mixed in by consensus voting
 UNIT_KINDS = {"med", "lab", "vital", "test"}
 
-# 明确属于他人的关系词:患者 kind 下这些主语保留原样(如儿科母亲的报告角色)
+# Relationship words that clearly belong to another person: under patient kinds these
+# subjects are kept as-is (e.g. the mother's reporter role in pediatrics)
 OTHER_PERSON_SUBJECTS = {
     "mother", "father", "mom", "dad", "sister", "brother", "son", "daughter",
     "aunt", "uncle", "grandmother", "grandfather", "wife", "husband", "partner",
@@ -703,12 +708,14 @@ _VAL_UNIT_RE = None
 
 
 def prune_gold_fields(kind_group, fields):
-    """gold 字段清洗(红队 2026-08-26 定位的三类伪影):
-    1. 非给药/测量 kind 不携带 unit;
-    2. value 是 ≥4 词的整句引文碎片 → 清空(不可归一化,只制造假矛盾);
-       value 内嵌单位("1200 mg") → 拆分为 value+unit;
-    3. 患者 kind 下,主语不是明确的他人关系词 → 归一为 patient
-       (裁决语义:此类事实经仲裁确认为'主语误标的患者事实')。"""
+    """Gold field cleanup (three artifact classes located by red-teaming 2026-08-26):
+    1. Non-dosing/measurement kinds carry no unit;
+    2. A value that is a full-sentence quote fragment of >=4 words → cleared
+       (cannot be normalized, only manufactures false contradictions);
+       a value with an embedded unit ("1200 mg") → split into value+unit;
+    3. Under patient kinds, a subject that is not a clear other-person relationship
+       word → normalized to patient (adjudication semantics: such facts were
+       confirmed by arbitration as 'patient facts with a mislabeled subject')."""
     fields = dict(fields)
     if kind_group not in UNIT_KINDS and fields.get("unit"):
         fields["unit"] = None
@@ -723,8 +730,9 @@ def prune_gold_fields(kind_group, fields):
         elif len(vs.split()) >= 4 or (len(vs.split()) >= 3
                 and not re.search(r"\d", vs)
                 and spelled_to_number(norm_tok(vs)) is None):
-            # 不整段清空:提取其中的数值保住可比性(阳性对照证明清空会致盲),
-            # 无数值的纯散文才置空
+            # Do not clear the whole value: extract the number inside to preserve
+            # comparability (positive controls showed clearing blinds the scorer);
+            # only pure prose with no number is set to empty
             m2 = re.search(r"\d+(?:\.\d+)?", vs)
             if m2 is None:
                 n2 = spelled_to_number(norm_tok(vs))
@@ -785,8 +793,9 @@ def main():
                 break
     all_claims = [c for cl in per_model.values() for c in cl]
     alias_names = derive_patient_names(all_claims)
-    # 兜底:Top-1 高频非通用主语,且名字逐字出现在 transcript 中 → 患者
-    # (单患者会话假设;只取第一名,避免把治疗师/家属误纳)
+    # Fallback: the top-1 high-frequency non-generic subject whose name appears
+    # verbatim in the transcript → the patient (single-patient session assumption;
+    # take only the top one to avoid pulling in the therapist/family)
     case_dir = os.path.dirname(os.path.abspath(args.case_meta))
     ts_key = ""
     for src_name in ("transcript.txt", "additions.txt", "template.txt"):
@@ -812,7 +821,7 @@ def main():
         raise SystemExit(1)
     missing = [m for m in MODEL_ORDER if not any(tag(m) in d for d in per_model)]
 
-    # 归一化后分桶
+    # Bucket after normalization
     buckets = collections.OrderedDict()
     bucket_info = {}
     claim_map = {}
@@ -832,7 +841,8 @@ def main():
             buckets[key].append(item)
             claim_map[m + "|" + str(idx)] = item
 
-    # 二次合并:同 subtype/兼容粗类下,anchor token 子集或高重叠 → 合并
+    # Second-pass merge: under the same subtype / compatible coarse class, anchor
+    # token subset or high overlap → merge
     merged = True
     while merged:
         merged = False
@@ -942,7 +952,7 @@ def main():
                       "stable_disagreements": stable_disagreements,
                       "disagreements": disagreements, "evidence": evidence})
 
-    # per_model: 标出每条的共识归属与是否分歧
+    # per_model: mark each claim's consensus assignment and whether it diverges
     per_model_out = []
     for m in order:
         rows = []

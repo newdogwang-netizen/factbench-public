@@ -35,7 +35,7 @@ def main():
                           note, re.I)
             if m and re.search(r"[/]\s*" + re.escape(val) + r"\b|\b" + re.escape(val) + r"\s*/",
                                m.group(0)):
-                continue  # 配比剂型(250/50)不是单值剂量,变异无效
+                continue  # ratio formulations (250/50) are not single-value doses; mutation invalid
             if m:
                 hit = (drug, val, m)
                 break
