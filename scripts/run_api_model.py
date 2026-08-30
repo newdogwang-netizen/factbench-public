@@ -55,9 +55,28 @@ def build_user(transcript, template):
             + FINAL_START + "\n[final note text]\n" + FINAL_END)
 
 
+_NOTE_SHAPE_RE = re.compile(r"^\s*(?:#+\s+\S|\*\*[^*]+:\*\*|[A-Z][A-Za-z &/]+:\s*$)", re.M)
+
+
 def extract_final(raw):
+    """Strict protocol extraction.
+
+    Returns (note_text, status): status is "ok" (tags present),
+    "salvaged" (no tags, but the raw output is clearly note-shaped:
+    starts with a section heading and contains no meta-commentary),
+    or "invalid" (no tags and not note-shaped -> scored as empty).
+    Silent raw-text scoring is not allowed: chain-of-thought preambles
+    would be parsed into noise claims and unfairly graded.
+    """
     m = re.search(re.escape(FINAL_START) + r"(.*?)" + re.escape(FINAL_END), raw, re.S)
-    return (m.group(1) if m else raw).strip()
+    if m:
+        return m.group(1).strip(), "ok"
+    txt = raw.strip()
+    head = txt[:200]
+    if _NOTE_SHAPE_RE.search(head) and not re.search(
+            r"\b(i will|let me|here is|sure,|as an ai|reasoning:)\b", head, re.I):
+        return txt, "salvaged"
+    return "", "invalid"
 
 
 def _post(base, key, payload, timeout):
@@ -128,12 +147,16 @@ def main():
     ap.add_argument("--out", default=None)
     ap.add_argument("--max-out", type=int, default=8000)
     ap.add_argument("--only", default=None, help="comma-separated task names")
+    ap.add_argument("--notes-dir", default=None,
+                    help="score-only mode: directory containing <task>/note.md "
+                         "(or <task>.md) produced by your own harness; no API calls")
+    ap.add_argument("--label", default=None, help="run label for score-only mode")
     args = ap.parse_args()
     base = os.environ.get("OPENAI_BASE_URL")
     key = os.environ.get("OPENAI_API_KEY", "")
-    model = os.environ.get("MODEL")
-    if not base or not model:
-        raise SystemExit("set OPENAI_BASE_URL and MODEL (and OPENAI_API_KEY if required)")
+    model = os.environ.get("MODEL") or (args.label or "score-only")
+    if not args.notes_dir and (not base or not os.environ.get("MODEL")):
+        raise SystemExit("set OPENAI_BASE_URL and MODEL, or use --notes-dir for score-only mode")
     out = args.out or os.path.join(ROOT, "results", re.sub(r"[^\w.-]+", "_", model))
     os.makedirs(out, exist_ok=True)
     only = set(args.only.split(",")) if args.only else None
@@ -143,7 +166,22 @@ def main():
         if only and name not in only:
             continue
         note_path = os.path.join(out, name, "note.md")
-        if os.path.isfile(note_path) and os.path.getsize(note_path) > 200:
+        gen_status = "resumed"
+        if args.notes_dir:
+            ext = None
+            for cand in (os.path.join(args.notes_dir, name, "note.md"),
+                         os.path.join(args.notes_dir, name + ".md")):
+                if os.path.isfile(cand):
+                    ext = cand
+                    break
+            if not ext:
+                rows.append({"task": name, "generation": "missing_note", "coverage": 0.0,
+                             "critical_wrong": 0, "pass": False})
+                print(name, "MISSING note in --notes-dir")
+                continue
+            note = open(ext, encoding="utf-8").read()
+            gen_status = "external"
+        elif os.path.isfile(note_path) and os.path.getsize(note_path) > 200:
             note = open(note_path, encoding="utf-8").read()  # resume
         else:
             transcript = open(os.path.join(td, "environment", "transcript.txt"),
@@ -151,18 +189,24 @@ def main():
             template = open(os.path.join(td, "environment", "template.txt"),
                             encoding="utf-8").read()
             try:
-                note = extract_final(chat(base, key, model, [
+                note, gen_status = extract_final(chat(base, key, model, [
                     {"role": "system", "content": SYSTEM},
                     {"role": "user", "content": build_user(transcript, template)}],
                     args.max_out))
             except Exception as exc:
                 print(name, "GENERATION FAILED:", str(exc)[:120])
-                rows.append({"task": name, "error": str(exc)[:200], "pass": False})
+                rows.append({"task": name, "error": str(exc)[:200],
+                             "generation": "error", "pass": False})
+                continue
+            if gen_status == "invalid":
+                print(name, "INVALID GENERATION (no final tags, not note-shaped)")
+                rows.append({"task": name, "generation": "invalid", "coverage": 0.0,
+                             "critical_wrong": 0, "pass": False})
                 continue
             os.makedirs(os.path.dirname(note_path), exist_ok=True)
             with open(note_path, "w", encoding="utf-8") as fh:
                 fh.write(note)
-        res = {"task": name, **score(td, note)}
+        res = {"task": name, "generation": gen_status, **score(td, note)}
         rows.append(res)
         print("{}: cov={:.0%} crit={} pass={}".format(
             name, res["coverage"], res["critical_wrong"], res["pass"]))
