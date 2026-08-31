@@ -49,6 +49,9 @@ def main():
     shutil.copy(args.summary, dst)
     idx_path = os.path.join(DOCS, "data", "index.json")
     idx = json.load(open(idx_path)) if os.path.isfile(idx_path) else {"entries": []}
+    # same label + same date = correction of today's run: replace, don't duplicate
+    idx["entries"] = [e for e in idx["entries"]
+                      if not (e["label"] == label and e["date"] == date)]
     idx["entries"].append({
         "label": label, "date": date, "file": slug + ".json",
         "tasks": doc["tasks"], "pass_rate": doc["pass_rate"],

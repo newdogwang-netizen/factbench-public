@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s012_syn",
     "version": "1",
-    "sha256": "5b72fbe19355d574f57733a6b986ddad0e3902caa4ebe8357e152f1b87bad64f",
+    "sha256": "4dd9921dea93be81e0b9f2e4daa1474b2813fdef685544348120ed8c5a21481e",
     "reviewed": false
   },
   "source": {
@@ -76,7 +76,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.artificial_tears",
           "source": [
             "generated_output"
@@ -92,7 +92,7 @@
           "quote": "Artificial tears (Refresh brand), 2-3 times daily, more with laptop use"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.artificial_tears",
           "source": [
             "generated_output"
@@ -100,7 +100,7 @@
           "quote": "Dry, \"gritty\" eyes, which started around month two. This is worse with contact lenses, so she has been wearing glasses more often. She uses artificial tears 2-3 times per day. She denies blurry vision, eye pain, or light sensitivity."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.artificial_tears",
           "source": [
             "generated_output"
@@ -108,7 +108,7 @@
           "quote": "Artificial tears help the eye dryness."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.artificial_tears",
           "source": [
             "generated_output"
@@ -132,7 +132,7 @@
           "quote": "Artificial tears (Refresh brand), two to three times daily, more with prolonged screen time."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.artificial_tears",
           "source": [
             "generated_output"
@@ -144,14 +144,14 @@
         "audit_id": "F003",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -202,7 +202,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -218,7 +218,7 @@
           "quote": "Eye sensation described as gritty, no blurry vision, eye pain, or light sensitivity"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -226,7 +226,7 @@
           "quote": "Dry, \"gritty\" eyes, which started around month two. This is worse with contact lenses, so she has been wearing glasses more often. She uses artificial tears 2-3 times per day. She denies blurry vision, eye pain, or light sensitivity."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -234,7 +234,7 @@
           "quote": "The patient denied eye pain."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -258,7 +258,7 @@
           "quote": "No blurry vision, eye pain, or light sensitivity reported."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -270,14 +270,14 @@
         "audit_id": "F004",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -328,7 +328,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.seasonal_allergies",
           "source": [
             "generated_output"
@@ -344,7 +344,7 @@
           "quote": "Seasonal allergies"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.seasonal_allergies",
           "source": [
             "generated_output"
@@ -372,9 +372,9 @@
         "audit_id": "F013",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
+          "gpt-5_4",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -433,7 +433,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.isotretinoin",
           "source": [
             "generated_output"
@@ -449,7 +449,7 @@
           "quote": "Isotretinoin 60mg once daily, taken with dinner/food containing fat"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.isotretinoin",
           "source": [
             "generated_output"
@@ -457,7 +457,7 @@
           "quote": "Isotretinoin 60 mg once daily."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.isotretinoin",
           "source": [
             "generated_output"
@@ -481,7 +481,7 @@
           "quote": "Isotretinoin 60 mg once daily, taken with dinner/food containing fat."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.isotretinoin",
           "source": [
             "generated_output"
@@ -493,13 +493,13 @@
         "audit_id": "F016",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -556,7 +556,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.estradiol",
           "source": [
             "generated_output"
@@ -572,7 +572,7 @@
           "quote": "Drospirenone ethinyl estradiol 3mg/0.03mg, taken every night at 10pm with alarm, no missed pills"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.estradiol",
           "source": [
             "generated_output"
@@ -580,7 +580,7 @@
           "quote": "Drospirenone-ethinyl estradiol 3 mg-0.03 mg, one tablet daily. Reports no missed pills."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.estradiol",
           "source": [
             "generated_output"
@@ -588,7 +588,7 @@
           "quote": "Drospirenone-ethinyl estradiol 3 mg/0.03 mg nightly."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.estradiol",
           "source": [
             "generated_output"
@@ -612,7 +612,7 @@
           "quote": "Drospirenone/ethinyl estradiol 3 mg/0.03 mg, taken nightly at approximately 10 pm with alarm; no missed pills."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.estradiol",
           "source": [
             "generated_output"
@@ -624,14 +624,14 @@
         "audit_id": "F017",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -682,7 +682,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.condoms",
           "source": [
             "generated_output"
@@ -690,7 +690,7 @@
           "quote": "Condoms as second form of contraception per program."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.condoms",
           "source": [
             "generated_output"
@@ -718,8 +718,8 @@
         "audit_id": "F018",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -778,7 +778,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -794,7 +794,7 @@
           "quote": "Cetirizine 10mg, taken in the morning, as needed (approximately 3 times per week currently)"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -802,7 +802,7 @@
           "quote": "Cetirizine 10 mg in the morning as needed."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -826,7 +826,7 @@
           "quote": "Cetirizine 10 mg, taken in the morning, currently approximately three times per week as needed for pollen."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -838,13 +838,13 @@
         "audit_id": "F019",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -877,6 +877,7 @@
       ],
       "coverage_fields": [
         "subject",
+        "object",
         "time",
         "status",
         "polarity"
@@ -884,7 +885,7 @@
       "fields": {
         "subject": "patient",
         "predicate": "takes",
-        "object": null,
+        "object": "vitamin",
         "value": null,
         "unit": null,
         "time": "daily",
@@ -896,7 +897,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -904,7 +905,7 @@
           "quote": "Vitamin D 2,000 units daily."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -912,7 +913,7 @@
           "quote": "Vitamin D3 2000 units daily."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -928,7 +929,7 @@
           "quote": "Vitamin D3 2000 units daily"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -936,7 +937,7 @@
           "quote": "Vitamin D3 2000 units daily."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -964,11 +965,11 @@
         "audit_id": "F020",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "qwen3-max",
+          "deepseek-v4-flash-0731",
+          "qwen3p8-max",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1021,7 +1022,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.probiotic",
           "source": [
             "generated_output"
@@ -1037,7 +1038,7 @@
           "quote": "Probiotic gummy occasionally"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.probiotic",
           "source": [
             "generated_output"
@@ -1045,7 +1046,7 @@
           "quote": "Occasional probiotic gummy."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.probiotic",
           "source": [
             "generated_output"
@@ -1053,7 +1054,7 @@
           "quote": "Probiotic gummy is taken sometimes."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.probiotic",
           "source": [
             "generated_output"
@@ -1077,7 +1078,7 @@
           "quote": "Probiotic gummy occasionally."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.probiotic",
           "source": [
             "generated_output"
@@ -1089,14 +1090,14 @@
         "audit_id": "F021",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1147,7 +1148,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.doxycycline",
           "source": [
             "generated_output"
@@ -1163,7 +1164,7 @@
           "quote": "Doxycycline stopped in May before starting isotretinoin, stopped because 3 months was not effective for deeper cysts and cannot be combined with isotretinoin due to pseudotumor cerebri risk"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.doxycycline",
           "source": [
             "generated_output"
@@ -1175,9 +1176,9 @@
         "audit_id": "F022",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4"
+          "gpt-5_4"
         ],
         "status": "release",
         "field_stable": true,
@@ -1228,7 +1229,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.nodulocystic_acne_month_four_of_isotretinoin_treatment",
           "source": [
             "generated_output"
@@ -1244,7 +1245,7 @@
           "quote": "Nodulocystic acne"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.nodulocystic_acne",
           "source": [
             "generated_output"
@@ -1252,7 +1253,7 @@
           "quote": "Nodulocystic acne."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.nodulocystic_acne",
           "source": [
             "generated_output"
@@ -1264,10 +1265,10 @@
         "audit_id": "F036",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "qwen3-max"
+          "gpt-5_4",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1299,13 +1300,14 @@
       ],
       "coverage_fields": [
         "subject",
+        "object",
         "status",
         "polarity"
       ],
       "fields": {
         "subject": "patient",
         "predicate": "has",
-        "object": null,
+        "object": "mild xerotic eczema of the forearm",
         "value": null,
         "unit": null,
         "time": null,
@@ -1317,7 +1319,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.mild_xerotic_eczema_on_forearms",
           "source": [
             "generated_output"
@@ -1341,7 +1343,7 @@
           "quote": "Mild xerotic eczema on forearms."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.mild_xerotic_eczema_of_the_forearms",
           "source": [
             "generated_output"
@@ -1349,7 +1351,7 @@
           "quote": "Mild xerotic eczema of the forearms."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.mild_xerotic_eczema_of_the_forearms",
           "source": [
             "generated_output"
@@ -1365,7 +1367,7 @@
           "quote": "Mild xerotic eczema of the forearms."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.mild_xerotic_eczema_of_the_forearms",
           "source": [
             "generated_output"
@@ -1377,13 +1379,13 @@
         "audit_id": "F037",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
           "minimax-m3",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1395,7 +1397,7 @@
       },
       "salience": {
         "must_cover": true,
-        "must_cover_source": "parser",
+        "must_cover_source": "llm",
         "must_not_err": false
       }
     },
@@ -1436,7 +1438,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.hydrocortisone",
           "source": [
             "generated_output"
@@ -1452,7 +1454,7 @@
           "quote": "Hydrocortisone 1% cream, thin layer twice daily on itchy forearm patches, up to 2 weeks, not on face"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.hydrocortisone",
           "source": [
             "generated_output"
@@ -1460,7 +1462,7 @@
           "quote": "Hydrocortisone 1% cream was prescribed."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.hydrocortisone",
           "source": [
             "generated_output"
@@ -1484,7 +1486,7 @@
           "quote": "Hydrocortisone 1% cream: thin layer twice daily on itchy forearm patches for up to two weeks; not to be used on face."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.hydrocortisone",
           "source": [
             "generated_output"
@@ -1496,13 +1498,13 @@
         "audit_id": "F041",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1553,7 +1555,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.no_waxing_while_on_isotretinoin_threading_or_plucking_only",
           "source": [
             "generated_output"
@@ -1589,7 +1591,7 @@
         "audit_id": "F045",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
           "kimi-k3",
           "minimax-m3"
@@ -1643,7 +1645,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.no_vitamin_a_supplements_do_not_share_pills",
           "source": [
             "generated_output"
@@ -1671,7 +1673,7 @@
         "audit_id": "F046",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
           "minimax-m3"
         ],
@@ -1734,7 +1736,7 @@
           "quote": "Hydrocortisone 1% cream, thin layer twice daily on itchy forearm patches, up to 2 weeks (newly prescribed)"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.hydrocortisone",
           "source": [
             "generated_output"
@@ -1742,7 +1744,7 @@
           "quote": "Prescribed hydrocortisone 1% cream. Instructed to apply a thin layer to itchy patches on arms twice daily for up to two weeks."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.hydrocortisone",
           "source": [
             "generated_output"
@@ -1755,8 +1757,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gemini-2.5-pro",
-          "qwen3-max"
+          "google_gemini-2_5-pro",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1815,7 +1817,7 @@
           "quote": "Wear hat when outdoors"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.wear_a_hat_when_outdoors",
           "source": [
             "generated_output"
@@ -1836,7 +1838,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5.6-sol",
+          "gpt-5_6-sol",
           "minimax-m3"
         ],
         "status": "release",
@@ -1894,7 +1896,7 @@
           "quote": "Makeup is fine if non-comedogenic"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.makeup",
           "source": [
             "generated_output"
@@ -1915,7 +1917,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
+          "gpt-5_4",
           "kimi-k3"
         ],
         "status": "release",
@@ -1965,7 +1967,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.doxycycline",
           "source": [
             "generated_output"
@@ -1973,7 +1975,7 @@
           "quote": "Doxycycline was stopped back in May before starting isotretinoin."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.doxycycline",
           "source": [
             "generated_output"
@@ -1989,7 +1991,7 @@
           "quote": "Doxycycline was stopped back in May before isotretinoin was started, partly because three months of it was not improving the deeper cysts and partly because it cannot be combined with isotretinoin due to the risk of pseudotumor cerebri."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.doxycycline",
           "source": [
             "generated_output"
@@ -2001,10 +2003,10 @@
         "audit_id": "F175",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2055,7 +2057,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "social_history.she_has_never_smoked",
           "source": [
             "generated_output"
@@ -2071,7 +2073,7 @@
           "quote": "She has never smoked."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.she_has_never_smoked",
           "source": [
             "generated_output"
@@ -2083,9 +2085,9 @@
         "audit_id": "F271",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
+          "gpt-5_6-sol",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2136,7 +2138,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "social_history.she_tried_vaping_twice_in_high_school_and_does_not_currently_vape",
           "source": [
             "generated_output"
@@ -2152,7 +2154,7 @@
           "quote": "She tried vaping twice in high school and does not currently vape."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.she_tried_vaping_twice_in_high_school_and_does_not_vape",
           "source": [
             "generated_output"
@@ -2164,9 +2166,9 @@
         "audit_id": "F272",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
+          "gpt-5_6-sol",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,

@@ -1,61 +1,236 @@
 History of Presenting Complaints:
- - Patient reports overall improvement since last visit in October.
- - Nighttime cough has resolved; patient states it has been gone for approximately two months.
- - Patient reports intermittent mild daytime cough, occurring sometimes in the morning.
- - Patient reports rare wheezing, approximately once a week, associated with physical activity such as running around the classroom.
- - Patient reports occasional heartburn, approximately once to twice per week, described as not bad.
- - Patient reports persistent mild nasal congestion that has been fairly constant.
- - Patient reports fatigue that is improved compared to the fall but still present.
- - Patient reports using the albuterol rescue inhaler approximately twice a week or less.
+- The visit is a follow-up for asthma and reflux about three months after an end-of-January visit.
+- The patient reports overall breathing is better since January.
+- Winter was rough for her breathing.
+- She had a nighttime cough that woke her around 2 a.m.
+- The nighttime cough was thought partly related to reflux.
+- The nighttime cough has resolved.
+- The nighttime cough has been gone since roughly March.
+- She sleeps through the night now.
+- Her husband says she no longer clears her throat all night.
+- During the day she is mostly good.
+- She still gets wheezy with exertion.
+- Walking up the hill to the mailbox too fast causes wheeze.
+- The exertional wheeze is better than in January.
+- In January she wheezed every time she went outside.
+- She still gets chest tightness on cold mornings.
+- Chest tightness occurs when she first steps outside.
+- Chest tightness occurs maybe once or twice a week.
+- Chest tightness is much better than in winter.
+- She uses her albuterol rescue inhaler about twice a week.
+- She uses albuterol before going for a walk when it is cold.
+- She uses albuterol after vacuuming.
+- Vacuuming triggers her breathing symptoms.
+- The provider stated twice-weekly rescue use suggests asthma is not fully well controlled.
+- The provider stated ideally rescue inhaler use is less than twice a week for well-controlled asthma.
+- Heartburn is much better.
+- She previously had heartburn every day.
+- Burning came up at night during the bad stretch.
+- Night burning coincided with bad cough.
+- She doubled omeprazole herself to 40 mg daily in March.
+- She took omeprazole 40 mg daily for about a month or five weeks.
+- The increased omeprazole helped.
+- She returned to omeprazole 20 mg once daily before breakfast.
+- On omeprazole 20 mg she is mostly fine.
+- She has breakthrough heartburn about twice a week.
+- Coffee on an empty stomach triggers breakthrough heartburn.
+- Tomato sauce triggers breakthrough heartburn.
+- Morning sour taste is mostly better.
+- Morning hoarseness is improved.
+- Her students previously said she sounded like a frog on Mondays.
+- Congestion and sneezing increased after December.
+- She was stuffy through January.
+- She blamed the stuffiness on dry heat.
+- She thought the symptoms might be spring pollen.
+- She refilled albuterol in February.
+- She refilled albuterol again in May.
+- Previously she refilled albuterol about every four to five months.
+- She got a cat named Miso in mid-December.
+- The cat is about eight months old now.
+- The cat sleeps on her pillow.
+- The timing of symptoms lines up with possible cat dander exposure.
+- Cat dander is one of the most common allergy triggers.
+- Allergy testing is planned for cat, dust mite, pollens, and molds.
+- Oxygen saturation was 98% on room air at the visit.
+- Heart rate was 72.
+- Respiratory rate was 14.
+- Blood pressure was 118/76.
+- Lungs were clear bilaterally.
+- No wheezes were heard.
+- No rhonchi were heard.
+- Air entry was good throughout.
+- The throat was a little red.
+- No throat exudate was seen.
+- Nasal turbinates were swollen.
+- Nasal turbinates were pale.
+- The nasal findings fit an allergic rhinitis picture.
+- Peak flow was 380.
+- Personal best peak flow is 420.
+- Peak flow was about 90% of personal best.
+- The peak flow is in her green zone.
+- Her fluticasone inhaler technique was textbook.
+- She uses a spacer with albuterol.
+- She does not use a spacer with fluticasone.
+- She rinses her mouth after fluticasone.
 
 Past Medical & Psychiatric History:
- - Patient has asthma since childhood.
- - Patient has GERD, diagnosed two years ago.
+- Asthma was diagnosed at age seven.
+- She had eczema as a child.
+- She has a history of allergies.
+- She has reflux/heartburn.
+- She had an ER visit in 2019.
+- The 2019 ER visit was for bronchitis that turned into a bad asthma flare.
+- She received steroids during the 2019 ER visit.
+- She received a breathing treatment during the 2019 ER visit.
+- She was sent home from the 2019 ER visit.
+- She has never been admitted to the hospital for asthma.
+- She has never been in the ICU.
+- She has never been intubated.
+- She had her appendix removed in 2011.
+- She does not have diabetes.
+- She does not have blood pressure problems.
+- She has a penicillin allergy.
+- Penicillin caused hives in childhood.
+- The hives were head to toe.
+- She has no other known drug allergies.
 
 Medications:
- - Fluticasone inhaler (Flovent) 110 mcg, 2 puffs once daily in the morning.
- - Albuterol rescue inhaler 90 mcg, 2 puffs as needed; used approximately twice weekly.
- - Omeprazole 20 mg once daily; patient self-doubled to 40 mg daily for approximately three weeks in November due to a bad reflux month, then returned to 20 mg daily.
- - Loratadine 10 mg once daily for allergies.
- - Vitamin D 1000 IU daily.
- - Occasional Tylenol for headaches.
- - Montelukast was stopped in August due to vivid dreams and feeling "a little off"; patient has remained off this medication.
+- Fluticasone 110 micrograms two puffs once daily in the morning at the time of the visit.
+- She keeps fluticasone by her toothbrush.
+- She misses fluticasone about once a month when traveling.
+- Albuterol 90 micrograms two puffs as needed.
+- She uses albuterol about twice a week.
+- She uses a spacer with albuterol.
+- Omeprazole 20 mg once daily before breakfast.
+- She self-doubled omeprazole to 40 mg daily for about a month or five weeks starting in March.
+- She returned to omeprazole 20 mg daily after the increased dose.
+- Cetirizine 10 mg at night.
+- She takes cetirizine almost every day once pollen starts.
+- She has been consistent with cetirizine since about April.
+- She slacks off cetirizine in winter.
+- Vitamin D3 1000 units daily.
+- Tums were used frequently during the bad reflux month.
+- Some days she took four or five Tums during the bad reflux month.
+- Tums are now used about twice a week at most.
+- Ibuprofen is used maybe once a month for headache.
+- Ibuprofen is not used regularly.
+- Montelukast 10 mg at night was stopped about two years ago.
+- Montelukast was stopped due to vivid dreams.
+- Montelukast was stopped due to irritability/mood changes.
+- Her husband noticed the irritability before she did.
+- The dreams went away within about a week of stopping montelukast.
+- She did not notice a breathing difference after stopping montelukast.
 
 Family History:
- - Mother has asthma.
- - Father is on blood pressure medication.
- - Sister is healthy.
+- Her mother has asthma.
+- Her mother still uses inhalers at age 74.
+- Her father has Barrett's esophagus.
+- Her father's Barrett's esophagus is from years of reflux.
+- Her father has undergone scopes.
+- Her father's history is part of why she takes heartburn seriously.
+- She has one brother.
+- Her brother has hay fever.
+- Her brother does not have asthma.
 
 Social History:
- - Patient works as a fifth-grade teacher.
- - Patient quit smoking approximately five years ago.
- - Patient drinks approximately two glasses of wine on the weekend.
- - Patient denies any known drug allergies.
-
-Mental Status Examination:
- - Appearance: Not explicitly mentioned in the transcript.
- - Behaviour: Not explicitly mentioned in the transcript.
- - Speech: Not explicitly mentioned in the transcript.
- - Mood: Not explicitly mentioned in the transcript.
- - Affect: Not explicitly mentioned in the transcript.
- - Thoughts: Not explicitly mentioned in the transcript.
- - Perceptions: Not explicitly mentioned in the transcript.
- - Cognition: Not explicitly mentioned in the transcript.
- - Insight: Not explicitly mentioned in the transcript.
- - Judgment: Not explicitly mentioned in the transcript.
-
-Risk Assessment:
- - No assessment of suicidality, homicidality, or other risks was explicitly mentioned in the transcript.
+- She is a third-grade teacher.
+- She has 26 students this year.
+- Her work involves chalk dust.
+- Her work involves germs.
+- She gets every cold her students get.
+- She quit smoking in 2016.
+- She has been quit for nine years.
+- She smoked about half a pack a day.
+- She smoked for about eight years.
+- She smoked from college through her twenties.
+- Her smoking history is roughly four pack-years.
+- She drinks a glass of wine, maybe two, on weekends.
+- She drinks red wine.
+- She says she behaves with alcohol during the week.
+- She drinks two cups of coffee in the morning.
+- She has a husband.
+- She has a cat named Miso.
+- The cat is about eight months old.
+- The cat came home in mid-December.
 
 Diagnosis:
- - No formal diagnosis was explicitly stated in the transcript.
+- Asthma is not 100% controlled.
+- Twice-weekly rescue use indicates the asthma is not fully controlled.
+- Wheeze on the hill indicates the asthma is not fully controlled.
+- Reflux/heartburn is mostly controlled on omeprazole 20 mg.
+- Occasional breakthrough reflux symptoms occur.
+- Nasal findings fit an allergic rhinitis picture.
+- Possible cat dander allergy is suspected based on timing after getting the cat.
 
 Treatment Plan:
- - Spirometry to be performed today.
- - Referral for allergy testing.
- - Continue fluticasone inhaler at current dose.
- - Continue omeprazole 20 mg once daily at current dose.
- - Follow-up appointment scheduled in three months.
+- Fluticasone will be increased from 110 micrograms to 220 micrograms.
+- The new fluticasone dose is two puffs once daily in the morning.
+- The fluticasone routine will stay the same.
+- She should rinse her mouth and spit after fluticasone.
+- Rinsing after fluticasone prevents thrush.
+- A spacer can be used with fluticasone.
+- A spacer helps more medicine get into the lungs instead of hitting the back of the throat.
+- Albuterol will continue as the rescue inhaler.
+- The albuterol dose is two puffs as needed.
+- Albuterol should be used with a spacer.
+- An albuterol refill will be sent.
+- The refill is intended to provide one inhaler for home and one for her bag.
+- Omeprazole will continue at 20 mg once daily before breakfast.
+- She should not double omeprazole herself again.
+- She should call the provider first if another bad reflux stretch occurs.
+- If 20 mg is not enough, the provider wants to discuss why and possibly check things rather than increase the dose independently.
+- If reflux stays quiet for about six months, they can discuss whether daily omeprazole is still needed.
+- They can discuss trying to step down omeprazole in the future.
+- Her father's history makes them want to be thoughtful about omeprazole step-down.
+- Cetirizine will continue at 10 mg at night.
+- Cetirizine is fine long term.
+- Cetirizine should be held for about five days before allergy skin testing.
+- Stopping cetirizine before testing is needed because it can blunt the results.
+- Vitamin D3 will continue.
+- Spirometry/full pulmonary function testing with bronchodilator is ordered.
+- The testing will measure before and after albuterol.
+- The lab will call to schedule spirometry.
+- Spirometry is to be done in the next month.
+- She should take fluticasone as normal on the day of spirometry.
+- She should hold albuterol the morning of spirometry unless she really needs it.
+- The reason to hold albuterol is to see the bronchodilator response.
+- A referral to allergy for skin testing is being placed.
+- Allergy testing will include cat.
+- Allergy testing will include dust mite.
+- Allergy testing will include pollens.
+- Allergy testing will include molds.
+- The allergy referral will be put in today.
+- Allergy appointments are booking about four to six weeks out.
+- The allergy office will remind her to stop cetirizine when scheduling.
+- The bedroom should be made a cat-free zone until allergy results are known.
+- A HEPA filter in the bedroom is recommended if willing.
+- Washing bedding hot once a week is an option for allergen control.
+- Some people do well with keeping the cat out of the bedroom, a HEPA filter, weekly hot bedding washing, and an antihistamine.
+- Rehoming the cat is not being required at this time.
+- Inhaler technique was reviewed.
+- The patient demonstrated textbook fluticasone technique.
+- The patient already rinses her mouth after fluticasone.
+- The patient repeated the plan back correctly.
+- A glass or two of wine on weekends is fine unless it triggers reflux.
+
+Follow-up appointments and referrals:
+- Follow-up is planned in about eight weeks.
+- Follow-up will be around the end of July.
+- Follow-up will occur after spirometry.
+- Follow-up will hopefully occur after allergy testing.
+- The provider will review the numbers together.
+- The provider will assess whether fluticasone 220 is working.
+- She should be seen sooner if albuterol use exceeds twice a week.
+- She should be seen sooner if night cough returns.
+- She should be seen sooner if she is waking up at night.
+- In the fall, flu shot will be done.
+- In the fall, her COVID booster will be checked.
 
 Safety Plan:
- - No safety plan details were explicitly mentioned in the transcript.
+- Call the provider if using albuterol more than twice a week.
+- Call the provider if night cough returns.
+- Call the provider if waking up at night.
+- Go to the ER if short of breath so severe she cannot talk in full sentences.
+- Go to the ER if lips go blue.
+- Go to the ER if the rescue inhaler is not helping.
+- Call the provider before changing the omeprazole dose if heartburn breaks through badly.

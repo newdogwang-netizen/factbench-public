@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s011_syn",
     "version": "1",
-    "sha256": "1bfecb96d46abdbbaebb6933ded8b63aa7e14e6acd9077c9d733b39ec23b05f2",
+    "sha256": "7e78d95e0176b993e01bd458d87f9ae39dafd7f702b0bc706689a489cd51d42b",
     "reviewed": false
   },
   "source": {
@@ -13,13 +13,13 @@
     "sha256": null,
     "stats": {
       "n_models": 8,
-      "n_facts": 385,
+      "n_facts": 386,
       "certain": 5,
       "strict_certain": 5,
       "low_conf": 25,
-      "unique": 355,
+      "unique": 356,
       "unanimous": 5,
-      "low_support": 329
+      "low_support": 330
     }
   },
   "selection": {
@@ -75,7 +75,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -83,7 +83,7 @@
           "quote": "Home blood pressure readings around 128/80"
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.home_blood_pressure_readings_around_128_80",
           "source": [
             "generated_output"
@@ -91,7 +91,7 @@
           "quote": "Home blood pressure readings around 128/80."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -115,7 +115,7 @@
           "quote": "Hypertension."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -123,7 +123,7 @@
           "quote": "Home blood pressure is around 128/80"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.home_blood_pressure_is_around_128_80",
           "source": [
             "generated_output"
@@ -131,7 +131,7 @@
           "quote": "Home blood pressure is around 128/80."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -139,7 +139,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -147,7 +147,7 @@
           "quote": "Home blood pressure is approximately 128/80 mmHg"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.home_blood_pressure_is_approximately_128_80_mmhg",
           "source": [
             "generated_output"
@@ -155,7 +155,7 @@
           "quote": "Home blood pressure is approximately 128/80 mmHg."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.hypertension",
           "source": [
             "generated_output"
@@ -163,7 +163,7 @@
           "quote": "Hypertension is treated with lisinopril."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -171,7 +171,7 @@
           "quote": "Hypertension is treated with lisinopril"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -179,7 +179,7 @@
           "quote": "Home blood pressure is approximately 128/80"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.home_blood_pressure_is_approximately_128_80",
           "source": [
             "generated_output"
@@ -243,7 +243,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -255,14 +255,14 @@
         "audit_id": "F013",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "gemini-2.5-pro"
+          "google_gemini-2_5-pro"
         ],
         "status": "release",
         "field_stable": true,
@@ -294,13 +294,14 @@
       ],
       "coverage_fields": [
         "subject",
+        "object",
         "status",
         "polarity"
       ],
       "fields": {
         "subject": "patient",
         "predicate": "has",
-        "object": null,
+        "object": "hyperlipidemia, unspecified",
         "value": null,
         "unit": null,
         "time": null,
@@ -312,7 +313,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.hyperlipidemia_unspecified",
           "source": [
             "generated_output"
@@ -336,7 +337,7 @@
           "quote": "Hyperlipidemia."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.hyperlipidemia_unspecified",
           "source": [
             "generated_output"
@@ -380,9 +381,9 @@
         "audit_id": "F019",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.6-sol",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -392,11 +393,11 @@
         "policy": "note_consensus_threshold",
         "k_support": 3,
         "n_supporters": 5,
-        "transcript_anchored": true
+        "transcript_anchored": false
       },
       "salience": {
-        "must_cover": true,
-        "must_cover_source": "llm",
+        "must_cover": false,
+        "must_cover_source": null,
         "must_not_err": false
       }
     },
@@ -441,7 +442,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -457,7 +458,7 @@
           "quote": "Atorvastatin 20 mg at night for cholesterol."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -465,7 +466,7 @@
           "quote": "Atorvastatin 20 mg at night."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -473,7 +474,7 @@
           "quote": "Atorvastatin 20 mg at night."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -481,7 +482,7 @@
           "quote": "Atorvastatin 20 mg by mouth nightly."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -509,12 +510,12 @@
         "audit_id": "F020",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -573,7 +574,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -589,7 +590,7 @@
           "quote": "Trazodone 50 mg at bedtime (reduced from 100 mg in February due to morning grogginess)."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -597,7 +598,7 @@
           "quote": "Trazodone 50 mg at bedtime. The dose was reduced from 100 mg in February due to morning grogginess."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -605,7 +606,7 @@
           "quote": "Trazodone 50 mg at bedtime."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -613,7 +614,7 @@
           "quote": "Trazodone 50 mg continues to help him fall asleep within approximately 20–30 minutes."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -641,12 +642,12 @@
         "audit_id": "F023",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -705,7 +706,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -721,7 +722,7 @@
           "quote": "Lisinopril 10 mg once daily in the morning for blood pressure."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -729,7 +730,7 @@
           "quote": "Lisinopril 10 mg once daily in the morning."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -737,7 +738,7 @@
           "quote": "Lisinopril 10 mg once daily in the morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -745,7 +746,7 @@
           "quote": "Lisinopril 10 mg by mouth every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -773,12 +774,12 @@
         "audit_id": "F026",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -837,7 +838,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -853,7 +854,7 @@
           "quote": "Metformin 500 mg twice daily with breakfast and dinner for prediabetes."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -861,7 +862,7 @@
           "quote": "Metformin 500 mg twice daily with breakfast and dinner."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -869,7 +870,7 @@
           "quote": "Metformin 500 mg twice daily with breakfast and dinner."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -877,7 +878,7 @@
           "quote": "Metformin 500 mg by mouth twice daily with breakfast and dinner."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -905,12 +906,12 @@
         "audit_id": "F027",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -963,7 +964,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.zolpidem",
           "source": [
             "generated_output"
@@ -979,7 +980,7 @@
           "quote": "Zolpidem stopped over a year ago due to sleep-eating episode and next-day sedation."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.zolpidem",
           "source": [
             "generated_output"
@@ -1007,9 +1008,9 @@
         "audit_id": "F029",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1062,7 +1063,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.mother_has_type_2_diabetes",
           "source": [
             "generated_output"
@@ -1078,7 +1079,7 @@
           "quote": "Mother has type 2 diabetes."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.mother_has_type_2_diabetes",
           "source": [
             "generated_output"
@@ -1102,7 +1103,7 @@
           "quote": "Mother: type 2 diabetes."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.his_mother_has_type_2_diabetes",
           "source": [
             "generated_output"
@@ -1114,12 +1115,12 @@
         "audit_id": "F032",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
+          "gpt-5_4",
           "kimi-k3",
           "minimax-m3",
-          "gpt-5.6-sol"
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -1168,7 +1169,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "demo.wife",
           "source": [
             "generated_output"
@@ -1184,7 +1185,7 @@
           "quote": "Wife reports snoring is basically gone since machine switch and has not observed breathing cessation episodes."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.wife",
           "source": [
             "generated_output"
@@ -1204,9 +1205,9 @@
         "audit_id": "F038",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",
@@ -1264,7 +1265,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -1280,7 +1281,7 @@
           "quote": "Trazodone to remain at 50 mg but taken earlier, at 8:30-9 PM instead of at bedtime, to reduce morning fog and help wind down for earlier bedtime."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -1288,7 +1289,7 @@
           "quote": "Trazodone is to remain at 50 mg."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -1296,7 +1297,7 @@
           "quote": "Continue trazodone 50 mg without increasing the dose."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -1324,11 +1325,11 @@
         "audit_id": "F045",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1395,7 +1396,7 @@
           "quote": "Prior morning grogginess on higher dose of trazodone."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -1403,7 +1404,7 @@
           "quote": "History of insomnia treated with trazodone."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.trazodone",
           "source": [
             "generated_output"
@@ -1432,8 +1433,8 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "kimi-k2",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1494,7 +1495,7 @@
           "quote": "Caffeine cutoff at noon."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.caffeine_cutoff_at_noon",
           "source": [
             "generated_output"
@@ -1511,11 +1512,11 @@
         }
       ],
       "provenance": {
-        "audit_id": "F083",
+        "audit_id": "F084",
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",
@@ -1567,7 +1568,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.epworth_sleepiness_scale_score_today_was_16",
           "source": [
             "generated_output"
@@ -1575,7 +1576,7 @@
           "quote": "Epworth Sleepiness Scale score today was 16."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.prior_epworth_sleepiness_scale_score_was_13",
           "source": [
             "generated_output"
@@ -1583,7 +1584,7 @@
           "quote": "Prior Epworth Sleepiness Scale score was 13."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.epworth_sleepiness_scale_score_today_is_16",
           "source": [
             "generated_output"
@@ -1591,7 +1592,7 @@
           "quote": "Epworth Sleepiness Scale score today is 16."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.his_previous_epworth_sleepiness_scale_score_was_13",
           "source": [
             "generated_output"
@@ -1599,7 +1600,7 @@
           "quote": "His previous Epworth Sleepiness Scale score was 13."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.epworth_sleepiness_scale_score_today_is_16",
           "source": [
             "generated_output"
@@ -1607,7 +1608,7 @@
           "quote": "Epworth Sleepiness Scale score today is 16."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.previous_epworth_sleepiness_scale_score_was_13",
           "source": [
             "generated_output"
@@ -1616,12 +1617,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F121",
+        "audit_id": "F122",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -1672,7 +1673,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.shortness_of_breath",
           "source": [
             "generated_output"
@@ -1680,7 +1681,7 @@
           "quote": "Patient denied shortness of breath."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.shortness_of_breath",
           "source": [
             "generated_output"
@@ -1688,7 +1689,7 @@
           "quote": "He denies shortness of breath."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.shortness_of_breath",
           "source": [
             "generated_output"
@@ -1697,12 +1698,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F134",
+        "audit_id": "F135",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -1753,7 +1754,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.leg_swelling",
           "source": [
             "generated_output"
@@ -1761,7 +1762,7 @@
           "quote": "Patient denied leg swelling."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.leg_swelling",
           "source": [
             "generated_output"
@@ -1769,7 +1770,7 @@
           "quote": "He denies leg swelling."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.leg_swelling",
           "source": [
             "generated_output"
@@ -1778,12 +1779,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F135",
+        "audit_id": "F136",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -1832,7 +1833,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.zolpidem",
           "source": [
             "generated_output"
@@ -1840,7 +1841,7 @@
           "quote": "Zolpidem was stopped over a year ago."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.zolpidem",
           "source": [
             "generated_output"
@@ -1857,11 +1858,11 @@
         }
       ],
       "provenance": {
-        "audit_id": "F142",
+        "audit_id": "F143",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -1913,7 +1914,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.penicillin_causes_hives",
           "source": [
             "generated_output"
@@ -1921,7 +1922,7 @@
           "quote": "Penicillin causes hives."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.penicillin_causes_hives",
           "source": [
             "generated_output"
@@ -1929,7 +1930,7 @@
           "quote": "Penicillin causes hives."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.penicillin_allergy_causes_hives_since_childhood",
           "source": [
             "generated_output"
@@ -1938,12 +1939,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F146",
+        "audit_id": "F147",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -1992,7 +1993,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.modafinil",
           "source": [
             "generated_output"
@@ -2000,7 +2001,7 @@
           "quote": "Modafinil was discussed as a possible future option for residual sleepiness in treated sleep apnea."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.modafinil",
           "source": [
             "generated_output"
@@ -2017,11 +2018,11 @@
         }
       ],
       "provenance": {
-        "audit_id": "F176",
+        "audit_id": "F177",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3"
         ],
         "status": "release",

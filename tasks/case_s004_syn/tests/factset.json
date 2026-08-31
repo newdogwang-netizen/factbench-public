@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s004_syn",
     "version": "1",
-    "sha256": "0786f60ac9964a1537039584e36d2b09cedadf60ec1f63f21bad3ad562576491",
+    "sha256": "2070e858b04da991a2b6785feb9ff9e605d41c79a6cd0fe894f287b7ccbecb03",
     "reviewed": false
   },
   "source": {
@@ -13,13 +13,13 @@
     "sha256": null,
     "stats": {
       "n_models": 8,
-      "n_facts": 508,
+      "n_facts": 506,
       "certain": 9,
       "strict_certain": 7,
-      "low_conf": 29,
-      "unique": 470,
+      "low_conf": 28,
+      "unique": 469,
       "unanimous": 10,
-      "low_support": 438
+      "low_support": 437
     }
   },
   "selection": {
@@ -74,7 +74,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.patient_is_a_32_year_old_man_presenting_with_low_mood_for_approximately_8_9_months_beginning_around_october_after_a_round_of_layoffs_at_his_freight_logistics_company_where_he_works_as_a_project_manager",
           "source": [
             "generated_output"
@@ -82,7 +82,7 @@
           "quote": "Patient is a 32-year-old man presenting with low mood for approximately 8-9 months, beginning around October after a round of layoffs at his freight logistics company where he works as a project manager."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -90,7 +90,7 @@
           "quote": "PHQ-9 score of 16 (moderately severe depression)"
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.mother_has_depression_treated_with_sertraline_100_mg_daily_for_years_with_good_response",
           "source": [
             "generated_output"
@@ -122,7 +122,7 @@
           "quote": "Mother has depression; treated with sertraline 100 mg for years; doing well."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.low_mood_on_most_days",
           "source": [
             "generated_output"
@@ -130,7 +130,7 @@
           "quote": "He experiences low mood on most days."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -138,7 +138,7 @@
           "quote": "His mother has depression"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.his_mother_has_depression",
           "source": [
             "generated_output"
@@ -194,7 +194,7 @@
           "quote": "Mother: depression; on sertraline 100 mg for years with good response"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.marcus_presents_with_depressed_mood",
           "source": [
             "generated_output"
@@ -202,7 +202,7 @@
           "quote": "Marcus presents with depressed mood."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -210,7 +210,7 @@
           "quote": "The clinician states a PHQ-9 score of sixteen is in the moderately severe range for depression"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.his_mother_has_depression",
           "source": [
             "generated_output"
@@ -218,7 +218,7 @@
           "quote": "His mother has depression."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -226,7 +226,7 @@
           "quote": "Mother has depression, treated with sertraline"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -234,7 +234,7 @@
           "quote": "His mother has depression"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.his_mother_has_depression",
           "source": [
             "generated_output"
@@ -246,14 +246,14 @@
         "audit_id": "F002",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.6-sol",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max",
-          "gemini-2.5-pro",
-          "gpt-5.4"
+          "qwen3p8-max",
+          "google_gemini-2_5-pro",
+          "gpt-5_4"
         ],
         "status": "release",
         "field_stable": true,
@@ -304,7 +304,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.sleep_disturbance_difficulty_staying_asleep_waking_at_3_4_am_with_racing_thoughts_about_work_and_money_getting_approximately_5_5_5_hours_of_sleep_nightly",
           "source": [
             "generated_output"
@@ -320,7 +320,7 @@
           "quote": "Sleep disturbance: falls asleep without difficulty but wakes at 3–4 AM with racing thoughts about work and money, unable to return to sleep; estimates 5–5.5 hours of sleep per night."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.sleep_is_bad",
           "source": [
             "generated_output"
@@ -336,7 +336,7 @@
           "quote": "Sleep: he falls asleep easily due to exhaustion but wakes at 3:00–4:00 AM with ruminations about work and money and cannot return to sleep."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.he_cannot_get_back_to_sleep",
           "source": [
             "generated_output"
@@ -348,11 +348,11 @@
         "audit_id": "F004",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
+          "gpt-5_4",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -401,7 +401,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "demo.energy",
           "source": [
             "generated_output"
@@ -429,7 +429,7 @@
         "audit_id": "F006",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
           "kimi-k3"
         ],
@@ -483,7 +483,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -499,7 +499,7 @@
           "quote": "Reports feelings of guilt, worthlessness, and feeling like a burden; believes he is failing at work and as a boyfriend."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -507,7 +507,7 @@
           "quote": "He reports feelings of guilt, worthlessness, and being a burden, stating he feels he is \"failing at everything.\""
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -515,7 +515,7 @@
           "quote": "He reported guilt."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.guilt",
           "source": [
             "generated_output"
@@ -523,7 +523,7 @@
           "quote": "He reported guilt."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -547,7 +547,7 @@
           "quote": "Feelings of guilt and worthlessness; believes he is failing at work and as a boyfriend"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -559,14 +559,14 @@
         "audit_id": "F009",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -617,7 +617,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.er_workup_ekg_troponin_chest_x_ray_was_normal_er_physician_suggested_panic_attack",
           "source": [
             "generated_output"
@@ -625,7 +625,15 @@
           "quote": "ER workup (EKG, troponin, chest x-ray) was normal; ER physician suggested panic attack."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 20 mg as needed for performance anxiety, taken 2-3 times per week before presentations or leading calls; sometimes takes 40 mg for big meetings (previously 10 mg, increased about 4 months ago)"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.brother_kyle_has_panic_attacks_tried_escitalopram_a_couple_of_years_ago_but_stopped_after_about_a_month_due_to_feeling_numb_like_a_zombie",
           "source": [
             "generated_output"
@@ -633,20 +641,12 @@
           "quote": "Brother Kyle has panic attacks; tried escitalopram a couple of years ago but stopped after about a month due to feeling numb like a zombie."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.maternal_grandmother_was_hospitalized_once_for_what_was_called_a_nervous_breakdown",
           "source": [
             "generated_output"
           ],
           "quote": "Maternal grandmother was hospitalized once for what was called a \"nervous breakdown.\""
-        },
-        {
-          "model": "deepseek-v4-flash",
-          "key": "diagnosis.panic_disorder_with_recurrent_unexpected_panic_attacks_and_avoidance_behaviors_gad_7_score_13",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Panic disorder with recurrent unexpected panic attacks and avoidance behaviors (GAD-7 score 13)."
         },
         {
           "model": "glm-5p2",
@@ -689,7 +689,7 @@
           "quote": "Rumors of another layoff round at work in the summer, contributing to anxiety."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -697,7 +697,7 @@
           "quote": "He reports significant anticipatory anxiety about having another attack"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.symptom_propranolol_20_mg_as_needed_for_performance_anxiety_taken_2_3_times_per_week",
           "source": [
             "generated_output"
@@ -705,7 +705,7 @@
           "quote": "Propranolol 20 mg as needed for performance anxiety, taken 2-3 times per week"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.marcus_presented_due_to_months_of_depressed_mood_and_panic_attacks",
           "source": [
             "generated_output"
@@ -713,7 +713,7 @@
           "quote": "Marcus presented due to months of depressed mood and panic attacks."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -721,7 +721,7 @@
           "quote": "Lindqvist about two years ago for performance anxiety"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.his_brother_kyle_has_panic_attacks",
           "source": [
             "generated_output"
@@ -729,7 +729,7 @@
           "quote": "His brother Kyle has panic attacks."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.his_first_panic_attack_occurred_around_january_while_he_was_grocery_shopping",
           "source": [
             "generated_output"
@@ -737,7 +737,7 @@
           "quote": "His first panic attack occurred around January while he was grocery shopping."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -745,7 +745,7 @@
           "quote": "Propranolol was initially prescribed at 10 mg as needed approximately two years ago for performance anxiety"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.his_brother_kyle_has_panic_attacks",
           "source": [
             "generated_output"
@@ -817,7 +817,7 @@
           "quote": "Maternal grandmother: hospitalized once historically for what was termed a \"nervous breakdown\""
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.marcus_presents_with_panic_attacks",
           "source": [
             "generated_output"
@@ -825,7 +825,7 @@
           "quote": "Marcus presents with panic attacks."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -833,7 +833,7 @@
           "quote": "He takes propranolol for performance anxiety"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.his_brother_kyle_has_panic_attacks",
           "source": [
             "generated_output"
@@ -841,7 +841,7 @@
           "quote": "His brother Kyle has panic attacks."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.he_acknowledges_caffeine_may_not_be_helping_with_panic_attacks",
           "source": [
             "generated_output"
@@ -853,14 +853,14 @@
         "audit_id": "F014",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -874,135 +874,6 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false
-      }
-    },
-    {
-      "key": "fluoxetine",
-      "canonical_anchor": "med.medication.fluoxetine.present",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "unit",
-        "value"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "value",
-        "unit",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "fluoxetine",
-        "value": "20",
-        "unit": "mg",
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "past",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "medication.fluoxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Previous trial of fluoxetine at age 16 (20 mg) for depression during parents' divorce; took for about 1-1.5 years, had good response, stopped because he felt well, no remembered side effects."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "medication.fluoxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Second fluoxetine trial: approximately one year ago, initiated by Dr. Lindqvist for declining mood before panic attacks began; within one week developed daily morning nausea, jitteriness/wired feeling, and worsened sleep; dose was increased to 40 mg at approximately six weeks; symptoms worsened; stopped at approximately week 10–11; nausea resolved within one week of discontinuation; mood symptoms did not improve."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "medication.fluoxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "He stopped fluoxetine as a teenager because he felt better."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.fluoxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "He recalls no adverse effects from the adolescent fluoxetine trial."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.fluoxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "His depressive symptoms did not improve with the second fluoxetine trial."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "medication.fluoxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Nausea resolved within a week of stopping fluoxetine."
-        },
-        {
-          "model": "minimax-m3",
-          "key": "medication.fluoxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Past psychiatric medication trial: fluoxetine 20 mg at age 16 for approximately 1-1.5 years during parents' divorce; good response; discontinued when well; no remembered side effects"
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.fluoxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "He stopped fluoxetine because he felt better."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F016",
-        "support": "7/7",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k3",
-          "minimax-m3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 7,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "text",
-        "must_not_err": true
       }
     },
     {
@@ -1041,12 +912,20 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
           ],
           "quote": "Chronic medical conditions: hypertension (on lisinopril), childhood asthma (outgrown by age 13-14), mild concussion in junior year of high school from football"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily in the morning for blood pressure (previously 5 mg, increased about a year ago)"
         },
         {
           "model": "glm-5p2",
@@ -1057,7 +936,7 @@
           "quote": "Lisinopril 10 mg once daily in the morning for hypertension"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1065,7 +944,7 @@
           "quote": "History of hypertension"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1073,7 +952,7 @@
           "quote": "He has hypertension"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.he_has_hypertension",
           "source": [
             "generated_output"
@@ -1081,7 +960,7 @@
           "quote": "He has hypertension."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1089,7 +968,7 @@
           "quote": "He has hypertension"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.he_has_hypertension",
           "source": [
             "generated_output"
@@ -1129,7 +1008,7 @@
           "quote": "Chronic medical condition: hypertension"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1141,14 +1020,14 @@
         "audit_id": "F025",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1205,12 +1084,12 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
           ],
-          "quote": "Chronic medical conditions: hypertension (on lisinopril), childhood asthma (outgrown by age 13-14), mild concussion in junior year of high school from football."
+          "quote": "Lisinopril 10 mg once daily in the morning for blood pressure (previously 5 mg, increased about a year ago)."
         },
         {
           "model": "glm-5p2",
@@ -1221,7 +1100,7 @@
           "quote": "Lisinopril 10 mg once daily in the morning for hypertension."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1229,7 +1108,7 @@
           "quote": "Lisinopril 10 mg daily for hypertension."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1237,7 +1116,7 @@
           "quote": "He takes lisinopril 10 mg once daily in the morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1250,7 +1129,7 @@
           "source": [
             "generated_output"
           ],
-          "quote": "Hypertension, treated with lisinopril."
+          "quote": "Lisinopril 10 mg once daily in the morning (started at 5 mg three years ago, increased to 10 mg about one year ago)."
         },
         {
           "model": "minimax-m3",
@@ -1261,7 +1140,7 @@
           "quote": "Lisinopril 10 mg once daily in the morning; previously 5 mg, increased approximately one year ago; on for approximately 3 years"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1273,14 +1152,14 @@
         "audit_id": "F026",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1294,87 +1173,6 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": true
-      }
-    },
-    {
-      "key": "anxiety",
-      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.worsened",
-      "kind": "diagnosis",
-      "subtype": "mood_anxiety",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": "anxiety",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "worsened",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "diagnosis.anxiety",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Propranolol 20 mg as needed for performance anxiety, taken 2-3 times per week before presentations or leading calls; sometimes takes 40 mg for big meetings (previously 10 mg, increased about 4 months ago)"
-        },
-        {
-          "model": "glm-5p2",
-          "key": "diagnosis.diagnosis_lindqvist_for_declining_mood_before_panic_attacks_began_within_one_week_developed_daily_morning_nausea_jitteriness_wired_feeling_and_worsened_sleep_dose_was_increased_to_40_mg_at_approximately_six_weeks_symptoms_worsened_stopped_at_approximately_week_1011_nausea_resolved_within_one_week_of_discontinuation_mood_symptoms_did_not_improve",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Lindqvist for declining mood before panic attacks began; within one week developed daily morning nausea, jitteriness/wired feeling, and worsened sleep; dose was increased to 40 mg at approximately six weeks; symptoms worsened; stopped at approximately week 10–11; nausea resolved within one week of discontinuation; mood symptoms did not improve"
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "symptom.marcus_presents_for_worsening_depressed_mood_and_recurrent_panic_attacks_that_are_impairing_work_and_concerning_his_girlfriend",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Marcus presents for worsening depressed mood and recurrent panic attacks that are impairing work and concerning his girlfriend."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F029",
-        "support": "3/3",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gpt-5.6-sol"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 3,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
       }
     },
     {
@@ -1416,7 +1214,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -1432,7 +1230,7 @@
           "quote": "Propranolol 20 mg as needed for performance anxiety; taken on days with presentations or leading calls, approximately 2–3 times per week; occasionally takes 40 mg for particularly large meetings. Originally prescribed 10 mg two years ago by Dr. Lindqvist for presentation-related hand shaking and voice wobbling; increased to 20 mg approximately four months ago."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -1440,7 +1238,7 @@
           "quote": "Propranolol 20 mg as needed for performance anxiety, taken 2-3 times per week. He sometimes takes 40mg."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -1448,7 +1246,7 @@
           "quote": "Propranolol was initially 10 mg as needed."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -1472,7 +1270,7 @@
           "quote": "Propranolol 20 mg as needed (2-3 times per week for presentations or leading calls); occasionally 40 mg for very large meetings; previously 10 mg, increased 4 months ago"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -1481,17 +1279,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F030",
+        "audit_id": "F029",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1499,116 +1297,6 @@
         "policy": "note_consensus_threshold",
         "k_support": 3,
         "n_supporters": 8,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
-      }
-    },
-    {
-      "key": "vitamin d",
-      "canonical_anchor": "med.medication.vitamin_d.active",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "time"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "time",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "vitamin d",
-        "value": null,
-        "unit": null,
-        "time": "daily",
-        "location": null,
-        "owner": null,
-        "status": "active",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "medication.vitamin_d",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Vitamin D 2000 units daily (low level found last year)."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "medication.vitamin_d",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Vitamin D 2000 units daily for low vitamin D level identified last year."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "medication.vitamin_d",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Vitamin D 2000 units daily."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "medication.vitamin_d",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "He takes vitamin D 2000 units daily."
-        },
-        {
-          "model": "minimax-m3",
-          "key": "medication.vitamin_d",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Vitamin D 2000 units daily"
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.vitamin_d",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "He takes vitamin D two thousand units daily."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F034",
-        "support": "6/6",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "minimax-m3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 6,
         "transcript_anchored": true
       },
       "salience": {
@@ -1658,7 +1346,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -1674,7 +1362,7 @@
           "quote": "Melatonin 5 mg at night for sleep; reports it does not really work."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -1682,7 +1370,7 @@
           "quote": "Melatonin 5 mg at night."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -1690,7 +1378,7 @@
           "quote": "He takes melatonin 5 mg at night."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -1714,7 +1402,7 @@
           "quote": "Melatonin 5 mg at bedtime (patient reports it does not really work)"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -1723,17 +1411,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F035",
+        "audit_id": "F031",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1790,7 +1478,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1806,7 +1494,7 @@
           "quote": "Ibuprofen 400 mg as needed, approximately twice a week, for headaches or back pain."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1814,7 +1502,7 @@
           "quote": "Ibuprofen 400 mg approximately twice a week."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1822,7 +1510,7 @@
           "quote": "He takes ibuprofen 400 mg about twice a week for headaches or back pain."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1846,7 +1534,7 @@
           "quote": "Ibuprofen 400 mg approximately twice weekly for headaches or back pain"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1855,17 +1543,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F036",
+        "audit_id": "F032",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1898,6 +1586,7 @@
       "coverage_fields": [
         "subject",
         "object",
+        "location",
         "status",
         "polarity"
       ],
@@ -1908,7 +1597,7 @@
         "value": null,
         "unit": null,
         "time": null,
-        "location": null,
+        "location": "espalda",
         "owner": null,
         "status": "active",
         "polarity": "positive",
@@ -1916,7 +1605,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -1932,7 +1621,7 @@
           "quote": "Ibuprofen 400 mg as needed, approximately twice a week, for headaches or back pain."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -1940,7 +1629,7 @@
           "quote": "He takes ibuprofen 400 mg about twice a week for headaches or back pain."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -1964,7 +1653,7 @@
           "quote": "Ibuprofen 400 mg approximately twice weekly for headaches or back pain"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -1973,16 +1662,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F037",
+        "audit_id": "F033",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1993,8 +1682,8 @@
         "transcript_anchored": false
       },
       "salience": {
-        "must_cover": false,
-        "must_cover_source": null,
+        "must_cover": true,
+        "must_cover_source": "llm",
         "must_not_err": false
       }
     },
@@ -2039,7 +1728,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -2055,7 +1744,7 @@
           "quote": "Mother has depression; treated with sertraline 100 mg for years; doing well."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -2063,7 +1752,7 @@
           "quote": "Mother has depression, treated with sertraline."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -2071,7 +1760,7 @@
           "quote": "His mother has done well for years on sertraline 100 mg."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -2095,7 +1784,7 @@
           "quote": "Mother: depression; on sertraline 100 mg for years with good response"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -2104,17 +1793,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F038",
+        "audit_id": "F034",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2165,7 +1854,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.escitalopram",
           "source": [
             "generated_output"
@@ -2181,7 +1870,7 @@
           "quote": "Brother Kyle has panic attacks; tried escitalopram (Lexapro) a couple of years ago; discontinued after approximately one month due to feeling \"numb\" and \"like a zombie.\""
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.escitalopram",
           "source": [
             "generated_output"
@@ -2206,12 +1895,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F040",
+        "audit_id": "F036",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.6-sol",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -2264,7 +1953,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.no_known_family_history_of_suicide_attempt_or_death_by_suicide",
           "source": [
             "generated_output"
@@ -2272,7 +1961,7 @@
           "quote": "No known family history of suicide attempt or death by suicide."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.no_past_suicide_attempts",
           "source": [
             "generated_output"
@@ -2296,7 +1985,7 @@
           "quote": "Denies suicidal ideation, plan, intent, and past suicide attempts."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.suicide_plan",
           "source": [
             "generated_output"
@@ -2304,7 +1993,7 @@
           "quote": "He denied suicide plan."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.suicide_intent",
           "source": [
             "generated_output"
@@ -2312,7 +2001,7 @@
           "quote": "He denied suicide intent."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.he_denied_known_family_history_of_suicide_attempts",
           "source": [
             "generated_output"
@@ -2320,7 +2009,7 @@
           "quote": "He denied known family history of suicide attempts."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.he_denied_past_suicide_attempts",
           "source": [
             "generated_output"
@@ -2352,7 +2041,7 @@
           "quote": "No known family history of suicide attempts or deaths by suicide"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.he_is_unaware_of_any_family_history_of_suicide_attempts_or_suicide_deaths",
           "source": [
             "generated_output"
@@ -2360,7 +2049,7 @@
           "quote": "He is unaware of any family history of suicide attempts or suicide deaths."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.he_denies_a_suicide_plan",
           "source": [
             "generated_output"
@@ -2368,7 +2057,7 @@
           "quote": "He denies a suicide plan."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.he_denies_any_history_of_suicide_attempts",
           "source": [
             "generated_output"
@@ -2376,7 +2065,7 @@
           "quote": "He denies any history of suicide attempts."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.he_is_unaware_of_any_family_history_of_suicide_attempts_or_suicide_deaths",
           "source": [
             "generated_output"
@@ -2384,7 +2073,7 @@
           "quote": "He is unaware of any family history of suicide attempts or suicide deaths."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.a_suicide_plan",
           "source": [
             "generated_output"
@@ -2392,7 +2081,7 @@
           "quote": "He denies a suicide plan."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.suicide_intent",
           "source": [
             "generated_output"
@@ -2400,7 +2089,7 @@
           "quote": "He denies suicide intent."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.he_reports_no_known_family_suicide_attempts",
           "source": [
             "generated_output"
@@ -2408,7 +2097,7 @@
           "quote": "He reports no known family suicide attempts."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.he_denies_a_suicide_plan",
           "source": [
             "generated_output"
@@ -2416,7 +2105,7 @@
           "quote": "He denies a suicide plan."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.he_denies_suicide_intent",
           "source": [
             "generated_output"
@@ -2425,16 +2114,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F041",
+        "audit_id": "F037",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
+          "gpt-5_4",
           "kimi-k3",
           "minimax-m3",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2446,7 +2135,241 @@
       },
       "salience": {
         "must_cover": true,
-        "must_cover_source": "llm",
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "escitalopram",
+      "canonical_anchor": "med.medication.escitalopram.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "escitalopram",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plan: Discussed starting escitalopram (generic of Lexapro); patient raised concern about brother's negative experience with the same medication; plan discussion was ongoing at the end of the transcript."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dr. Reyes plans to initiate escitalopram (generic of Lexapro); patient interrupted to ask about this medication given his brother's negative experience with it; discussion was ongoing at the time of transcript cutoff."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The psychiatrist stated a plan to start escitalopram."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The psychiatrist proposed starting escitalopram."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician proposed starting escitalopram (disclosed as the generic of Lexapro)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dr. Reyes began to introduce a medication plan, starting with escitalopram (generic of Lexapro), but the patient interrupted to ask a question before further details were provided"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician plans to start escitalopram."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F047",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "lexapro",
+      "canonical_anchor": "med.medication.lexapro.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lexapro",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lexapro",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plan: Discussed starting escitalopram (generic of Lexapro); patient raised concern about brother's negative experience with the same medication; plan discussion was ongoing at the end of the transcript."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lexapro",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dr. Reyes plans to initiate escitalopram (generic of Lexapro); patient interrupted to ask about this medication given his brother's negative experience with it; discussion was ongoing at the time of transcript cutoff."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lexapro",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The psychiatrist stated escitalopram is the generic of Lexapro."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lexapro",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The psychiatrist explained that escitalopram is the generic form of Lexapro."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lexapro",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician proposed starting escitalopram (disclosed as the generic of Lexapro)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lexapro",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dr. Reyes began to introduce a medication plan, starting with escitalopram (generic of Lexapro), but the patient interrupted to ask a question before further details were provided"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lexapro",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Escitalopram is the generic form of Lexapro."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F048",
+        "support": "7/7",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 7,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
         "must_not_err": true
       }
     },
@@ -2499,7 +2422,7 @@
           "quote": "First psychiatric medication trial: fluoxetine (Prozac) at age 16 during parents' divorce; 20 mg; experienced full response and felt like himself again; took for approximately 1–1.5 years; stopped because he felt well; no side effects recalled."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.fluoxetine",
           "source": [
             "generated_output"
@@ -2507,7 +2430,7 @@
           "quote": "Past psychiatric history includes a depressive episode at age 16 during his parents' divorce, which was successfully treated with fluoxetine 20mg for about 1.5 years."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.fluoxetine",
           "source": [
             "generated_output"
@@ -2515,7 +2438,7 @@
           "quote": "His pediatrician prescribed fluoxetine 20 mg at that time."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.fluoxetine",
           "source": [
             "generated_output"
@@ -2531,7 +2454,7 @@
           "quote": "At age 16, during his parents' divorce, he was treated with fluoxetine 20 mg by his pediatrician for depression, with full response and no remembered side effects; he took it for about one to one and a half years and stopped when well."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.fluoxetine",
           "source": [
             "generated_output"
@@ -2540,15 +2463,15 @@
         }
       ],
       "provenance": {
-        "audit_id": "F078",
+        "audit_id": "F074",
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2613,7 +2536,7 @@
           "quote": "Buspirone (Buspar) 15 mg twice daily for approximately one month; reported no effect; discontinued."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.buspirone",
           "source": [
             "generated_output"
@@ -2621,7 +2544,7 @@
           "quote": "He was prescribed buspirone 15 mg twice daily."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.buspirone",
           "source": [
             "generated_output"
@@ -2629,7 +2552,7 @@
           "quote": "He took buspirone 15 mg twice daily for approximately one month."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.buspirone",
           "source": [
             "generated_output"
@@ -2638,13 +2561,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F081",
+        "audit_id": "F078",
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2652,6 +2575,91 @@
         "policy": "note_consensus_threshold",
         "k_support": 3,
         "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "5",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension: managed with lisinopril, started at 5 mg approximately three years ago, increased to 10 mg approximately one year ago."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was 5 mg when started about three years ago."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He started lisinopril at five milligrams about three years ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F083",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
         "transcript_anchored": true
       },
       "salience": {
@@ -2720,7 +2728,7 @@
         }
       ],
       "provenance": {
-        "audit_id": "F088",
+        "audit_id": "F087",
         "support": "3/3",
         "models": [
           "glm-5p2",
@@ -2784,7 +2792,7 @@
           "quote": "Brother Kyle has panic attacks; tried escitalopram (Lexapro) a couple of years ago; discontinued after approximately one month due to feeling \"numb\" and \"like a zombie.\""
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.lexapro",
           "source": [
             "generated_output"
@@ -2809,11 +2817,11 @@
         }
       ],
       "provenance": {
-        "audit_id": "F091",
+        "audit_id": "F090",
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
+          "gpt-5_4",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -2827,7 +2835,7 @@
       },
       "salience": {
         "must_cover": true,
-        "must_cover_source": "parser",
+        "must_cover_source": "text",
         "must_not_err": true
       }
     },
@@ -2872,7 +2880,7 @@
           "quote": "Hannah is a teacher; she found the clinic and referred him."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.hannah",
           "source": [
             "generated_output"
@@ -2880,7 +2888,7 @@
           "quote": "Hannah is a teacher."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.hannah",
           "source": [
             "generated_output"
@@ -2904,7 +2912,7 @@
           "quote": "Hannah is a teacher"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.hannah",
           "source": [
             "generated_output"
@@ -2913,15 +2921,15 @@
         }
       ],
       "provenance": {
-        "audit_id": "F093",
+        "audit_id": "F092",
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2980,7 +2988,7 @@
           "quote": "Hannah is a teacher; she found the clinic and referred him."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "social_history.hannah_is_a_teacher",
           "source": [
             "generated_output"
@@ -2988,7 +2996,7 @@
           "quote": "Hannah is a teacher."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "social_history.hannah_found_the_clinic",
           "source": [
             "generated_output"
@@ -2996,7 +3004,7 @@
           "quote": "Hannah found the clinic."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "social_history.hannah_is_a_teacher",
           "source": [
             "generated_output"
@@ -3020,7 +3028,7 @@
           "quote": "Hannah found the clinic"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.hannah_is_a_teacher",
           "source": [
             "generated_output"
@@ -3028,7 +3036,7 @@
           "quote": "Hannah is a teacher."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.hannah_found_the_clinic",
           "source": [
             "generated_output"
@@ -3037,14 +3045,14 @@
         }
       ],
       "provenance": {
-        "audit_id": "F094",
+        "audit_id": "F093",
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3120,7 +3128,7 @@
         }
       ],
       "provenance": {
-        "audit_id": "F102",
+        "audit_id": "F101",
         "support": "3/3",
         "models": [
           "glm-5p2",
@@ -3178,7 +3186,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.fluoxetine",
           "source": [
             "generated_output"
@@ -3186,7 +3194,7 @@
           "quote": "He had a trial of fluoxetine last year (up to 40mg) which was discontinued after 10-11 weeks due to side effects including nausea, jitteriness, and worsened sleep."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.fluoxetine",
           "source": [
             "generated_output"
@@ -3194,7 +3202,7 @@
           "quote": "He previously took fluoxetine at age 16 during his parents' divorce when he \"cratered,\" could not get out of bed, and stopped seeing friends."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.fluoxetine",
           "source": [
             "generated_output"
@@ -3202,7 +3210,7 @@
           "quote": "He stopped adolescent fluoxetine after improving."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.fluoxetine",
           "source": [
             "generated_output"
@@ -3211,13 +3219,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F110",
+        "audit_id": "F109",
         "support": "4/4",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3274,7 +3282,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.he_feels_wrung_out_for_hours_after_an_attack",
           "source": [
             "generated_output"
@@ -3282,7 +3290,7 @@
           "quote": "He feels wrung out for hours after an attack."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.he_feels_wrung_out_for_hours_after_an_attack",
           "source": [
             "generated_output"
@@ -3290,7 +3298,7 @@
           "quote": "He feels wrung out for hours after an attack."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.he_feels_exhausted_for_hours_after_an_attack",
           "source": [
             "generated_output"
@@ -3299,12 +3307,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F189",
+        "audit_id": "F188",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3361,7 +3369,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.buspirone",
           "source": [
             "generated_output"
@@ -3369,7 +3377,7 @@
           "quote": "He stopped buspirone."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.buspirone",
           "source": [
             "generated_output"
@@ -3393,7 +3401,7 @@
           "quote": "Buspirone 15 mg twice daily for approximately one month; discontinued due to lack of efficacy"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.buspirone",
           "source": [
             "generated_output"
@@ -3402,14 +3410,14 @@
         }
       ],
       "provenance": {
-        "audit_id": "F210",
+        "audit_id": "F209",
         "support": "5/5",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3460,7 +3468,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.he_stopped_buspirone",
           "source": [
             "generated_output"
@@ -3468,7 +3476,7 @@
           "quote": "He stopped buspirone."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.he_stopped_buspirone",
           "source": [
             "generated_output"
@@ -3476,7 +3484,7 @@
           "quote": "He stopped buspirone."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.he_stopped_buspirone_because_it_had_no_perceived_benefit",
           "source": [
             "generated_output"
@@ -3485,12 +3493,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F211",
+        "audit_id": "F210",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3541,7 +3549,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.he_has_not_used_an_inhaler_since_then",
           "source": [
             "generated_output"
@@ -3549,7 +3557,7 @@
           "quote": "He has not used an inhaler since then."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.he_has_not_used_an_inhaler_since_then",
           "source": [
             "generated_output"
@@ -3557,7 +3565,7 @@
           "quote": "He has not used an inhaler since then."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.he_has_not_used_an_inhaler_since_adolescence",
           "source": [
             "generated_output"
@@ -3566,12 +3574,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F218",
+        "audit_id": "F217",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3622,7 +3630,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.his_mother_has_done_well_for_years_on_sertraline_100_mg",
           "source": [
             "generated_output"
@@ -3630,7 +3638,7 @@
           "quote": "His mother has done well for years on sertraline 100 mg."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.his_mother_has_done_well_on_sertraline_100_mg_for_years",
           "source": [
             "generated_output"
@@ -3638,7 +3646,7 @@
           "quote": "His mother has done well on sertraline 100 mg for years."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.his_mother_does_well_on_sertraline",
           "source": [
             "generated_output"
@@ -3647,12 +3655,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F231",
+        "audit_id": "F230",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3703,7 +3711,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "social_history.he_has_worked_at_the_logistics_company_for_eight_years",
           "source": [
             "generated_output"
@@ -3711,7 +3719,7 @@
           "quote": "He has worked at the logistics company for eight years."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.he_has_worked_at_the_logistics_company_for_eight_years",
           "source": [
             "generated_output"
@@ -3719,7 +3727,7 @@
           "quote": "He has worked at the logistics company for eight years."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "social_history.he_has_worked_at_the_company_for_eight_years",
           "source": [
             "generated_output"
@@ -3728,12 +3736,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F243",
+        "audit_id": "F242",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3784,7 +3792,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "social_history.on_saturdays_he_may_have_a_couple_of_drinks_while_watching_the_game",
           "source": [
             "generated_output"
@@ -3792,7 +3800,7 @@
           "quote": "On Saturdays he may have a couple of drinks while watching the game."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.on_saturday_he_may_have_a_couple_of_drinks_while_watching_the_game",
           "source": [
             "generated_output"
@@ -3800,7 +3808,7 @@
           "quote": "On Saturday he may have a couple of drinks while watching the game."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "social_history.he_may_drink_a_couple_of_alcoholic_drinks_on_saturdays_while_watching_a_game",
           "source": [
             "generated_output"
@@ -3809,12 +3817,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F249",
+        "audit_id": "F248",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3865,7 +3873,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "social_history.he_occasionally_bums_one_or_two_cigarettes_when_out_drinking",
           "source": [
             "generated_output"
@@ -3873,7 +3881,7 @@
           "quote": "He occasionally bums one or two cigarettes when out drinking."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.he_occasionally_bums_one_or_two_cigarettes_when_out_drinking",
           "source": [
             "generated_output"
@@ -3881,7 +3889,7 @@
           "quote": "He occasionally bums one or two cigarettes when out drinking."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "social_history.he_smokes_one_or_two_cigarettes_socially_when_drinking",
           "source": [
             "generated_output"
@@ -3890,12 +3898,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F252",
+        "audit_id": "F251",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3946,7 +3954,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.he_denied_thoughts_of_hurting_himself",
           "source": [
             "generated_output"
@@ -3954,7 +3962,7 @@
           "quote": "He denied thoughts of hurting himself."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.he_denies_thoughts_of_hurting_himself",
           "source": [
             "generated_output"
@@ -3962,7 +3970,7 @@
           "quote": "He denies thoughts of hurting himself."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.he_denies_thoughts_of_hurting_himself",
           "source": [
             "generated_output"
@@ -3971,12 +3979,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F256",
+        "audit_id": "F255",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4043,7 +4051,7 @@
           "quote": "Nausea resolved within approximately one week of stopping fluoxetine"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.the_nausea_resolved_within_about_a_week_after_stopping_fluoxetine",
           "source": [
             "generated_output"
@@ -4052,12 +4060,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F346",
+        "audit_id": "F345",
         "support": "3/3",
         "models": [
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,

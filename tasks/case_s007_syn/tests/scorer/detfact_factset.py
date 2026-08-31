@@ -142,7 +142,7 @@ def write_immutable(path, doc, force=False):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default="audit_site/data/*.json", help="audit JSON path or glob")
-    ap.add_argument("--out-dir", default="factsets_output")
+    ap.add_argument("--out-dir", default="factsets_candidate")
     ap.add_argument("--version", default="1")
     ap.add_argument("--statuses", default="certain",
                     help="comma-separated audit statuses to include, or all")

@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s024_syn",
     "version": "1",
-    "sha256": "c31e35cd08fd52caaeeefe7997d30640a99da176c92f039177b70e396b290bda",
+    "sha256": "e4aff39f8082eb5ea263cc917e121b7389ec34c292a9885a92e47a0a75a41537",
     "reviewed": false
   },
   "source": {
@@ -78,7 +78,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.type_2_dm_without_complications",
           "source": [
             "generated_output"
@@ -86,7 +86,7 @@
           "quote": "Type 1 diabetes mellitus, managed with insulin pump (Omnipod) and continuous glucose monitoring (Dexcom G6)"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.type_2_dm_without_complications",
           "source": [
             "generated_output"
@@ -106,8 +106,8 @@
         "audit_id": "F009",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
           "minimax-m3"
         ],
         "status": "release",
@@ -160,7 +160,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.insulin",
           "source": [
             "generated_output"
@@ -176,7 +176,7 @@
           "quote": "Diabetes managed with insulin pump (Omnipod) and continuous glucose monitoring (Dexcom G6)."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.insulin",
           "source": [
             "generated_output"
@@ -184,7 +184,7 @@
           "quote": "Fiasp insulin in an Omnipod insulin pump."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.insulin",
           "source": [
             "generated_output"
@@ -192,7 +192,7 @@
           "quote": "Patient is using an Omnipod insulin pump."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.insulin",
           "source": [
             "generated_output"
@@ -200,7 +200,7 @@
           "quote": "She logs her glucose and insulin information in the application."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.insulin",
           "source": [
             "generated_output"
@@ -216,7 +216,7 @@
           "quote": "Chief concerns relate to diabetes management with insulin pump (Omnipod) and continuous glucose monitoring (Dexcom G6)."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.insulin",
           "source": [
             "generated_output"
@@ -228,14 +228,14 @@
         "audit_id": "F010",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -286,7 +286,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.type_1_diabetes_mellitus_managed_with_insulin_pump_omnipod_and_continuous_glucose_monitoring_dexcom_g6",
           "source": [
             "generated_output"
@@ -294,7 +294,7 @@
           "quote": "Type 1 diabetes mellitus, managed with insulin pump (Omnipod) and continuous glucose monitoring (Dexcom G6)."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.type_1_diabetes_mellitus",
           "source": [
             "generated_output"
@@ -314,8 +314,8 @@
         "audit_id": "F011",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
           "minimax-m3"
         ],
         "status": "release",
@@ -373,7 +373,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -389,7 +389,7 @@
           "quote": "Hypothyroidism; TSH was 6.2 in March, prompting levothyroxine dose increase from 50 to 75 micrograms."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -397,7 +397,7 @@
           "quote": "Levothyroxine 75 mcg every morning."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -405,7 +405,7 @@
           "quote": "Levothyroxine dose was increased in March from 50 mcg to 75 mcg."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -413,7 +413,7 @@
           "quote": "Levothyroxine was increased from 50 mcg to 75 mcg in March."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -429,7 +429,7 @@
           "quote": "Levothyroxine 75 mcg orally every morning on an empty stomach (increased from 50 mcg in March)."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -441,14 +441,14 @@
         "audit_id": "F012",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -505,7 +505,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -521,7 +521,7 @@
           "quote": "Lisinopril 10 mg once every morning."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -529,7 +529,7 @@
           "quote": "Lisinopril 10 mg once a day."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -537,7 +537,7 @@
           "quote": "Lisinopril 10 mg every morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -545,7 +545,7 @@
           "quote": "Lisinopril 10 mg is taken every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -561,7 +561,7 @@
           "quote": "Lisinopril 10 mg orally once daily in the morning."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -573,14 +573,14 @@
         "audit_id": "F015",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -635,7 +635,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -651,7 +651,7 @@
           "quote": "Atorvastatin 20 mg at bedtime, taken with a small snack (e.g., almonds) to avoid stomach ache."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -659,7 +659,7 @@
           "quote": "Atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -667,7 +667,7 @@
           "quote": "Atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -675,7 +675,7 @@
           "quote": "Atorvastatin 20 mg is taken at bedtime."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -691,7 +691,7 @@
           "quote": "Atorvastatin 20 mg orally at bedtime, taken with a small snack (e.g., handful of almonds) to avoid stomach upset."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -703,14 +703,14 @@
         "audit_id": "F016",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -761,7 +761,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -777,7 +777,7 @@
           "quote": "Tried metformin immediate release last year; discontinued after approximately two weeks due to significant gastrointestinal side effects including diarrhea and nausea."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -785,7 +785,7 @@
           "quote": "Metformin immediate release was stopped after about two weeks."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -793,7 +793,7 @@
           "quote": "Immediate-release metformin was discontinued after approximately two weeks."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -809,7 +809,7 @@
           "quote": "Previous trial of immediate-release metformin last year, discontinued after approximately two weeks due to significant gastrointestinal side effects (diarrhea and nausea)."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -821,13 +821,13 @@
         "audit_id": "F017",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -878,7 +878,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.hypothyroidism",
           "source": [
             "generated_output"
@@ -886,7 +886,7 @@
           "quote": "Hypothyroidism."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.hypothyroidism",
           "source": [
             "generated_output"
@@ -894,7 +894,7 @@
           "quote": "Hypothyroidism"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.the_patient_has_hypothyroidism",
           "source": [
             "generated_output"
@@ -902,7 +902,7 @@
           "quote": "The patient has hypothyroidism."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.hypothyroidism",
           "source": [
             "generated_output"
@@ -926,7 +926,7 @@
           "quote": "Hypothyroidism, currently on levothyroxine 75 mcg daily."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.hypothyroidism",
           "source": [
             "generated_output"
@@ -942,7 +942,7 @@
           "quote": "Hypothyroidism on levothyroxine, dose adjustment pending thyroid panel results."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.hypothyroidism_was_referenced_by_treatment_with_levothyroxine",
           "source": [
             "generated_output"
@@ -954,14 +954,14 @@
         "audit_id": "F022",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "minimax-m3",
-          "qwen3-max",
+          "qwen3p8-max",
           "glm-5p2",
-          "gpt-5.4"
+          "gpt-5_4"
         ],
         "status": "release",
         "field_stable": true,
@@ -1012,7 +1012,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.adjust_basal_rates_on_insulin_pump_change_2_a_m_6_a_m_segment_to_1_2_units_hour_and_6_a_m_10_a_m_segment_to_1_0_units_hour_keep_other_segments_the_same_10_a_m_2_p_m_at_0_9_2_p_m_8_p_m_at_0_7_8_p_m_midnight_at_0_8",
           "source": [
             "generated_output"
@@ -1020,7 +1020,7 @@
           "quote": "Adjust basal rates on insulin pump: change 2 a.m.–6 a.m. segment to 1.2 units/hour and 6 a.m.–10 a.m. segment to 1.0 units/hour; keep other segments the same (10 a.m.–2 p.m. at 0.9, 2 p.m.–8 p.m. at 0.7, 8 p.m.–midnight at 0.8)."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.adjust_insulin_pump_basal_rates",
           "source": [
             "generated_output"
@@ -1040,8 +1040,8 @@
         "audit_id": "F026",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "kimi-k2p6",
           "minimax-m3"
         ],
         "status": "release",
@@ -1093,7 +1093,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -1109,7 +1109,7 @@
           "quote": "Labs ordered today: A1c, thyroid panel (TSH and free T4), vitamin B12, and folate."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -1117,7 +1117,7 @@
           "quote": "An A1C, thyroid panel (TSH and free T4), vitamin B12, and folate level will be ordered."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -1125,7 +1125,7 @@
           "quote": "Vitamin B12 level was ordered."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -1133,7 +1133,7 @@
           "quote": "Order vitamin B12."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -1149,7 +1149,7 @@
           "quote": "Vitamin B12 level."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -1161,14 +1161,14 @@
         "audit_id": "F029",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1219,7 +1219,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1227,7 +1227,7 @@
           "quote": "Hold off on adding metformin extended release at this time; focus on pump settings and exercise management."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1235,7 +1235,7 @@
           "quote": "History of gastrointestinal side effects (diarrhea, nausea) with immediate-release metformin, leading to its discontinuation."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1243,7 +1243,7 @@
           "quote": "Patient reported metformin immediate release had caused stomach issues previously."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1263,10 +1263,10 @@
         "audit_id": "F032",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "minimax-m3"
         ],
         "status": "release",
@@ -1343,7 +1343,7 @@
           "quote": "Physical exam findings: blood pressure 112/72, heart rate 72, heart and lungs unremarkable, foot sensation intact on monofilament testing, foot pulses strong with no signs of peripheral arterial disease, ankle reflexes diminished bilaterally."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1351,7 +1351,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.hypertension",
           "source": [
             "generated_output"
@@ -1359,7 +1359,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.hypertension",
           "source": [
             "generated_output"
@@ -1367,7 +1367,7 @@
           "quote": "Hypertension was referenced by treatment with lisinopril."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1375,7 +1375,7 @@
           "quote": "Hypertension was referenced by treatment with lisinopril"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.hypertension_was_referenced_by_treatment_with_lisinopril",
           "source": [
             "generated_output"
@@ -1399,7 +1399,7 @@
           "quote": "Hypertension."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1407,7 +1407,7 @@
           "quote": "Blood pressure was 112/72 mmHg"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1415,7 +1415,7 @@
           "quote": "Patient reports home blood pressure readings around 110/70"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1428,12 +1428,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
           "minimax-m3",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1492,7 +1492,7 @@
           "quote": "Hyperlipidemia, on atorvastatin"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.hyperlipidemia_unspecified",
           "source": [
             "generated_output"
@@ -1521,7 +1521,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
+          "gpt-5_4",
           "minimax-m3"
         ],
         "status": "release",
@@ -1589,7 +1589,7 @@
           "quote": "Hyperlipidemia, on atorvastatin."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.hyperlipidemia_was_referenced_by_treatment_with_atorvastatin",
           "source": [
             "generated_output"
@@ -1603,7 +1603,7 @@
         "models": [
           "glm-5p2",
           "minimax-m3",
-          "gpt-5.4"
+          "gpt-5_4"
         ],
         "status": "release",
         "field_stable": true,
@@ -1662,7 +1662,7 @@
           "quote": "Metformin extended release deferred for now; will revisit if goals are not met with pump optimization and exercise management."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1670,7 +1670,7 @@
           "quote": "A decision on adding Metformin will be deferred."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1686,7 +1686,7 @@
           "quote": "Insight: Patient demonstrates good insight into her condition, asking informed questions about metformin extended-release and expressing appropriate concern about new neurological symptoms."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1699,10 +1699,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1753,7 +1753,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1761,7 +1761,7 @@
           "quote": "Patient asked about retrying metformin in extended-release form."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1769,7 +1769,7 @@
           "quote": "Immediate-release metformin was tried last year."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1777,7 +1777,7 @@
           "quote": "Metformin immediate release was tried last year."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1789,10 +1789,10 @@
         "audit_id": "F120",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1843,7 +1843,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.patient_described_the_tingling_as_pins_and_needles",
           "source": [
             "generated_output"
@@ -1851,7 +1851,7 @@
           "quote": "Patient described the tingling as pins and needles."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.the_tingling_is_described_as_pins_and_needles",
           "source": [
             "generated_output"
@@ -1859,7 +1859,7 @@
           "quote": "The tingling is described as pins and needles."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.the_tingling_is_described_as_pins_and_needles",
           "source": [
             "generated_output"
@@ -1871,9 +1871,9 @@
         "audit_id": "F126",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1924,7 +1924,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -1932,7 +1932,7 @@
           "quote": "The patient reports no known drug allergies."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -1940,7 +1940,7 @@
           "quote": "The dose was increased because the TSH was approximately 6.2."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -1952,9 +1952,9 @@
         "audit_id": "F203",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2005,7 +2005,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.order_vitamin_b12",
           "source": [
             "generated_output"
@@ -2013,7 +2013,7 @@
           "quote": "Order vitamin B12."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.order_vitamin_b12_level",
           "source": [
             "generated_output"
@@ -2021,7 +2021,7 @@
           "quote": "Order vitamin B12 level."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.order_vitamin_b12_levels",
           "source": [
             "generated_output"
@@ -2033,9 +2033,9 @@
         "audit_id": "F221",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2086,7 +2086,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.order_folate",
           "source": [
             "generated_output"
@@ -2094,7 +2094,7 @@
           "quote": "Order folate."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.order_folate_level",
           "source": [
             "generated_output"
@@ -2102,7 +2102,7 @@
           "quote": "Order folate level."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.order_folate_levels",
           "source": [
             "generated_output"
@@ -2114,9 +2114,9 @@
         "audit_id": "F222",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,

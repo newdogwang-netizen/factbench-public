@@ -14,10 +14,10 @@ protocol = "detfact-v2.0"
 fictional = true
 difficulty = "medium"
 gold_pipeline = "note-consensus v2 (7-model fact-level consensus, quote gate, transcript anchoring, arbitration)"
-gold_facts = 55
-must_cover = 54
+gold_facts = 59
+must_cover = 58
 domain_gate = "valid"
-pass_rule = "critical_wrong == 0 and coverage >= 0.32 (oracle-calibrated)"
+pass_rule = "critical_wrong == 0 and coverage >= 0.31 (oracle-calibrated)"
 
 [verifier]
 timeout_sec = 600.0

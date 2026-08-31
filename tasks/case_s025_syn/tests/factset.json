@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s025_syn",
     "version": "1",
-    "sha256": "8f14887a77d1bef186ff91da523c88bb4e5a092b51c79d1e55c4105c97064ee6",
+    "sha256": "46e379041501c4332684643f82f34efa12d98412d7814a717d4bc4bb8f6e7271",
     "reviewed": false
   },
   "source": {
@@ -14,12 +14,12 @@
     "stats": {
       "n_models": 8,
       "n_facts": 550,
-      "certain": 9,
+      "certain": 10,
       "strict_certain": 9,
-      "low_conf": 62,
-      "unique": 479,
+      "low_conf": 64,
+      "unique": 476,
       "unanimous": 11,
-      "low_support": 448
+      "low_support": 445
     }
   },
   "selection": {
@@ -30,8 +30,8 @@
     "statuses": [
       "release"
     ],
-    "fact_count": 55,
-    "unstable_skipped": 43
+    "fact_count": 59,
+    "unstable_skipped": 40
   },
   "rules": {
     "version": "detfact-rules/0.7",
@@ -74,7 +74,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.constipation_onset_about_three_months_ago_bowel_movement_every_three_to_four_days_worse_with_low_fluid_intake_or_skipping_prune_juice_better_with_more_walking_and_fiber_gummy",
           "source": [
             "generated_output"
@@ -82,7 +82,7 @@
           "quote": "Constipation: onset about three months ago; bowel movement every three to four days; worse with low fluid intake or skipping prune juice; better with more walking and fiber gummy."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.continue_fluids_fiber_and_walking_for_constipation_consider_stool_softener_or_osmotic_laxative_if_not_improved",
           "source": [
             "generated_output"
@@ -90,7 +90,7 @@
           "quote": "Continue fluids, fiber, and walking for constipation; consider stool softener or osmotic laxative if not improved."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.constipation_is_a_little_better_if_she_walks_more",
           "source": [
             "generated_output"
@@ -98,7 +98,7 @@
           "quote": "Constipation is a little better if she walks more."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.constipation_is_somewhat_better_with_walking",
           "source": [
             "generated_output"
@@ -122,7 +122,7 @@
           "quote": "Constipation worse with low fluid intake and skipping prune juice; better with walking and a fiber gummy."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.constipation_is_better_if_she_walks_more",
           "source": [
             "generated_output"
@@ -134,12 +134,12 @@
         "audit_id": "F009",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -147,219 +147,6 @@
         "policy": "note_consensus_threshold",
         "k_support": 3,
         "n_supporters": 6,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "dizziness and giddiness",
-      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.present",
-      "kind": "diagnosis",
-      "subtype": "neuro_vestibular",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": null,
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Occasional mild dizziness on standing quickly, not every day, passes quickly"
-        },
-        {
-          "model": "deepseek-v4-flash",
-          "key": "symptom.occasional_mild_dizziness_on_standing_quickly_not_passes_quickly",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Occasional mild dizziness on standing quickly, not every day, passes quickly."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "**Dizziness:** She sometimes feels a little dizzy if she stands up too quickly, but this is not a daily occurrence and passes quickly"
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She sometimes has a little dizziness if she stands up too fast"
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "symptom.a_little_dizziness_if_she_stands_up_too_fast",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She sometimes has a little dizziness if she stands up too fast."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "risk.she_was_advised_to_call_sooner_for_severe_dizziness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She was advised to call sooner for severe dizziness."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Seek earlier review for severe dizziness"
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "risk.seek_earlier_review_for_severe_dizziness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Seek earlier review for severe dizziness."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Occasional dizziness upon standing occurs if rising too fast"
-        },
-        {
-          "model": "kimi-k2",
-          "key": "symptom.occasional_dizziness_upon_standing_occurs_if_rising_too_fast",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Occasional dizziness upon standing occurs if rising too fast."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "demo.dizziness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Dizziness is not daily."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "treatment.patient_should_call_the_office_sooner_for_severe_dizziness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient should call the office sooner for severe dizziness."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Occasional mild dizziness when standing up too fast; not daily and passes quickly"
-        },
-        {
-          "model": "kimi-k3",
-          "key": "symptom.occasional_mild_dizziness_when_standing_up_too_fast_not_daily_and_passes_quickly",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Occasional mild dizziness when standing up too fast; not daily and passes quickly."
-        },
-        {
-          "model": "minimax-m3",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Occasional dizziness on rapid standing; not daily; resolves quickly"
-        },
-        {
-          "model": "minimax-m3",
-          "key": "symptom.occasional_dizziness_on_rapid_standing_not_daily_resolves_quickly",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Occasional dizziness on rapid standing; not daily; resolves quickly."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She sometimes has a little dizziness when standing up"
-        },
-        {
-          "model": "qwen3-max",
-          "key": "symptom.a_little_dizziness_when_standing_up",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She sometimes has a little dizziness when standing up."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "risk.call_sooner_for_severe_dizziness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Call sooner for severe dizziness."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F011",
-        "support": "8/8",
-        "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "minimax-m3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 8,
         "transcript_anchored": true
       },
       "salience": {
@@ -403,7 +190,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -411,7 +198,7 @@
           "quote": "No chest pain, palpitations, or shortness of breath."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -419,7 +206,7 @@
           "quote": "**Other:** The patient denies any chest pain, palpitations, shortness of breath, or hallucinations."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -427,7 +214,7 @@
           "quote": "She reports no chest pain."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -435,7 +222,7 @@
           "quote": "She denied chest pain."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -459,7 +246,7 @@
           "quote": "No chest pain, palpitations, or shortness of breath."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -471,14 +258,14 @@
         "audit_id": "F013",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -535,7 +322,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -543,7 +330,7 @@
           "quote": "Melatonin 3 mg at bedtime (around 9:30 p.m.) for dream enactment and sleep."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -551,7 +338,7 @@
           "quote": "Melatonin 3 mg, at bedtime."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -559,7 +346,7 @@
           "quote": "Melatonin 3 mg at bedtime."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -567,7 +354,7 @@
           "quote": "Melatonin 3 mg nightly at approximately 9:30 PM."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -591,7 +378,7 @@
           "quote": "Melatonin 3 mg at bedtime for dream enactment and sleep."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -603,14 +390,14 @@
         "audit_id": "F015",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -661,7 +448,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.dream_enactment_still_present_a_little_melatonin_helps_not_worse",
           "source": [
             "generated_output"
@@ -669,7 +456,7 @@
           "quote": "Dream enactment still present a little; melatonin helps; not worse."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.dream_enactment_is_not_worse",
           "source": [
             "generated_output"
@@ -677,7 +464,7 @@
           "quote": "Dream enactment is not worse."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.dream_enactment_is_not_worse",
           "source": [
             "generated_output"
@@ -685,7 +472,7 @@
           "quote": "Dream enactment is not worse."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.dream_enactment_is_not_worse",
           "source": [
             "generated_output"
@@ -697,10 +484,10 @@
         "audit_id": "F016",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -713,131 +500,6 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "memory impairment",
-      "canonical_anchor": "symptom.cognition_memory.memory_impairment.present",
-      "kind": "symptom",
-      "subtype": "cognition_memory",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "reports",
-        "object": null,
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "active",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "symptom.memory_impairment",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cognitive concerns: misplacing keys and walking into a room and forgetting why; more frequent over the last six months; still manages pillbox and crossword but slower; writes lists more than before."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "symptom.memory_impairment",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She reports increased instances of misplacing keys and forgetting her reason for entering a room over the last six months."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "symptom.memory_impairment",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She sometimes walks into a room and forgets why she went there."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "symptom.memory_impairment",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She sometimes enters a room and forgets why she went there."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "symptom.memory_impairment",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cognition: Patient reports walking into a room and forgetting why she went there."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "symptom.memory_impairment",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cognitive changes over the last six months include misplacing keys and walking into a room and forgetting why she went there."
-        },
-        {
-          "model": "minimax-m3",
-          "key": "symptom.memory_impairment",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cognitive concerns: misplacing keys and walking into rooms and forgetting why; worsening over the last 6 months."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "symptom.memory_impairment",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "She sometimes walks into a room and forgets why she went there."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F018",
-        "support": "8/8",
-        "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "minimax-m3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 8,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
         "must_not_err": false
       }
     },
@@ -877,7 +539,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -885,7 +547,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.hypertension",
           "source": [
             "generated_output"
@@ -893,7 +555,7 @@
           "quote": "Hypertension."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.check_lying_and_standing_blood_pressure_today",
           "source": [
             "generated_output"
@@ -901,7 +563,7 @@
           "quote": "Check lying and standing blood pressure today."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -909,7 +571,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -917,7 +579,7 @@
           "quote": "Check orthostatic blood pressures today"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -925,7 +587,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.hypertension",
           "source": [
             "generated_output"
@@ -933,7 +595,7 @@
           "quote": "Hypertension."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.nurse_to_check_blood_pressure_lying_and_standing",
           "source": [
             "generated_output"
@@ -941,7 +603,7 @@
           "quote": "Nurse to check blood pressure lying and standing."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -949,7 +611,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.hypertension",
           "source": [
             "generated_output"
@@ -957,7 +619,7 @@
           "quote": "Hypertension."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.check_blood_pressure_while_lying_and_standing",
           "source": [
             "generated_output"
@@ -965,7 +627,7 @@
           "quote": "Check blood pressure while lying and standing."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -973,7 +635,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.hypertension",
           "source": [
             "generated_output"
@@ -981,7 +643,7 @@
           "quote": "Hypertension."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.check_blood_pressure_lying_and_standing_today",
           "source": [
             "generated_output"
@@ -1029,7 +691,7 @@
           "quote": "Hypertension."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1037,7 +699,7 @@
           "quote": "Hypertension"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.hypertension",
           "source": [
             "generated_output"
@@ -1046,17 +708,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F022",
+        "audit_id": "F023",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1107,7 +769,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.high_cholesterol",
           "source": [
             "generated_output"
@@ -1115,7 +777,7 @@
           "quote": "High cholesterol."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.high_cholesterol",
           "source": [
             "generated_output"
@@ -1123,7 +785,7 @@
           "quote": "High cholesterol."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.high_cholesterol",
           "source": [
             "generated_output"
@@ -1147,7 +809,7 @@
           "quote": "High cholesterol."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.high_cholesterol",
           "source": [
             "generated_output"
@@ -1156,15 +818,15 @@
         }
       ],
       "provenance": {
-        "audit_id": "F023",
+        "audit_id": "F024",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1215,7 +877,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.rem_sleep_behavior_disorder",
           "source": [
             "generated_output"
@@ -1223,7 +885,7 @@
           "quote": "REM sleep behavior disorder."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.rem_sleep_behavior_disorder",
           "source": [
             "generated_output"
@@ -1231,7 +893,7 @@
           "quote": "REM sleep behavior disorder."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.rem_sleep_behavior_disorder",
           "source": [
             "generated_output"
@@ -1239,7 +901,7 @@
           "quote": "REM sleep behavior disorder."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.rem_sleep_behavior_disorder",
           "source": [
             "generated_output"
@@ -1263,7 +925,7 @@
           "quote": "REM sleep behavior disorder."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.rem_sleep_behavior_disorder",
           "source": [
             "generated_output"
@@ -1272,16 +934,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F024",
+        "audit_id": "F025",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1332,7 +994,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
           "source": [
             "generated_output"
@@ -1340,7 +1002,7 @@
           "quote": "Osteoarthritis in right knee, not too bad"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
           "source": [
             "generated_output"
@@ -1348,7 +1010,7 @@
           "quote": "Osteoarthritis in the right knee"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
           "source": [
             "generated_output"
@@ -1356,7 +1018,7 @@
           "quote": "Osteoarthritis of the right knee"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
           "source": [
             "generated_output"
@@ -1364,7 +1026,7 @@
           "quote": "Osteoarthritis of the right knee"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
           "source": [
             "generated_output"
@@ -1388,7 +1050,7 @@
           "quote": "Osteoarthritis of the right knee"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
           "source": [
             "generated_output"
@@ -1397,17 +1059,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F025",
+        "audit_id": "F026",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1458,7 +1120,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.osteoarthritis_in_right_knee_not_too_bad",
           "source": [
             "generated_output"
@@ -1466,7 +1128,7 @@
           "quote": "Osteoarthritis in right knee, not too bad."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.osteoarthritis_right_knee",
           "source": [
             "generated_output"
@@ -1474,7 +1136,7 @@
           "quote": "Osteoarthritis, right knee."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.osteoarthritis_in_the_right_knee",
           "source": [
             "generated_output"
@@ -1482,7 +1144,7 @@
           "quote": "Osteoarthritis in the right knee."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.osteoarthritis_right_knee",
           "source": [
             "generated_output"
@@ -1498,7 +1160,7 @@
           "quote": "Osteoarthritis, right knee."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.osteoarthritis_in_the_right_knee",
           "source": [
             "generated_output"
@@ -1515,13 +1177,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F026",
+        "audit_id": "F027",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "kimi-k2p6",
           "minimax-m3",
-          "qwen3-max",
+          "qwen3p8-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -1579,7 +1241,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.rasagiline",
           "source": [
             "generated_output"
@@ -1587,7 +1249,7 @@
           "quote": "Rasagiline 1 mg every morning, taken with the first carbidopa-levodopa tablet."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.rasagiline",
           "source": [
             "generated_output"
@@ -1595,7 +1257,7 @@
           "quote": "Rasagiline 1 mg every morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.rasagiline",
           "source": [
             "generated_output"
@@ -1603,7 +1265,7 @@
           "quote": "Rasagiline 1 mg every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.rasagiline",
           "source": [
             "generated_output"
@@ -1627,7 +1289,7 @@
           "quote": "Rasagiline 1 mg every morning."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.rasagiline",
           "source": [
             "generated_output"
@@ -1636,16 +1298,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F029",
+        "audit_id": "F030",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1702,7 +1364,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1710,7 +1372,7 @@
           "quote": "Lisinopril 10 mg once daily every morning for blood pressure."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1718,7 +1380,7 @@
           "quote": "Lisinopril 10 mg, one tablet once a day."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1726,7 +1388,7 @@
           "quote": "Lisinopril 10 mg daily."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1734,7 +1396,7 @@
           "quote": "Lisinopril 10 mg every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1758,7 +1420,7 @@
           "quote": "Lisinopril 10 mg once daily for blood pressure."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1767,17 +1429,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F030",
+        "audit_id": "F031",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1830,7 +1492,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.multivitamin",
           "source": [
             "generated_output"
@@ -1838,7 +1500,7 @@
           "quote": "Multivitamin every morning."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.multivitamin",
           "source": [
             "generated_output"
@@ -1846,7 +1508,7 @@
           "quote": "Multivitamin in the morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.multivitamin",
           "source": [
             "generated_output"
@@ -1854,7 +1516,7 @@
           "quote": "Multivitamin every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.multivitamin",
           "source": [
             "generated_output"
@@ -1871,13 +1533,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F031",
+        "audit_id": "F032",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "minimax-m3"
         ],
         "status": "release",
@@ -1929,7 +1591,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.mother_had_essential_tremor",
           "source": [
             "generated_output"
@@ -1937,7 +1599,7 @@
           "quote": "Mother had essential tremor."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.mother_had_essential_tremor",
           "source": [
             "generated_output"
@@ -1945,7 +1607,7 @@
           "quote": "Mother had essential tremor."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "family_history.mother_had_essential_tremor",
           "source": [
             "generated_output"
@@ -1969,7 +1631,7 @@
           "quote": "Mother: essential tremor."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.her_mother_had_essential_tremor",
           "source": [
             "generated_output"
@@ -1977,7 +1639,7 @@
           "quote": "Her mother had essential tremor."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.her_mother_had_essential_tremor",
           "source": [
             "generated_output"
@@ -1986,16 +1648,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F034",
+        "audit_id": "F035",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2046,7 +1708,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.father_had_a_stroke_in_his_seventies",
           "source": [
             "generated_output"
@@ -2054,7 +1716,7 @@
           "quote": "Father had a stroke in his seventies."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.father_had_a_stroke_in_his_seventies",
           "source": [
             "generated_output"
@@ -2062,7 +1724,7 @@
           "quote": "Father had a stroke in his seventies."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "family_history.father_had_a_stroke_in_his_seventies",
           "source": [
             "generated_output"
@@ -2086,7 +1748,7 @@
           "quote": "Father: stroke in his seventies."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.her_father_had_a_stroke_in_his_seventies",
           "source": [
             "generated_output"
@@ -2094,7 +1756,7 @@
           "quote": "Her father had a stroke in his seventies."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.her_father_had_a_stroke_in_his_seventies",
           "source": [
             "generated_output"
@@ -2103,16 +1765,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F035",
+        "audit_id": "F036",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2163,7 +1825,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.sister_has_essential_tremor",
           "source": [
             "generated_output"
@@ -2171,7 +1833,7 @@
           "quote": "Sister has essential tremor."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.sister_has_essential_tremor",
           "source": [
             "generated_output"
@@ -2179,7 +1841,7 @@
           "quote": "Sister has essential tremor."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "family_history.sister_has_essential_tremor",
           "source": [
             "generated_output"
@@ -2203,7 +1865,7 @@
           "quote": "Sister: essential tremor."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.her_sister_has_essential_tremor",
           "source": [
             "generated_output"
@@ -2211,7 +1873,7 @@
           "quote": "Her sister has essential tremor."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.her_sister_has_essential_tremor",
           "source": [
             "generated_output"
@@ -2220,16 +1882,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F036",
+        "audit_id": "F037",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2242,6 +1904,358 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "ropinirole",
+      "canonical_anchor": "med.medication.ropinirole.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ropinirole",
+        "value": "1",
+        "unit": "mg",
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Judgment: Patient demonstrates reasonable judgment, e.g., avoiding busy highways after ropinirole sleep attack scare, using back burner when cooking, husband present in kitchen."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole was increased to 1 mg at night."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Drives only short distances in daylight and avoids busy highways since the ropinirole sleep-attack scare."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Driving safety: discussed in context of past sleep attacks on ropinirole; patient self-restricts to short daytime drives and avoids busy highways."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole was increased to 1 mg at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F046",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "ropinirole",
+      "canonical_anchor": "med.medication.ropinirole.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ropinirole",
+        "value": "0.25",
+        "unit": "mg",
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks resolved after ropinirole discontinuation; no current sleepiness."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She had prior sleep attacks on ropinirole."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole was previously started at 0.25 mg nightly and titrated to 1 mg nightly."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole trial last year: started at 0.25 mg at night and increased to 1 mg at night; within about 10 days to 2 weeks she developed sleep attacks, including falling asleep at a red light with the car running; the medication was stopped and the sleep attacks resolved within about a week."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past medication: ropinirole — started at 0.25 mg at night, titrated to 1 mg at night; stopped due to sudden sleep attacks (including falling asleep at a red light with the car running); symptoms resolved within approximately one week of discontinuation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F048",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "no current sleep attacks",
+      "canonical_anchor": "symptom.sleep.current_sleep_attack.present",
+      "kind": "symptom",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "ropinirole",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "resolved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.sleep_attacks_resolved_after_ropinirole_discontinuation_no_current_sleepiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks resolved after ropinirole discontinuation; no current sleepiness."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "symptom.symptom_the_sleep_attacks_resolved_after_discontinuation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The sleep attacks resolved after discontinuation"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.no_current_sleep_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports no current sleep attacks."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.sleep_attacks_resolved_after_stopping_ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports sleep attacks resolved after stopping ropinirole."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.sleep_attacks_resolved_after_ropinirole_discontinuation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks resolved after ropinirole discontinuation."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.no_current_sleep_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports no current sleep attacks."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.prior_sleep_attacks_resolved_after_ropinirole_discontinuation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prior sleep attacks resolved after ropinirole discontinuation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.sleep_attacks_resolved_after_ropinirole_was_discontinued",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks resolved after ropinirole was discontinued."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.sleep_attacks_resolved_after_discontinuation_of_ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks resolved after discontinuation of ropinirole."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.sleep_attacks_have_resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks have resolved."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F049",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
         "must_not_err": false
       }
     },
@@ -2280,7 +2294,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.parkinson_disease",
           "source": [
             "generated_output"
@@ -2288,7 +2302,7 @@
           "quote": "Parkinson disease."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.parkinson_disease",
           "source": [
             "generated_output"
@@ -2296,7 +2310,7 @@
           "quote": "Parkinson disease."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.parkinson_disease_diagnosis_was_about_5_years_ago",
           "source": [
             "generated_output"
@@ -2304,7 +2318,7 @@
           "quote": "Parkinson disease diagnosis was about 5 years ago."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.parkinson_disease",
           "source": [
             "generated_output"
@@ -2312,7 +2326,7 @@
           "quote": "Parkinson disease."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.parkinson_disease_diagnosed_approximately_5_years_ago",
           "source": [
             "generated_output"
@@ -2320,7 +2334,7 @@
           "quote": "Parkinson disease diagnosed approximately 5 years ago."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.parkinson_disease",
           "source": [
             "generated_output"
@@ -2328,7 +2342,7 @@
           "quote": "Parkinson disease."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.parkinson_disease",
           "source": [
             "generated_output"
@@ -2336,7 +2350,7 @@
           "quote": "Parkinson disease."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.parkinson_disease_was_diagnosed_about_five_years_ago",
           "source": [
             "generated_output"
@@ -2353,14 +2367,14 @@
         }
       ],
       "provenance": {
-        "audit_id": "F048",
+        "audit_id": "F051",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max",
           "minimax-m3"
         ],
         "status": "release",
@@ -2418,7 +2432,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2426,7 +2440,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2434,7 +2448,7 @@
           "quote": "Lisinopril 10 mg daily will be continued."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2442,7 +2456,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2450,7 +2464,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2474,7 +2488,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2483,17 +2497,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F052",
+        "audit_id": "F055",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2544,7 +2558,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.continue_lisinopril_10_mg",
           "source": [
             "generated_output"
@@ -2552,7 +2566,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_lisinopril_10_mg",
           "source": [
             "generated_output"
@@ -2560,7 +2574,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_lisinopril_10_mg",
           "source": [
             "generated_output"
@@ -2568,7 +2582,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.continue_lisinopril_10_mg",
           "source": [
             "generated_output"
@@ -2592,7 +2606,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.continue_lisinopril_10_mg",
           "source": [
             "generated_output"
@@ -2601,16 +2615,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F053",
+        "audit_id": "F056",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2665,7 +2679,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -2673,7 +2687,7 @@
           "quote": "Continue melatonin 3 mg at bedtime."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -2681,7 +2695,7 @@
           "quote": "Melatonin 3 mg at bedtime will be continued."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -2689,7 +2703,7 @@
           "quote": "Continue melatonin 3 mg at bedtime."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -2697,7 +2711,7 @@
           "quote": "Continue melatonin 3 mg at bedtime."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -2721,7 +2735,7 @@
           "quote": "Continue melatonin 3 mg at bedtime."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.melatonin",
           "source": [
             "generated_output"
@@ -2730,17 +2744,17 @@
         }
       ],
       "provenance": {
-        "audit_id": "F054",
+        "audit_id": "F057",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2791,7 +2805,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.continue_melatonin_3_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -2799,7 +2813,7 @@
           "quote": "Continue melatonin 3 mg at bedtime."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_melatonin_3_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -2807,7 +2821,7 @@
           "quote": "Continue melatonin 3 mg at bedtime."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_melatonin_3_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -2815,7 +2829,7 @@
           "quote": "Continue melatonin 3 mg at bedtime."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.continue_melatonin_3_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -2839,7 +2853,7 @@
           "quote": "Continue melatonin 3 mg at bedtime."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.continue_melatonin_3_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -2848,16 +2862,16 @@
         }
       ],
       "provenance": {
-        "audit_id": "F055",
+        "audit_id": "F058",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2866,6 +2880,113 @@
         "k_support": 3,
         "n_supporters": 7,
         "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Ropinirole remains stopped",
+      "canonical_anchor": "instruct.ropinirole.ropinirole_remain_stopped_due_to_prior_sleep_attack.stop",
+      "kind": "instruct",
+      "subtype": "ropinirole",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "ropinirole",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.ropinirole_remains_stopped_due_to_sleep_attacks_not_restarting",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole remains stopped due to sleep attacks; not restarting."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.ropinirole_remains_stopped_due_to_prior_sleep_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole remains stopped due to prior sleep attacks."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.ropinirole_remains_stopped_due_to_prior_sleep_attacks_and_will_not_be_restarted",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole remains stopped due to prior sleep attacks and will not be restarted."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.ropinirole_remains_stopped",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole remains stopped."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.ropinirole_was_stopped_due_to_sleep_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole was stopped due to sleep attacks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.ropinirole_remains_stopped",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ropinirole remains stopped."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F060",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
       },
       "salience": {
         "must_cover": true,
@@ -2908,7 +3029,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -2916,7 +3037,7 @@
           "quote": "Call office sooner if fall with injury, new confusion, hallucinations, severe dizziness, chest pain, or worrisome sleepiness"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -2941,11 +3062,11 @@
         }
       ],
       "provenance": {
-        "audit_id": "F064",
+        "audit_id": "F067",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -2998,7 +3119,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "risk.call_office_sooner_if_fall_with_injury_new_confusion_hallucinations_severe_dizziness_chest_pain_or_worrisome_sleepiness",
           "source": [
             "generated_output"
@@ -3023,10 +3144,10 @@
         }
       ],
       "provenance": {
-        "audit_id": "F065",
+        "audit_id": "F068",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -3081,7 +3202,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.symptom_tremor_a_chronic_right_hand_tremor_has_been_present",
           "source": [
             "generated_output"
@@ -3089,7 +3210,7 @@
           "quote": "**Tremor:** A chronic right-hand tremor has been present since before her diagnosis"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.a_chronic_right_hand_tremor",
           "source": [
             "generated_output"
@@ -3097,7 +3218,7 @@
           "quote": "She has a chronic right hand tremor."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.a_chronic_right_hand_tremor",
           "source": [
             "generated_output"
@@ -3106,12 +3227,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F070",
+        "audit_id": "F073",
         "support": "3/3",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "qwen3-max"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3162,7 +3283,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.symptom_stiffness_the_patient_experiences_right_leg_stiffness_which_is_most_prominent_before_her_first_dose",
           "source": [
             "generated_output"
@@ -3170,7 +3291,7 @@
           "quote": "**Stiffness:** The patient experiences right leg stiffness, which is most prominent in the morning before her first dose"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.right_leg_stiffness",
           "source": [
             "generated_output"
@@ -3178,7 +3299,7 @@
           "quote": "She has right leg stiffness."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.right_leg_stiffness",
           "source": [
             "generated_output"
@@ -3186,7 +3307,7 @@
           "quote": "During wearing off, the patient experiences right leg stiffness."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.right_leg_stiffness",
           "source": [
             "generated_output"
@@ -3195,13 +3316,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F073",
+        "audit_id": "F076",
         "support": "4/4",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3252,7 +3373,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.symptom_constipation_this_has_been_an_issue_for_the_past_three_months_with_bowel_movements_every_three_to_four_days",
           "source": [
             "generated_output"
@@ -3260,7 +3381,7 @@
           "quote": "**Constipation:** This has been an issue for the past three months, with bowel movements every three to four days"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.constipation",
           "source": [
             "generated_output"
@@ -3268,7 +3389,7 @@
           "quote": "She has constipation."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.constipation",
           "source": [
             "generated_output"
@@ -3276,7 +3397,7 @@
           "quote": "Constipation is worse if she does not drink enough water."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_fluids_fiber_and_walking_for_constipation",
           "source": [
             "generated_output"
@@ -3284,7 +3405,7 @@
           "quote": "Continue fluids, fiber, and walking for constipation."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.constipation_worsens_with_inadequate_fluid_intake",
           "source": [
             "generated_output"
@@ -3308,7 +3429,7 @@
           "quote": "Constipation (likely Parkinson-related)."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.constipation",
           "source": [
             "generated_output"
@@ -3316,7 +3437,7 @@
           "quote": "She has constipation."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.constipation",
           "source": [
             "generated_output"
@@ -3324,7 +3445,7 @@
           "quote": "Constipation is worse if she does not drink enough water."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.continue_fluids_for_constipation",
           "source": [
             "generated_output"
@@ -3332,7 +3453,7 @@
           "quote": "Continue fluids for constipation."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.constipation",
           "source": [
             "generated_output"
@@ -3340,7 +3461,7 @@
           "quote": "Constipation is worse if fluid intake is low."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.continue_constipation_management_with_fluids",
           "source": [
             "generated_output"
@@ -3365,15 +3486,15 @@
         }
       ],
       "provenance": {
-        "audit_id": "F083",
+        "audit_id": "F086",
         "support": "7/7",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "minimax-m3",
-          "qwen3-max",
-          "kimi-k2",
+          "qwen3p8-max",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",
@@ -3423,7 +3544,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "demo.entacapone",
           "source": [
             "generated_output"
@@ -3431,7 +3552,7 @@
           "quote": "Entacapone was discussed but will be deferred at this time."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.entacapone",
           "source": [
             "generated_output"
@@ -3439,7 +3560,7 @@
           "quote": "Entacapone was discussed."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.entacapone",
           "source": [
             "generated_output"
@@ -3447,7 +3568,7 @@
           "quote": "Entacapone was discussed and deferred."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.entacapone",
           "source": [
             "generated_output"
@@ -3455,7 +3576,7 @@
           "quote": "Entacapone was discussed."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.entacapone",
           "source": [
             "generated_output"
@@ -3464,14 +3585,14 @@
         }
       ],
       "provenance": {
-        "audit_id": "F089",
+        "audit_id": "F092",
         "support": "5/5",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3522,7 +3643,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.during_wearing_off_she_feels_slower_in_general",
           "source": [
             "generated_output"
@@ -3530,7 +3651,7 @@
           "quote": "During wearing off, she feels slower in general."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.during_wearing_off_she_feels_slower_in_general",
           "source": [
             "generated_output"
@@ -3538,7 +3659,7 @@
           "quote": "During wearing off, she feels slower in general."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.during_wearing_off_the_patient_feels_slower_in_general",
           "source": [
             "generated_output"
@@ -3547,12 +3668,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F097",
+        "audit_id": "F100",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -3603,7 +3724,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.the_tremor_is_worse_with_stress",
           "source": [
             "generated_output"
@@ -3611,7 +3732,7 @@
           "quote": "The tremor is worse with stress."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.tremor_is_worse_with_stress",
           "source": [
             "generated_output"
@@ -3619,7 +3740,7 @@
           "quote": "Tremor is worse with stress."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.the_tremor_is_worse_with_stress",
           "source": [
             "generated_output"
@@ -3628,12 +3749,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F101",
+        "audit_id": "F104",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3684,7 +3805,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.been_fairly_steady_over_the_last_year",
           "source": [
             "generated_output"
@@ -3692,7 +3813,7 @@
           "quote": "Stiffness has been fairly steady over the last year."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.been_fairly_steady_over_the_last_year",
           "source": [
             "generated_output"
@@ -3700,7 +3821,7 @@
           "quote": "Stiffness has been fairly steady over the last year."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.been_steady_over_the_last_year",
           "source": [
             "generated_output"
@@ -3709,12 +3830,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F107",
+        "audit_id": "F110",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -3765,7 +3886,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.stiffness_improves_after_the_first_dose",
           "source": [
             "generated_output"
@@ -3773,7 +3894,7 @@
           "quote": "Stiffness improves after the first dose."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.stiffness_improves_after_the_first_dose",
           "source": [
             "generated_output"
@@ -3781,7 +3902,7 @@
           "quote": "Stiffness improves after the first dose."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.stiffness_improves_after_the_first_carbidopa_levodopa_dose",
           "source": [
             "generated_output"
@@ -3790,12 +3911,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F108",
+        "audit_id": "F111",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -3846,7 +3967,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.stiffness_improves_with_stretching",
           "source": [
             "generated_output"
@@ -3854,7 +3975,7 @@
           "quote": "Stiffness improves with stretching."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.stiffness_improves_with_stretching",
           "source": [
             "generated_output"
@@ -3862,7 +3983,7 @@
           "quote": "Stiffness improves with stretching."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.stiffness_improves_with_stretching",
           "source": [
             "generated_output"
@@ -3870,7 +3991,7 @@
           "quote": "Stiffness improves with stretching."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.stiffness_improves_with_stretching",
           "source": [
             "generated_output"
@@ -3879,13 +4000,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F109",
+        "audit_id": "F112",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3936,7 +4057,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.freezing_occurs_especially_in_doorways",
           "source": [
             "generated_output"
@@ -3944,7 +4065,7 @@
           "quote": "Freezing occurs especially in doorways."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.freezing_occurs_especially_in_doorways",
           "source": [
             "generated_output"
@@ -3952,7 +4073,7 @@
           "quote": "Freezing occurs especially in doorways."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.freezing_episodes_occur_especially_in_doorways",
           "source": [
             "generated_output"
@@ -3961,12 +4082,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F111",
+        "audit_id": "F114",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -4017,7 +4138,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.freezing_occurs_when_turning_around",
           "source": [
             "generated_output"
@@ -4025,7 +4146,7 @@
           "quote": "Freezing occurs when turning around."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.freezing_occurs_when_turning_around",
           "source": [
             "generated_output"
@@ -4033,7 +4154,7 @@
           "quote": "Freezing occurs when turning around."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.freezing_episodes_occur_when_turning_around",
           "source": [
             "generated_output"
@@ -4042,12 +4163,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F112",
+        "audit_id": "F115",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -4096,7 +4217,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.freezing",
           "source": [
             "generated_output"
@@ -4104,7 +4225,7 @@
           "quote": "Freezing was worse in the winter when she was more afraid of falling."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.freezing",
           "source": [
             "generated_output"
@@ -4112,7 +4233,7 @@
           "quote": "Freezing was worse during the winter when she was more afraid of falling."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.freezing",
           "source": [
             "generated_output"
@@ -4136,7 +4257,7 @@
           "quote": "Freezing was worse in winter due to fear of falling; improved with physical therapy."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.freezing",
           "source": [
             "generated_output"
@@ -4145,15 +4266,15 @@
         }
       ],
       "provenance": {
-        "audit_id": "F114",
+        "audit_id": "F117",
         "support": "6/6",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4204,7 +4325,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.helped_freezing_a_lot",
           "source": [
             "generated_output"
@@ -4212,7 +4333,7 @@
           "quote": "Physical therapy has helped freezing a lot."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.helped_freezing_a_lot",
           "source": [
             "generated_output"
@@ -4220,7 +4341,7 @@
           "quote": "Physical therapy has helped freezing a lot."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.helped_freezing",
           "source": [
             "generated_output"
@@ -4229,12 +4350,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F116",
+        "audit_id": "F119",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -4285,7 +4406,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.she_grabbed_the_counter",
           "source": [
             "generated_output"
@@ -4293,7 +4414,7 @@
           "quote": "She grabbed the counter."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.she_grabbed_the_counter",
           "source": [
             "generated_output"
@@ -4301,7 +4422,7 @@
           "quote": "She grabbed the counter."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.she_grabbed_the_counter",
           "source": [
             "generated_output"
@@ -4309,7 +4430,7 @@
           "quote": "She grabbed the counter."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.during_the_near_fall_she_grabbed_the_counter",
           "source": [
             "generated_output"
@@ -4318,13 +4439,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F125",
+        "audit_id": "F128",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -4375,7 +4496,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.her_husband_held_the_back_of_her_belt",
           "source": [
             "generated_output"
@@ -4383,7 +4504,7 @@
           "quote": "Her husband held the back of her belt."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.her_husband_held_the_back_of_her_belt",
           "source": [
             "generated_output"
@@ -4391,7 +4512,7 @@
           "quote": "Her husband held the back of her belt."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.her_husband_held_the_back_of_her_belt",
           "source": [
             "generated_output"
@@ -4399,7 +4520,7 @@
           "quote": "Her husband held the back of her belt."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.during_the_near_fall_her_husband_held_the_back_of_her_belt",
           "source": [
             "generated_output"
@@ -4408,13 +4529,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F126",
+        "audit_id": "F129",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -4465,7 +4586,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.constipation_started_about_3_months_ago",
           "source": [
             "generated_output"
@@ -4473,7 +4594,7 @@
           "quote": "Constipation started about 3 months ago."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.constipation_began_approximately_three_months_ago",
           "source": [
             "generated_output"
@@ -4481,7 +4602,7 @@
           "quote": "Constipation began approximately three months ago."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.consider_a_stool_softener_or_osmotic_laxative_if_constipation_does_not_improve",
           "source": [
             "generated_output"
@@ -4489,7 +4610,7 @@
           "quote": "Consider a stool softener or osmotic laxative if constipation does not improve."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.constipation_began_approximately_3_months_ago",
           "source": [
             "generated_output"
@@ -4497,7 +4618,7 @@
           "quote": "Constipation began approximately 3 months ago."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.consider_stool_softener_if_constipation_does_not_improve",
           "source": [
             "generated_output"
@@ -4513,7 +4634,7 @@
           "quote": "Constipation began about three months ago, with bowel movements every 3–4 days."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.constipation_started_about_three_months_ago",
           "source": [
             "generated_output"
@@ -4522,14 +4643,14 @@
         }
       ],
       "provenance": {
-        "audit_id": "F130",
+        "audit_id": "F133",
         "support": "5/5",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4580,7 +4701,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.constipation_is_worse_if_she_does_not_drink_enough_water",
           "source": [
             "generated_output"
@@ -4588,7 +4709,7 @@
           "quote": "Constipation is worse if she does not drink enough water."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.constipation_is_worse_if_fluid_intake_is_low",
           "source": [
             "generated_output"
@@ -4596,7 +4717,7 @@
           "quote": "Constipation is worse if fluid intake is low."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.constipation_is_worse_if_she_does_not_drink_enough_water",
           "source": [
             "generated_output"
@@ -4604,7 +4725,7 @@
           "quote": "Constipation is worse if she does not drink enough water."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_fluids_fiber_prune_juice_walking_and_increased_water_intake_for_constipation",
           "source": [
             "generated_output"
@@ -4621,13 +4742,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F132",
+        "audit_id": "F135",
         "support": "5/5",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max",
+          "gpt-5_6-sol",
           "minimax-m3"
         ],
         "status": "release",
@@ -4677,7 +4798,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -4685,7 +4806,7 @@
           "quote": "Fatigue is worse when wearing off before the 8 PM dose."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -4693,7 +4814,7 @@
           "quote": "Fatigue is worse when wearing off before the 8 PM dose."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -4702,12 +4823,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F135",
+        "audit_id": "F138",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4758,7 +4879,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.no_palpitations",
           "source": [
             "generated_output"
@@ -4766,7 +4887,7 @@
           "quote": "She reports no palpitations."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.palpitations",
           "source": [
             "generated_output"
@@ -4774,7 +4895,7 @@
           "quote": "She denied palpitations."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.palpitations",
           "source": [
             "generated_output"
@@ -4782,7 +4903,7 @@
           "quote": "No palpitations."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.palpitations",
           "source": [
             "generated_output"
@@ -4791,13 +4912,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F139",
+        "audit_id": "F142",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4848,7 +4969,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.no_shortness_of_breath",
           "source": [
             "generated_output"
@@ -4856,7 +4977,7 @@
           "quote": "She reports no shortness of breath."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.shortness_of_breath",
           "source": [
             "generated_output"
@@ -4864,7 +4985,7 @@
           "quote": "She denied shortness of breath."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.shortness_of_breath",
           "source": [
             "generated_output"
@@ -4872,7 +4993,7 @@
           "quote": "No shortness of breath."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.shortness_of_breath",
           "source": [
             "generated_output"
@@ -4881,13 +5002,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F140",
+        "audit_id": "F143",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4938,7 +5059,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.melatonin_helps_the_dream_enactment",
           "source": [
             "generated_output"
@@ -4946,7 +5067,7 @@
           "quote": "Melatonin helps the dream enactment."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.melatonin_helps_the_dream_enactment_symptoms",
           "source": [
             "generated_output"
@@ -4954,7 +5075,7 @@
           "quote": "Melatonin helps the dream enactment symptoms."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.melatonin_helps_dream_enactment",
           "source": [
             "generated_output"
@@ -4962,7 +5083,7 @@
           "quote": "Melatonin helps dream enactment."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.melatonin_helps_the_dream_enactment",
           "source": [
             "generated_output"
@@ -4971,13 +5092,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F143",
+        "audit_id": "F146",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -5028,7 +5149,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.osteoarthritis_of_the_right_knee",
           "source": [
             "generated_output"
@@ -5036,7 +5157,7 @@
           "quote": "Osteoarthritis of the right knee."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.osteoarthritis_of_the_right_knee",
           "source": [
             "generated_output"
@@ -5053,11 +5174,11 @@
         }
       ],
       "provenance": {
-        "audit_id": "F159",
+        "audit_id": "F162",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "minimax-m3"
         ],
         "status": "release",
@@ -5107,7 +5228,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.ropinirole",
           "source": [
             "generated_output"
@@ -5115,7 +5236,7 @@
           "quote": "Ropinirole was tried last year."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.ropinirole",
           "source": [
             "generated_output"
@@ -5123,7 +5244,7 @@
           "quote": "Ropinirole was previously started at 0.25 mg nightly and titrated to 1 mg nightly."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.ropinirole",
           "source": [
             "generated_output"
@@ -5131,7 +5252,7 @@
           "quote": "Ropinirole was tried last year."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.ropinirole",
           "source": [
             "generated_output"
@@ -5140,13 +5261,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F162",
+        "audit_id": "F165",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -5185,7 +5306,7 @@
       "fields": {
         "subject": "patient",
         "predicate": "has",
-        "object": "ropinirole was tried last year",
+        "object": "ropinirole",
         "value": null,
         "unit": null,
         "time": null,
@@ -5197,7 +5318,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.ropinirole_was_tried_last_year",
           "source": [
             "generated_output"
@@ -5205,7 +5326,7 @@
           "quote": "Ropinirole was tried last year."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.ropinirole_was_tried_last_year",
           "source": [
             "generated_output"
@@ -5213,7 +5334,7 @@
           "quote": "Ropinirole was tried last year."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.ropinirole_was_tried_last_year_and_stopped_because_of_sleep_attacks",
           "source": [
             "generated_output"
@@ -5222,12 +5343,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F163",
+        "audit_id": "F166",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -5235,11 +5356,92 @@
         "policy": "note_consensus_threshold",
         "k_support": 3,
         "n_supporters": 3,
-        "transcript_anchored": true
+        "transcript_anchored": false
       },
       "salience": {
-        "must_cover": false,
-        "must_cover_source": null,
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Sleep attacks resolved within about 1 week or a little less after discontinuation",
+      "canonical_anchor": "diagnosis.sleep.sleep_attack_resolved_within_about_or_little_less.improved",
+      "kind": "diagnosis",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "ropinirole",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "resolved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.sleep_attacks_resolved_within_about_1_week_or_a_little_less_after_discontinuation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks resolved within about 1 week or a little less after discontinuation."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.sleep_attacks_resolved_within_approximately_one_week_or_less_after_discontinuing_ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks resolved within approximately one week or less after discontinuing ropinirole."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.sleep_attacks_resolved_within_about_a_week_or_less_after_stopping_ropinirole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep attacks resolved within about a week or less after stopping ropinirole."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F174",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
         "must_not_err": false
       }
     },
@@ -5278,7 +5480,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "social_history.she_never_smoked",
           "source": [
             "generated_output"
@@ -5286,7 +5488,7 @@
           "quote": "She never smoked."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.she_never_smoked",
           "source": [
             "generated_output"
@@ -5294,7 +5496,7 @@
           "quote": "She never smoked."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "social_history.she_has_never_smoked_regularly",
           "source": [
             "generated_output"
@@ -5303,12 +5505,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F176",
+        "audit_id": "F180",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -5359,7 +5561,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.entacapone_was_deferred_for_now",
           "source": [
             "generated_output"
@@ -5367,7 +5569,7 @@
           "quote": "Entacapone was deferred for now."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.entacapone_is_deferred_for_now",
           "source": [
             "generated_output"
@@ -5375,7 +5577,7 @@
           "quote": "Entacapone is deferred for now."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.entacapone_is_deferred_for_now",
           "source": [
             "generated_output"
@@ -5384,12 +5586,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F203",
+        "audit_id": "F207",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -5440,7 +5642,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_outpatient_physical_therapy_twice_weekly",
           "source": [
             "generated_output"
@@ -5448,7 +5650,7 @@
           "quote": "Continue outpatient physical therapy twice weekly."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_outpatient_physical_therapy_twice_weekly",
           "source": [
             "generated_output"
@@ -5456,7 +5658,7 @@
           "quote": "Continue outpatient physical therapy twice weekly."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.continue_outpatient_physical_therapy_twice_weekly",
           "source": [
             "generated_output"
@@ -5464,7 +5666,7 @@
           "quote": "Continue outpatient physical therapy twice weekly."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.continue_physical_therapy_twice_weekly_outpatient",
           "source": [
             "generated_output"
@@ -5473,13 +5675,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F209",
+        "audit_id": "F213",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -5530,7 +5732,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.occupational_therapy_referral_is_for_strategies_for_turning_in_narrow_spaces",
           "source": [
             "generated_output"
@@ -5538,7 +5740,7 @@
           "quote": "Occupational therapy referral is for strategies for turning in narrow spaces."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.occupational_therapy_referral_is_for_strategies_for_turning_in_narrow_spaces",
           "source": [
             "generated_output"
@@ -5546,7 +5748,7 @@
           "quote": "Occupational therapy referral is for strategies for turning in narrow spaces."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.occupational_therapy_should_address_strategies_for_turning_in_narrow_spaces",
           "source": [
             "generated_output"
@@ -5555,12 +5757,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F221",
+        "audit_id": "F225",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "kimi-k2p6",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -5611,7 +5813,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "risk.she_was_advised_to_call_sooner_for_chest_pain",
           "source": [
             "generated_output"
@@ -5619,7 +5821,7 @@
           "quote": "She was advised to call sooner for chest pain."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "risk.seek_earlier_review_for_chest_pain",
           "source": [
             "generated_output"
@@ -5627,7 +5829,7 @@
           "quote": "Seek earlier review for chest pain."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "risk.call_sooner_for_chest_pain",
           "source": [
             "generated_output"
@@ -5636,12 +5838,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F232",
+        "audit_id": "F236",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -5655,6 +5857,113 @@
         "must_cover": true,
         "must_cover_source": "text",
         "must_not_err": true
+      }
+    },
+    {
+      "key": "worsened over the last three weeks",
+      "canonical_anchor": "symptom.symptom.worsened_over_three.worsened",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "worsened over the last three week",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.worsened_over_the_past_three_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wearing off has worsened over the past three weeks."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.not_worsened",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dream enactment has not worsened."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.worsened_over_the_last_three_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wearing off has worsened over the last three weeks."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.worsened_over_the_last_three_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wearing off has worsened over the last three weeks."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.worsened_over_the_last_three_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wearing-off has worsened over the last three weeks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.definitely_worsened_over_the_last_three_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wearing off has definitely worsened over the last three weeks."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F242",
+        "support": "5/5",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
       }
     },
     {
@@ -5692,7 +6001,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.wearing_off_now_also_occurs_before_the_8_pm_dose",
           "source": [
             "generated_output"
@@ -5700,7 +6009,7 @@
           "quote": "Wearing off now also occurs before the 8 PM dose."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.wearing_off_now_also_occurs_before_the_8_pm_dose",
           "source": [
             "generated_output"
@@ -5724,7 +6033,7 @@
           "quote": "Wearing-off initially occurred only before the 2:00 PM dose; now also occurs before the 8:00 PM dose."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.wearing_off_now_occurs_before_the_8_00_pm_dose_as_well",
           "source": [
             "generated_output"
@@ -5733,14 +6042,14 @@
         }
       ],
       "provenance": {
-        "audit_id": "F239",
+        "audit_id": "F243",
         "support": "5/5",
         "models": [
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -5791,7 +6100,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "risk.do_not_drive_if_sleep_attacks_recur",
           "source": [
             "generated_output"
@@ -5807,7 +6116,7 @@
           "quote": "Do not drive if sleep attacks recur."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "risk.do_not_drive_if_sleep_attacks_recur",
           "source": [
             "generated_output"
@@ -5816,12 +6125,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F319",
+        "audit_id": "F320",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
+          "gpt-5_6-sol",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,

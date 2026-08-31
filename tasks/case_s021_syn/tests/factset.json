@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s021_syn",
     "version": "1",
-    "sha256": "ebf72f076811d73e9f5d3c9fc8a12f6b58b3b1deae653fac3459236142c6af67",
+    "sha256": "c52ea88632b4da8969594cf05af5c5c033ca52fa549c13e390192e742281b3fc",
     "reviewed": false
   },
   "source": {
@@ -72,7 +72,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "demo.fluvoxamine",
           "source": [
             "generated_output"
@@ -80,7 +80,7 @@
           "quote": "Fluvoxamine was held for a few days during a course of clarithromycin for bronchitis, then restarted at the same dose."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.fluvoxamine",
           "source": [
             "generated_output"
@@ -88,7 +88,7 @@
           "quote": "Fluvoxamine was restarted at the same dose after the antibiotic course."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.fluvoxamine",
           "source": [
             "generated_output"
@@ -96,7 +96,7 @@
           "quote": "Fluvoxamine was temporarily held during a course of clarithromycin for bronchitis."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.fluvoxamine",
           "source": [
             "generated_output"
@@ -112,7 +112,7 @@
           "quote": "Fluvoxamine was previously held for a few days during a course of clarithromycin for bronchitis, then restarted at the same dose of 150 mg once daily at bedtime."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.fluvoxamine",
           "source": [
             "generated_output"
@@ -124,12 +124,12 @@
         "audit_id": "F002",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -180,7 +180,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -188,7 +188,7 @@
           "quote": "Patient reports anxiety decreased after ten to fifteen minutes during some exposures, but she gave in to washing a few times"
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.anxiety_decreased_after_ten_to_fifteen_minutes_during_some_exposures_but_she_gave_in_to_washing_a_few_times",
           "source": [
             "generated_output"
@@ -196,7 +196,7 @@
           "quote": "Patient reports anxiety decreased after ten to fifteen minutes during some exposures, but she gave in to washing a few times."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.anxiety_has_possibly_been_higher_since_starting_bupropion_but_is_unsure_if_it_is_the_medication_or_the_ocd",
           "source": [
             "generated_output"
@@ -204,7 +204,7 @@
           "quote": "Patient reports anxiety has possibly been higher since starting bupropion but is unsure if it is the medication or the OCD."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.continue_clonazepam_0_5_mg_as_needed_for_anxiety_panic_attacks",
           "source": [
             "generated_output"
@@ -212,7 +212,7 @@
           "quote": "Continue clonazepam 0.5 mg as needed for anxiety/panic attacks."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -220,7 +220,7 @@
           "quote": "She found the exposures very difficult but was able to tolerate the anxiety for 10-15 minutes on a few occasions, noting it did decrease"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -228,7 +228,7 @@
           "quote": "The patient described the anxiety as a constant hum in the background"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.the_patient_described_the_anxiety_as_a_constant_hum_in_the_background",
           "source": [
             "generated_output"
@@ -236,7 +236,7 @@
           "quote": "The patient described the anxiety as a constant hum in the background."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.the_patient_felt_her_anxiety_may_have_been_a_little_higher_since_starting_bupropion",
           "source": [
             "generated_output"
@@ -244,7 +244,7 @@
           "quote": "The patient felt her anxiety may have been a little higher since starting bupropion."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "social_history.the_patient_had_a_panic_attack_at_work_during_a_meeting",
           "source": [
             "generated_output"
@@ -252,7 +252,7 @@
           "quote": "The patient had a panic attack at work during a meeting."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.the_patient_was_instructed_to_record_anxiety_intensity_for_these_thoughts_on_a_0_to_10_scale",
           "source": [
             "generated_output"
@@ -260,7 +260,7 @@
           "quote": "The patient was instructed to record anxiety intensity for these thoughts on a 0 to 10 scale."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -268,7 +268,7 @@
           "quote": "The initial anxiety during exposure included a pounding heart and an overwhelming urge to wash"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.the_initial_anxiety_during_exposure_included_a_pounding_heart_and_an_overwhelming_urge_to_wash",
           "source": [
             "generated_output"
@@ -276,7 +276,7 @@
           "quote": "The initial anxiety during exposure included a pounding heart and an overwhelming urge to wash."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "social_history.her_husband_knows_that_she_has_been_struggling_with_anxiety_but_does_not_know_about_the_intrusive_thoughts_concerning_their_daughter",
           "source": [
             "generated_output"
@@ -284,7 +284,7 @@
           "quote": "Her husband knows that she has been struggling with anxiety but does not know about the intrusive thoughts concerning their daughter."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.monitor_whether_bupropion_may_be_contributing_to_anxiety",
           "source": [
             "generated_output"
@@ -292,7 +292,7 @@
           "quote": "Monitor whether bupropion may be contributing to anxiety."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -300,7 +300,7 @@
           "quote": "Patient reports anxiety peaked during exposures with heart pounding"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.anxiety_peaked_during_exposures_with_heart_pounding",
           "source": [
             "generated_output"
@@ -308,7 +308,7 @@
           "quote": "Patient reports anxiety peaked during exposures with heart pounding."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.monitor_whether_bupropion_is_contributing_to_anxiety_no_dose_change_at_this_time",
           "source": [
             "generated_output"
@@ -372,7 +372,7 @@
           "quote": "Reduce nightly checking by one check per night (e.g., stove checks from five to four, then three, etc.); sit with anxiety and refrain from re-checking."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -380,7 +380,7 @@
           "quote": "Her anxiety decreased after about 10 to 15 minutes during successful exposures"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.her_anxiety_decreased_after_about_10_to_15_minutes_during_successful_exposures",
           "source": [
             "generated_output"
@@ -388,7 +388,7 @@
           "quote": "Her anxiety decreased after about 10 to 15 minutes during successful exposures."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.she_thinks_her_anxiety_may_have_been_higher_since_starting_bupropion_but_is_unsure",
           "source": [
             "generated_output"
@@ -396,7 +396,7 @@
           "quote": "She thinks her anxiety may have been higher since starting bupropion but is unsure."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "social_history.her_husband_knows_she_has_been_struggling_with_anxiety",
           "source": [
             "generated_output"
@@ -404,7 +404,7 @@
           "quote": "Her husband knows she has been struggling with anxiety."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.bupropion_can_be_activating_and_can_worsen_anxiety_in_some_people",
           "source": [
             "generated_output"
@@ -416,14 +416,14 @@
         "audit_id": "F007",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -475,7 +475,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -483,7 +483,7 @@
           "quote": "These new thoughts cause significant distress, guilt, and shame; patient has been avoiding being alone with her daughter and has had her mother come over more often to help."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -491,7 +491,7 @@
           "quote": "The thoughts cause her to feel like a \"monster,\" and she reports significant guilt and shame."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -499,7 +499,7 @@
           "quote": "The patient reported guilt related to these thoughts."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -507,7 +507,7 @@
           "quote": "The thoughts cause marked fear, guilt, and shame."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -531,7 +531,7 @@
           "quote": "New intrusive thoughts are ego-dystonic and cause significant distress, guilt, and shame."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.a_little_bit_of_guilt",
           "source": [
             "generated_output"
@@ -543,14 +543,14 @@
         "audit_id": "F010",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -601,7 +601,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.sleep_difficulty",
           "source": [
             "generated_output"
@@ -609,7 +609,7 @@
           "quote": "Sleep difficulty is related to racing mind at night due to checking rituals and intrusive thoughts"
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.sleep_difficulty",
           "source": [
             "generated_output"
@@ -617,7 +617,7 @@
           "quote": "Sleep difficulty is related to racing mind at night due to checking rituals and intrusive thoughts."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.trouble_sleeping",
           "source": [
             "generated_output"
@@ -625,7 +625,7 @@
           "quote": "The patient reported trouble sleeping."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.exhaustion_from_the_rituals_and_poor_sleep",
           "source": [
             "generated_output"
@@ -645,9 +645,9 @@
         "audit_id": "F012",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",
@@ -699,7 +699,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "symptom.hopelessness_or_loss_of_interest_she_states_it_is_more_anxiety_guilt_and_exhaustion_than_full_depression",
           "source": [
             "generated_output"
@@ -707,7 +707,7 @@
           "quote": "Mood is described as \"pretty down and guilty\" and exhausted, but she denies hopelessness or loss of interest; she states it is more anxiety, guilt, and exhaustion than full depression."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -715,7 +715,7 @@
           "quote": "Continue bupropion XL 150 mg twice daily; monitor for worsening anxiety over the next few weeks; consider dose adjustment or switch if anxiety significantly worsens and does not respond to other interventions"
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.continue_bupropion_xl_150_mg_twice_daily_monitor_for_worsening_anxiety_over_the_next_few_weeks_consider_dose_adjustment_or_switch_if_anxiety_significantly_worsens_and_does_not_respond_to_other_interventions",
           "source": [
             "generated_output"
@@ -723,7 +723,7 @@
           "quote": "Continue bupropion XL 150 mg twice daily; monitor for worsening anxiety over the next few weeks; consider dose adjustment or switch if anxiety significantly worsens and does not respond to other interventions."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -731,7 +731,7 @@
           "quote": "The patient asked whether bupropion could be making her anxiety worse"
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.the_patient_asked_whether_bupropion_could_be_making_her_anxiety_worse",
           "source": [
             "generated_output"
@@ -739,7 +739,7 @@
           "quote": "The patient asked whether bupropion could be making her anxiety worse."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.monitor_whether_bupropion_may_be_worsening_anxiety_over_the_next_few_weeks",
           "source": [
             "generated_output"
@@ -747,7 +747,7 @@
           "quote": "Monitor whether bupropion may be worsening anxiety over the next few weeks."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -755,7 +755,7 @@
           "quote": "She asked whether bupropion could be worsening her anxiety"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.she_asked_whether_bupropion_could_be_worsening_her_anxiety",
           "source": [
             "generated_output"
@@ -763,7 +763,7 @@
           "quote": "She asked whether bupropion could be worsening her anxiety."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.monitor_whether_bupropion_is_worsening_anxiety",
           "source": [
             "generated_output"
@@ -771,7 +771,7 @@
           "quote": "Monitor whether bupropion is worsening anxiety."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
@@ -779,7 +779,7 @@
           "quote": "Consider lowering or changing bupropion later if anxiety becomes significantly worse and does not respond to other interventions"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.consider_lowering_or_changing_bupropion_later_if_anxiety_becomes_significantly_worse_and_does_not_respond_to_other_interventions",
           "source": [
             "generated_output"
@@ -807,10 +807,10 @@
         "audit_id": "F015",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -868,7 +868,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -876,7 +876,7 @@
           "quote": "Continue bupropion XL 150 mg twice daily; monitor for worsening anxiety over the next few weeks; consider dose adjustment or switch if anxiety significantly worsens and does not respond to other interventions."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -884,7 +884,7 @@
           "quote": "Continue bupropion XL 150 mg twice daily."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -892,7 +892,7 @@
           "quote": "Continue bupropion XL 150 mg twice daily without change."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -916,7 +916,7 @@
           "quote": "Continue bupropion XL 150 mg twice daily; monitor for potential anxiogenic effect."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -928,13 +928,13 @@
         "audit_id": "F016",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -983,7 +983,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "demo.sertraline",
           "source": [
             "generated_output"
@@ -991,7 +991,7 @@
           "quote": "Sertraline was previously stopped due to gastrointestinal issues (constant nausea) and sexual side effects; fluvoxamine was started instead and has been better tolerated."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.sertraline",
           "source": [
             "generated_output"
@@ -999,7 +999,7 @@
           "quote": "Sertraline was previously discontinued because of constant nausea, gastrointestinal problems, and sexual adverse effects."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.sertraline",
           "source": [
             "generated_output"
@@ -1015,7 +1015,7 @@
           "quote": "Sertraline was previously discontinued due to gastrointestinal side effects (constant nausea) and sexual side effects; patient was switched to fluvoxamine, which has been better tolerated."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.sertraline",
           "source": [
             "generated_output"
@@ -1027,11 +1027,11 @@
         "audit_id": "F018",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1082,7 +1082,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -1090,7 +1090,7 @@
           "quote": "Sertraline was previously stopped due to gastrointestinal issues (constant nausea) and sexual side effects; fluvoxamine was started instead and has been better tolerated."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -1098,7 +1098,7 @@
           "quote": "The patient had a past trial of sertraline, which was discontinued due to GI issues (constant nausea) and sexual side effects."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -1106,7 +1106,7 @@
           "quote": "Sertraline had previously been stopped because of GI issues."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -1114,7 +1114,7 @@
           "quote": "Sertraline was previously discontinued because of constant nausea, gastrointestinal problems, and sexual adverse effects."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -1138,7 +1138,7 @@
           "quote": "Previous treatment with sertraline, discontinued due to gastrointestinal side effects (nausea) and sexual side effects."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -1150,14 +1150,14 @@
         "audit_id": "F019",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1214,7 +1214,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.fluvoxamine",
           "source": [
             "generated_output"
@@ -1222,7 +1222,7 @@
           "quote": "Fluvoxamine 150 mg once daily at bedtime (restarted after antibiotic interruption; currently tolerating well)."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.fluvoxamine",
           "source": [
             "generated_output"
@@ -1246,7 +1246,7 @@
           "quote": "Fluvoxamine 150 mg orally once daily at bedtime (restarted after clarithromycin course, approximately two weeks ago)."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.fluvoxamine",
           "source": [
             "generated_output"
@@ -1258,11 +1258,11 @@
         "audit_id": "F023",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1319,7 +1319,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -1327,7 +1327,7 @@
           "quote": "Bupropion XL 150 mg twice daily (morning and afternoon around 2–3 p.m.); stable for about a year or more."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -1335,7 +1335,7 @@
           "quote": "Bupropion XL 150 mg twice daily."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -1343,7 +1343,7 @@
           "quote": "Bupropion XL 150 mg in the morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -1351,7 +1351,7 @@
           "quote": "Bupropion XL 150 mg by mouth in the morning and 150 mg in the afternoon around 2–3 PM."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -1375,7 +1375,7 @@
           "quote": "Bupropion XL (Wellbutrin XL) 150 mg orally twice daily (morning and approximately 2–3 p.m.); patient has been on this for approximately one year or slightly longer."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.bupropion",
           "source": [
             "generated_output"
@@ -1387,14 +1387,14 @@
         "audit_id": "F024",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1451,7 +1451,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1459,7 +1459,7 @@
           "quote": "Clonazepam 0.5 mg up to twice daily as needed for anxiety; used about three times in the last two weeks (once for panic attack at work, twice for sleep)."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1467,7 +1467,7 @@
           "quote": "Clonazepam 0.5 mg as needed, up to twice a day."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1475,7 +1475,7 @@
           "quote": "Clonazepam 0.5 mg up to twice daily as needed for anxiety."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1483,7 +1483,7 @@
           "quote": "Clonazepam 0.5 mg by mouth up to twice daily as needed for anxiety."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1507,7 +1507,7 @@
           "quote": "Clonazepam 0.5 mg orally up to twice daily as needed for anxiety; patient reports using approximately three times in the past two weeks (one for a panic attack at work, two to help with sleep)."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1519,14 +1519,14 @@
         "audit_id": "F025",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1581,7 +1581,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1589,7 +1589,7 @@
           "quote": "Hydroxyzine 25 mg at bedtime as needed for itching and sleep; used approximately every other night."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1597,7 +1597,7 @@
           "quote": "Hydroxyzine 25 mg at bedtime as needed."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1605,7 +1605,7 @@
           "quote": "Hydroxyzine 25 mg at bedtime as needed for itching."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1613,7 +1613,7 @@
           "quote": "Hydroxyzine 25 mg by mouth at bedtime as needed for itching, scratching, and sleep."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1637,7 +1637,7 @@
           "quote": "Hydroxyzine 25 mg orally at bedtime as needed for itching; patient reports using approximately every other night."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1649,14 +1649,14 @@
         "audit_id": "F026",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1713,7 +1713,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1721,7 +1721,7 @@
           "quote": "Continue clonazepam 0.5 mg as needed for anxiety/panic attacks."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1729,7 +1729,7 @@
           "quote": "Continue clonazepam 0.5 mg up to twice daily as needed."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1737,7 +1737,7 @@
           "quote": "Continue clonazepam 0.5 mg up to twice daily as needed."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1761,7 +1761,7 @@
           "quote": "Continue clonazepam 0.5 mg up to twice daily as needed."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.clonazepam",
           "source": [
             "generated_output"
@@ -1773,13 +1773,13 @@
         "audit_id": "F038",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1834,7 +1834,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1842,7 +1842,7 @@
           "quote": "Continue hydroxyzine 25 mg as needed at bedtime."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1850,7 +1850,7 @@
           "quote": "Continue hydroxyzine 25 mg at bedtime as needed."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1858,7 +1858,7 @@
           "quote": "Continue hydroxyzine 25 mg at bedtime as needed."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1882,7 +1882,7 @@
           "quote": "Continue hydroxyzine 25 mg at bedtime as needed."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.hydroxyzine",
           "source": [
             "generated_output"
@@ -1894,13 +1894,13 @@
         "audit_id": "F039",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1951,7 +1951,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.continue_hydroxyzine_25_mg_as_needed_at_bedtime",
           "source": [
             "generated_output"
@@ -1959,7 +1959,7 @@
           "quote": "Continue hydroxyzine 25 mg as needed at bedtime."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_hydroxyzine_25_mg_at_bedtime_as_needed",
           "source": [
             "generated_output"
@@ -1967,7 +1967,7 @@
           "quote": "Continue hydroxyzine 25 mg at bedtime as needed."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_hydroxyzine_25_mg_at_bedtime_as_needed",
           "source": [
             "generated_output"
@@ -1991,7 +1991,7 @@
           "quote": "Continue hydroxyzine 25 mg at bedtime as needed."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.continue_hydroxyzine_25_mg_at_bedtime_as_needed",
           "source": [
             "generated_output"
@@ -2003,12 +2003,12 @@
         "audit_id": "F040",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2059,7 +2059,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "treatment.begin_monitoring_intrusive_thoughts_about_daughter_by_writing_them_down_in_a_notebook_or_phone_noting_the_thought_and_anxiety_intensity_on_a_scale_of_010",
           "source": [
             "generated_output"
@@ -2067,7 +2067,7 @@
           "quote": "Begin monitoring intrusive thoughts about daughter by writing them down in a notebook or phone, noting the thought and anxiety intensity on a scale of 0–10."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.patient_will_record_new_intrusive_thoughts_about_her_daughter_and_rate_anxiety_intensity_on_a_010_scale",
           "source": [
             "generated_output"
@@ -2095,8 +2095,8 @@
         "audit_id": "F042",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -2149,7 +2149,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.hopelessness",
           "source": [
             "generated_output"
@@ -2157,7 +2157,7 @@
           "quote": "The patient denied hopelessness."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.hopelessness",
           "source": [
             "generated_output"
@@ -2165,7 +2165,7 @@
           "quote": "She denies hopelessness."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.current_hopelessness",
           "source": [
             "generated_output"
@@ -2177,9 +2177,9 @@
         "audit_id": "F102",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "kimi-k2"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -2230,7 +2230,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.experienced_before_starting_medication",
           "source": [
             "generated_output"
@@ -2238,7 +2238,7 @@
           "quote": "The patient denied loss of interest that she had experienced before starting medication."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.before_starting_medication",
           "source": [
             "generated_output"
@@ -2254,7 +2254,7 @@
           "quote": "Patient denies hopelessness and loss of interest, distinguishing her current state from the depression she had before starting medications."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.before_starting_medications",
           "source": [
             "generated_output"
@@ -2266,10 +2266,10 @@
         "audit_id": "F103",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2320,7 +2320,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -2336,7 +2336,7 @@
           "quote": "Switched from sertraline to fluvoxamine, which has been better tolerated."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.sertraline",
           "source": [
             "generated_output"
@@ -2348,9 +2348,9 @@
         "audit_id": "F111",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
+          "gpt-5_4",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2401,7 +2401,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_bupropion_xl_150_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2409,7 +2409,7 @@
           "quote": "Continue bupropion XL 150 mg twice daily."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_bupropion_xl_150_mg_twice_daily_without_change",
           "source": [
             "generated_output"
@@ -2417,7 +2417,7 @@
           "quote": "Continue bupropion XL 150 mg twice daily without change."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.continue_bupropion_xl_150_mg_by_mouth_twice_daily",
           "source": [
             "generated_output"
@@ -2429,9 +2429,9 @@
         "audit_id": "F135",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -2482,7 +2482,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_clonazepam_0_5_mg_up_to_twice_daily_as_needed",
           "source": [
             "generated_output"
@@ -2490,7 +2490,7 @@
           "quote": "Continue clonazepam 0.5 mg up to twice daily as needed."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_clonazepam_0_5_mg_up_to_twice_daily_as_needed",
           "source": [
             "generated_output"
@@ -2506,7 +2506,7 @@
           "quote": "Continue clonazepam 0.5 mg up to twice daily as needed."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.continue_clonazepam_0_5_mg_by_mouth_up_to_twice_daily_as_needed",
           "source": [
             "generated_output"
@@ -2526,10 +2526,10 @@
         "audit_id": "F136",
         "support": "5/5",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "minimax-m3",
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",
@@ -2581,7 +2581,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.the_checking_delays_sleep",
           "source": [
             "generated_output"
@@ -2589,7 +2589,7 @@
           "quote": "The checking delays sleep."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.the_checking_delays_sleep",
           "source": [
             "generated_output"
@@ -2609,8 +2609,8 @@
         "audit_id": "F160",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
-          "qwen3-max",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -2662,7 +2662,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.obsessive_compulsive_disorder_is_being_treated_with_medication_and_weekly_cognitive_behavioral_therapy",
           "source": [
             "generated_output"
@@ -2670,7 +2670,7 @@
           "quote": "Obsessive-compulsive disorder is being treated with medication and weekly cognitive behavioral therapy."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.obsessive_compulsive_disorder",
           "source": [
             "generated_output"
@@ -2678,7 +2678,7 @@
           "quote": "Obsessive-compulsive disorder."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.obsessive_compulsive_disorder",
           "source": [
             "generated_output"
@@ -2686,7 +2686,7 @@
           "quote": "Obsessive-compulsive disorder."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.obsessive_compulsive_disorder",
           "source": [
             "generated_output"
@@ -2698,9 +2698,9 @@
         "audit_id": "F178",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2757,7 +2757,7 @@
       },
       "evidence": [
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.wellbutrin",
           "source": [
             "generated_output"
@@ -2785,7 +2785,7 @@
         "audit_id": "F244",
         "support": "3/3",
         "models": [
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],

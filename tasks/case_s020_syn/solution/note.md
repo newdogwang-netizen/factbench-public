@@ -1,117 +1,78 @@
 History of Presenting Complaints:
-- Follow-up consultation for focal epilepsy.
-- Breakthrough seizure approximately 6-7 weeks ago; patient initially stated 3 weeks, then corrected to 6-7 weeks based on when the levetiracetam dose was increased.
-- Seizure occurred on a Sunday evening after returning home from a friend's wedding weekend in Traverse.
-- Patient forgot his pill box at home and missed 4 doses total (Friday evening, Saturday morning, Saturday evening, and Sunday morning).
-- Seizure semiology: déjà vu aura with rising epigastric sensation, followed by loss of awareness.
-- Wife witnessed the event: patient stiffened and shook for approximately 2 minutes.
-- Tongue bite occurred during the seizure.
-- Postictal confusion lasted approximately 20 minutes.
-- Patient went to the ER; CT was normal and labs were fine.
-- Patient was discharged from the ER with instruction to follow up.
-- Levetiracetam dose was increased from 500 mg BID to 750 mg BID the Monday after the seizure via portal message.
-- Patient had been seizure-free for almost 2 years prior to this breakthrough event.
-- Identified triggers for the breakthrough seizure: 4 missed doses, heavier-than-usual alcohol consumption at the wedding, and sleep deprivation (~5 hours of sleep both nights).
-- No convulsive seizures since the breakthrough event.
-- Two brief focal aware seizures (déjà vu episodes) since the dose increase: one approximately 2 weeks after the increase, and one the week prior to this visit.
-- Both focal aware seizures consisted of déjà vu and epigastric sensation lasting approximately 30 seconds or less, with preserved awareness.
-- Previously experienced déjà vu auras approximately once per month before the wedding event.
-- Irritability started within a week of the levetiracetam dose increase.
-- Irritability was worst in the evenings.
-- Irritability manifested as snapping at wife, children, and the dog.
-- Irritability improved from 7/10 to 3/10 since starting vitamin B6 approximately 3 weeks ago.
-- Irritability is still present, especially in the evenings.
-- Vivid dreams and sleep disruption (waking up a couple of times per night) began after the dose increase.
-- Vivid dreams and sleep disruption were worse in the first 2 weeks and have somewhat improved.
-- Morning grogginess occurred after the dose increase.
-- Morning grogginess improved after moving the evening levetiracetam dose from bedtime (11pm) to dinner time (6-6:30pm).
-- Dizziness and nausea occurred in the first 10-14 days after the dose increase and resolved by week 3.
-- Occasional mild headaches, for which patient takes ibuprofen approximately twice a month.
-- Tongue bite from the seizure healed within approximately 1 week.
-- Wife maintains a seizure diary on her phone.
+ - Epilepsy follow-up visit, approximately three months since last visit.
+ - Breakthrough seizure occurred on February 14th (Valentine's weekend) at the lake house with partner, kids, and dog.
+ - Breakthrough seizure was triggered by missing two doses of levetiracetam (Friday evening and Saturday morning doses); seizure occurred Saturday afternoon.
+ - Levetiracetam dose was increased from 500 mg twice daily to 750 mg twice daily (1,500 mg total per day) after the February seizure; patient has been on the increased dose for approximately six weeks since the end of February.
+ - No seizures since the dose increase.
+ - No auras since the dose increase.
+ - Dizziness in the mornings, starting approximately one hour after taking the morning Keppra dose; began about two weeks after the dose increase and has been ongoing for about one month.
+ - Dizziness is described as lightheadedness or a floaty feeling, not vertigo (room spinning); comes and goes in waves for about one to two hours and settles down by lunchtime.
+ - Fatigue in the afternoons with a crash around 2 or 3 PM requiring lying down; present since the dose increase; improving compared to the first couple of weeks.
+ - Irritability still present but improved with vitamin B6; rated 3 out of 10 currently compared to 7 out of 10 before B6 was added.
+ - Irritability occurs mostly in the evenings when tired; patient gets snappy with partner or kids and feels bad afterwards; no rage episodes.
+ - Memory issues including trouble finding words and forgetting appointments; started approximately six months ago (before the seizure); stable, neither worse nor better since Keppra increase.
+ - Patient works as a project manager and is concerned memory issues are affecting job performance.
+ - Sleep disruption (previously waking up multiple times at night and feeling unrested) has resolved since the Keppra dose increase.
+ - Migraines with aura continue at a stable frequency of one to two per month; not worse since dose increase.
+ - Patient asked about when they can resume driving.
 
 Past Medical & Psychiatric History:
-- Focal epilepsy diagnosed approximately 3 years ago.
-- Concussion in high school from football.
-- Childhood asthma, since outgrown.
-- Wisdom teeth extraction (years ago).
-- No new medical issues, surgeries, or hospitalizations other than the recent ER visit.
+ - Epilepsy, probably related to head trauma; patient sustained a concussion in college from a head injury playing soccer, and seizures started a few years later.
+ - Migraines with aura.
+ - Asthma; uses albuterol inhaler as needed; no recent asthma attacks.
+ - Past trial of lamotrigine in 2021 or 2022; discontinued due to mild rash on arms and chest; stopped quickly due to concern for Stevens-Johnson syndrome; rash resolved upon discontinuation.
+ - No other drug allergies (no penicillin or sulfa allergies).
+ - No food or latex allergies.
 
 Medications:
-- Levetiracetam (Keppra) 750 mg twice daily (morning ~8am, evening with dinner ~6-6:30pm); increased from 500 mg twice daily approximately 6 weeks ago; patient was on 500 mg BID for approximately 2 years prior to the increase.
-- Pyridoxine (vitamin B6) 100 mg once daily in the morning; started approximately 3 weeks ago for irritability.
-- Cetirizine 10 mg as needed for seasonal allergies (3-4 times per week in spring).
-- Vitamin D3 2000 IU daily; started by PCP for low level in winter.
-- Ibuprofen 400 mg occasionally for back pain or headaches (approximately twice a month).
-- Past medication: Lamotrigine (Lamictal) was the first AED at diagnosis approximately 3 years ago; titrated to 100 mg twice daily; stopped due to daily headaches and insomnia; seizure control was adequate while on it; switched to levetiracetam approximately 2 years ago.
-- Allergy: Penicillin — hives, since childhood.
-- Seasonal pollen allergies.
-- No known AED allergies; no rash with lamotrigine.
+ - Levetiracetam (Keppra) 750 mg twice daily.
+ - Vitamin B6 100 mg once daily in the morning.
+ - Combined oral contraceptive pill (OCP) daily; skips placebo week sometimes for migraines.
+ - Albuterol inhaler as needed for asthma.
 
 Family History:
-- Mother has migraines.
-- Paternal uncle had seizures after a stroke in his 60s (provoked, not genetic).
-- No family history of epilepsy.
-- Father is alive and well.
+ - Mother has migraines.
+ - Father has high blood pressure.
+ - No known family history of epilepsy.
 
 Social History:
-- Occupation: HVAC technician; job requires driving a van between work sites.
-- Currently on shop duty and inventory at work due to driving restrictions; boss has accommodated.
-- Married with two children (ages 6 and 3).
-- Has a dog named Moose.
-- Smoking: former smoker, half pack per day for approximately 10 years; quit approximately 2 years ago; occasional cigar at weddings (~twice per year).
-- Alcohol: normally 1-2 beers on weekends; consumed more than usual at the wedding.
-- No recreational drugs or marijuana use.
-- Caffeine: 2 coffees in the morning; no energy drinks.
-- Wife currently drives the patient; patient has not driven since the seizure.
-
-Mental Status Examination:
-- Mood: Patient states "my mood's fine otherwise."
-- Insight: Patient demonstrates understanding that the breakthrough seizure was triggered by missed doses, alcohol, and sleep deprivation; patient understands the need for medication adherence and driving restrictions.
-- Judgment: Patient is adhering to driving restrictions, taking medications as prescribed, and wife is maintaining a seizure diary; patient acknowledges he will not drive until cleared.
-
-Neurological Examination:
-- Cranial nerves: normal (extraocular movements intact, facial symmetry intact, eyebrow raise normal).
-- Motor: grip strength good and strong bilaterally; push and pull against resistance normal.
-- Reflexes: symmetric.
-- Gait: normal; heel-to-toe walking normal.
-- Overall exam: normal.
-- Tongue bite from seizure: healed.
-
-Risk Assessment:
-- Patient denies any thoughts of hurting himself.
-- No homicidal ideation mentioned.
-- Seizure-related safety risks reviewed including driving, swimming, bathing, and working at heights.
+ - Occupation: project manager.
+ - Smokes approximately half a pack per day; down from a full pack; trying to cut down.
+ - Drinks alcohol: one glass of wine two to three times per week; no binge drinking; has not consumed alcohol since the seizure per physician recommendation.
+ - Uses cannabis occasionally: CBD gummy for sleep; reports it helps; has not noticed any interaction with seizure medications.
+ - No recreational drug use.
+ - Not pregnant and not planning pregnancy; using birth control pill.
+ - Has a partner and children; partner assists with transportation due to driving restriction.
+ - Under significant stress at work due to a big project deadline; working longer hours and sleeping less.
 
 Diagnosis:
-- Focal epilepsy, diagnosed approximately 3 years ago.
-- Breakthrough seizure (focal with impaired awareness and secondary generalization) occurring in the setting of missed doses, alcohol consumption, and sleep deprivation.
-- Ongoing focal aware seizures (déjà vu auras), not increased in frequency compared to baseline.
-- Levetiracetam-associated irritability, partially responsive to pyridoxine.
+ - Epilepsy, likely post-traumatic (related to college concussion/head injury).
+ - Migraine with aura.
+ - Asthma.
 
 Treatment Plan:
-- Continue levetiracetam 750 mg twice daily; no further dose increase at this time.
-- Continue pyridoxine (vitamin B6) 100 mg daily.
-- Continue cetirizine, vitamin D3, and ibuprofen as currently used.
-- Adherence counseling: use pill box kept in a drawer away from the dog; set phone alarms for morning and evening doses; pack medications first when traveling; carry medications in carry-on luggage with extra supply when flying; take a missed dose as soon as remembered unless near the next scheduled dose; do not double up doses.
-- If irritability persists at 4-6 weeks or worsens: begin lamotrigine cross-titration at 25 mg once daily for 2 weeks, then 25 mg twice daily for 2 weeks, then 50 mg twice daily, with titration slower than standard schedule due to prior headaches; once lamotrigine reaches a decent dose, gradually reduce levetiracetam.
-- Lamotrigine safety: stop medication and call the clinic the same day if any rash, fever, or mouth sores occur.
-- Trough levetiracetam level ordered: blood draw in the morning before the AM dose; hold morning dose until after blood draw then take immediately; to be completed within the next 1-2 weeks.
-- Sleep-deprived EEG ordered: no sleep after midnight and no caffeine the morning of the test; to be scheduled within 2-3 weeks.
-- Follow-up appointment in 3 months (12 weeks); sooner if recurrent seizure, rash, or worsening irritability.
-- Continue seizure diary; video-record events if safe to do so.
-- Wife welcome to join appointments and provide collateral information.
+ - Order Keppra trough level blood test; patient to go to lab before 10 AM and must not take morning Keppra dose until after blood draw; may take B6 and OCP as usual; may eat breakfast; results expected within a few days; physician will review and send message via portal.
+ - Continue current levetiracetam 750 mg twice daily for now.
+ - Continue vitamin B6 100 mg daily for irritability.
+ - If Keppra trough level is high or symptoms do not improve in the next few weeks, consider lowering Keppra back to 500 mg twice daily, acknowledging increased seizure risk.
+ - Consider splitting the dose differently (smaller morning dose, larger evening dose) to reduce morning dizziness, pending trough level results.
+ - Patient advised to take Keppra with food in the morning, hydrate well, and get up slowly from sitting or lying down to reduce dizziness.
+ - Consider lamotrigine cross-titration in the future if irritability or cognitive issues do not improve; would start lamotrigine at 25 mg once daily and slowly increase over several weeks while gradually decreasing Keppra; patient must watch for any skin changes and report them immediately due to prior rash with lamotrigine.
+ - If lamotrigine is added in the future, be aware of interaction with the OCP (OCP can lower lamotrigine levels and lamotrigine can affect the OCP); dose adjustments and backup contraception may be needed.
+ - Keppra does not significantly interact with the OCP.
+ - Referral to neuropsychology clinic for formal cognitive evaluation to establish baseline and provide memory and organization strategies.
+ - Sleep hygiene: aim for seven to eight hours of sleep per night; try relaxation techniques such as deep breathing or meditation before bed; continue CBD gummy if helpful.
+ - Consider formal sleep study if sleep issues return, particularly given patient's reported snoring and possible sleep apnea risk.
+ - Stress management: delegate work tasks and talk to supervisor about project deadline.
+ - Follow-up appointment scheduled for June 10th at 10 AM (approximately twelve weeks from now).
+ - Patient instructed to call the office sooner if any seizures, rash, severe dizziness, or other concerning side effects occur.
 
 Safety Plan:
-- Showers preferred over baths.
-- No swimming alone.
-- No ladders or roofs at work until further out from the last seizure event.
-- Maintain regular sleep.
-- Limit alcohol to 1-2 drinks; avoid binge drinking.
-- No driving until 6 months seizure-free per state law.
-- Approximately 4 more months until driving eligibility based on corrected seizure timeline of ~7 weeks ago.
-- Brief focal aware seizures (déjà vu) with preserved awareness do not reset the 6-month driving clock per state guidance.
-- Any seizure with impaired awareness or convulsion resets the 6-month driving clock to zero.
-- Patient to self-report to DMV as required by state law.
-- If lamotrigine is started and any rash, fever, or mouth sores occur: stop medication and call the clinic the same day.
-- Message or call the clinic if recurrent seizure, rash, or worsening irritability occurs before the scheduled follow-up.
+ - Driving restriction remains in effect until August 14th (six months seizure-free from February 14th breakthrough seizure).
+ - Patient must remain compliant with medications and have no seizures during the restriction period.
+ - Patient to keep a seizure diary documenting any auras, seizures, and missed doses.
+ - If any seizure or aura occurs before August 14th, the six-month clock restarts and patient must call the office immediately.
+ - Patient advised to use the bus or ask partner for rides during the restriction period.
+ - Patient instructed to avoid alcohol, especially in the first few months after a seizure.
+ - Patient instructed to take medications every day without missing doses.
+ - Patient instructed to call the office if any rash, severe dizziness, or other concerning symptoms develop.

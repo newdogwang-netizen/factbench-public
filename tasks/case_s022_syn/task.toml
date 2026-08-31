@@ -4,8 +4,8 @@ artifacts = []
 [task]
 name = "factbench/case-s022-syn"
 version = "1.0.0"
-description = "Write a factually consistent clinical note from a fictional pain clinic follow-up consultation transcript (deterministic factuality scoring)."
-keywords = ["clinical-notes", "factual-consistency", "medical", "pain"]
+description = "Write a factually consistent clinical note from a fictional chronic pain clinic follow-up consultation transcript (deterministic factuality scoring)."
+keywords = ["clinical-notes", "factual-consistency", "medical", "chronic"]
 [[task.authors]]
 name = "Heidi Health"
 

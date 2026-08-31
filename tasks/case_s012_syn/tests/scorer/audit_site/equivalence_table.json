@@ -1,0 +1,212 @@
+{
+ "object|appetite is fine|as fine": {
+  "at": "2026-08-31T08:13:25Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|atorvastatin|hyperlipidemia": {
+  "at": "2026-08-31T08:13:28Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|atorvastatin|ldl cholesterol was 82": {
+  "at": "2026-08-31T08:13:26Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|avoid vitamin a supplement|no vitamin a supplement": {
+  "at": "2026-08-31T08:13:24Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|blood in the urine|weak stream, straining, or blood in urine": {
+  "at": "2026-08-31T08:13:27Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|continue empagliflozin 10 mg once daily|continue empagliflozin 10 milligram once a day": {
+  "at": "2026-08-31T08:13:26Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|continue vitamin d3 1000 unit daily|vitamin d3 will continue": {
+  "at": "2026-08-31T09:43:29Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|episode of waking up gasping|no waking up gasping": {
+  "at": "2026-08-31T08:13:22Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|gestational diabete|no gestational diabete": {
+  "at": "2026-08-31T08:13:25Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|he denie access to firearm in the home|no firearm in the home": {
+  "at": "2026-08-31T08:13:22Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|hyperlipidemia|hyperlipidemia, unspecified": {
+  "at": "2026-08-31T08:13:25Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|longer falling asleep in chair, resumed walk|longer falling asleep in the chair": {
+  "at": "2026-08-31T08:13:23Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|medication plan|tums": {
+  "at": "2026-08-31T08:13:25Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|mild xerotic eczema of the forearm|mild xerotic eczema on forearm on examination": {
+  "at": "2026-08-31T09:43:26Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|moderate persistent asthma|moderate persistent asthma, currently well controlled": {
+  "at": "2026-08-31T08:13:24Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|no recreational drug or marijuana use|no recreational drug use, including marijuana": {
+  "at": "2026-08-31T08:13:27Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|occupation: graphic designer|patient is a graphic designer": {
+  "at": "2026-08-31T08:13:23Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|patient now drink diet soda or water|the patient drink diet soda": {
+  "at": "2026-08-31T08:13:26Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|patient now drink diet soda or water|the patient drink water": {
+  "at": "2026-08-31T08:13:26Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|refer to the allergy clinic for allergy testing|referral for allergy testing": {
+  "at": "2026-08-31T08:13:28Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|remain off omeprazole|remain off omeprazole; reflux remain resolved": {
+  "at": "2026-08-31T08:13:27Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "object|the a1c six month ago was 8.1|type 2 diabete diagnosed about six year ago": {
+  "at": "2026-08-31T09:43:27Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "time|morning|night": {
+  "at": "2026-08-31T08:13:25Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|0.25|1": {
+  "at": "2026-08-31T09:43:30Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|100|200": {
+  "at": "2026-08-31T08:13:29Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|100|50": {
+  "at": "2026-08-31T08:13:31Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|10|20": {
+  "at": "2026-08-31T08:13:30Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|10|5": {
+  "at": "2026-08-31T08:13:31Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|110|220": {
+  "at": "2026-08-31T08:13:35Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|120|60": {
+  "at": "2026-08-31T08:13:32Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|12|6": {
+  "at": "2026-08-31T08:13:35Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|14|7": {
+  "at": "2026-08-31T08:13:34Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|1500|750": {
+  "at": "2026-08-31T08:13:35Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|150|75": {
+  "at": "2026-08-31T08:13:31Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|162|81": {
+  "at": "2026-08-31T08:13:33Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|180|90": {
+  "at": "2026-08-31T08:13:32Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|20|40": {
+  "at": "2026-08-31T08:13:30Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|25|50": {
+  "at": "2026-08-31T08:13:34Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|3|6": {
+  "at": "2026-08-31T08:13:32Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|400|800": {
+  "at": "2026-08-31T08:13:35Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|40|80": {
+  "at": "2026-08-31T08:13:31Z",
+  "models": [],
+  "verdict": "same"
+ },
+ "value|4|8": {
+  "at": "2026-08-31T08:13:29Z",
+  "models": [],
+  "verdict": "same"
+ }
+}

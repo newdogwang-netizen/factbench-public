@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s022_syn",
     "version": "1",
-    "sha256": "2b1beb9328cc58f06ccd11ed72f04892999555afda095841a95a152be1dd1f2f",
+    "sha256": "e0579941cc91542c7485ad30aa3aac1d638e63bcb171109cd477709b9acc6935",
     "reviewed": false
   },
   "source": {
@@ -13,13 +13,13 @@
     "sha256": null,
     "stats": {
       "n_models": 8,
-      "n_facts": 317,
-      "certain": 6,
-      "strict_certain": 5,
-      "low_conf": 42,
-      "unique": 269,
+      "n_facts": 558,
+      "certain": 8,
+      "strict_certain": 6,
+      "low_conf": 36,
+      "unique": 514,
       "unanimous": 8,
-      "low_support": 249
+      "low_support": 493
     }
   },
   "selection": {
@@ -31,7 +31,7 @@
       "release"
     ],
     "fact_count": 39,
-    "unstable_skipped": 22
+    "unstable_skipped": 17
   },
   "rules": {
     "version": "detfact-rules/0.7",
@@ -65,7 +65,7 @@
         "subject": "patient",
         "predicate": "has",
         "object": "pain",
-        "value": "4",
+        "value": "6",
         "unit": null,
         "time": null,
         "location": null,
@@ -76,23 +76,23 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
-          "key": "symptom.pain_flare_ramped_up_about_eight_weeks_ago_before_that_pain_was_about_4_10_now_it_is_6_10_most_days_and_8_10_on_bad_mornings",
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain flare ramped up about eight weeks ago; before that pain was about 4/10, now it is 6/10 most days and 8/10 on bad mornings."
+          "quote": "Widespread pain started about three years ago, involving neck, shoulders, low back, hips, and both sides."
         },
         {
           "model": "glm-5p2",
-          "key": "symptom.pain_was_previously_around_4_out_of_10_now_6_out_of_10_on_most_days_and_8_out_of_10_on_bad_mornings",
+          "key": "symptom.average_pain_is_6_out_of_10_flares_reach_8_out_of_10_such_as_after_vacuuming",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain was previously around 4 out of 10, now 6 out of 10 on most days and 8 out of 10 on bad mornings."
+          "quote": "Average pain is 6 out of 10; flares reach 8 out of 10, such as after vacuuming."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.pain_severity_is_rated_as_a_6_10_on_average_and_an_8_10_on_bad_mornings",
           "source": [
             "generated_output"
@@ -100,23 +100,23 @@
           "quote": "Pain severity is rated as a 6/10 on average and an 8/10 on bad mornings."
         },
         {
-          "model": "gpt-5.4",
-          "key": "symptom.before_the_flare_pain_was_about_4_10",
+          "model": "gpt-5_4",
+          "key": "symptom.average_pain_is_about_6_10",
           "source": [
             "generated_output"
           ],
-          "quote": "Before the flare, pain was about 4/10."
+          "quote": "Average pain is about 6/10."
         },
         {
-          "model": "gpt-5.6-sol",
-          "key": "symptom.pain_was_previously_approximately_4_10",
+          "model": "gpt-5_6-sol",
+          "key": "symptom.average_pain_severity_is_6_10",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain was previously approximately 4/10."
+          "quote": "Average pain severity is 6/10."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.pain_is_6_10_on_most_days",
           "source": [
             "generated_output"
@@ -125,33 +125,33 @@
         },
         {
           "model": "kimi-k3",
-          "key": "symptom.the_average_pain_was_6_10",
+          "key": "symptom.average_pain_most_days_is_about_6_out_of_10",
           "source": [
             "generated_output"
           ],
-          "quote": "The average pain was 6/10."
+          "quote": "Average pain most days is about 6 out of 10."
         },
         {
-          "model": "qwen3-max",
-          "key": "symptom.before_the_flare_pain_was_about_4_10",
+          "model": "qwen3p8-max",
+          "key": "symptom.most_days_pain_is_about_6_10",
           "source": [
             "generated_output"
           ],
-          "quote": "Before the flare, pain was about 4/10."
+          "quote": "Most days pain is about 6/10."
         }
       ],
       "provenance": {
-        "audit_id": "F002",
+        "audit_id": "F003",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -200,12 +200,12 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "demo.pain",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain is better with heat, hot showers, and gentle stretching; worse with cold damp weather, sitting too long, and stress."
+          "quote": "Pain is worst in the mornings and worsened by cold and stress."
         },
         {
           "model": "glm-5p2",
@@ -213,10 +213,10 @@
           "source": [
             "generated_output"
           ],
-          "quote": "Pain was previously around 4 out of 10, now 6 out of 10 on most days and 8 out of 10 on bad mornings."
+          "quote": "Pain is worst in the mornings; patient wakes up feeling \"hit by a truck.\""
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -224,23 +224,23 @@
           "quote": "Pain is primarily located in the neck, shoulders, upper back, lower back, and hips, and sometimes the knees."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.pain",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain was mainly in the neck."
+          "quote": "Pain is bilateral."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.pain",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain was previously approximately 4/10."
+          "quote": "Pain is worst in the morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -248,32 +248,41 @@
           "quote": "Pain is 6/10 on most days."
         },
         {
-          "model": "qwen3-max",
+          "model": "kimi-k3",
           "key": "demo.pain",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain is about 8/10 on bad mornings."
+          "quote": "Pain is worst in the mornings and is worsened by cold and by stress."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is on both sides."
         }
       ],
       "provenance": {
-        "audit_id": "F003",
-        "support": "7/7",
+        "audit_id": "F006",
+        "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
         "strict_field_stable": true,
         "policy": "note_consensus_threshold",
         "k_support": 3,
-        "n_supporters": 7,
+        "n_supporters": 8,
         "transcript_anchored": true
       },
       "salience": {
@@ -284,7 +293,7 @@
     },
     {
       "key": "pain",
-      "canonical_anchor": "symptom.pain.pain.improved",
+      "canonical_anchor": "symptom.pain.pain.worsened",
       "kind": "symptom",
       "subtype": "pain",
       "identity_fields": [
@@ -311,43 +320,239 @@
         "time": null,
         "location": null,
         "owner": null,
-        "status": "improved",
+        "status": "worsened",
         "polarity": "positive",
         "condition": null
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
-          "key": "symptom.pain_is_better_with_heat_hot_showers_and_gentle_stretching_worse_with_cold_damp_weather_sitting_too_long_and_stress",
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain_is_worst_in_the_mornings_and_worsened_by_cold_and_stress",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain is better with heat, hot showers, and gentle stretching; worse with cold damp weather, sitting too long, and stress."
+          "quote": "Pain is worst in the mornings and worsened by cold and stress."
         },
         {
-          "model": "glm-5p2",
-          "key": "symptom.pain_is_better_with_heat_hot_shower_and_gentle_stretching",
+          "model": "gpt-5_4",
+          "key": "symptom.brain_fog_is_worse_when_pain_is_worse",
           "source": [
             "generated_output"
           ],
-          "quote": "Pain is better with heat, hot shower, and gentle stretching."
+          "quote": "Brain fog is worse when pain is worse."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.cognitive_symptoms_worsen_when_pain_is_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cognitive symptoms worsen when pain is worse."
         },
         {
           "model": "kimi-k3",
-          "key": "symptom.the_widespread_pain_was_better_after_a_hot_shower",
+          "key": "symptom.pain_is_worst_in_the_mornings_and_is_worsened_by_cold_and_by_stress",
           "source": [
             "generated_output"
           ],
-          "quote": "The widespread pain was better after a hot shower."
+          "quote": "Pain is worst in the mornings and is worsened by cold and by stress."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.brain_fog_is_worse_when_pain_is_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brain fog is worse when pain is worse."
         }
       ],
       "provenance": {
-        "audit_id": "F004",
+        "audit_id": "F007",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Sleep",
+      "canonical_anchor": "demo.demo.sleep.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sleep",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is unrefreshing, with 3–4 awakenings per night; falls asleep easily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is unrefreshing."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is unrefreshing."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is unrefreshing despite approximately seven hours in bed."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is terrible."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Sleep is unrefreshing",
+      "canonical_anchor": "symptom.sleep.sleep_unrefreshing.present",
+      "kind": "symptom",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sleep is unrefreshing",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.sleep_is_unrefreshing_with_34_awakenings_per_night_falls_asleep_easily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is unrefreshing, with 3–4 awakenings per night; falls asleep easily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.sleep_is_unrefreshing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is unrefreshing."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.sleep_is_unrefreshing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is unrefreshing."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F011",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "kimi-k3"
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -359,13 +564,13 @@
       },
       "salience": {
         "must_cover": true,
-        "must_cover_source": "parser",
+        "must_cover_source": "llm",
         "must_not_err": false
       }
     },
     {
-      "key": "loud snoring",
-      "canonical_anchor": "symptom.symptom.loud_snoring.present",
+      "key": "morning dry mouth",
+      "canonical_anchor": "symptom.symptom.morning_dry_mouth.present",
       "kind": "symptom",
       "subtype": "symptom",
       "identity_fields": [
@@ -386,7 +591,7 @@
       "fields": {
         "subject": "patient",
         "predicate": "has",
-        "object": "loud snoring",
+        "object": "morning dry mouth",
         "value": null,
         "unit": null,
         "time": null,
@@ -398,44 +603,62 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
-          "key": "symptom.loud_snoring_sometimes_gasping_witnessed_apneas_about_once_or_daytime_sleepiness_especially_after_lunch_and_waking_with_dry_mouth_sometimes",
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.morning_dry_mouth_present_daily",
           "source": [
             "generated_output"
           ],
-          "quote": "Patient reports loud snoring, sometimes gasping, witnessed apneas about once or twice a week, daytime sleepiness especially after lunch, and waking with dry mouth sometimes."
+          "quote": "Morning dry mouth present daily."
         },
         {
-          "model": "gpt-5.6-sol",
-          "key": "symptom.loud_snoring",
+          "model": "glm-5p2",
+          "key": "symptom.morning_dry_mouth",
           "source": [
             "generated_output"
           ],
-          "quote": "The patient’s partner reports loud snoring."
+          "quote": "Patient reports morning dry mouth every morning."
         },
         {
-          "model": "kimi-k2",
-          "key": "symptom.loud_snoring",
+          "model": "gpt-5_4",
+          "key": "symptom.morning_dry_mouth",
           "source": [
             "generated_output"
           ],
-          "quote": "Partner reports loud snoring."
+          "quote": "The patient has morning dry mouth."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.morning_dry_mouth",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has morning dry mouth."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.dry_mouth",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has dry mouth every morning."
         }
       ],
       "provenance": {
-        "audit_id": "F010",
-        "support": "3/3",
+        "audit_id": "F013",
+        "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.6-sol",
-          "kimi-k2"
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
         "strict_field_stable": true,
         "policy": "note_consensus_threshold",
         "k_support": 3,
-        "n_supporters": 3,
+        "n_supporters": 5,
         "transcript_anchored": true
       },
       "salience": {
@@ -472,26 +695,34 @@
         "time": null,
         "location": null,
         "owner": null,
-        "status": "present",
+        "status": "resolved",
         "polarity": "positive",
         "condition": null
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
           ],
-          "quote": "Patient reports dizziness started when duloxetine was initiated six weeks ago, lasted about ten days, and has resolved"
+          "quote": "Dizziness from pregabalin increase resolved after first 3–4 days"
         },
         {
-          "model": "deepseek-v4-flash",
-          "key": "symptom.dizziness_started_when_duloxetine_was_initiated_six_weeks_ago_lasted_about_ten_days_and_has_resolved",
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.dizziness_from_pregabalin_increase_resolved_after_first_34_days",
           "source": [
             "generated_output"
           ],
-          "quote": "Patient reports dizziness started when duloxetine was initiated six weeks ago, lasted about ten days, and has resolved."
+          "quote": "Dizziness from pregabalin increase resolved after first 3–4 days."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily_reassess_after_a_true_68_weeks_at_this_dose_do_not_stop_suddenly_taper_if_needed_monitor_ankle_swelling_and_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily; reassess after a true 6–8 weeks at this dose; do not stop suddenly, taper if needed; monitor ankle swelling and dizziness."
         },
         {
           "model": "glm-5p2",
@@ -499,18 +730,26 @@
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness started 6 weeks ago when duloxetine was started, lasted about 10 days, and then resolved"
+          "quote": "Dizziness from pregabalin increase has resolved"
         },
         {
           "model": "glm-5p2",
-          "key": "symptom.dizziness_started_6_weeks_ago_when_duloxetine_was_started_lasted_about_10_days_and_then_resolved",
+          "key": "symptom.mild_dizziness_woozy_swimmy_headed_for_the_first_3_to_4_days_after_increasing_to_pregabalin_150_mg_twice_a_day_which_has_resolved",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness started 6 weeks ago when duloxetine was started, lasted about 10 days, and then resolved."
+          "quote": "Patient experienced mild dizziness (\"woozy,\" \"swimmy headed\") for the first 3 to 4 days after increasing to pregabalin 150 mg twice a day, which has resolved."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "glm-5p2",
+          "key": "risk.if_ankles_swell_significantly_dizziness_returns_or_anything_is_concerning_patient_should_send_a_portal_message_clinician_responds_within_1_to_2_days",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If ankles swell significantly, dizziness returns, or anything is concerning, patient should send a portal message; clinician responds within 1 to 2 days."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -518,7 +757,7 @@
           "quote": "Dizziness and nausea, which began with the initiation of duloxetine 6 weeks ago, have resolved"
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.dizziness_and_nausea_which_began_with_the_initiation_of_duloxetine_6_weeks_ago_have_resolved",
           "source": [
             "generated_output"
@@ -526,55 +765,39 @@
           "quote": "Dizziness and nausea, which began with the initiation of duloxetine 6 weeks ago, have resolved."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness lasted about 10 days"
+          "quote": "The patient was instructed to message the clinician if dizziness recurs"
         },
         {
-          "model": "gpt-5.4",
-          "key": "symptom.dizziness_lasted_about_10_days",
+          "model": "gpt-5_4",
+          "key": "treatment.the_patient_was_instructed_to_message_the_clinician_if_dizziness_recurs",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness lasted about 10 days."
+          "quote": "The patient was instructed to message the clinician if dizziness recurs."
         },
         {
-          "model": "gpt-5.4",
-          "key": "risk.patient_was_advised_to_call_the_clinic_or_urgent_care_sooner_if_severe_dizziness_occurs",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient was advised to call the clinic or urgent care sooner if severe dizziness occurs."
-        },
-        {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness and nausea developed during the first week after starting duloxetine"
+          "quote": "Contact the clinic if dizziness recurs"
         },
         {
-          "model": "gpt-5.6-sol",
-          "key": "symptom.dizziness_and_nausea_developed_during_the_first_week_after_starting_duloxetine",
+          "model": "gpt-5_6-sol",
+          "key": "treatment.contact_the_clinic_if_dizziness_recurs",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness and nausea developed during the first week after starting duloxetine."
+          "quote": "Contact the clinic if dizziness recurs."
         },
         {
-          "model": "gpt-5.6-sol",
-          "key": "risk.contact_the_clinic_or_seek_urgent_care_sooner_for_severe_dizziness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Contact the clinic or seek urgent care sooner for severe dizziness."
-        },
-        {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -582,7 +805,7 @@
           "quote": "Dizziness lasted approximately ten days"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.dizziness_lasted_approximately_ten_days",
           "source": [
             "generated_output"
@@ -590,7 +813,7 @@
           "quote": "Dizziness lasted approximately ten days."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.patient_instructed_to_call_clinic_or_urgent_care_sooner_for_severe_dizziness",
           "source": [
             "generated_output"
@@ -603,1248 +826,60 @@
           "source": [
             "generated_output"
           ],
-          "quote": "The dizziness lasted about ten days"
+          "quote": "She is to message the clinic if ankle swelling worsens or dizziness returns"
         },
         {
           "model": "kimi-k3",
-          "key": "symptom.the_dizziness_lasted_about_ten_days",
+          "key": "treatment.she_is_to_message_the_clinic_if_ankle_swelling_worsens_or_dizziness_returns",
           "source": [
             "generated_output"
           ],
-          "quote": "The dizziness lasted about ten days."
+          "quote": "She is to message the clinic if ankle swelling worsens or dizziness returns."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness lasted about ten days"
+          "quote": "Dizziness from increasing pregabalin resolved"
         },
         {
-          "model": "qwen3-max",
-          "key": "symptom.dizziness_lasted_about_ten_days",
+          "model": "qwen3p8-max",
+          "key": "symptom.dizziness_from_increasing_pregabalin_resolved",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness lasted about ten days."
+          "quote": "Dizziness from increasing pregabalin resolved."
         },
         {
-          "model": "qwen3-max",
-          "key": "risk.for_severe_dizziness_call_the_clinic_or_urgent_care_sooner",
+          "model": "qwen3p8-max",
+          "key": "risk.message_if_dizziness_returns",
           "source": [
             "generated_output"
           ],
-          "quote": "For severe dizziness, call the clinic or urgent care sooner."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F012",
-        "support": "8/8",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 8,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": false,
-        "must_cover_source": null,
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "duloxetine",
-      "canonical_anchor": "med.medication.duloxetine.present",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "duloxetine",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "resolved",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient reports dizziness started when duloxetine was initiated six weeks ago, lasted about ten days, and has resolved."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Dizziness started 6 weeks ago when duloxetine was started, lasted about 10 days, and then resolved."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Dizziness and nausea, which began with the initiation of duloxetine 6 weeks ago, have resolved."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The dizziness and nausea associated with starting duloxetine have resolved."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Nausea associated with starting duloxetine has resolved."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F013",
-        "support": "5/5",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.6-sol",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 5,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
-      }
-    },
-    {
-      "key": "blood pressure",
-      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
-      "kind": "diagnosis",
-      "subtype": "cardiovascular",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity",
-        "condition"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": "blood pressure",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "negative",
-        "condition": "hypertension"
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient has no high blood pressure, no diabetes, no asthma"
-        },
-        {
-          "model": "deepseek-v4-flash",
-          "key": "family_history.father_has_high_blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Father has high blood pressure."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "No high blood pressure reported"
-        },
-        {
-          "model": "glm-5p2",
-          "key": "family_history.father_has_high_blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Father has high blood pressure."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Father has a history of high blood pressure"
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "family_history.father_has_a_history_of_high_blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Father has a history of high blood pressure."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient denied high blood pressure"
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "family_history.father_has_high_blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Father has high blood pressure."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient denies hypertension"
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "diagnosis.the_patient_denies_hypertension",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient denies hypertension."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "family_history.the_patients_father_has_hypertension",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient’s father has hypertension."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "No history of high blood pressure"
-        },
-        {
-          "model": "kimi-k2",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Father has high blood pressure"
-        },
-        {
-          "model": "kimi-k2",
-          "key": "family_history.father_has_high_blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Father has high blood pressure."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient denies high blood pressure"
-        },
-        {
-          "model": "qwen3-max",
-          "key": "family_history.the_patient_s_father_has_high_blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient's father has high blood pressure."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "diagnosis.blood_pressure",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient's father had hypertension"
-        },
-        {
-          "model": "kimi-k3",
-          "key": "family_history.the_patient_s_father_had_hypertension",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient's father had hypertension."
+          "quote": "Message if dizziness returns."
         }
       ],
       "provenance": {
         "audit_id": "F018",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max",
-          "kimi-k3"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
-        "strict_field_stable": true,
+        "strict_field_stable": false,
         "policy": "note_consensus_threshold",
         "k_support": 3,
         "n_supporters": 8,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "duloxetine",
-      "canonical_anchor": "med.medication.duloxetine.ordered",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "time",
-        "unit",
-        "value"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "value",
-        "unit",
-        "time",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "duloxetine",
-        "value": "30",
-        "unit": "mg",
-        "time": "once daily",
-        "location": null,
-        "owner": null,
-        "status": "ordered",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Duloxetine 30 mg once daily, started about six weeks ago; plan to increase to 60 mg once daily."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Duloxetine 30 mg once daily, started about 6 weeks ago."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Increase duloxetine to 60 mg by mouth once daily."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Plan is to increase duloxetine from 30 mg once daily to 60 mg once daily."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Duloxetine 30 mg orally every morning was started approximately six weeks ago."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Duloxetine 30 mg once daily, started approximately six weeks ago."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Duloxetine was planned to increase from 30 mg once daily to 60 mg once daily."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Duloxetine 30 mg once daily was started six weeks ago."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F022",
-        "support": "8/8",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 8,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
-      }
-    },
-    {
-      "key": "Pregabalin",
-      "canonical_anchor": "med.medication.pregabalin.active",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "time",
-        "unit",
-        "value"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "value",
-        "unit",
-        "time",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "pregabalin",
-        "value": "150",
-        "unit": "mg",
-        "time": "twice daily",
-        "location": null,
-        "owner": null,
-        "status": "active",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "medication.pregabalin",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin 150 mg twice daily, increased from 75 mg twice daily four weeks ago; patient actually took 75 mg twice daily for the first two weeks of the four-week period, then corrected to 150 mg twice daily for the last two weeks."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "medication.pregabalin",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin 150 mg twice daily; intended dose change 4 weeks ago from 75 mg twice daily to 150 mg twice daily."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "medication.pregabalin",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin 150 mg, one capsule by mouth twice daily."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "medication.pregabalin",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin was increased 4 weeks ago from 75 mg twice daily to 150 mg twice daily."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.pregabalin",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin 150 mg orally twice daily is the current intended dose."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "medication.pregabalin",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin intended dose is 150 mg twice daily."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "medication.pregabalin",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin 150 mg twice daily was the intended current dose."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.pregabalin",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin 150 mg twice daily."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F023",
-        "support": "8/8",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 8,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
-      }
-    },
-    {
-      "key": "Acetaminophen",
-      "canonical_anchor": "med.medication.acetaminophen.active",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "time",
-        "unit",
-        "value"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "value",
-        "unit",
-        "time",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "acetaminophen",
-        "value": "500",
-        "unit": "mg",
-        "time": "twice daily",
-        "location": null,
-        "owner": null,
-        "status": "active",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "medication.acetaminophen",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Acetaminophen 500 mg, two tablets twice a day as needed for pain, not every day."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "medication.acetaminophen",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Acetaminophen 500 mg, 2 tablets twice a day as needed for pain, not taken every day."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "medication.acetaminophen",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Acetaminophen 500 mg, two tablets by mouth twice daily as needed for pain."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.acetaminophen",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Acetaminophen 500 mg, two tablets orally twice daily as needed, is not taken every day."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "medication.acetaminophen",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Acetaminophen 500 mg, two tablets twice daily as needed."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "medication.acetaminophen",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Acetaminophen 500 mg tablets were current as two tablets twice daily as needed."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.acetaminophen",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Acetaminophen 500 mg."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F025",
-        "support": "7/7",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 7,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
-      }
-    },
-    {
-      "key": "levothyroxine",
-      "canonical_anchor": "med.medication.levothyroxine.active",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "time",
-        "unit",
-        "value"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "value",
-        "unit",
-        "time",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "levothyroxine",
-        "value": "75",
-        "unit": "mcg",
-        "time": "once daily",
-        "location": null,
-        "owner": null,
-        "status": "active",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Levothyroxine 75 mcg once daily for hypothyroidism."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Levothyroxine 75 mcg once daily for thyroid."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Levothyroxine 75 mcg, one tablet by mouth once daily."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Current medication is levothyroxine 75 mcg once daily."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Levothyroxine 75 micrograms orally once daily is taken for hypothyroidism."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Levothyroxine 75 micrograms once daily."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Levothyroxine 75 micrograms once daily was current."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Levothyroxine 75 micrograms daily is used for hypothyroidism."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F026",
-        "support": "8/8",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 8,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
-      }
-    },
-    {
-      "key": "No known family history of sleep apnea",
-      "canonical_anchor": "famhist.famhist.known_family_of_sleep_apnea",
-      "kind": "famhist",
-      "subtype": "famhist",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": "no known family history of sleep apnea",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "past",
-        "polarity": "negative",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "family_history.no_known_family_history_of_sleep_apnea",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "No known family history of sleep apnea."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "family_history.no_known_family_history_of_sleep_apnea",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "No known family history of sleep apnea."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "family_history.no_known_family_history_of_sleep_apnea",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "No known family history of sleep apnea."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "family_history.no_known_family_history_of_sleep_apnea",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "No known family history of sleep apnea."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "family_history.the_patient_is_not_aware_of_any_family_history_of_sleep_apnea",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient is not aware of any family history of sleep apnea."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F029",
-        "support": "5/5",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "kimi-k2",
-          "qwen3-max",
-          "gpt-5.6-sol"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 5,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "pain",
-      "canonical_anchor": "sochist.pain.pain.present",
-      "kind": "sochist",
-      "subtype": "pain",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": "pain",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "social_history.patient_does_gentle_walking_limited_by_pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient does gentle walking twice a week, limited by pain."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "social_history.exercise_is_gentle_walking_limited_by_pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Exercise is gentle walking twice a week, limited by pain."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "social_history.the_patient_engages_in_gentle_walking_which_is_limited_by_pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient engages in gentle walking twice a week, which is limited by pain."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "social_history.walking_is_limited_by_pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Walking is limited by pain."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "social_history.exercise_is_limited_by_pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Exercise is limited by pain."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "social_history.exercise_is_limited_by_pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Exercise is limited by pain."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "social_history.exercise_is_limited_by_pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Exercise is limited by pain."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F034",
-        "support": "7/7",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 7,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "dizziness and giddiness",
-      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.worsened",
-      "kind": "diagnosis",
-      "subtype": "neuro_vestibular",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": null,
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "worsened",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient was advised to call the clinic or urgent care sooner if worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems occur"
-        },
-        {
-          "model": "deepseek-v4-flash",
-          "key": "risk.patient_was_advised_to_call_the_clinic_or_urgent_care_sooner_if_worsening_mood_agitation_suicidal_thoughts_severe_dizziness_falls_rash_or_breathing_problems_occur",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient was advised to call the clinic or urgent care sooner if worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems occur."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "If worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems occur, patient should call the clinic or urgent care sooner"
-        },
-        {
-          "model": "glm-5p2",
-          "key": "risk.if_worsening_mood_agitation_suicidal_thoughts_severe_dizziness_falls_rash_or_breathing_problems_occur_patient_should_call_the_clinic_or_urgent_care_sooner",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "If worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems occur, patient should call the clinic or urgent care sooner."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient was advised to call the clinic or seek urgent care if she experiences worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems"
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "risk.the_patient_was_advised_to_call_the_clinic_or_seek_urgent_care_if_she_experiences_worsening_mood_agitation_suicidal_thoughts_severe_dizziness_falls_rash_or_breathing_problems",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient was advised to call the clinic or seek urgent care if she experiences worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient reported a little more dizziness for the first 2 nights after correcting the pregabalin dose"
-        },
-        {
-          "model": "kimi-k2",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pregabalin 150 mg twice daily caused a little more dizziness for the first two nights after correcting the dose"
-        },
-        {
-          "model": "kimi-k2",
-          "key": "risk.call_clinic_or_urgent_care_sooner_for_worsening_mood_agitation_suicidal_thoughts_severe_dizziness_falls_rash_or_breathing_problems",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Call clinic or urgent care sooner for worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "After correcting the pregabalin dose, the patient had more dizziness for the first two nights"
-        },
-        {
-          "model": "qwen3-max",
-          "key": "symptom.more_dizziness_for_the_first_two_nights",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "After correcting the pregabalin dose, the patient had more dizziness for the first two nights."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F036",
-        "support": "6/6",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 6,
         "transcript_anchored": true
       },
       "salience": {
@@ -1888,12 +923,12 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
-          "key": "diagnosis.fibromyalgia_as_the_reason_for_follow_up_and_medication_check",
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.fibromyalgia_diagnosed_about_three_years_ago",
           "source": [
             "generated_output"
           ],
-          "quote": "Fibromyalgia, as the reason for follow-up and medication check."
+          "quote": "Fibromyalgia diagnosed about three years ago."
         },
         {
           "model": "glm-5p2",
@@ -1904,15 +939,7 @@
           "quote": "Fibromyalgia."
         },
         {
-          "model": "gpt-5.4",
-          "key": "diagnosis.patient_has_fibromyalgia",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Patient has fibromyalgia."
-        },
-        {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_4",
           "key": "diagnosis.fibromyalgia",
           "source": [
             "generated_output"
@@ -1920,7 +947,23 @@
           "quote": "Fibromyalgia."
         },
         {
-          "model": "kimi-k2",
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia."
+        },
+        {
+          "model": "qwen3p8-max",
           "key": "diagnosis.fibromyalgia",
           "source": [
             "generated_output"
@@ -1929,32 +972,24 @@
         },
         {
           "model": "kimi-k3",
-          "key": "diagnosis.fibromyalgia",
+          "key": "diagnosis.fibromyalgia_diagnosed_approximately_three_years_ago",
           "source": [
             "generated_output"
           ],
-          "quote": "Fibromyalgia."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "diagnosis.fibromyalgia",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Fibromyalgia."
+          "quote": "Fibromyalgia, diagnosed approximately three years ago."
         }
       ],
       "provenance": {
-        "audit_id": "F037",
+        "audit_id": "F019",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max",
+          "kimi-k3"
         ],
         "status": "release",
         "field_stable": true,
@@ -1971,1052 +1006,10 @@
       }
     },
     {
-      "key": "Increase duloxetine from 30 mg once daily to 60 mg once daily",
-      "canonical_anchor": "instruct.increase.increase_duloxetine_from_to_starting_morning_taken_with.present",
-      "kind": "instruct",
-      "subtype": "increase",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "planned",
-        "object": "duloxetine",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "treatment.increase_duloxetine_from_30_mg_once_daily_to_60_mg_once_daily_starting_tomorrow_morning_taken_with_food_if_too_sleepy_may_move_to_evening",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Increase duloxetine from 30 mg once daily to 60 mg once daily, starting tomorrow morning, taken with food; if too sleepy, may move to evening."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "treatment.increase_duloxetine_from_30_mg_once_daily_to_60_mg_once_daily_starting_tomorrow_morning_taken_with_food",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Increase duloxetine from 30 mg once daily to 60 mg once daily, starting tomorrow morning, taken with food."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "treatment.increase_duloxetine_from_30_mg_once_daily_to_60_mg_once_daily",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Increase duloxetine from 30 mg once daily to 60 mg once daily."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "treatment.increase_duloxetine_from_30_mg_once_daily_to_60_mg_once_daily",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Increase duloxetine from 30 mg once daily to 60 mg once daily."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "treatment.increase_duloxetine_from_30_mg_to_60_mg_once_daily_starting_tomorrow_morning",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Increase duloxetine from 30 mg to 60 mg once daily starting tomorrow morning."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F038",
-        "support": "5/5",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gpt-5.6-sol",
-          "qwen3-max",
-          "kimi-k2"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 5,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "levothyroxine",
-      "canonical_anchor": "med.medication.levothyroxine.ordered",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "time",
-        "unit",
-        "value"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "value",
-        "unit",
-        "time",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "levothyroxine",
-        "value": "75",
-        "unit": "mcg",
-        "time": "once daily",
-        "location": null,
-        "owner": null,
-        "status": "ordered",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine 75 mcg once daily."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine at the same dose."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine 75 mcg by mouth once daily."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Plan is to continue levothyroxine 75 mcg daily."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine 75 micrograms daily without change."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine at the current dose."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.levothyroxine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine at the same dose."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F039",
-        "support": "7/7",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": false,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 7,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
-      }
-    },
-    {
-      "key": "Continue levothyroxine at the same dose",
-      "canonical_anchor": "instruct.continue.continue_levothyroxine_at_same_dose.present",
-      "kind": "instruct",
-      "subtype": "continue",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "planned",
-        "object": "levothyroxine",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "treatment.continue_levothyroxine_75_mcg_once_daily",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine 75 mcg once daily."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "treatment.continue_levothyroxine_at_the_same_dose",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine at the same dose."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "treatment.continue_levothyroxine_at_the_same_dose",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine at the same dose."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "treatment.continue_levothyroxine_75_mcg_by_mouth_once_daily",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine 75 mcg by mouth once daily."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "treatment.continue_levothyroxine_75_micrograms_daily_without_change",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine 75 micrograms daily without change."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "treatment.continue_levothyroxine_at_the_current_dose",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue levothyroxine at the current dose."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F040",
-        "support": "6/6",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "qwen3-max",
-          "gemini-2.5-pro",
-          "gpt-5.6-sol",
-          "kimi-k2"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 6,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Continue pregabalin 150 mg twice daily",
-      "canonical_anchor": "instruct.continue.continue_pregabalin.present",
-      "kind": "instruct",
-      "subtype": "continue",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "planned",
-        "object": "continue pregabalin 150 mg twice daily",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "treatment.continue_pregabalin_150_mg_twice_daily_using_the_correct_bottle_only",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue pregabalin 150 mg twice daily, using the correct bottle only."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue pregabalin 150 mg twice daily."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue pregabalin 150 mg twice daily."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue pregabalin 150 mg twice daily."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F041",
-        "support": "4/4",
-        "models": [
-          "deepseek-v4-flash",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 4,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Continue acetaminophen as needed",
-      "canonical_anchor": "instruct.continue.continue_acetaminophen_needed.present",
-      "kind": "instruct",
-      "subtype": "continue",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "planned",
-        "object": "continue acetaminophen as needed",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "treatment.continue_acetaminophen_as_needed_keeping_total_under_3000_mg_per_day_and_avoiding_alcohol_with_it",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue acetaminophen as needed, keeping total under 3000 mg per day and avoiding alcohol with it."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "treatment.continue_acetaminophen_as_needed",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue acetaminophen as needed."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "treatment.continue_acetaminophen_as_needed",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue acetaminophen as needed."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "treatment.continue_acetaminophen_as_needed",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Continue acetaminophen as needed."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F043",
-        "support": "4/4",
-        "models": [
-          "deepseek-v4-flash",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 4,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "pain",
-      "canonical_anchor": "symptom.pain.pain.worsened",
-      "kind": "symptom",
-      "subtype": "pain",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": "pain",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "worsened",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "symptom.pain_is_worse_with_cold_damp_weather_sitting_too_long_and_stress",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pain is worse with cold damp weather, sitting too long, and stress."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "symptom.the_current_pain_flare_worsened_approximately_eight_weeks_ago",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The current pain flare worsened approximately eight weeks ago."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "symptom.the_widespread_pain_was_worse_in_the_mornings",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The widespread pain was worse in the mornings."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F047",
-        "support": "3/3",
-        "models": [
-          "glm-5p2",
-          "gpt-5.6-sol",
-          "kimi-k3"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 3,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "text",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Fatigue",
-      "canonical_anchor": "demo.demo.fatigue.present",
-      "kind": "demo",
-      "subtype": "demo",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "name",
-        "object": "fatigue",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": null,
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "demo.fatigue",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Fatigue is significant; patient wakes up tired even after 8 hours of sleep."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "demo.fatigue",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Fatigue is significant."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "demo.fatigue",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Fatigue was present."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F050",
-        "support": "3/3",
-        "models": [
-          "glm-5p2",
-          "kimi-k2",
-          "kimi-k3"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 3,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "text",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Sleep",
-      "canonical_anchor": "demo.demo.sleep.present",
-      "kind": "demo",
-      "subtype": "demo",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "name",
-        "object": "sleep",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": null,
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "demo.sleep",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Sleep is around 7 hours but not refreshing."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "demo.sleep",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Sleep is not refreshing."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "demo.sleep",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Sleep is unrefreshing despite approximately seven to eight hours of sleep."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "demo.sleep",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Sleep is unrefreshing despite approximately seven hours in bed."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "demo.sleep",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Sleep is not refreshing."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F057",
-        "support": "5/5",
-        "models": [
-          "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 5,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "text",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Sleep is not refreshing",
-      "canonical_anchor": "symptom.sleep.sleep_refreshing.present",
-      "kind": "symptom",
-      "subtype": "sleep",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": "sleep is not refreshing",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "negative",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "symptom.sleep_is_around_7_hours_but_not_refreshing",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Sleep is around 7 hours but not refreshing."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "symptom.sleep_is_not_refreshing",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Sleep is not refreshing."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "symptom.sleep_is_not_refreshing",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Sleep is not refreshing."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F058",
-        "support": "3/3",
-        "models": [
-          "glm-5p2",
-          "gpt-5.4",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 3,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "llm",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Amitriptyline",
-      "canonical_anchor": "demo.demo.amitriptyline.present",
-      "kind": "demo",
-      "subtype": "demo",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "name",
-        "object": "amitriptyline",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": null,
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "demo.amitriptyline",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Amitriptyline was tried years ago and stopped after about 2 weeks due to dry mouth and fogginess."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "demo.amitriptyline",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Amitriptyline was trialed years ago and discontinued after two weeks due to side effects of dry mouth and feeling foggy."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "demo.amitriptyline",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Amitriptyline was previously tried for approximately two weeks."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "demo.amitriptyline",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Amitriptyline was trialed years ago."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "demo.amitriptyline",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Amitriptyline was tried years ago."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "demo.amitriptyline",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Amitriptyline was tried years ago."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F070",
-        "support": "6/6",
-        "models": [
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 6,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "text",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Cyclobenzaprine",
-      "canonical_anchor": "demo.demo.cyclobenzaprine.present",
-      "kind": "demo",
-      "subtype": "demo",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "name",
-        "object": "cyclobenzaprine",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": null,
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "demo.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine was tried years ago at 10 mg and stopped due to next-day grogginess."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "demo.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine is taken three or four nights per week."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "demo.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine was being used about three or four nights per week."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "demo.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine was tried years ago at 10 mg."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F072",
-        "support": "4/4",
-        "models": [
-          "glm-5p2",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 4,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "text",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Cyclobenzaprine 10 mg was tried years ago",
-      "canonical_anchor": "diagnosis.cyclobenzaprine.cyclobenzaprine_tried_ago.present",
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.improved",
       "kind": "diagnosis",
-      "subtype": "cyclobenzaprine",
+      "subtype": "mood_anxiety",
       "identity_fields": [
         "canonical_anchor"
       ],
@@ -3035,161 +1028,76 @@
       "fields": {
         "subject": "patient",
         "predicate": "has",
-        "object": "cyclobenzaprine 10 mg was tried year ago",
+        "object": "anxiety",
         "value": null,
         "unit": null,
         "time": null,
         "location": null,
         "owner": null,
-        "status": "past",
+        "status": "improved",
         "polarity": "positive",
         "condition": null
       },
       "evidence": [
         {
-          "model": "glm-5p2",
-          "key": "diagnosis.cyclobenzaprine_was_tried_years_ago_at_10_mg_and_stopped_due_to_next_day_grogginess",
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
           ],
-          "quote": "Cyclobenzaprine was tried years ago at 10 mg and stopped due to next-day grogginess."
+          "quote": "Anxiety, reported better on duloxetine"
         },
         {
-          "model": "gpt-5.6-sol",
-          "key": "diagnosis.cyclobenzaprine_10_mg_was_tried_years_ago",
+          "model": "glm-5p2",
+          "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
           ],
-          "quote": "Cyclobenzaprine 10 mg was tried years ago."
+          "quote": "Anxiety: improved on duloxetine"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is reported as better on duloxetine"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She believes anxiety has improved with duloxetine"
         },
         {
           "model": "kimi-k3",
-          "key": "diagnosis.cyclobenzaprine_10_mg_was_tried_years_ago",
+          "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
           ],
-          "quote": "Cyclobenzaprine 10 mg was tried years ago."
+          "quote": "Anxiety, which she thinks is better on the duloxetine"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is better on duloxetine"
         }
       ],
       "provenance": {
-        "audit_id": "F073",
-        "support": "3/3",
-        "models": [
-          "glm-5p2",
-          "gpt-5.6-sol",
-          "kimi-k3"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 3,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": false,
-        "must_cover_source": null,
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Cyclobenzaprine",
-      "canonical_anchor": "med.medication.cyclobenzaprine.active",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "unit",
-        "value"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "value",
-        "unit",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "cyclobenzaprine",
-        "value": "5",
-        "unit": "mg",
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "active",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "medication.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine 5 mg at bedtime as needed, taken 3 or 4 nights a week."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "medication.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine 5 mg, one tablet by mouth at bedtime as needed for muscle tightness, used 3-4 nights per week."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine 5 mg orally at bedtime as needed is taken approximately three or four nights weekly."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "medication.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine 5 mg at bedtime as needed."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "medication.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine 5 mg at bedtime as needed was current."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.cyclobenzaprine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cyclobenzaprine 5 mg at bedtime as needed for muscle tightness."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F074",
+        "audit_id": "F021",
         "support": "6/6",
         "models": [
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3197,256 +1105,6 @@
         "policy": "note_consensus_threshold",
         "k_support": 3,
         "n_supporters": 6,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
-      }
-    },
-    {
-      "key": "Caffeine intake is one coffee",
-      "canonical_anchor": "sochist.sochist.caffeine_intake_one_coffee.present",
-      "kind": "sochist",
-      "subtype": "sochist",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": "caffeine intake is one coffee",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "present",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "social_history.caffeine_intake_is_one_coffee",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Caffeine intake is one coffee in the morning."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "social_history.caffeine_intake_is_one_coffee",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Caffeine intake is one coffee in the morning."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "social_history.caffeine_intake_is_one_coffee",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Caffeine intake is one coffee in the morning."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F077",
-        "support": "3/3",
-        "models": [
-          "glm-5p2",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 3,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "llm",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "Exercise",
-      "canonical_anchor": "demo.demo.exercise.present",
-      "kind": "demo",
-      "subtype": "demo",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "name",
-        "object": "exercise",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": null,
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "glm-5p2",
-          "key": "demo.exercise",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Exercise is gentle walking twice a week, limited by pain."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "demo.exercise",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Exercise is limited by pain."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "demo.exercise",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Exercise is limited by pain."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "demo.exercise",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Exercise is limited by pain."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F078",
-        "support": "4/4",
-        "models": [
-          "glm-5p2",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 4,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "text",
-        "must_not_err": false
-      }
-    },
-    {
-      "key": "pain",
-      "canonical_anchor": "symptom.pain.pain.ordered",
-      "kind": "symptom",
-      "subtype": "pain",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "has",
-        "object": "pain",
-        "value": null,
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "ordered",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "gemini-2.5-pro",
-          "key": "symptom.a_flare_of_widespread_pain_that_began_approximately_8_weeks_ago",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient reports a flare of widespread pain that began approximately 8 weeks ago."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "symptom.pain_flare_began_approximately_eight_weeks_ago",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pain flare began approximately eight weeks ago."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "symptom.the_pain_flare_began_about_eight_weeks_ago",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The pain flare began about eight weeks ago."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F090",
-        "support": "3/3",
-        "models": [
-          "gemini-2.5-pro",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 3,
         "transcript_anchored": true
       },
       "salience": {
@@ -3496,7 +1154,23 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 30 mg once daily with breakfast (for six weeks)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 30 mg once daily with breakfast (started approximately 6 weeks ago)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -3504,23 +1178,23 @@
           "quote": "Duloxetine 30 mg, one tablet by mouth once daily."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
           ],
-          "quote": "Current medication is duloxetine 30 mg once daily in the morning."
+          "quote": "Duloxetine 30 mg once daily with breakfast at time of visit."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness and nausea developed during the first week after starting duloxetine."
+          "quote": "Duloxetine is taken at 30 mg every morning with breakfast."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -3533,27 +1207,143 @@
           "source": [
             "generated_output"
           ],
-          "quote": "Duloxetine 30 mg once daily was current."
+          "quote": "Duloxetine 30 mg daily has been taken for six weeks; nausea described as \"motion sick queasy\" occurred for the first ten days, was worse without food, and resolved by week three."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
           ],
-          "quote": "Duloxetine 30 mg once daily."
+          "quote": "Duloxetine 30 mg once daily has been taken for six weeks."
         }
       ],
       "provenance": {
-        "audit_id": "F102",
+        "audit_id": "F022",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "gabapentin",
+      "canonical_anchor": "med.medication.gabapentin.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "gabapentin",
+        "value": "300",
+        "unit": "mg",
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past trial of gabapentin 300 mg at night, stopped due to ankle swelling."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin 300 mg nightly was stopped because of marked ankle swelling."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past medication trial: gabapentin 300 mg at night; stopped due to ankle swelling."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past medication trial: gabapentin 300 mg at night, stopped due to marked ankle swelling."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F024",
         "support": "6/6",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "glm-5p2",
+          "kimi-k3"
         ],
         "status": "release",
         "field_stable": true,
@@ -3570,10 +1360,724 @@
       }
     },
     {
-      "key": "dizziness and giddiness",
-      "canonical_anchor": "symptom.neuro_vestibular.dizziness.ordered.after_duloxetine_start",
-      "kind": "symptom",
-      "subtype": "neuro_vestibular",
+      "key": "Pregabalin",
+      "canonical_anchor": "med.medication.pregabalin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "pregabalin",
+        "value": "150",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice daily (currently on this dose for the last two weeks; prior two weeks was 75 mg twice daily)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice a day (has only been at this true dose for 2 weeks due to titration confusion)."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg, one capsule by mouth twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin is taken at 150 mg twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin intended dose is 150 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin (Lyrica) 150 mg twice daily; she has been at the true 150 mg twice-daily dose for only the past two weeks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice a day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Acetaminophen",
+      "canonical_anchor": "med.medication.acetaminophen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "acetaminophen",
+        "value": "500",
+        "unit": "mg",
+        "time": "three times daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg, two tablets (1000 mg) as needed up to three times daily, usually twice daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg, two tablets (1,000 mg) up to three times a day as needed; most days taken twice."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg, two tablets by mouth twice daily as needed for pain."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg tablets, 2 tablets per dose, up to 3 times daily as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg is taken as two tablets per dose as needed."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg, two tablets twice daily as needed."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg tablets, two tablets (1000 mg) as needed when pain is bad, up to three times a day; most days she takes it twice."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.acetaminophen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen 500 mg tablets."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Tramadol",
+      "canonical_anchor": "med.medication.tramadol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tramadol",
+        "value": "50",
+        "unit": "mg",
+        "time": "twice a week",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tramadol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tramadol 50 mg as needed, about twice a week."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tramadol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tramadol 50 mg as needed, approximately twice a week on bad days."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tramadol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tramadol 50 mg as needed about twice weekly."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.tramadol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tramadol 50 mg is taken as needed on severe pain days."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tramadol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tramadol 50 mg as needed, one tablet about twice a week on the worst days; restarted after she took one of her sister's tablets in the winter with benefit and her primary care provider then refilled it."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tramadol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tramadol 50 mg as needed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2,000 units once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2,000 units is taken daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 units once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "magnesium",
+      "canonical_anchor": "med.medication.magnesium.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "magnesium",
+        "value": "250",
+        "unit": "mg",
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium 250 mg at night."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium 250 mg at night."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium 250 mg nightly."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium 250 mg is taken nightly."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium 250 mg at night."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She takes magnesium at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": "3",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg most nights."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg most nights."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg most nights."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg is taken most nights."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg most nights."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The melatonin dose is 3 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "depression / low mood",
+      "canonical_anchor": "diagnosis.mood_depression.depression.present",
+      "kind": "diagnosis",
+      "subtype": "mood_depression",
       "identity_fields": [
         "canonical_anchor"
       ],
@@ -3592,7 +2096,197 @@
       "fields": {
         "subject": "patient",
         "predicate": "has",
-        "object": "dizziness and giddiness",
+        "object": "depression",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has depression, described as pretty bad"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.brother_has_depression_described_as_pretty_bad",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has depression, described as pretty bad."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has depression, described as \"pretty bad.\""
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.brother_has_depression_described_as_pretty_bad",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has depression, described as \"pretty bad.\""
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has a history of depression"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.sister_has_a_history_of_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has a history of depression."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has depression"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.brother_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has depression."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her brother has severe depression"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.her_brother_has_severe_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her brother has severe depression."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has depression"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.sister_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has depression."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother: depression, described as \"pretty bad depression.\""
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.brother_depression_described_as_pretty_bad_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother: depression, described as \"pretty bad depression.\""
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her brother has depression"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.her_brother_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her brother has depression."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F037",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
         "value": null,
         "unit": null,
         "time": null,
@@ -3604,86 +2298,286 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
-          "key": "diagnosis.dizziness_and_giddiness",
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness started when duloxetine was started"
+          "quote": "Labs before next visit: TSH, CBC, vitamin D level, ferritin, and B12."
         },
         {
-          "model": "gpt-5.4",
-          "key": "symptom.dizziness_started_when_duloxetine_was_started",
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness started when duloxetine was started."
+          "quote": "Labs ordered before next visit: TSH, CBC, vitamin D level, ferritin, and B12."
         },
         {
-          "model": "gpt-5.4",
-          "key": "symptom.dizziness_started_about_6_weeks_ago",
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness started about 6 weeks ago."
+          "quote": "Order vitamin D level before next visit."
         },
         {
-          "model": "kimi-k2",
-          "key": "diagnosis.dizziness_and_giddiness",
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness began six weeks ago after starting duloxetine"
-        },
-        {
-          "model": "kimi-k2",
-          "key": "symptom.dizziness_began_six_weeks_ago_after_starting_duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Dizziness began six weeks ago after starting duloxetine."
+          "quote": "Order vitamin D level."
         },
         {
           "model": "kimi-k3",
-          "key": "diagnosis.dizziness_and_giddiness",
+          "key": "medication.vitamin_d",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness started when duloxetine began six weeks ago"
+          "quote": "Labs before the next visit: TSH, CBC, vitamin D level, ferritin, and B12; no fasting required; the lab slip will be in the portal today."
         },
         {
-          "model": "kimi-k3",
-          "key": "symptom.dizziness_started_when_duloxetine_began_six_weeks_ago",
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
           "source": [
             "generated_output"
           ],
-          "quote": "Dizziness started when duloxetine began six weeks ago."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "diagnosis.dizziness_and_giddiness",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Dizziness started when duloxetine was started six weeks ago"
-        },
-        {
-          "model": "qwen3-max",
-          "key": "symptom.dizziness_started_when_duloxetine_was_started_six_weeks_ago",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Dizziness started when duloxetine was started six weeks ago."
+          "quote": "Vitamin D level is ordered."
         }
       ],
       "provenance": {
-        "audit_id": "F122",
+        "audit_id": "F048",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "duloxetine",
+      "canonical_anchor": "med.medication.duloxetine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "duloxetine",
+        "value": "60",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase duloxetine from 30 mg to 60 mg once daily, starting tomorrow, with breakfast; advised to call if nausea is severe or vomiting occurs."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase duloxetine from 30 mg to 60 mg once daily starting tomorrow, taken with breakfast; 60 mg is the dose where pain benefit for fibromyalgia is typically seen."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase duloxetine to 60 mg by mouth once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 30 mg daily was started 6 weeks ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase duloxetine from 30 mg to 60 mg once daily starting tomorrow."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 30 mg once daily, started approximately six weeks ago."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase duloxetine from 30 mg to 60 mg once daily starting tomorrow, continued with breakfast; 60 mg is the dose at which pain benefit for fibromyalgia is usually seen."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine will be increased from 30 mg to 60 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "8/8",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 8,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin and magnesium."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin and magnesium are fine to continue with current medication regimen."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin may be continued."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin and magnesium may be continued."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F055",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
         ],
         "status": "release",
         "field_stable": true,
@@ -3694,14 +2588,399 @@
         "transcript_anchored": true
       },
       "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "magnesium",
+      "canonical_anchor": "med.medication.magnesium.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "magnesium",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin and magnesium."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin and magnesium are fine to continue with current medication regimen."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium may be continued."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin and magnesium may be continued."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F056",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vital signs today: blood pressure 128/78, pulse 72"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.vital_signs_today_blood_pressure_128_78_pulse_72",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vital signs today: blood pressure 128/78, pulse 72."
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has a history of high blood pressure"
+        },
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "family_history.father_has_a_history_of_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has a history of high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure was 128/78 mmHg"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No history of high blood pressure"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure 128/78, pulse 72"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Today’s blood pressure is 128/78"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.todays_blood_pressure_is_128_78",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Today’s blood pressure is 128/78."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F077",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "google_gemini-2_5-pro",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
         "must_cover": false,
         "must_cover_source": null,
         "must_not_err": false
       }
     },
     {
-      "key": "Hypothyroidism",
-      "canonical_anchor": "demo.demo.hypothyroidism.present",
+      "key": "weight",
+      "canonical_anchor": "demo.metabolic.weight.present",
+      "kind": "demo",
+      "subtype": "metabolic",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "weight",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.weight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight is up 4 pounds since spring."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.weight_is_up_4_pounds_since_spring",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight is up 4 pounds since spring."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.suspected_obstructive_sleep_apnea_based_on_snoring_witnessed_apneic_pauses_gasping_morning_dry_mouth_unrefreshing_sleep_afternoon_fatigue_and_weight_gain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Suspected obstructive sleep apnea based on snoring, witnessed apneic pauses, gasping, morning dry mouth, unrefreshing sleep, afternoon fatigue, and weight gain."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.duloxetine_is_usually_weight_neutral_some_people_lose_a_little_weight_initially_from_nausea",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine is usually weight neutral; some people lose a little weight initially from nausea."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.weight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight is up 4 pounds since spring."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.weight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight is up four pounds since spring."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.weight_is_up_four_pounds_since_spring",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight is up four pounds since spring."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.counselled_that_duloxetine_is_usually_weight_neutral",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Counselled that duloxetine is usually weight neutral."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.weight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight is up four pounds."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.weight_is_up_four_pounds",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight is up four pounds."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.a_four_pound_weight_increase_since_spring",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports a four-pound weight increase since spring."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F078",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Strength",
+      "canonical_anchor": "demo.demo.strength.present",
       "kind": "demo",
       "subtype": "demo",
       "identity_fields": [
@@ -3720,7 +2999,7 @@
       "fields": {
         "subject": "patient",
         "predicate": "name",
-        "object": "hypothyroidism",
+        "object": "strength",
         "value": null,
         "unit": null,
         "time": null,
@@ -3732,37 +3011,216 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
-          "key": "demo.hypothyroidism",
+          "model": "glm-5p2",
+          "key": "demo.strength",
           "source": [
             "generated_output"
           ],
-          "quote": "Hypothyroidism was diagnosed about 5 years ago."
+          "quote": "Strength is good, reflexes are fine."
         },
         {
-          "model": "gpt-5.6-sol",
-          "key": "demo.hypothyroidism",
+          "model": "gpt-5_6-sol",
+          "key": "demo.strength",
           "source": [
             "generated_output"
           ],
-          "quote": "Hypothyroidism was diagnosed approximately five years ago."
+          "quote": "Strength was good."
         },
         {
           "model": "kimi-k3",
-          "key": "demo.hypothyroidism",
+          "key": "demo.strength",
           "source": [
             "generated_output"
           ],
-          "quote": "Hypothyroidism was reported."
+          "quote": "Strength is good."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.strength",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Strength is good."
         }
       ],
       "provenance": {
-        "audit_id": "F124",
+        "audit_id": "F080",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "diagnosis.gastrointestinal.constipation.present",
+      "kind": "diagnosis",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.past_medication_trial_tramadol_tried_in_2019_or_2020_stopped_due_to_constipation_and_feeling_loopy_subsequently_resumed_as_an_as_needed_medication_refilled_by_primary_care_provider",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past medication trial: tramadol, tried in 2019 or 2020; stopped due to constipation and feeling \"loopy\"; subsequently resumed as an as-needed medication refilled by primary care provider."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.past_medication_trial_tramadol_in_20192020_stopped_due_to_constipation_and_feeling_loopy_it_has_since_re_entered_use_as_needed_see_medications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past medication trial: tramadol in 2019–2020, stopped due to constipation and feeling \"loopy\"; it has since re-entered use as needed (see Medications)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.tramadol_was_stopped_because_it_caused_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tramadol was stopped because it caused constipation."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.tramadol_was_previously_stopped_due_to_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tramadol was previously stopped due to constipation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F091",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k3"
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue pregabalin 150 mg twice daily",
+      "canonical_anchor": "instruct.continue.continue_pregabalin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue pregabalin 150 mg twice daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_pregabalin_150_mg_twice_a_day_give_a_true_6_to_8_weeks_at_the_full_dose_before_assessing_effectiveness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice a day; give a true 6 to 8 weeks at the full dose before assessing effectiveness."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F098",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -3774,7 +3232,88 @@
       },
       "salience": {
         "must_cover": true,
-        "must_cover_source": "text",
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "If TSH and B12 are normal and hand tingling worsens, other causes will be considered",
+      "canonical_anchor": "instruct.if.if_tsh_and_b_normal_and_hand_tingling.ordered",
+      "kind": "instruct",
+      "subtype": "if",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "if tsh and b12 are normal and hand tingling worsens, other cause will be considered",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.if_tsh_and_b12_are_normal_and_hand_tingling_worsens_consider_other_causes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If TSH and B12 are normal and hand tingling worsens, consider other causes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.if_tsh_and_b12_are_normal_and_hand_tingling_worsens_other_causes_will_be_considered",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If TSH and B12 are normal and hand tingling worsens, other causes will be considered."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.if_tsh_and_b12_are_normal_and_hand_tingling_worsens_other_causes_will_be_considered",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If TSH and B12 are normal and hand tingling worsens, other causes will be considered."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F103",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
         "must_not_err": false
       }
     },
@@ -3811,15 +3350,23 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "glm-5p2",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
           ],
-          "quote": "Duloxetine was started about 6 weeks ago."
+          "quote": "Duloxetine is usually weight neutral; some people lose a little weight initially from nausea."
         },
         {
-          "model": "kimi-k2",
+          "model": "gpt-5_6-sol",
+          "key": "demo.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine is taken at 30 mg every morning with breakfast."
+        },
+        {
+          "model": "kimi-k2p6",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
@@ -3827,30 +3374,22 @@
           "quote": "Duloxetine is planned to increase to 60 mg once daily starting tomorrow morning."
         },
         {
-          "model": "kimi-k3",
+          "model": "qwen3p8-max",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
           ],
-          "quote": "Duloxetine was started six weeks ago."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "demo.duloxetine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Duloxetine is to be taken in the morning with food."
+          "quote": "Duloxetine is taken with breakfast."
         }
       ],
       "provenance": {
-        "audit_id": "F128",
+        "audit_id": "F109",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3867,8 +3406,8 @@
       }
     },
     {
-      "key": "Pregabalin",
-      "canonical_anchor": "demo.demo.pregabalin.present",
+      "key": "Amitriptyline",
+      "canonical_anchor": "demo.demo.amitriptyline.present",
       "kind": "demo",
       "subtype": "demo",
       "identity_fields": [
@@ -3887,7 +3426,7 @@
       "fields": {
         "subject": "patient",
         "predicate": "name",
-        "object": "pregabalin",
+        "object": "amitriptyline",
         "value": null,
         "unit": null,
         "time": null,
@@ -3899,46 +3438,46 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
-          "key": "demo.pregabalin",
+          "model": "google_gemini-2_5-pro",
+          "key": "demo.amitriptyline",
           "source": [
             "generated_output"
           ],
-          "quote": "Pregabalin was increased 4 weeks ago from 75 mg twice daily to 150 mg twice daily."
+          "quote": "Amitriptyline was trialed years ago and discontinued after two weeks due to side effects of dry mouth and feeling foggy."
         },
         {
-          "model": "gpt-5.6-sol",
-          "key": "demo.pregabalin",
+          "model": "gpt-5_4",
+          "key": "demo.amitriptyline",
           "source": [
             "generated_output"
           ],
-          "quote": "Pregabalin was intended to increase from 75 mg twice daily to 150 mg twice daily four weeks ago."
+          "quote": "Amitriptyline was stopped after about 3 weeks."
         },
         {
-          "model": "kimi-k2",
-          "key": "demo.pregabalin",
+          "model": "kimi-k2p6",
+          "key": "demo.amitriptyline",
           "source": [
             "generated_output"
           ],
-          "quote": "Pregabalin was increased from 75 mg twice daily to 150 mg twice daily four weeks ago."
+          "quote": "Amitriptyline was trialed years ago."
         },
         {
-          "model": "kimi-k3",
-          "key": "demo.pregabalin",
+          "model": "qwen3p8-max",
+          "key": "demo.amitriptyline",
           "source": [
             "generated_output"
           ],
-          "quote": "Pregabalin was planned to continue at 150 mg twice daily."
+          "quote": "Amitriptyline was stopped after about three weeks."
         }
       ],
       "provenance": {
-        "audit_id": "F130",
+        "audit_id": "F129",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3955,8 +3494,95 @@
       }
     },
     {
-      "key": "worsened over the last two months",
-      "canonical_anchor": "symptom.symptom.worsened_over_two.worsened",
+      "key": "The",
+      "canonical_anchor": "med.medication.medication.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "the",
+        "value": "75",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.the",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was instructed to increase pregabalin from 75 mg twice daily to 150 mg twice daily four weeks ago."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.the",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The intended pregabalin increase after the last visit was from 75 mg twice daily to 150 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "60 mg is the dose where pain benefit is usually seen for fibromyalgia."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F132",
+        "support": "3/3",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "been present for a couple of years",
+      "canonical_anchor": "symptom.symptom.been_present_for_couple_of.present",
       "kind": "symptom",
       "subtype": "symptom",
       "identity_fields": [
@@ -3977,56 +3603,65 @@
       "fields": {
         "subject": "patient",
         "predicate": "has",
-        "object": "worsened over the last two month",
+        "object": "been present for a couple of year",
         "value": null,
         "unit": null,
         "time": null,
         "location": null,
         "owner": null,
-        "status": "worsened",
+        "status": "present",
         "polarity": "positive",
         "condition": null
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
-          "key": "symptom.worsened_over_the_past_two_months",
+          "model": "gpt-5_4",
+          "key": "symptom.been_present_for_a_couple_of_years",
           "source": [
             "generated_output"
           ],
-          "quote": "Fatigue has worsened over the past two months."
+          "quote": "Fatigue has been present for a couple of years."
         },
         {
-          "model": "kimi-k2",
-          "key": "symptom.worsened_over_the_last_two_months",
+          "model": "gpt-5_6-sol",
+          "key": "symptom.been_present_for_a_couple_of_years",
           "source": [
             "generated_output"
           ],
-          "quote": "Fatigue has worsened over the last two months."
+          "quote": "Fatigue has been present for a couple of years."
         },
         {
-          "model": "qwen3-max",
-          "key": "symptom.worsened_over_the_last_two_months",
+          "model": "qwen3p8-max",
+          "key": "symptom.been_present_for_a_couple_of_years",
           "source": [
             "generated_output"
           ],
-          "quote": "Fatigue has worsened over the last two months."
+          "quote": "Fatigue has been present for a couple of years."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "symptom.been_present_for_years",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fatigue has been present for years."
         }
       ],
       "provenance": {
-        "audit_id": "F170",
-        "support": "3/3",
+        "audit_id": "F156",
+        "support": "4/4",
         "models": [
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
         "strict_field_stable": true,
         "policy": "note_consensus_threshold",
         "k_support": 3,
-        "n_supporters": 3,
+        "n_supporters": 4,
         "transcript_anchored": true
       },
       "salience": {
@@ -4036,10 +3671,10 @@
       }
     },
     {
-      "key": "insomnia / sleep difficulty",
-      "canonical_anchor": "symptom.sleep.insomnia.present",
+      "key": "Snoring is new over the last year or so",
+      "canonical_anchor": "symptom.symptom.snoring_new_over_or_so.ordered",
       "kind": "symptom",
-      "subtype": "sleep",
+      "subtype": "symptom",
       "identity_fields": [
         "canonical_anchor"
       ],
@@ -4058,7 +3693,88 @@
       "fields": {
         "subject": "patient",
         "predicate": "has",
-        "object": "sleep difficulty",
+        "object": "snoring is new over the last year or so",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.snoring_is_new_over_the_last_year_or_so",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Snoring is new over the last year or so."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.snoring_is_new_over_the_last_year_or_so",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Snoring is new over the last year or so."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.new_loud_snoring_over_the_last_year_or_so",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her husband reports new loud snoring over the last year or so."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F162",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.present",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
         "value": null,
         "unit": null,
         "time": null,
@@ -4070,37 +3786,53 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
-          "key": "symptom.brain_fog_worsens_after_poor_sleep",
+          "model": "gpt-5_4",
+          "key": "demo.anxiety",
           "source": [
             "generated_output"
           ],
-          "quote": "Brain fog worsens after poor sleep."
+          "quote": "Anxiety is reported as better on duloxetine."
         },
         {
-          "model": "kimi-k2",
-          "key": "symptom.brain_fog_worsens_with_poor_sleep",
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
           ],
-          "quote": "Brain fog worsens with poor sleep."
+          "quote": "Anxiety"
         },
         {
-          "model": "qwen3-max",
-          "key": "symptom.brain_fog_worsens_with_poor_sleep",
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
           "source": [
             "generated_output"
           ],
-          "quote": "Brain fog worsens with poor sleep."
+          "quote": "Anxiety"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is better on duloxetine."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has anxiety"
         }
       ],
       "provenance": {
-        "audit_id": "F173",
+        "audit_id": "F171",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -4117,8 +3849,89 @@
       }
     },
     {
-      "key": "Acetaminophen",
-      "canonical_anchor": "demo.demo.acetaminophen.present",
+      "key": "Irritable bowel syndrome",
+      "canonical_anchor": "diagnosis.irritable.irritable_bowel_syndrome.present",
+      "kind": "diagnosis",
+      "subtype": "irritable",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "irritable bowel syndrome",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.irritable_bowel_syndrome",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Irritable bowel syndrome."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.irritable_bowel_syndrome",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Irritable bowel syndrome."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.irritable_bowel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Irritable bowel."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F175",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Tramadol",
+      "canonical_anchor": "demo.demo.tramadol.present",
       "kind": "demo",
       "subtype": "demo",
       "identity_fields": [
@@ -4137,7 +3950,7 @@
       "fields": {
         "subject": "patient",
         "predicate": "name",
-        "object": "acetaminophen",
+        "object": "tramadol",
         "value": null,
         "unit": null,
         "time": null,
@@ -4149,37 +3962,37 @@
       },
       "evidence": [
         {
-          "model": "kimi-k2",
-          "key": "demo.acetaminophen",
+          "model": "gpt-5_4",
+          "key": "demo.tramadol",
           "source": [
             "generated_output"
           ],
-          "quote": "Acetaminophen is not taken every day."
+          "quote": "Tramadol was previously tried in 2019 or 2020."
         },
         {
-          "model": "kimi-k3",
-          "key": "demo.acetaminophen",
+          "model": "gpt-5_6-sol",
+          "key": "demo.tramadol",
           "source": [
             "generated_output"
           ],
-          "quote": "Acetaminophen was not taken every day."
+          "quote": "Tramadol is used approximately twice weekly."
         },
         {
-          "model": "qwen3-max",
-          "key": "demo.acetaminophen",
+          "model": "qwen3p8-max",
+          "key": "demo.tramadol",
           "source": [
             "generated_output"
           ],
-          "quote": "Acetaminophen is not taken every day."
+          "quote": "Tramadol was tried around 2019 or 2020."
         }
       ],
       "provenance": {
-        "audit_id": "F225",
+        "audit_id": "F179",
         "support": "3/3",
         "models": [
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4192,6 +4005,255 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Amitriptyline",
+      "canonical_anchor": "med.medication.amitriptyline.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "amitriptyline",
+        "value": "25",
+        "unit": "mg",
+        "time": "nightly",
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.amitriptyline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amitriptyline was stopped after about 3 weeks."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.amitriptyline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amitriptyline 25 mg nightly was stopped after approximately three weeks because of persistent dry mouth and morning grogginess."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.amitriptyline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amitriptyline was stopped after approximately two weeks."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F184",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "Her sister visits about once a month",
+      "canonical_anchor": "sochist.sochist.her_sister_visit_about.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "her sister visit about once a month",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_smokes_1_to_2_cigarettes_about_once_a_month_when_her_sister_visits",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient smokes 1 to 2 cigarettes about once a month when her sister visits."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.her_sister_visits_about_once_a_month",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her sister visits about once a month."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.her_sister_visits_about_once_a_month",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her sister visits about once a month."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F191",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Increase duloxetine from 30 mg once daily to 60 mg once daily starting tomorrow",
+      "canonical_anchor": "instruct.increase.increase_duloxetine_from_to_starting.present",
+      "kind": "instruct",
+      "subtype": "increase",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "duloxetine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.increase_duloxetine_from_30_mg_once_daily_to_60_mg_once_daily_starting_tomorrow",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase duloxetine from 30 mg once daily to 60 mg once daily starting tomorrow."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.increase_duloxetine_from_30_mg_to_60_mg_once_daily_starting_tomorrow",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase duloxetine from 30 mg to 60 mg once daily starting tomorrow."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "treatment.increase_duloxetine_from_30_mg_to_60_mg_once_daily_starting_tomorrow_morning",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase duloxetine from 30 mg to 60 mg once daily starting tomorrow morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F195",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
         "must_not_err": false
       }
     }

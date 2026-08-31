@@ -1,88 +1,135 @@
 History of Presenting Complaints:
-- Routine prenatal follow-up at 28 weeks 2 days gestation.
-- Established gestational hypertension managed on labetalol.
-- Reports ankle swelling beginning around 26 weeks, worse at end of day with prolonged standing, resolves by morning, improves with leg elevation.
-- Reports heartburn since approximately 20 weeks, worse at night and after tomato/spicy foods, partially relieved by Tums but effect wears off around 2 AM.
-- Reports constipation, improved with docusate but still intermittent.
-- Reports Braxton Hicks contractions 3–4 times daily, more frequent with inadequate hydration, ease with rest and water, no regular pattern.
-- Reports mild intermittent headaches responsive to acetaminophen; one episode last Tuesday described as throbbing behind the right eye, lasted 3–4 hours, resolved with acetaminophen 500 mg and rest, no associated visual changes, nausea, or upper abdominal pain, home BP during episode 134/82.
-- Reports hip pain at night and frequent urination.
-- Reports active fetal movement, especially at night and after meals; achieves 10 movements in approximately 20 minutes.
-- Reports first-trimester nausea from approximately weeks 7 to 14/15, now fully resolved.
-- Glucose screening: 1-hour 50-g screen 148 (cutoff 135); 3-hour 100-g oral glucose tolerance test normal (fasting 84, 1-hour 165, 2-hour 132, 3-hour 118).
-- Home BP log: predominantly 120s–130s/70s–80s; one reading 141/90, recheck after rest 132/84; technique includes left arm, seated, back supported, feet flat, cuff at heart level; recorded in a notebook.
+- 28 weeks 0 days gestation by first trimester dating ultrasound; third trimester routine prenatal visit
+- Gestational hypertension diagnosed at 24 weeks; currently on labetalol 200 mg twice daily after increase from 100 mg twice daily on February 16
+- Home blood pressure log mostly 120s-130s/80s with a few 140s/90s around the time of dose increase; since February 16 readings improved; highest 144/92 last Tuesday during a headache, then 132/84 after rest; no readings 160/110
+- Fetal movements reassuring; most active after dinner and when sitting down; kick counts 10 movements in under 30 minutes most evenings; once took 45 minutes after a long day but still 10 within the hour; no day with decreased movement
+- Headaches since labetalol dose increase: mild frontal headaches about twice a week, tight band behind forehead, start late afternoon, better with water, food, and lying down in dark room for 20 minutes, worse after long screen time; no flashing lights, zigzags, blind spots, nausea, or headache waking from sleep
+- Worst recent headache last Tuesday: 6/10, frontal and behind eyes, no aura, built over an hour after a long IEP meeting; home BP 146/92 during it, then 132/84 an hour after evening labetalol and lying down; no right-sided belly pain, no vomiting, vision normal, gone by next morning
+- Heartburn since about 20 weeks; worse at night and after tomato sauce or coffee; better when stopping eating by 7 pm and propping head of bed; chewed calcium carbonate tablet twice last week with relief
+- Bilateral ankle swelling by evening for about 2 weeks; worse after work and when classroom was hot; better overnight and with compression socks; no sudden face swelling; hands slightly puffy but rings still come off with soap; no one leg much bigger than the other; no calf pain
+- Shortness of breath only on stairs to apartment since about 22 weeks; stable; can talk in sentences; no chest pain, palpitations, or waking up gasping
+- Constipation from iron improved since changing to every other day dosing and adding prunes; bowel movement most days; still a little hard if forgets water
+- Braxton Hicks started last week; 3-4 tightenings a day, irregular, not painful, resolve with rest and hydration
+- No vaginal bleeding, no leaking fluid, no foul discharge, no fever, no burning with urination
+- First trimester nausea and smell aversion to chicken resolved around 16-17 weeks
+- Sharp round ligament twinges at 21 weeks lasted about a week and then stopped
+- Glucose: 1-hour screen 146 (cutoff 140); 3-hour GTT normal (fasting 84, 1-hour 171, 2-hour 138, 3-hour 112); no gestational diabetes
+- Mild iron deficiency/low ferritin; ferritin 24; hemoglobin drifted from 11.4 to 11.0
 
 Past Medical & Psychiatric History:
-- G2P1.
-- Prior pregnancy: spontaneous vaginal delivery at 39 weeks; daughter now 3 years old, birth weight 8 lbs 2 oz; no hypertensive complications in prior pregnancy.
-- Breastfed prior child for approximately one year.
-- Appendectomy at age 16.
-- No other hospitalizations or chronic medical conditions reported.
-- No psychiatric diagnoses reported.
+- Mild intermittent asthma since childhood; no albuterol use in over a year; no nighttime cough
+- Migraines without aura since college; worse with skipped meals and poor sleep
+- No blood clots, pulmonary embolism, or deep vein thrombosis
+- No kidney disease
+- No thyroid disease
+- No diabetes before pregnancy
+- No high blood pressure before this pregnancy
+- No surgeries except wisdom teeth at age 19
+- No hospitalizations
+- First pregnancy; gravida 1 para 0
+- No prior miscarriages or terminations
+- No psychiatric diagnoses or treatments reported
 
 Medications:
-- Prenatal vitamin with DHA, 1 tablet by mouth once daily (morning with breakfast).
-- Labetalol 200 mg by mouth twice daily (8 AM and 8 PM); increased from 100 mg twice daily at 26 weeks; originally started at 24 weeks.
-- Vitamin D 2000 IU by mouth once daily.
-- Ferrous sulfate 325 mg by mouth once daily, taken with orange juice.
-- Docusate (Colace) 100 mg by mouth twice daily as needed.
-- Tums (calcium carbonate) as needed for heartburn.
-- Acetaminophen 500 mg as needed for headache.
-- Ibuprofen 400 mg previously used for cramps and headaches; discontinued at approximately 6 weeks gestation when pregnancy confirmed (patient-cited reason: NSAIDs contraindicated in pregnancy).
-
-Allergies:
-- Penicillin — hives in childhood.
+- Prenatal vitamin 1 tablet every morning
+- Vitamin D 1000 units once daily
+- Aspirin 81 mg once daily at bedtime (since about 12 weeks for preeclampsia prevention given maternal history)
+- Labetalol 200 mg twice daily, morning and evening (increased from 100 mg twice daily on February 16)
+- Ferrous sulfate 325 mg every other day (plan to increase to daily)
+- No inhaler most days
+- Acetaminophen used maybe twice last month
+- No herbal teas except ginger
+- No magnesium gummies
+- Previously on propranolol 40 mg once daily for migraine prevention; stopped the month before positive pregnancy test
+- Previously used ibuprofen and naproxen; stopped after positive pregnancy test
+- No sumatriptan needed; headaches changed character
+- No sertraline, levothyroxine, metformin, or insulin
+- Allergies: amoxicillin (hives, raised itchy spots, lip swelling at age 9); avoided penicillin family antibiotics since; no known latex allergy; adhesive tape causes pink irritation; no drug allergy to ibuprofen or aspirin
 
 Family History:
-- Mother: chronic hypertension (onset in her 40s); preeclampsia during pregnancy with patient.
-- Father: type 2 diabetes mellitus (diagnosed around age 55).
-- No family history of thrombotic events, stroke at young age, or thyroid disease reported.
+- Mother: preeclampsia with patient at 34 weeks, delivered early, did fine
+- Father: hypertension controlled on amlodipine
+- Sister: gestational diabetes with her second baby
+- Maternal grandmother: type 2 diabetes
+- No family clotting disorder known
+- No early heart attacks
+- No twins
 
 Social History:
-- Occupation: third-grade teacher; plans to work until 38 weeks; substitute teacher already arranged.
-- Tobacco: never smoker.
-- Alcohol: occasional glass of wine prior to positive pregnancy test; none since.
-- No marijuana or other recreational substance use.
-- Supportive husband performs bedtime routine for their daughter.
-- Maternity leave planned at 38 weeks.
+- Occupation: school counselor; up and down all day
+- Never smoked cigarettes
+- Cannabis vape socially before pregnancy, about 1-2 times per month; stopped completely at positive pregnancy test
+- Alcohol before pregnancy: about 1 glass of wine with dinner, maybe twice a month; none since positive pregnancy test
+- No cocaine, opioids, or benzodiazepines
+- Caffeine: 1 small coffee in the morning or black tea
+- Lives in a third floor walk-up
+- Partner is supportive and does the grocery carrying
+- Seatbelt worn low across the hips
+- Dental cleaning done in January
+- Nobody hurting patient or making her feel unsafe at home
 
-Vital Signs and Examination Findings:
-- Weight: 152.4 lbs (gain of approximately 2 lbs over 2 weeks).
-- Blood pressure: 136/84.
-- Urine dipstick: no protein.
-- Fundal height: 28 cm (consistent with gestational age).
-- Fetal heart rate: 146 beats per minute.
-- Fetal position: head down at time of exam (noted to potentially change at this gestational age).
-- Patient reports rings feel tighter (hand swelling), gradual onset.
+Mental Status Examination:
+- Appearance: Not explicitly described in detail
+- Behaviour: Engaged in conversation, answering questions appropriately throughout the visit
+- Speech: Not explicitly described
+- Mood: Not explicitly stated by patient
+- Affect: Not explicitly described
+- Thoughts: No distortions, delusions, or preoccupations reported
+- Perceptions: No hallucinations or sensory misinterpretations reported
+- Cognition: Oriented and able to provide detailed history; no concerns noted
+- Insight: Demonstrates understanding of warning signs and when to call
+- Judgment: Appropriate; following recommendations, tracking home blood pressures and kick counts
+
+Risk Assessment:
+- Denied being hurt or feeling unsafe at home
+- No suicidality or homicidality reported
 
 Diagnosis:
-- Gestational hypertension, currently controlled on labetalol 200 mg twice daily.
-- Pregnancy at 28 weeks 2 days gestation.
-- Abnormal 1-hour glucose screen with normal 3-hour oral glucose tolerance test; no diagnosis of gestational diabetes.
-- Penicillin allergy (hives).
-- Dependent edema (ankles and hands), third-trimester pattern.
-- Symptomatic heartburn.
-- Iron supplementation-associated constipation, partially managed with docusate.
+- 28 weeks 0 days gestation
+- Gestational hypertension diagnosed at 24 weeks; currently controlled on labetalol 200 mg twice daily
+- Mild iron deficiency anemia (ferritin 24, hemoglobin 11.0)
+- Normal 3-hour glucose tolerance test after slightly elevated 1-hour screen (146/140)
+- Mild intermittent asthma, inactive
+- Migraines without aura, quiescent in pregnancy
 
 Treatment Plan:
-- Continue labetalol 200 mg by mouth twice daily; do not skip doses.
-- Start famotidine 20 mg by mouth once daily at bedtime for heartburn (new prescription).
-- Continue Tums as needed for breakthrough heartburn.
-- Switch ferrous sulfate 325 mg to every-other-day dosing to reduce constipation.
-- Continue docusate 100 mg twice daily as needed.
-- Continue vitamin D 2000 IU daily and prenatal vitamin daily.
-- Continue acetaminophen 500 mg as needed for headache; avoid NSAIDs.
-- Laboratory studies today: complete blood count, creatinine, and liver enzymes (baseline preeclampsia panel).
-- RhoGAM (anti-D immune globulin) administration today (patient is A negative with negative antibody screen).
-- Growth ultrasound scheduled at 32 weeks.
-- Tdap vaccination planned at 30-week visit.
-- Daily fetal kick counts: 10 movements in 2 hours; call if not achieved.
-- Work note: no recess duty.
-- Compression stockings recommended for swelling; apply in the morning before swelling develops.
-- Domestic air travel approved at 31 weeks for sister's baby shower in Chicago; advised hydration, hourly ambulation, compression stockings, and copy of prenatal record.
-- Follow-up appointment in 2 weeks (at 30 weeks) for blood pressure check, review of home BP log, and Tdap administration.
+- Increase ferrous sulfate from 325 mg every other day to 325 mg once daily starting tomorrow; take with orange juice or vitamin C; keep at least 2 hours away from prenatal vitamin and any calcium carbonate
+- If constipation returns, add polyethylene glycol 17 grams in water once daily; call if not having bowel movement every day or two
+- Continue labetalol 200 mg twice daily; do not stop suddenly; rise slowly from bed due to possible dizziness in first week after dose change
+- Continue aspirin 81 mg at bedtime until 36 weeks unless otherwise directed
+- Continue prenatal vitamin 1 daily and vitamin D 1000 units daily
+- Do not restart propranolol or ibuprofen
+- Growth ultrasound at 32 weeks (4 weeks from today) to assess estimated fetal weight, amniotic fluid, umbilical artery Dopplers, and placental appearance
+- Repeat blood pressure check in 2 weeks at 30 weeks with nurse and provider; bring home cuff to compare to clinic cuff
+- Continue home blood pressure monitoring twice daily: morning before labetalol and evening before evening dose, seated, back supported, arm at heart level, no caffeine for 30 minutes before, write down readings
+- Repeat CBC and ferritin in 4 weeks around growth ultrasound
+- Tdap vaccine today between 27 and 36 weeks to pass whooping cough antibodies to baby
+- Flu shot if still in season and not yet given
+- COVID vaccine per current schedule if due
+- Work note: avoid prolonged standing without breaks; may elevate legs during planning periods; not taking patient out of work today
+- Travel: avoid long car trips after 34 weeks; if traveling before then, stop every 1-2 hours, hydrate, do calf pumps, know where the hospital is
+- Sex is fine unless bleeding, leaking fluid, placenta problems, or contractions
+- No fingersticks, no metformin, no insulin; normal food with protein paired with carbs; walks after dinner if ankles cooperate
+- If 32-week ultrasound shows baby measuring very large or fluid high, may repeat glucose testing
 
 Safety Plan:
-- Call labor and delivery triage immediately and come in for any of the following: headache not relieved by acetaminophen, new visual changes (spots, zigzag lines, blurry vision), home blood pressure ≥160/110, decreased fetal movement, vaginal bleeding, leakage of fluid, regular painful contractions, or new right upper quadrant abdominal pain.
-- Call the office the same day for sustained home blood pressure ≥140/90 on repeat measurement.
-- Bring home blood pressure log to every visit.
+- Call or go to labor and delivery for any of the following:
+  - Blood pressure 160 systolic or 110 diastolic that stays elevated after 15 minutes of rest
+  - Repeated readings over 140/90 with symptoms
+  - Severe headache that does not resolve with acetaminophen and rest
+  - Vision changes such as spots, flashing, or blurry patches
+  - Pain in right upper abdomen or epigastric area, especially with nausea
+  - Sudden swelling of face or hands
+  - Shortness of breath at rest
+  - Chest pain
+  - One leg swollen and tender
+  - Decreased fetal movement
+  - Vaginal bleeding
+  - Leaking fluid
+  - Regular painful contractions before 37 weeks
+  - Fever
+  - Feeling that something is very wrong
+- For severe symptoms before next visit, same-day labs: CBC, AST/ALT, creatinine, urine protein to creatinine ratio, plus monitoring
+- Worst headache of life, or headache with vision change, confusion, weakness, or BP 160/110 warrants going to labor and delivery
+- Itching of palms and soles worse at night without rash warrants calling to check bile acids
+- Sudden one-sided hand swelling with face swelling or headache warrants calling

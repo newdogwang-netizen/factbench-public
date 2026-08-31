@@ -60,8 +60,8 @@ def split_anchor(anchor):
 
 
 # Self-referential pronoun normalization: "feeling not himself" and gold "not myself"
-# are the same assertion; the pronoun's person shifts with narrative perspective and
-# does not constitute an identity difference
+# are the same assertion; pronoun person varies with narrative perspective and does
+# not constitute an identity difference
 _SELF_PRONOUNS = {"myself", "himself", "herself", "themselves", "oneself"}
 
 
@@ -87,9 +87,8 @@ def directions_conflict(a, b):
 # contradictory pairs count as wrong_fact, everything else is compatible
 CONTRA_STATUS = [
     ({"active", "present", "done"}, {"stop", "past", "never", "absent"}),
-    # "resolved" asserts termination, a true contradiction with a currently active
-    # condition (past gets an exemption because it can coexist with a current
-    # condition; resolved does not)
+    # "resolved" asserts termination, a true contradiction with currently-active
+    # (past is exempted because it can coexist with currently-active; resolved is not)
     ({"active", "present"}, {"resolved"}),
     ({"improved"}, {"worsened"}),
     ({"increased"}, {"decreased"}),
@@ -105,11 +104,11 @@ def status_conflict(a, b):
     return False
 
 
-# ---- Dimension-aware comparison of the time field ----
-# Frequency (how many times a day), clock time (when a dose is taken), and
-# course/onset (since when) are three orthogonal dimensions: only same-dimension
-# differences constitute a contradiction; cross-dimension values are complementary
-# information (daily + bedtime = once every night).
+# ---- Dimensioned comparison of the time field ----
+# Frequency (times per day), clock time (when taken), and course (since when) are
+# three orthogonal dimensions: only same-dimension differences constitute a
+# contradiction; cross-dimension values are complementary information
+# (daily + bedtime = once every night).
 _RATE_PATTERNS = [
     (re.compile(r"\btwice daily\b|\b2 times daily\b|\bbid\b|\bevery 12 hours\b"), 2),
     (re.compile(r"\bthree times daily\b|\b3 times daily\b|\btid\b|\bevery 8 hours\b"), 3),
@@ -117,8 +116,7 @@ _RATE_PATTERNS = [
     (re.compile(r"\bdaily\b|\bnightly\b|\bevery 24 hours\b|\bevery day\b"), 1),
     (re.compile(r"\bweekly\b|\bonce a week\b"), 7),
 ]
-# clock-time words are collapsed into time-of-day buckets before comparison
-# (bedtime and night do not contradict)
+# Clock-time words are folded into day-part buckets before comparison (bedtime and night do not contradict)
 _TIME_POINT_BUCKETS = {
     "morning": "morning", "breakfast": "morning",
     "noon": "midday", "lunch": "midday",
@@ -142,11 +140,11 @@ def _time_buckets(t):
 
 
 def time_mismatch(cv, fv):
-    """Dimension-aware time comparison; True = contradiction. Frequency is compared
-    first (preserves recall on FREQ_FLIP injections), clock times are compared by
-    time-of-day bucket, a one-sided frequency/clock value against the other
-    dimension is treated as complementary, and course/onset values fall back to
-    token subsets (subset = under-specified, not a contradiction)."""
+    """Dimensioned time comparison; True = contradiction. Frequency is compared
+    first (preserves FREQ_FLIP injection recall), clock times are compared via
+    day-part buckets, a one-sided frequency/clock-time value is treated as
+    complementary to the other dimension, and course-like values fall back to
+    token subset (subset = under-specific, not a contradiction)."""
     if cv == "current" or fv == "current":
         return False  # "current" is the parser's present-tense default and carries no information
     cr, fr = _freq_rate(cv), _freq_rate(fv)
@@ -161,14 +159,11 @@ def time_mismatch(cv, fv):
     return not (ct <= ft or ft <= ct)
 
 
-# Order/plan frame: a different event from the "currently (not) taking"
-# current-state fact, so polarity is not compared
+# Order/plan frame: a different event from the "currently (not) taking" current-state fact; do not compare polarity
 PLAN_STATUSES = {"ordered", "plan", "planned", "prescribed", "recommended"}
-# Efficacy frame ("gabapentin helps with afternoon cravings"): time refers to when
-# the effect applies, not when the dose is taken
+# Efficacy frame ("gabapentin helps with afternoon cravings"): time refers to when the effect applies, not when the drug is taken
 EFFICACY_STATUSES = {"helping", "effective"}
-# Symptom/diagnosis groups: "historical" and "currently active" coexist clinically,
-# so past↔active is not a contradiction
+# Symptom/diagnosis groups: "historical" and "currently active" coexist clinically; past<->active is not a contradiction
 SYMPTOM_GROUPS = {"symptom", "diagnosis", "condition"}
 
 
@@ -261,11 +256,11 @@ def match_fact(idx, canon):
     for name, entries in tiers:
         if entries:
             if name == "base_anchor" and group == "med":
-                # Multiple frames for the same drug (currently taking / stopped /
-                # dose change) are often spread across different scopes: merge in the
-                # group_key candidates and disambiguate them together, preferring
-                # direction-compatible frames, so a home-medication-list entry does
-                # not collide with a stop-medication fact
+                # Multiple frames of the same drug (currently taking / stopped /
+                # dose changed) are often scattered across scopes: merge in the
+                # group_key candidates for joint disambiguation, preferring
+                # direction-compatible frames, so a home-med-list entry does not
+                # collide with a discontinuation fact
                 merged = {id(e): e for e in entries}
                 for e in idx["group_key"].get(group + "." + anchor_key, []):
                     merged[id(e)] = e
@@ -285,11 +280,11 @@ def match_fact(idx, canon):
                 overlap.append(entry)
     if overlap:
         return "token_overlap", overlap
-    # Oracle anchor-synonym tier (pure table lookup, zero LLM calls; the table is
-    # extended by an offline builder): deep paraphrases (NKDA ↔ no known drug
-    # allergies) are invisible at the token tier, and precedents that three models
-    # unanimously judged SAME can rescue them. One-way contract: a false DIFFERENT
-    # only costs recall.
+    # Oracle anchor synonym layer (pure table lookup, zero LLM calls; the table
+    # is grown by the offline builder): deep rewrites (NKDA <-> no known drug
+    # allergies) are invisible at the token layer; precedents judged SAME
+    # unanimously by three models can rescue them. One-way contract: a false
+    # DIFFERENT only costs recall.
     syn = []
     canon_obj = (canon.get("object") or canon.get("anchor_key") or "").replace("_", " ")
     if canon_obj:
@@ -304,8 +299,7 @@ def match_fact(idx, canon):
     return "", []
 
 
-# Generic symptoms / umbrella terms: literal equality is not enough to confirm
-# "the same event" (the same word often refers to different events)
+# Generic symptoms / generic terms: literal equality is insufficient to confirm "the same event" (the same word often refers to different events)
 GENERIC_OBJECTS = {
     "pain", "anxiety", "depression", "insomnia", "sleep difficulty",
     "fatigue", "nausea", "dizziness", "headache", "blood pressure",
@@ -320,7 +314,7 @@ def _tokens_subset(short, long_):
         out = set()
         for w in s.replace("'s", " ").replace("’s", " ").split():
             w = w.strip("\"'“”().,;:!?").rstrip("s")
-            # light stemming: strip ed/ing inflections from longer words (startled/startles → startl)
+            # Light stemming: strip ed/ing inflection from long words (startled/startles → startl)
             if len(w) > 5 and w.endswith("ed"):
                 w = w[:-2]
             elif len(w) > 6 and w.endswith("ing"):
@@ -336,8 +330,8 @@ def _tokens_subset(short, long_):
 
 def _frames_compatible(cdir, fdir):
     """Identity confirmation requires consistent event frames: same direction, or
-    both in a current state. done/stop (single dose administered / medication stop)
-    are exclusive frames: any different direction on the other side (including
+    both in a current state. done/stop (single administration / discontinuation)
+    are exclusive frames: any differing direction on the other side (including
     empty) means a different event."""
     if fdir in {"done", "stop"} or cdir in {"done", "stop"}:
         return cdir == fdir
@@ -348,9 +342,9 @@ def _frames_compatible(cdir, fdir):
     return False
 
 
-# Single-dose frame marker: a specific past time point (clock time / last night)
-# = a one-off event, not the same event as a routine medication regimen
-# (a claim without such a time point)
+# Single-administration frame marker: a specific past time point (clock time /
+# last night) = a one-off event, not the same event as a regular medication
+# regimen (a claim without such a time point)
 _SINGLE_DOSE_RE = re.compile(
     r"\b(last night|yesterday|tonight|this (?:morning|afternoon|evening))\b|\b\d{1,2}:\d{2}\b")
 
@@ -361,19 +355,19 @@ def _single_dose_frame(doc):
 
 
 def identity_certain(claim, fact, claim_dir="", fact_dir="", index=None):
-    """Identity confirmation for token-tier matches: the object is specific and
-    equal (or judged the same by the oracle), and the event frames are compatible.
-    Generic symptom words and same-drug pairs across frames are not confirmed."""
+    """Identity confirmation for token-layer matches: the object is specific and
+    equal (or judged same by the oracle), and the event frames are compatible.
+    Generic symptom words and cross-frame same-drug pairs are not confirmed."""
     co = norm_field("object", (claim.get("fields") or {}).get("object"))
     fo = norm_field("object", (fact.get("fields") or {}).get("object"))
     if not co or not fo:
         return False
     if co in GENERIC_OBJECTS or fo in GENERIC_OBJECTS:
-        # Exception: when the same generic term uniquely identifies one fact within
-        # the factset, same word means same entity (the intent of the generic-term
-        # ban is that "the same word often refers to different events"; with only
-        # one anxiety fact in the whole case there is no ambiguity). Reuses the
-        # uniqueness principle from subset identity.
+        # Exception: when the same generic word uniquely identifies one fact
+        # within the factset, same word means same entity (the point of the
+        # generic-word ban is "the same word often refers to different events";
+        # when the whole case has only one anxiety fact there is no ambiguity).
+        # Reuses the uniqueness principle of subset identity.
         if index is not None and co == fo:
             hits = sum(1 for _p, f2, _pr in index["all"]
                        if norm_field("object", (f2.get("fields") or {}).get("object")) == co)
@@ -383,13 +377,13 @@ def identity_certain(claim, fact, claim_dir="", fact_dir="", index=None):
     if not _frames_compatible(claim_dir, fact_dir):
         return False
     if _single_dose_frame(claim) != _single_dose_frame(fact):
-        return False  # inpatient single PRN dose colliding with a routine regimen (Klonopin 0.5 once vs 1mg BID)
-    # Same first word plus token subset = an under-specified spelling of the same
-    # entity (potassium ⊂ potassium gluconate); metoprolol tartrate vs succinate is
-    # not a subset and will not be falsely confirmed. The subset must uniquely
-    # identify one fact within the factset: when a bare family word ("Vitamin"
-    # truncated from Vitamin B12) can hit multiple vitamin facts, identity is not
-    # confirmed.
+        return False  # A single inpatient PRN colliding with the regular regimen (single Klonopin 0.5 vs 1mg BID)
+    # Same first word plus token subset = an under-specific spelling of the same
+    # entity (potassium ⊂ potassium gluconate); metoprolol tartrate vs succinate
+    # is not a subset and will not be falsely confirmed.
+    # The subset must uniquely identify one fact within the factset: a bare
+    # family word ("Vitamin" truncated from Vitamin B12) that hits multiple
+    # vitamin facts does not confirm identity.
     ctoks, ftoks = co.split(), fo.split()
     if ctoks[0] == ftoks[0] and (set(ctoks) <= set(ftoks) or set(ftoks) <= set(ctoks)):
         shorter = min(set(ctoks), set(ftoks), key=len)
@@ -426,9 +420,9 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
     ffields = fact.get("fields") or {}
     wrong = []
     extra = []
-    # The plan frame (order / to-be-executed) and the current-state frame (taking /
-    # not taking) are different events: when one side is a plan and the other is
-    # current state, status/polarity/value/time are not comparable
+    # The plan frame (order/plan, pending execution) and the current-state frame
+    # (taking / not taking) are different events: when one side is a plan and the
+    # other is current state, status/polarity/value/time are not comparable
     _cstat = norm_field("status", cfields.get("status"))
     _fstat = norm_field("status", ffields.get("status"))
     plan_xor = (_cstat in PLAN_STATUSES) != (_fstat in PLAN_STATUSES)
@@ -447,18 +441,17 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
             cpol = norm_field("polarity", cfields.get("polarity"))
             fpol = norm_field("polarity", ffields.get("polarity"))
             if cpol == "negative" and fpol == "negative":
-                continue  # negation agrees on both sides; the status difference is parser-default noise
+                continue  # Both sides agree on negation; the status difference is parser default-value noise
             if (len({cv, fv}) > 1 and {cv, fv} <= {"past", "active", "present"}
                     and norm_field("kind", fact.get("kind")) in SYMPTOM_GROUPS | {"vital"}):
-                continue  # historical and current symptoms/vitals coexist; true contradictions go through the polarity/value channels
+                continue  # Historical and current symptoms/signs coexist; true contradictions go through the polarity/value channels
             if cpol == "negative" and fv in {"stop", "past", "on hold", "held"}:
-                continue  # "not taking X" (negated present tense) and "stopped / on hold" are the same reality
+                continue  # "not taking X" (negated present tense) and "discontinued / on hold" are the same reality
             if status_conflict(cv, fv):
                 # Dose-change narrative exemption: when the quote contains
                 # "from <old value> to <new value>" and the two values belong to the
-                # claim's and the fact's value fields respectively, the status
-                # difference between the old and new frames is two sides of the same
-                # event
+                # claim's and the fact's value respectively, the status difference
+                # between the old and new frames is two sides of the same event
                 _q = (claim.get("evidence_quote") or "").lower()
                 _cv2 = norm_field("value", cfields.get("value"))
                 _fv2 = norm_field("value", ffields.get("value"))
@@ -471,18 +464,18 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
             continue
         if fld == "polarity":
             if plan_xor:
-                continue  # an order to start a medication coexists with "not currently taking"; polarity is not compared across frames
+                continue  # An order to start a drug coexists with "not currently taking"; do not compare polarity across frames
             if _cstat == "recorded":
-                continue  # list-membership frame ("on the med list / not taking") does not assert whether the drug is currently taken
+                continue  # The list-membership frame ("on the med list / not taking") does not assert whether currently taking
             if cv == "negative" and fv == "positive" and _fstat in {"stop", "past", "on hold", "held"} \
                     and _cstat in {"active", "present", "stop", "past", "prior instance", "recorded", ""}:
                 continue  # "not currently taking" is synonymous with gold "stopped / on hold (positive polarity)"
             if cv == "negative" and _cstat == "past" and fv == "positive" \
                     and _fstat not in {"stop", "past"}:
-                continue  # not taking for a past period (previously stopped) coexists with currently taking; not a contradiction
+                continue  # Not taking for a stretch in the past (previously stopped) coexists with currently taking; not a contradiction
             if cv == "positive" and fv == "negative" \
                     and _cstat in {"past", "stop"} and _fstat in {"stop", "past"}:
-                continue  # "previously took (now stopped)" and gold "negative-polarity stop" are symmetric spellings of the same reality
+                continue  # "previously took (now stopped)" and gold "negative-polarity discontinuation" are symmetric spellings of the same reality
             if cv != fv:
                 wrong.append({"field": fld, "claim": cv, "fact": fv})
             continue
@@ -491,17 +484,17 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
                 continue
             fstat = norm_field("status", ffields.get("status"))
             if fstat in EFFICACY_STATUSES:
-                continue  # in the efficacy frame, time is when the effect applies, not comparable with dosing time
+                continue  # In the efficacy frame, time is when the effect applies; not comparable to the dosing time
             if time_mismatch(cv, fv) and oracle.equivalent(fld, cv, fv) is not True:
                 wrong.append({"field": fld, "claim": cv, "fact": fv})
             continue
         if fld == "value":
             if plan_xor:
                 continue
-            # A single-dose time point (7:51 PM) and a routine frequency (BID) are
-            # different dosing events: an inpatient single 0.5mg dose coexists with a
-            # routine outpatient 1mg BID, so doses are not comparable (case_021
-            # dual-frame)
+            # A single-administration time point (7:51 PM) and a regular frequency
+            # (BID) are different administration events: a single inpatient 0.5mg
+            # coexists with the regular outpatient 1mg BID; doses are not
+            # comparable (case_021 dual-frame)
             ctime = norm_field("time", cfields.get("time")) or ""
             ftime = norm_field("time", ffields.get("time")) or ""
             _clock = re.compile(r"\d{1,2}:\d{2}|\b(?:am|pm)\b|\blast night\b|\btonight\b", re.I)
@@ -509,8 +502,8 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
             c_rate, f_rate = _freq_rate(ctime), _freq_rate(ftime)
             if (c_clock and f_rate is not None) or (f_clock and c_rate is not None):
                 continue
-            # Dimension guard: a mass dose (100 mg) and a count (2 capsules) are two
-            # different dimensions and not comparable ("CoQ10 100mg, 2 capsules" are
+            # Dimension guard: a mass dose (100 mg) and a count (2 capsules) are
+            # two dimensions and not comparable ("CoQ10 100mg, 2 capsules" are
             # both true at once)
             cu = norm_field("unit", cfields.get("unit"))
             fu = norm_field("unit", ffields.get("unit"))
@@ -523,25 +516,25 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
                (not cu and _CONTAINER_RE.search(fu)):
                 continue
             if not fu and cu in _MASS_UNITS and fv:
-                # Gold value has no unit: look in the claim quote for the word next
-                # to that value — "2 capsules" is the count dimension, true alongside
-                # the claim's mass dose (100mg) with no contradiction; an adjacent mg
-                # (e.g. "600 mg (1200 mg)") is the same dimension, so the
-                # contradiction is still judged
+                # Gold value has no unit: look in the claim quote for the word
+                # adjacent to that value -- "2 capsules" is the count dimension,
+                # true alongside the claim's mass dose (100mg) with no
+                # contradiction; adjacent mg (e.g. "600 mg (1200 mg)") is the same
+                # dimension and the contradiction stands
                 q = (claim.get("evidence_quote") or "").lower()
                 if re.search(r"\b" + re.escape(fv) + r"\s*(capsules?|caps?|tablets?|tabs?|pills?)\b", q):
                     continue
             # Total vs per-tablet dose: "300 mg as two 150 mg tablets",
-            # "100mg (two 50mg pills)" — the same sentence carries both the total and
-            # the per-tablet strength, so disagreement over which number was
-            # extracted is not a factual contradiction
+            # "100mg (two 50mg pills)" -- the same sentence contains both the total
+            # and the per-tablet strength; picking different numbers is not a
+            # factual contradiction
             q0 = (claim.get("evidence_quote") or "").lower()
             if cv and fv and cv in q0 and fv in q0 and re.search(
                     r"\b(?:two|three|2|3)\s+\d+\s*(?:mg|mcg)\s+(?:tablets?|pills?|caps?)", q0):
                 continue
-            # Dose-change narrative: "decreased from 10 mg to 5 mg" carries both the
-            # old and new values in one sentence; a claim picking up the old value is
-            # not asserting a different dose
+            # Dose-change narrative: "decreased from 10 mg to 5 mg" contains both
+            # the old and new values in one sentence; a claim picking up the old
+            # value is not asserting a different dose
             q = (claim.get("evidence_quote") or "").lower()
             if cv and fv and re.search(
                     r"from\s+" + re.escape(cv) + r"\s*(?:mg|mcg|g)?\s+(?:to|down to|up to)\s+" + re.escape(fv),
@@ -549,7 +542,7 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
                     r"from\s+" + re.escape(fv) + r"\s*(?:mg|mcg|g)?\s+(?:to|down to|up to)\s+" + re.escape(cv),
                     q):
                 continue
-            # Claim value appears in the quote with a container word ("1 tablet")
+            # The claim value carries a container word in the quote ("1 tablet")
             # while gold is a mass strength (mg): count and strength are two
             # dimensions (sennosides-docusate 1 tablet vs 50mg)
             if cv and re.search(r"\b" + re.escape(cv) + r"\s*(?:tablets?|tabs?|caps?|capsules?|pills?)\b", q0) \
@@ -561,29 +554,36 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
         if fld == "object":
             anchored = tier in {"exact_anchor", "base_anchor", "group_key"}
             if anchored and (cv in GENERIC_OBJECTS or fv in GENERIC_OBJECTS):
-                # Generic terms (pain/depression) carry no contradictable
-                # information, only under-specificity; anchored tiers only — at the
-                # token_overlap tier identity is already uncertain, and the exemption
-                # would launder unrelated claims into supported
+                # Generic words (pain/depression) carry no contradiction-capable
+                # information, only under-specificity; anchored tiers only --
+                # identity at the token_overlap tier is already uncertain, and the
+                # exemption would launder unrelated claims into supported
                 continue
             if fv and (_tokens_subset(fv, cv)
                        or _tokens_subset(fv, str(cfields.get("object") or "").lower())):
-                # A long telegraphic object containing the fact's entity name
-                # ("having brain zaps today despite..." ⊇ "brain zap") is narrative
-                # expansion, not a contradiction. norm_object collapses long phrases
-                # into a drug name, so the raw object is checked as well
+                # A telegraphic long-sentence object contains the fact's entity
+                # name ("having brain zaps today despite..." ⊇ "brain zap"): this
+                # is narrative elaboration, not a contradiction. norm_object
+                # collapses long sentences into the drug name, so also check the
+                # raw object
                 continue
             if fv.replace(".", "").isdigit():
                 craw_obj = str(cfields.get("object") or "")
                 if re.search(r"\b" + re.escape(fv) + r"\b", cv) or not re.search(r"\d", craw_obj):
-                    # Numeric gold object: the narrative contains that number
-                    # (60-year woman ⊇ 60), or contains no digits at all (asserts no
-                    # numeric value, so there is nothing to contradict)
+                    # Numeric gold object: the narrative contains the number
+                    # (60-year woman ⊇ 60), or contains no digits at all (asserts
+                    # no number, so nothing to contradict)
                     continue
-            # A denial-claim object with zero overlap with the fact object = a
-            # different statement within the same group, not a contradiction:
-            # "denies suicide plan" (denial of current risk) is not a miswriting of
-            # the gold "family history of suicide" (historical event)
+            # Different truncations of the same long instruction sentence are not a
+            # contradiction: both objects are long sentences (>=8 words) with the
+            # same first 4 words ("call or go to labor and delivery for A" vs "... for B")
+            _ct, _ft = cv.split(), fv.split()
+            if len(_ct) >= 8 and len(_ft) >= 8 and _ct[:4] == _ft[:4]:
+                continue
+            # A denial claim whose object has zero overlap with the fact's object
+            # = a different statement in the same group, not a contradiction:
+            # "denies suicide plan" (current-risk denial) ≠ a miswrite of gold
+            # "family history of suicide" (a historical event)
             _cpol = norm_field("polarity", cfields.get("polarity"))
             if anchored and _cpol == "negative" and cv != fv and not relevant(cv, fv):
                 continue
@@ -595,7 +595,7 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
         if fld == "subject":
             craw = (str(cfields.get("subject") or "") + " " + str(cfields.get("object") or "")).lower()
             if fv and fv != "patient" and _tokens_subset(fv, craw):
-                continue  # the fact subject (cousin's boyfriend) is contained in the claim narrative itself
+                continue  # The fact's subject (cousin's boyfriend) is contained in the claim's own narrative
             if cv != fv and oracle.equivalent(fld, cv, fv) is not True:
                 wrong.append({"field": fld, "claim": cv, "fact": fv})
             continue
@@ -607,11 +607,12 @@ def field_mismatches(claim, fact, fields, strict_extra_fields=False, tier=""):
 def count_potential_fabrications(claims, per_claim, factset):
     """Out-of-bounds fabrication channel (borrowed from the production system's
     PotentialHallucination): a dose-bearing medication claim with no same-entity
-    fact anywhere in gold → potential fabrication. This is a needs-human-review
-    alert, not a conviction: gold is a high-precision subset, and a model may
-    legitimately mention drugs gold does not include; the consult_note reference
-    readings are this channel's noise floor. Same-entity determination uses token
-    subsets (to avoid treating paraphrases / missing anchors as fabrication)."""
+    fact anywhere in gold -> potential fabrication.
+    This is a "needs human review" alarm, not a conviction: gold is a
+    high-precision subset, and the model may legitimately mention drugs gold
+    does not include; the consult_note reference reading is this channel's
+    noise floor. Same-entity determination uses token subsets (to avoid treating
+    rewrites / missing anchors as fabrication)."""
     gold_objs = []
     for f in factset.get("facts", []):
         fo = norm_field("object", (f.get("fields") or {}).get("object"))
@@ -626,12 +627,12 @@ def count_potential_fabrications(claims, per_claim, factset):
             continue
         cfields = claim.get("fields") or {}
         if not norm_field("value", cfields.get("value")):
-            continue  # dose-bearing only: a dose with no entity to anchor it = the fabrication form with the highest patient-safety risk
+            continue  # Only dose-bearing claims: a dose with no entity to hang it on = the fabrication shape with the highest patient-safety risk
         co = norm_field("object", cfields.get("object"))
         if not co:
             continue
         if any(_tokens_subset(co, fo) or _tokens_subset(fo, co) for fo in gold_objs):
-            continue  # gold has a same-entity fact: this is a matching gap, not fabrication
+            continue  # Gold has a same-entity fact: a matching gap, not fabrication
         n += 1
         flagged.append(row.get("index"))
     return n, flagged
@@ -639,12 +640,12 @@ def count_potential_fabrications(claims, per_claim, factset):
 
 def rescue_rematch(index, claim, canon, matched_pos, wrong_fields,
                    check_mode, strict_extra_fields):
-    """Cross-frame rescue: search the full fact set for a sibling fact with a
-    strictly equal object, a compatible direction, and zero field conflicts. The
-    sibling must itself carry a value for every originally conflicting field (an
-    under-specified fact is "zero-conflict" only because it asserts nothing, and
-    must not be used to launder; injected fake errors therefore have no legitimate
-    rescue target). Returns None when none is found."""
+    """Cross-frame rescue: search the whole factset for a sibling fact with a
+    strictly equal object, compatible direction, and zero field conflicts. The
+    sibling must itself have a value for every originally conflicting field
+    (an under-specified fact is "zero-conflict" only because it asserts nothing,
+    and must not be used to launder; injected fake errors therefore have no
+    legitimate rescue target). Returns None if not found."""
     co = norm_field("object", (claim.get("fields") or {}).get("object"))
     if not co or co in GENERIC_OBJECTS:
         return None
@@ -659,11 +660,11 @@ def rescue_rematch(index, claim, canon, matched_pos, wrong_fields,
             continue
         if directions_conflict(claim_dir, parsed["direction"]):
             continue
-        # No rescue across plan/current-state frames: plan_xor exempts
-        # value/status/time entirely, making "zero-conflict" meaningless — a correct
-        # plan dose elsewhere in the note must not launder a wrong dose on the
-        # current medication (observed in a cheat trial: apixaban 5→10 once slipped
-        # through via a plan-frame sibling rescue)
+        # No rescue across the plan/current-state frames: plan_xor exempts
+        # value/status/time entirely, making "zero-conflict" meaningless -- a
+        # correct planned dose elsewhere in the note must not launder a wrong
+        # dose of the current medication (observed in a cheat trial: apixaban
+        # 5→10 was once missed via a plan-frame sibling rescue)
         cstat = norm_field("status", (claim.get("fields") or {}).get("status"))
         fstat = norm_field("status", ffields.get("status"))
         if (cstat in PLAN_STATUSES) != (fstat in PLAN_STATUSES):
@@ -742,11 +743,11 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
             if len(compatible) == 1:
                 matches = compatible
             elif len(compatible) > 1:
-                # Second-stage disambiguation: the unique zero-field-conflict
-                # candidate wins (deterministic: by fact position; with multiple
-                # zero-conflict candidates take the earliest position — they agree
-                # with each other, so a supported verdict means the same thing; with
-                # no zero-conflict candidate, keep ambiguous → unknown and open no
+                # Second-level disambiguation: the unique zero-field-conflict
+                # candidate wins (deterministic: by fact position; with several
+                # zero-conflict candidates take the earliest -- they agree with
+                # each other, so the supported semantics are the same; with no
+                # zero-conflict candidate keep ambiguous -> unknown, opening no
                 # new wrong path)
                 zero = []
                 for m in compatible:
@@ -757,14 +758,14 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
                         zero.append(m)
                 if zero:
                     pick = min(zero, key=lambda m: m[0])
-                    # A value-bearing claim must not be laundered by a zero-conflict
-                    # candidate whose value was never confronted (under-specification
-                    # must not launder — same principle as rescue). When the selected
-                    # candidate's value is empty, or its value was exempted via
-                    # plan_xor, confront a same-frame value-bearing candidate
-                    # instead; with no same-frame value-bearing candidate, keep the
-                    # original pick (legitimate cross-frame scenarios stay
-                    # undisturbed).
+                    # A value-bearing claim must not be laundered via a
+                    # zero-conflict candidate whose value was never confronted
+                    # (under-specification must not launder -- same principle as
+                    # rescue). When the picked candidate's value is empty, or its
+                    # value was exempted by plan_xor, switch to confronting a
+                    # same-frame valued candidate; with no same-frame valued
+                    # candidate keep the original pick (legitimate cross-frame
+                    # scenarios are undisturbed).
                     cval = norm_field("value", (claim.get("fields") or {}).get("value"))
                     _cstat = norm_field("status", (claim.get("fields") or {}).get("status"))
                     def _same_frame(m):
@@ -821,12 +822,12 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
             if directions_conflict(claim_direction, fact_parsed["direction"]):
                 wrong.append({"field": "direction", "claim": claim_direction,
                               "fact": fact_parsed["direction"]})
-            # Value-confrontation fence: when the claim asserts a value but the
-            # matched fact does not, "zero-conflict" is under-specification and must
-            # not launder (same principle as rescue). When a sibling fact exists with
-            # an equal object, the same frame, and a value, force a confrontation
-            # with it; if the confrontation surfaces a value conflict, re-verdict as
-            # wrong against that fact.
+            # Value-confrontation fence: when the claim asserts a value and the
+            # matched fact does not, "zero-conflict" is under-specification and
+            # must not launder (same principle as rescue). When a sibling fact
+            # exists with an equal object, the same frame, and a value, force a
+            # confrontation with it; if the confrontation surfaces a value
+            # conflict, re-verdict as wrong against that fact.
             _cval = norm_field("value", (claim.get("fields") or {}).get("value"))
             _fval = norm_field("value", (fact.get("fields") or {}).get("value"))
             _q_low = (claim.get("evidence_quote") or "").lower()
@@ -862,11 +863,11 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
                         })
                     break
             if wrong and not extra:
-                # Consistency-first rematch: when multiple frames of the same entity
-                # are spread under different anchors (currently taking on the home
-                # med list vs stopped today), if a sibling fact exists with a
-                # strictly equal object and zero field conflicts, verdict supported
-                # rather than wrong. Injected fake errors have no zero-conflict
+                # Consistency-first rematch: when multiple frames of the same
+                # entity are scattered under different anchors (on the home med
+                # list vs stopped today), if a sibling fact exists with a strictly
+                # equal object and zero field conflicts, verdict supported rather
+                # than wrong. Injected fake errors have no zero-conflict
                 # candidate, so by construction this rule does not hurt injection
                 # recall.
                 rescued = rescue_rematch(index, claim, canon, fact_pos, wrong,
@@ -886,12 +887,11 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
             elif wrong and tier in ("token_overlap", "oracle_synonym") and not identity_certain(
                     claim, fact, canon.get("direction") or "", fact_parsed["direction"],
                     index=index):
-                # At the loosest match tiers with unconfirmed identity, a
-                # "contradiction" verdict is not supported (red-teaming confirmed
-                # these tiers contribute 2/3 of false wrong_fact); with confirmed
-                # identity (normalized objects equal, or oracle-judged same, e.g. a
-                # Potassium gluconate name collision) the strict verdict still
-                # applies.
+                # At the loosest match tier with unconfirmed identity, do not
+                # support a "contradiction" verdict (red-teaming confirmed this
+                # tier contributes 2/3 of false wrong_fact); with confirmed
+                # identity (normalized-equal objects or an oracle SAME, e.g. the
+                # Potassium gluconate name collision), enforce as usual.
                 row["verdict"] = "not_in_factset"
                 row["reasons"].append({
                     "code": "weak_tier_mismatch",
@@ -907,11 +907,12 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
                 _cs = norm_field("status", (claim.get("fields") or {}).get("status"))
                 _fs = norm_field("status", (fact.get("fields") or {}).get("status"))
                 if (_cs in PLAN_STATUSES) != (_fs in PLAN_STATUSES):
-                    # Plan and current-state frames do not evidence each other:
-                    # writing only the order does not count as covering the
-                    # current-state fact, nor is it judged wrong (different frames,
-                    # independent truth values). This also keeps fabricated orders
-                    # visible through the secondary "coverage drop" channel.
+                    # The plan frame and the current-state frame do not evidence
+                    # each other: writing only the order does not count as
+                    # covering the current-state fact, nor is it verdicted wrong
+                    # (different frames, independent truth values). This also
+                    # restores visibility of fabricated orders through the
+                    # secondary "coverage drop" channel.
                     row["verdict"] = "not_in_factset"
                     row["reasons"].append({
                         "code": "frame_mismatch_plan",
@@ -968,9 +969,8 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
     counts["fully_covered_facts"] = fully
     counts["no_anchor_facts"] = no_anchor
 
-    # Two-axis critical metrics: emitted only when gold carries salience labels
-    # must_cover: the must-cover set defined by clinician triage; must_not_err:
-    # facts where getting them wrong is catastrophic
+    # Two-axis key metrics: emitted only when gold carries salience labels
+    # must_cover: the must-cover set defined by clinician triage; must_not_err: facts where an error is catastrophic
     labeled = [f for f in factset.get("facts", []) if isinstance(f.get("salience"), dict)]
     if labeled:
         mc_total = mc_hit = 0

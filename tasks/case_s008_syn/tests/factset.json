@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s008_syn",
     "version": "1",
-    "sha256": "e8416075ff13ee8469f4c8c74d5eed1d2e37e8c786364838a931abe263315670",
+    "sha256": "c3c76e89a2c77586fd4e63982145c34eccd8096e0be6349a07668a3335c44ede",
     "reviewed": false
   },
   "source": {
@@ -13,13 +13,13 @@
     "sha256": null,
     "stats": {
       "n_models": 9,
-      "n_facts": 592,
+      "n_facts": 591,
       "certain": 3,
       "strict_certain": 3,
-      "low_conf": 55,
-      "unique": 534,
+      "low_conf": 56,
+      "unique": 532,
       "unanimous": 6,
-      "low_support": 496
+      "low_support": 494
     }
   },
   "selection": {
@@ -31,7 +31,7 @@
       "release"
     ],
     "fact_count": 44,
-    "unstable_skipped": 45
+    "unstable_skipped": 46
   },
   "rules": {
     "version": "detfact-rules/0.7",
@@ -72,7 +72,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "demo.bloating",
           "source": [
             "generated_output"
@@ -80,7 +80,7 @@
           "quote": "Bloating is still present, mostly in the afternoons, slightly improved since starting fiber."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "demo.bloating",
           "source": [
             "generated_output"
@@ -88,7 +88,7 @@
           "quote": "Bloating is somewhat improved since starting fiber."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.bloating",
           "source": [
             "generated_output"
@@ -96,7 +96,7 @@
           "quote": "Bloating is still present."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.bloating",
           "source": [
             "generated_output"
@@ -112,7 +112,7 @@
           "quote": "Bloating is slightly better since starting fiber."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.bloating",
           "source": [
             "generated_output"
@@ -124,12 +124,12 @@
         "audit_id": "F007",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -178,7 +178,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "demo.cramping",
           "source": [
             "generated_output"
@@ -186,7 +186,7 @@
           "quote": "Cramping is still mostly in the lower left abdomen and improves after bowel movements."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.cramping",
           "source": [
             "generated_output"
@@ -194,7 +194,7 @@
           "quote": "Cramping is better."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.cramping",
           "source": [
             "generated_output"
@@ -202,7 +202,7 @@
           "quote": "Cramping is located in the lower left abdomen."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.cramping",
           "source": [
             "generated_output"
@@ -214,10 +214,10 @@
         "audit_id": "F012",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash",
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -231,125 +231,6 @@
         "must_cover": true,
         "must_cover_source": "text",
         "must_not_err": false
-      }
-    },
-    {
-      "key": "pain",
-      "canonical_anchor": "symptom.pain.pain.present",
-      "kind": "symptom",
-      "subtype": "pain",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "value"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "value",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "reports",
-        "object": "pain",
-        "value": "7",
-        "unit": null,
-        "time": null,
-        "location": null,
-        "owner": null,
-        "status": "active",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "deepseek-v4-flash",
-          "key": "symptom.pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "No trouble swallowing, pain with swallowing, vomiting, black stools, coffee-ground stools, or fevers."
-        },
-        {
-          "model": "glm-5p2",
-          "key": "symptom.pain_severity_decreased_from_6_7_out_of_10_to_3_out_of_10",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pain severity decreased from 6-7 out of 10 to 3 out of 10."
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "key": "symptom.pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pain remains in the lower left abdomen and is relieved by a bowel movement."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "symptom.pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "The patient denied pain with swallowing."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "symptom.pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "No pain with swallowing."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "symptom.pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Pain is located in the lower left abdomen and improves after bowel movements."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "symptom.pain",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "There is no pain when swallowing."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F018",
-        "support": "7/7",
-        "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "kimi-k2",
-          "kimi-k3",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 7,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "parser",
-        "must_not_err": true
       }
     },
     {
@@ -387,7 +268,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.hypothyroidism_diagnosed_around_2016",
           "source": [
             "generated_output"
@@ -395,7 +276,7 @@
           "quote": "Hypothyroidism, diagnosed around 2016."
         },
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.hypothyroidism",
           "source": [
             "generated_output"
@@ -403,7 +284,7 @@
           "quote": "Hypothyroidism."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.hypothyroidism_diagnosed_around_2016",
           "source": [
             "generated_output"
@@ -411,7 +292,7 @@
           "quote": "Hypothyroidism, diagnosed around 2016."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.the_patient_has_hypothyroidism",
           "source": [
             "generated_output"
@@ -423,9 +304,9 @@
         "audit_id": "F021",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "qwen3-max"
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -476,7 +357,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.celiac_blood_work_was_negative",
           "source": [
             "generated_output"
@@ -492,7 +373,7 @@
           "quote": "Celiac blood work: negative."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.celiac_blood_work_last_year_was_negative",
           "source": [
             "generated_output"
@@ -508,7 +389,7 @@
           "quote": "Celiac blood work was negative."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.celiac_blood_work_was_negative",
           "source": [
             "generated_output"
@@ -520,11 +401,11 @@
         "audit_id": "F025",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -581,7 +462,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -597,7 +478,7 @@
           "quote": "Omeprazole 40mg once daily, every morning (timing varies—sometimes with breakfast, sometimes before)."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -605,7 +486,7 @@
           "quote": "Omeprazole 40 mg once daily in the morning."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -613,7 +494,7 @@
           "quote": "Omeprazole 40 mg once daily."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -621,7 +502,7 @@
           "quote": "Omeprazole 40 mg by mouth every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -645,7 +526,7 @@
           "quote": "Omeprazole 40 mg orally once daily (currently taken in the morning; timing relative to breakfast variable)."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -657,15 +538,15 @@
         "audit_id": "F026",
         "support": "9/9",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -722,7 +603,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -738,7 +619,7 @@
           "quote": "Levothyroxine 75mcg every morning, taken first thing on waking."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -746,7 +627,7 @@
           "quote": "Levothyroxine 75 mcg once daily in the morning."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -754,7 +635,7 @@
           "quote": "Levothyroxine 75 mcg every morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -762,7 +643,7 @@
           "quote": "Levothyroxine 75 micrograms by mouth every morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -786,7 +667,7 @@
           "quote": "Levothyroxine 75 mcg orally once daily (taken first thing in the morning, separated from coffee and other medications)."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -798,15 +679,15 @@
         "audit_id": "F027",
         "support": "9/9",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -859,7 +740,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.metamucil",
           "source": [
             "generated_output"
@@ -867,15 +748,7 @@
           "quote": "Metamucil (fiber) one tablespoon in a large glass of water once daily at dinner, started approximately mid-June (about 6 weeks ago)."
         },
         {
-          "model": "glm-5p2",
-          "key": "medication.metamucil",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Metamucil (fiber) 1 tablespoon in a glass of water once daily, usually at dinner (started mid-June, approximately 6 weeks ago)."
-        },
-        {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.metamucil",
           "source": [
             "generated_output"
@@ -883,7 +756,7 @@
           "quote": "Metamucil 1 tablespoon in water once daily with dinner (started mid-June)."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.metamucil",
           "source": [
             "generated_output"
@@ -891,7 +764,7 @@
           "quote": "Metamucil was started about 6 weeks ago in mid-June."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.metamucil",
           "source": [
             "generated_output"
@@ -909,13 +782,12 @@
       ],
       "provenance": {
         "audit_id": "F028",
-        "support": "6/6",
+        "support": "5/5",
         "models": [
-          "deepseek-v4-flash",
-          "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",
@@ -923,12 +795,12 @@
         "strict_field_stable": true,
         "policy": "note_consensus_threshold",
         "k_support": 3,
-        "n_supporters": 6,
+        "n_supporters": 5,
         "transcript_anchored": true
       },
       "salience": {
         "must_cover": true,
-        "must_cover_source": "parser",
+        "must_cover_source": "text",
         "must_not_err": true
       }
     },
@@ -969,7 +841,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -985,7 +857,7 @@
           "quote": "Vitamin D 2000 units once daily."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -993,7 +865,7 @@
           "quote": "Vitamin D 2000 units once daily."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1001,7 +873,7 @@
           "quote": "Vitamin D 2000 units once daily."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1009,7 +881,7 @@
           "quote": "Vitamin D 2,000 units by mouth daily."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1033,7 +905,7 @@
           "quote": "Vitamin D 2000 units orally once daily."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1045,15 +917,15 @@
         "audit_id": "F029",
         "support": "9/9",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1110,7 +982,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -1126,7 +998,7 @@
           "quote": "Tums (calcium carbonate 500mg) 2 tablets as needed, approximately twice a week at night."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -1134,7 +1006,7 @@
           "quote": "Calcium Carbonate (Tums) 500 mg, two tablets as needed about twice a week at night."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -1142,7 +1014,7 @@
           "quote": "Tums are used maybe twice a week at night."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -1170,11 +1042,11 @@
         "audit_id": "F030",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "kimi-k2",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1193,8 +1065,8 @@
       }
     },
     {
-      "key": "Cetirizine",
-      "canonical_anchor": "med.medication.cetirizine.active",
+      "key": "zyrtec",
+      "canonical_anchor": "med.medication.zyrtec.active",
       "kind": "med",
       "subtype": "medication",
       "identity_fields": [
@@ -1219,7 +1091,7 @@
       "fields": {
         "subject": "patient",
         "predicate": "takes",
-        "object": "cetirizine",
+        "object": "zyrtec",
         "value": "10",
         "unit": "mg",
         "time": null,
@@ -1231,94 +1103,49 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
-          "key": "medication.cetirizine",
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.zyrtec",
           "source": [
             "generated_output"
           ],
           "quote": "Cetirizine (Zyrtec) 10 mg as needed for allergies, approximately a couple of times per month."
         },
         {
-          "model": "gemini-2.5-pro",
-          "key": "medication.cetirizine",
+          "model": "glm-5p2",
+          "key": "medication.zyrtec",
           "source": [
             "generated_output"
           ],
-          "quote": "Cetirizine 10 mg as needed for allergies (a couple of times per month)."
-        },
-        {
-          "model": "gpt-5.4",
-          "key": "medication.cetirizine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cetirizine 10 mg is taken only when allergies act up."
-        },
-        {
-          "model": "gpt-5.6-sol",
-          "key": "medication.cetirizine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cetirizine 10 mg as needed for allergies, approximately a couple of times per month."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "medication.cetirizine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cetirizine 10 mg as needed for allergies."
-        },
-        {
-          "model": "kimi-k3",
-          "key": "medication.cetirizine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cetirizine 10 mg as needed for allergies, about a couple of times per month."
+          "quote": "Zyrtec (cetirizine) 10mg as needed for allergies, a couple times a month."
         },
         {
           "model": "minimax-m3",
-          "key": "medication.cetirizine",
+          "key": "medication.zyrtec",
           "source": [
             "generated_output"
           ],
           "quote": "Cetirizine (Zyrtec) 10 mg as needed for allergies (approximately a couple of times per month)."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.cetirizine",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Cetirizine 10 mg as needed when allergies act up."
         }
       ],
       "provenance": {
         "audit_id": "F031",
-        "support": "8/8",
+        "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "kimi-k3",
-          "minimax-m3",
-          "qwen3-max"
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "minimax-m3"
         ],
         "status": "release",
         "field_stable": true,
         "strict_field_stable": true,
         "policy": "note_consensus_threshold",
         "k_support": 3,
-        "n_supporters": 8,
+        "n_supporters": 3,
         "transcript_anchored": true
       },
       "salience": {
         "must_cover": true,
-        "must_cover_source": "parser",
+        "must_cover_source": "llm",
         "must_not_err": true
       }
     },
@@ -1357,7 +1184,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1373,7 +1200,7 @@
           "quote": "Tylenol as needed for headaches (not often); avoids ibuprofen/NSAIDs due to stomach upset."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1381,7 +1208,7 @@
           "quote": "Uses Tylenol for occasional headaches."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1397,7 +1224,7 @@
           "quote": "Acetaminophen (Tylenol) as needed for occasional headaches; avoids NSAIDs due to stomach upset."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1409,12 +1236,12 @@
         "audit_id": "F032",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gemini-2.5-pro",
-          "gpt-5.4",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1471,7 +1298,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "medication.dicyclomine",
           "source": [
             "generated_output"
@@ -1487,7 +1314,7 @@
           "quote": "Dicyclomine 20mg three times daily before meals: stopped mid-May after approximately 2 weeks due to severe dry mouth, blurry vision when reading, and lack of efficacy for cramping."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.dicyclomine",
           "source": [
             "generated_output"
@@ -1495,7 +1322,7 @@
           "quote": "Dicyclomine was stopped after about 2 weeks."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.dicyclomine",
           "source": [
             "generated_output"
@@ -1503,7 +1330,7 @@
           "quote": "Dicyclomine 20 mg three times daily before meals was discontinued after approximately two weeks."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.dicyclomine",
           "source": [
             "generated_output"
@@ -1531,11 +1358,11 @@
         "audit_id": "F033",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1588,7 +1415,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "family_history.mother_had_gallbladder_removal",
           "source": [
             "generated_output"
@@ -1596,7 +1423,7 @@
           "quote": "Mother had gallbladder removal."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "family_history.mother_had_gallbladder_removal",
           "source": [
             "generated_output"
@@ -1616,8 +1443,8 @@
         "audit_id": "F034",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
-          "kimi-k2",
+          "deepseek-v4-flash-0731",
+          "kimi-k2p6",
           "minimax-m3"
         ],
         "status": "release",
@@ -1669,7 +1496,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash",
+          "model": "deepseek-v4-flash-0731",
           "key": "diagnosis.irritable_bowel_syndrome_ibs_improving_with_fiber_supplementation",
           "source": [
             "generated_output"
@@ -1697,7 +1524,7 @@
         "audit_id": "F044",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash",
+          "deepseek-v4-flash-0731",
           "glm-5p2",
           "minimax-m3"
         ],
@@ -1756,7 +1583,7 @@
           "quote": "Omeprazole was increased from 20mg to 40mg at the April visit; patient started the higher dose end of April right after the visit."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.omeprazole",
           "source": [
             "generated_output"
@@ -1764,7 +1591,7 @@
           "quote": "Omeprazole was increased from 20 mg to 40 mg at the April visit."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.omeprazole",
           "source": [
             "generated_output"
@@ -1772,7 +1599,7 @@
           "quote": "Omeprazole was increased from 20 mg daily to 40 mg daily at the end of April."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.omeprazole",
           "source": [
             "generated_output"
@@ -1785,9 +1612,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -1844,7 +1671,7 @@
           "quote": "Heartburn was daily before the dose increase; now occurs 2-3 times per week."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.heartburn",
           "source": [
             "generated_output"
@@ -1865,7 +1692,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",
@@ -1925,7 +1752,7 @@
           "quote": "Patient tried cutting out dairy for 2 weeks last month with no change in symptoms; added dairy back."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.the_patient_added_dairy_back",
           "source": [
             "generated_output"
@@ -1933,7 +1760,7 @@
           "quote": "The patient added dairy back."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.the_patient_added_dairy_back",
           "source": [
             "generated_output"
@@ -1946,8 +1773,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "qwen3-max"
+          "gpt-5_4",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2006,7 +1833,7 @@
           "quote": "Bowel movements are more regular with fiber: previously alternating constipation for 3 days or loose stools; now mostly once a day and formed."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.if_constipation_recurs_fiber_can_be_increased_to_twice_a_day",
           "source": [
             "generated_output"
@@ -2014,7 +1841,7 @@
           "quote": "If constipation recurs, fiber can be increased to twice a day."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.psyllium_may_be_increased_to_twice_daily_if_constipation_recurs",
           "source": [
             "generated_output"
@@ -2022,7 +1849,7 @@
           "quote": "Psyllium may be increased to twice daily if constipation recurs."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "treatment.metamucil_may_be_increased_to_twice_daily_if_constipation_recurs",
           "source": [
             "generated_output"
@@ -2030,7 +1857,7 @@
           "quote": "Metamucil may be increased to twice daily if constipation recurs."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.if_constipation_recurs_fiber_can_be_increased_to_twice_daily",
           "source": [
             "generated_output"
@@ -2043,10 +1870,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2105,7 +1932,7 @@
           "quote": "Morning hoarseness is better but not 100% resolved."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.morning_hoarseness_is_better",
           "source": [
             "generated_output"
@@ -2113,7 +1940,7 @@
           "quote": "Morning hoarseness is better."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.morning_hoarseness_is_better",
           "source": [
             "generated_output"
@@ -2126,8 +1953,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "qwen3-max"
+          "gpt-5_4",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2186,7 +2013,7 @@
           "quote": "No black stools or coffee-ground appearance."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.black_stools",
           "source": [
             "generated_output"
@@ -2194,7 +2021,7 @@
           "quote": "The patient denied black stools."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.black_stools",
           "source": [
             "generated_output"
@@ -2202,7 +2029,7 @@
           "quote": "She denies black stools."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.black_stools",
           "source": [
             "generated_output"
@@ -2210,7 +2037,7 @@
           "quote": "No black stools."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.coffee_ground_stools",
           "source": [
             "generated_output"
@@ -2218,7 +2045,7 @@
           "quote": "No coffee-ground stools."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.black_stools",
           "source": [
             "generated_output"
@@ -2239,10 +2066,10 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -2302,7 +2129,7 @@
           "quote": "No fevers."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.fevers",
           "source": [
             "generated_output"
@@ -2310,7 +2137,7 @@
           "quote": "The patient denied fevers."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.fever",
           "source": [
             "generated_output"
@@ -2318,7 +2145,7 @@
           "quote": "She denies fever."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.fevers",
           "source": [
             "generated_output"
@@ -2334,7 +2161,7 @@
           "quote": "Denies fevers."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.fevers",
           "source": [
             "generated_output"
@@ -2347,11 +2174,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2418,7 +2245,7 @@
           "quote": "Team dinners with wine and spicy food are the worst nights for heartburn."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.late_team_dinners_involving_wine_and_spicy_food_are_associated_with_the_worst_heartburn_nights",
           "source": [
             "generated_output"
@@ -2432,7 +2259,7 @@
         "models": [
           "glm-5p2",
           "kimi-k3",
-          "kimi-k2"
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -2491,7 +2318,7 @@
           "quote": "Hypothyroidism since approximately 2016."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.hypothyroidism_since_approximately_2016",
           "source": [
             "generated_output"
@@ -2512,7 +2339,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",
@@ -2527,6 +2354,98 @@
         "must_cover": true,
         "must_cover_source": "llm",
         "must_not_err": false
+      }
+    },
+    {
+      "key": "Metamucil",
+      "canonical_anchor": "med.medication.metamucil.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metamucil",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil (fiber) 1 tablespoon in a glass of water once daily, usually at dinner (started mid-June, approximately 6 weeks ago)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil 1 tablespoon in a big glass of water once daily."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil one tablespoon in a large glass of water once daily at dinner."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil fiber one tablespoon in a large glass of water once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F077",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
       }
     },
     {
@@ -2578,7 +2497,7 @@
           "quote": "Continue levothyroxine 75mcg first thing in the morning, separate from coffee, vitamins, and Tums."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2586,7 +2505,7 @@
           "quote": "Continue levothyroxine by itself first thing in the morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2594,7 +2513,7 @@
           "quote": "Continue taking levothyroxine by itself first thing in the morning."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2618,7 +2537,7 @@
           "quote": "Continue levothyroxine 75 mcg in the morning, taken alone and separated from coffee, vitamins, and Tums."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2631,12 +2550,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2699,7 +2618,7 @@
           "quote": "Continue levothyroxine 75mcg first thing in the morning, separate from coffee, vitamins, and Tums."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -2723,7 +2642,7 @@
           "quote": "Continue calcium carbonate (Tums) 500 mg, 2 tablets as needed."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -2736,10 +2655,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "kimi-k2",
+          "kimi-k2p6",
           "kimi-k3",
           "minimax-m3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2806,7 +2725,7 @@
           "quote": "Physical exam findings: abdomen soft, no tenderness (including lower left), normal bowel sounds, no masses or organomegaly; weight 148 lbs (2 lbs up from April); blood pressure 118/74."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2814,7 +2733,7 @@
           "quote": "Blood pressure was 118/74"
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2822,7 +2741,7 @@
           "quote": "Blood pressure is 118/74 mmHg"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2830,7 +2749,7 @@
           "quote": "Blood pressure is 118/74 mmHg"
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.blood_pressure_is_118_74_mmhg",
           "source": [
             "generated_output"
@@ -2854,7 +2773,7 @@
           "quote": "Blood pressure 118/74."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2862,7 +2781,7 @@
           "quote": "Blood pressure in the hallway was 118/74"
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.blood_pressure_in_the_hallway_was_118_74",
           "source": [
             "generated_output"
@@ -2875,11 +2794,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3",
-          "qwen3-max"
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2930,7 +2849,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.bloating_continues_to_be_an_issue_occurring_mostly_in_the_afternoons",
           "source": [
             "generated_output"
@@ -2938,7 +2857,7 @@
           "quote": "Bloating continues to be an issue, occurring mostly in the afternoons."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.bloating_is_mostly_in_the_afternoons",
           "source": [
             "generated_output"
@@ -2946,7 +2865,7 @@
           "quote": "Bloating is mostly in the afternoons."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.bloating_is_mostly_in_the_afternoons",
           "source": [
             "generated_output"
@@ -2958,9 +2877,9 @@
         "audit_id": "F103",
         "support": "3/3",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "qwen3-max"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3011,7 +2930,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.identified_food_triggers_for_bloating_include_beans_onions_and_large_salads",
           "source": [
             "generated_output"
@@ -3019,7 +2938,7 @@
           "quote": "Identified food triggers for bloating include beans, onions, and large salads."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.beans_trigger_bloating",
           "source": [
             "generated_output"
@@ -3027,7 +2946,7 @@
           "quote": "Beans trigger bloating."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.onions_trigger_bloating",
           "source": [
             "generated_output"
@@ -3035,7 +2954,7 @@
           "quote": "Onions trigger bloating."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.beans_trigger_bloating",
           "source": [
             "generated_output"
@@ -3043,7 +2962,7 @@
           "quote": "Beans trigger bloating."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.onions_trigger_bloating",
           "source": [
             "generated_output"
@@ -3051,7 +2970,7 @@
           "quote": "Onions trigger bloating."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.beans_trigger_bloating",
           "source": [
             "generated_output"
@@ -3059,7 +2978,7 @@
           "quote": "Beans trigger bloating."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.onions_trigger_bloating",
           "source": [
             "generated_output"
@@ -3071,10 +2990,10 @@
         "audit_id": "F105",
         "support": "4/4",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3125,7 +3044,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "symptom.alternating_constipation_and_loose_stools",
           "source": [
             "generated_output"
@@ -3133,7 +3052,7 @@
           "quote": "Previously, she experienced alternating constipation and loose stools."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.before_fiber_bowel_habits_alternated_between_constipation_for_3_days_and_loose_stools",
           "source": [
             "generated_output"
@@ -3141,7 +3060,7 @@
           "quote": "Before fiber, bowel habits alternated between constipation for 3 days and loose stools."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.before_fiber_supplementation_she_alternated_between_constipation_for_three_days_and_loose_stools",
           "source": [
             "generated_output"
@@ -3161,9 +3080,9 @@
         "audit_id": "F107",
         "support": "4/4",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -3215,7 +3134,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "diagnosis.surgical_history_appendectomy_and_two_c_sections",
           "source": [
             "generated_output"
@@ -3243,7 +3162,7 @@
         "audit_id": "F111",
         "support": "3/3",
         "models": [
-          "gemini-2.5-pro",
+          "google_gemini-2_5-pro",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -3259,6 +3178,118 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false
+      }
+    },
+    {
+      "key": "Cetirizine",
+      "canonical_anchor": "med.medication.cetirizine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "cetirizine",
+        "value": "10",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "google_gemini-2_5-pro",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed for allergies (a couple of times per month)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg is taken only when allergies act up."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed for allergies, approximately a couple of times per month."
+        },
+        {
+          "model": "kimi-k2p6",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed for allergies."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed for allergies, about a couple of times per month."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.cetirizine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cetirizine 10 mg as needed when allergies act up."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F112",
+        "support": "6/6",
+        "models": [
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true
       }
     },
     {
@@ -3296,7 +3327,7 @@
       },
       "evidence": [
         {
-          "model": "gemini-2.5-pro",
+          "model": "google_gemini-2_5-pro",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -3304,7 +3335,7 @@
           "quote": "Labs ordered: CBC, TSH, Vitamin B12."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -3312,7 +3343,7 @@
           "quote": "Order vitamin B12."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -3320,7 +3351,7 @@
           "quote": "Obtain a vitamin B12 level because of long-term omeprazole use."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.vitamin_b12",
           "source": [
             "generated_output"
@@ -3329,13 +3360,13 @@
         }
       ],
       "provenance": {
-        "audit_id": "F123",
+        "audit_id": "F124",
         "support": "4/4",
         "models": [
-          "gemini-2.5-pro",
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2"
+          "google_gemini-2_5-pro",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6"
         ],
         "status": "release",
         "field_stable": true,
@@ -3386,7 +3417,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.bloating_is_a_little_better_since_starting_fiber",
           "source": [
             "generated_output"
@@ -3394,7 +3425,7 @@
           "quote": "Bloating is a little better since starting fiber."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.bloating_is_a_little_better_since_starting_fiber",
           "source": [
             "generated_output"
@@ -3411,11 +3442,11 @@
         }
       ],
       "provenance": {
-        "audit_id": "F156",
+        "audit_id": "F157",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
+          "gpt-5_4",
+          "qwen3p8-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -3465,7 +3496,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -3473,7 +3504,7 @@
           "quote": "There is no blood in the stool."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -3481,7 +3512,7 @@
           "quote": "There is no family history of colon cancer."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -3490,12 +3521,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F167",
+        "audit_id": "F168",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3546,7 +3577,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.trouble_swallowing",
           "source": [
             "generated_output"
@@ -3554,7 +3585,7 @@
           "quote": "The patient denied trouble swallowing."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "symptom.trouble_swallowing",
           "source": [
             "generated_output"
@@ -3562,7 +3593,7 @@
           "quote": "No trouble swallowing."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.trouble_swallowing",
           "source": [
             "generated_output"
@@ -3579,12 +3610,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F170",
+        "audit_id": "F171",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max",
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -3636,7 +3667,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "symptom.recent_antibiotic_use",
           "source": [
             "generated_output"
@@ -3644,7 +3675,7 @@
           "quote": "The patient denied recent antibiotic use."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "symptom.recent_antibiotic_use",
           "source": [
             "generated_output"
@@ -3652,7 +3683,7 @@
           "quote": "She denies recent antibiotic use."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "symptom.been_no_recent_antibiotic_use",
           "source": [
             "generated_output"
@@ -3661,12 +3692,12 @@
         }
       ],
       "provenance": {
-        "audit_id": "F172",
+        "audit_id": "F173",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3680,89 +3711,6 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false
-      }
-    },
-    {
-      "key": "Metamucil",
-      "canonical_anchor": "med.medication.metamucil.active",
-      "kind": "med",
-      "subtype": "medication",
-      "identity_fields": [
-        "canonical_anchor"
-      ],
-      "check_fields": [
-        "object",
-        "polarity",
-        "status",
-        "subject",
-        "time"
-      ],
-      "coverage_fields": [
-        "subject",
-        "object",
-        "time",
-        "status",
-        "polarity"
-      ],
-      "fields": {
-        "subject": "patient",
-        "predicate": "takes",
-        "object": "metamucil",
-        "value": null,
-        "unit": null,
-        "time": "once daily",
-        "location": null,
-        "owner": null,
-        "status": "active",
-        "polarity": "positive",
-        "condition": null
-      },
-      "evidence": [
-        {
-          "model": "gpt-5.4",
-          "key": "medication.metamucil",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Metamucil 1 tablespoon in a big glass of water once daily."
-        },
-        {
-          "model": "kimi-k2",
-          "key": "medication.metamucil",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Metamucil one tablespoon in a large glass of water once daily at dinner."
-        },
-        {
-          "model": "qwen3-max",
-          "key": "medication.metamucil",
-          "source": [
-            "generated_output"
-          ],
-          "quote": "Metamucil fiber one tablespoon in a large glass of water once daily."
-        }
-      ],
-      "provenance": {
-        "audit_id": "F182",
-        "support": "3/3",
-        "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
-        ],
-        "status": "release",
-        "field_stable": true,
-        "strict_field_stable": true,
-        "policy": "note_consensus_threshold",
-        "k_support": 3,
-        "n_supporters": 3,
-        "transcript_anchored": true
-      },
-      "salience": {
-        "must_cover": true,
-        "must_cover_source": "text",
-        "must_not_err": true
       }
     },
     {
@@ -3798,7 +3746,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.cetirizine",
           "source": [
             "generated_output"
@@ -3806,7 +3754,7 @@
           "quote": "Cetirizine is used a couple of times a month."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.cetirizine",
           "source": [
             "generated_output"
@@ -3814,7 +3762,7 @@
           "quote": "Cetirizine is used approximately a couple of times per month."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.cetirizine",
           "source": [
             "generated_output"
@@ -3826,9 +3774,9 @@
         "audit_id": "F185",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3877,7 +3825,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "demo.dicyclomine",
           "source": [
             "generated_output"
@@ -3885,7 +3833,7 @@
           "quote": "Dicyclomine was stopped after about 2 weeks."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "demo.dicyclomine",
           "source": [
             "generated_output"
@@ -3893,7 +3841,7 @@
           "quote": "Dicyclomine was associated with mildly blurred vision while reading."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "demo.dicyclomine",
           "source": [
             "generated_output"
@@ -3901,7 +3849,7 @@
           "quote": "Dicyclomine was stopped after approximately two weeks around mid-May."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "demo.dicyclomine",
           "source": [
             "generated_output"
@@ -3913,10 +3861,10 @@
         "audit_id": "F189",
         "support": "4/4",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "kimi-k2",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3967,7 +3915,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.there_is_no_family_history_of_colon_cancer",
           "source": [
             "generated_output"
@@ -3975,7 +3923,7 @@
           "quote": "There is no family history of colon cancer."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.there_is_no_family_history_of_esophageal_cancer",
           "source": [
             "generated_output"
@@ -3983,7 +3931,7 @@
           "quote": "There is no family history of esophageal cancer."
         },
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.there_is_no_family_history_of_stomach_cancer",
           "source": [
             "generated_output"
@@ -3991,7 +3939,7 @@
           "quote": "There is no family history of stomach cancer."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.there_is_no_family_history_of_colon_cancer",
           "source": [
             "generated_output"
@@ -3999,7 +3947,7 @@
           "quote": "There is no family history of colon cancer."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.there_is_no_family_history_of_esophageal_cancer",
           "source": [
             "generated_output"
@@ -4007,7 +3955,7 @@
           "quote": "There is no family history of esophageal cancer."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.there_is_no_family_history_of_stomach_cancer",
           "source": [
             "generated_output"
@@ -4015,7 +3963,7 @@
           "quote": "There is no family history of stomach cancer."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.there_is_no_family_history_of_colon_cancer",
           "source": [
             "generated_output"
@@ -4023,7 +3971,7 @@
           "quote": "There is no family history of colon cancer."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.there_is_no_family_history_of_esophageal_cancer",
           "source": [
             "generated_output"
@@ -4031,7 +3979,7 @@
           "quote": "There is no family history of esophageal cancer."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.there_is_no_family_history_of_stomach_cancer",
           "source": [
             "generated_output"
@@ -4043,9 +3991,9 @@
         "audit_id": "F193",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "gpt-5.6-sol",
-          "qwen3-max"
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4096,7 +4044,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "family_history.there_is_no_family_history_of_colitis",
           "source": [
             "generated_output"
@@ -4104,7 +4052,7 @@
           "quote": "There is no family history of colitis."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "family_history.there_is_no_family_history_of_colitis",
           "source": [
             "generated_output"
@@ -4112,7 +4060,7 @@
           "quote": "There is no family history of colitis."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "family_history.there_is_no_family_history_of_ulcerative_colitis",
           "source": [
             "generated_output"
@@ -4124,9 +4072,9 @@
         "audit_id": "F194",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -4177,7 +4125,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_levothyroxine_by_itself_first_thing",
           "source": [
             "generated_output"
@@ -4185,7 +4133,7 @@
           "quote": "Continue levothyroxine by itself first thing in the morning."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.continue_levothyroxine_by_itself_first_thing",
           "source": [
             "generated_output"
@@ -4193,7 +4141,7 @@
           "quote": "Continue levothyroxine by itself first thing in the morning."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_taking_levothyroxine_by_itself_first_thing",
           "source": [
             "generated_output"
@@ -4205,9 +4153,9 @@
         "audit_id": "F220",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -4258,7 +4206,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.4",
+          "model": "gpt-5_4",
           "key": "treatment.continue_fiber",
           "source": [
             "generated_output"
@@ -4266,7 +4214,7 @@
           "quote": "Continue fiber."
         },
         {
-          "model": "qwen3-max",
+          "model": "qwen3p8-max",
           "key": "treatment.continue_fiber",
           "source": [
             "generated_output"
@@ -4274,7 +4222,7 @@
           "quote": "Continue fiber."
         },
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "treatment.continue_psyllium_fiber_once_daily_with_adequate_water",
           "source": [
             "generated_output"
@@ -4286,9 +4234,9 @@
         "audit_id": "F231",
         "support": "3/3",
         "models": [
-          "gpt-5.4",
-          "qwen3-max",
-          "gpt-5.6-sol"
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -4339,7 +4287,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5.6-sol",
+          "model": "gpt-5_6-sol",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -4347,7 +4295,7 @@
           "quote": "Acetaminophen is used infrequently for headaches."
         },
         {
-          "model": "kimi-k2",
+          "model": "kimi-k2p6",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -4367,8 +4315,8 @@
         "audit_id": "F294",
         "support": "3/3",
         "models": [
-          "gpt-5.6-sol",
-          "kimi-k2",
+          "gpt-5_6-sol",
+          "kimi-k2p6",
           "kimi-k3"
         ],
         "status": "release",

@@ -14,6 +14,10 @@ sys.path.insert(0, os.path.join(ROOT, "scorer"))
 from detfact.template_parser import parse_template_claims  # noqa: E402
 from detfact_scorer import evaluate  # noqa: E402
 
+LEAK_RE = re.compile(
+    r"\bscenario:|\binclude 3-5\b|\bneed (?:produce|craft|include|ensure|final|doses|3-5)"
+    r"|hard requirements|speaker labels|\btranscript should\b|\brun-on dialogue\b", re.I)
+
 REQUIRED = ["task.toml", "instruction.md", "environment/transcript.txt",
             "environment/Dockerfile", "solution/note.md", "solution/solve.sh",
             "tests/factset.json", "tests/verify.py", "tests/test.sh"]
@@ -38,6 +42,10 @@ def main():
         missing = [r for r in REQUIRED if not os.path.isfile(os.path.join(td, r))]
         if missing:
             failures.append(name + ": missing " + ",".join(missing))
+            continue
+        tr = open(os.path.join(td, "environment", "transcript.txt"), encoding="utf-8").read()
+        if LEAK_RE.search(tr):
+            failures.append(name + ": transcript contains author meta-instructions (prompt leakage)")
             continue
         fs = json.load(open(os.path.join(td, "tests", "factset.json")))
         m = re.search(r"MIN_COVERAGE = ([0-9.]+)",

@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
-"""detfact consensus aligner (deterministic, no LLM): merges multi-model claims into gold candidates plus an adjudication worklist.
+"""detfact consensus aligner (deterministic, no LLM): merges multi-model claims into gold candidates + an arbitration list.
 Usage: python3 detfact_consensus.py --gen gold_candidates/<case> --case-meta <cases dir>/<case>/meta.json --out audit_site/data/<case>.json
 """
 import argparse, collections, json, os, re, unicodedata
 
 MODEL_ORDER = [
-    "kimi-k3",
-    "deepseek-v4-flash",
-    "glm-5p2",
-    "qwen3-max",
-    "minimax-m3",
+    "accounts/fireworks/models/kimi-k3",
+    "accounts/fireworks/models/glm-5p2",
+    "accounts/fireworks/models/deepseek-v4-pro-0813",
     "gpt-5.6-sol",
     "gpt-5.4",
+    "google/gemini-2.5-pro",
+    "google/gemini-2.5-flash",
 ]
 FIELDS = ["subject", "predicate", "object", "value", "unit", "time",
           "location", "owner", "status", "polarity", "condition"]
 STABLE_FIELDS = {"subject", "object", "polarity"}
 # Generic subject aliases only. Case-specific aliases (e.g. patient names) are
-# PHI and must be supplied via a local file (override path with
-# DETFACT_SUBJECT_ALIASES_FILE); no such file ships with this repo.
+# PHI and must live in a local, non-distributed file: detfact_local/patient_aliases.json
+# (override path with DETFACT_SUBJECT_ALIASES_FILE).
 GENERIC_SUBJECT_ALIASES = {"patient", "member", "client", "self", "paciente",
-                           # patient role words in pediatric scenarios
+                           # Patient role words for pediatric scenarios
                            "infant", "baby", "newborn", "toddler", "child",
                            "adolescent", "teen", "bebe", "nino", "nina"}
 
@@ -28,7 +28,7 @@ def _load_local_subject_aliases():
     path = os.environ.get(
         "DETFACT_SUBJECT_ALIASES_FILE",
         os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                     "subject_aliases.json"))
+                     "detfact_local", "patient_aliases.json"))
     try:
         with open(path) as fh:
             return {re.sub(r"\s+", " ", re.sub(r"[^0-9a-z]+", " ", str(x).lower())).strip()
@@ -38,9 +38,9 @@ def _load_local_subject_aliases():
 
 PATIENT_SUBJECT_ALIASES = GENERIC_SUBJECT_ALIASES | _load_local_subject_aliases()
 
-# Per-case dynamic patient aliases: derived from the case's own demographic/name
-# facts, so that when an extraction model uses the patient's name as the subject it
-# still normalizes to "patient".
+# Dynamic per-case patient aliases: derived from the case's own demographic/name
+# facts, so that when an extraction model uses the patient's name as the subject
+# it still normalizes to "patient".
 CASE_SUBJECT_ALIASES = set()
 
 
@@ -59,7 +59,7 @@ def set_case_subject_aliases(names):
 
 
 def derive_patient_names(rows):
-    """rows: a list of claims or facts; takes the object value of demographic name entries."""
+    """rows: a list of claims or facts; take the object value of demographic name entries."""
     names = []
     for r in rows or []:
         kind = norm_tok(r.get("kind") or r.get("canonical_kind") or "")
@@ -72,7 +72,7 @@ def derive_patient_names(rows):
             v = fields_.get("object") or fields_.get("value")
             if v:
                 names.append(str(v))
-        # the subject of a demo fact is usually the patient themselves ("kelsey has age 34")
+        # The subject of demo facts is usually the patient themselves ("kelsey has age 34")
         subj = fields_.get("subject")
         if subj and word_key(subj) not in GENERIC_SUBJECT_ALIASES:
             names.append(str(subj))
@@ -194,7 +194,7 @@ SPELLED_NUM = {
 }
 
 def spelled_to_number(t):
-    """'three hundred'→300, 'twenty five'→25; returns None when unparseable."""
+    """'three hundred'→300, 'twenty five'→25; returns None if unparseable."""
     toks = [w for w in t.replace("-", " ").split() if w]
     if not toks or any(w not in SPELLED_NUM for w in toks):
         return None
@@ -223,7 +223,7 @@ def norm_val(s):
     if m:
         t = m.group(1)
     else:
-        # "two caps": spelled-out number + container word → bare number
+        # "two caps": spelled-out number + container word -> bare number
         m2 = re.match(r"^([a-z][a-z ]*?)\s+(caps?|capsules?|tabs?|tablets?|pills?)$", t)
         if m2:
             n2 = spelled_to_number(m2.group(1))
@@ -250,14 +250,13 @@ def norm_field(name, v):
         return norm_tok(v)
     if name == "unit":
         t = norm_tok(v)
-        # "mg/0.1ml" concentration units: keep the mass unit (the number is compared in the value field)
+        # "mg/0.1ml" concentration units: use the mass unit (numbers are compared in the value field)
         m = re.match(r"^(mg|mcg|g)\s*/\s*[\d.]*\s*m?l$", t)
         if m:
             t = m.group(1)
         if t not in UNITS and " " in t:
-            # "twenty five milligrams": strip number words that leaked into the unit
-            # field, then normalize; "po daily": route/frequency are not units — if
-            # nothing remains after stripping, treat as having no unit
+            # "twenty five milligrams": strip number words that leaked into the unit field, then normalize;
+            # "po daily": route/frequency is not a unit; if nothing remains after stripping, treat as unitless
             toks = [w for w in t.split() if w not in SPELLED_NUM
                     and not re.match(r"^\d+(?:\.\d+)?$", w)]
             if toks and " ".join(toks) in UNITS:
@@ -330,9 +329,8 @@ DRUG_NAMES = {"vyvanse", "effexor", "venlafaxine", "adderall", "ritalin", "lexap
               "abilify", "aripiprazole", "strattera", "atomoxetine", "wegovy",
               "semaglutide", "warfarin", "artificial tears", "artificial tear",
               "aspirin", "cyanocobalamin", "glucotrol xl", "icee hot", "invokana",
-              # Dictionary extension 2026-08-27: real drugs/supplements missing from
-              # gold med entities (manually screened, dirty gold terms removed;
-              # explicitly frozen, auditable, applied uniformly to all models)
+              # Dictionary extension 2026-08-27: real drugs/supplements missing from gold med entities
+              # (manually screened, dirty gold terms removed; explicitly frozen, auditable, applied uniformly to all models)
               "buprenorphine", "buspar", "clonidine", "concerta", "coq10", "pqq",
               "curcuplex 95", "dhea", "diphenhydramine", "duloxetine", "ertapenem",
               "fluoxetine", "hydrocodone", "ibuprofen", "keppra", "lamictal",
@@ -690,12 +688,10 @@ def identity(kind, f):
         base = subj + "/" + PRED_MAP.get(pred, pred)
     return norm_field("kind", kind) + "||" + base
 
-# unit is only semantically valid for dosing/measurement kinds; a unit carried by a
-# diagnosis/symptom is noise mixed in by consensus voting
+# unit is only semantically meaningful for dosing/measurement kinds; a unit on a diagnosis/symptom is noise leaked in by consensus voting
 UNIT_KINDS = {"med", "lab", "vital", "test"}
 
-# Relationship words that clearly belong to another person: under patient kinds these
-# subjects are kept as-is (e.g. the mother's reporter role in pediatrics)
+# Relationship words that clearly denote someone else: under patient kinds these subjects are kept as-is (e.g. the mother's reporting role in pediatrics)
 OTHER_PERSON_SUBJECTS = {
     "mother", "father", "mom", "dad", "sister", "brother", "son", "daughter",
     "aunt", "uncle", "grandmother", "grandfather", "wife", "husband", "partner",
@@ -710,12 +706,13 @@ _VAL_UNIT_RE = None
 def prune_gold_fields(kind_group, fields):
     """Gold field cleanup (three artifact classes located by red-teaming 2026-08-26):
     1. Non-dosing/measurement kinds carry no unit;
-    2. A value that is a full-sentence quote fragment of >=4 words → cleared
-       (cannot be normalized, only manufactures false contradictions);
-       a value with an embedded unit ("1200 mg") → split into value+unit;
-    3. Under patient kinds, a subject that is not a clear other-person relationship
-       word → normalized to patient (adjudication semantics: such facts were
-       confirmed by arbitration as 'patient facts with a mislabeled subject')."""
+    2. A value that is a >=4-word full-sentence quote fragment -> cleared
+       (not normalizable, only manufactures false contradictions);
+       a unit embedded in the value ("1200 mg") -> split into value+unit;
+    3. Under patient kinds, a subject that is not a clear other-person
+       relationship word -> normalized to patient (adjudicated semantics: such
+       facts were confirmed by arbitration as 'patient facts with a mislabeled
+       subject')."""
     fields = dict(fields)
     if kind_group not in UNIT_KINDS and fields.get("unit"):
         fields["unit"] = None
@@ -730,9 +727,8 @@ def prune_gold_fields(kind_group, fields):
         elif len(vs.split()) >= 4 or (len(vs.split()) >= 3
                 and not re.search(r"\d", vs)
                 and spelled_to_number(norm_tok(vs)) is None):
-            # Do not clear the whole value: extract the number inside to preserve
-            # comparability (positive controls showed clearing blinds the scorer);
-            # only pure prose with no number is set to empty
+            # Do not clear the whole thing: extract the embedded number to preserve comparability
+            # (positive controls proved that clearing causes blindness); only pure prose with no number is nulled
             m2 = re.search(r"\d+(?:\.\d+)?", vs)
             if m2 is None:
                 n2 = spelled_to_number(norm_tok(vs))
@@ -793,9 +789,9 @@ def main():
                 break
     all_claims = [c for cl in per_model.values() for c in cl]
     alias_names = derive_patient_names(all_claims)
-    # Fallback: the top-1 high-frequency non-generic subject whose name appears
-    # verbatim in the transcript → the patient (single-patient session assumption;
-    # take only the top one to avoid pulling in the therapist/family)
+    # Fallback: the top-1 most frequent non-generic subject whose name appears
+    # verbatim in the transcript -> the patient (single-patient session
+    # assumption; only take the top one, to avoid pulling in the therapist/family)
     case_dir = os.path.dirname(os.path.abspath(args.case_meta))
     ts_key = ""
     for src_name in ("transcript.txt", "additions.txt", "template.txt"):
@@ -841,8 +837,7 @@ def main():
             buckets[key].append(item)
             claim_map[m + "|" + str(idx)] = item
 
-    # Second-pass merge: under the same subtype / compatible coarse class, anchor
-    # token subset or high overlap → merge
+    # Second-pass merge: under the same subtype / compatible coarse class, anchor token subset or high overlap -> merge
     merged = True
     while merged:
         merged = False
