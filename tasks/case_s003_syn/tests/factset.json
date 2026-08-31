@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s003_syn",
     "version": "1",
-    "sha256": "f71230c353fc145a77c5f4bf1a2a664fd1142584cb2871d81ed40a416f284e54",
+    "sha256": "fc3b19c56a24e32957e702455bac694a0f40da0114094b304deb6dd7a16eaad3",
     "reviewed": false
   },
   "source": {
@@ -379,7 +379,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -511,7 +513,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "7/8"
+        }
       }
     },
     {
@@ -637,7 +649,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -895,7 +909,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "llm",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1027,7 +1043,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "8/8"
+        }
       }
     },
     {
@@ -1159,7 +1185,16 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit"
+        ],
+        "cover_fields_votes": {
+          "value": "7/8",
+          "unit": "7/8",
+          "time": "1/8"
+        }
       }
     },
     {
@@ -1287,7 +1322,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "time"
+        ],
+        "cover_fields_votes": {
+          "time": "8/8"
+        }
       }
     },
     {
@@ -1415,7 +1456,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "time"
+        ],
+        "cover_fields_votes": {
+          "time": "7/8"
+        }
       }
     },
     {
@@ -1569,7 +1616,18 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "status"
+        ],
+        "cover_fields_votes": {
+          "value": "9/11",
+          "unit": "9/11",
+          "status": "11/11",
+          "polarity": "0/11"
+        }
       }
     },
     {
@@ -1650,7 +1708,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1731,7 +1791,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1863,7 +1925,19 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time",
+          "status"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "8/8",
+          "status": "8/8"
+        }
       }
     },
     {
@@ -1971,7 +2045,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -2103,7 +2179,19 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time",
+          "status"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "8/8",
+          "status": "8/8"
+        }
       }
     },
     {
@@ -2211,7 +2299,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -2343,7 +2433,19 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time",
+          "status"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "7/8",
+          "status": "7/8"
+        }
       }
     },
     {
@@ -2442,7 +2544,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -2568,7 +2672,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -2649,7 +2755,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -2741,7 +2849,11 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [],
+        "cover_fields_votes": {
+          "value": "2/4"
+        }
       }
     },
     {
@@ -2820,7 +2932,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -2907,7 +3021,18 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "2/3",
+          "unit": "2/3",
+          "time": "2/3",
+          "status": "1/3"
+        }
       }
     },
     {
@@ -3040,7 +3165,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -3145,7 +3272,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -3233,7 +3362,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -3314,7 +3445,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -3395,7 +3528,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -3557,7 +3692,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "llm",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     }
   ]

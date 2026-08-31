@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s018_syn",
     "version": "1",
-    "sha256": "7c9e42d4d69d934569a060ad9f3a2bdae07a087d500fe0c877be5abe6dd25e16",
+    "sha256": "335bb0ecf3598156cf71ac069eb5a775294c513d025b60eac8249d6c4f3a93ee",
     "reviewed": false
   },
   "source": {
@@ -172,7 +172,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value"
+        ],
+        "cover_fields_votes": {
+          "value": "7/9"
+        }
       }
     },
     {
@@ -260,7 +266,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -341,7 +349,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "llm",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -500,7 +510,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -755,7 +767,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "llm",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "7/8",
+          "unit": "7/8",
+          "time": "7/8"
+        }
       }
     },
     {
@@ -883,7 +905,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "time"
+        ],
+        "cover_fields_votes": {
+          "time": "8/8"
+        }
       }
     },
     {
@@ -988,7 +1016,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "llm",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "4/5",
+          "unit": "4/5",
+          "time": "4/5"
+        }
       }
     },
     {
@@ -1126,7 +1164,18 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "status"
+        ],
+        "cover_fields_votes": {
+          "value": "7/9",
+          "unit": "7/9",
+          "status": "9/9",
+          "polarity": "0/9"
+        }
       }
     },
     {
@@ -1207,7 +1256,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1290,7 +1341,15 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "time",
+          "status"
+        ],
+        "cover_fields_votes": {
+          "time": "2/3",
+          "status": "2/3"
+        }
       }
     },
     {
@@ -1470,7 +1529,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "llm",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1562,7 +1623,11 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [],
+        "cover_fields_votes": {
+          "value": "1/4"
+        }
       }
     },
     {
@@ -1643,7 +1708,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "cover_fields_votes": {
+          "polarity": "2/3"
+        }
       }
     },
     {
@@ -1733,7 +1804,15 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [
+          "status",
+          "polarity"
+        ],
+        "cover_fields_votes": {
+          "status": "4/4",
+          "polarity": "4/4"
+        }
       }
     },
     {
@@ -1845,7 +1924,15 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "llm",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit"
+        ],
+        "cover_fields_votes": {
+          "value": "4/6",
+          "unit": "4/6"
+        }
       }
     },
     {
@@ -1926,7 +2013,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "cover_fields_votes": {
+          "polarity": "3/3"
+        }
       }
     },
     {
@@ -2086,7 +2179,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "cover_fields_votes": {
+          "polarity": "3/3"
+        }
       }
     },
     {
@@ -2167,7 +2266,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "cover_fields_votes": {
+          "polarity": "3/3"
+        }
       }
     },
     {
@@ -2252,7 +2357,12 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [],
+        "cover_fields_votes": {
+          "value": "1/3",
+          "unit": "1/3"
+        }
       }
     },
     {
@@ -2418,7 +2528,16 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit"
+        ],
+        "cover_fields_votes": {
+          "value": "3/3",
+          "unit": "3/3",
+          "time": "1/3"
+        }
       }
     }
   ]

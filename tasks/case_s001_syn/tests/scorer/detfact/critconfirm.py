@@ -323,7 +323,53 @@ def confirm(claim, fact, mismatch_fields, transcript):
         field = mm.get("field")
         demote = None
         if field in ("value",):
-            if _value_anchored(cf.get("value"), windows):
+            val = cf.get("value")
+            fval = str(mm.get("fact") if mm.get("fact") is not None
+                       else (fact.get("fields") or {}).get("value") or "")
+            cnum = None
+            try:
+                cnum = float(str(val))
+            except (TypeError, ValueError):
+                pass
+            rng = re.match(r"^\s*(\d+(?:\.\d+)?)\s*[-–]\s*(\d+(?:\.\d+)?)\s*$",
+                           fval)
+            if rng and cnum is not None and \
+                    float(rng.group(1)) <= cnum <= float(rng.group(2)):
+                # Gold value is a range that contains the claimed value:
+                # under-specific, not a contradiction.
+                demote = "value_within_gold_range"
+                demoted.append({"field": field, "reason": demote})
+                continue
+            fnum = None
+            try:
+                fnum = float(fval)
+            except ValueError:
+                pass
+            if not rng and (cnum is None) != (fnum is None):
+                # Numeric vs non-numeric gold value ("always"): the two are
+                # not comparable; conviction impossible.
+                demoted.append({"field": field,
+                                "reason": "value_type_incomparable"})
+                continue
+            unit = cf.get("unit") or (fact.get("fields") or {}).get("unit")
+            unitless = False
+            if not unit:
+                try:
+                    float(str(val))
+                    unitless = True
+                except (TypeError, ValueError):
+                    pass
+            if unitless:
+                # Unitless values (pain scales, ratings, counts) collide with
+                # durations ("six weeks", "twelve months") in wide windows.
+                # Exonerate only on a tight adjacency anchor next to the
+                # entity itself.
+                tnorm2 = _norm(transcript)
+                tight = fuzzy_windows(tnorm2, _entity_tokens(claim, fact),
+                                      radius=60, topic_extend=False)
+                if tight and _value_anchored(val, tight):
+                    demote = "value_anchored_in_source"
+            elif _value_anchored(val, windows):
                 demote = "value_anchored_in_source"
         elif field == "unit":
             if _value_anchored(cf.get("value"), windows, unit=cf.get("unit")):

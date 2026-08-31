@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s011_syn",
     "version": "1",
-    "sha256": "7e78d95e0176b993e01bd458d87f9ae39dafd7f702b0bc706689a489cd51d42b",
+    "sha256": "8059bc09ec629e845e84a4e2538cbb1d0afc61c8830865f542e44c9927413415",
     "reviewed": false
   },
   "source": {
@@ -275,7 +275,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -530,7 +532,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "8/8"
+        }
       }
     },
     {
@@ -662,7 +674,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "5/8"
+        }
       }
     },
     {
@@ -794,7 +816,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "7/8"
+        }
       }
     },
     {
@@ -926,7 +958,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time"
+        ],
+        "cover_fields_votes": {
+          "value": "8/8",
+          "unit": "8/8",
+          "time": "8/8"
+        }
       }
     },
     {
@@ -1025,7 +1067,14 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "status"
+        ],
+        "cover_fields_votes": {
+          "status": "5/5",
+          "polarity": "0/5"
+        }
       }
     },
     {
@@ -1221,7 +1270,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1344,7 +1395,19 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "value",
+          "unit",
+          "time",
+          "status"
+        ],
+        "cover_fields_votes": {
+          "value": "7/7",
+          "unit": "7/7",
+          "time": "4/7",
+          "status": "5/7"
+        }
       }
     },
     {
@@ -1449,7 +1512,17 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "text",
-        "must_not_err": true
+        "must_not_err": true,
+        "cover_fields": [
+          "time",
+          "status"
+        ],
+        "cover_fields_votes": {
+          "value": "1/5",
+          "unit": "1/5",
+          "time": "3/5",
+          "status": "4/5"
+        }
       }
     },
     {
@@ -1530,7 +1603,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "llm",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1635,7 +1710,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1716,7 +1793,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "cover_fields_votes": {
+          "polarity": "3/3"
+        }
       }
     },
     {
@@ -1797,7 +1880,13 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "cover_fields_votes": {
+          "polarity": "3/3"
+        }
       }
     },
     {
@@ -1876,7 +1965,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -1957,7 +2048,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     },
     {
@@ -2036,7 +2129,9 @@
       "salience": {
         "must_cover": true,
         "must_cover_source": "parser",
-        "must_not_err": false
+        "must_not_err": false,
+        "cover_fields": [],
+        "cover_fields_votes": {}
       }
     }
   ]

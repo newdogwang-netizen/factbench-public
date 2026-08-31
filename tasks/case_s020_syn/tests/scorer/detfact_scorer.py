@@ -975,12 +975,29 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
     if labeled:
         mc_total = mc_hit = 0
         err_fact_keys = set()
+        mc_hit_any = 0
         for pos, fact in enumerate(factset.get("facts", [])):
             sal = fact.get("salience") or {}
             if sal.get("must_cover"):
                 mc_total += 1
-                if supported_by_fact.get(pos):
-                    mc_hit += 1
+                sup = supported_by_fact.get(pos)
+                if sup:
+                    mc_hit_any += 1
+                    demanded = sal.get("cover_fields")
+                    if demanded is None:
+                        # legacy factset without derived cover fields: lenient
+                        mc_hit += 1
+                    else:
+                        # Quorum-demanded coverage: the union of supporting
+                        # claims' fields must include every field that a
+                        # strict majority of the consensus-pool authors
+                        # actually wrote (sealed per fact as
+                        # salience.cover_fields). Bare mentions cannot farm
+                        # credit for dosed facts; fields no competent author
+                        # writes cannot cost anyone credit.
+                        missing = covered_fact_fields(fact, sup)
+                        if not (set(missing) & set(demanded)):
+                            mc_hit += 1
             if sal.get("must_not_err"):
                 err_fact_keys.add(fact.get("key"))
         # Two-vote rule: wrong_fact x must_not_err is only the first vote.
@@ -1021,6 +1038,7 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
                 and row.get("matched_fact_key") in err_fact_keys)
         counts["must_cover_total"] = mc_total
         counts["must_cover_hit"] = mc_hit
+        counts["must_cover_hit_any"] = mc_hit_any  # lenient, for display only
         counts["critical_wrong"] = critical_wrong
         counts["frame_disputes"] = frame_disputes
 

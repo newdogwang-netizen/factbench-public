@@ -3,7 +3,7 @@ import os
 import re
 
 from detfact.schema import FIELD_NAMES, validate_claims_doc
-from detfact_consensus import DRUG_NAMES, canonicalize_claim, slug
+from detfact_consensus import DRUG_NAMES, canonicalize_claim, norm_field, slug
 
 SECTION_KIND = [
     (("medication", "medications", "current medications", "meds"), "medication"),
@@ -38,6 +38,19 @@ FREQ_RE = re.compile(
     r"daily|weekly|monthly|nightly|morning|evening|at night|qhs|bid|tid|prn)\b",
     re.I,
 )
+# Ceiling phrases are not frequency assertions: "never/no more than once
+# daily", "max twice a day", "up to twice a day" state an allowance boundary
+# or usage cap; strip them before extracting frequency.
+CEILING_FREQ_RE = re.compile(
+    r"\b(?:never|no|not)\s+more\s+than\b[^,;.]*"
+    r"|\b(?:max(?:imum)?(?:\s+of)?|up\s+to)\s+"
+    r"(?:once|twice|three\s+times|\d+\s*(?:times)?)\b[^,;.]*", re.I)
+
+
+def strip_freq_ceilings(text):
+    return CEILING_FREQ_RE.sub(" ", text)
+
+
 ABSENT_PLACEHOLDER_RE = re.compile(
     r"\b(no|not|none)\b.{0,80}\b(explicitly mentioned|explicitly stated|stated|mentioned|provided|available)\b",
     re.I,
@@ -426,6 +439,7 @@ def first_frequency(text):
     m = SINGLE_DOSE_TIME_RE.search(text)
     if m:
         return m.group(1).lower()
+    text = strip_freq_ceilings(text)
     m = FREQ_RE.search(text)
     if m:
         return m.group(1)
@@ -799,8 +813,13 @@ def symptom_claims(item):
                               status="active", polarity="positive",
                               condition="si lo anoto" if "anoto" in folded else None))
     if has_any(item, ("pain", "dolor")):
+        # Pain score: extract the first N/10 (or "N out of 10") as the value —
+        # a wrong pain score is the same error class as a wrong dose and must
+        # be visible against gold.
+        _scale = re.search(r"\b(\d{1,2}(?:\.\d)?)\s*(?:/|out of\s+)10\b", item)
         out.append(make_claim("symptom", "pain", item, subject="patient",
                               predicate="reports", object="pain",
+                              value=_scale.group(1) if _scale else None,
                               time="después de la caída en shopping" if has_any(item, ("caida", "caída")) else None,
                               location="espalda" if has_any(item, ("espalda", "back")) else None,
                               status="active", polarity="positive",
@@ -851,7 +870,7 @@ def parse_medication(item, kind="medication"):
                                "medication", "medications", "meds"}:
         return None
     dose = DOSE_RE.search(item)
-    freq = FREQ_RE.search(item)
+    freq = FREQ_RE.search(strip_freq_ceilings(item))
     if med and med.lower() in {d.lower() for d in DRUG_NAMES}:
         value, unit = _v, _u
     else:
@@ -1121,7 +1140,29 @@ def dedupe_claims(claims):
         if anchor in seen:
             idx = seen[anchor]
             old = out[idx]
-            if (claim.get("fields") or {}).get("value") and not (old.get("fields") or {}).get("value"):
+            # Strict-upgrade replacement: the new claim may replace the old
+            # one only when it conflicts on no filled field and fills more
+            # fields. (Observed: an early narrative "sertraline 100" shadowed
+            # the med-list "sertraline 100 mg once daily", losing the
+            # quorum-demanded time field.) On any field conflict the first
+            # occurrence is kept — replacement would hide one side of a
+            # contradiction.
+            of = old.get("fields") or {}
+            nf = claim.get("fields") or {}
+            _CMP = ("value", "unit", "time", "status", "condition", "location")
+            upgrade = True
+            gain = 0
+            for k in _CMP:
+                ov, nv = of.get(k), nf.get(k)
+                if ov and nv and norm_field(k, ov) != norm_field(k, nv):
+                    upgrade = False
+                    break
+                if nv and not ov:
+                    gain += 1
+                if ov and not nv:
+                    gain -= 1
+            if upgrade and ((nf.get("value") and not of.get("value"))
+                            or gain > 0):
                 out[idx] = claim
             continue
         seen[anchor] = len(out)
