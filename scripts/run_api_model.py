@@ -116,29 +116,48 @@ def score(task_dir, note):
                   open(os.path.join(task_dir, "tests", "verify.py")).read())
     min_cov = float(m.group(1)) if m else 0.5
     claims = parse_template_claims(note)["claims"] if note.strip() else []
-    rep = evaluate(fs, claims)
-    mne = {f["key"] for f in fs["facts"] if (f.get("salience") or {}).get("must_not_err")}
-    crit = sum(1 for r in rep["per_claim"]
-               if r.get("verdict") == "wrong_fact" and r.get("matched_fact_key") in mne)
+    _src_p = os.path.join(task_dir, "environment", "transcript.txt")
+    _src = open(_src_p, encoding="utf-8").read() if os.path.isfile(_src_p) else ""
+    # Two-vote critical channel: contradiction with a must_not_err gold fact
+    # must be confirmed against the source transcript (scorer/detfact/
+    # critconfirm.py); unconfirmed candidates surface as frame_disputes.
+    rep = evaluate(fs, claims, transcript=_src or None)
+    crit = rep["counts"].get("critical_wrong", 0)
+    disputes = rep["counts"].get("frame_disputes", 0)
     mct = sum(1 for f in fs["facts"] if (f.get("salience") or {}).get("must_cover"))
     hit = rep["counts"].get("must_cover_hit", 0)
+    # Optional LLM regression pass over disputes (environment-gated; without
+    # a gateway the disputes are simply retained as data).
+    adjudicated = None
+    try:
+        from detfact.dispute_adjudicator import adjudicate_report, enabled
+        if enabled() and disputes:
+            adjudicate_report(rep, claims, fs, _src)
+            adjudicated = {
+                "error": rep["counts"].get("adjudicated_crit", 0),
+                "faithful": rep["counts"].get("adjudicated_faithful", 0),
+                "unclear": rep["counts"].get("adjudicated_unclear", 0)}
+    except Exception:
+        adjudicated = None
     try:
         from detfact.safety import safety_signals
         from detfact_consensus import DRUG_NAMES
-        _src_p = os.path.join(task_dir, "environment", "transcript.txt")
-        _src = open(_src_p, encoding="utf-8").read() if os.path.isfile(_src_p) else ""
         _sf = safety_signals(claims, _src, DRUG_NAMES) if _src else []
     except Exception:
         _sf = []
     _sc = {}
     for _f in _sf:
         _sc[_f["type"]] = _sc.get(_f["type"], 0) + 1
-    return {"coverage": round(hit / max(1, mct), 4), "must_cover_hit": hit,
-            "safety_flags": _sc,
-            "must_cover_total": mct, "critical_wrong": crit,
-            "potential_fabrication": rep["counts"].get("potential_fabrication", 0),
-            "min_coverage": min_cov,
-            "pass": crit == 0 and hit / max(1, mct) >= min_cov}
+    row = {"coverage": round(hit / max(1, mct), 4), "must_cover_hit": hit,
+           "safety_flags": _sc,
+           "must_cover_total": mct, "critical_wrong": crit,
+           "frame_disputes": disputes,
+           "potential_fabrication": rep["counts"].get("potential_fabrication", 0),
+           "min_coverage": min_cov,
+           "pass": crit == 0 and hit / max(1, mct) >= min_cov}
+    if adjudicated is not None:
+        row["dispute_adjudication"] = adjudicated
+    return row
 
 
 def main():
@@ -231,6 +250,10 @@ def main():
                "mean_coverage": round(sum(cov) / max(1, len(cov)), 4),
                "coverage_ci95": _bootstrap_ci(cov),
                "total_critical_wrong": sum(r.get("critical_wrong", 0) for r in rows),
+               "total_frame_disputes": sum(r.get("frame_disputes", 0) for r in rows),
+               "adjudicated_crit": (
+                   sum((r.get("dispute_adjudication") or {}).get("error", 0) for r in rows)
+                   if any(r.get("dispute_adjudication") for r in rows) else None),
                "safety_flags": {k: sum((r.get("safety_flags") or {}).get(k, 0) for r in rows)
                                  for k in {"medication_near_miss", "unsupported_date",
                                            "unsupported_date_admin", "unsupported_laterality"}},

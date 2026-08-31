@@ -32,9 +32,12 @@ def main():
     ap.add_argument("summary")
     ap.add_argument("--label", default=None)
     ap.add_argument("--note", default="")
-    ap.add_argument("--crit-kind", choices=["raw", "calibrated"], default=None,
-                    help="calibrated = human-verified against source; default raw "
-                         "(reference-notes defaults to calibrated)")
+    ap.add_argument("--crit-kind",
+                    choices=["raw", "calibrated", "confirmed", "confirmed+llm"],
+                    default=None,
+                    help="default derives from the summary: two-vote summaries "
+                         "are 'confirmed' ('confirmed+llm' when the dispute "
+                         "adjudication pass ran); legacy summaries are 'raw'")
     args = ap.parse_args()
     raw = open(args.summary, encoding="utf-8").read()
     if SENSITIVE.search(raw):
@@ -61,7 +64,12 @@ def main():
         "mean_coverage": doc["mean_coverage"],
         "coverage_ci95": doc.get("coverage_ci95"),
         "critical_wrong": doc.get("total_critical_wrong", 0),
-        "crit_kind": args.crit_kind or ("calibrated" if label == "reference-notes" else "raw"),
+        "frame_disputes": doc.get("total_frame_disputes"),
+        "adjudicated_crit": doc.get("adjudicated_crit"),
+        "crit_kind": args.crit_kind or (
+            ("confirmed+llm" if doc.get("adjudicated_crit") is not None
+             else "confirmed")
+            if "total_frame_disputes" in doc else "raw"),
         "safety_flags": sum((doc.get("safety_flags") or {}).values()),
         "benchmark_version": manifest["version"],
         "protocol": manifest["protocol"],

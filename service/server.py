@@ -43,10 +43,10 @@ def score(task_id, note):
     t = TASKS[task_id]
     fs = t["factset"]
     claims = parse_template_claims(note)["claims"] if note.strip() else []
-    rep = evaluate(fs, claims)
-    mne = {f["key"] for f in fs["facts"] if (f.get("salience") or {}).get("must_not_err")}
-    crit = sum(1 for r in rep["per_claim"]
-               if r.get("verdict") == "wrong_fact" and r.get("matched_fact_key") in mne)
+    # Two-vote critical channel: crits must be confirmed against the source
+    # transcript; unconfirmed candidates are reported as frame_disputes.
+    rep = evaluate(fs, claims, transcript=t["transcript"] or None)
+    crit = rep["counts"].get("critical_wrong", 0)
     mct = sum(1 for f in fs["facts"] if (f.get("salience") or {}).get("must_cover"))
     hit = rep["counts"].get("must_cover_hit", 0)
     sc = {}
@@ -54,6 +54,7 @@ def score(task_id, note):
         sc[f["type"]] = sc.get(f["type"], 0) + 1
     return {"task_id": task_id, "must_cover_hit": hit, "must_cover_total": mct,
             "coverage": round(hit / max(1, mct), 4), "critical_wrong": crit,
+            "frame_disputes": rep["counts"].get("frame_disputes", 0),
             "potential_fabrication": rep["counts"].get("potential_fabrication", 0),
             "safety_flags": sc, "min_coverage": t["min_coverage"],
             "pass": crit == 0 and hit / max(1, mct) >= t["min_coverage"]}
