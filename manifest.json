@@ -3,7 +3,7 @@
  "version": "1.0.0",
  "protocol": "detfact-v2.0",
  "license": "Apache-2.0",
- "homepage": "https://github.com/heidi-health/factbench",
+ "homepage": "https://github.com/newdogwang-netizen/factbench-public",
  "data_provenance": "fully synthetic (fictional patients); no real patient data",
  "gold_policy": "note-consensus: fact enters gold with >=3 independent model supporters and stable-field agreement (k_support=3 high-precision subset, NOT unanimous-only), refined by LLM arbitration with recorded human-override decisions",
  "review_status": "public factsets are marked reviewed=false: LLM-arbitrated with human-override decisions applied, but the 30-card human spot-check for the synthetic track is pending",

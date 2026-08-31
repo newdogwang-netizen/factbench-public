@@ -2,9 +2,9 @@ name: check
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [master]
 jobs:
-  tasks:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,3 +13,7 @@ jobs:
           python-version: "3.12"
       - name: oracle-passes / no-op-fails on every task
         run: python3 scripts/check_tasks.py
+      - name: mutation positive-control (dose flips caught)
+        run: python3 scripts/mutation_check.py
+      - name: scorer unit tests
+        run: python3 tests/test_scorer.py

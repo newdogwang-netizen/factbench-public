@@ -12,6 +12,12 @@ requires-python = ">=3.10"
 authors = [{name = "Heidi Health"}]
 keywords = ["benchmark", "clinical-notes", "factual-consistency", "llm-evaluation"]
 
+[project.urls]
+Homepage = "https://github.com/newdogwang-netizen/factbench-public"
+Repository = "https://github.com/newdogwang-netizen/factbench-public"
+Issues = "https://github.com/newdogwang-netizen/factbench-public/issues"
+Changelog = "https://github.com/newdogwang-netizen/factbench-public/releases"
+
 [tool.setuptools]
 package-dir = {"" = "scorer"}
 py-modules = ["detfact_scorer", "detfact_consensus", "detfact_factset", "detfact_oracle"]

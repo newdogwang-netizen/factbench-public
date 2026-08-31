@@ -20,7 +20,8 @@ therefore calibrated like lab equipment:
   negation flip, history flip, resolve flip, drug swap, plan fabrication) is re-run on
   every change; recall may not drop beyond tolerance.
 - Both gates ship in this repo: `make check` (oracle passes / empty note fails) and
-  `make mutation-check` (dose-flip mutations must be caught). CI is red if either trips.
+  `make mutation-check` (dose-flip mutations must be caught). CI runs both on PRs
+  and pushes; contributors can also run them locally.
 
 ## How gold is built (note-consensus v2)
 
