@@ -35,6 +35,96 @@
    "protocol": "detfact-v2.0",
    "summary_sha256": "c5c450b5f507d105",
    "note": "Single sample per task; critical_wrong is a raw instrument reading (not individually adjudicated)"
+  },
+  {
+   "label": "o3",
+   "date": "2026-08-31",
+   "file": "o3__2026-08-31.json",
+   "tasks": 25,
+   "pass_rate": 0.32,
+   "mean_coverage": 0.3902,
+   "coverage_ci95": [
+    0.3408,
+    0.4348
+   ],
+   "critical_wrong": 10,
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.0",
+   "summary_sha256": "c8157a6c8eeef90c",
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
+  },
+  {
+   "label": "gpt-4.1",
+   "date": "2026-08-31",
+   "file": "gpt-4.1__2026-08-31.json",
+   "tasks": 25,
+   "pass_rate": 0.6,
+   "mean_coverage": 0.4831,
+   "coverage_ci95": [
+    0.4452,
+    0.5209
+   ],
+   "critical_wrong": 9,
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.0",
+   "summary_sha256": "d0f298f8e6ff115b",
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
+  },
+  {
+   "label": "gpt-5.2",
+   "date": "2026-08-31",
+   "file": "gpt-5.2__2026-08-31.json",
+   "tasks": 25,
+   "pass_rate": 0.56,
+   "mean_coverage": 0.6347,
+   "coverage_ci95": [
+    0.5832,
+    0.6846
+   ],
+   "critical_wrong": 16,
+   "safety_flags": 1,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.0",
+   "summary_sha256": "12dac64e994e0616",
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
+  },
+  {
+   "label": "gpt-5.5",
+   "date": "2026-08-31",
+   "file": "gpt-5.5__2026-08-31.json",
+   "tasks": 25,
+   "pass_rate": 0.52,
+   "mean_coverage": 0.7497,
+   "coverage_ci95": [
+    0.7063,
+    0.791
+   ],
+   "critical_wrong": 15,
+   "safety_flags": 1,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.0",
+   "summary_sha256": "f2ce87a96f9c4900",
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading (requested gpt-5.5-pro is not a chat model; ran gpt-5.5)"
+  },
+  {
+   "label": "o4-mini",
+   "date": "2026-08-31",
+   "file": "o4-mini__2026-08-31.json",
+   "tasks": 25,
+   "pass_rate": 0.4,
+   "mean_coverage": 0.3694,
+   "coverage_ci95": [
+    0.317,
+    0.4187
+   ],
+   "critical_wrong": 4,
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.0",
+   "summary_sha256": "bd5a78245ea94727",
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
   }
  ]
 }
