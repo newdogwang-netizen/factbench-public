@@ -9,11 +9,13 @@
   0.6349
  ],
  "total_critical_wrong": 0,
+ "total_frame_disputes": 0,
+ "adjudicated_crit": null,
  "safety_flags": {
-  "unsupported_laterality": 0,
-  "unsupported_date": 0,
+  "unsupported_date_admin": 0,
   "medication_near_miss": 0,
-  "unsupported_date_admin": 0
+  "unsupported_laterality": 0,
+  "unsupported_date": 0
  },
  "rows": [
   {
@@ -24,6 +26,7 @@
    "safety_flags": {},
    "must_cover_total": 46,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.4,
    "pass": true
@@ -36,6 +39,7 @@
    "safety_flags": {},
    "must_cover_total": 43,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.41,
    "pass": true
@@ -48,6 +52,7 @@
    "safety_flags": {},
    "must_cover_total": 28,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.4,
    "pass": true
@@ -60,6 +65,7 @@
    "safety_flags": {},
    "must_cover_total": 33,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 4,
    "min_coverage": 0.45,
    "pass": true
@@ -72,6 +78,7 @@
    "safety_flags": {},
    "must_cover_total": 21,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.3,
    "pass": true
@@ -84,6 +91,7 @@
    "safety_flags": {},
    "must_cover_total": 27,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 1,
    "min_coverage": 0.41,
    "pass": true
@@ -96,6 +104,7 @@
    "safety_flags": {},
    "must_cover_total": 37,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.42,
    "pass": true
@@ -108,6 +117,7 @@
    "safety_flags": {},
    "must_cover_total": 39,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 1,
    "min_coverage": 0.3,
    "pass": true
@@ -120,6 +130,7 @@
    "safety_flags": {},
    "must_cover_total": 21,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 1,
    "min_coverage": 0.43,
    "pass": true
@@ -132,6 +143,7 @@
    "safety_flags": {},
    "must_cover_total": 32,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.37,
    "pass": true
@@ -144,6 +156,7 @@
    "safety_flags": {},
    "must_cover_total": 16,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 1,
    "min_coverage": 0.5,
    "pass": true
@@ -156,6 +169,7 @@
    "safety_flags": {},
    "must_cover_total": 21,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.47,
    "pass": true
@@ -168,6 +182,7 @@
    "safety_flags": {},
    "must_cover_total": 43,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.41,
    "pass": true
@@ -180,6 +195,7 @@
    "safety_flags": {},
    "must_cover_total": 60,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 1,
    "min_coverage": 0.4,
    "pass": true
@@ -192,6 +208,7 @@
    "safety_flags": {},
    "must_cover_total": 48,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.44,
    "pass": true
@@ -204,6 +221,7 @@
    "safety_flags": {},
    "must_cover_total": 31,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 1,
    "min_coverage": 0.5,
    "pass": true
@@ -216,6 +234,7 @@
    "safety_flags": {},
    "must_cover_total": 41,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.41,
    "pass": true
@@ -228,6 +247,7 @@
    "safety_flags": {},
    "must_cover_total": 20,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 5,
    "min_coverage": 0.35,
    "pass": true
@@ -240,6 +260,7 @@
    "safety_flags": {},
    "must_cover_total": 36,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.37,
    "pass": true
@@ -252,6 +273,7 @@
    "safety_flags": {},
    "must_cover_total": 21,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.37,
    "pass": true
@@ -264,6 +286,7 @@
    "safety_flags": {},
    "must_cover_total": 23,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.5,
    "pass": true
@@ -276,6 +299,7 @@
    "safety_flags": {},
    "must_cover_total": 36,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.43,
    "pass": true
@@ -288,6 +312,7 @@
    "safety_flags": {},
    "must_cover_total": 18,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 1,
    "min_coverage": 0.5,
    "pass": true
@@ -300,6 +325,7 @@
    "safety_flags": {},
    "must_cover_total": 20,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 0,
    "min_coverage": 0.45,
    "pass": true
@@ -312,6 +338,7 @@
    "safety_flags": {},
    "must_cover_total": 58,
    "critical_wrong": 0,
+   "frame_disputes": 0,
    "potential_fabrication": 1,
    "min_coverage": 0.31,
    "pass": true
