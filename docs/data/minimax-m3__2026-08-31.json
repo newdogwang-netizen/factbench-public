@@ -1,47 +1,47 @@
 {
  "model": "minimax-m3",
  "tasks": 25,
- "passed": 22,
- "pass_rate": 0.88,
- "mean_coverage": 0.5126,
+ "passed": 23,
+ "pass_rate": 0.92,
+ "mean_coverage": 0.471,
  "coverage_ci95": [
-  0.4771,
-  0.552
+  0.4406,
+  0.5021
  ],
  "total_critical_wrong": 0,
  "total_frame_disputes": 13,
  "adjudicated_crit": 0,
  "safety_flags": {
   "unsupported_date_admin": 0,
-  "medication_near_miss": 0,
   "unsupported_date": 0,
+  "medication_near_miss": 0,
   "unsupported_laterality": 6
  },
  "rows": [
   {
    "task": "case_s001_syn",
    "generation": "external",
-   "coverage": 0.5217,
-   "must_cover_hit": 24,
+   "coverage": 0.4783,
+   "must_cover_hit": 22,
    "safety_flags": {},
    "must_cover_total": 46,
    "critical_wrong": 0,
    "frame_disputes": 0,
    "potential_fabrication": 0,
-   "min_coverage": 0.4,
+   "min_coverage": 0.37,
    "pass": true
   },
   {
    "task": "case_s002_syn",
    "generation": "external",
-   "coverage": 0.5581,
-   "must_cover_hit": 24,
+   "coverage": 0.5116,
+   "must_cover_hit": 22,
    "safety_flags": {},
    "must_cover_total": 43,
    "critical_wrong": 0,
    "frame_disputes": 0,
    "potential_fabrication": 0,
-   "min_coverage": 0.41,
+   "min_coverage": 0.39,
    "pass": true
   },
   {
@@ -54,7 +54,7 @@
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 0,
-   "min_coverage": 0.4,
+   "min_coverage": 0.3,
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
@@ -65,14 +65,14 @@
   {
    "task": "case_s004_syn",
    "generation": "external",
-   "coverage": 0.5758,
-   "must_cover_hit": 19,
+   "coverage": 0.5152,
+   "must_cover_hit": 17,
    "safety_flags": {},
    "must_cover_total": 33,
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 0,
-   "min_coverage": 0.45,
+   "min_coverage": 0.38,
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
@@ -103,20 +103,20 @@
    "critical_wrong": 0,
    "frame_disputes": 0,
    "potential_fabrication": 1,
-   "min_coverage": 0.41,
-   "pass": false
+   "min_coverage": 0.39,
+   "pass": true
   },
   {
    "task": "case_s007_syn",
    "generation": "external",
-   "coverage": 0.4324,
-   "must_cover_hit": 16,
+   "coverage": 0.4054,
+   "must_cover_hit": 15,
    "safety_flags": {},
    "must_cover_total": 37,
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 1,
-   "min_coverage": 0.42,
+   "min_coverage": 0.4,
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
@@ -127,8 +127,8 @@
   {
    "task": "case_s008_syn",
    "generation": "external",
-   "coverage": 0.4103,
-   "must_cover_hit": 16,
+   "coverage": 0.359,
+   "must_cover_hit": 14,
    "safety_flags": {},
    "must_cover_total": 39,
    "critical_wrong": 0,
@@ -140,14 +140,14 @@
   {
    "task": "case_s009_syn",
    "generation": "external",
-   "coverage": 0.381,
-   "must_cover_hit": 8,
+   "coverage": 0.2857,
+   "must_cover_hit": 6,
    "safety_flags": {},
    "must_cover_total": 21,
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 0,
-   "min_coverage": 0.43,
+   "min_coverage": 0.33,
    "pass": false,
    "dispute_adjudication": {
     "error": 0,
@@ -158,8 +158,8 @@
   {
    "task": "case_s010_syn",
    "generation": "external",
-   "coverage": 0.4375,
-   "must_cover_hit": 14,
+   "coverage": 0.4062,
+   "must_cover_hit": 13,
    "safety_flags": {},
    "must_cover_total": 32,
    "critical_wrong": 0,
@@ -169,8 +169,8 @@
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
-    "faithful": 0,
-    "unclear": 1
+    "faithful": 1,
+    "unclear": 0
    }
   },
   {
@@ -183,27 +183,27 @@
    "critical_wrong": 0,
    "frame_disputes": 0,
    "potential_fabrication": 2,
-   "min_coverage": 0.5,
+   "min_coverage": 0.48,
    "pass": false
   },
   {
    "task": "case_s012_syn",
    "generation": "external",
-   "coverage": 0.5714,
-   "must_cover_hit": 12,
+   "coverage": 0.5238,
+   "must_cover_hit": 11,
    "safety_flags": {},
    "must_cover_total": 21,
    "critical_wrong": 0,
    "frame_disputes": 0,
    "potential_fabrication": 0,
-   "min_coverage": 0.47,
+   "min_coverage": 0.43,
    "pass": true
   },
   {
    "task": "case_s013_syn",
    "generation": "external",
-   "coverage": 0.5116,
-   "must_cover_hit": 22,
+   "coverage": 0.4884,
+   "must_cover_hit": 21,
    "safety_flags": {
     "unsupported_laterality": 2
    },
@@ -222,14 +222,14 @@
   {
    "task": "case_s014_syn",
    "generation": "external",
-   "coverage": 0.5,
-   "must_cover_hit": 30,
+   "coverage": 0.45,
+   "must_cover_hit": 27,
    "safety_flags": {},
    "must_cover_total": 60,
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 1,
-   "min_coverage": 0.4,
+   "min_coverage": 0.37,
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
@@ -240,8 +240,8 @@
   {
    "task": "case_s015_syn",
    "generation": "external",
-   "coverage": 0.5625,
-   "must_cover_hit": 27,
+   "coverage": 0.5,
+   "must_cover_hit": 24,
    "safety_flags": {
     "unsupported_laterality": 4
    },
@@ -249,7 +249,7 @@
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 0,
-   "min_coverage": 0.44,
+   "min_coverage": 0.39,
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
@@ -273,14 +273,14 @@
   {
    "task": "case_s017_syn",
    "generation": "external",
-   "coverage": 0.4634,
-   "must_cover_hit": 19,
+   "coverage": 0.4146,
+   "must_cover_hit": 17,
    "safety_flags": {},
    "must_cover_total": 41,
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 0,
-   "min_coverage": 0.41,
+   "min_coverage": 0.34,
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
@@ -291,8 +291,8 @@
   {
    "task": "case_s018_syn",
    "generation": "external",
-   "coverage": 0.7,
-   "must_cover_hit": 14,
+   "coverage": 0.65,
+   "must_cover_hit": 13,
    "safety_flags": {},
    "must_cover_total": 20,
    "critical_wrong": 0,
@@ -316,20 +316,20 @@
    "critical_wrong": 0,
    "frame_disputes": 0,
    "potential_fabrication": 1,
-   "min_coverage": 0.37,
+   "min_coverage": 0.35,
    "pass": true
   },
   {
    "task": "case_s020_syn",
    "generation": "external",
-   "coverage": 0.619,
-   "must_cover_hit": 13,
+   "coverage": 0.5238,
+   "must_cover_hit": 11,
    "safety_flags": {},
    "must_cover_total": 21,
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 0,
-   "min_coverage": 0.37,
+   "min_coverage": 0.33,
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
@@ -340,23 +340,10 @@
   {
    "task": "case_s021_syn",
    "generation": "external",
-   "coverage": 0.7391,
-   "must_cover_hit": 17,
+   "coverage": 0.5652,
+   "must_cover_hit": 13,
    "safety_flags": {},
    "must_cover_total": 23,
-   "critical_wrong": 0,
-   "frame_disputes": 0,
-   "potential_fabrication": 0,
-   "min_coverage": 0.5,
-   "pass": true
-  },
-  {
-   "task": "case_s022_syn",
-   "generation": "external",
-   "coverage": 0.5556,
-   "must_cover_hit": 20,
-   "safety_flags": {},
-   "must_cover_total": 36,
    "critical_wrong": 0,
    "frame_disputes": 0,
    "potential_fabrication": 0,
@@ -364,10 +351,23 @@
    "pass": true
   },
   {
+   "task": "case_s022_syn",
+   "generation": "external",
+   "coverage": 0.5278,
+   "must_cover_hit": 19,
+   "safety_flags": {},
+   "must_cover_total": 36,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.41,
+   "pass": true
+  },
+  {
    "task": "case_s023_syn",
    "generation": "external",
-   "coverage": 0.5556,
-   "must_cover_hit": 10,
+   "coverage": 0.5,
+   "must_cover_hit": 9,
    "safety_flags": {},
    "must_cover_total": 18,
    "critical_wrong": 0,
@@ -384,14 +384,14 @@
   {
    "task": "case_s024_syn",
    "generation": "external",
-   "coverage": 0.6,
-   "must_cover_hit": 12,
+   "coverage": 0.55,
+   "must_cover_hit": 11,
    "safety_flags": {},
    "must_cover_total": 20,
    "critical_wrong": 0,
    "frame_disputes": 1,
    "potential_fabrication": 0,
-   "min_coverage": 0.45,
+   "min_coverage": 0.42,
    "pass": true,
    "dispute_adjudication": {
     "error": 0,
@@ -409,7 +409,7 @@
    "critical_wrong": 0,
    "frame_disputes": 0,
    "potential_fabrication": 1,
-   "min_coverage": 0.31,
+   "min_coverage": 0.3,
    "pass": true
   }
  ]

@@ -6,73 +6,73 @@
    "file": "gpt-5.5__2026-08-31.json",
    "tasks": 25,
    "pass_rate": 1.0,
-   "mean_coverage": 0.7349,
+   "mean_coverage": 0.6817,
    "coverage_ci95": [
-    0.6926,
-    0.7772
+    0.6448,
+    0.7168
    ],
    "critical_wrong": 0,
-   "frame_disputes": 17,
+   "frame_disputes": 16,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
    "safety_flags": 1,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
-   "summary_sha256": "2f4bfdb2a4bd215d",
-   "note": "two-vote crit channel (detfact-v2.1)"
+   "summary_sha256": "68df767aaeffe5b4",
+   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
   {
    "label": "gpt-5.2",
    "date": "2026-08-31",
    "file": "gpt-5.2__2026-08-31.json",
    "tasks": 25,
-   "pass_rate": 0.96,
-   "mean_coverage": 0.6418,
+   "pass_rate": 0.88,
+   "mean_coverage": 0.5894,
    "coverage_ci95": [
-    0.5937,
-    0.6891
+    0.5391,
+    0.64
    ],
    "critical_wrong": 0,
-   "frame_disputes": 11,
+   "frame_disputes": 12,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
    "safety_flags": 1,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
-   "summary_sha256": "b0418a1d045bb8de",
-   "note": "two-vote crit channel (detfact-v2.1)"
+   "summary_sha256": "f4e1f05ae6b2b3cd",
+   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
   {
    "label": "gpt-4.1",
    "date": "2026-08-31",
    "file": "gpt-4.1__2026-08-31.json",
    "tasks": 25,
-   "pass_rate": 0.8,
-   "mean_coverage": 0.4834,
+   "pass_rate": 0.6,
+   "mean_coverage": 0.4151,
    "coverage_ci95": [
-    0.4473,
-    0.5188
+    0.3824,
+    0.4491
    ],
    "critical_wrong": 0,
-   "frame_disputes": 6,
+   "frame_disputes": 7,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
-   "summary_sha256": "298c930d7e9c6e83",
-   "note": "two-vote crit channel (detfact-v2.1)"
+   "summary_sha256": "578189ab32ba2412",
+   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
   {
    "label": "o3",
    "date": "2026-08-31",
    "file": "o3__2026-08-31.json",
    "tasks": 25,
-   "pass_rate": 0.48,
-   "mean_coverage": 0.4205,
+   "pass_rate": 0.28,
+   "mean_coverage": 0.3272,
    "coverage_ci95": [
-    0.3814,
-    0.4626
+    0.2909,
+    0.3647
    ],
    "critical_wrong": 0,
    "frame_disputes": 9,
@@ -81,19 +81,19 @@
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
-   "summary_sha256": "29c21337e8311b47",
-   "note": "two-vote crit channel (detfact-v2.1)"
+   "summary_sha256": "6cd0876c9546620d",
+   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
   {
    "label": "o4-mini",
    "date": "2026-08-31",
    "file": "o4-mini__2026-08-31.json",
    "tasks": 25,
-   "pass_rate": 0.44,
-   "mean_coverage": 0.4076,
+   "pass_rate": 0.36,
+   "mean_coverage": 0.3444,
    "coverage_ci95": [
-    0.3662,
-    0.4458
+    0.3053,
+    0.3805
    ],
    "critical_wrong": 0,
    "frame_disputes": 2,
@@ -102,19 +102,19 @@
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
-   "summary_sha256": "07d82404507a64c9",
-   "note": "two-vote crit channel (detfact-v2.1)"
+   "summary_sha256": "e91eebd217c1b3e4",
+   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
   {
    "label": "minimax-m3",
    "date": "2026-08-31",
    "file": "minimax-m3__2026-08-31.json",
    "tasks": 25,
-   "pass_rate": 0.88,
-   "mean_coverage": 0.5126,
+   "pass_rate": 0.92,
+   "mean_coverage": 0.471,
    "coverage_ci95": [
-    0.4771,
-    0.552
+    0.4406,
+    0.5021
    ],
    "critical_wrong": 0,
    "frame_disputes": 13,
@@ -123,8 +123,8 @@
    "safety_flags": 6,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
-   "summary_sha256": "88ca43c865a51d0b",
-   "note": "two-vote crit channel (detfact-v2.1)"
+   "summary_sha256": "1b8a69c44adb12f1",
+   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
   {
    "label": "reference-notes",
@@ -132,10 +132,10 @@
    "file": "reference-notes__2026-08-31.json",
    "tasks": 25,
    "pass_rate": 1.0,
-   "mean_coverage": 0.5945,
+   "mean_coverage": 0.5404,
    "coverage_ci95": [
-    0.5543,
-    0.6349
+    0.5037,
+    0.5742
    ],
    "critical_wrong": 0,
    "frame_disputes": 0,
@@ -144,8 +144,8 @@
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
-   "summary_sha256": "fae8302903e94c44",
-   "note": "two-vote crit channel (detfact-v2.1)"
+   "summary_sha256": "ccaeffdcfea68ec7",
+   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   }
  ]
 }

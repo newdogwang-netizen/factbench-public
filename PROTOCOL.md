@@ -36,6 +36,22 @@ Optionally, a runner with an LLM gateway can re-examine disputes
 source excerpts and the sentence; only unanimous verdicts are reported
 (`adjudicated_crit`). Without a gateway, disputes are simply retained.
 
+## Quorum-demanded coverage (2026-08-31)
+Coverage credit for a must-cover fact requires the union of the note's
+supporting sentences to include every field that a **strict majority of the
+consensus-pool authors actually wrote** in their own sentences for that fact
+(sealed per fact as `salience.cover_fields`, derived deterministically from
+the fact's evidence quotes — no hand-picked field list). Consequences:
+- Naming a drug without its dose earns nothing when the pool wrote the dose.
+- A field no competent author writes (e.g. an extraction-noise time value)
+  cannot cost anyone credit.
+- Fields may be assembled across sentences ("one atomic fact per bullet" is
+  rewarded, not punished); duplicate-anchor sentences merge by strict upgrade
+  (a more complete restatement replaces a sparser one only when no filled
+  field conflicts).
+The lenient mention-count is still reported as `must_cover_hit_any` for
+transparency but plays no role in scores.
+
 ## Calibration (both gates re-run on every change)
 - Negative control: reference notes score critical_wrong == 0 on all 25 tasks,
   and a sealed corpus of adjudicated-faithful history sentences must produce
