@@ -719,7 +719,7 @@ def covered_fact_fields(fact, supported_claims):
 
 
 def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
-             unmatched_policy="auto"):
+             unmatched_policy="auto", transcript=None):
     from detfact_consensus import derive_patient_names, set_case_subject_aliases
     set_case_subject_aliases(derive_patient_names(factset.get("facts") or []))
     index = build_fact_index(factset)
@@ -983,13 +983,46 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
                     mc_hit += 1
             if sal.get("must_not_err"):
                 err_fact_keys.add(fact.get("key"))
-        critical_wrong = sum(
-            1 for row in per_claim
-            if row.get("verdict") == "wrong_fact"
-            and row.get("matched_fact_key") in err_fact_keys)
+        # Two-vote rule: wrong_fact x must_not_err is only the first vote.
+        # When the source transcript is available, critconfirm casts the
+        # second vote (source anchoring / tense morphology); unconfirmed
+        # candidates are demoted to frame_disputes — reported, but outside
+        # the pass rule (iron law: a crit must be non-overturnable).
+        critical_wrong = frame_disputes = 0
+        if transcript:
+            from detfact import critconfirm
+            fact_by_key = {}
+            for f in factset.get("facts", []):
+                fact_by_key.setdefault(f.get("key"), f)
+            for row in per_claim:
+                if (row.get("verdict") != "wrong_fact"
+                        or row.get("matched_fact_key") not in err_fact_keys):
+                    continue
+                mmf = []
+                for rs in row.get("reasons") or []:
+                    if rs.get("code") == "field_mismatch":
+                        mmf.extend(rs.get("fields") or [])
+                ok, detail = critconfirm.confirm(
+                    claims[row["index"]],
+                    fact_by_key.get(row.get("matched_fact_key")) or {},
+                    mmf, transcript)
+                if ok:
+                    critical_wrong += 1
+                    row["crit"] = "confirmed"
+                    row["crit_detail"] = detail
+                else:
+                    frame_disputes += 1
+                    row["crit"] = "dispute"
+                    row["crit_detail"] = detail
+        else:
+            critical_wrong = sum(
+                1 for row in per_claim
+                if row.get("verdict") == "wrong_fact"
+                and row.get("matched_fact_key") in err_fact_keys)
         counts["must_cover_total"] = mc_total
         counts["must_cover_hit"] = mc_hit
         counts["critical_wrong"] = critical_wrong
+        counts["frame_disputes"] = frame_disputes
 
     fab_n, fab_rows = count_potential_fabrications(claims, per_claim, factset)
     counts["potential_fabrication"] = fab_n

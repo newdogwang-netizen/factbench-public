@@ -17,17 +17,20 @@ note_path = os.path.join(os.getcwd(), "note.md")
 if not os.path.isfile(note_path):
     print(json.dumps({"pass": False, "reason": "note.md missing"})); sys.exit(1)
 claims = parse_template_claims(open(note_path, encoding="utf-8").read())["claims"]
-rep = evaluate(fs, claims)
-mne = {f["key"] for f in fs["facts"] if (f.get("salience") or {}).get("must_not_err")}
-crit = sum(1 for r in rep["per_claim"]
-           if r.get("verdict") == "wrong_fact" and r.get("matched_fact_key") in mne)
+_src = _find_transcript()
+# Two-vote critical channel: a crit needs (1) a contradiction with a
+# must_not_err gold fact AND (2) deterministic confirmation against the
+# source transcript (detfact/critconfirm.py). Unconfirmed candidates are
+# reported as frame_disputes: visible, but outside the pass rule.
+rep = evaluate(fs, claims, transcript=_src or None)
+crit = rep["counts"].get("critical_wrong", 0)
+disputes = rep["counts"].get("frame_disputes", 0)
 mc_total = sum(1 for f in fs["facts"] if (f.get("salience") or {}).get("must_cover"))
 mc_hit = rep["counts"].get("must_cover_hit", 0)
 fab = rep["counts"].get("potential_fabrication", 0)
 try:
     from detfact.safety import safety_signals
     from detfact_consensus import DRUG_NAMES
-    _src = _find_transcript()
     safety = safety_signals(claims, _src, DRUG_NAMES) if _src else []
 except Exception:
     safety = []
@@ -37,7 +40,8 @@ for _f in safety:
 MIN_COVERAGE = 0.44  # oracle-calibrated threshold (reference-note coverage x 0.7)
 result = {"must_cover_hit": mc_hit, "must_cover_total": mc_total,
           "coverage": round(mc_hit / max(1, mc_total), 4),
-          "critical_wrong": crit, "potential_fabrication": fab,
+          "critical_wrong": crit, "frame_disputes": disputes,
+          "potential_fabrication": fab,
           "safety_flags": safety_counts,  # advisory: not part of the pass rule
           "min_coverage": MIN_COVERAGE,
           "pass": crit == 0 and mc_hit / max(1, mc_total) >= MIN_COVERAGE}
