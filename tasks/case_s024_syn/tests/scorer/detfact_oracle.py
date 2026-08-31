@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""语义微判定层(semantic micro-oracle)。
+"""Semantic micro-oracle layer.
 
-原则(2026-08-26 尺寸不变性实验 24/24 通过后落地):
-- LLM 只回答原子是非题:"两个短字段值是否同义/同值",且只在确定性归一化
-  判'不同'之后被咨询——只能把假'不同'翻成'等价',不能制造'不同';
-- 多模型法定人数:不同家族/规模模型答案不一致即弃权(维持死规则原判),
-  尺寸不变性逐题强制验证;
-- 判例缓存:每对写法只问一次,判定写入 audit_site/equivalence_table.json
-  (人类可审计/可否决);重放全走查表,确定性与报告哈希完整保留;
-- 默认关闭:仅当环境变量 DETFACT_ORACLE=1 时启用;关闭时行为与纯死规则
-  完全一致(测试/离线重放安全)。
+Principles (adopted after the 24/24 size-invariance experiment on 2026-08-26):
+- The LLM only answers atomic yes/no questions ("are these two short field
+  values synonymous/equal?"), and is consulted only AFTER deterministic
+  normalization judged them 'different' -- it may overturn a false 'different'
+  into 'equivalent', but can never manufacture a 'different'.
+- Multi-model quorum: models from different families/sizes must agree,
+  otherwise abstain (the hard-rule verdict stands).
+- Precedent cache: each value pair is asked once; verdicts go to
+  audit_site/equivalence_table.json (human-auditable); replays are pure table
+  lookups, preserving determinism and report-hash integrity.
 
-表条目: {"field|a|b": {"verdict": "same"|"different"|"abstain",
-                        "models": [...], "at": iso}}
-键中 a,b 按字典序排序(等价关系对称)。
+NOTE (public build): the override at the end of this file makes both entry
+points always abstain -- public scoring is deterministic with no LLM, no
+network, and no lookup table.
 """
 import json
 import os
