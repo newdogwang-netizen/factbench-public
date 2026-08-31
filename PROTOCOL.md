@@ -14,13 +14,40 @@
    independent reference note whose author model was excluded from that case's
    consensus pool.
 
+## The two-vote critical channel (`detfact-v2.1`, 2026-08-31)
+A critical error needs two independent votes:
+1. the claim contradicts a `must_not_err` gold fact (tiered matcher), AND
+2. deterministic source confirmation (`scorer/detfact/critconfirm.py`): the
+   claimed value has no anchor anywhere near the drug/entity in the source
+   transcript (fuzzy, ASR-tolerant, digit + spelled-number variants), or — for
+   status/polarity — the sentence carries no past/trial morphology that the
+   parser is known to misread.
+
+Candidates that fail vote 2 are **frame disputes**: reported per task
+(`frame_disputes`) but outside the pass rule. Rationale: an audit of 17 raw
+crits from a frontier model found 17/17 were faithful history documentation
+(initial doses, from-doses, past trials, resolved side effects) colliding
+with current-state gold facts. A confirmed crit is designed to be
+non-overturnable: overturning it would require finding the value in the
+source, and then it would not have been confirmed.
+
+Optionally, a runner with an LLM gateway can re-examine disputes
+(`scorer/detfact/dispute_adjudicator.py`): two independent judges see the
+source excerpts and the sentence; only unanimous verdicts are reported
+(`adjudicated_crit`). Without a gateway, disputes are simply retained.
+
 ## Calibration (both gates re-run on every change)
-- Negative control: reference notes score critical_wrong == 0 on all 25 tasks.
+- Negative control: reference notes score critical_wrong == 0 on all 25 tasks,
+  and a sealed corpus of adjudicated-faithful history sentences must produce
+  0 confirmed crits (the anti-overturn gate).
 - Positive control: gold-anchored dose-flip mutations of the reference notes
   must be caught (`make mutation-check`).
 - Oracle passes / empty note fails on every task (`make check`).
 
 ## Known limits (published, not hidden)
+- Frame errors (a historical dose written as if current) are demoted to the
+  dispute lane by design; they are visible but do not fail a run unless the
+  LLM adjudication pass confirms them.
 - Narrative-tense residuals: notes describing current medications in past-tense
   narration can still occasionally parse as historical.
 - Whole-drug-swap and plan-fabrication are weak on the primary wrong-fact
