@@ -31,7 +31,7 @@ QUORUM_MODELS = [
     # (internal arbiter id removed)
 ]
 GATEWAY = os.environ.get("DETFACT_ORACLE_GATEWAY", "")
-# 只对这些字段启用等价判定;polarity/status 有专门逻辑,保持纯确定性
+# Equivalence judging is enabled only for these fields; polarity/status have dedicated logic and stay purely deterministic
 ORACLE_FIELDS = {"object", "value", "unit", "time", "location", "condition"}
 
 _table = None
@@ -107,11 +107,14 @@ ANCHOR_PROMPT = (
 
 
 def anchor_equivalent(a, b, live=False):
-    """锚同义判定(单向契约:仅 SAME 用于救援,假 DIFFERENT 只损召回)。
-    打分路径永远只查表(live=False),表由离线构建器扩充——
-    保证打分零 LLM 调用、可重放。验证实验 2026-08-27:40 对 36 一致,
-    假 SAME 0/20;唯一误判为无害方向(racing heart 判 DIFFERENT),
-    预注册门槛(一致准确率 100%)未达、按单向风险面接入,偏离已记录。"""
+    """Anchor-synonym judging (one-directional contract: only SAME is used for
+    rescue; a false DIFFERENT only costs recall). The scoring path is always
+    table-lookup only (live=False); the table is grown by an offline builder --
+    guaranteeing zero LLM calls at scoring time and full replayability.
+    Validation (2026-08-27): 36/40 pairs agreed, false SAME 0/20; the only
+    miss was in the harmless direction (racing heart judged DIFFERENT);
+    the pre-registered gate (100% agreement) was not met, so it was wired in
+    on the one-directional risk surface only -- deviation recorded."""
     a, b = str(a).strip().lower(), str(b).strip().lower()
     if not a or not b or a == b:
         return None
@@ -155,7 +158,7 @@ def anchor_equivalent(a, b, live=False):
 
 
 def equivalent(field, a, b):
-    """True=等价(翻案) / False=确认不同 / None=弃权(维持死规则原判)。"""
+    """True = equivalent (overturn) / False = confirmed different / None = abstain (hard-rule verdict stands)."""
     if field not in ORACLE_FIELDS:
         return None
     a, b = str(a).strip(), str(b).strip()
