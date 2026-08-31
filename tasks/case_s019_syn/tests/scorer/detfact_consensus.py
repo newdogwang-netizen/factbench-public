@@ -17,8 +17,8 @@ FIELDS = ["subject", "predicate", "object", "value", "unit", "time",
           "location", "owner", "status", "polarity", "condition"]
 STABLE_FIELDS = {"subject", "object", "polarity"}
 # Generic subject aliases only. Case-specific aliases (e.g. patient names) are
-# PHI and must live in a local, non-distributed file: detfact_local/patient_aliases.json
-# (override path with DETFACT_SUBJECT_ALIASES_FILE).
+# PHI and must be supplied via a local file (override path with
+# DETFACT_SUBJECT_ALIASES_FILE); no such file ships with this repo.
 GENERIC_SUBJECT_ALIASES = {"patient", "member", "client", "self", "paciente",
                            # patient role words in pediatric scenarios
                            "infant", "baby", "newborn", "toddler", "child",
@@ -28,7 +28,7 @@ def _load_local_subject_aliases():
     path = os.environ.get(
         "DETFACT_SUBJECT_ALIASES_FILE",
         os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                     "detfact_local", "patient_aliases.json"))
+                     "subject_aliases.json"))
     try:
         with open(path) as fh:
             return {re.sub(r"\s+", " ", re.sub(r"[^0-9a-z]+", " ", str(x).lower())).strip()

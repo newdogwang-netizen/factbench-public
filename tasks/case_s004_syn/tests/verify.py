@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""确定性判分器:note.md -> detfact parser -> 对封印 gold 计分。"""
+"""Deterministic scorer: note.md -> detfact parser -> score against sealed gold."""
 import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "scorer"))
@@ -34,7 +34,7 @@ except Exception:
 safety_counts = {}
 for _f in safety:
     safety_counts[_f["type"]] = safety_counts.get(_f["type"], 0) + 1
-MIN_COVERAGE = 0.49  # oracle 自校准阈值(oracle 覆盖率×0.7)
+MIN_COVERAGE = 0.49  # oracle-calibrated threshold (oracle coverage x 0.7)
 result = {"must_cover_hit": mc_hit, "must_cover_total": mc_total,
           "coverage": round(mc_hit / max(1, mc_total), 4),
           "critical_wrong": crit, "potential_fabrication": fab,
