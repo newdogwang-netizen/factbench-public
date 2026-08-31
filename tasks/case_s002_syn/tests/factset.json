@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s002_syn",
     "version": "1",
-    "sha256": "8d71ef6236671f0fc25eac0943f2f40a9e1e1e40a2854f2ba473490f1da2e1a1",
+    "sha256": "821b3acf9b368d58266b925dcacd41066f71cb11bd2a569b5742def1670e1b3c",
     "reviewed": false
   },
   "source": {
@@ -76,7 +76,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -92,7 +92,7 @@
           "quote": "Low back pain ongoing since 2019 lifting injury at warehouse (lifted a box solo that was meant for two-person lift, felt a pop)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.she_rates_her_pain_on_most_days_as_a_4_10",
           "source": [
             "generated_output"
@@ -100,7 +100,7 @@
           "quote": "She rates her pain on most days as a 4/10."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.most_days_pain_is_4_10",
           "source": [
             "generated_output"
@@ -108,7 +108,7 @@
           "quote": "Most days, pain is 4/10."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.current_pain_is_usually_4_10",
           "source": [
             "generated_output"
@@ -116,7 +116,7 @@
           "quote": "Current pain is usually 4/10."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -132,7 +132,7 @@
           "quote": "Current pain is about 4/10 most days; it was 6-7/10 most days during the winter."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.current_low_back_pain_is_about_4_10_most_days",
           "source": [
             "generated_output"
@@ -144,14 +144,14 @@
         "audit_id": "F001",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -204,7 +204,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.low_back_pain_is_overall_improved_since_last_visit_most_days_rated_4_10_compared_to_6_7_10_in_the_winter",
           "source": [
             "generated_output"
@@ -220,7 +220,7 @@
           "quote": "Overall back pain is better than last visit, currently 4/10 most days (was 6-7/10 in winter)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.her_low_back_pain_is_overall_better_compared_to_her_last_visit",
           "source": [
             "generated_output"
@@ -228,7 +228,7 @@
           "quote": "The patient reports her low back pain is overall better compared to her last visit."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.low_back_pain_is_overall_better_than_at_the_last_visit",
           "source": [
             "generated_output"
@@ -244,7 +244,7 @@
           "quote": "Low back pain is overall improved compared to the last visit."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.overall_low_back_pain_is_better_than_at_the_last_visit",
           "source": [
             "generated_output"
@@ -256,12 +256,12 @@
         "audit_id": "F002",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
+          "gemini-2.5-pro",
+          "gpt-5.4",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -310,7 +310,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.sitting",
           "source": [
             "generated_output"
@@ -318,7 +318,7 @@
           "quote": "Sitting is the worst aggravating factor; pain worsens after 30-40 minutes of sitting, including during an hour-long drive to her daughter's house."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.sitting",
           "source": [
             "generated_output"
@@ -326,7 +326,7 @@
           "quote": "Sitting is the most significant aggravating factor."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.sitting",
           "source": [
             "generated_output"
@@ -338,9 +338,9 @@
         "audit_id": "F006",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "deepseek-v4-flash",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -391,7 +391,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.standing_at_work_too_long_also_worsens_pain_but_sitting_is_worse",
           "source": [
             "generated_output"
@@ -407,7 +407,7 @@
           "quote": "Pain is worse with sitting more than 30-40 minutes"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.pain_is_exacerbated_by_sitting_for_more_than_30_40_minutes",
           "source": [
             "generated_output"
@@ -415,7 +415,7 @@
           "quote": "Pain is exacerbated by sitting for more than 30-40 minutes."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.driving_for_an_hour_leads_to_increased_pain_when_getting_out_of_the_car",
           "source": [
             "generated_output"
@@ -423,7 +423,7 @@
           "quote": "Driving for an hour leads to increased pain when getting out of the car."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.an_hour_long_drive_causes_increased_pain_and_difficulty_getting_out_of_the_car",
           "source": [
             "generated_output"
@@ -439,7 +439,7 @@
           "quote": "Pain is worse with sitting longer than 30-40 minutes; after the hour-long drive to her daughter's home, the patient is \"hobbling\" out of the car."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.sitting_more_than_30_to_40_minutes_worsens_the_back_pain",
           "source": [
             "generated_output"
@@ -451,13 +451,13 @@
         "audit_id": "F007",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -506,7 +506,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -522,7 +522,7 @@
           "quote": "Sleep is so-so: falls asleep fine but wakes 2-3 times when rolling over and back grabs"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -530,7 +530,7 @@
           "quote": "Sleep is described as so-so."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -538,7 +538,7 @@
           "quote": "Sleep is interrupted two or three times nightly when rolling over triggers back pain."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -546,7 +546,7 @@
           "quote": "Sleep is interrupted; patient falls asleep fine but wakes 2-3 times, usually when rolling over and back pain grabs."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -558,12 +558,12 @@
         "audit_id": "F008",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -620,7 +620,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -636,7 +636,7 @@
           "quote": "Duloxetine 60mg once daily with breakfast (increased from 30mg in February)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -644,7 +644,7 @@
           "quote": "Duloxetine 60 mg, one tablet by mouth once daily with breakfast. The dose was increased from 30 mg in February."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -652,7 +652,7 @@
           "quote": "Duloxetine 60 mg once daily in the morning with breakfast."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -660,7 +660,7 @@
           "quote": "Duloxetine 60 mg orally once daily with breakfast."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -676,7 +676,7 @@
           "quote": "Duloxetine 60 mg once daily in the morning with breakfast (increased from 30 mg in February; mild nausea during the first week on the higher dose, which resolved)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -688,14 +688,14 @@
         "audit_id": "F009",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -746,7 +746,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.sleep_is_interrupted_2_3_times_per_night_usually_when_rolling_over_and_the_back_grabs_total_sleep_is_about_5_6_hours_improved_since_duloxetine_dose_increase",
           "source": [
             "generated_output"
@@ -754,7 +754,7 @@
           "quote": "Sleep is interrupted 2-3 times per night, usually when rolling over and the back \"grabs\"; total sleep is about 5-6 hours, improved since duloxetine dose increase."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.symptom_sleep_has_improved_since_her_duloxetine_dose_was_increased",
           "source": [
             "generated_output"
@@ -762,7 +762,7 @@
           "quote": "Sleep has improved since her duloxetine dose was increased"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.improved_since_the_duloxetine_dose_was_increased",
           "source": [
             "generated_output"
@@ -774,9 +774,9 @@
         "audit_id": "F010",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol"
+          "deepseek-v4-flash",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -825,7 +825,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.numbness",
           "source": [
             "generated_output"
@@ -841,7 +841,7 @@
           "quote": "Numbness is on top of left foot, big toe, and second toe, sometimes extending up front of shin"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.numbness",
           "source": [
             "generated_output"
@@ -857,7 +857,7 @@
           "quote": "Numbness is on the top of the left foot, extending into the big toe and the adjacent toe, and sometimes up the front of the shin; the bottom of the foot feels normal."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.numbness",
           "source": [
             "generated_output"
@@ -869,11 +869,11 @@
         "audit_id": "F012",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -923,7 +923,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -931,7 +931,7 @@
           "quote": "Dizziness that occurred with gabapentin has completely resolved within a week to a week and a half after stopping it; no dizziness since"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.completely_resolved_within_a_week_to_a_week_and_a_half_after_stopping_it_no_dizziness_since",
           "source": [
             "generated_output"
@@ -955,7 +955,7 @@
           "quote": "Gabapentin stopped last fall (October) due to dizziness (near-fall in shower)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -963,7 +963,7 @@
           "quote": "**Dizziness:** The patient reports she is glad to have stopped gabapentin, which she took until last fall (October)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.symptom_dizziness_the_patient_reports_she_is_glad_to_have_stopped_gabapentin_which_she_took_until_last_fall_october",
           "source": [
             "generated_output"
@@ -971,7 +971,7 @@
           "quote": "**Dizziness:** The patient reports she is glad to have stopped gabapentin, which she took until last fall (October)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.symptom_the_medication_caused_dizziness_which_resolved_completely_within_a_week_and_a_half_of_discontinuation",
           "source": [
             "generated_output"
@@ -979,7 +979,7 @@
           "quote": "The medication caused dizziness, which resolved completely within a week and a half of discontinuation"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -987,7 +987,7 @@
           "quote": "Dizziness from prior gabapentin use resolved completely within about 1 to 1.5 weeks after stopping it"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.dizziness_from_prior_gabapentin_use_resolved_completely_within_about_1_to_1_5_weeks_after_stopping_it",
           "source": [
             "generated_output"
@@ -995,7 +995,7 @@
           "quote": "Dizziness from prior gabapentin use resolved completely within about 1 to 1.5 weeks after stopping it."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -1003,7 +1003,7 @@
           "quote": "Gabapentin previously caused dizziness and a near fall in the shower"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.gabapentin_previously_caused_dizziness_and_a_near_fall_in_the_shower",
           "source": [
             "generated_output"
@@ -1011,7 +1011,7 @@
           "quote": "Gabapentin previously caused dizziness and a near fall in the shower."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.dizziness_resolved_completely_within_approximately_one_to_one_and_a_half_weeks_after_gabapentin_was_stopped",
           "source": [
             "generated_output"
@@ -1019,7 +1019,7 @@
           "quote": "Dizziness resolved completely within approximately one to one-and-a-half weeks after gabapentin was stopped."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -1027,7 +1027,7 @@
           "quote": "Dizziness completely resolved within approximately one to one and a half weeks after stopping"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.symptom_dizziness_completely_resolved_within_approximately_one_to_one_and_a_half_weeks_after_stopping",
           "source": [
             "generated_output"
@@ -1051,7 +1051,7 @@
           "quote": "Dizziness from gabapentin resolved completely within one to one-and-a-half weeks after stopping it last fall; no dizziness since."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -1059,7 +1059,7 @@
           "quote": "Gabapentin caused dizziness"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.gabapentin_caused_dizziness",
           "source": [
             "generated_output"
@@ -1067,7 +1067,7 @@
           "quote": "Gabapentin caused dizziness."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.gabapentin_was_stopped_in_october_due_to_dizziness",
           "source": [
             "generated_output"
@@ -1079,14 +1079,14 @@
         "audit_id": "F019",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1137,7 +1137,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -1145,7 +1145,7 @@
           "quote": "Dizziness that occurred with gabapentin has completely resolved within a week to a week and a half after stopping it; no dizziness since."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -1153,7 +1153,7 @@
           "quote": "Dizziness from prior gabapentin use resolved completely within about 1 to 1.5 weeks after stopping it."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -1161,7 +1161,7 @@
           "quote": "Gabapentin previously caused dizziness and a near fall in the shower."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -1177,7 +1177,7 @@
           "quote": "Dizziness from gabapentin resolved completely within one to one-and-a-half weeks after stopping it last fall; no dizziness since."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -1197,11 +1197,11 @@
         "audit_id": "F020",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max",
+          "qwen3-max",
           "glm-5p2"
         ],
         "status": "release",
@@ -1253,7 +1253,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.chronic_low_back_pain_since_2019_lifting_injury",
           "source": [
             "generated_output"
@@ -1269,7 +1269,7 @@
           "quote": "Chronic low back pain (since 2019 lifting injury)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.chronic_low_back_pain_secondary_to_a_lifting_injury_in_2019",
           "source": [
             "generated_output"
@@ -1277,7 +1277,7 @@
           "quote": "Chronic low back pain secondary to a lifting injury in 2019."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.chronic_low_back_pain_related_to_a_2019_lifting_injury",
           "source": [
             "generated_output"
@@ -1285,7 +1285,7 @@
           "quote": "Chronic low back pain related to a 2019 lifting injury."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.chronic_low_back_pain_following_a_2019_lifting_injury",
           "source": [
             "generated_output"
@@ -1305,11 +1305,11 @@
         "audit_id": "F021",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -1362,7 +1362,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1386,7 +1386,7 @@
           "quote": "Hypertension (controlled on lisinopril, home readings 120s/70s)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1394,7 +1394,7 @@
           "quote": "Hypertension, controlled"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.hypertension_controlled",
           "source": [
             "generated_output"
@@ -1402,7 +1402,7 @@
           "quote": "Hypertension, controlled."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1410,7 +1410,7 @@
           "quote": "High blood pressure"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.hypertension",
           "source": [
             "generated_output"
@@ -1418,7 +1418,7 @@
           "quote": "Hypertension is treated with lisinopril."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1426,7 +1426,7 @@
           "quote": "Hypertension is treated with lisinopril"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.hypertension_is_treated_with_lisinopril",
           "source": [
             "generated_output"
@@ -1434,7 +1434,7 @@
           "quote": "Hypertension is treated with lisinopril."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1442,7 +1442,7 @@
           "quote": "Hypertension, treated with lisinopril, controlled"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1450,7 +1450,7 @@
           "quote": "Home blood pressure readings are mostly in the 120s/70s"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.symptom_home_blood_pressure_readings_are_mostly_in_the_120s_70s",
           "source": [
             "generated_output"
@@ -1474,7 +1474,7 @@
           "quote": "Hypertension, controlled on lisinopril; home readings mostly in the 120s/70s."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1486,14 +1486,14 @@
         "audit_id": "F022",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1550,7 +1550,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1566,7 +1566,7 @@
           "quote": "Lisinopril 10mg once daily every morning"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1574,7 +1574,7 @@
           "quote": "Lisinopril 10 mg, one tablet by mouth once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1582,7 +1582,7 @@
           "quote": "Lisinopril 10 mg every morning."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1590,7 +1590,7 @@
           "quote": "Lisinopril 10 mg orally every morning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1606,7 +1606,7 @@
           "quote": "Lisinopril 10 mg once daily each morning."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1618,14 +1618,14 @@
         "audit_id": "F023",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1676,7 +1676,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.no_new_diagnoses_or_hospitalizations_since_january",
           "source": [
             "generated_output"
@@ -1692,7 +1692,7 @@
           "quote": "No new diagnoses or hospitalizations since January."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.no_new_diagnoses_were_reported_since_january",
           "source": [
             "generated_output"
@@ -1704,9 +1704,9 @@
         "audit_id": "F024",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "kimi-k3",
-          "gpt-5_4"
+          "gpt-5.4"
         ],
         "status": "release",
         "field_stable": true,
@@ -1763,7 +1763,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.meloxicam",
           "source": [
             "generated_output"
@@ -1779,7 +1779,7 @@
           "quote": "Meloxicam 15mg once daily with dinner (being reduced to 7.5mg)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.meloxicam",
           "source": [
             "generated_output"
@@ -1787,7 +1787,7 @@
           "quote": "Meloxicam 15 mg, one tablet by mouth once daily. The patient takes this with dinner due to stomach upset."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.meloxicam",
           "source": [
             "generated_output"
@@ -1795,7 +1795,7 @@
           "quote": "Meloxicam 15 mg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.meloxicam",
           "source": [
             "generated_output"
@@ -1811,7 +1811,7 @@
           "quote": "Meloxicam 15 mg once daily, taken with dinner (moved from the morning due to stomach symptoms)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.meloxicam",
           "source": [
             "generated_output"
@@ -1823,13 +1823,13 @@
         "audit_id": "F028",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1882,7 +1882,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1898,7 +1898,7 @@
           "quote": "Vitamin D3 1000 units daily"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1906,7 +1906,7 @@
           "quote": "Vitamin D3 1000 units, by mouth daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1914,7 +1914,7 @@
           "quote": "Vitamin D3 1,000 units daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1930,7 +1930,7 @@
           "quote": "Vitamin D3 1000 units daily (most days)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1938,7 +1938,7 @@
           "quote": "Vitamin D3 1000 units daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1950,14 +1950,14 @@
         "audit_id": "F030",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2006,7 +2006,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.gabapentin",
           "source": [
             "generated_output"
@@ -2014,7 +2014,7 @@
           "quote": "Gabapentin was stopped in October of last year; patient does not want to restart it."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.gabapentin",
           "source": [
             "generated_output"
@@ -2022,7 +2022,7 @@
           "quote": "Gabapentin was stopped last fall."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.gabapentin",
           "source": [
             "generated_output"
@@ -2030,7 +2030,7 @@
           "quote": "Gabapentin was discontinued in approximately October of the prior year because of dizziness."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.gabapentin",
           "source": [
             "generated_output"
@@ -2046,7 +2046,7 @@
           "quote": "Gabapentin was stopped last fall (October) due to dizziness (patient almost fell in the shower); it may have helped nerve pain slightly but the patient could not function on it and does not want to restart it."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.gabapentin",
           "source": [
             "generated_output"
@@ -2058,12 +2058,12 @@
         "audit_id": "F031",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2114,7 +2114,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -2130,7 +2130,7 @@
           "quote": "Gabapentin stopped last fall (October) due to dizziness (near-fall in shower)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -2138,7 +2138,7 @@
           "quote": "**Dizziness:** The patient reports she is glad to have stopped gabapentin, which she took until last fall (October). The medication caused dizziness, which resolved completely within a week and a half of discontinuation."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -2146,7 +2146,7 @@
           "quote": "The patient has had no dizziness since stopping gabapentin."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -2154,7 +2154,7 @@
           "quote": "The patient has had no dizziness since stopping gabapentin."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -2170,7 +2170,7 @@
           "quote": "Gabapentin was stopped last fall (October) due to dizziness (patient almost fell in the shower); it may have helped nerve pain slightly but the patient could not function on it and does not want to restart it."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.gabapentin",
           "source": [
             "generated_output"
@@ -2182,14 +2182,14 @@
         "audit_id": "F032",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2238,7 +2238,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.mother",
           "source": [
             "generated_output"
@@ -2246,7 +2246,7 @@
           "quote": "Mother is alive at age 81 with osteoporosis and arthritis."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.mother",
           "source": [
             "generated_output"
@@ -2266,8 +2266,8 @@
         "audit_id": "F036",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
+          "deepseek-v4-flash",
+          "gpt-5.4",
           "kimi-k3"
         ],
         "status": "release",
@@ -2325,7 +2325,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -2341,7 +2341,7 @@
           "quote": "Continue duloxetine 60mg daily (no change)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -2349,7 +2349,7 @@
           "quote": "Continue Duloxetine 60 mg daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -2357,7 +2357,7 @@
           "quote": "Continue duloxetine 60 mg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -2373,7 +2373,7 @@
           "quote": "Medication plan: duloxetine continued at 60 mg daily with no change."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -2385,13 +2385,13 @@
         "audit_id": "F048",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2448,7 +2448,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2464,7 +2464,7 @@
           "quote": "Continue lisinopril 10mg daily (no change)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2472,7 +2472,7 @@
           "quote": "Continue Lisinopril 10 mg daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2480,7 +2480,7 @@
           "quote": "Continue lisinopril."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2496,7 +2496,7 @@
           "quote": "Medication plan: lisinopril 10 mg daily continued."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2508,13 +2508,13 @@
         "audit_id": "F049",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2571,7 +2571,7 @@
           "quote": "Pain is worse with sitting more than 30-40 minutes"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -2579,7 +2579,7 @@
           "quote": "Pain is exacerbated by sitting for more than 30-40 minutes."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -2587,7 +2587,7 @@
           "quote": "Pain was typically 6–7/10 during the winter."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -2608,9 +2608,9 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -2670,7 +2670,7 @@
           "quote": "No foot drop; caught toe on stairs once last week but attributes to clumsiness"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_patient_caught_a_toe_on_the_stairs_once_last_week",
           "source": [
             "generated_output"
@@ -2678,7 +2678,7 @@
           "quote": "The patient caught a toe on the stairs once last week."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_patient_caught_a_toe_on_the_stairs_once_last_week",
           "source": [
             "generated_output"
@@ -2691,8 +2691,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2751,7 +2751,7 @@
           "quote": "Burning worse with coffee and with meloxicam on empty stomach (patient moved meloxicam to dinner)"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_burning_is_worse_with_coffee",
           "source": [
             "generated_output"
@@ -2759,7 +2759,7 @@
           "quote": "The burning is worse with coffee."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.the_burning_is_worse_with_coffee",
           "source": [
             "generated_output"
@@ -2767,7 +2767,7 @@
           "quote": "The burning is worse with coffee."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_burning_is_worse_with_coffee",
           "source": [
             "generated_output"
@@ -2780,9 +2780,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2841,7 +2841,7 @@
           "quote": "Weight stable, appetite fine"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.weight",
           "source": [
             "generated_output"
@@ -2849,7 +2849,7 @@
           "quote": "Weight is stable."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.weight_is_stable",
           "source": [
             "generated_output"
@@ -2857,7 +2857,7 @@
           "quote": "Weight is stable."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.weight",
           "source": [
             "generated_output"
@@ -2865,7 +2865,7 @@
           "quote": "Weight is stable."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.weight_is_stable",
           "source": [
             "generated_output"
@@ -2889,7 +2889,7 @@
           "quote": "Weight is stable and appetite is intact."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.weight",
           "source": [
             "generated_output"
@@ -2897,7 +2897,7 @@
           "quote": "Weight is stable."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.weight_is_stable",
           "source": [
             "generated_output"
@@ -2905,7 +2905,7 @@
           "quote": "Weight is stable."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.weight",
           "source": [
             "generated_output"
@@ -2918,11 +2918,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2981,7 +2981,7 @@
           "quote": "Turmeric tea (sister recommended)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.turmeric",
           "source": [
             "generated_output"
@@ -3002,7 +3002,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
+          "gemini-2.5-pro",
           "kimi-k3"
         ],
         "status": "release",
@@ -3062,7 +3062,7 @@
           "quote": "Smoking: quit in 2021, smoked approximately 1 pack/day for 15 years prior, 3 years clean"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "social_history.the_patient_quit_smoking_in_2021",
           "source": [
             "generated_output"
@@ -3070,7 +3070,7 @@
           "quote": "The patient quit smoking in 2021."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "social_history.the_patient_quit_smoking_in_2021",
           "source": [
             "generated_output"
@@ -3083,8 +3083,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3143,7 +3143,7 @@
           "quote": "Diclofenac gel can be used on same days as meloxicam"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.diclofenac_gel_can_be_used_on_the_same_days_as_meloxicam",
           "source": [
             "generated_output"
@@ -3151,7 +3151,7 @@
           "quote": "Diclofenac gel can be used on the same days as meloxicam."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.diclofenac_gel_can_be_used_on_the_same_days_as_meloxicam",
           "source": [
             "generated_output"
@@ -3164,8 +3164,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3224,7 +3224,7 @@
           "quote": "Continue duloxetine 60mg daily (no change)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_duloxetine_60_mg_daily",
           "source": [
             "generated_output"
@@ -3232,7 +3232,7 @@
           "quote": "Continue Duloxetine 60 mg daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_duloxetine_60_mg_daily",
           "source": [
             "generated_output"
@@ -3240,7 +3240,7 @@
           "quote": "Continue duloxetine 60 mg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_duloxetine_60_mg_once_daily",
           "source": [
             "generated_output"
@@ -3253,9 +3253,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3314,7 +3314,7 @@
           "quote": "Continue lisinopril 10mg daily (no change)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_lisinopril_10_mg_daily",
           "source": [
             "generated_output"
@@ -3322,7 +3322,7 @@
           "quote": "Continue Lisinopril 10 mg daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_lisinopril",
           "source": [
             "generated_output"
@@ -3330,7 +3330,7 @@
           "quote": "Continue lisinopril."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_lisinopril_10_mg_once_daily",
           "source": [
             "generated_output"
@@ -3343,9 +3343,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3404,7 +3404,7 @@
           "quote": "Continue acetaminophen as needed, staying under 3000mg/day"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_acetaminophen_as_needed",
           "source": [
             "generated_output"
@@ -3412,7 +3412,7 @@
           "quote": "Continue acetaminophen as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_acetaminophen_as_needed",
           "source": [
             "generated_output"
@@ -3425,8 +3425,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol"
+          "gpt-5.4",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3477,7 +3477,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.symptoms_are_barely_noticeable",
           "source": [
             "generated_output"
@@ -3485,7 +3485,7 @@
           "quote": "Symptoms are barely noticeable in the morning."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_numbness_is_barely_noticeable",
           "source": [
             "generated_output"
@@ -3493,7 +3493,7 @@
           "quote": "In the morning, the numbness is barely noticeable."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.the_numbness_is_barely_noticeable",
           "source": [
             "generated_output"
@@ -3501,7 +3501,7 @@
           "quote": "The numbness is barely noticeable in the morning."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_numbness_is_barely_noticeable",
           "source": [
             "generated_output"
@@ -3513,10 +3513,10 @@
         "audit_id": "F125",
         "support": "4/4",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3567,7 +3567,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.been_helping",
           "source": [
             "generated_output"
@@ -3583,7 +3583,7 @@
           "quote": "Patient feels physical therapy has been helping."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.physical_therapy_has_been_helping",
           "source": [
             "generated_output"
@@ -3595,9 +3595,9 @@
         "audit_id": "F157",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
+          "gpt-5.4",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3648,7 +3648,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.sleep_was_worse_before_the_duloxetine_dose_was_increased",
           "source": [
             "generated_output"
@@ -3664,7 +3664,7 @@
           "quote": "Sleep: patient falls asleep fine but wakes two to three times per night when rolling over onto the back; sleep was worse before the duloxetine dose increase; patient now gets about five to six hours total."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.sleep_was_worse_before_the_duloxetine_dose_was_increased",
           "source": [
             "generated_output"
@@ -3676,9 +3676,9 @@
         "audit_id": "F169",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
+          "gpt-5.4",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3729,7 +3729,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_numbness_is_worse_after_prolonged_sitting",
           "source": [
             "generated_output"
@@ -3737,7 +3737,7 @@
           "quote": "The numbness is worse after prolonged sitting."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.the_numbness_is_worse_after_prolonged_sitting",
           "source": [
             "generated_output"
@@ -3745,7 +3745,7 @@
           "quote": "The numbness is worse after prolonged sitting."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_numbness_is_worse_after_prolonged_sitting",
           "source": [
             "generated_output"
@@ -3757,9 +3757,9 @@
         "audit_id": "F176",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3810,7 +3810,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_burning_sometimes_comes_up_into_the_throat",
           "source": [
             "generated_output"
@@ -3818,7 +3818,7 @@
           "quote": "The burning sometimes comes up into the throat."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_burning_sometimes_comes_up_into_the_throat",
           "source": [
             "generated_output"
@@ -3826,7 +3826,7 @@
           "quote": "The burning sometimes comes up into the throat."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.the_burning_sometimes_extends_into_the_throat",
           "source": [
             "generated_output"
@@ -3838,9 +3838,9 @@
         "audit_id": "F181",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "gpt-5_6-sol"
+          "gpt-5.4",
+          "qwen3-max",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3891,7 +3891,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_burning_is_worse_if_meloxicam_is_taken_on_an_empty_stomach",
           "source": [
             "generated_output"
@@ -3899,7 +3899,7 @@
           "quote": "The burning is worse if meloxicam is taken on an empty stomach."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.the_burning_is_worse_when_meloxicam_is_taken_on_an_empty_stomach",
           "source": [
             "generated_output"
@@ -3907,7 +3907,7 @@
           "quote": "The burning is worse when meloxicam is taken on an empty stomach."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_burning_is_worse_when_meloxicam_is_taken_on_an_empty_stomach",
           "source": [
             "generated_output"
@@ -3919,9 +3919,9 @@
         "audit_id": "F182",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3972,7 +3972,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.black_stools",
           "source": [
             "generated_output"
@@ -3980,7 +3980,7 @@
           "quote": "The patient denied black stools."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.black_stools",
           "source": [
             "generated_output"
@@ -3988,7 +3988,7 @@
           "quote": "The patient denied black stools."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.black_stools",
           "source": [
             "generated_output"
@@ -4000,9 +4000,9 @@
         "audit_id": "F184",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4051,7 +4051,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.appetite",
           "source": [
             "generated_output"
@@ -4059,7 +4059,7 @@
           "quote": "Appetite is fine."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.appetite",
           "source": [
             "generated_output"
@@ -4067,7 +4067,7 @@
           "quote": "Appetite is normal."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.appetite",
           "source": [
             "generated_output"
@@ -4075,7 +4075,7 @@
           "quote": "Appetite is fine."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.appetite",
           "source": [
             "generated_output"
@@ -4087,10 +4087,10 @@
         "audit_id": "F185",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4139,7 +4139,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
@@ -4147,7 +4147,7 @@
           "quote": "Duloxetine was increased from 30 mg to 60 mg in February."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
@@ -4155,7 +4155,7 @@
           "quote": "Duloxetine was increased from 30 mg to 60 mg in February."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
@@ -4167,9 +4167,9 @@
         "audit_id": "F190",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4226,7 +4226,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -4234,7 +4234,7 @@
           "quote": "The patient usually takes 1,000 mg per dose on bad days."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -4242,7 +4242,7 @@
           "quote": "The patient reports never taking more than two acetaminophen doses daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -4254,9 +4254,9 @@
         "audit_id": "F192",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4305,7 +4305,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.acetaminophen",
           "source": [
             "generated_output"
@@ -4313,7 +4313,7 @@
           "quote": "Acetaminophen is taken maybe twice a day on bad days."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.acetaminophen",
           "source": [
             "generated_output"
@@ -4321,7 +4321,7 @@
           "quote": "Acetaminophen is used approximately three or four days per week."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.acetaminophen",
           "source": [
             "generated_output"
@@ -4333,9 +4333,9 @@
         "audit_id": "F193",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,

@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s009_syn",
     "version": "1",
-    "sha256": "91ff5156d383dbea490111d0617678e5602011755267bdf082ea06d9a621628a",
+    "sha256": "d99d56f9128378bb0e90f90db3202acacd4e835dfc4208615580d9112063ec5d",
     "reviewed": false
   },
   "source": {
@@ -76,7 +76,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -92,7 +92,7 @@
           "quote": "Right wrist still aches, especially after gardening (e.g., pulling weeds), rated 3 out of 10 pain (previously 7 out of 10), with no visible swelling."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -100,7 +100,7 @@
           "quote": "Knuckle pain and swelling have resolved."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.right_wrist_pain_is_about_3_10_currently",
           "source": [
             "generated_output"
@@ -108,7 +108,7 @@
           "quote": "Right wrist pain is about 3/10 currently."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.right_wrist_pain_is_approximately_3_10_after_activity_compared_with_7_10_previously",
           "source": [
             "generated_output"
@@ -116,7 +116,7 @@
           "quote": "Right wrist pain is approximately 3/10 after activity, compared with 7/10 previously."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -132,7 +132,7 @@
           "quote": "Knuckle pain and swelling resolved; patient can grip objects and open jars on most days."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -144,14 +144,14 @@
         "audit_id": "F003",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -202,7 +202,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.vomiting",
           "source": [
             "generated_output"
@@ -210,7 +210,7 @@
           "quote": "Mild nausea the day after methotrexate (Saturdays) since dose increase; no vomiting."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_patient_is_not_vomiting",
           "source": [
             "generated_output"
@@ -218,7 +218,7 @@
           "quote": "The patient is not vomiting."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.not_experienced_vomiting",
           "source": [
             "generated_output"
@@ -226,7 +226,7 @@
           "quote": "She has not experienced vomiting."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.patient_is_not_vomiting_feels_blah",
           "source": [
             "generated_output"
@@ -234,7 +234,7 @@
           "quote": "Patient is not vomiting; feels \"blah\"."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.she_is_not_vomiting_with_the_queasiness",
           "source": [
             "generated_output"
@@ -246,11 +246,11 @@
         "audit_id": "F008",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -307,7 +307,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.folic",
           "source": [
             "generated_output"
@@ -323,7 +323,7 @@
           "quote": "Folic acid 1 mg daily with breakfast (to be increased to 2 mg daily)."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.folic",
           "source": [
             "generated_output"
@@ -331,7 +331,7 @@
           "quote": "Folic acid 1 mg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.folic",
           "source": [
             "generated_output"
@@ -339,7 +339,7 @@
           "quote": "Folic acid was being taken at 1 mg orally every morning before this visit."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.folic",
           "source": [
             "generated_output"
@@ -355,7 +355,7 @@
           "quote": "Folic acid 1 mg daily with breakfast (to be increased to 2 mg daily)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.folic",
           "source": [
             "generated_output"
@@ -367,13 +367,13 @@
         "audit_id": "F017",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -426,7 +426,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -442,7 +442,7 @@
           "quote": "Vitamin D3 2000 units once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -450,7 +450,7 @@
           "quote": "Vitamin D3 2000 units daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -458,7 +458,7 @@
           "quote": "Vitamin D3 2,000 units orally daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -474,7 +474,7 @@
           "quote": "Vitamin D3 2000 units daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -482,7 +482,7 @@
           "quote": "Vitamin D3 is 2000 units daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -494,13 +494,13 @@
         "audit_id": "F018",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -557,7 +557,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -573,7 +573,7 @@
           "quote": "Omeprazole 20 mg once daily before breakfast."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -581,7 +581,7 @@
           "quote": "Omeprazole 20 mg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -589,7 +589,7 @@
           "quote": "Omeprazole 20 mg orally daily before breakfast."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -605,7 +605,7 @@
           "quote": "Omeprazole 20 mg daily before breakfast."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -617,13 +617,13 @@
         "audit_id": "F019",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -680,7 +680,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -696,7 +696,7 @@
           "quote": "Acetaminophen 500 mg as needed, approximately twice a week at most, usually after gardening."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -704,7 +704,7 @@
           "quote": "Acetaminophen 500 mg is used as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -712,7 +712,7 @@
           "quote": "Acetaminophen 500 mg, one or two tablets as needed, approximately twice weekly at most."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -728,7 +728,7 @@
           "quote": "Acetaminophen 500 mg as needed, one to two tablets approximately twice per week, typically after gardening."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -740,13 +740,13 @@
         "audit_id": "F020",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -797,7 +797,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.fiber",
           "source": [
             "generated_output"
@@ -813,7 +813,7 @@
           "quote": "Fiber gummy supplement."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.fiber",
           "source": [
             "generated_output"
@@ -833,9 +833,9 @@
         "audit_id": "F021",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",
@@ -891,7 +891,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.prednisone",
           "source": [
             "generated_output"
@@ -907,7 +907,7 @@
           "quote": "Prednisone discontinued completely; last taper was 1 mg for two weeks, stopped approximately four to five weeks ago."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.prednisone",
           "source": [
             "generated_output"
@@ -915,7 +915,7 @@
           "quote": "Prednisone has been stopped completely."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.prednisone",
           "source": [
             "generated_output"
@@ -923,7 +923,7 @@
           "quote": "Prednisone has been discontinued."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.prednisone",
           "source": [
             "generated_output"
@@ -939,7 +939,7 @@
           "quote": "Prednisone taper completed approximately four to five weeks ago (1 mg for two weeks then stopped)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.prednisone",
           "source": [
             "generated_output"
@@ -951,13 +951,13 @@
         "audit_id": "F022",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1008,7 +1008,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.naproxen",
           "source": [
             "generated_output"
@@ -1024,7 +1024,7 @@
           "quote": "Naproxen discontinued in January due to stomach upset and dyspepsia."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.naproxen",
           "source": [
             "generated_output"
@@ -1032,7 +1032,7 @@
           "quote": "Naproxen was stopped back in about January."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.naproxen",
           "source": [
             "generated_output"
@@ -1040,7 +1040,7 @@
           "quote": "Naproxen has been discontinued."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.naproxen",
           "source": [
             "generated_output"
@@ -1060,11 +1060,11 @@
         "audit_id": "F023",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",
@@ -1114,7 +1114,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -1130,7 +1130,7 @@
           "quote": "Sleep is fine now that night sweats have resolved."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -1138,7 +1138,7 @@
           "quote": "Sleep is fine now that the night sweats are gone."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -1154,7 +1154,7 @@
           "quote": "Sleep is currently fine; previously disrupted by night sweats in winter."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -1166,12 +1166,12 @@
         "audit_id": "F030",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1222,7 +1222,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.treatment_flu_shot_due_this_fall",
           "source": [
             "generated_output"
@@ -1238,7 +1238,7 @@
           "quote": "Flu shot due this fall."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.flu_shot_is_recommended_this_fall",
           "source": [
             "generated_output"
@@ -1250,9 +1250,9 @@
         "audit_id": "F043",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4"
+          "gpt-5.4"
         ],
         "status": "release",
         "field_stable": true,
@@ -1309,7 +1309,7 @@
           "quote": "Fatigue is improved but patient still experiences an afternoon dip around 2–3 PM; no longer requires lying down."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -1317,7 +1317,7 @@
           "quote": "Fatigue is improved but not 100%."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -1330,8 +1330,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1398,7 +1398,7 @@
           "quote": "Hepatitis panel and TB test were negative prior to starting methotrexate."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.hepatitis_panel_was_negative_prior_to_starting_methotrexate",
           "source": [
             "generated_output"
@@ -1412,7 +1412,7 @@
         "models": [
           "glm-5p2",
           "minimax-m3",
-          "kimi-k2p6"
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -1477,7 +1477,7 @@
           "quote": "Methotrexate 15 mg (six 2.5 mg tablets) by mouth once weekly, taken Friday evenings."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.methotrexate",
           "source": [
             "generated_output"
@@ -1485,7 +1485,7 @@
           "quote": "Methotrexate 15 mg by mouth once weekly."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.methotrexate",
           "source": [
             "generated_output"
@@ -1493,7 +1493,7 @@
           "quote": "Methotrexate is taken as six 2.5 mg tablets."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.methotrexate",
           "source": [
             "generated_output"
@@ -1501,7 +1501,7 @@
           "quote": "Methotrexate is taken as six 2.5 mg tablets."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.methotrexate",
           "source": [
             "generated_output"
@@ -1514,10 +1514,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1566,7 +1566,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -1574,7 +1574,7 @@
           "quote": "There is no swelling in the knees, ankles, or feet."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -1582,7 +1582,7 @@
           "quote": "There was no tenderness with compression across the MCP joints."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -1594,9 +1594,9 @@
         "audit_id": "F091",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1645,7 +1645,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.methotrexate",
           "source": [
             "generated_output"
@@ -1653,7 +1653,7 @@
           "quote": "Methotrexate is taken as six 2.5 mg tablets."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.methotrexate",
           "source": [
             "generated_output"
@@ -1661,7 +1661,7 @@
           "quote": "Methotrexate was increased at the previous visit approximately three months ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.methotrexate",
           "source": [
             "generated_output"
@@ -1669,7 +1669,7 @@
           "quote": "Methotrexate is taken as six 2.5 mg tablets."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.methotrexate",
           "source": [
             "generated_output"
@@ -1681,10 +1681,10 @@
         "audit_id": "F117",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1733,7 +1733,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.acetaminophen",
           "source": [
             "generated_output"
@@ -1741,7 +1741,7 @@
           "quote": "Acetaminophen is taken maybe one or two tablets about twice a week at most."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.acetaminophen",
           "source": [
             "generated_output"
@@ -1749,7 +1749,7 @@
           "quote": "Acetaminophen is taken twice a week at most."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.acetaminophen",
           "source": [
             "generated_output"
@@ -1761,9 +1761,9 @@
         "audit_id": "F120",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1812,7 +1812,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.prednisone",
           "source": [
             "generated_output"
@@ -1820,7 +1820,7 @@
           "quote": "Prednisone was stopped about 4 to 5 weeks ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.prednisone",
           "source": [
             "generated_output"
@@ -1828,7 +1828,7 @@
           "quote": "Prednisone was stopped approximately four to five weeks ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.prednisone",
           "source": [
             "generated_output"
@@ -1840,9 +1840,9 @@
         "audit_id": "F122",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1893,7 +1893,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "family_history.the_patient_s_mother_had_rheumatoid_arthritis",
           "source": [
             "generated_output"
@@ -1901,7 +1901,7 @@
           "quote": "The patient's mother had rheumatoid arthritis."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "family_history.her_mother_had_rheumatoid_arthritis",
           "source": [
             "generated_output"
@@ -1909,7 +1909,7 @@
           "quote": "Her mother had rheumatoid arthritis."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.her_mother_had_rheumatoid_arthritis",
           "source": [
             "generated_output"
@@ -1921,9 +1921,9 @@
         "audit_id": "F123",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1972,7 +1972,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.gardening",
           "source": [
             "generated_output"
@@ -1988,7 +1988,7 @@
           "quote": "Gardening is a regular activity and aggravates the right wrist."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.gardening",
           "source": [
             "generated_output"
@@ -2000,9 +2000,9 @@
         "audit_id": "F128",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
+          "gpt-5.4",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2053,7 +2053,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.avoid_orange_juice_on_the_sore_spot",
           "source": [
             "generated_output"
@@ -2061,7 +2061,7 @@
           "quote": "Avoid orange juice on the sore spot."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.avoid_orange_juice_on_the_sore_spot",
           "source": [
             "generated_output"
@@ -2069,7 +2069,7 @@
           "quote": "Avoid orange juice on the sore spot."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.avoid_orange_juice_on_the_sore_area",
           "source": [
             "generated_output"
@@ -2081,9 +2081,9 @@
         "audit_id": "F140",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,

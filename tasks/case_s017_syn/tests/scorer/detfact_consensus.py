@@ -5,13 +5,13 @@ Usage: python3 detfact_consensus.py --gen gold_candidates/<case> --case-meta <ca
 import argparse, collections, json, os, re, unicodedata
 
 MODEL_ORDER = [
-    "accounts/fireworks/models/kimi-k3",
-    "accounts/fireworks/models/glm-5p2",
-    "accounts/fireworks/models/deepseek-v4-pro-0813",
+    "kimi-k3",
+    "deepseek-v4-flash",
+    "glm-5p2",
+    "qwen3-max",
+    "minimax-m3",
     "gpt-5.6-sol",
     "gpt-5.4",
-    "google/gemini-2.5-pro",
-    "google/gemini-2.5-flash",
 ]
 FIELDS = ["subject", "predicate", "object", "value", "unit", "time",
           "location", "owner", "status", "polarity", "condition"]

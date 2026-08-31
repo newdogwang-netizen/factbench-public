@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s020_syn",
     "version": "1",
-    "sha256": "9410097566e396be3c4f398a6da97efdcfe4afb24db843e266c2e20c21770d3d",
+    "sha256": "2e86e5bd618c05b712cd60ae8fe181aca3b9ff331a5e208f9fcf3cea5e9dc38b",
     "reviewed": false
   },
   "source": {
@@ -80,7 +80,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -96,7 +96,7 @@
           "quote": "Occasional headaches managed with ibuprofen approximately twice a month."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -104,7 +104,7 @@
           "quote": "Ibuprofen 400 mg as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -112,7 +112,7 @@
           "quote": "Ibuprofen 400 mg as needed for headache or back pain, used approximately twice monthly."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -136,7 +136,7 @@
           "quote": "Ibuprofen 400 mg orally as needed, approximately twice per month, for back pain or occasional headache."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -148,14 +148,14 @@
         "audit_id": "F011",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -205,7 +205,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -213,7 +213,7 @@
           "quote": "The patient reports that dizziness and mild nausea experienced during the first 10-14 days after the dose increase have fully resolved by week 3"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.that_dizziness_and_mild_nausea_experienced_during_the_first_10_14_days_after_the_dose_increase_have_fully_resolved_by_week_3",
           "source": [
             "generated_output"
@@ -237,7 +237,7 @@
           "quote": "Dizziness and nausea occurred in the first 10-14 days after the dose increase; resolved by week 3."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -245,7 +245,7 @@
           "quote": "Dizziness occurred for about the first 10 days to 2 weeks after the dose increase"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.dizziness_occurred_for_about_the_first_10_days_to_2_weeks_after_the_dose_increase",
           "source": [
             "generated_output"
@@ -253,7 +253,7 @@
           "quote": "Dizziness occurred for about the first 10 days to 2 weeks after the dose increase."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -261,7 +261,7 @@
           "quote": "Dizziness and mild nausea occurred during the first 10 days to two weeks after the dose increase"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.dizziness_and_mild_nausea_occurred_during_the_first_10_days_to_two_weeks_after_the_dose_increase",
           "source": [
             "generated_output"
@@ -269,7 +269,7 @@
           "quote": "Dizziness and mild nausea occurred during the first 10 days to two weeks after the dose increase."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -277,7 +277,7 @@
           "quote": "Dizziness and mild nausea occurred during the first 10–14 days after the dose increase"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.dizziness_and_mild_nausea_occurred_during_the_first_1014_days_after_the_dose_increase",
           "source": [
             "generated_output"
@@ -317,7 +317,7 @@
           "quote": "Dizziness, unsteadiness, and mild nausea during the first 10-14 days after the dose increase; resolved by week three."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -325,7 +325,7 @@
           "quote": "The patient experienced dizziness and feeling off-balance during the first ten days to two weeks after the dose increase"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.dizziness_and_feeling_off_balance_during_the_first_ten_days_to_two_weeks_after_the_dose_increase",
           "source": [
             "generated_output"
@@ -337,14 +337,14 @@
         "audit_id": "F014",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -395,7 +395,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.focal_epilepsy_diagnosed_approximately_3_years_ago",
           "source": [
             "generated_output"
@@ -411,7 +411,7 @@
           "quote": "Focal epilepsy diagnosed approximately 3 years ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.focal_epilepsy_diagnosed_approximately_3_years_ago",
           "source": [
             "generated_output"
@@ -419,7 +419,7 @@
           "quote": "Focal epilepsy diagnosed approximately 3 years ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.focal_epilepsy",
           "source": [
             "generated_output"
@@ -435,7 +435,7 @@
           "quote": "Focal epilepsy diagnosed approximately 3 years ago."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.focal_epilepsy",
           "source": [
             "generated_output"
@@ -443,7 +443,7 @@
           "quote": "Focal epilepsy."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.focal_epilepsy_was_diagnosed_approximately_three_years_ago",
           "source": [
             "generated_output"
@@ -451,7 +451,7 @@
           "quote": "Focal epilepsy was diagnosed approximately three years ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.focal_epilepsy",
           "source": [
             "generated_output"
@@ -463,12 +463,12 @@
         "audit_id": "F016",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "minimax-m3",
-          "gpt-5_4",
-          "gpt-5_6-sol"
+          "gpt-5.4",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -525,7 +525,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.levetiracetam",
           "source": [
             "generated_output"
@@ -533,7 +533,7 @@
           "quote": "Levetiracetam 750 mg twice daily (increased from 500 mg twice daily approximately 6-7 weeks ago); morning dose at approximately 8 a.m., evening dose with dinner at approximately 6-6:30 p.m. (moved from bedtime)."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.levetiracetam",
           "source": [
             "generated_output"
@@ -541,7 +541,7 @@
           "quote": "Levetiracetam 750 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.levetiracetam",
           "source": [
             "generated_output"
@@ -549,7 +549,7 @@
           "quote": "Levetiracetam 750 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.levetiracetam",
           "source": [
             "generated_output"
@@ -565,7 +565,7 @@
           "quote": "Levetiracetam 750 mg orally twice daily (morning approximately 8 am, evening with dinner approximately 6-6:30 pm); increased from 500 mg orally twice daily approximately 6-7 weeks ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.levetiracetam",
           "source": [
             "generated_output"
@@ -577,12 +577,12 @@
         "audit_id": "F022",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -639,7 +639,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.pyridoxine",
           "source": [
             "generated_output"
@@ -655,7 +655,7 @@
           "quote": "Pyridoxine (vitamin B6) 100 mg once daily in the morning; started approximately 3 weeks ago for irritability."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.pyridoxine",
           "source": [
             "generated_output"
@@ -679,7 +679,7 @@
           "quote": "Pyridoxine (vitamin B6) 100 mg orally once daily in the morning; started approximately 3 weeks ago for levetiracetam-associated irritability."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.pyridoxine",
           "source": [
             "generated_output"
@@ -691,12 +691,12 @@
         "audit_id": "F023",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -753,7 +753,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -769,7 +769,7 @@
           "quote": "Cetirizine 10 mg as needed for seasonal allergies, approximately 3-4 times per week during spring."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -777,7 +777,7 @@
           "quote": "Cetirizine 10 mg as needed for allergies."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -785,7 +785,7 @@
           "quote": "Cetirizine 10 mg as needed for seasonal allergies, currently used approximately three to four times weekly."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -813,11 +813,11 @@
         "audit_id": "F024",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -871,7 +871,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -887,7 +887,7 @@
           "quote": "Vitamin D3 2000 IU daily (started by PCP for low level last winter)."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -911,7 +911,7 @@
           "quote": "Vitamin D 2000 units once daily, started by his primary care doctor in the winter for a low level."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -923,12 +923,12 @@
         "audit_id": "F025",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "minimax-m3",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -979,7 +979,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -995,7 +995,7 @@
           "quote": "Ibuprofen 400 mg occasionally for back pain or headaches, approximately twice a month."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -1003,7 +1003,7 @@
           "quote": "Ibuprofen was used for occasional headaches or back pain."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -1011,7 +1011,7 @@
           "quote": "Ibuprofen 400 mg as needed for headache or back pain, used approximately twice monthly."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -1035,7 +1035,7 @@
           "quote": "Ibuprofen 400 mg orally as needed, approximately twice per month, for back pain or occasional headache."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -1047,14 +1047,14 @@
         "audit_id": "F026",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1104,7 +1104,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1112,7 +1112,7 @@
           "quote": "Past medication: Lamotrigine (Lamictal) was the first antiepileptic tried approximately 3 years ago, titrated to 100 mg twice daily; it was stopped due to daily headaches and insomnia; it was not stopped due to inefficacy and there was no rash"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1144,7 +1144,7 @@
           "quote": "Lamotrigine was the first antiepileptic drug tried at diagnosis; titrated to 100 mg twice daily; discontinued due to daily headaches and insomnia (not rash); switched to levetiracetam."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.poor_sleep_during_the_wedding_weekend",
           "source": [
             "generated_output"
@@ -1152,7 +1152,7 @@
           "quote": "The patient reported poor sleep during the wedding weekend."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1160,7 +1160,7 @@
           "quote": "Lamotrigine was stopped because of insomnia"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.lamotrigine_was_stopped_because_of_insomnia",
           "source": [
             "generated_output"
@@ -1168,7 +1168,7 @@
           "quote": "Lamotrigine was stopped because of insomnia."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1176,7 +1176,7 @@
           "quote": "Lamotrigine was discontinued because of daily headaches and insomnia"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1184,7 +1184,7 @@
           "quote": "Lamotrigine was discontinued because of daily headaches and insomnia."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1192,7 +1192,7 @@
           "quote": "Lamotrigine was stopped due to daily headaches and insomnia"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1240,7 +1240,7 @@
           "quote": "Past medication: Lamotrigine (Lamictal), titrated to 100 mg orally twice daily approximately 2.5-3 years ago; discontinued due to persistent daily headaches and insomnia/vivid dreams (not due to rash or inefficacy)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1248,7 +1248,7 @@
           "quote": "Lamotrigine caused insomnia"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1256,7 +1256,7 @@
           "quote": "Lamotrigine caused insomnia."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.lamotrigine_was_stopped_because_of_headaches_and_insomnia",
           "source": [
             "generated_output"
@@ -1264,7 +1264,7 @@
           "quote": "Lamotrigine was stopped because of headaches and insomnia."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.sleep_difficulty",
           "source": [
             "generated_output"
@@ -1276,14 +1276,14 @@
         "audit_id": "F027",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1340,7 +1340,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1348,7 +1348,7 @@
           "quote": "Medication plan: If irritability persists or worsens after 4-6 weeks, plan a slow lamotrigine cross-titration: lamotrigine 25 mg once daily for 2 weeks, then 25 mg twice daily for 2 weeks, then 50 mg twice daily, with a slower-than-standard schedule given prior intolerance; levetiracetam would be reduced only after reaching a therapeutic lamotrigine dose; written schedule to be provided if initiated."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1356,7 +1356,7 @@
           "quote": "Lamotrigine was previously used when epilepsy treatment began."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1364,7 +1364,7 @@
           "quote": "Lamotrigine was previously titrated to approximately 100 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1372,7 +1372,7 @@
           "quote": "Prior medication: lamotrigine was titrated to 100 mg twice daily approximately 3 years ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1380,7 +1380,7 @@
           "quote": "No rash with prior lamotrigine trial."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1388,7 +1388,7 @@
           "quote": "Lamotrigine caused daily headaches."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1416,11 +1416,11 @@
         "audit_id": "F028",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max",
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max",
           "glm-5p2",
           "kimi-k3"
         ],
@@ -1479,7 +1479,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1495,7 +1495,7 @@
           "quote": "Lamotrigine was the first antiepileptic drug tried at diagnosis; titrated to 100 mg twice daily; discontinued due to daily headaches and insomnia (not rash); switched to levetiracetam."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1503,7 +1503,7 @@
           "quote": "Lamotrigine was stopped because of daily headaches."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1511,7 +1511,7 @@
           "quote": "Lamotrigine was discontinued because of daily headaches and insomnia."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1527,7 +1527,7 @@
           "quote": "Past medication: Lamotrigine (Lamictal), titrated to 100 mg orally twice daily approximately 2.5-3 years ago; discontinued due to persistent daily headaches and insomnia/vivid dreams (not due to rash or inefficacy)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1539,13 +1539,13 @@
         "audit_id": "F030",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1602,7 +1602,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1618,7 +1618,7 @@
           "quote": "If irritability persists or worsens over the next 4-6 weeks, initiate lamotrigine cross-titration with a slow schedule: 25 mg once daily for 2 weeks, then 25 mg twice daily for 2 weeks, then 50 mg twice daily, and so on; titration slower than standard schedule due to prior headaches with lamotrigine; take with food."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1626,7 +1626,7 @@
           "quote": "If cross-titration is started, lamotrigine is planned at 25 mg once daily for 2 weeks."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1634,7 +1634,7 @@
           "quote": "The proposed lamotrigine schedule is 25 mg once daily for two weeks."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1658,7 +1658,7 @@
           "quote": "If irritability plateaus or worsens, begin lamotrigine cross-titration: 25 mg orally once daily for 2 weeks, then 25 mg orally twice daily for 2 weeks, then 50 mg orally twice daily, with slower-than-standard titration given prior headache history; counseled to stop and call immediately for any rash, fever, or mouth sores."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -1670,14 +1670,14 @@
         "audit_id": "F051",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1732,7 +1732,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1748,7 +1748,7 @@
           "quote": "Continue cetirizine, vitamin D3, and ibuprofen as currently used."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1764,7 +1764,7 @@
           "quote": "Continue cetirizine as needed, vitamin D daily, and ibuprofen as needed, as confirmed in the visit summary."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1776,11 +1776,11 @@
         "audit_id": "F053",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1837,7 +1837,7 @@
           "quote": "Irritability is worst in the evenings; patient reports snapping at wife, children, and dog."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.irritability",
           "source": [
             "generated_output"
@@ -1845,7 +1845,7 @@
           "quote": "Irritability was worst in the evenings."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.irritability",
           "source": [
             "generated_output"
@@ -1853,7 +1853,7 @@
           "quote": "Irritability was characterized by snapping at wife, children, and dog."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.irritability",
           "source": [
             "generated_output"
@@ -1866,9 +1866,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1925,7 +1925,7 @@
           "quote": "Lamotrigine was the first antiepileptic drug tried at diagnosis; titrated to 100 mg twice daily; discontinued due to daily headaches and insomnia (not rash); switched to levetiracetam."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.lamotrigine",
           "source": [
             "generated_output"
@@ -1933,7 +1933,7 @@
           "quote": "Lamotrigine was previously used when epilepsy treatment began."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.lamotrigine",
           "source": [
             "generated_output"
@@ -1941,7 +1941,7 @@
           "quote": "Lamotrigine was previously titrated to approximately 100 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.lamotrigine",
           "source": [
             "generated_output"
@@ -1949,7 +1949,7 @@
           "quote": "Lamotrigine was stopped due to daily headaches and insomnia."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.lamotrigine",
           "source": [
             "generated_output"
@@ -1962,10 +1962,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2022,7 +2022,7 @@
           "quote": "Levetiracetam was at 500 mg twice daily for approximately 2 years before the recent increase to 750 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.levetiracetam",
           "source": [
             "generated_output"
@@ -2030,7 +2030,7 @@
           "quote": "Levetiracetam was increased from 500 mg twice daily to 750 mg twice daily after the event."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.levetiracetam",
           "source": [
             "generated_output"
@@ -2046,7 +2046,7 @@
           "quote": "Levetiracetam was increased from 500 mg twice daily to 750 mg twice daily the following Monday after a portal message, about six weeks ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.levetiracetam",
           "source": [
             "generated_output"
@@ -2059,10 +2059,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2121,7 +2121,7 @@
           "quote": "Continue cetirizine, vitamin D3, and ibuprofen as currently used."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_vitamin_d3_2000_units_daily",
           "source": [
             "generated_output"
@@ -2142,7 +2142,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -2200,7 +2200,7 @@
           "quote": "Last EEG was almost 2 years ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.the_eeg",
           "source": [
             "generated_output"
@@ -2208,7 +2208,7 @@
           "quote": "The EEG is planned within two to three weeks."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.the_eeg",
           "source": [
             "generated_output"
@@ -2221,8 +2221,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2273,7 +2273,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.memory_impairment",
           "source": [
             "generated_output"
@@ -2281,7 +2281,7 @@
           "quote": "The patient had loss of memory after the aura."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.memory_impairment",
           "source": [
             "generated_output"
@@ -2289,7 +2289,7 @@
           "quote": "He has no memory of the event after the aura."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_patient_forgot_his_pill_box_at_home",
           "source": [
             "generated_output"
@@ -2301,9 +2301,9 @@
         "audit_id": "F136",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2354,7 +2354,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_patient_bit_his_tongue_during_the_seizure",
           "source": [
             "generated_output"
@@ -2362,7 +2362,7 @@
           "quote": "The patient bit his tongue during the seizure."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_patient_bit_his_tongue_during_the_seizure",
           "source": [
             "generated_output"
@@ -2370,7 +2370,7 @@
           "quote": "The patient bit his tongue during the seizure."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.he_bit_his_tongue_during_the_seizure",
           "source": [
             "generated_output"
@@ -2382,9 +2382,9 @@
         "audit_id": "F138",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "gpt-5_6-sol"
+          "gpt-5.4",
+          "qwen3-max",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -2435,7 +2435,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_patient_went_to_the_emergency_department_after_the_seizure",
           "source": [
             "generated_output"
@@ -2443,7 +2443,7 @@
           "quote": "The patient went to the emergency department after the seizure."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_patient_went_to_the_emergency_department_after_the_seizure",
           "source": [
             "generated_output"
@@ -2451,7 +2451,7 @@
           "quote": "The patient went to the emergency department after the seizure."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.patient_went_to_the_emergency_department_after_the_event",
           "source": [
             "generated_output"
@@ -2463,9 +2463,9 @@
         "audit_id": "F140",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2516,7 +2516,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.vivid_dreams_since_the_levetiracetam_increase",
           "source": [
             "generated_output"
@@ -2524,7 +2524,7 @@
           "quote": "The patient reported vivid dreams since the levetiracetam increase."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.vivid_dreams_since_the_levetiracetam_increase",
           "source": [
             "generated_output"
@@ -2532,7 +2532,7 @@
           "quote": "He reported vivid dreams since the levetiracetam increase."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.had_vivid_dreams",
           "source": [
             "generated_output"
@@ -2544,9 +2544,9 @@
         "audit_id": "F155",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2595,7 +2595,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.ibuprofen",
           "source": [
             "generated_output"
@@ -2603,7 +2603,7 @@
           "quote": "Ibuprofen was used for occasional headaches or back pain."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.ibuprofen",
           "source": [
             "generated_output"
@@ -2611,7 +2611,7 @@
           "quote": "Ibuprofen is used approximately twice per month for back pain or headache."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.ibuprofen",
           "source": [
             "generated_output"
@@ -2623,9 +2623,9 @@
         "audit_id": "F158",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2682,7 +2682,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -2690,7 +2690,7 @@
           "quote": "Lamotrigine was titrated to 100 mg twice daily in the past."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -2714,7 +2714,7 @@
           "quote": "Patient instructed to contact clinic immediately for any recurrent convulsive seizure, any event with impaired awareness, rash (especially if lamotrigine is initiated), fever, mouth sores, or worsening mood/irritability."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lamotrigine",
           "source": [
             "generated_output"
@@ -2726,11 +2726,11 @@
         "audit_id": "F164",
         "support": "5/5",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2787,7 +2787,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.pyridoxine",
           "source": [
             "generated_output"
@@ -2795,7 +2795,7 @@
           "quote": "Pyridoxine 100 mg once daily in the morning."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.pyridoxine",
           "source": [
             "generated_output"
@@ -2803,7 +2803,7 @@
           "quote": "Pyridoxine, or vitamin B6, 100 mg once daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.pyridoxine",
           "source": [
             "generated_output"
@@ -2811,7 +2811,7 @@
           "quote": "Pyridoxine 100 mg once daily in the morning."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.pyridoxine",
           "source": [
             "generated_output"
@@ -2823,10 +2823,10 @@
         "audit_id": "F170",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2879,7 +2879,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2887,7 +2887,7 @@
           "quote": "Vitamin D 2000 units daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2895,7 +2895,7 @@
           "quote": "Vitamin D 2,000 units once daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2903,7 +2903,7 @@
           "quote": "The patient takes vitamin D 2000 IU daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -2915,10 +2915,10 @@
         "audit_id": "F172",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2969,7 +2969,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_levetiracetam_750_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2977,7 +2977,7 @@
           "quote": "Continue levetiracetam 750 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_levetiracetam_750_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2985,7 +2985,7 @@
           "quote": "Continue levetiracetam 750 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_levetiracetam_750_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2997,9 +2997,9 @@
         "audit_id": "F198",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3050,7 +3050,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "risk.do_not_swim_alone",
           "source": [
             "generated_output"
@@ -3058,7 +3058,7 @@
           "quote": "Do not swim alone."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "risk.do_not_swim_alone",
           "source": [
             "generated_output"
@@ -3066,7 +3066,7 @@
           "quote": "Do not swim alone."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "risk.do_not_swim_alone",
           "source": [
             "generated_output"
@@ -3078,9 +3078,9 @@
         "audit_id": "F224",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,

@@ -8,7 +8,7 @@ Endpoints:
                                  returns the same JSON as tests/verify.py
 
 The service never calls an LLM and needs no network egress. It is an adapter
-for product/CI integration; the Harbor task layout stays the source of truth.
+for product/CI integration; the task layout stays the source of truth.
 """
 import json
 import os

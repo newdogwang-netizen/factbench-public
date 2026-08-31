@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s007_syn",
     "version": "1",
-    "sha256": "d3a3f3ce738fbb3f447aad8195d7eb139e03d80a087c7be91f785ef1e7585843",
+    "sha256": "7d9139c0e49fb6c6f412b3a7b46b82a8ccddcc33e8347530c853dd3db365ed82",
     "reviewed": false
   },
   "source": {
@@ -74,7 +74,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -90,7 +90,7 @@
           "quote": "Brief palpitations (flutters/flip-flop in chest) occur once or twice a week, lasting seconds to up to a minute, with no associated dizziness, shortness of breath, or chest pain; trending less frequent than a few months ago."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -98,7 +98,7 @@
           "quote": "There are no associated symptoms of dizziness, shortness of breath, or chest pain with the palpitations."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -106,7 +106,7 @@
           "quote": "Flutters are not associated with chest pain."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -114,7 +114,7 @@
           "quote": "The flutters are not associated with dizziness, dyspnea, or chest pain."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -130,7 +130,7 @@
           "quote": "No dizziness, shortness of breath, or chest pain associated with the flutters."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -142,14 +142,14 @@
         "audit_id": "F005",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -201,7 +201,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -225,7 +225,7 @@
           "quote": "Hypertension for approximately ten years, well controlled."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -233,7 +233,7 @@
           "quote": "Hypertension, for approximately 10 years"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.hypertension_for_approximately_10_years",
           "source": [
             "generated_output"
@@ -241,7 +241,7 @@
           "quote": "Hypertension, for approximately 10 years."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -249,7 +249,7 @@
           "quote": "Hypertension has been present for about 10 years"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.hypertension_has_been_present_for_about_10_years",
           "source": [
             "generated_output"
@@ -257,7 +257,7 @@
           "quote": "Hypertension has been present for about 10 years."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.hypertension",
           "source": [
             "generated_output"
@@ -265,7 +265,7 @@
           "quote": "Hypertension is well controlled."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -273,7 +273,7 @@
           "quote": "Hypertension has been present for approximately ten years and is well controlled"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.hypertension_has_been_present_for_approximately_ten_years_and_is_well_controlled",
           "source": [
             "generated_output"
@@ -281,7 +281,7 @@
           "quote": "Hypertension has been present for approximately ten years and is well controlled."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -289,7 +289,7 @@
           "quote": "Hypertension for about ten years, well controlled"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.hypertension_for_about_ten_years_well_controlled",
           "source": [
             "generated_output"
@@ -313,7 +313,7 @@
           "quote": "Hypertension for about ten years, well controlled."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -321,7 +321,7 @@
           "quote": "At today's visit, blood pressure was 128/76"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.at_today_s_visit_blood_pressure_was_128_76",
           "source": [
             "generated_output"
@@ -329,7 +329,7 @@
           "quote": "At today's visit, blood pressure was 128/76."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -337,7 +337,7 @@
           "quote": "Hypertension has been present for about ten years"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.hypertension",
           "source": [
             "generated_output"
@@ -349,14 +349,14 @@
         "audit_id": "F015",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -407,7 +407,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.high_cholesterol",
           "source": [
             "generated_output"
@@ -415,7 +415,7 @@
           "quote": "High cholesterol."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.high_cholesterol",
           "source": [
             "generated_output"
@@ -431,7 +431,7 @@
           "quote": "High cholesterol."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.the_patient_has_high_cholesterol",
           "source": [
             "generated_output"
@@ -443,10 +443,10 @@
         "audit_id": "F016",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash-0731",
-          "google_gemini-2_5-pro",
+          "deepseek-v4-flash",
+          "gemini-2.5-pro",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -497,7 +497,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.no_diabetes",
           "source": [
             "generated_output"
@@ -513,7 +513,7 @@
           "quote": "No diabetes."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.no_diabetes",
           "source": [
             "generated_output"
@@ -533,9 +533,9 @@
         "audit_id": "F017",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -587,7 +587,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.no_known_drug_allergies",
           "source": [
             "generated_output"
@@ -603,7 +603,7 @@
           "quote": "No known drug allergies."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.no_known_drug_allergies",
           "source": [
             "generated_output"
@@ -611,7 +611,7 @@
           "quote": "No known drug allergies."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.no_known_drug_allergies",
           "source": [
             "generated_output"
@@ -619,7 +619,7 @@
           "quote": "No known drug allergies."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.the_patient_has_no_known_drug_allergies",
           "source": [
             "generated_output"
@@ -627,7 +627,7 @@
           "quote": "The patient has no known drug allergies."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "allergy.no_known_drug_allergies",
           "source": [
             "generated_output"
@@ -647,12 +647,12 @@
         "audit_id": "F021",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max",
-          "google_gemini-2_5-pro",
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max",
+          "gemini-2.5-pro",
           "kimi-k3"
         ],
         "status": "release",
@@ -710,7 +710,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -726,7 +726,7 @@
           "quote": "Apixaban (Eliquis) 5 mg twice daily, taken with breakfast and dinner."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -734,7 +734,7 @@
           "quote": "Apixaban 5 mg twice a day."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -742,7 +742,7 @@
           "quote": "Apixaban 5 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -750,7 +750,7 @@
           "quote": "Apixaban 5 mg twice daily with breakfast and dinner."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -766,7 +766,7 @@
           "quote": "Apixaban (Eliquis) 5 mg twice daily, taken with breakfast and dinner; no missed doses; uses a days-of-the-week pill box; copay manageable with insurance."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -778,14 +778,14 @@
         "audit_id": "F022",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -842,7 +842,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.metoprolol",
           "source": [
             "generated_output"
@@ -858,7 +858,7 @@
           "quote": "Metoprolol succinate (long-acting) 25 mg twice daily, reduced from 50 mg twice daily."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.metoprolol",
           "source": [
             "generated_output"
@@ -866,7 +866,7 @@
           "quote": "Metoprolol succinate 25 mg twice a day (recently reduced from 50 mg twice a day)."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.metoprolol",
           "source": [
             "generated_output"
@@ -874,7 +874,7 @@
           "quote": "Metoprolol succinate 25 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.metoprolol",
           "source": [
             "generated_output"
@@ -882,7 +882,7 @@
           "quote": "Metoprolol succinate 25 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.metoprolol",
           "source": [
             "generated_output"
@@ -898,7 +898,7 @@
           "quote": "Metoprolol succinate 25 mg twice daily (reduced from 50 mg twice daily about six weeks ago)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.metoprolol",
           "source": [
             "generated_output"
@@ -910,14 +910,14 @@
         "audit_id": "F023",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -972,7 +972,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -988,7 +988,7 @@
           "quote": "Atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -996,7 +996,7 @@
           "quote": "Atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1004,7 +1004,7 @@
           "quote": "Atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1012,7 +1012,7 @@
           "quote": "Atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1028,7 +1028,7 @@
           "quote": "Atorvastatin 20 mg at bedtime; no muscle aches."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1040,14 +1040,14 @@
         "audit_id": "F024",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1104,7 +1104,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1120,7 +1120,7 @@
           "quote": "Lisinopril 10 mg once daily in the morning."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1128,7 +1128,7 @@
           "quote": "Lisinopril 10 mg once a day."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1136,7 +1136,7 @@
           "quote": "Lisinopril 10 mg every morning."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1144,7 +1144,7 @@
           "quote": "Lisinopril 10 mg every morning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1160,7 +1160,7 @@
           "quote": "Lisinopril 10 mg once daily in the morning; no cough."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1172,14 +1172,14 @@
         "audit_id": "F025",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1232,7 +1232,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1248,7 +1248,7 @@
           "quote": "Vitamin D 1000 units."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1256,7 +1256,7 @@
           "quote": "Vitamin D 1000 units daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1264,7 +1264,7 @@
           "quote": "Vitamin D 1000 units."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1272,7 +1272,7 @@
           "quote": "Vitamin D 1,000 units daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1288,7 +1288,7 @@
           "quote": "Vitamin D 1000 units daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1300,14 +1300,14 @@
         "audit_id": "F026",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1358,7 +1358,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -1374,7 +1374,7 @@
           "quote": "Aspirin stopped approximately two years ago when apixaban was started, to reduce bleeding risk without added benefit."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -1382,7 +1382,7 @@
           "quote": "He does not take aspirin, ibuprofen, or other NSAIDs. Aspirin was discontinued about 2 years ago when apixaban was started."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -1390,7 +1390,7 @@
           "quote": "Aspirin was stopped about 2 years ago when apixaban was started."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -1398,7 +1398,7 @@
           "quote": "Aspirin was discontinued approximately two years ago when apixaban was initiated."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -1414,7 +1414,7 @@
           "quote": "Aspirin was stopped about two years ago when apixaban was started."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -1426,14 +1426,14 @@
         "audit_id": "F027",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1484,7 +1484,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.aspirin",
           "source": [
             "generated_output"
@@ -1500,7 +1500,7 @@
           "quote": "Aspirin stopped approximately two years ago when apixaban was started, to reduce bleeding risk without added benefit."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.aspirin",
           "source": [
             "generated_output"
@@ -1508,7 +1508,7 @@
           "quote": "Patient is not taking aspirin."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.aspirin",
           "source": [
             "generated_output"
@@ -1516,7 +1516,7 @@
           "quote": "Aspirin was discontinued approximately two years ago when apixaban was initiated."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.aspirin",
           "source": [
             "generated_output"
@@ -1532,7 +1532,7 @@
           "quote": "Aspirin was stopped about two years ago when apixaban was started."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.aspirin",
           "source": [
             "generated_output"
@@ -1544,13 +1544,13 @@
         "audit_id": "F028",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1601,7 +1601,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1617,7 +1617,7 @@
           "quote": "No aspirin, no ibuprofen or NSAIDs; uses Tylenol for headaches."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1625,7 +1625,7 @@
           "quote": "He does not take aspirin, ibuprofen, or other NSAIDs. Aspirin was discontinued about 2 years ago when apixaban was started."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1633,7 +1633,7 @@
           "quote": "Patient does not use ibuprofen, Advil, or Aleve."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1641,7 +1641,7 @@
           "quote": "She does not take ibuprofen, naproxen, or other reported NSAIDs."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1657,7 +1657,7 @@
           "quote": "No aspirin and no ibuprofen or other NSAIDs."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1669,14 +1669,14 @@
         "audit_id": "F029",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1727,7 +1727,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1743,7 +1743,7 @@
           "quote": "No aspirin, no ibuprofen or NSAIDs; uses Tylenol for headaches."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1751,7 +1751,7 @@
           "quote": "Patient uses Tylenol as needed for headaches."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1759,7 +1759,7 @@
           "quote": "Patient takes Tylenol for headaches."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1775,7 +1775,7 @@
           "quote": "Acetaminophen (Tylenol) as needed for headaches."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1787,13 +1787,13 @@
         "audit_id": "F030",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1842,7 +1842,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -1858,7 +1858,7 @@
           "quote": "Sister is healthy with no heart problems or rhythm problems."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -1866,7 +1866,7 @@
           "quote": "Sister is healthy with no known heart problems."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -1874,7 +1874,7 @@
           "quote": "Sister is healthy."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -1894,11 +1894,11 @@
         "audit_id": "F032",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -1950,7 +1950,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "social_history.no_recreational_drugs_or_marijuana",
           "source": [
             "generated_output"
@@ -1966,7 +1966,7 @@
           "quote": "No recreational drugs or marijuana."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "social_history.no_marijuana_or_recreational_drug_use",
           "source": [
             "generated_output"
@@ -1978,9 +1978,9 @@
         "audit_id": "F037",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6"
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2029,7 +2029,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.wife",
           "source": [
             "generated_output"
@@ -2045,7 +2045,7 @@
           "quote": "Wife reports loud snoring but no witnessed pauses in breathing."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.wife",
           "source": [
             "generated_output"
@@ -2053,7 +2053,7 @@
           "quote": "Wife is Carol."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.wife",
           "source": [
             "generated_output"
@@ -2073,10 +2073,10 @@
         "audit_id": "F040",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -2128,7 +2128,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -2144,7 +2144,7 @@
           "quote": "Blood work ordered: electrolytes (potassium, magnesium, sodium), kidney function, and thyroid testing; to be completed in the next one to two weeks; no fasting required."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -2152,7 +2152,7 @@
           "quote": "Blood work to check electrolytes (potassium, magnesium, sodium), kidney function, and thyroid function."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -2160,7 +2160,7 @@
           "quote": "Blood work to include magnesium."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -2168,7 +2168,7 @@
           "quote": "Obtain blood testing for sodium, potassium, magnesium, renal function, and thyroid function within one to two weeks."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -2184,7 +2184,7 @@
           "quote": "Blood work ordered: electrolytes (potassium, magnesium, sodium), kidney function (apixaban dose depends partly on kidney function), and thyroid (thyroid problems can drive atrial fibrillation); to be completed in the next week or two; no fasting required."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -2196,14 +2196,14 @@
         "audit_id": "F043",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2260,7 +2260,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2276,7 +2276,7 @@
           "quote": "Continue atorvastatin 20 mg at bedtime without changes."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2284,7 +2284,7 @@
           "quote": "Continue atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2292,7 +2292,7 @@
           "quote": "Continue atorvastatin without change."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2300,7 +2300,7 @@
           "quote": "Continue atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2316,7 +2316,7 @@
           "quote": "Atorvastatin and lisinopril continued unchanged."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2328,14 +2328,14 @@
         "audit_id": "F045",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2392,7 +2392,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2408,7 +2408,7 @@
           "quote": "Continue lisinopril 10 mg once daily without changes."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2416,7 +2416,7 @@
           "quote": "Continue lisinopril 10 mg daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2424,7 +2424,7 @@
           "quote": "Continue lisinopril without change."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2432,7 +2432,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2448,7 +2448,7 @@
           "quote": "Atorvastatin and lisinopril continued unchanged."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -2460,14 +2460,14 @@
         "audit_id": "F046",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2524,7 +2524,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -2540,7 +2540,7 @@
           "quote": "Continue apixaban 5 mg twice daily without changes; emphasized importance of not missing doses."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -2548,7 +2548,7 @@
           "quote": "Continue apixaban 5 mg twice a day."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -2556,7 +2556,7 @@
           "quote": "Continue apixaban 5 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -2564,7 +2564,7 @@
           "quote": "Continue apixaban 5 mg twice daily for stroke prevention."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -2580,7 +2580,7 @@
           "quote": "Continue apixaban 5 mg twice daily as stroke protection; advised not to miss doses; no routine INR blood tests are needed with apixaban."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.apixaban",
           "source": [
             "generated_output"
@@ -2592,14 +2592,14 @@
         "audit_id": "F047",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2656,7 +2656,7 @@
           "quote": "Metoprolol was reduced from 50 mg twice daily to 25 mg twice daily approximately six weeks ago by phone due to fatigue and home pulse running in the fifties."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.metoprolol",
           "source": [
             "generated_output"
@@ -2664,7 +2664,7 @@
           "quote": "Metoprolol was reduced from 50 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.metoprolol",
           "source": [
             "generated_output"
@@ -2672,7 +2672,7 @@
           "quote": "Metoprolol was reduced approximately six weeks ago from 50 mg twice daily to 25 mg twice daily because of fatigue and home pulse readings in the 50s."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.metoprolol",
           "source": [
             "generated_output"
@@ -2688,7 +2688,7 @@
           "quote": "Metoprolol was reduced from 50 mg twice daily to 25 mg twice daily about six weeks ago; the change was made by phone because home pulse was running in the 50s with fatigue."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.metoprolol",
           "source": [
             "generated_output"
@@ -2701,11 +2701,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2764,7 +2764,7 @@
           "quote": "No waking up at night gasping for air."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.waking_up_at_night_gasping_for_air",
           "source": [
             "generated_output"
@@ -2772,7 +2772,7 @@
           "quote": "There is no waking up at night gasping for air."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.patient_does_not_wake_up_at_night_gasping_for_air",
           "source": [
             "generated_output"
@@ -2785,8 +2785,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "qwen3p8-max",
-          "gpt-5_4"
+          "qwen3-max",
+          "gpt-5.4"
         ],
         "status": "release",
         "field_stable": true,
@@ -2852,7 +2852,7 @@
           "quote": "Hyperlipidemia."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.hyperlipidemia_unspecified",
           "source": [
             "generated_output"
@@ -2860,7 +2860,7 @@
           "quote": "Hyperlipidemia is present"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.hyperlipidemia",
           "source": [
             "generated_output"
@@ -2868,7 +2868,7 @@
           "quote": "Hyperlipidemia."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.hyperlipidemia_unspecified",
           "source": [
             "generated_output"
@@ -2876,7 +2876,7 @@
           "quote": "She has hyperlipidemia"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.hyperlipidemia",
           "source": [
             "generated_output"
@@ -2884,7 +2884,7 @@
           "quote": "Hyperlipidemia."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.hyperlipidemia_unspecified",
           "source": [
             "generated_output"
@@ -2892,7 +2892,7 @@
           "quote": "Hyperlipidemia"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.hyperlipidemia",
           "source": [
             "generated_output"
@@ -2905,9 +2905,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2966,7 +2966,7 @@
           "quote": "No aspirin, no ibuprofen or NSAIDs; uses Tylenol for headaches."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.aspirin",
           "source": [
             "generated_output"
@@ -2974,7 +2974,7 @@
           "quote": "He does not take aspirin, ibuprofen, or other NSAIDs. Aspirin was discontinued about 2 years ago when apixaban was started."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.aspirin",
           "source": [
             "generated_output"
@@ -2982,7 +2982,7 @@
           "quote": "Patient is not taking aspirin."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.aspirin",
           "source": [
             "generated_output"
@@ -3003,9 +3003,9 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -3065,7 +3065,7 @@
           "quote": "Continue apixaban 5 mg twice daily without changes; emphasized importance of not missing doses."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_apixaban_5_mg_twice_a_day",
           "source": [
             "generated_output"
@@ -3073,7 +3073,7 @@
           "quote": "Continue apixaban 5 mg twice a day."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_apixaban_5_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3081,7 +3081,7 @@
           "quote": "Continue apixaban 5 mg twice daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_apixaban_5_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3094,9 +3094,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3155,7 +3155,7 @@
           "quote": "Continue metoprolol succinate 25 mg twice daily; not returning to 50 mg dose."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_metoprolol_succinate_25_mg_twice_a_day",
           "source": [
             "generated_output"
@@ -3163,7 +3163,7 @@
           "quote": "Continue metoprolol succinate 25 mg twice a day."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_metoprolol_succinate_25_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3171,7 +3171,7 @@
           "quote": "Continue metoprolol succinate 25 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_metoprolol_succinate_25_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3179,7 +3179,7 @@
           "quote": "Continue metoprolol succinate 25 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_metoprolol_succinate_25_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3187,7 +3187,7 @@
           "quote": "Continue metoprolol succinate 25 mg twice daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_metoprolol_succinate_25_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3200,11 +3200,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3263,7 +3263,7 @@
           "quote": "Continue atorvastatin 20 mg at bedtime without changes."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -3271,7 +3271,7 @@
           "quote": "Continue atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -3279,7 +3279,7 @@
           "quote": "Continue atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_atorvastatin_20_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -3287,7 +3287,7 @@
           "quote": "Continue atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_atorvastatin_without_change",
           "source": [
             "generated_output"
@@ -3295,7 +3295,7 @@
           "quote": "Continue atorvastatin without change."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_atorvastatin_without_change",
           "source": [
             "generated_output"
@@ -3308,11 +3308,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3371,7 +3371,7 @@
           "quote": "Continue lisinopril 10 mg once daily without changes."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_lisinopril_without_change",
           "source": [
             "generated_output"
@@ -3379,7 +3379,7 @@
           "quote": "Continue lisinopril without change."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_lisinopril_without_change",
           "source": [
             "generated_output"
@@ -3387,7 +3387,7 @@
           "quote": "Continue lisinopril without change."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_lisinopril_10_mg_daily",
           "source": [
             "generated_output"
@@ -3395,7 +3395,7 @@
           "quote": "Continue lisinopril 10 mg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_lisinopril_10_mg",
           "source": [
             "generated_output"
@@ -3403,7 +3403,7 @@
           "quote": "Continue lisinopril 10 mg every morning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_lisinopril_10_mg_once_daily",
           "source": [
             "generated_output"
@@ -3416,11 +3416,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "qwen3-max",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3487,7 +3487,7 @@
           "quote": "Go to the emergency room if symptoms are severe."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "risk.go_to_the_emergency_room_if_symptoms_are_severe",
           "source": [
             "generated_output"
@@ -3495,7 +3495,7 @@
           "quote": "Go to the emergency room if symptoms are severe."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "risk.go_to_the_emergency_department_if_these_symptoms_are_severe",
           "source": [
             "generated_output"
@@ -3509,8 +3509,8 @@
         "models": [
           "glm-5p2",
           "kimi-k3",
-          "qwen3p8-max",
-          "gpt-5_6-sol"
+          "qwen3-max",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -3560,7 +3560,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3568,7 +3568,7 @@
           "quote": "There are no associated symptoms of dizziness, shortness of breath, or chest pain with the palpitations"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3576,7 +3576,7 @@
           "quote": "Flutters are not associated with dizziness"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.flutters_are_not_associated_with_dizziness",
           "source": [
             "generated_output"
@@ -3584,7 +3584,7 @@
           "quote": "Flutters are not associated with dizziness."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3592,7 +3592,7 @@
           "quote": "The flutters are not associated with dizziness, dyspnea, or chest pain"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3600,7 +3600,7 @@
           "quote": "Palpitations are not associated with dizziness"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.palpitations_are_not_associated_with_dizziness",
           "source": [
             "generated_output"
@@ -3616,7 +3616,7 @@
           "quote": "No dizziness, shortness of breath, or chest pain associated with the flutters"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3624,7 +3624,7 @@
           "quote": "The flutters are not associated with dizziness"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_flutters_are_not_associated_with_dizziness",
           "source": [
             "generated_output"
@@ -3636,12 +3636,12 @@
         "audit_id": "F098",
         "support": "6/6",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3692,7 +3692,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "risk.chest_pain",
           "source": [
             "generated_output"
@@ -3700,7 +3700,7 @@
           "quote": "Chest pain."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "risk.patient_was_advised_to_call_for_chest_pain",
           "source": [
             "generated_output"
@@ -3708,7 +3708,7 @@
           "quote": "Patient was advised to call for chest pain."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "risk.call_for_chest_pain",
           "source": [
             "generated_output"
@@ -3720,9 +3720,9 @@
         "audit_id": "F136",
         "support": "3/3",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3773,7 +3773,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.longer_falling_asleep_in_the_chair",
           "source": [
             "generated_output"
@@ -3781,7 +3781,7 @@
           "quote": "Patient is no longer falling asleep in the chair."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.longer_falling_asleep_in_the_chair",
           "source": [
             "generated_output"
@@ -3789,7 +3789,7 @@
           "quote": "The patient is no longer falling asleep in the chair."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.longer_falls_asleep_in_the_chair",
           "source": [
             "generated_output"
@@ -3801,9 +3801,9 @@
         "audit_id": "F142",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3854,7 +3854,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.blood_in_urine",
           "source": [
             "generated_output"
@@ -3862,7 +3862,7 @@
           "quote": "Patient denied blood in urine."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.blood_in_urine",
           "source": [
             "generated_output"
@@ -3870,7 +3870,7 @@
           "quote": "No blood in urine."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.blood_in_the_urine",
           "source": [
             "generated_output"
@@ -3882,9 +3882,9 @@
         "audit_id": "F165",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3933,7 +3933,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.diltiazem",
           "source": [
             "generated_output"
@@ -3941,7 +3941,7 @@
           "quote": "Diltiazem was stopped and metoprolol was started over a year ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.diltiazem",
           "source": [
             "generated_output"
@@ -3949,7 +3949,7 @@
           "quote": "Diltiazem was discontinued over a year ago due to significant ankle swelling described as sausage-like."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.diltiazem",
           "source": [
             "generated_output"
@@ -3961,9 +3961,9 @@
         "audit_id": "F175",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4012,7 +4012,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.aspirin",
           "source": [
             "generated_output"
@@ -4020,7 +4020,7 @@
           "quote": "Aspirin was stopped about 2 years ago when apixaban was started."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.aspirin",
           "source": [
             "generated_output"
@@ -4028,7 +4028,7 @@
           "quote": "Aspirin was discontinued approximately two years ago when apixaban was initiated."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.aspirin",
           "source": [
             "generated_output"
@@ -4044,7 +4044,7 @@
           "quote": "Aspirin was stopped about two years ago when apixaban was started."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.aspirin",
           "source": [
             "generated_output"
@@ -4056,11 +4056,11 @@
         "audit_id": "F178",
         "support": "5/5",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4111,7 +4111,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.order_blood_work",
           "source": [
             "generated_output"
@@ -4119,7 +4119,7 @@
           "quote": "Order blood work."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.order_blood_work",
           "source": [
             "generated_output"
@@ -4127,7 +4127,7 @@
           "quote": "Order blood work."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.order_blood_work_for_electrolytes_including_potassium_magnesium_and_sodium",
           "source": [
             "generated_output"
@@ -4135,7 +4135,7 @@
           "quote": "Order blood work for electrolytes including potassium, magnesium, and sodium."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.order_blood_work_for_kidney_function",
           "source": [
             "generated_output"
@@ -4143,7 +4143,7 @@
           "quote": "Order blood work for kidney function."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.order_blood_work_for_thyroid_function",
           "source": [
             "generated_output"
@@ -4155,9 +4155,9 @@
         "audit_id": "F195",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -4208,7 +4208,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.weight",
           "source": [
             "generated_output"
@@ -4216,7 +4216,7 @@
           "quote": "Weight was 184."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.weight",
           "source": [
             "generated_output"
@@ -4224,7 +4224,7 @@
           "quote": "Weight is 184 pounds."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.weight",
           "source": [
             "generated_output"
@@ -4232,7 +4232,7 @@
           "quote": "Weight was 184 pounds."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.weight_was_184_pounds",
           "source": [
             "generated_output"
@@ -4244,9 +4244,9 @@
         "audit_id": "F211",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4297,7 +4297,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.avoid_binge_drinking",
           "source": [
             "generated_output"
@@ -4305,7 +4305,7 @@
           "quote": "Avoid binge drinking."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.avoid_binge_drinking",
           "source": [
             "generated_output"
@@ -4313,7 +4313,7 @@
           "quote": "Avoid binge drinking."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.avoid_binge_drinking",
           "source": [
             "generated_output"
@@ -4325,9 +4325,9 @@
         "audit_id": "F266",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,

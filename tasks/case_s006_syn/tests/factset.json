@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s006_syn",
     "version": "1",
-    "sha256": "13c4fcbdb6c7242745ee23629d2b64b926c865c4f00d329d39df3a68ffa37071",
+    "sha256": "6fecd68835ab3b69b4d3203b775732901e927b07c166578b37a3be69a68502e1",
     "reviewed": false
   },
   "source": {
@@ -80,7 +80,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -96,7 +96,7 @@
           "quote": "Levothyroxine 75 micrograms once daily in the morning (generic)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -104,7 +104,7 @@
           "quote": "Levothyroxine 75 mcg once daily in the morning."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -112,7 +112,7 @@
           "quote": "Patient reported gradual improvement since increasing levothyroxine to 75 mcg about 8 to 9 months ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -120,7 +120,7 @@
           "quote": "Levothyroxine was increased to 75 mcg daily approximately eight months ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -136,7 +136,7 @@
           "quote": "Levothyroxine 75 mcg orally once daily (generic, round orange-ish tablet), currently taken in the morning."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -148,14 +148,14 @@
         "audit_id": "F004",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -204,7 +204,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.mood",
           "source": [
             "generated_output"
@@ -220,7 +220,7 @@
           "quote": "Mood is good with no depression"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "demo.mood",
           "source": [
             "generated_output"
@@ -228,7 +228,7 @@
           "quote": "Mood is reported as \"good\" with no depression."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.mood",
           "source": [
             "generated_output"
@@ -236,7 +236,7 @@
           "quote": "Mood is good."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.mood",
           "source": [
             "generated_output"
@@ -244,7 +244,7 @@
           "quote": "Mood is good."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.mood",
           "source": [
             "generated_output"
@@ -256,12 +256,12 @@
         "audit_id": "F011",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -312,7 +312,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -320,7 +320,7 @@
           "quote": "Mood is good, no depression"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.depression",
           "source": [
             "generated_output"
@@ -344,7 +344,7 @@
           "quote": "Mood is good with no depression"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -352,7 +352,7 @@
           "quote": "Mood is reported as \"good\" with no depression"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.as_good_with_no_depression",
           "source": [
             "generated_output"
@@ -360,7 +360,7 @@
           "quote": "Mood is reported as \"good\" with no depression."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -368,7 +368,7 @@
           "quote": "Patient denied depression"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.depression",
           "source": [
             "generated_output"
@@ -376,7 +376,7 @@
           "quote": "Patient denied depression."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -384,7 +384,7 @@
           "quote": "She denies depression"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.depression",
           "source": [
             "generated_output"
@@ -392,7 +392,7 @@
           "quote": "She denies depression."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -400,7 +400,7 @@
           "quote": "Patient denies depression"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.depression",
           "source": [
             "generated_output"
@@ -424,7 +424,7 @@
           "quote": "Mood: good; no depression."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.depression",
           "source": [
             "generated_output"
@@ -432,7 +432,7 @@
           "quote": "The patient denies depression"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.depression",
           "source": [
             "generated_output"
@@ -444,14 +444,14 @@
         "audit_id": "F012",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -506,7 +506,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -514,7 +514,7 @@
           "quote": "Previously on ferrous sulfate 325 mg for iron deficiency; stopped about a year ago due to constipation after ferritin returned to normal."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -538,7 +538,7 @@
           "quote": "Ferrous sulfate 325 mg — discontinued approximately 1 year ago"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -546,7 +546,7 @@
           "quote": "History of iron deficiency; was treated with ferrous sulfate which was stopped about a year ago due to constipation after ferritin levels normalized."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -554,7 +554,7 @@
           "quote": "Prior iron deficiency was treated with ferrous sulfate."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -562,7 +562,7 @@
           "quote": "Ferrous sulfate caused severe constipation."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -570,7 +570,7 @@
           "quote": "Ferrous sulfate 325 mg was stopped about a year ago or a little more."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -578,7 +578,7 @@
           "quote": "She previously took ferrous sulfate 325 mg."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -586,7 +586,7 @@
           "quote": "Ferrous sulfate was stopped approximately one year ago because of significant constipation after ferritin normalized."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -602,7 +602,7 @@
           "quote": "Iron deficiency anemia, resolved; ferrous sulfate 325 mg discontinued approximately one year ago due to constipation; ferritin had repleted to normal."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -610,7 +610,7 @@
           "quote": "The patient previously took ferrous sulfate 325."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -618,7 +618,7 @@
           "quote": "Ferrous sulfate was stopped about a year ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -630,14 +630,14 @@
         "audit_id": "F017",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -688,7 +688,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.previously_on_ferrous_sulfate_325_mg_for_iron_deficiency_stopped_about_a_year_ago_due_to_constipation_after_ferritin_returned_to_normal",
           "source": [
             "generated_output"
@@ -704,7 +704,7 @@
           "quote": "Previously on ferrous sulfate 325 mg for iron deficiency; stopped approximately 1 year ago due to constipation; iron stores had repleted"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.history_of_iron_deficiency_was_treated_with_ferrous_sulfate_which_was_stopped_about_a_year_ago_due_to_constipation_after_ferritin_levels_normalized",
           "source": [
             "generated_output"
@@ -712,7 +712,7 @@
           "quote": "History of iron deficiency; was treated with ferrous sulfate which was stopped about a year ago due to constipation after ferritin levels normalized."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.constipation",
           "source": [
             "generated_output"
@@ -720,7 +720,7 @@
           "quote": "Constipation is improved but persists mildly."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.ferrous_sulfate_was_stopped_approximately_one_year_ago_because_of_significant_constipation_after_ferritin_normalized",
           "source": [
             "generated_output"
@@ -736,7 +736,7 @@
           "quote": "Iron deficiency anemia, resolved; ferrous sulfate 325 mg discontinued approximately one year ago due to constipation; ferritin had repleted to normal."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.constipation",
           "source": [
             "generated_output"
@@ -744,7 +744,7 @@
           "quote": "Constipation is still present mildly."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.constipation_is_still_present_mildly",
           "source": [
             "generated_output"
@@ -752,7 +752,7 @@
           "quote": "Constipation is still present mildly."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.ferrous_sulfate_caused_severe_constipation",
           "source": [
             "generated_output"
@@ -760,7 +760,7 @@
           "quote": "Ferrous sulfate caused severe constipation."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.constipation",
           "source": [
             "generated_output"
@@ -768,7 +768,7 @@
           "quote": "Constipation is improved but persists."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.ferrous_sulfate_was_stopped_due_to_constipation",
           "source": [
             "generated_output"
@@ -776,7 +776,7 @@
           "quote": "Ferrous sulfate was stopped due to constipation."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.ferrous_sulfate_caused_significant_constipation",
           "source": [
             "generated_output"
@@ -788,14 +788,14 @@
         "audit_id": "F018",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
           "minimax-m3",
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -848,7 +848,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ergocalciferol",
           "source": [
             "generated_output"
@@ -856,7 +856,7 @@
           "quote": "Ergocalciferol 50,000 units once weekly (Sundays); two doses remaining."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ergocalciferol",
           "source": [
             "generated_output"
@@ -864,7 +864,7 @@
           "quote": "Ergocalciferol 50,000 units once weekly."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ergocalciferol",
           "source": [
             "generated_output"
@@ -876,9 +876,9 @@
         "audit_id": "F019",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "kimi-k2p6"
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -933,7 +933,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -949,7 +949,7 @@
           "quote": "Cetirizine 10 mg as needed for seasonal allergies (has not taken in months)"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -957,7 +957,7 @@
           "quote": "Cetirizine 10 mg as needed for seasonal allergies."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -965,7 +965,7 @@
           "quote": "Cetirizine 10 mg as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -973,7 +973,7 @@
           "quote": "Cetirizine 10 mg orally as needed for seasonal symptoms."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -989,7 +989,7 @@
           "quote": "Cetirizine (Zyrtec) 10 mg orally as needed for seasonal allergies; last taken several months ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -1001,14 +1001,14 @@
         "audit_id": "F020",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1061,7 +1061,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.multivitamin",
           "source": [
             "generated_output"
@@ -1077,7 +1077,7 @@
           "quote": "Multivitamin (gummy), one daily, morning with breakfast"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.multivitamin",
           "source": [
             "generated_output"
@@ -1097,9 +1097,9 @@
         "audit_id": "F021",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",
@@ -1151,7 +1151,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.metamucil",
           "source": [
             "generated_output"
@@ -1167,7 +1167,7 @@
           "quote": "Metamucil (orange), most days"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.metamucil",
           "source": [
             "generated_output"
@@ -1175,7 +1175,7 @@
           "quote": "Metamucil most days."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.metamucil",
           "source": [
             "generated_output"
@@ -1183,7 +1183,7 @@
           "quote": "Metamucil is used on most days."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.metamucil",
           "source": [
             "generated_output"
@@ -1203,11 +1203,11 @@
         "audit_id": "F022",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",
@@ -1260,7 +1260,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "family_history.father_has_type_2_diabetes_and_high_blood_pressure_both_well_controlled",
           "source": [
             "generated_output"
@@ -1268,7 +1268,7 @@
           "quote": "Father has type 2 diabetes and high blood pressure, both well controlled."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "family_history.father_has_type_2_diabetes_and_high_blood_pressure",
           "source": [
             "generated_output"
@@ -1276,7 +1276,7 @@
           "quote": "Father has type 2 diabetes and high blood pressure."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1284,7 +1284,7 @@
           "quote": "Father has hypertension"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "family_history.father_has_hypertension",
           "source": [
             "generated_output"
@@ -1292,7 +1292,7 @@
           "quote": "Father has hypertension."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1300,7 +1300,7 @@
           "quote": "Blood pressure was 118/76"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1308,7 +1308,7 @@
           "quote": "Her father has hypertension"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "family_history.her_father_has_hypertension",
           "source": [
             "generated_output"
@@ -1316,7 +1316,7 @@
           "quote": "Her father has hypertension."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1324,7 +1324,7 @@
           "quote": "Blood pressure was 118/76 mmHg"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1332,7 +1332,7 @@
           "quote": "Father has hypertension"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "family_history.father_has_hypertension",
           "source": [
             "generated_output"
@@ -1348,7 +1348,7 @@
           "quote": "Father: type 2 diabetes and hypertension, both controlled on multiple medications."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1356,7 +1356,7 @@
           "quote": "Blood pressure is 118/76"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.blood_pressure_is_118_76",
           "source": [
             "generated_output"
@@ -1364,7 +1364,7 @@
           "quote": "Blood pressure is 118/76."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.the_patients_father_has_high_blood_pressure",
           "source": [
             "generated_output"
@@ -1376,13 +1376,13 @@
         "audit_id": "F026",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "deepseek-v4-flash",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1433,7 +1433,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1449,7 +1449,7 @@
           "quote": "Labs in 8 weeks: TSH, free T4, vitamin D level, CBC, ferritin"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1457,7 +1457,7 @@
           "quote": "Labs to include TSH, free T4, Vitamin D, CBC, and ferritin."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1465,7 +1465,7 @@
           "quote": "Vitamin D level will be rechecked with next labs."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1473,7 +1473,7 @@
           "quote": "The most recent vitamin D level was 24."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1489,7 +1489,7 @@
           "quote": "Repeat vitamin D level with next labs."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1501,14 +1501,14 @@
         "audit_id": "F034",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1563,7 +1563,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1579,7 +1579,7 @@
           "quote": "Started on levothyroxine 50 micrograms 2 years ago, increased to 75 micrograms approximately 8–9 months ago"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1587,7 +1587,7 @@
           "quote": "Increase Levothyroxine to 88 mcg once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1595,7 +1595,7 @@
           "quote": "Levothyroxine will be increased from 75 mcg to 88 mcg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1603,7 +1603,7 @@
           "quote": "Levothyroxine was started at 50 mcg daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1619,7 +1619,7 @@
           "quote": "Started on levothyroxine 50 mcg two years ago; increased to 75 mcg approximately eight to nine months ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1631,14 +1631,14 @@
         "audit_id": "F037",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1697,7 +1697,7 @@
           "quote": "Started on levothyroxine 50 micrograms 2 years ago, increased to 75 micrograms approximately 8–9 months ago"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.levothyroxine_was_increased_to_75_mcg_daily_approximately_eight_months_ago",
           "source": [
             "generated_output"
@@ -1718,7 +1718,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
+          "gpt-5.6-sol",
           "minimax-m3"
         ],
         "status": "release",
@@ -1776,7 +1776,7 @@
           "quote": "Fatigue is 70–75% improved but still experiences afternoon slump around 2–3 PM"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -1784,7 +1784,7 @@
           "quote": "Fatigue was described as 70% to 75% better."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -1792,7 +1792,7 @@
           "quote": "Fatigue is approximately 70% to 75% improved."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -1800,7 +1800,7 @@
           "quote": "Fatigue is 70-75% improved."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -1813,10 +1813,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1875,7 +1875,7 @@
           "quote": "Patient reports taking levothyroxine with coffee or right before breakfast 2–3 times per week, contrary to prior instructions"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.taking_levothyroxine_with_coffee_or_immediately_before_breakfast_approximately_two_to_three_times_per_week",
           "source": [
             "generated_output"
@@ -1883,7 +1883,7 @@
           "quote": "The patient reports taking levothyroxine with coffee or immediately before breakfast approximately two to three times per week."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.patient_takes_levothyroxine_with_coffee_or_immediately_before_breakfast_approximately_2_3_times_per_week",
           "source": [
             "generated_output"
@@ -1896,8 +1896,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -1958,7 +1958,7 @@
           "quote": "Vitamin D deficiency; last level 24, improved from initial level of 18"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1966,7 +1966,7 @@
           "quote": "Vitamin D deficiency."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1974,7 +1974,7 @@
           "quote": "Vitamin D deficiency is present."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1982,7 +1982,7 @@
           "quote": "Vitamin D deficiency."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1998,7 +1998,7 @@
           "quote": "Vitamin D deficiency."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2011,12 +2011,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2075,7 +2075,7 @@
           "quote": "Take levothyroxine with full glass of plain water, first thing in the morning, wait 30–60 minutes before coffee or food"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.take_levothyroxine_with_a_full_glass_of_plain_water",
           "source": [
             "generated_output"
@@ -2083,7 +2083,7 @@
           "quote": "Take levothyroxine with a full glass of plain water."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.take_levothyroxine_with_a_full_glass_of_plain_water",
           "source": [
             "generated_output"
@@ -2104,8 +2104,8 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "kimi-k2p6",
-          "qwen3p8-max",
+          "kimi-k2",
+          "qwen3-max",
           "minimax-m3"
         ],
         "status": "release",
@@ -2165,7 +2165,7 @@
           "quote": "New prescription for levothyroxine 88 micrograms to be sent to CVS on Route 9"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.a_new_prescription_will_be_sent_to_the_cvs_on_route_9",
           "source": [
             "generated_output"
@@ -2173,7 +2173,7 @@
           "quote": "A new prescription will be sent to the CVS on Route 9."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.new_levothyroxine_prescription_will_be_sent_to_cvs_on_route_9",
           "source": [
             "generated_output"
@@ -2189,7 +2189,7 @@
           "quote": "New prescription to be sent to CVS on Route Nine."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.the_new_levothyroxine_prescription_will_be_sent_to_the_pharmacy_today",
           "source": [
             "generated_output"
@@ -2202,10 +2202,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
+          "gemini-2.5-pro",
+          "gpt-5.4",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2256,7 +2256,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.she_uses_metamucil_most_days",
           "source": [
             "generated_output"
@@ -2264,7 +2264,7 @@
           "quote": "She uses Metamucil most days."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.she_uses_metamucil_most_days",
           "source": [
             "generated_output"
@@ -2272,7 +2272,7 @@
           "quote": "She uses Metamucil most days."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.patient_uses_metamucil_most_days",
           "source": [
             "generated_output"
@@ -2284,9 +2284,9 @@
         "audit_id": "F097",
         "support": "3/3",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "gpt-5_4"
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "gpt-5.4"
         ],
         "status": "release",
         "field_stable": true,
@@ -2337,7 +2337,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.skin",
           "source": [
             "generated_output"
@@ -2345,7 +2345,7 @@
           "quote": "**Skin:**"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.lotion_controls_the_dry_skin",
           "source": [
             "generated_output"
@@ -2353,7 +2353,7 @@
           "quote": "Lotion controls the dry skin."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.lotion_controls_the_dry_skin",
           "source": [
             "generated_output"
@@ -2365,9 +2365,9 @@
         "audit_id": "F098",
         "support": "3/3",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2418,7 +2418,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.vitamin_d_deficiency",
           "source": [
             "generated_output"
@@ -2426,7 +2426,7 @@
           "quote": "Vitamin D deficiency."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.vitamin_d_deficiency_is_present",
           "source": [
             "generated_output"
@@ -2434,7 +2434,7 @@
           "quote": "Vitamin D deficiency is present."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.vitamin_d_deficiency",
           "source": [
             "generated_output"
@@ -2442,7 +2442,7 @@
           "quote": "Vitamin D deficiency."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.vitamin_d_deficiency",
           "source": [
             "generated_output"
@@ -2458,7 +2458,7 @@
           "quote": "Vitamin D deficiency."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.vitamin_d_deficiency_previous_level_18_current_level_24",
           "source": [
             "generated_output"
@@ -2470,11 +2470,11 @@
         "audit_id": "F109",
         "support": "5/5",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "minimax-m3",
-          "kimi-k2p6"
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2525,7 +2525,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.increase_levothyroxine_to_88_mcg_once_daily",
           "source": [
             "generated_output"
@@ -2533,7 +2533,7 @@
           "quote": "Increase Levothyroxine to 88 mcg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.increase_levothyroxine_from_75_mcg_to_88_mcg_orally_once_daily",
           "source": [
             "generated_output"
@@ -2541,7 +2541,7 @@
           "quote": "Increase levothyroxine from 75 mcg to 88 mcg orally once daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.increase_levothyroxine_from_75_mcg_to_88_mcg_orally_once_daily",
           "source": [
             "generated_output"
@@ -2557,7 +2557,7 @@
           "quote": "Increase levothyroxine from 75 mcg to 88 mcg orally once daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.increase_levothyroxine_from_75_micrograms_to_88_micrograms_once_daily",
           "source": [
             "generated_output"
@@ -2569,11 +2569,11 @@
         "audit_id": "F125",
         "support": "5/5",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2622,7 +2622,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.hypothyroidism",
           "source": [
             "generated_output"
@@ -2630,7 +2630,7 @@
           "quote": "Hypothyroidism was first diagnosed about 2 years ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.hypothyroidism",
           "source": [
             "generated_output"
@@ -2638,7 +2638,7 @@
           "quote": "Hypothyroidism was diagnosed approximately two years ago after she presented with severe fatigue."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.hypothyroidism",
           "source": [
             "generated_output"
@@ -2650,9 +2650,9 @@
         "audit_id": "F137",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2703,7 +2703,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.mood_is_good",
           "source": [
             "generated_output"
@@ -2711,7 +2711,7 @@
           "quote": "Mood is good."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.mood_is_good",
           "source": [
             "generated_output"
@@ -2719,7 +2719,7 @@
           "quote": "Mood is good."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.mood_is_good",
           "source": [
             "generated_output"
@@ -2727,7 +2727,7 @@
           "quote": "Mood is good."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.mood_is_good",
           "source": [
             "generated_output"
@@ -2739,10 +2739,10 @@
         "audit_id": "F160",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2791,7 +2791,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.dinner",
           "source": [
             "generated_output"
@@ -2799,7 +2799,7 @@
           "quote": "Dinner was suggested as a good time for vitamin D3."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.dinner",
           "source": [
             "generated_output"
@@ -2807,7 +2807,7 @@
           "quote": "Dinner was suggested for vitamin D3 administration."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.dinner",
           "source": [
             "generated_output"
@@ -2819,9 +2819,9 @@
         "audit_id": "F194",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2870,7 +2870,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.levothyroxine",
           "source": [
             "generated_output"
@@ -2878,7 +2878,7 @@
           "quote": "Levothyroxine was started at 50 mcg daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.levothyroxine",
           "source": [
             "generated_output"
@@ -2886,7 +2886,7 @@
           "quote": "Levothyroxine was started at 50 mcg approximately two years ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.levothyroxine",
           "source": [
             "generated_output"
@@ -2898,9 +2898,9 @@
         "audit_id": "F208",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2951,7 +2951,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.levothyroxine_was_started_at_50_mcg_daily",
           "source": [
             "generated_output"
@@ -2959,7 +2959,7 @@
           "quote": "Levothyroxine was started at 50 mcg daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.levothyroxine_was_started_at_50_mcg_approximately_two_years_ago",
           "source": [
             "generated_output"
@@ -2967,7 +2967,7 @@
           "quote": "Levothyroxine was started at 50 mcg approximately two years ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.levothyroxine_was_started_at_50_micrograms_two_years_ago",
           "source": [
             "generated_output"
@@ -2979,9 +2979,9 @@
         "audit_id": "F209",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3032,7 +3032,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.take_levothyroxine_on_an_empty_stomach_with_plain_water",
           "source": [
             "generated_output"
@@ -3040,7 +3040,7 @@
           "quote": "Take levothyroxine on an empty stomach with plain water."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.take_levothyroxine_on_an_empty_stomach",
           "source": [
             "generated_output"
@@ -3048,7 +3048,7 @@
           "quote": "Take levothyroxine on an empty stomach."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.take_levothyroxine_on_an_empty_stomach",
           "source": [
             "generated_output"
@@ -3060,9 +3060,9 @@
         "audit_id": "F244",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,

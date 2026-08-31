@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s022_syn",
     "version": "1",
-    "sha256": "68dcd18de1d0c05637a0a7996a9c1b8b659d986ef9dae663adca8872536b734e",
+    "sha256": "2b1beb9328cc58f06ccd11ed72f04892999555afda095841a95a152be1dd1f2f",
     "reviewed": false
   },
   "source": {
@@ -76,7 +76,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.pain_flare_ramped_up_about_eight_weeks_ago_before_that_pain_was_about_4_10_now_it_is_6_10_most_days_and_8_10_on_bad_mornings",
           "source": [
             "generated_output"
@@ -92,7 +92,7 @@
           "quote": "Pain was previously around 4 out of 10, now 6 out of 10 on most days and 8 out of 10 on bad mornings."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.pain_severity_is_rated_as_a_6_10_on_average_and_an_8_10_on_bad_mornings",
           "source": [
             "generated_output"
@@ -100,7 +100,7 @@
           "quote": "Pain severity is rated as a 6/10 on average and an 8/10 on bad mornings."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.before_the_flare_pain_was_about_4_10",
           "source": [
             "generated_output"
@@ -108,7 +108,7 @@
           "quote": "Before the flare, pain was about 4/10."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.pain_was_previously_approximately_4_10",
           "source": [
             "generated_output"
@@ -116,7 +116,7 @@
           "quote": "Pain was previously approximately 4/10."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.pain_is_6_10_on_most_days",
           "source": [
             "generated_output"
@@ -132,7 +132,7 @@
           "quote": "The average pain was 6/10."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.before_the_flare_pain_was_about_4_10",
           "source": [
             "generated_output"
@@ -144,14 +144,14 @@
         "audit_id": "F002",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -200,7 +200,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -216,7 +216,7 @@
           "quote": "Pain was previously around 4 out of 10, now 6 out of 10 on most days and 8 out of 10 on bad mornings."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -224,7 +224,7 @@
           "quote": "Pain is primarily located in the neck, shoulders, upper back, lower back, and hips, and sometimes the knees."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -232,7 +232,7 @@
           "quote": "Pain was mainly in the neck."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -240,7 +240,7 @@
           "quote": "Pain was previously approximately 4/10."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -248,7 +248,7 @@
           "quote": "Pain is 6/10 on most days."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.pain",
           "source": [
             "generated_output"
@@ -260,13 +260,13 @@
         "audit_id": "F003",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -317,7 +317,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.pain_is_better_with_heat_hot_showers_and_gentle_stretching_worse_with_cold_damp_weather_sitting_too_long_and_stress",
           "source": [
             "generated_output"
@@ -345,7 +345,7 @@
         "audit_id": "F004",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
           "kimi-k3"
         ],
@@ -398,7 +398,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.loud_snoring_sometimes_gasping_witnessed_apneas_about_once_or_daytime_sleepiness_especially_after_lunch_and_waking_with_dry_mouth_sometimes",
           "source": [
             "generated_output"
@@ -406,7 +406,7 @@
           "quote": "Patient reports loud snoring, sometimes gasping, witnessed apneas about once or twice a week, daytime sleepiness especially after lunch, and waking with dry mouth sometimes."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.loud_snoring",
           "source": [
             "generated_output"
@@ -414,7 +414,7 @@
           "quote": "The patient’s partner reports loud snoring."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.loud_snoring",
           "source": [
             "generated_output"
@@ -426,9 +426,9 @@
         "audit_id": "F010",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "deepseek-v4-flash",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -478,7 +478,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -486,7 +486,7 @@
           "quote": "Patient reports dizziness started when duloxetine was initiated six weeks ago, lasted about ten days, and has resolved"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.dizziness_started_when_duloxetine_was_initiated_six_weeks_ago_lasted_about_ten_days_and_has_resolved",
           "source": [
             "generated_output"
@@ -510,7 +510,7 @@
           "quote": "Dizziness started 6 weeks ago when duloxetine was started, lasted about 10 days, and then resolved."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -518,7 +518,7 @@
           "quote": "Dizziness and nausea, which began with the initiation of duloxetine 6 weeks ago, have resolved"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.dizziness_and_nausea_which_began_with_the_initiation_of_duloxetine_6_weeks_ago_have_resolved",
           "source": [
             "generated_output"
@@ -526,7 +526,7 @@
           "quote": "Dizziness and nausea, which began with the initiation of duloxetine 6 weeks ago, have resolved."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -534,7 +534,7 @@
           "quote": "Dizziness lasted about 10 days"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.dizziness_lasted_about_10_days",
           "source": [
             "generated_output"
@@ -542,7 +542,7 @@
           "quote": "Dizziness lasted about 10 days."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "risk.patient_was_advised_to_call_the_clinic_or_urgent_care_sooner_if_severe_dizziness_occurs",
           "source": [
             "generated_output"
@@ -550,7 +550,7 @@
           "quote": "Patient was advised to call the clinic or urgent care sooner if severe dizziness occurs."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -558,7 +558,7 @@
           "quote": "Dizziness and nausea developed during the first week after starting duloxetine"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.dizziness_and_nausea_developed_during_the_first_week_after_starting_duloxetine",
           "source": [
             "generated_output"
@@ -566,7 +566,7 @@
           "quote": "Dizziness and nausea developed during the first week after starting duloxetine."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "risk.contact_the_clinic_or_seek_urgent_care_sooner_for_severe_dizziness",
           "source": [
             "generated_output"
@@ -574,7 +574,7 @@
           "quote": "Contact the clinic or seek urgent care sooner for severe dizziness."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -582,7 +582,7 @@
           "quote": "Dizziness lasted approximately ten days"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.dizziness_lasted_approximately_ten_days",
           "source": [
             "generated_output"
@@ -590,7 +590,7 @@
           "quote": "Dizziness lasted approximately ten days."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.patient_instructed_to_call_clinic_or_urgent_care_sooner_for_severe_dizziness",
           "source": [
             "generated_output"
@@ -614,7 +614,7 @@
           "quote": "The dizziness lasted about ten days."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -622,7 +622,7 @@
           "quote": "Dizziness lasted about ten days"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.dizziness_lasted_about_ten_days",
           "source": [
             "generated_output"
@@ -630,7 +630,7 @@
           "quote": "Dizziness lasted about ten days."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "risk.for_severe_dizziness_call_the_clinic_or_urgent_care_sooner",
           "source": [
             "generated_output"
@@ -642,14 +642,14 @@
         "audit_id": "F012",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -700,7 +700,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -716,7 +716,7 @@
           "quote": "Dizziness started 6 weeks ago when duloxetine was started, lasted about 10 days, and then resolved."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -724,7 +724,7 @@
           "quote": "Dizziness and nausea, which began with the initiation of duloxetine 6 weeks ago, have resolved."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -732,7 +732,7 @@
           "quote": "The dizziness and nausea associated with starting duloxetine have resolved."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -744,11 +744,11 @@
         "audit_id": "F013",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -800,7 +800,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -808,7 +808,7 @@
           "quote": "Patient has no high blood pressure, no diabetes, no asthma"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "family_history.father_has_high_blood_pressure",
           "source": [
             "generated_output"
@@ -832,7 +832,7 @@
           "quote": "Father has high blood pressure."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -840,7 +840,7 @@
           "quote": "Father has a history of high blood pressure"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "family_history.father_has_a_history_of_high_blood_pressure",
           "source": [
             "generated_output"
@@ -848,7 +848,7 @@
           "quote": "Father has a history of high blood pressure."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -856,7 +856,7 @@
           "quote": "Patient denied high blood pressure"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "family_history.father_has_high_blood_pressure",
           "source": [
             "generated_output"
@@ -864,7 +864,7 @@
           "quote": "Father has high blood pressure."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -872,7 +872,7 @@
           "quote": "The patient denies hypertension"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.the_patient_denies_hypertension",
           "source": [
             "generated_output"
@@ -880,7 +880,7 @@
           "quote": "The patient denies hypertension."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "family_history.the_patients_father_has_hypertension",
           "source": [
             "generated_output"
@@ -888,7 +888,7 @@
           "quote": "The patient’s father has hypertension."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -896,7 +896,7 @@
           "quote": "No history of high blood pressure"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -904,7 +904,7 @@
           "quote": "Father has high blood pressure"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "family_history.father_has_high_blood_pressure",
           "source": [
             "generated_output"
@@ -912,7 +912,7 @@
           "quote": "Father has high blood pressure."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -920,7 +920,7 @@
           "quote": "The patient denies high blood pressure"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.the_patient_s_father_has_high_blood_pressure",
           "source": [
             "generated_output"
@@ -948,13 +948,13 @@
         "audit_id": "F018",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -1012,7 +1012,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -1028,7 +1028,7 @@
           "quote": "Duloxetine 30 mg once daily, started about 6 weeks ago."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -1036,7 +1036,7 @@
           "quote": "Increase duloxetine to 60 mg by mouth once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -1044,7 +1044,7 @@
           "quote": "Plan is to increase duloxetine from 30 mg once daily to 60 mg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -1052,7 +1052,7 @@
           "quote": "Duloxetine 30 mg orally every morning was started approximately six weeks ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -1068,7 +1068,7 @@
           "quote": "Duloxetine was planned to increase from 30 mg once daily to 60 mg once daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -1080,14 +1080,14 @@
         "audit_id": "F022",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1144,7 +1144,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.pregabalin",
           "source": [
             "generated_output"
@@ -1160,7 +1160,7 @@
           "quote": "Pregabalin 150 mg twice daily; intended dose change 4 weeks ago from 75 mg twice daily to 150 mg twice daily."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.pregabalin",
           "source": [
             "generated_output"
@@ -1168,7 +1168,7 @@
           "quote": "Pregabalin 150 mg, one capsule by mouth twice daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.pregabalin",
           "source": [
             "generated_output"
@@ -1176,7 +1176,7 @@
           "quote": "Pregabalin was increased 4 weeks ago from 75 mg twice daily to 150 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.pregabalin",
           "source": [
             "generated_output"
@@ -1184,7 +1184,7 @@
           "quote": "Pregabalin 150 mg orally twice daily is the current intended dose."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.pregabalin",
           "source": [
             "generated_output"
@@ -1200,7 +1200,7 @@
           "quote": "Pregabalin 150 mg twice daily was the intended current dose."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.pregabalin",
           "source": [
             "generated_output"
@@ -1212,14 +1212,14 @@
         "audit_id": "F023",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1276,7 +1276,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -1292,7 +1292,7 @@
           "quote": "Acetaminophen 500 mg, 2 tablets twice a day as needed for pain, not taken every day."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -1300,7 +1300,7 @@
           "quote": "Acetaminophen 500 mg, two tablets by mouth twice daily as needed for pain."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -1308,7 +1308,7 @@
           "quote": "Acetaminophen 500 mg, two tablets orally twice daily as needed, is not taken every day."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -1324,7 +1324,7 @@
           "quote": "Acetaminophen 500 mg tablets were current as two tablets twice daily as needed."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.acetaminophen",
           "source": [
             "generated_output"
@@ -1336,13 +1336,13 @@
         "audit_id": "F025",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1399,7 +1399,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1415,7 +1415,7 @@
           "quote": "Levothyroxine 75 mcg once daily for thyroid."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1423,7 +1423,7 @@
           "quote": "Levothyroxine 75 mcg, one tablet by mouth once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1431,7 +1431,7 @@
           "quote": "Current medication is levothyroxine 75 mcg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1439,7 +1439,7 @@
           "quote": "Levothyroxine 75 micrograms orally once daily is taken for hypothyroidism."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1455,7 +1455,7 @@
           "quote": "Levothyroxine 75 micrograms once daily was current."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -1467,14 +1467,14 @@
         "audit_id": "F026",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1525,7 +1525,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "family_history.no_known_family_history_of_sleep_apnea",
           "source": [
             "generated_output"
@@ -1541,7 +1541,7 @@
           "quote": "No known family history of sleep apnea."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "family_history.no_known_family_history_of_sleep_apnea",
           "source": [
             "generated_output"
@@ -1549,7 +1549,7 @@
           "quote": "No known family history of sleep apnea."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.no_known_family_history_of_sleep_apnea",
           "source": [
             "generated_output"
@@ -1557,7 +1557,7 @@
           "quote": "No known family history of sleep apnea."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "family_history.the_patient_is_not_aware_of_any_family_history_of_sleep_apnea",
           "source": [
             "generated_output"
@@ -1569,11 +1569,11 @@
         "audit_id": "F029",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
-          "qwen3p8-max",
-          "gpt-5_6-sol"
+          "kimi-k2",
+          "qwen3-max",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -1624,7 +1624,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "social_history.patient_does_gentle_walking_limited_by_pain",
           "source": [
             "generated_output"
@@ -1640,7 +1640,7 @@
           "quote": "Exercise is gentle walking twice a week, limited by pain."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "social_history.the_patient_engages_in_gentle_walking_which_is_limited_by_pain",
           "source": [
             "generated_output"
@@ -1648,7 +1648,7 @@
           "quote": "The patient engages in gentle walking twice a week, which is limited by pain."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "social_history.walking_is_limited_by_pain",
           "source": [
             "generated_output"
@@ -1656,7 +1656,7 @@
           "quote": "Walking is limited by pain."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "social_history.exercise_is_limited_by_pain",
           "source": [
             "generated_output"
@@ -1664,7 +1664,7 @@
           "quote": "Exercise is limited by pain."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "social_history.exercise_is_limited_by_pain",
           "source": [
             "generated_output"
@@ -1672,7 +1672,7 @@
           "quote": "Exercise is limited by pain."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "social_history.exercise_is_limited_by_pain",
           "source": [
             "generated_output"
@@ -1684,13 +1684,13 @@
         "audit_id": "F034",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1740,7 +1740,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -1748,7 +1748,7 @@
           "quote": "Patient was advised to call the clinic or urgent care sooner if worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems occur"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "risk.patient_was_advised_to_call_the_clinic_or_urgent_care_sooner_if_worsening_mood_agitation_suicidal_thoughts_severe_dizziness_falls_rash_or_breathing_problems_occur",
           "source": [
             "generated_output"
@@ -1772,7 +1772,7 @@
           "quote": "If worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems occur, patient should call the clinic or urgent care sooner."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -1780,7 +1780,7 @@
           "quote": "The patient was advised to call the clinic or seek urgent care if she experiences worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "risk.the_patient_was_advised_to_call_the_clinic_or_seek_urgent_care_if_she_experiences_worsening_mood_agitation_suicidal_thoughts_severe_dizziness_falls_rash_or_breathing_problems",
           "source": [
             "generated_output"
@@ -1788,7 +1788,7 @@
           "quote": "The patient was advised to call the clinic or seek urgent care if she experiences worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -1796,7 +1796,7 @@
           "quote": "Patient reported a little more dizziness for the first 2 nights after correcting the pregabalin dose"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -1804,7 +1804,7 @@
           "quote": "Pregabalin 150 mg twice daily caused a little more dizziness for the first two nights after correcting the dose"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "risk.call_clinic_or_urgent_care_sooner_for_worsening_mood_agitation_suicidal_thoughts_severe_dizziness_falls_rash_or_breathing_problems",
           "source": [
             "generated_output"
@@ -1812,7 +1812,7 @@
           "quote": "Call clinic or urgent care sooner for worsening mood, agitation, suicidal thoughts, severe dizziness, falls, rash, or breathing problems."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -1820,7 +1820,7 @@
           "quote": "After correcting the pregabalin dose, the patient had more dizziness for the first two nights"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.more_dizziness_for_the_first_two_nights",
           "source": [
             "generated_output"
@@ -1832,12 +1832,12 @@
         "audit_id": "F036",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1888,7 +1888,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.fibromyalgia_as_the_reason_for_follow_up_and_medication_check",
           "source": [
             "generated_output"
@@ -1904,7 +1904,7 @@
           "quote": "Fibromyalgia."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.patient_has_fibromyalgia",
           "source": [
             "generated_output"
@@ -1912,7 +1912,7 @@
           "quote": "Patient has fibromyalgia."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.fibromyalgia",
           "source": [
             "generated_output"
@@ -1920,7 +1920,7 @@
           "quote": "Fibromyalgia."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.fibromyalgia",
           "source": [
             "generated_output"
@@ -1936,7 +1936,7 @@
           "quote": "Fibromyalgia."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.fibromyalgia",
           "source": [
             "generated_output"
@@ -1948,13 +1948,13 @@
         "audit_id": "F037",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2005,7 +2005,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.increase_duloxetine_from_30_mg_once_daily_to_60_mg_once_daily_starting_tomorrow_morning_taken_with_food_if_too_sleepy_may_move_to_evening",
           "source": [
             "generated_output"
@@ -2021,7 +2021,7 @@
           "quote": "Increase duloxetine from 30 mg once daily to 60 mg once daily, starting tomorrow morning, taken with food."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.increase_duloxetine_from_30_mg_once_daily_to_60_mg_once_daily",
           "source": [
             "generated_output"
@@ -2029,7 +2029,7 @@
           "quote": "Increase duloxetine from 30 mg once daily to 60 mg once daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.increase_duloxetine_from_30_mg_once_daily_to_60_mg_once_daily",
           "source": [
             "generated_output"
@@ -2037,7 +2037,7 @@
           "quote": "Increase duloxetine from 30 mg once daily to 60 mg once daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.increase_duloxetine_from_30_mg_to_60_mg_once_daily_starting_tomorrow_morning",
           "source": [
             "generated_output"
@@ -2049,11 +2049,11 @@
         "audit_id": "F038",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "gpt-5_6-sol",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "gpt-5.6-sol",
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2110,7 +2110,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2126,7 +2126,7 @@
           "quote": "Continue levothyroxine at the same dose."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2134,7 +2134,7 @@
           "quote": "Continue levothyroxine 75 mcg by mouth once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2142,7 +2142,7 @@
           "quote": "Plan is to continue levothyroxine 75 mcg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2150,7 +2150,7 @@
           "quote": "Continue levothyroxine 75 micrograms daily without change."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2158,7 +2158,7 @@
           "quote": "Continue levothyroxine at the current dose."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.levothyroxine",
           "source": [
             "generated_output"
@@ -2170,13 +2170,13 @@
         "audit_id": "F039",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2227,7 +2227,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.continue_levothyroxine_75_mcg_once_daily",
           "source": [
             "generated_output"
@@ -2243,7 +2243,7 @@
           "quote": "Continue levothyroxine at the same dose."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_levothyroxine_at_the_same_dose",
           "source": [
             "generated_output"
@@ -2251,7 +2251,7 @@
           "quote": "Continue levothyroxine at the same dose."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_levothyroxine_75_mcg_by_mouth_once_daily",
           "source": [
             "generated_output"
@@ -2259,7 +2259,7 @@
           "quote": "Continue levothyroxine 75 mcg by mouth once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_levothyroxine_75_micrograms_daily_without_change",
           "source": [
             "generated_output"
@@ -2267,7 +2267,7 @@
           "quote": "Continue levothyroxine 75 micrograms daily without change."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_levothyroxine_at_the_current_dose",
           "source": [
             "generated_output"
@@ -2279,12 +2279,12 @@
         "audit_id": "F040",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "qwen3p8-max",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "qwen3-max",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2335,7 +2335,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.continue_pregabalin_150_mg_twice_daily_using_the_correct_bottle_only",
           "source": [
             "generated_output"
@@ -2343,7 +2343,7 @@
           "quote": "Continue pregabalin 150 mg twice daily, using the correct bottle only."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_pregabalin_150_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2351,7 +2351,7 @@
           "quote": "Continue pregabalin 150 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_pregabalin_150_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2359,7 +2359,7 @@
           "quote": "Continue pregabalin 150 mg twice daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_pregabalin_150_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2371,10 +2371,10 @@
         "audit_id": "F041",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "deepseek-v4-flash",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2425,7 +2425,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.continue_acetaminophen_as_needed_keeping_total_under_3000_mg_per_day_and_avoiding_alcohol_with_it",
           "source": [
             "generated_output"
@@ -2433,7 +2433,7 @@
           "quote": "Continue acetaminophen as needed, keeping total under 3000 mg per day and avoiding alcohol with it."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_acetaminophen_as_needed",
           "source": [
             "generated_output"
@@ -2441,7 +2441,7 @@
           "quote": "Continue acetaminophen as needed."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_acetaminophen_as_needed",
           "source": [
             "generated_output"
@@ -2449,7 +2449,7 @@
           "quote": "Continue acetaminophen as needed."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_acetaminophen_as_needed",
           "source": [
             "generated_output"
@@ -2461,10 +2461,10 @@
         "audit_id": "F043",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "deepseek-v4-flash",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2523,7 +2523,7 @@
           "quote": "Pain is worse with cold damp weather, sitting too long, and stress."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.the_current_pain_flare_worsened_approximately_eight_weeks_ago",
           "source": [
             "generated_output"
@@ -2544,7 +2544,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -2602,7 +2602,7 @@
           "quote": "Fatigue is significant; patient wakes up tired even after 8 hours of sleep."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -2623,7 +2623,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -2681,7 +2681,7 @@
           "quote": "Sleep is around 7 hours but not refreshing."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -2689,7 +2689,7 @@
           "quote": "Sleep is not refreshing."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -2697,7 +2697,7 @@
           "quote": "Sleep is unrefreshing despite approximately seven to eight hours of sleep."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -2705,7 +2705,7 @@
           "quote": "Sleep is unrefreshing despite approximately seven hours in bed."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.sleep",
           "source": [
             "generated_output"
@@ -2718,10 +2718,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2780,7 +2780,7 @@
           "quote": "Sleep is around 7 hours but not refreshing."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.sleep_is_not_refreshing",
           "source": [
             "generated_output"
@@ -2788,7 +2788,7 @@
           "quote": "Sleep is not refreshing."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.sleep_is_not_refreshing",
           "source": [
             "generated_output"
@@ -2801,8 +2801,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2859,7 +2859,7 @@
           "quote": "Amitriptyline was tried years ago and stopped after about 2 weeks due to dry mouth and fogginess."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "demo.amitriptyline",
           "source": [
             "generated_output"
@@ -2867,7 +2867,7 @@
           "quote": "Amitriptyline was trialed years ago and discontinued after two weeks due to side effects of dry mouth and feeling foggy."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.amitriptyline",
           "source": [
             "generated_output"
@@ -2875,7 +2875,7 @@
           "quote": "Amitriptyline was previously tried for approximately two weeks."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.amitriptyline",
           "source": [
             "generated_output"
@@ -2891,7 +2891,7 @@
           "quote": "Amitriptyline was tried years ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.amitriptyline",
           "source": [
             "generated_output"
@@ -2904,11 +2904,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2965,7 +2965,7 @@
           "quote": "Cyclobenzaprine was tried years ago at 10 mg and stopped due to next-day grogginess."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.cyclobenzaprine",
           "source": [
             "generated_output"
@@ -2981,7 +2981,7 @@
           "quote": "Cyclobenzaprine was being used about three or four nights per week."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.cyclobenzaprine",
           "source": [
             "generated_output"
@@ -2994,9 +2994,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3055,7 +3055,7 @@
           "quote": "Cyclobenzaprine was tried years ago at 10 mg and stopped due to next-day grogginess."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.cyclobenzaprine_10_mg_was_tried_years_ago",
           "source": [
             "generated_output"
@@ -3076,7 +3076,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -3140,7 +3140,7 @@
           "quote": "Cyclobenzaprine 5 mg at bedtime as needed, taken 3 or 4 nights a week."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.cyclobenzaprine",
           "source": [
             "generated_output"
@@ -3148,7 +3148,7 @@
           "quote": "Cyclobenzaprine 5 mg, one tablet by mouth at bedtime as needed for muscle tightness, used 3-4 nights per week."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.cyclobenzaprine",
           "source": [
             "generated_output"
@@ -3156,7 +3156,7 @@
           "quote": "Cyclobenzaprine 5 mg orally at bedtime as needed is taken approximately three or four nights weekly."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.cyclobenzaprine",
           "source": [
             "generated_output"
@@ -3172,7 +3172,7 @@
           "quote": "Cyclobenzaprine 5 mg at bedtime as needed was current."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.cyclobenzaprine",
           "source": [
             "generated_output"
@@ -3185,11 +3185,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3248,7 +3248,7 @@
           "quote": "Caffeine intake is one coffee in the morning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "social_history.caffeine_intake_is_one_coffee",
           "source": [
             "generated_output"
@@ -3256,7 +3256,7 @@
           "quote": "Caffeine intake is one coffee in the morning."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "social_history.caffeine_intake_is_one_coffee",
           "source": [
             "generated_output"
@@ -3269,8 +3269,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3327,7 +3327,7 @@
           "quote": "Exercise is gentle walking twice a week, limited by pain."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.exercise",
           "source": [
             "generated_output"
@@ -3335,7 +3335,7 @@
           "quote": "Exercise is limited by pain."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.exercise",
           "source": [
             "generated_output"
@@ -3343,7 +3343,7 @@
           "quote": "Exercise is limited by pain."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.exercise",
           "source": [
             "generated_output"
@@ -3356,9 +3356,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3409,7 +3409,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.a_flare_of_widespread_pain_that_began_approximately_8_weeks_ago",
           "source": [
             "generated_output"
@@ -3417,7 +3417,7 @@
           "quote": "The patient reports a flare of widespread pain that began approximately 8 weeks ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.pain_flare_began_approximately_eight_weeks_ago",
           "source": [
             "generated_output"
@@ -3425,7 +3425,7 @@
           "quote": "Pain flare began approximately eight weeks ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_pain_flare_began_about_eight_weeks_ago",
           "source": [
             "generated_output"
@@ -3437,9 +3437,9 @@
         "audit_id": "F090",
         "support": "3/3",
         "models": [
-          "google_gemini-2_5-pro",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3496,7 +3496,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -3504,7 +3504,7 @@
           "quote": "Duloxetine 30 mg, one tablet by mouth once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -3512,7 +3512,7 @@
           "quote": "Current medication is duloxetine 30 mg once daily in the morning."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -3520,7 +3520,7 @@
           "quote": "Dizziness and nausea developed during the first week after starting duloxetine."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -3536,7 +3536,7 @@
           "quote": "Duloxetine 30 mg once daily was current."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.duloxetine",
           "source": [
             "generated_output"
@@ -3548,12 +3548,12 @@
         "audit_id": "F102",
         "support": "6/6",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3604,7 +3604,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3612,7 +3612,7 @@
           "quote": "Dizziness started when duloxetine was started"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.dizziness_started_when_duloxetine_was_started",
           "source": [
             "generated_output"
@@ -3620,7 +3620,7 @@
           "quote": "Dizziness started when duloxetine was started."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.dizziness_started_about_6_weeks_ago",
           "source": [
             "generated_output"
@@ -3628,7 +3628,7 @@
           "quote": "Dizziness started about 6 weeks ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3636,7 +3636,7 @@
           "quote": "Dizziness began six weeks ago after starting duloxetine"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.dizziness_began_six_weeks_ago_after_starting_duloxetine",
           "source": [
             "generated_output"
@@ -3660,7 +3660,7 @@
           "quote": "Dizziness started when duloxetine began six weeks ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3668,7 +3668,7 @@
           "quote": "Dizziness started when duloxetine was started six weeks ago"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.dizziness_started_when_duloxetine_was_started_six_weeks_ago",
           "source": [
             "generated_output"
@@ -3680,10 +3680,10 @@
         "audit_id": "F122",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3732,7 +3732,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.hypothyroidism",
           "source": [
             "generated_output"
@@ -3740,7 +3740,7 @@
           "quote": "Hypothyroidism was diagnosed about 5 years ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.hypothyroidism",
           "source": [
             "generated_output"
@@ -3760,8 +3760,8 @@
         "audit_id": "F124",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -3811,7 +3811,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
@@ -3819,7 +3819,7 @@
           "quote": "Duloxetine was started about 6 weeks ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
@@ -3835,7 +3835,7 @@
           "quote": "Duloxetine was started six weeks ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.duloxetine",
           "source": [
             "generated_output"
@@ -3847,10 +3847,10 @@
         "audit_id": "F128",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3899,7 +3899,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.pregabalin",
           "source": [
             "generated_output"
@@ -3907,7 +3907,7 @@
           "quote": "Pregabalin was increased 4 weeks ago from 75 mg twice daily to 150 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.pregabalin",
           "source": [
             "generated_output"
@@ -3915,7 +3915,7 @@
           "quote": "Pregabalin was intended to increase from 75 mg twice daily to 150 mg twice daily four weeks ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.pregabalin",
           "source": [
             "generated_output"
@@ -3935,9 +3935,9 @@
         "audit_id": "F130",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -3989,7 +3989,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.worsened_over_the_past_two_months",
           "source": [
             "generated_output"
@@ -3997,7 +3997,7 @@
           "quote": "Fatigue has worsened over the past two months."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.worsened_over_the_last_two_months",
           "source": [
             "generated_output"
@@ -4005,7 +4005,7 @@
           "quote": "Fatigue has worsened over the last two months."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.worsened_over_the_last_two_months",
           "source": [
             "generated_output"
@@ -4017,9 +4017,9 @@
         "audit_id": "F170",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4070,7 +4070,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.brain_fog_worsens_after_poor_sleep",
           "source": [
             "generated_output"
@@ -4078,7 +4078,7 @@
           "quote": "Brain fog worsens after poor sleep."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.brain_fog_worsens_with_poor_sleep",
           "source": [
             "generated_output"
@@ -4086,7 +4086,7 @@
           "quote": "Brain fog worsens with poor sleep."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.brain_fog_worsens_with_poor_sleep",
           "source": [
             "generated_output"
@@ -4098,9 +4098,9 @@
         "audit_id": "F173",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -4149,7 +4149,7 @@
       },
       "evidence": [
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.acetaminophen",
           "source": [
             "generated_output"
@@ -4165,7 +4165,7 @@
           "quote": "Acetaminophen was not taken every day."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.acetaminophen",
           "source": [
             "generated_output"
@@ -4177,9 +4177,9 @@
         "audit_id": "F225",
         "support": "3/3",
         "models": [
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,

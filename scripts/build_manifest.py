@@ -44,7 +44,7 @@ def main():
         "version": "1.0.0",
         "protocol": "detfact-v2.0",
         "license": "Apache-2.0",
-        "homepage": "https://github.com/heidi-health/factbench",
+        "homepage": "https://github.com/newdogwang-netizen/factbench-public",
         "data_provenance": "fully synthetic (fictional patients); no real patient data",
         "gold_policy": ("note-consensus: fact enters gold with >=3 independent model "
                         "supporters and stable-field agreement (k_support=3 high-precision "

@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s023_syn",
     "version": "1",
-    "sha256": "bb820ef2018413ceaabeaf57dadbcdd3427db8d1658616db6feba7e486a3cb28",
+    "sha256": "dcd2f23ee9dd22d851bc012d149f26daf702a292b5aa07270dbddd33e9b62ee2",
     "reviewed": false
   },
   "source": {
@@ -82,7 +82,7 @@
           "quote": "Nighttime cough has resolved; gone for approximately two months."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.resolved",
           "source": [
             "generated_output"
@@ -90,7 +90,7 @@
           "quote": "The nighttime cough that was present at the last visit has resolved."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.resolved",
           "source": [
             "generated_output"
@@ -103,8 +103,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -256,7 +256,7 @@
           "quote": "Fatigue is improved compared to the fall but still present."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.fatigue",
           "source": [
             "generated_output"
@@ -271,7 +271,7 @@
           "glm-5p2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -338,7 +338,7 @@
           "quote": "Asthma."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.asthma",
           "source": [
             "generated_output"
@@ -346,7 +346,7 @@
           "quote": "Asthma."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.asthma",
           "source": [
             "generated_output"
@@ -354,7 +354,7 @@
           "quote": "Asthma."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.asthma",
           "source": [
             "generated_output"
@@ -367,9 +367,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -434,7 +434,7 @@
           "quote": "Fluticasone inhaler, 2 puffs once daily in the morning."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -442,7 +442,7 @@
           "quote": "Fluticasone (Flovent) 110 mcg inhaler, 2 puffs once daily in the morning."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -450,7 +450,7 @@
           "quote": "Fluticasone inhaler 2 puffs in the morning once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -458,7 +458,7 @@
           "quote": "Fluticasone inhaler, 2 puffs every morning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -482,7 +482,7 @@
           "quote": "Fluticasone inhaler, 2 puffs once daily in the morning."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -495,13 +495,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -564,7 +564,7 @@
           "quote": "Albuterol rescue inhaler, used as needed approximately twice a week or less."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -572,7 +572,7 @@
           "quote": "Albuterol 90 mcg rescue inhaler, 2 puffs as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -580,7 +580,7 @@
           "quote": "Albuterol rescue inhaler as needed, currently used approximately twice weekly or less."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -596,7 +596,7 @@
           "quote": "Albuterol rescue inhaler, 2 puffs as needed, used approximately twice weekly, sometimes less."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -609,11 +609,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -678,7 +678,7 @@
           "quote": "Loratadine 10 mg once daily for allergies."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -686,7 +686,7 @@
           "quote": "Loratadine 10 mg, once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -694,7 +694,7 @@
           "quote": "Loratadine 10 mg once daily for allergies."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -702,7 +702,7 @@
           "quote": "Loratadine 10 mg once daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -726,7 +726,7 @@
           "quote": "Loratadine 10 mg orally once daily for allergies."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -739,13 +739,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -806,7 +806,7 @@
           "quote": "Vitamin D 1000 IU daily."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -814,7 +814,7 @@
           "quote": "Vitamin D 1000 IU, daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -822,7 +822,7 @@
           "quote": "Vitamin D 1000 IU daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -830,7 +830,7 @@
           "quote": "Vitamin D 1,000 IU daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -854,7 +854,7 @@
           "quote": "Vitamin D 1000 IU orally once daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -867,13 +867,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -932,7 +932,7 @@
           "quote": "Occasional acetaminophen (Tylenol) for headaches."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -940,7 +940,7 @@
           "quote": "Occasional Tylenol for headaches."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -964,7 +964,7 @@
           "quote": "Acetaminophen (Tylenol) orally as needed for occasional headaches."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -977,11 +977,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1038,7 +1038,7 @@
           "quote": "Montelukast was stopped in August due to vivid dreams and feeling \"a little off.\""
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.montelukast",
           "source": [
             "generated_output"
@@ -1046,7 +1046,7 @@
           "quote": "Montelukast was stopped."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.montelukast",
           "source": [
             "generated_output"
@@ -1054,7 +1054,7 @@
           "quote": "Montelukast was stopped in August because of vivid dreams and feeling “a little off.”"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.montelukast",
           "source": [
             "generated_output"
@@ -1070,7 +1070,7 @@
           "quote": "Montelukast was stopped in August because it was giving her weird, vivid dreams and she felt a little off."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.montelukast",
           "source": [
             "generated_output"
@@ -1083,11 +1083,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1146,7 +1146,7 @@
           "quote": "Montelukast was stopped in August due to vivid dreams and feeling \"a little off.\""
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.montelukast",
           "source": [
             "generated_output"
@@ -1154,7 +1154,7 @@
           "quote": "Montelukast was stopped."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.montelukast",
           "source": [
             "generated_output"
@@ -1183,8 +1183,8 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1245,7 +1245,7 @@
           "quote": "Mother has asthma."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "family_history.mother_has_asthma",
           "source": [
             "generated_output"
@@ -1253,7 +1253,7 @@
           "quote": "Mother has asthma."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "family_history.mother_has_asthma",
           "source": [
             "generated_output"
@@ -1261,7 +1261,7 @@
           "quote": "Mother has asthma."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "family_history.mother_has_asthma",
           "source": [
             "generated_output"
@@ -1269,7 +1269,7 @@
           "quote": "Mother has asthma."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "family_history.mother_has_asthma",
           "source": [
             "generated_output"
@@ -1293,7 +1293,7 @@
           "quote": "Mother: asthma."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.mother_has_asthma",
           "source": [
             "generated_output"
@@ -1306,13 +1306,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1369,7 +1369,7 @@
           "quote": "Father is on blood pressure medications."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.father",
           "source": [
             "generated_output"
@@ -1385,7 +1385,7 @@
           "quote": "Father is on blood pressure medications."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.father",
           "source": [
             "generated_output"
@@ -1398,9 +1398,9 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
+          "gpt-5.4",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1468,7 +1468,7 @@
           "quote": "Father is on blood pressure medications."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1476,7 +1476,7 @@
           "quote": "Father is on blood pressure medications"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "family_history.father_is_on_blood_pressure_medications",
           "source": [
             "generated_output"
@@ -1484,7 +1484,7 @@
           "quote": "Father is on blood pressure medications."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1492,7 +1492,7 @@
           "quote": "Father takes blood pressure medications"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "family_history.father_takes_blood_pressure_medications",
           "source": [
             "generated_output"
@@ -1516,7 +1516,7 @@
           "quote": "Father is on blood pressure medications."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1524,7 +1524,7 @@
           "quote": "Father has hypertension"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.father_has_hypertension",
           "source": [
             "generated_output"
@@ -1532,7 +1532,7 @@
           "quote": "Father has hypertension."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1540,7 +1540,7 @@
           "quote": "Father is on blood pressure medication"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1548,7 +1548,7 @@
           "quote": "Father has hypertension and is on blood pressure medication"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "family_history.father_has_hypertension_and_is_on_blood_pressure_medication",
           "source": [
             "generated_output"
@@ -1556,7 +1556,7 @@
           "quote": "Father has hypertension and is on blood pressure medication."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1564,7 +1564,7 @@
           "quote": "Father takes medication for hypertension"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "family_history.father_takes_medication_for_hypertension",
           "source": [
             "generated_output"
@@ -1593,12 +1593,12 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
+          "qwen3-max",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
           "minimax-m3"
         ],
         "status": "release",
@@ -1656,7 +1656,7 @@
           "quote": "Sister is healthy."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -1664,7 +1664,7 @@
           "quote": "Sister is healthy."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -1672,7 +1672,7 @@
           "quote": "Sister is healthy."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -1688,7 +1688,7 @@
           "quote": "Sister is healthy."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -1701,11 +1701,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1764,7 +1764,7 @@
           "quote": "Sister is healthy."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "family_history.sister_is_healthy",
           "source": [
             "generated_output"
@@ -1772,7 +1772,7 @@
           "quote": "Sister is healthy."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "family_history.sister_is_healthy",
           "source": [
             "generated_output"
@@ -1780,7 +1780,7 @@
           "quote": "Sister is healthy."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "family_history.sister_is_healthy",
           "source": [
             "generated_output"
@@ -1804,7 +1804,7 @@
           "quote": "Sister: healthy."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.sister_is_healthy",
           "source": [
             "generated_output"
@@ -1817,12 +1817,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1881,7 +1881,7 @@
           "quote": "Referral for allergy testing."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.referral_for_allergy_testing",
           "source": [
             "generated_output"
@@ -1889,7 +1889,7 @@
           "quote": "Referral for allergy testing."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.referral_for_allergy_testing",
           "source": [
             "generated_output"
@@ -1905,7 +1905,7 @@
           "quote": "Referral for allergy testing."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.referral_for_allergy_testing",
           "source": [
             "generated_output"
@@ -1918,10 +1918,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1978,7 +1978,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -1986,7 +1986,7 @@
           "quote": "Omeprazole 20 mg, once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -1994,7 +1994,7 @@
           "quote": "Omeprazole 20 mg."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -2002,7 +2002,7 @@
           "quote": "Omeprazole 20 mg once daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -2026,7 +2026,7 @@
           "quote": "Omeprazole 20 mg orally once daily (recently self-adjusted from a self-initiated increase to 40 mg daily for approximately three weeks during November, then returned to 20 mg daily)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.omeprazole",
           "source": [
             "generated_output"
@@ -2038,13 +2038,13 @@
         "audit_id": "F050",
         "support": "7/7",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,

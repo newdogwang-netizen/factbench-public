@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s005_syn",
     "version": "1",
-    "sha256": "1275c03d9d7097c34058b00a4995b03240fa82519ab5918a9ef4e39f2be259cd",
+    "sha256": "e1c6a56565c368eb20f785e6d630dd91bbcb0204be685d4546b6cbeb772128de",
     "reviewed": false
   },
   "source": {
@@ -82,7 +82,7 @@
           "quote": "Headaches are shorter and less severe: previously 8/10 pain intensity, now 5–6/10."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -90,7 +90,7 @@
           "quote": "The pain is a throbbing sensation located behind the right eye."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -98,7 +98,7 @@
           "quote": "The patient now waits until the headache pain starts before taking sumatriptan."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -119,9 +119,9 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -181,7 +181,7 @@
           "quote": "Patient brought headache diary as requested."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_patient_brought_a_headache_diary",
           "source": [
             "generated_output"
@@ -189,7 +189,7 @@
           "quote": "The patient brought a headache diary."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_patient_brought_a_headache_diary",
           "source": [
             "generated_output"
@@ -202,8 +202,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -268,7 +268,7 @@
           "quote": "Mild persistent word-finding difficulty: tip-of-the-tongue word loss mid-sentence, worse when tired."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_word_finding_difficulty_is_worse_when_the_patient_is_tired",
           "source": [
             "generated_output"
@@ -276,7 +276,7 @@
           "quote": "The word-finding difficulty is worse when the patient is tired."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.the_clinician_stated_that_if_word_finding_difficulty_gets_worse_treatment_would_be_reconsidered",
           "source": [
             "generated_output"
@@ -290,8 +290,8 @@
         "models": [
           "glm-5p2",
           "kimi-k3",
-          "qwen3p8-max",
-          "gpt-5_4"
+          "qwen3-max",
+          "gpt-5.4"
         ],
         "status": "release",
         "field_stable": true,
@@ -356,7 +356,7 @@
           "quote": "Propranolol 60mg was stopped approximately one year ago due to fatigue, lightheadedness, low blood pressure (90/60), and ineffectiveness (still having 6–7 headaches per month)."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -364,7 +364,7 @@
           "quote": "Propranolol 60mg was discontinued about a year ago due to ineffectiveness, fatigue, lightheadedness, and low blood pressure."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -372,7 +372,7 @@
           "quote": "Propranolol was stopped about a year ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -380,7 +380,7 @@
           "quote": "Propranolol was stopped approximately one year ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -404,7 +404,7 @@
           "quote": "Propranolol discontinued approximately one year ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -417,13 +417,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -482,7 +482,7 @@
           "quote": "No known drug allergies."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.no_known_drug_allergies",
           "source": [
             "generated_output"
@@ -498,7 +498,7 @@
           "quote": "No known drug allergies."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.the_patient_has_no_known_drug_allergies",
           "source": [
             "generated_output"
@@ -506,7 +506,7 @@
           "quote": "The patient has no known drug allergies."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "allergy.no_known_drug_allergies",
           "source": [
             "generated_output"
@@ -527,10 +527,10 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max",
-          "gpt-5_6-sol",
+          "qwen3-max",
+          "gpt-5.6-sol",
           "minimax-m3"
         ],
         "status": "release",
@@ -596,7 +596,7 @@
           "quote": "Topiramate 50mg twice daily (morning and night); increased from 50mg once daily to 100mg daily in February."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.topiramate",
           "source": [
             "generated_output"
@@ -604,7 +604,7 @@
           "quote": "Topiramate 50 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.topiramate",
           "source": [
             "generated_output"
@@ -612,7 +612,7 @@
           "quote": "Topiramate 50 mg by mouth twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.topiramate",
           "source": [
             "generated_output"
@@ -636,7 +636,7 @@
           "quote": "Topiramate 50 mg orally twice daily (one tablet morning, one tablet evening); increased from 50 mg once daily at February visit."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.topiramate",
           "source": [
             "generated_output"
@@ -649,12 +649,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -717,7 +717,7 @@
           "quote": "Sumatriptan 100mg at headache onset (after pain starts, not during aura); may repeat once after 2 hours if needed (has never needed to repeat)."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.sumatriptan",
           "source": [
             "generated_output"
@@ -725,7 +725,7 @@
           "quote": "Sumatriptan 100 mg at headache onset."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.sumatriptan",
           "source": [
             "generated_output"
@@ -733,7 +733,7 @@
           "quote": "Sumatriptan 100 mg by mouth at headache onset."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.sumatriptan",
           "source": [
             "generated_output"
@@ -757,7 +757,7 @@
           "quote": "Sumatriptan 100 mg orally at headache onset; may repeat once after 2 hours if needed (patient has not needed to repeat)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.sumatriptan",
           "source": [
             "generated_output"
@@ -770,12 +770,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -848,7 +848,7 @@
           "quote": "Magnesium glycinate 400mg at night (two 200mg capsules); started in February."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.magnesium_glycinate",
           "source": [
             "generated_output"
@@ -856,7 +856,7 @@
           "quote": "Magnesium glycinate 400 mg at night. Started in February."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -864,7 +864,7 @@
           "quote": "Magnesium glycinate 400 mg at night. Started in February."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.magnesium_glycinate",
           "source": [
             "generated_output"
@@ -872,7 +872,7 @@
           "quote": "Magnesium glycinate 400 mg at night."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -880,7 +880,7 @@
           "quote": "Magnesium glycinate 400 mg at night."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.magnesium_glycinate",
           "source": [
             "generated_output"
@@ -888,7 +888,7 @@
           "quote": "Magnesium glycinate 400 mg by mouth nightly."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -896,7 +896,7 @@
           "quote": "Magnesium glycinate 400 mg by mouth nightly."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.magnesium_glycinate",
           "source": [
             "generated_output"
@@ -904,7 +904,7 @@
           "quote": "Magnesium glycinate 400 mg at night (two 200 mg capsules); started in February."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -944,7 +944,7 @@
           "quote": "Magnesium glycinate 400 mg orally at bedtime (two 200 mg capsules); started in February."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.magnesium_glycinate",
           "source": [
             "generated_output"
@@ -952,7 +952,7 @@
           "quote": "The patient takes magnesium glycinate 400 mg at night."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -965,13 +965,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1044,7 +1044,7 @@
           "quote": "Continue magnesium glycinate 400mg at night."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.magnesium_glycinate",
           "source": [
             "generated_output"
@@ -1052,7 +1052,7 @@
           "quote": "Magnesium glycinate was started in February."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -1060,7 +1060,7 @@
           "quote": "Magnesium glycinate was started in February."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.magnesium_glycinate",
           "source": [
             "generated_output"
@@ -1092,7 +1092,7 @@
           "quote": "Continue magnesium glycinate 400 mg at bedtime."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.magnesium_glycinate",
           "source": [
             "generated_output"
@@ -1100,7 +1100,7 @@
           "quote": "Magnesium glycinate 400 mg at night is part of the medication plan."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -1108,7 +1108,7 @@
           "quote": "Magnesium glycinate 400 mg at night is part of the medication plan."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.magnesium",
           "source": [
             "generated_output"
@@ -1121,12 +1121,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max",
-          "gpt-5_6-sol"
+          "qwen3-max",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -1191,7 +1191,7 @@
           "quote": "Cetirizine 10mg daily (generic Zyrtec) for allergies."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -1199,7 +1199,7 @@
           "quote": "Cetirizine 10 mg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -1207,7 +1207,7 @@
           "quote": "Cetirizine 10 mg by mouth daily for environmental allergies."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -1231,7 +1231,7 @@
           "quote": "Cetirizine 10 mg orally daily (generic Zyrtec) for allergies."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.cetirizine",
           "source": [
             "generated_output"
@@ -1244,12 +1244,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1314,7 +1314,7 @@
           "quote": "Norethindrone 0.35mg daily (progestin-only mini pill); taken at same time every day."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.norethindrone",
           "source": [
             "generated_output"
@@ -1322,7 +1322,7 @@
           "quote": "Norethindrone 0.35 mg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.norethindrone",
           "source": [
             "generated_output"
@@ -1330,7 +1330,7 @@
           "quote": "Norethindrone 0.35 mg by mouth daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.norethindrone",
           "source": [
             "generated_output"
@@ -1354,7 +1354,7 @@
           "quote": "Norethindrone 0.35 mg orally daily (progestin-only mini pill); taken at the same time each day."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.norethindrone",
           "source": [
             "generated_output"
@@ -1367,12 +1367,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1435,7 +1435,7 @@
           "quote": "Ibuprofen 400mg occasionally with sumatriptan for severe headaches."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1443,7 +1443,7 @@
           "quote": "Ibuprofen 400 mg, taken occasionally with sumatriptan for a bad headache."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1451,7 +1451,7 @@
           "quote": "The patient sometimes takes ibuprofen 400 mg with sumatriptan for bad headaches."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1459,7 +1459,7 @@
           "quote": "Ibuprofen 400 mg is sometimes taken with sumatriptan for a more severe migraine."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1483,7 +1483,7 @@
           "quote": "Ibuprofen 400 mg occasionally used in combination with sumatriptan for severe headaches; limited to a couple of times per week."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1496,13 +1496,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1561,7 +1561,7 @@
           "quote": "Vitamin D occasionally (patient reports forgetting to take it regularly)."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1569,7 +1569,7 @@
           "quote": "Vitamin D, taken sometimes."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1577,7 +1577,7 @@
           "quote": "The patient sometimes takes vitamin D."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1585,7 +1585,7 @@
           "quote": "Vitamin D is taken inconsistently."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1609,7 +1609,7 @@
           "quote": "Vitamin D taken occasionally (patient reports forgetting frequently)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1622,13 +1622,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1687,7 +1687,7 @@
           "quote": "Occupation: graphic designer."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "social_history.occupation_graphic_designer",
           "source": [
             "generated_output"
@@ -1711,7 +1711,7 @@
           "quote": "Occupation: graphic designer."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "social_history.the_patient_is_a_graphic_designer",
           "source": [
             "generated_output"
@@ -1719,7 +1719,7 @@
           "quote": "The patient is a graphic designer."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "social_history.the_patient_is_a_graphic_designer",
           "source": [
             "generated_output"
@@ -1732,11 +1732,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1803,7 +1803,7 @@
           "quote": "Continue topiramate 50mg twice daily; word-finding difficulty is tolerable, if it worsens medication would be reconsidered."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.the_clinician_stated_that_mild_and_tolerable_word_finding_difficulty_on_topiramate_could_be_observed",
           "source": [
             "generated_output"
@@ -1811,7 +1811,7 @@
           "quote": "The clinician stated that mild and tolerable word-finding difficulty on topiramate could be observed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.reconsider_the_topiramate_regimen_if_word_finding_difficulty_worsens",
           "source": [
             "generated_output"
@@ -1819,7 +1819,7 @@
           "quote": "Reconsider the topiramate regimen if word-finding difficulty worsens."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_topiramate_at_current_dose_as_long_as_word_finding_difficulty_remains_mild_and_tolerable_would_reconsider_if_it_worsens",
           "source": [
             "generated_output"
@@ -1851,7 +1851,7 @@
           "quote": "Continue topiramate 50 mg twice daily; current mild word-finding difficulty deemed tolerable and dose-related."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.symptom_reports_mild_word_finding_difficulty_which_she_attributes_to_topiramate",
           "source": [
             "generated_output"
@@ -1859,7 +1859,7 @@
           "quote": "Cognition: Reports mild word-finding difficulty, which she attributes to topiramate"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.mild_word_finding_difficulty_persists",
           "source": [
             "generated_output"
@@ -1872,13 +1872,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "google_gemini-2_5-pro",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1941,7 +1941,7 @@
           "quote": "Ibuprofen 400mg with sumatriptan for severe headaches is acceptable; not more than a couple times per week."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1949,7 +1949,7 @@
           "quote": "The clinician stated ibuprofen with sumatriptan is a reasonable combination."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1965,7 +1965,7 @@
           "quote": "Ibuprofen 400 mg may be combined with sumatriptan, limited to no more than a couple of times per week."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1978,10 +1978,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2032,7 +2032,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_headaches_are_shorter_than_before",
           "source": [
             "generated_output"
@@ -2040,7 +2040,7 @@
           "quote": "The headaches are shorter than before."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_headaches_are_shorter_than_before",
           "source": [
             "generated_output"
@@ -2048,7 +2048,7 @@
           "quote": "The headaches are shorter than before."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.headaches_are_shorter_than_previously",
           "source": [
             "generated_output"
@@ -2060,9 +2060,9 @@
         "audit_id": "F068",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "gpt-5_6-sol"
+          "gpt-5.4",
+          "qwen3-max",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -2119,7 +2119,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -2127,7 +2127,7 @@
           "quote": "The topiramate dose was increased in February from 50 mg once daily to 100 mg daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -2135,7 +2135,7 @@
           "quote": "The word-finding difficulty does not interfere with work and is currently tolerable."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -2147,9 +2147,9 @@
         "audit_id": "F100",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2198,7 +2198,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.sumatriptan",
           "source": [
             "generated_output"
@@ -2206,7 +2206,7 @@
           "quote": "Sumatriptan is used three to four times per month."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.sumatriptan",
           "source": [
             "generated_output"
@@ -2214,7 +2214,7 @@
           "quote": "Sumatriptan is used approximately 3 times per month and occasionally 4 times per month."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.sumatriptan",
           "source": [
             "generated_output"
@@ -2226,9 +2226,9 @@
         "audit_id": "F102",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2277,7 +2277,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.propranolol",
           "source": [
             "generated_output"
@@ -2285,7 +2285,7 @@
           "quote": "Propranolol was stopped about a year ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.propranolol",
           "source": [
             "generated_output"
@@ -2293,7 +2293,7 @@
           "quote": "Propranolol was stopped approximately one year ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.propranolol",
           "source": [
             "generated_output"
@@ -2305,9 +2305,9 @@
         "audit_id": "F104",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2362,7 +2362,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -2378,7 +2378,7 @@
           "quote": "Symptoms resolved within approximately one week of stopping propranolol."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -2390,9 +2390,9 @@
         "audit_id": "F105",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
+          "gpt-5.4",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2447,7 +2447,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -2455,7 +2455,7 @@
           "quote": "Propranolol caused fatigue."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -2463,7 +2463,7 @@
           "quote": "Propranolol 60 mg caused fatigue, orthostatic lightheadedness, and blood pressure around 90/60."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.propranolol",
           "source": [
             "generated_output"
@@ -2483,9 +2483,9 @@
         "audit_id": "F106",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",
@@ -2537,7 +2537,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "social_history.the_patient_drinks_one_cup_of_coffee",
           "source": [
             "generated_output"
@@ -2545,7 +2545,7 @@
           "quote": "The patient drinks one cup of coffee every morning."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "social_history.the_patient_drinks_one_cup_of_coffee",
           "source": [
             "generated_output"
@@ -2553,7 +2553,7 @@
           "quote": "The patient drinks one cup of coffee every morning."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "social_history.she_drinks_one_cup_of_coffee_at_a_consistent_time",
           "source": [
             "generated_output"
@@ -2565,9 +2565,9 @@
         "audit_id": "F114",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "gpt-5_6-sol"
+          "gpt-5.4",
+          "qwen3-max",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -2618,7 +2618,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.mild",
           "source": [
             "generated_output"
@@ -2626,7 +2626,7 @@
           "quote": "Mild ongoing word-finding difficulty occurs with topiramate and is worse when tired."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.mild",
           "source": [
             "generated_output"
@@ -2646,8 +2646,8 @@
         "audit_id": "F149",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",

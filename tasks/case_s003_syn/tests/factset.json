@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s003_syn",
     "version": "1",
-    "sha256": "e07039116c2fd0f15b69ae3627b2213649e7918a393485ec3b09ae4309c1e3b4",
+    "sha256": "5ccdf72cd41a2f17e51b9863df0a528e6a57a471759cd346cdff648051c98898",
     "reviewed": false
   },
   "source": {
@@ -75,7 +75,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -83,7 +83,7 @@
           "quote": "Follow-up visit for blood pressure and diabetes, approximately three months after last visit in July"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.follow_up_visit_for_blood_pressure_and_diabetes_approximately_three_months_after_last_visit_in_july",
           "source": [
             "generated_output"
@@ -91,7 +91,7 @@
           "quote": "Follow-up visit for blood pressure and diabetes, approximately three months after last visit in July."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -99,7 +99,7 @@
           "quote": "Hypertension diagnosed approximately six years ago"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.continue_home_blood_pressure_monitoring_twice_daily_and_bring_log_in_december",
           "source": [
             "generated_output"
@@ -107,7 +107,7 @@
           "quote": "Continue home blood pressure monitoring twice daily and bring log in December."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "risk.call_the_office_do_not_wait_for_december_visit_if_home_blood_pressure_readings_run_over_140_90_for_several_days_in_a_row",
           "source": [
             "generated_output"
@@ -147,7 +147,7 @@
           "quote": "Lisinopril 20 mg once daily in the morning to continue unchanged; blood pressure at goal."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.this_is_a_3_month_follow_up_visit_for_management_of_hypertension_and_type_2_diabetes",
           "source": [
             "generated_output"
@@ -155,7 +155,7 @@
           "quote": "This is a 3-month follow-up visit for management of hypertension and type 2 diabetes."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -163,7 +163,7 @@
           "quote": "High blood pressure, diagnosed approximately 6 years ago"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.patient_to_continue_home_blood_pressure_monitoring_twice_daily_and_bring_the_log_to_the_next_visit",
           "source": [
             "generated_output"
@@ -171,7 +171,7 @@
           "quote": "Patient to continue home blood pressure monitoring twice daily and bring the log to the next visit."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -179,7 +179,7 @@
           "quote": "Follow-up visit for blood pressure and diabetes"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.follow_up_visit_for_blood_pressure_and_diabetes",
           "source": [
             "generated_output"
@@ -187,7 +187,7 @@
           "quote": "Follow-up visit for blood pressure and diabetes."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.hypertension",
           "source": [
             "generated_output"
@@ -195,7 +195,7 @@
           "quote": "Hypertension was diagnosed about 6 years ago."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -203,7 +203,7 @@
           "quote": "Hypertension was diagnosed about 6 years ago"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.the_patient_was_instructed_to_bring_the_blood_pressure_log_again_in_december",
           "source": [
             "generated_output"
@@ -211,7 +211,7 @@
           "quote": "The patient was instructed to bring the blood pressure log again in December."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "risk.the_patient_was_instructed_to_call_sooner_if_home_blood_pressure_readings_run_over_140_90_for_several_days_in_a_row",
           "source": [
             "generated_output"
@@ -219,7 +219,7 @@
           "quote": "The patient was instructed to call sooner if home blood pressure readings run over 140/90 for several days in a row."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.the_visit_is_a_follow_up_for_hypertension_and_type_2_diabetes_mellitus",
           "source": [
             "generated_output"
@@ -227,7 +227,7 @@
           "quote": "The visit is a follow-up for hypertension and type 2 diabetes mellitus."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -235,7 +235,7 @@
           "quote": "Home blood pressure readings since the dose increase average approximately 124/76 mmHg"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.hypertension",
           "source": [
             "generated_output"
@@ -243,7 +243,7 @@
           "quote": "Hypertension was diagnosed approximately six years ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -251,7 +251,7 @@
           "quote": "Hypertension was diagnosed approximately six years ago"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.avoid_daily_ibuprofen_use_because_it_can_raise_blood_pressure_and_affect_kidney_function_particularly_with_lisinopril",
           "source": [
             "generated_output"
@@ -259,7 +259,7 @@
           "quote": "Avoid daily ibuprofen use because it can raise blood pressure and affect kidney function, particularly with lisinopril."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -267,7 +267,7 @@
           "quote": "Follow-up visit for blood pressure and diabetes management"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.follow_up_visit_for_blood_pressure_and_diabetes_management",
           "source": [
             "generated_output"
@@ -275,7 +275,7 @@
           "quote": "Follow-up visit for blood pressure and diabetes management."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -283,7 +283,7 @@
           "quote": "Hypertension diagnosed approximately six years ago"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.last_lipid_panel_approximately_nine_months_ago_showed_ldl_of_118_goal_ldl_is_under_100_ideally_closer_to_70_given_diabetes_hypertension_and_family_history",
           "source": [
             "generated_output"
@@ -359,12 +359,12 @@
         "audit_id": "F001",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -423,7 +423,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -439,7 +439,7 @@
           "quote": "Lisinopril dose was increased from 10 mg once daily to 20 mg once daily in early September (right after Labor Day) because home BP readings through July and August were running in the high 130s over mid 80s."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -447,7 +447,7 @@
           "quote": "Lisinopril was increased from 10 mg to 20 mg daily in early September due to home blood pressure readings in the high 130s over mid 80s."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -455,7 +455,7 @@
           "quote": "Lisinopril was increased from 10 mg once daily to 20 mg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -463,7 +463,7 @@
           "quote": "Lisinopril was increased from 10 mg daily to 20 mg daily in early September."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -491,12 +491,12 @@
         "audit_id": "F002",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -549,7 +549,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -565,7 +565,7 @@
           "quote": "No chest pain, chest pressure, or exertional symptoms."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -573,7 +573,7 @@
           "quote": "Patient denies chest pain, shortness of breath, orthopnea, or paroxysmal nocturnal dyspnea."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -581,7 +581,7 @@
           "quote": "The patient denies chest pain."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -589,7 +589,7 @@
           "quote": "The patient denies chest pain."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.pain",
           "source": [
             "generated_output"
@@ -617,12 +617,12 @@
         "audit_id": "F009",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -674,7 +674,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.type_2_dm_without_complications",
           "source": [
             "generated_output"
@@ -682,7 +682,7 @@
           "quote": "Type 2 diabetes diagnosed approximately four years ago"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.type_2_diabetes",
           "source": [
             "generated_output"
@@ -706,7 +706,7 @@
           "quote": "Type 2 diabetes."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.type_2_dm_without_complications",
           "source": [
             "generated_output"
@@ -714,7 +714,7 @@
           "quote": "This is a 3-month follow-up visit for management of hypertension and type 2 diabetes"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.type_2_dm_without_complications",
           "source": [
             "generated_output"
@@ -722,7 +722,7 @@
           "quote": "Type 2 diabetes was diagnosed about 4 years ago"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.type_2_dm_without_complications",
           "source": [
             "generated_output"
@@ -730,7 +730,7 @@
           "quote": "The visit is a follow-up for hypertension and type 2 diabetes mellitus"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.type_2_dm_without_complications",
           "source": [
             "generated_output"
@@ -758,12 +758,12 @@
         "audit_id": "F011",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -816,7 +816,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.type_2_diabetes_diagnosed_approximately_four_years_ago",
           "source": [
             "generated_output"
@@ -824,7 +824,7 @@
           "quote": "Type 2 diabetes diagnosed approximately four years ago."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.type_2_diabetes_diagnosed_approximately_four_years_ago",
           "source": [
             "generated_output"
@@ -856,7 +856,7 @@
           "quote": "Type 2 diabetes diagnosed approximately 4 years ago."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.type_2_diabetes_mellitus_diagnosed_approximately_4_years_ago",
           "source": [
             "generated_output"
@@ -864,7 +864,7 @@
           "quote": "Type 2 diabetes mellitus, diagnosed approximately 4 years ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.type_2_diabetes_mellitus_was_diagnosed_approximately_four_years_ago",
           "source": [
             "generated_output"
@@ -876,13 +876,13 @@
         "audit_id": "F012",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
-          "kimi-k2p6",
+          "deepseek-v4-flash",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol"
+          "gemini-2.5-pro",
+          "gpt-5.6-sol"
         ],
         "status": "release",
         "field_stable": true,
@@ -939,7 +939,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -955,7 +955,7 @@
           "quote": "Metformin 1000 mg twice daily, with breakfast and dinner, unchanged for approximately 2 years; GI upset resolved long ago."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -963,7 +963,7 @@
           "quote": "Metformin 1000 mg twice daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -971,7 +971,7 @@
           "quote": "Metformin 1000 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -979,7 +979,7 @@
           "quote": "Metformin 1,000 mg by mouth twice daily with breakfast and dinner."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -1007,12 +1007,12 @@
         "audit_id": "F014",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1071,7 +1071,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1087,7 +1087,7 @@
           "quote": "Atorvastatin 20 mg at bedtime."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1095,7 +1095,7 @@
           "quote": "Atorvastatin 20 mg once daily at bedtime."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1103,7 +1103,7 @@
           "quote": "The patient was instructed to call sooner if muscle aches occur on the higher atorvastatin dose."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1111,7 +1111,7 @@
           "quote": "The patient reports no muscle aches or cramps with atorvastatin 20 mg."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -1131,12 +1131,12 @@
         "audit_id": "F015",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",
@@ -1190,7 +1190,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1214,7 +1214,7 @@
           "quote": "Vitamin D3 1000 units daily."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1222,7 +1222,7 @@
           "quote": "Vitamin D3 1000 units daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1230,7 +1230,7 @@
           "quote": "Vitamin D3 1000 units daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1238,7 +1238,7 @@
           "quote": "Vitamin D3 1,000 units by mouth daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1258,13 +1258,13 @@
         "audit_id": "F016",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "minimax-m3",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -1318,7 +1318,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1334,7 +1334,7 @@
           "quote": "Occasional ibuprofen, approximately twice a month for knee pain."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1342,7 +1342,7 @@
           "quote": "Ibuprofen as needed, approximately twice per month."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1350,7 +1350,7 @@
           "quote": "Ibuprofen is taken occasionally."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1358,7 +1358,7 @@
           "quote": "Ibuprofen is used approximately twice monthly for knee symptoms."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1386,12 +1386,12 @@
         "audit_id": "F017",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1448,7 +1448,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.amlodipine",
           "source": [
             "generated_output"
@@ -1456,7 +1456,7 @@
           "quote": "Amlodipine 5 mg discontinued in March due to bilateral ankle swelling; swelling resolved within 2–3 weeks and has not returned."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.amlodipine",
           "source": [
             "generated_output"
@@ -1472,7 +1472,7 @@
           "quote": "Amlodipine 5 mg was stopped in March due to bilateral ankle swelling; swelling resolved within 2-3 weeks of stopping and has not recurred."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.amlodipine",
           "source": [
             "generated_output"
@@ -1480,7 +1480,7 @@
           "quote": "Discontinued amlodipine 5 mg in March."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.amlodipine",
           "source": [
             "generated_output"
@@ -1488,7 +1488,7 @@
           "quote": "Amlodipine 5 mg was stopped in March because of bilateral ankle swelling."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.amlodipine",
           "source": [
             "generated_output"
@@ -1496,7 +1496,7 @@
           "quote": "The patient is no longer taking amlodipine."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.amlodipine",
           "source": [
             "generated_output"
@@ -1504,7 +1504,7 @@
           "quote": "Prior bilateral ankle edema resolved within two to three weeks after amlodipine was stopped in March."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.amlodipine",
           "source": [
             "generated_output"
@@ -1512,7 +1512,7 @@
           "quote": "Amlodipine 5 mg was discontinued in March because of bilateral ankle edema."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.amlodipine",
           "source": [
             "generated_output"
@@ -1540,12 +1540,12 @@
         "audit_id": "F018",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1598,7 +1598,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.hemoglobin_a1c_last_value_7_2_in_july_goal_under_7",
           "source": [
             "generated_output"
@@ -1606,7 +1606,7 @@
           "quote": "Hemoglobin A1c (last value 7.2% in July; goal under 7%)."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.hemoglobin_a1c",
           "source": [
             "generated_output"
@@ -1614,7 +1614,7 @@
           "quote": "Hemoglobin A1c."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.hemoglobin_a1c",
           "source": [
             "generated_output"
@@ -1626,9 +1626,9 @@
         "audit_id": "F030",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "google_gemini-2_5-pro",
-          "kimi-k2p6"
+          "deepseek-v4-flash",
+          "gemini-2.5-pro",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -1679,7 +1679,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.fasting_lipid_panel",
           "source": [
             "generated_output"
@@ -1687,7 +1687,7 @@
           "quote": "Fasting lipid panel."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.fasting_lipid_panel",
           "source": [
             "generated_output"
@@ -1695,7 +1695,7 @@
           "quote": "Fasting lipid panel."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.fasting_lipid_panel",
           "source": [
             "generated_output"
@@ -1707,9 +1707,9 @@
         "audit_id": "F031",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "google_gemini-2_5-pro",
-          "kimi-k2p6"
+          "deepseek-v4-flash",
+          "gemini-2.5-pro",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -1766,7 +1766,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1782,7 +1782,7 @@
           "quote": "Lisinopril 20 mg once daily in the morning to continue unchanged; blood pressure at goal."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1790,7 +1790,7 @@
           "quote": "Continue Lisinopril 20 mg once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1798,7 +1798,7 @@
           "quote": "Continue lisinopril 20 mg once daily in the morning."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1806,7 +1806,7 @@
           "quote": "Continue lisinopril 20 mg by mouth once daily in the morning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.lisinopril",
           "source": [
             "generated_output"
@@ -1834,12 +1834,12 @@
         "audit_id": "F032",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1892,7 +1892,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.continue_lisinopril_20_mg_once_daily_no_change",
           "source": [
             "generated_output"
@@ -1900,7 +1900,7 @@
           "quote": "Continue lisinopril 20 mg once daily in the morning, no change."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_lisinopril_20_mg_once_daily_no_changes",
           "source": [
             "generated_output"
@@ -1924,7 +1924,7 @@
           "quote": "Continue lisinopril 20 mg once daily in the morning, no change."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_lisinopril_20_mg_once_daily",
           "source": [
             "generated_output"
@@ -1932,7 +1932,7 @@
           "quote": "Continue Lisinopril 20 mg once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_lisinopril_20_mg_once_daily",
           "source": [
             "generated_output"
@@ -1944,12 +1944,12 @@
         "audit_id": "F037",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
-          "kimi-k2p6",
+          "deepseek-v4-flash",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "google_gemini-2_5-pro",
-          "gpt-5_4"
+          "gemini-2.5-pro",
+          "gpt-5.4"
         ],
         "status": "release",
         "field_stable": true,
@@ -2006,7 +2006,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -2022,7 +2022,7 @@
           "quote": "Metformin 1000 mg twice daily to continue unchanged."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -2030,7 +2030,7 @@
           "quote": "Continue Metformin 1000 mg twice daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -2038,7 +2038,7 @@
           "quote": "Continue metformin 1000 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -2046,7 +2046,7 @@
           "quote": "Continue metformin 1,000 mg by mouth twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -2074,12 +2074,12 @@
         "audit_id": "F038",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -2132,7 +2132,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.continue_metformin_1000_mg_twice_daily_no_change",
           "source": [
             "generated_output"
@@ -2140,7 +2140,7 @@
           "quote": "Continue metformin 1000 mg twice daily, no change."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_metformin_1000_mg_twice_daily_no_changes",
           "source": [
             "generated_output"
@@ -2164,7 +2164,7 @@
           "quote": "Continue metformin 1000 mg twice daily, no change."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_metformin_1000_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2172,7 +2172,7 @@
           "quote": "Continue Metformin 1000 mg twice daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_metformin_1000_mg_twice_daily",
           "source": [
             "generated_output"
@@ -2184,12 +2184,12 @@
         "audit_id": "F039",
         "support": "6/6",
         "models": [
-          "deepseek-v4-flash-0731",
-          "kimi-k2p6",
+          "deepseek-v4-flash",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "google_gemini-2_5-pro",
-          "gpt-5_4"
+          "gemini-2.5-pro",
+          "gpt-5.4"
         ],
         "status": "release",
         "field_stable": true,
@@ -2246,7 +2246,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2262,7 +2262,7 @@
           "quote": "Atorvastatin to be increased from 20 mg to 40 mg once daily at bedtime; last LDL was 118 approximately 9 months ago, goal is under 100 and closer to 70 given diabetes, hypertension, and family history."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2270,7 +2270,7 @@
           "quote": "Increase Atorvastatin to 40 mg once daily at bedtime."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2278,7 +2278,7 @@
           "quote": "Increase atorvastatin from 20 mg to 40 mg once nightly."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2286,7 +2286,7 @@
           "quote": "Increase atorvastatin from 20 mg to 40 mg by mouth once daily at bedtime."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.atorvastatin",
           "source": [
             "generated_output"
@@ -2314,12 +2314,12 @@
         "audit_id": "F040",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -2372,7 +2372,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.increase_atorvastatin_from_20_mg_to_40_mg_once_daily_at_night",
           "source": [
             "generated_output"
@@ -2380,7 +2380,7 @@
           "quote": "Increase atorvastatin from 20 mg to 40 mg once daily at night."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.increase_atorvastatin_to_40_mg_once_daily_at_bedtime",
           "source": [
             "generated_output"
@@ -2388,7 +2388,7 @@
           "quote": "Increase Atorvastatin to 40 mg once daily at bedtime."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.increase_atorvastatin_from_20_mg_to_40_mg_once_nightly",
           "source": [
             "generated_output"
@@ -2396,7 +2396,7 @@
           "quote": "Increase atorvastatin from 20 mg to 40 mg once nightly."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.increase_atorvastatin_from_20_mg_to_40_mg_by_mouth_once_daily_at_bedtime",
           "source": [
             "generated_output"
@@ -2416,10 +2416,10 @@
         "audit_id": "F041",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "deepseek-v4-flash",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "minimax-m3"
         ],
         "status": "release",
@@ -2471,7 +2471,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.patient_instructed_to_stop_atorvastatin_and_call_same_day_if_new_muscle_pain_weakness_especially_thighs_or_shoulders_or_dark_cola_colored_urine_occurs",
           "source": [
             "generated_output"
@@ -2487,7 +2487,7 @@
           "quote": "Patient counseled to stop atorvastatin and call same day if new muscle pain or weakness occurs (especially thighs or shoulders) or if urine appears dark like cola."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.patient_counseled_to_stop_atorvastatin_and_call_if_new_muscle_pain_weakness_or_dark_urine_occurs",
           "source": [
             "generated_output"
@@ -2495,7 +2495,7 @@
           "quote": "Patient counseled to stop atorvastatin and call if new muscle pain, weakness, or dark urine occurs."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.the_patient_was_advised_to_stop_atorvastatin_and_call_the_same_day_if_she_develops_new_muscle_pain",
           "source": [
             "generated_output"
@@ -2503,7 +2503,7 @@
           "quote": "The patient was advised to stop atorvastatin and call the same day if she develops new muscle pain."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.stop_atorvastatin_and_call_the_clinician_the_same_day_for_new_muscle_pain_new_weakness_or_cola_colored_urine",
           "source": [
             "generated_output"
@@ -2511,7 +2511,7 @@
           "quote": "Stop atorvastatin and call the clinician the same day for new muscle pain, new weakness, or cola-colored urine."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.patient_instructed_to_stop_atorvastatin_and_call_the_same_day_if_new_muscle_pain_especially_in_thighs_or_shoulders_new_weakness_or_dark_cola_colored_urine_occurs",
           "source": [
             "generated_output"
@@ -2539,12 +2539,12 @@
         "audit_id": "F042",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -2597,7 +2597,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.treatment_referral_placed_to_dr",
           "source": [
             "generated_output"
@@ -2625,7 +2625,7 @@
         "audit_id": "F048",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
           "kimi-k3"
         ],
@@ -2688,7 +2688,7 @@
           "quote": "Headaches improved since lisinopril dose increase, now occurring approximately once per week, rated 2 out of 10, resolving on their own by mid-morning."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.morning_headaches_which_began_in_late_spring_may_june_have_significantly_improved_since_the_lisinopril_dose_increase",
           "source": [
             "generated_output"
@@ -2696,7 +2696,7 @@
           "quote": "Patient reports morning headaches, which began in late spring (May/June), have significantly improved since the lisinopril dose increase."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.since_the_lisinopril_dose_increase_last_month_the_headaches_are_much_better",
           "source": [
             "generated_output"
@@ -2717,8 +2717,8 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
+          "gemini-2.5-pro",
+          "gpt-5.4",
           "minimax-m3"
         ],
         "status": "release",
@@ -2776,7 +2776,7 @@
           "quote": "Sister reports patient snores occasionally when traveling together; nobody has reported breathing pauses or gasping in sleep."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.sister",
           "source": [
             "generated_output"
@@ -2797,7 +2797,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "kimi-k2p6",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",
@@ -2863,7 +2863,7 @@
           "quote": "Metformin 1000 mg twice daily, with breakfast and dinner, unchanged for approximately 2 years; GI upset resolved long ago."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.metformin",
           "source": [
             "generated_output"
@@ -2884,7 +2884,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
+          "gpt-5.4",
           "kimi-k3"
         ],
         "status": "release",
@@ -2961,7 +2961,7 @@
           "quote": "Occasional ibuprofen (twice a month) confirmed as acceptable; take with food; daily use raises blood pressure and is hard on kidneys especially with lisinopril; call if needing it more than a couple times a week."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2969,7 +2969,7 @@
           "quote": "Lisinopril was increased from 10 mg to 20 mg daily in early September due to home blood pressure readings in the high 130s over mid 80s"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2977,7 +2977,7 @@
           "quote": "The lisinopril dose was increased because home blood pressure readings in July and August were running in the high 130s over the mid 80s"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -3014,9 +3014,9 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -3085,7 +3085,7 @@
           "quote": "Patient instructed to call sooner if home BP readings run over 140/90 for several consecutive days, if top number drops under 100 with dizziness, if lightheadedness returns, or if muscle aches occur."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.dizziness_and_giddiness",
           "source": [
             "generated_output"
@@ -3093,7 +3093,7 @@
           "quote": "Patient instructed to call if home BP is consistently >140/90, systolic BP is <100 with dizziness, or if she develops muscle aches"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.patient_instructed_to_call_if_home_bp_is_consistently_140_90_systolic_bp_is_100_with_dizziness_or_if_she_develops_muscle_aches",
           "source": [
             "generated_output"
@@ -3122,7 +3122,7 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
+          "gemini-2.5-pro",
           "kimi-k3"
         ],
         "status": "release",
@@ -3172,7 +3172,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "demo.lisinopril",
           "source": [
             "generated_output"
@@ -3180,7 +3180,7 @@
           "quote": "Lisinopril was increased from 10 mg to 20 mg daily in early September due to home blood pressure readings in the high 130s over mid 80s."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.lisinopril",
           "source": [
             "generated_output"
@@ -3188,7 +3188,7 @@
           "quote": "Lisinopril was increased from 10 mg once daily to 20 mg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.lisinopril",
           "source": [
             "generated_output"
@@ -3208,9 +3208,9 @@
         "audit_id": "F100",
         "support": "4/4",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -3262,7 +3262,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.lisinopril_was_increased_from_10_mg_to_20_mg_daily_in_early_september_due_to_home_blood_pressure_readings_in_the_high_130s_over_mid_80s",
           "source": [
             "generated_output"
@@ -3270,7 +3270,7 @@
           "quote": "Lisinopril was increased from 10 mg to 20 mg daily in early September due to home blood pressure readings in the high 130s over mid 80s."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_lisinopril_dose_was_increased_because_home_blood_pressure_readings_in_july_and_august_were_running_in_the_high_130s_over_the_mid_80s",
           "source": [
             "generated_output"
@@ -3290,8 +3290,8 @@
         "audit_id": "F101",
         "support": "3/3",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
+          "gemini-2.5-pro",
+          "gpt-5.4",
           "minimax-m3"
         ],
         "status": "release",
@@ -3343,7 +3343,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.lisinopril_was_increased_from_10_mg_once_daily_to_20_mg_once_daily",
           "source": [
             "generated_output"
@@ -3351,7 +3351,7 @@
           "quote": "Lisinopril was increased from 10 mg once daily to 20 mg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.lisinopril_was_increased_from_10_mg_daily_to_20_mg_daily_in_early_september",
           "source": [
             "generated_output"
@@ -3371,8 +3371,8 @@
         "audit_id": "F130",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -3424,7 +3424,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.waking_up_gasping",
           "source": [
             "generated_output"
@@ -3432,7 +3432,7 @@
           "quote": "The patient denies waking up gasping."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.episodes_of_waking_up_gasping",
           "source": [
             "generated_output"
@@ -3452,8 +3452,8 @@
         "audit_id": "F160",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",
@@ -3505,7 +3505,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.type_2_diabetes_mellitus",
           "source": [
             "generated_output"
@@ -3513,7 +3513,7 @@
           "quote": "Type 2 diabetes mellitus."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.type_2_diabetes_mellitus",
           "source": [
             "generated_output"
@@ -3533,8 +3533,8 @@
         "audit_id": "F261",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3"
         ],
         "status": "release",

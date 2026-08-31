@@ -2,7 +2,7 @@
 
 ## How gold was built
 1. Seven models each wrote a note from the same fictional transcript
-   (kimi-k3, deepseek-v4-flash, glm-5p2, qwen3p8-max, minimax-m3, gpt-5.6-sol, gpt-5.4).
+   (kimi-k3, deepseek-v4-flash, glm-5p2, qwen3-max, minimax-m3, gpt-5.6-sol, gpt-5.4).
 2. One deterministic parser extracted atomic facts from every note — the same
    parser that scores contestants, so extraction bias cancels by symmetry.
 3. A fact entered gold only with >=3 independent supporters and no stable-field

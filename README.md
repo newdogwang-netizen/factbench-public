@@ -177,4 +177,4 @@ leaderboards, and third-party eval frameworks. Rebuild with
 
 ## License
 
-Apache-2.0 (harbor ecosystem convention). See `LICENSE` and `NOTICE`.
+Apache-2.0. See `LICENSE` and `NOTICE`.

@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s014_syn",
     "version": "1",
-    "sha256": "278a10631927ce9853a01af196b490eb887ff54347ff23a9e67e1840d2421655",
+    "sha256": "e71065c803500a5900c167cc7e8732e46fb0a736f3e46b1d80191f40c30257a4",
     "reviewed": false
   },
   "source": {
@@ -76,7 +76,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -92,7 +92,7 @@
           "quote": "28 weeks and 2 days gestation, prenatal visit, second pregnancy (G2P1)."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -100,7 +100,7 @@
           "quote": "The patient is a female at 28 weeks and 2 days gestation for a routine prenatal visit and management of gestational hypertension."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -108,7 +108,7 @@
           "quote": "Prenatal follow-up visit at 28 weeks and 2 days gestation."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -116,7 +116,7 @@
           "quote": "Marisol attended a prenatal visit at 28 weeks and 2 days of pregnancy."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -132,7 +132,7 @@
           "quote": "Prenatal vitamin with DHA, one tablet once daily with breakfast."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -144,14 +144,14 @@
         "audit_id": "F001",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -202,7 +202,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -218,7 +218,7 @@
           "quote": "Heartburn since approximately 20 weeks; worse at night; worse with tomato-based foods; Tums help but wear off around 2 a.m."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -226,7 +226,7 @@
           "quote": "She uses Tums for heartburn, but the relief wears off around 2 a.m."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -234,7 +234,7 @@
           "quote": "Tums helps the heartburn."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -250,7 +250,7 @@
           "quote": "Heartburn has been present since about 20 weeks, is worse at night and with tomato-containing foods, is relieved by Tums that wear off around 2 a.m., and sometimes causes her to sleep sitting up."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -262,13 +262,13 @@
         "audit_id": "F004",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -325,7 +325,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -333,7 +333,7 @@
           "quote": "Patient reports constipation that is improved but not resolved with Colace (docusate), and comes and goes."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -341,7 +341,7 @@
           "quote": "Docusate (Colace) 100 mg twice daily as needed for constipation."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -357,7 +357,7 @@
           "quote": "Docusate (Colace) 100 mg twice daily as needed for constipation."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -365,7 +365,7 @@
           "quote": "Docusate (Colace) 100 mg twice daily as needed for constipation."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -373,7 +373,7 @@
           "quote": "Constipation has improved with docusate but has not resolved."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -381,7 +381,7 @@
           "quote": "Docusate 100 mg twice daily as needed for constipation."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -389,7 +389,7 @@
           "quote": "Continue docusate as needed."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -397,7 +397,7 @@
           "quote": "Docusate sodium (Colace): 100 mg twice daily as needed for constipation."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -421,7 +421,7 @@
           "quote": "Change ferrous sulfate to 325 mg every other day, with continued docusate, as every-other-day iron absorbs as well and is easier on the gut."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.docusate",
           "source": [
             "generated_output"
@@ -433,13 +433,13 @@
         "audit_id": "F006",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -490,7 +490,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.constipation_that_is_improved_but_not_resolved_with_colace_docusate_and_comes_and_goes",
           "source": [
             "generated_output"
@@ -506,7 +506,7 @@
           "quote": "Constipation improved with Colace but not resolved; comes and goes."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.ongoing_constipation_which_is_improved_with_docusate_but_still_comes_and_goes",
           "source": [
             "generated_output"
@@ -514,7 +514,7 @@
           "quote": "She reports ongoing constipation, which is improved with docusate but still comes and goes."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.constipation_improved_with_colace",
           "source": [
             "generated_output"
@@ -522,7 +522,7 @@
           "quote": "Constipation improved with Colace."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.constipation_is_improved_but_not_fully_resolved",
           "source": [
             "generated_output"
@@ -538,7 +538,7 @@
           "quote": "Constipation is improved on docusate but persists intermittently."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.constipation_improved_with_colace",
           "source": [
             "generated_output"
@@ -550,13 +550,13 @@
         "audit_id": "F007",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -611,7 +611,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -627,7 +627,7 @@
           "quote": "Acetaminophen (Tylenol) 500 mg, occasionally for headache; taken approximately twice this month."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -635,7 +635,7 @@
           "quote": "She reports occasional mild headaches that are relieved with Tylenol."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -643,7 +643,7 @@
           "quote": "The mild headaches improved with Tylenol."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -659,7 +659,7 @@
           "quote": "She has occasional mild headaches relieved by Tylenol."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -671,13 +671,13 @@
         "audit_id": "F010",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -729,7 +729,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -737,7 +737,7 @@
           "quote": "Patient reports one headache last Tuesday that was worse than others, located behind the right eye, throbbing, lasting 3-4 hours, resolved with two 500 mg Tylenol and lying down in the dark; no visual changes, no nausea, no upper belly pain; home blood pressure during the headache was 134/82"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -745,7 +745,7 @@
           "quote": "Mother has chronic hypertension since her 40s and had preeclampsia with the patient"
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "family_history.mother_has_chronic_hypertension_since_her_40s_and_had_preeclampsia_with_the_patient",
           "source": [
             "generated_output"
@@ -753,7 +753,7 @@
           "quote": "Mother has chronic hypertension since her 40s and had preeclampsia with the patient."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.follow_up_appointments_and_referrals_return_visit_in_2_weeks_30_weeks_gestation_for_blood_pressure_check_home_blood_pressure_log_review_and_tdap_vaccination_rhogam_injection_to_be_given_today_growth_ultrasound_at_32_weeks_front_desk_to_schedule_ultrasound_and_print_copy_of_prenatal_record_for_travel",
           "source": [
             "generated_output"
@@ -761,7 +761,7 @@
           "quote": "Follow-up appointments and referrals: Return visit in 2 weeks (30 weeks gestation) for blood pressure check, home blood pressure log review, and Tdap vaccination; Rhogam injection to be given today; growth ultrasound at 32 weeks; front desk to schedule ultrasound and print copy of prenatal record for travel."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "risk.patient_instructed_to_call_labor_and_delivery_triage_and_come_in_immediately_for_headache_that_does_not_resolve_with_tylenol_vision_changes_spots_zigzag_lines_blurry_patches_home_blood_pressure_over_160_110_decreased_fetal_movement_vaginal_bleeding_leaking_fluid_or_regular_painful_contractions",
           "source": [
             "generated_output"
@@ -769,7 +769,7 @@
           "quote": "Patient instructed to call labor and delivery triage and come in immediately for: headache that does not resolve with Tylenol, vision changes (spots, zigzag lines, blurry patches), home blood pressure over 160/110, decreased fetal movement, vaginal bleeding, leaking fluid, or regular painful contractions."
         },
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "risk.patient_instructed_to_call_the_office_the_same_day_for_home_blood_pressure_over_140_90_that_persists_on_recheck_after_sitting_quietly_for_5_minutes",
           "source": [
             "generated_output"
@@ -825,7 +825,7 @@
           "quote": "Return in 2 weeks (at 30 weeks) for blood pressure check, review of home blood pressure log, and Tdap vaccination."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -833,7 +833,7 @@
           "quote": "The patient is a female at 28 weeks and 2 days gestation for a routine prenatal visit and management of gestational hypertension"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.the_patient_is_a_female_at_28_weeks_and_2_days_gestation_for_a_routine_prenatal_visit_and_management_of_gestational_hypertension",
           "source": [
             "generated_output"
@@ -841,7 +841,7 @@
           "quote": "The patient is a female at 28 weeks and 2 days gestation for a routine prenatal visit and management of gestational hypertension."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -849,7 +849,7 @@
           "quote": "She reports her home blood pressure readings are mostly in the 120s-130s over 70s-80s"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -857,7 +857,7 @@
           "quote": "The prior pregnancy was not complicated by hypertension"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.diagnosis_the_prior_pregnancy_was_not_complicated_by_hypertension",
           "source": [
             "generated_output"
@@ -865,7 +865,7 @@
           "quote": "The prior pregnancy was not complicated by hypertension"
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "family_history.mother_has_a_history_of_chronic_hypertension_and_preeclampsia",
           "source": [
             "generated_output"
@@ -873,7 +873,7 @@
           "quote": "Mother has a history of chronic hypertension and preeclampsia."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.follow_up_in_the_clinic_in_2_weeks_for_a_blood_pressure_check",
           "source": [
             "generated_output"
@@ -881,7 +881,7 @@
           "quote": "Follow up in the clinic in 2 weeks for a blood pressure check."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "risk.blood_pressure_reading_greater_than_160_110_mmhg",
           "source": [
             "generated_output"
@@ -889,7 +889,7 @@
           "quote": "Blood pressure reading greater than 160/110 mmHg."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -897,7 +897,7 @@
           "quote": "Blood pressure at the visit was 136/84"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.blood_pressure_at_the_visit_was_136_84",
           "source": [
             "generated_output"
@@ -905,7 +905,7 @@
           "quote": "Blood pressure at the visit was 136/84."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -913,7 +913,7 @@
           "quote": "Gestational hypertension"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -921,7 +921,7 @@
           "quote": "The patient had no blood pressure issues in the prior pregnancy"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "family_history.mother_has_high_blood_pressure",
           "source": [
             "generated_output"
@@ -929,7 +929,7 @@
           "quote": "Mother has high blood pressure."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.the_follow_up_visit_was_for_blood_pressure_check_and_review_of_the_home_blood_pressure_log",
           "source": [
             "generated_output"
@@ -937,7 +937,7 @@
           "quote": "The follow-up visit was for blood pressure check and review of the home blood pressure log."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "risk.the_patient_was_instructed_to_call_immediately_for_home_blood_pressure_greater_than_160_110",
           "source": [
             "generated_output"
@@ -945,7 +945,7 @@
           "quote": "The patient was instructed to call immediately for home blood pressure greater than 160/110."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -953,7 +953,7 @@
           "quote": "She has gestational hypertension"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.gestational_hypertension",
           "source": [
             "generated_output"
@@ -961,7 +961,7 @@
           "quote": "She has gestational hypertension."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -969,7 +969,7 @@
           "quote": "Current home blood pressures are primarily in the 120s–130s/70s–80s"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -977,7 +977,7 @@
           "quote": "She had no blood pressure problems during her previous pregnancy"
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "family_history.her_mother_has_hypertension",
           "source": [
             "generated_output"
@@ -985,7 +985,7 @@
           "quote": "Her mother has hypertension."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.return_in_two_weeks_at_approximately_30_weeks_for_repeat_blood_pressure_assessment",
           "source": [
             "generated_output"
@@ -993,7 +993,7 @@
           "quote": "Return in two weeks at approximately 30 weeks for repeat blood pressure assessment."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "risk.call_immediately_for_a_home_blood_pressure_of_160_110_or_higher",
           "source": [
             "generated_output"
@@ -1001,7 +1001,7 @@
           "quote": "Call immediately for a home blood pressure of 160/110 or higher."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1009,7 +1009,7 @@
           "quote": "Visit is a prenatal follow-up for blood pressure management and routine care"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.visit_is_a_prenatal_follow_up_for_blood_pressure_management_and_routine_care",
           "source": [
             "generated_output"
@@ -1017,7 +1017,7 @@
           "quote": "Visit is a prenatal follow-up for blood pressure management and routine care."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1025,7 +1025,7 @@
           "quote": "Gestational hypertension is being treated with labetalol"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "family_history.mother_has_high_blood_pressure_since_her_40s",
           "source": [
             "generated_output"
@@ -1033,7 +1033,7 @@
           "quote": "Mother has high blood pressure since her 40s."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "risk.call_labor_and_delivery_triage_immediately_for_a_home_blood_pressure_of_160_110_mmhg_or_higher",
           "source": [
             "generated_output"
@@ -1081,7 +1081,7 @@
           "quote": "Labs drawn today: CBC, creatinine, and liver enzymes as a baseline preeclampsia panel, checked every few weeks given gestational hypertension."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1089,7 +1089,7 @@
           "quote": "The visit included follow-up for gestational hypertension"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_visit_included_follow_up_for_gestational_hypertension",
           "source": [
             "generated_output"
@@ -1097,7 +1097,7 @@
           "quote": "The visit included follow-up for gestational hypertension."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1105,7 +1105,7 @@
           "quote": "Today's blood pressure was 136/84"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1113,7 +1113,7 @@
           "quote": "The prior pregnancy had no blood pressure issues"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.the_patient_s_mother_has_chronic_hypertension",
           "source": [
             "generated_output"
@@ -1121,7 +1121,7 @@
           "quote": "The patient's mother has chronic hypertension."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.labs_are_checked_every_few_weeks_because_of_gestational_hypertension",
           "source": [
             "generated_output"
@@ -1129,7 +1129,7 @@
           "quote": "Labs are checked every few weeks because of gestational hypertension."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "risk.call_labor_and_delivery_triage_day_or_night_for_home_blood_pressure_of_160_110_or_higher",
           "source": [
             "generated_output"
@@ -1141,14 +1141,14 @@
         "audit_id": "F012",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1199,7 +1199,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1207,7 +1207,7 @@
           "quote": "Patient reports one headache last Tuesday that was worse than others, located behind the right eye, throbbing, lasting 3-4 hours, resolved with two 500 mg Tylenol and lying down in the dark; no visual changes, no nausea, no upper belly pain; home blood pressure during the headache was 134/82."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1215,7 +1215,7 @@
           "quote": "She had one more severe headache last Tuesday, described as throbbing behind her right eye, which resolved with Tylenol and rest over 3-4 hours. There were no associated visual changes, and her blood pressure during the headache was 134/82 mmHg."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.tylenol",
           "source": [
             "generated_output"
@@ -1227,9 +1227,9 @@
         "audit_id": "F013",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "google_gemini-2_5-pro",
-          "qwen3p8-max"
+          "deepseek-v4-flash",
+          "gemini-2.5-pro",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1280,7 +1280,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "symptom.one_headache_last_tuesday_that_was_worse_than_others_located_behind_the_right_eye_throbbing_lasting_3_4_hours_resolved_with_two_500_mg_tylenol_and_lying_down_in_the_dark_no_visual_changes_no_nausea_no_upper_belly_pain_home_blood_pressure_during_the_headache_was_134_82",
           "source": [
             "generated_output"
@@ -1288,7 +1288,7 @@
           "quote": "Patient reports one headache last Tuesday that was worse than others, located behind the right eye, throbbing, lasting 3-4 hours, resolved with two 500 mg Tylenol and lying down in the dark; no visual changes, no nausea, no upper belly pain; home blood pressure during the headache was 134/82."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.no_upper_abdominal_pain_with_the_worse_headache",
           "source": [
             "generated_output"
@@ -1296,7 +1296,7 @@
           "quote": "The patient had no upper abdominal pain with the worse headache."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.the_worse_headache_was_not_associated_with_upper_belly_pain",
           "source": [
             "generated_output"
@@ -1308,9 +1308,9 @@
         "audit_id": "F014",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1361,7 +1361,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1369,7 +1369,7 @@
           "quote": "Labetalol 200 mg twice daily (morning and night at 8 a.m. and 8 p.m.); previously 100 mg twice daily started at 24 weeks, increased to 200 mg twice daily at 26 weeks due to home blood pressure readings in the 140s/90s"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1377,7 +1377,7 @@
           "quote": "The patient measured her blood pressure during the worse headache"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.the_patient_measured_her_blood_pressure_during_the_worse_headache",
           "source": [
             "generated_output"
@@ -1385,7 +1385,7 @@
           "quote": "The patient measured her blood pressure during the worse headache."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1393,7 +1393,7 @@
           "quote": "Labetalol was increased at 26 weeks to 200 mg twice daily because home blood pressures were reaching the 140s/90s"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -1401,7 +1401,7 @@
           "quote": "Blood pressure during the worse headache was 134/82"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.blood_pressure_during_the_worse_headache_was_134_82",
           "source": [
             "generated_output"
@@ -1413,10 +1413,10 @@
         "audit_id": "F019",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1473,7 +1473,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -1481,7 +1481,7 @@
           "quote": "Labetalol 200 mg twice daily (morning and night at 8 a.m. and 8 p.m.); previously 100 mg twice daily started at 24 weeks, increased to 200 mg twice daily at 26 weeks due to home blood pressure readings in the 140s/90s."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -1489,7 +1489,7 @@
           "quote": "Labetalol was previously 100 mg twice daily starting at 24 weeks."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -1501,9 +1501,9 @@
         "audit_id": "F020",
         "support": "3/3",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "kimi-k2p6"
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -1556,7 +1556,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1564,7 +1564,7 @@
           "quote": "Vitamin D3 2000 IU once daily (started due to low level in winter)."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -1572,7 +1572,7 @@
           "quote": "Vitamin D3 was started because a winter level was low."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1580,7 +1580,7 @@
           "quote": "Continue prenatal vitamins and vitamin D."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1600,10 +1600,10 @@
         "audit_id": "F021",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
-          "kimi-k2p6",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
+          "deepseek-v4-flash",
+          "kimi-k2",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
           "kimi-k3"
         ],
         "status": "release",
@@ -1661,7 +1661,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -1677,7 +1677,7 @@
           "quote": "Ferrous sulfate 325 mg once daily with orange juice; taken separately from prenatal vitamin and not with coffee."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -1685,7 +1685,7 @@
           "quote": "Ferrous sulfate 325 mg once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -1693,7 +1693,7 @@
           "quote": "Ferrous sulfate 325 mg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -1701,7 +1701,7 @@
           "quote": "Ferrous sulfate 325 mg once daily before the current visit."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -1717,7 +1717,7 @@
           "quote": "Ferrous sulfate 325 mg once daily, taken with orange juice, not with the prenatal vitamin or coffee."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -1729,14 +1729,14 @@
         "audit_id": "F022",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1791,7 +1791,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1807,7 +1807,7 @@
           "quote": "Previous medication: ibuprofen 400 mg as needed for menstrual cramps and headaches; stopped at approximately 6 weeks gestation when pregnancy was confirmed due to NSAID contraindication in pregnancy."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1815,7 +1815,7 @@
           "quote": "**Past Medication:** The patient was taking ibuprofen 400 mg as needed for cramps and headaches prior to pregnancy and stopped at 6 weeks gestation."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1823,7 +1823,7 @@
           "quote": "The patient stopped ibuprofen at about 6 weeks gestation after a positive pregnancy test."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1831,7 +1831,7 @@
           "quote": "She stopped ibuprofen at approximately 6 weeks of pregnancy because of NSAID risks during pregnancy."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1847,7 +1847,7 @@
           "quote": "Stopped medication: ibuprofen 400 mg as needed for cramps and headaches, stopped at about six weeks gestation after the positive pregnancy test because NSAIDs are contraindicated in pregnancy."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1859,14 +1859,14 @@
         "audit_id": "F023",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1917,7 +1917,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.constipation",
           "source": [
             "generated_output"
@@ -1933,7 +1933,7 @@
           "quote": "Switch ferrous sulfate 325 mg from daily to every-other-day dosing to reduce constipation; continue Colace."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.change_ferrous_sulfate_regimen_to_325_mg_every_other_day_to_help_with_constipation",
           "source": [
             "generated_output"
@@ -1941,7 +1941,7 @@
           "quote": "Change ferrous sulfate regimen to 325 mg every other day to help with constipation."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.intermittent_constipation",
           "source": [
             "generated_output"
@@ -1949,7 +1949,7 @@
           "quote": "She reports intermittent constipation."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.change_ferrous_sulfate_from_325_mg_daily_to_325_mg_every_other_day_to_reduce_constipation",
           "source": [
             "generated_output"
@@ -1957,7 +1957,7 @@
           "quote": "Change ferrous sulfate from 325 mg daily to 325 mg every other day to reduce constipation."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.constipation",
           "source": [
             "generated_output"
@@ -1965,7 +1965,7 @@
           "quote": "Constipation is improved but not fully resolved."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.constipation_comes_and_goes",
           "source": [
             "generated_output"
@@ -1973,7 +1973,7 @@
           "quote": "Constipation comes and goes."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_docusate_as_needed_for_constipation",
           "source": [
             "generated_output"
@@ -1981,7 +1981,7 @@
           "quote": "Continue docusate as needed for constipation."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.constipation",
           "source": [
             "generated_output"
@@ -1989,7 +1989,7 @@
           "quote": "The patient reported constipation."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.constipation",
           "source": [
             "generated_output"
@@ -1997,7 +1997,7 @@
           "quote": "Constipation is still intermittent."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.constipation",
           "source": [
             "generated_output"
@@ -2017,13 +2017,13 @@
         "audit_id": "F034",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "gpt-5_4",
-          "qwen3p8-max",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "gpt-5.4",
+          "qwen3-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -2077,7 +2077,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2085,7 +2085,7 @@
           "quote": "Vitamin D deficiency (managed with vitamin D3 supplementation)."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2093,7 +2093,7 @@
           "quote": "Vitamin D 2000 IU once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2101,7 +2101,7 @@
           "quote": "Vitamin D 2000 units once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2117,7 +2117,7 @@
           "quote": "Low vitamin D level in the winter, on supplementation."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -2133,7 +2133,7 @@
           "quote": "Vitamin D3 2000 IU once daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin",
           "source": [
             "generated_output"
@@ -2145,14 +2145,14 @@
         "audit_id": "F037",
         "support": "8/8",
         "models": [
-          "deepseek-v4-flash-0731",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "deepseek-v4-flash",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "qwen3p8-max",
+          "qwen3-max",
           "glm-5p2",
-          "kimi-k2p6"
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2202,7 +2202,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2210,7 +2210,7 @@
           "quote": "Investigations: Blood draw today for CBC, creatinine, and liver enzymes (baseline preeclampsia panel); growth ultrasound scheduled at 32 weeks to assess fetal growth, amniotic fluid, and umbilical cord blood flow; repeat blood pressure check at next visit in 2 weeks"
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2218,7 +2218,7 @@
           "quote": "30-week visit will include a blood pressure check"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2226,7 +2226,7 @@
           "quote": "The mother's hypertension began in her 40s"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "family_history.the_mother_s_hypertension_began_in_her_40s",
           "source": [
             "generated_output"
@@ -2234,7 +2234,7 @@
           "quote": "The mother's hypertension began in her 40s."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.blood_pressure",
           "source": [
             "generated_output"
@@ -2242,7 +2242,7 @@
           "quote": "The patient will continue home blood pressure monitoring"
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "referral.travel_was_considered_acceptable_with_controlled_blood_pressure",
           "source": [
             "generated_output"
@@ -2286,9 +2286,9 @@
         "audit_id": "F041",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
-          "kimi-k2p6",
-          "qwen3p8-max",
+          "deepseek-v4-flash",
+          "kimi-k2",
+          "qwen3-max",
           "glm-5p2",
           "kimi-k3"
         ],
@@ -2341,7 +2341,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "treatment.investigations_blood_draw_today_for_cbc_creatinine_and_liver_enzymes_baseline_preeclampsia_panel_growth_ultrasound_scheduled_at_32_weeks_to_assess_fetal_growth_amniotic_fluid_and_umbilical_cord_blood_flow_repeat_blood_pressure_check_at_next_visit_in_2_weeks",
           "source": [
             "generated_output"
@@ -2357,7 +2357,7 @@
           "quote": "Order growth ultrasound at 32 weeks to monitor fetal growth due to gestational hypertension; front desk to schedule before patient leaves; morning slot preferred."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.30_week_visit_will_include_a_blood_pressure_check",
           "source": [
             "generated_output"
@@ -2365,7 +2365,7 @@
           "quote": "30-week visit will include a blood pressure check."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.the_patient_will_continue_home_blood_pressure_monitoring",
           "source": [
             "generated_output"
@@ -2373,7 +2373,7 @@
           "quote": "The patient will continue home blood pressure monitoring."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "referral.the_follow_up_visit_will_include_a_blood_pressure_check",
           "source": [
             "generated_output"
@@ -2385,10 +2385,10 @@
         "audit_id": "F042",
         "support": "4/4",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2443,7 +2443,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -2459,7 +2459,7 @@
           "quote": "Switch ferrous sulfate 325 mg from daily to every-other-day dosing to reduce constipation; continue Colace."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -2467,7 +2467,7 @@
           "quote": "Change ferrous sulfate regimen to 325 mg every other day to help with constipation."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -2475,7 +2475,7 @@
           "quote": "Change ferrous sulfate 325 mg dosing to every other day."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -2483,7 +2483,7 @@
           "quote": "Change ferrous sulfate from 325 mg daily to 325 mg every other day to reduce constipation."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ferrous_sulfate",
           "source": [
             "generated_output"
@@ -2503,12 +2503,12 @@
         "audit_id": "F043",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -2562,7 +2562,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -2578,7 +2578,7 @@
           "quote": "Print copy of prenatal record for patient to carry during upcoming travel."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -2586,7 +2586,7 @@
           "quote": "Continue prenatal vitamins and vitamin D."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -2594,7 +2594,7 @@
           "quote": "Continue prenatal vitamin with DHA."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -2610,7 +2610,7 @@
           "quote": "Marisol is 28 weeks 2 days pregnant, due at the end of June, presenting for a scheduled prenatal visit with ongoing management of gestational hypertension."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.prenatal",
           "source": [
             "generated_output"
@@ -2622,13 +2622,13 @@
         "audit_id": "F045",
         "support": "7/7",
         "models": [
-          "deepseek-v4-flash-0731",
+          "deepseek-v4-flash",
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2679,7 +2679,7 @@
       },
       "evidence": [
         {
-          "model": "deepseek-v4-flash-0731",
+          "model": "deepseek-v4-flash",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -2687,7 +2687,7 @@
           "quote": "Medication plans: Continue labetalol 200 mg twice daily without skipping doses; start famotidine (generic for Pepcid) 20 mg once daily at bedtime for heartburn, with Tums allowed as needed for breakthrough symptoms; change ferrous sulfate to 325 mg every other day to improve constipation while maintaining absorption; continue Colace (docusate) 100 mg twice daily as needed; continue prenatal vitamin one daily; continue vitamin D3 2000 IU daily; continue Tylenol as needed for headaches; avoid ibuprofen and all NSAIDs."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -2695,7 +2695,7 @@
           "quote": "Tums may still be used on top of famotidine if needed."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -2711,7 +2711,7 @@
           "quote": "Start famotidine (generic Pepcid) 20 mg once daily at bedtime for heartburn; prescription sent to her pharmacy, the CVS on Route Nine; she may continue Tums on top for breakthrough symptoms."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.tums",
           "source": [
             "generated_output"
@@ -2723,11 +2723,11 @@
         "audit_id": "F047",
         "support": "5/5",
         "models": [
-          "deepseek-v4-flash-0731",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "deepseek-v4-flash",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2786,7 +2786,7 @@
           "quote": "Urine dip today negative for protein."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.protein",
           "source": [
             "generated_output"
@@ -2794,7 +2794,7 @@
           "quote": "Urine testing showed no protein."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.protein",
           "source": [
             "generated_output"
@@ -2810,7 +2810,7 @@
           "quote": "Urine dip showed no protein."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.protein",
           "source": [
             "generated_output"
@@ -2823,10 +2823,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "kimi-k2p6",
+          "gpt-5.4",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2885,7 +2885,7 @@
           "quote": "Frequent urination."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.frequent_urination",
           "source": [
             "generated_output"
@@ -2893,7 +2893,7 @@
           "quote": "The patient reported frequent urination."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.frequent_urination",
           "source": [
             "generated_output"
@@ -2909,7 +2909,7 @@
           "quote": "She has frequent urination."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "symptom.frequent_urination_and_hip_aches_at_night",
           "source": [
             "generated_output"
@@ -2922,10 +2922,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
+          "gpt-5.4",
+          "gpt-5.6-sol",
           "kimi-k3",
-          "google_gemini-2_5-pro"
+          "gemini-2.5-pro"
         ],
         "status": "release",
         "field_stable": true,
@@ -2998,7 +2998,7 @@
           "quote": "Labetalol dose change: started at 100 mg twice a day at 24 weeks and increased to 200 mg twice a day at 26 weeks because home readings were running in the 140s/90s."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -3012,7 +3012,7 @@
         "models": [
           "glm-5p2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3075,7 +3075,7 @@
           "quote": "Previous medication: ibuprofen 400 mg as needed for menstrual cramps and headaches; stopped at approximately 6 weeks gestation when pregnancy was confirmed due to NSAID contraindication in pregnancy."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -3083,7 +3083,7 @@
           "quote": "The patient previously took ibuprofen 400 mg for cramps and headaches before pregnancy."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -3091,7 +3091,7 @@
           "quote": "She previously used ibuprofen 400 mg for cramps and headaches."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -3099,7 +3099,7 @@
           "quote": "Ibuprofen: 400 mg as needed was used prior to pregnancy for cramps and headaches."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -3112,10 +3112,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3174,7 +3174,7 @@
           "quote": "Continue labetalol 200 mg twice daily; do not skip doses; do not stop when feeling well."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_labetalol_200_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3182,7 +3182,7 @@
           "quote": "Continue labetalol 200 mg twice daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_labetalol_200_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3190,7 +3190,7 @@
           "quote": "Continue labetalol 200 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_labetalol_200_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3198,7 +3198,7 @@
           "quote": "Continue labetalol 200 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_labetalol_200_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3211,10 +3211,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3271,7 +3271,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -3279,7 +3279,7 @@
           "quote": "Labetalol 200 mg twice daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -3287,7 +3287,7 @@
           "quote": "Labetalol 200 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -3295,7 +3295,7 @@
           "quote": "Labetalol 200 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -3311,7 +3311,7 @@
           "quote": "Labetalol 200 mg twice a day, taken at 8 a.m. and 8 p.m. with phone alarms."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.labetalol",
           "source": [
             "generated_output"
@@ -3323,12 +3323,12 @@
         "audit_id": "F108",
         "support": "6/6",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3379,7 +3379,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "family_history.father_has_a_history_of_type_2_diabetes",
           "source": [
             "generated_output"
@@ -3387,7 +3387,7 @@
           "quote": "Father has a history of type 2 diabetes."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "family_history.father_has_type_2_diabetes",
           "source": [
             "generated_output"
@@ -3395,7 +3395,7 @@
           "quote": "Father has type 2 diabetes."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "family_history.father_has_type_2_diabetes",
           "source": [
             "generated_output"
@@ -3407,9 +3407,9 @@
         "audit_id": "F110",
         "support": "3/3",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "kimi-k2p6"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3460,7 +3460,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_prenatal_vitamins_and_vitamin_d",
           "source": [
             "generated_output"
@@ -3476,7 +3476,7 @@
           "quote": "Continue the prenatal vitamin once daily and vitamin D 2000 units once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_vitamin_d_2_000_units_daily",
           "source": [
             "generated_output"
@@ -3484,7 +3484,7 @@
           "quote": "Continue vitamin D 2,000 units daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_prenatal_vitamin_once_daily",
           "source": [
             "generated_output"
@@ -3492,7 +3492,7 @@
           "quote": "Continue prenatal vitamin once daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_vitamin_d3_2000_units_once_daily",
           "source": [
             "generated_output"
@@ -3504,10 +3504,10 @@
         "audit_id": "F119",
         "support": "4/4",
         "models": [
-          "google_gemini-2_5-pro",
+          "gemini-2.5-pro",
           "kimi-k3",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3556,7 +3556,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.labetalol",
           "source": [
             "generated_output"
@@ -3564,7 +3564,7 @@
           "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.labetalol",
           "source": [
             "generated_output"
@@ -3572,7 +3572,7 @@
           "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.labetalol",
           "source": [
             "generated_output"
@@ -3580,7 +3580,7 @@
           "quote": "Labetalol was started at 24 weeks gestation."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.labetalol",
           "source": [
             "generated_output"
@@ -3592,10 +3592,10 @@
         "audit_id": "F132",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3646,7 +3646,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.labetalol_was_started_at_24_weeks_at_100_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3654,7 +3654,7 @@
           "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "symptom.labetalol_was_started_at_24_weeks_at_100_mg_twice_daily",
           "source": [
             "generated_output"
@@ -3662,7 +3662,7 @@
           "quote": "Labetalol was started at 24 weeks at 100 mg twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.labetalol_was_started_at_24_weeks_gestation",
           "source": [
             "generated_output"
@@ -3674,9 +3674,9 @@
         "audit_id": "F133",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3727,7 +3727,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.tums_wears_off_around_2_a_m",
           "source": [
             "generated_output"
@@ -3735,7 +3735,7 @@
           "quote": "Tums wears off around 2 a.m."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.tums_wear_off_around_2_am",
           "source": [
             "generated_output"
@@ -3743,7 +3743,7 @@
           "quote": "Tums wear off around 2 AM."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.tums_wore_off_around_2_a_m",
           "source": [
             "generated_output"
@@ -3755,9 +3755,9 @@
         "audit_id": "F142",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3808,7 +3808,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.a_worse_headache_last_tuesday",
           "source": [
             "generated_output"
@@ -3816,7 +3816,7 @@
           "quote": "The patient reported a worse headache last Tuesday."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.a_worse_headache_last_tuesday",
           "source": [
             "generated_output"
@@ -3836,8 +3836,8 @@
         "audit_id": "F151",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
+          "gpt-5.4",
+          "qwen3-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -3887,7 +3887,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.rhogam",
           "source": [
             "generated_output"
@@ -3895,7 +3895,7 @@
           "quote": "Rhogam was planned for that day."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.rhogam",
           "source": [
             "generated_output"
@@ -3903,7 +3903,7 @@
           "quote": "RhoGAM is indicated because the patient is A negative with a negative antibody screen."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.rhogam",
           "source": [
             "generated_output"
@@ -3915,9 +3915,9 @@
         "audit_id": "F205",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3966,7 +3966,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.heartburn",
           "source": [
             "generated_output"
@@ -3974,7 +3974,7 @@
           "quote": "Heartburn is worse at night and after tomato-containing foods."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.heartburn",
           "source": [
             "generated_output"
@@ -3982,7 +3982,7 @@
           "quote": "Heartburn is worse at night."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.heartburn",
           "source": [
             "generated_output"
@@ -3994,9 +3994,9 @@
         "audit_id": "F223",
         "support": "3/3",
         "models": [
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,

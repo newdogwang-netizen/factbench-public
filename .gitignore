@@ -1,4 +1,10 @@
 __pycache__/
 *.pyc
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
 jobs/
 results/

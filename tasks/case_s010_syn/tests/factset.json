@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s010_syn",
     "version": "1",
-    "sha256": "6cc9a406f2c950f15bf2343243c28d78e938dea5a69d42505f97d09e3610ab2d",
+    "sha256": "df35421dfbdde2d2655890525d98f548ed6ccbdad7a781014542af49a6237462",
     "reviewed": false
   },
   "source": {
@@ -82,7 +82,7 @@
           "quote": "No hospitalizations for asthma ever."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "diagnosis.no_hospitalizations_for_asthma",
           "source": [
             "generated_output"
@@ -90,7 +90,7 @@
           "quote": "No hospitalizations for asthma."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.no_hospitalizations_for_asthma",
           "source": [
             "generated_output"
@@ -103,8 +103,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "kimi-k2p6"
+          "gemini-2.5-pro",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -163,7 +163,7 @@
           "quote": "Acid reflux, mostly resolved; patient stopped eating late at night; heartburn approximately once a month now."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.the_patient_has_acid_reflux",
           "source": [
             "generated_output"
@@ -171,7 +171,7 @@
           "quote": "The patient has acid reflux."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.the_patient_has_acid_reflux",
           "source": [
             "generated_output"
@@ -184,8 +184,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -250,7 +250,7 @@
           "quote": "Fluticasone/salmeterol (Advair Diskus) 250/50, one puff twice a day (morning and night); dose increased from 100/50 in May."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -258,7 +258,7 @@
           "quote": "Fluticasone/salmeterol (Advair Diskus) 250/50 mcg, one puff twice daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -266,7 +266,7 @@
           "quote": "Fluticasone/salmeterol Diskus 250/50 mcg, one inhalation twice daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -290,7 +290,7 @@
           "quote": "Fluticasone/salmeterol (Advair Diskus) 250/50 mcg, one puff twice daily (morning and night); dose increased in May from 100/50 mcg one puff twice daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.fluticasone",
           "source": [
             "generated_output"
@@ -298,7 +298,7 @@
           "quote": "Fluticasone/salmeterol Advair Diskus 250/50 is taken as one puff twice daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.fluticasone_salmeterol",
           "source": [
             "generated_output"
@@ -311,13 +311,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max",
-          "gpt-5_4"
+          "qwen3-max",
+          "gpt-5.4"
         ],
         "status": "release",
         "field_stable": true,
@@ -382,7 +382,7 @@
           "quote": "Albuterol HFA inhaler, 90 mcg/puff, two puffs every 4-6 hours as needed; currently using about twice a week."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -390,7 +390,7 @@
           "quote": "Albuterol HFA 90 mcg/puff, two puffs every 4-6 hours as needed."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -398,7 +398,7 @@
           "quote": "Albuterol HFA 90 mcg per puff, 2 puffs every 4 to 6 hours as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -406,7 +406,7 @@
           "quote": "Albuterol HFA 90 mcg per actuation, two puffs every four to six hours as needed."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -430,7 +430,7 @@
           "quote": "Albuterol HFA 90 mcg per puff, two puffs every 4–6 hours as needed; currently using approximately twice per week."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.albuterol",
           "source": [
             "generated_output"
@@ -443,13 +443,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -512,7 +512,7 @@
           "quote": "Montelukast (Singulair) 10 mg, one tablet at bedtime."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.montelukast",
           "source": [
             "generated_output"
@@ -520,7 +520,7 @@
           "quote": "Montelukast (Singulair) 10 mg, one tablet at bedtime."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.montelukast",
           "source": [
             "generated_output"
@@ -528,7 +528,7 @@
           "quote": "Montelukast 10 mg at bedtime."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.montelukast",
           "source": [
             "generated_output"
@@ -536,7 +536,7 @@
           "quote": "Montelukast 10 mg by mouth at bedtime."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.montelukast",
           "source": [
             "generated_output"
@@ -560,7 +560,7 @@
           "quote": "Montelukast (Singulair) 10 mg orally at bedtime."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.montelukast",
           "source": [
             "generated_output"
@@ -573,13 +573,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -644,7 +644,7 @@
           "quote": "Loratadine (Claritin) 10 mg, once a day; patient reports it is not helping much anymore."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -652,7 +652,7 @@
           "quote": "Loratadine (Claritin) 10 mg, one tablet daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -660,7 +660,7 @@
           "quote": "Loratadine 10 mg once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -668,7 +668,7 @@
           "quote": "Loratadine 10 mg by mouth daily at presentation."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -692,7 +692,7 @@
           "quote": "Loratadine (Claritin) 10 mg orally once daily (patient reports inadequate effect)."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.loratadine",
           "source": [
             "generated_output"
@@ -705,13 +705,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -776,7 +776,7 @@
           "quote": "Mometasone (Nasonex) nasal spray, 50 mcg, two sprays in each nostril once a day (morning)."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.mometasone",
           "source": [
             "generated_output"
@@ -784,7 +784,7 @@
           "quote": "Mometasone (Nasonex) 50 mcg, two sprays per nostril once daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.mometasone",
           "source": [
             "generated_output"
@@ -792,7 +792,7 @@
           "quote": "Mometasone (Nasonex) 50 mcg, 2 sprays in each nostril once daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.mometasone",
           "source": [
             "generated_output"
@@ -800,7 +800,7 @@
           "quote": "Mometasone nasal spray 50 mcg, two sprays in each nostril each morning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.mometasone",
           "source": [
             "generated_output"
@@ -824,7 +824,7 @@
           "quote": "Mometasone (Nasonex) 50 mcg nasal spray, two sprays in each nostril once daily in the morning."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.mometasone",
           "source": [
             "generated_output"
@@ -837,13 +837,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -904,7 +904,7 @@
           "quote": "Vitamin D 1000 units daily."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -912,7 +912,7 @@
           "quote": "Vitamin D 1000 units daily."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -920,7 +920,7 @@
           "quote": "Vitamin D 1000 units daily."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -928,7 +928,7 @@
           "quote": "Vitamin D 1,000 units by mouth daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -952,7 +952,7 @@
           "quote": "Vitamin D 1000 units daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -965,13 +965,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1032,7 +1032,7 @@
           "quote": "Ibuprofen occasionally for headache, approximately once or twice a month."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1040,7 +1040,7 @@
           "quote": "Ibuprofen as needed for headaches, about once or twice a month."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1048,7 +1048,7 @@
           "quote": "Ibuprofen is used occasionally for headache."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1056,7 +1056,7 @@
           "quote": "Ibuprofen is used for headaches approximately once or twice monthly."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1080,7 +1080,7 @@
           "quote": "Ibuprofen occasionally (approximately once or twice per month) for headache."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1093,13 +1093,13 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1160,7 +1160,7 @@
           "quote": "Adherence to Advair is good; occasional missed morning dose approximately twice a month; nighttime dose never missed."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.missed",
           "source": [
             "generated_output"
@@ -1168,7 +1168,7 @@
           "quote": "Missed doses are occasional morning doses on weekends."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.missed",
           "source": [
             "generated_output"
@@ -1181,8 +1181,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1239,7 +1239,7 @@
           "quote": "Father was a heavy smoker, quit approximately 10 years ago; no asthma."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "demo.father",
           "source": [
             "generated_output"
@@ -1247,7 +1247,7 @@
           "quote": "Father is a former heavy smoker with no history of asthma."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.father",
           "source": [
             "generated_output"
@@ -1268,8 +1268,8 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "kimi-k2p6",
+          "gemini-2.5-pro",
+          "kimi-k2",
           "kimi-k3"
         ],
         "status": "release",
@@ -1329,7 +1329,7 @@
           "quote": "No emphysema or COPD in the family."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "family_history.no_family_history_of_emphysema_or_copd",
           "source": [
             "generated_output"
@@ -1358,7 +1358,7 @@
         "support": "4/4",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
+          "gemini-2.5-pro",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1419,7 +1419,7 @@
           "quote": "Moderate persistent asthma, currently well controlled."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "diagnosis.moderate_persistent_asthma_is_currently_well_controlled",
           "source": [
             "generated_output"
@@ -1427,7 +1427,7 @@
           "quote": "Moderate persistent asthma is currently well controlled."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.moderate_persistent_asthma_currently_well_controlled",
           "source": [
             "generated_output"
@@ -1451,7 +1451,7 @@
           "quote": "Moderate persistent asthma, currently well controlled."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.moderate_persistent_asthma",
           "source": [
             "generated_output"
@@ -1459,7 +1459,7 @@
           "quote": "Moderate persistent asthma."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.the_patient_has_moderate_persistent_asthma",
           "source": [
             "generated_output"
@@ -1472,12 +1472,12 @@
         "support": "7/7",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1536,7 +1536,7 @@
           "quote": "Continue montelukast 10 mg at bedtime; no change."
         },
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.continue_montelukast_10_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -1544,7 +1544,7 @@
           "quote": "Continue Montelukast 10 mg at bedtime."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.continue_montelukast_10_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -1552,7 +1552,7 @@
           "quote": "Continue montelukast 10 mg at bedtime."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_montelukast_10_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -1560,7 +1560,7 @@
           "quote": "Continue montelukast 10 mg at bedtime."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_montelukast_10_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -1568,7 +1568,7 @@
           "quote": "Continue montelukast 10 mg at bedtime."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_montelukast_10_mg_at_bedtime",
           "source": [
             "generated_output"
@@ -1597,11 +1597,11 @@
         "support": "8/8",
         "models": [
           "glm-5p2",
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max",
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max",
           "kimi-k3",
           "minimax-m3"
         ],
@@ -1662,7 +1662,7 @@
           "quote": "Continue vitamin D 1000 units daily and occasional ibuprofen as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1670,7 +1670,7 @@
           "quote": "Occasional ibuprofen may be continued because the patient has used it for years without asthma symptoms."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1694,7 +1694,7 @@
           "quote": "Continue occasional ibuprofen as needed."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.ibuprofen",
           "source": [
             "generated_output"
@@ -1707,11 +1707,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1772,7 +1772,7 @@
           "quote": "Continue vitamin D 1000 units daily and occasional ibuprofen as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1780,7 +1780,7 @@
           "quote": "Continue vitamin D 1,000 units daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1804,7 +1804,7 @@
           "quote": "Continue vitamin D 1000 units daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.vitamin_d",
           "source": [
             "generated_output"
@@ -1817,11 +1817,11 @@
         "support": "6/6",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "kimi-k3",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1880,7 +1880,7 @@
           "quote": "Continue vitamin D 1000 units daily and occasional ibuprofen as needed."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "treatment.continue_vitamin_d_1_000_units_daily",
           "source": [
             "generated_output"
@@ -1888,7 +1888,7 @@
           "quote": "Continue vitamin D 1,000 units daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.continue_vitamin_d_1000_units_daily",
           "source": [
             "generated_output"
@@ -1912,7 +1912,7 @@
           "quote": "Continue occasional ibuprofen as needed."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.continue_vitamin_d",
           "source": [
             "generated_output"
@@ -1925,10 +1925,10 @@
         "support": "5/5",
         "models": [
           "glm-5p2",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
+          "gpt-5.6-sol",
+          "kimi-k2",
           "minimax-m3",
-          "qwen3p8-max"
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -1987,7 +1987,7 @@
           "quote": "Albuterol with spacer technique reviewed and confirmed correct."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.albuterol_spacer_technique_was_reviewed",
           "source": [
             "generated_output"
@@ -1995,7 +1995,7 @@
           "quote": "Albuterol spacer technique was reviewed."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.albuterol_spacer_technique_was_reviewed",
           "source": [
             "generated_output"
@@ -2003,7 +2003,7 @@
           "quote": "Albuterol spacer technique was reviewed."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.the_albuterol_spacer_technique_was_correct",
           "source": [
             "generated_output"
@@ -2016,8 +2016,8 @@
         "support": "3/3",
         "models": [
           "glm-5p2",
-          "gpt-5_4",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2068,7 +2068,7 @@
       },
       "evidence": [
         {
-          "model": "google_gemini-2_5-pro",
+          "model": "gemini-2.5-pro",
           "key": "treatment.treatment_start_over_the_counter_cetirizine_zyrtec_10_mg_one_tablet_daily",
           "source": [
             "generated_output"
@@ -2076,7 +2076,7 @@
           "quote": "Start over-the-counter Cetirizine (Zyrtec) 10 mg, one tablet daily"
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "treatment.start_cetirizine_10_mg_once_daily",
           "source": [
             "generated_output"
@@ -2084,7 +2084,7 @@
           "quote": "Start cetirizine 10 mg once daily."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "treatment.start_cetirizine_10_mg_once_daily",
           "source": [
             "generated_output"
@@ -2092,7 +2092,7 @@
           "quote": "Start cetirizine 10 mg once daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "treatment.start_cetirizine_10_mg_once_daily",
           "source": [
             "generated_output"
@@ -2104,10 +2104,10 @@
         "audit_id": "F109",
         "support": "4/4",
         "models": [
-          "google_gemini-2_5-pro",
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gemini-2.5-pro",
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2158,7 +2158,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.stopping_at_the_landing_to_catch_her_breath",
           "source": [
             "generated_output"
@@ -2166,7 +2166,7 @@
           "quote": "In the spring, the patient could not climb two flights of stairs to her classroom without stopping at the landing to catch her breath."
         },
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.stopping",
           "source": [
             "generated_output"
@@ -2174,7 +2174,7 @@
           "quote": "The patient can now climb two flights of stairs without stopping."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.stopping",
           "source": [
             "generated_output"
@@ -2182,7 +2182,7 @@
           "quote": "Patient can now climb two flights of stairs without stopping."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.stopping",
           "source": [
             "generated_output"
@@ -2194,9 +2194,9 @@
         "audit_id": "F125",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2247,7 +2247,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.itchy_eyes",
           "source": [
             "generated_output"
@@ -2255,7 +2255,7 @@
           "quote": "The patient has itchy eyes."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.itchy_eyes",
           "source": [
             "generated_output"
@@ -2263,7 +2263,7 @@
           "quote": "The patient has itchy eyes."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.eyes_are_itchy_especially",
           "source": [
             "generated_output"
@@ -2275,9 +2275,9 @@
         "audit_id": "F148",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2326,7 +2326,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.albuterol",
           "source": [
             "generated_output"
@@ -2334,7 +2334,7 @@
           "quote": "Albuterol is usually used before walking if it is cold outside."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.albuterol",
           "source": [
             "generated_output"
@@ -2342,7 +2342,7 @@
           "quote": "Albuterol is commonly used before walking in cold weather and occasionally while cleaning."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.albuterol",
           "source": [
             "generated_output"
@@ -2350,7 +2350,7 @@
           "quote": "Albuterol is typically used as pre-treatment before walking in cold air."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.albuterol",
           "source": [
             "generated_output"
@@ -2362,10 +2362,10 @@
         "audit_id": "F154",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2416,7 +2416,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "symptom.been_stable_since_about_august",
           "source": [
             "generated_output"
@@ -2424,7 +2424,7 @@
           "quote": "Current albuterol use has been stable since about August."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "symptom.been_stable_since_about_august",
           "source": [
             "generated_output"
@@ -2432,7 +2432,7 @@
           "quote": "The current albuterol use pattern has been stable since about August."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "symptom.been_stable_at_approximately_twice_per_week_since_about_august",
           "source": [
             "generated_output"
@@ -2444,9 +2444,9 @@
         "audit_id": "F158",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -2495,7 +2495,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -2503,7 +2503,7 @@
           "quote": "There was one week in September when the patient did not use albuterol at all."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -2511,7 +2511,7 @@
           "quote": "There was one week in September when albuterol was not used."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -2519,7 +2519,7 @@
           "quote": "There is no fever."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.there",
           "source": [
             "generated_output"
@@ -2531,10 +2531,10 @@
         "audit_id": "F160",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2583,7 +2583,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.asthma",
           "source": [
             "generated_output"
@@ -2591,7 +2591,7 @@
           "quote": "Asthma was diagnosed at age 9."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.asthma",
           "source": [
             "generated_output"
@@ -2599,7 +2599,7 @@
           "quote": "Asthma was diagnosed at age nine."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.asthma",
           "source": [
             "generated_output"
@@ -2611,9 +2611,9 @@
         "audit_id": "F170",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2664,7 +2664,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "diagnosis.the_patient_has_never_been_intubated",
           "source": [
             "generated_output"
@@ -2672,7 +2672,7 @@
           "quote": "The patient has never been intubated."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "diagnosis.patient_has_never_been_intubated",
           "source": [
             "generated_output"
@@ -2680,7 +2680,7 @@
           "quote": "Patient has never been intubated."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "diagnosis.the_patient_has_never_been_intubated",
           "source": [
             "generated_output"
@@ -2692,9 +2692,9 @@
         "audit_id": "F177",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2751,7 +2751,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -2759,7 +2759,7 @@
           "quote": "The dose was increased in May because symptoms were not controlled."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -2767,7 +2767,7 @@
           "quote": "The fluticasone/salmeterol dose was increased in May from 100/50 mcg twice daily to 250/50 mcg twice daily."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "medication.the",
           "source": [
             "generated_output"
@@ -2779,9 +2779,9 @@
         "audit_id": "F182",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2830,7 +2830,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.ibuprofen",
           "source": [
             "generated_output"
@@ -2838,7 +2838,7 @@
           "quote": "Ibuprofen is used occasionally for headache."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.ibuprofen",
           "source": [
             "generated_output"
@@ -2846,7 +2846,7 @@
           "quote": "Ibuprofen is used for headaches approximately once or twice monthly."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.ibuprofen",
           "source": [
             "generated_output"
@@ -2858,9 +2858,9 @@
         "audit_id": "F183",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2909,7 +2909,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.theophylline",
           "source": [
             "generated_output"
@@ -2917,7 +2917,7 @@
           "quote": "Theophylline was stopped about three years ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "demo.theophylline",
           "source": [
             "generated_output"
@@ -2925,7 +2925,7 @@
           "quote": "Theophylline was discontinued approximately three years ago because of jitteriness, hand tremor, palpitations, racing heart, and insomnia."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.theophylline",
           "source": [
             "generated_output"
@@ -2933,7 +2933,7 @@
           "quote": "Theophylline was stopped approximately three years ago."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.theophylline",
           "source": [
             "generated_output"
@@ -2945,10 +2945,10 @@
         "audit_id": "F184",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -2999,7 +2999,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "medication.theophylline",
           "source": [
             "generated_output"
@@ -3007,7 +3007,7 @@
           "quote": "Theophylline was stopped about three years ago."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "medication.theophylline",
           "source": [
             "generated_output"
@@ -3015,7 +3015,7 @@
           "quote": "Theophylline was discontinued approximately three years ago because of jitteriness, hand tremor, palpitations, racing heart, and insomnia."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "medication.theophylline",
           "source": [
             "generated_output"
@@ -3027,9 +3027,9 @@
         "audit_id": "F185",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3080,7 +3080,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "social_history.the_patient_does_not_vape",
           "source": [
             "generated_output"
@@ -3088,7 +3088,7 @@
           "quote": "The patient does not vape."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "social_history.the_patient_does_not_vape",
           "source": [
             "generated_output"
@@ -3096,7 +3096,7 @@
           "quote": "The patient does not vape."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "social_history.the_patient_does_not_vape",
           "source": [
             "generated_output"
@@ -3108,9 +3108,9 @@
         "audit_id": "F198",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
@@ -3161,7 +3161,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "social_history.the_patient_does_not_use_marijuana",
           "source": [
             "generated_output"
@@ -3169,7 +3169,7 @@
           "quote": "The patient does not use marijuana."
         },
         {
-          "model": "gpt-5_6-sol",
+          "model": "gpt-5.6-sol",
           "key": "social_history.the_patient_does_not_use_marijuana",
           "source": [
             "generated_output"
@@ -3177,7 +3177,7 @@
           "quote": "The patient does not use marijuana."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "social_history.the_patient_does_not_use_marijuana",
           "source": [
             "generated_output"
@@ -3185,7 +3185,7 @@
           "quote": "The patient does not use marijuana."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "social_history.no_marijuana_use",
           "source": [
             "generated_output"
@@ -3197,10 +3197,10 @@
         "audit_id": "F199",
         "support": "4/4",
         "models": [
-          "gpt-5_4",
-          "gpt-5_6-sol",
-          "qwen3p8-max",
-          "kimi-k2p6"
+          "gpt-5.4",
+          "gpt-5.6-sol",
+          "qwen3-max",
+          "kimi-k2"
         ],
         "status": "release",
         "field_stable": true,
@@ -3251,7 +3251,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "social_history.the_patient_walks_about_30_minutes_most_days",
           "source": [
             "generated_output"
@@ -3259,7 +3259,7 @@
           "quote": "The patient walks about 30 minutes most days."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "social_history.the_patient_walks_about_30_minutes_most_days",
           "source": [
             "generated_output"
@@ -3279,8 +3279,8 @@
         "audit_id": "F200",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "qwen3p8-max",
+          "gpt-5.4",
+          "qwen3-max",
           "kimi-k3"
         ],
         "status": "release",
@@ -3330,7 +3330,7 @@
       },
       "evidence": [
         {
-          "model": "gpt-5_4",
+          "model": "gpt-5.4",
           "key": "demo.cetirizine",
           "source": [
             "generated_output"
@@ -3338,7 +3338,7 @@
           "quote": "Cetirizine was recommended to be taken in the evening initially because it can cause drowsiness in some people."
         },
         {
-          "model": "kimi-k2p6",
+          "model": "kimi-k2",
           "key": "demo.cetirizine",
           "source": [
             "generated_output"
@@ -3346,7 +3346,7 @@
           "quote": "Cetirizine is the generic for Zyrtec."
         },
         {
-          "model": "qwen3p8-max",
+          "model": "qwen3-max",
           "key": "demo.cetirizine",
           "source": [
             "generated_output"
@@ -3358,9 +3358,9 @@
         "audit_id": "F211",
         "support": "3/3",
         "models": [
-          "gpt-5_4",
-          "kimi-k2p6",
-          "qwen3p8-max"
+          "gpt-5.4",
+          "kimi-k2",
+          "qwen3-max"
         ],
         "status": "release",
         "field_stable": true,
