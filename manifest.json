@@ -27,7 +27,7 @@
     "task.toml": "4fcc67080e156194362cd6956586ca4736d0b8bd212593d89a43deed834aa26c",
     "tests/factset.json": "ea1f822b2623c6a14ccb0e8136b5f08934ae59ff2e56d39cffe708c43e63f6fc",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "d28fff3475d56a3749cad19307c09d3c1c670029a4cff6a336c936d649b67513"
+    "tests/verify.py": "98a02c1bc59ecdab9fa0171df3449781e0c1881660da509f591d30a88971fdec"
    }
   },
   {
@@ -47,7 +47,7 @@
     "task.toml": "e6e6c214928e1ced9058929418609cc8bdd3faf9b5579afc7890995fd7ef0371",
     "tests/factset.json": "d0f1f04ee98e3d20305bc3ed6cf1e82b208bd407a3aecc5afa19a4fc62143347",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "3576c3103a288a496b0161669ac03652f0861a6f6e854b0e6166da1eafa2dfd8"
+    "tests/verify.py": "17c852d623239cbae09877ccddb69474121aa11f5e788d2e8a320d344d44922b"
    }
   },
   {
@@ -67,7 +67,7 @@
     "task.toml": "0879960d63c9ec36cf35f119a7090779705d6cdcfa824287093aa478d6740328",
     "tests/factset.json": "eb768452570542aade054a5d758a0e46fa888fc30cd9ace77aaa9b4b21678639",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "d28fff3475d56a3749cad19307c09d3c1c670029a4cff6a336c936d649b67513"
+    "tests/verify.py": "98a02c1bc59ecdab9fa0171df3449781e0c1881660da509f591d30a88971fdec"
    }
   },
   {
@@ -87,7 +87,7 @@
     "task.toml": "d52561e9eca08a6424fd5015c84df67f81b4f4111bb2dbbabc440f9d15a4514a",
     "tests/factset.json": "c27afa992a5798e1cc1764d46bb40c1ae00b9be3cd5a255082c85133aa0297bd",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "406c80b6ff027945a3d8909207277bdcf2fae7d32d6a6efecfec4c1dd3e76f02"
+    "tests/verify.py": "927e723804593c4da1217c48ced03f6c9cb35822058c2b997a474e67f4348628"
    }
   },
   {
@@ -107,7 +107,7 @@
     "task.toml": "98c8561219f81c405801aa84a1602353a294e98201723af8cdadc9762535065e",
     "tests/factset.json": "67243049bc89848ff2d9018b7fbd813d260de232070d43825448b3ef9f01c7f6",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "60e01042a717b4f8ec3e6082c327235b2a884217c23ca87c3e4786f7db60e3ef"
+    "tests/verify.py": "8b996b7f9f8c614dfba93bea29ca19c3f3ab7a3c6c92fb67238651506eb2c7c1"
    }
   },
   {
@@ -127,7 +127,7 @@
     "task.toml": "9ac82c01896da582b4b88409fa4bf3e25c35df8f1e84380dd57236efe060444b",
     "tests/factset.json": "82a176b48ced46c185d80810af17bd2c8bec8367905bbc3fa7900adc968854ca",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "3576c3103a288a496b0161669ac03652f0861a6f6e854b0e6166da1eafa2dfd8"
+    "tests/verify.py": "17c852d623239cbae09877ccddb69474121aa11f5e788d2e8a320d344d44922b"
    }
   },
   {
@@ -147,7 +147,7 @@
     "task.toml": "6df294c7a0859c380a3a4a2303798ed8537ce48327e8a684b82adb165fd9e2f3",
     "tests/factset.json": "226eb7295b5e55a22a44034276d0d7462a0c34321459d5b72d316f5a49a5931d",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "8c2e784c8417e1bf3b9088cb8bd101b00c7532d0c69310a2701c83884d918a81"
+    "tests/verify.py": "07a9ac33382f8dbe13c5ddf1ec6668913ec26e0ac8020598d58178e989700d79"
    }
   },
   {
@@ -167,7 +167,7 @@
     "task.toml": "48075cfe9cd3ac107a3dcd714c23e6cdd5b0ce2ec19a2cf560ac2d46f705417c",
     "tests/factset.json": "bd3e9fbfe58fdd8b31e07a467b8f9b7c75d7c8260af5acb2941e179995ea9f4e",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "60e01042a717b4f8ec3e6082c327235b2a884217c23ca87c3e4786f7db60e3ef"
+    "tests/verify.py": "8b996b7f9f8c614dfba93bea29ca19c3f3ab7a3c6c92fb67238651506eb2c7c1"
    }
   },
   {
@@ -187,7 +187,7 @@
     "task.toml": "37e1f99c271881864d4dcb0519feb4d2ec32d1c8a2d3cc7fbfc6ab45b5194d6b",
     "tests/factset.json": "e78a3a5c9aae8a73cc446f58d2988af6088bc758cde5c71c4e4289363e6277ab",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "d529d13a6782c93f4c772c8d69fb119f9ec29ba3c74c55f5944a667e27d6632b"
+    "tests/verify.py": "6d37a776a486911fd83c4fec8e9b95dd2206c2958e762082d988606787c4097c"
    }
   },
   {
@@ -207,7 +207,7 @@
     "task.toml": "65e015eda0f88818361c9a81979312dafeeb7a0a9073f5abe94a7cc40cd43dde",
     "tests/factset.json": "76634aa7b5bd1ae1d8ccd7f29a7fb6bf39cc032a67da8dc01017496de5f9e152",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "0fa68f05db7ce48a2567381dcbe1846203c61c65061026221599c39bb38facad"
+    "tests/verify.py": "3fbf06f2733eabc9a0413a85cd398d3f64b31e28141af69396507e04278b1866"
    }
   },
   {
@@ -227,7 +227,7 @@
     "task.toml": "ea793d058321de6224d767848ef1e53dd09c0096c1ee8a43c0bbe8bd847382ce",
     "tests/factset.json": "a940cb60d257308b7f4466577eba5b1577f5b58c76fb395c868069d88415de77",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "74dd5e9dfc8d3ba74ceeef426993144ffdded3115ecfa02ca42eac43b1dcb9e7"
+    "tests/verify.py": "7063df71e310adfb611c1cf7242d61c45d0260202c5e0139730ba5ed02febf69"
    }
   },
   {
@@ -247,7 +247,7 @@
     "task.toml": "5d74027c5c84cd991503c27e07b858512bb47271e19cc8471fe552dc3ab15b37",
     "tests/factset.json": "363576c0cc1d55f72b141d5766d0d0e143476bdf6a65f0b28789edf171e8d9ac",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "6108255d2385cf8acfd51074c6653277879468c1bca08003618d7bb0bed605eb"
+    "tests/verify.py": "d6584df87052bd8b4b53ab62623e67b2b98f2cba07311003539c93b1d73f6e89"
    }
   },
   {
@@ -267,7 +267,7 @@
     "task.toml": "e2680d412a3e770f126397e17d922afccc2c2a011794515a27afe92b5576c137",
     "tests/factset.json": "8ed6383c70ab9745bd928acee8d30aff7d33834295495a655546a138eb7b800a",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "3576c3103a288a496b0161669ac03652f0861a6f6e854b0e6166da1eafa2dfd8"
+    "tests/verify.py": "17c852d623239cbae09877ccddb69474121aa11f5e788d2e8a320d344d44922b"
    }
   },
   {
@@ -287,7 +287,7 @@
     "task.toml": "3726d1c2a6ebc66422196313fcbf019e81de3279fb6cac71c15ee6b4cf4c2a0b",
     "tests/factset.json": "058f003d9256acf99789a4687975520c3ec1acab3cf8e85220152626afd75451",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "d28fff3475d56a3749cad19307c09d3c1c670029a4cff6a336c936d649b67513"
+    "tests/verify.py": "98a02c1bc59ecdab9fa0171df3449781e0c1881660da509f591d30a88971fdec"
    }
   },
   {
@@ -307,7 +307,7 @@
     "task.toml": "d719b3070d39ee97b044cf7b172bd1e48be372bad6f426cdc20894b0e18773a7",
     "tests/factset.json": "af7e545bd3eeebd2c9ff48ed57485687c31d11283b82ab91084e0742aed6a381",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "fa38e216f874b09156b93bb58e297795dd59d513702502f670fb27926e56513c"
+    "tests/verify.py": "532f706c36230d4659a6c6d5d09f95d15d77cc3f3ec2ff1006c3557db12b4cd7"
    }
   },
   {
@@ -327,7 +327,7 @@
     "task.toml": "9bc80f8fc931fad7d143d4db8146c9c243fddd752c200091b5505d76ebbd9202",
     "tests/factset.json": "7649c9518c64cde8c82680fc97e0245499a3a0957a7b39f42924dac9fdd75c98",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "74dd5e9dfc8d3ba74ceeef426993144ffdded3115ecfa02ca42eac43b1dcb9e7"
+    "tests/verify.py": "7063df71e310adfb611c1cf7242d61c45d0260202c5e0139730ba5ed02febf69"
    }
   },
   {
@@ -347,7 +347,7 @@
     "task.toml": "c182034716762b45828bc6b854db080914013fd076f1566cfe0abde2d55c27ac",
     "tests/factset.json": "954e8eded61d16d27f727165717130e5c5146da06b90d365b1a8877d21c314b0",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "3576c3103a288a496b0161669ac03652f0861a6f6e854b0e6166da1eafa2dfd8"
+    "tests/verify.py": "17c852d623239cbae09877ccddb69474121aa11f5e788d2e8a320d344d44922b"
    }
   },
   {
@@ -367,7 +367,7 @@
     "task.toml": "8625b2e2e4433ae912e04b1a2b28c75c49ae72dfe8b95de7015592ebfac67a3e",
     "tests/factset.json": "8c4fdf9f82c47149db2b1610798ae9e3bc12da88ade3afbdaa5a6cec7e983e48",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "7d7aa4265e3ff5fcff41a76625a97c0f5c0d8eafbd110f3bdcfc2fa7b42e4b39"
+    "tests/verify.py": "b848130b31bed61ce691451cbd80bb3e50b2186e2d8bff97ecf8756fea26ce7b"
    }
   },
   {
@@ -387,7 +387,7 @@
     "task.toml": "0eda180b60783680796e4a2556de787e321af4bcd1f43e328572d7d850422e54",
     "tests/factset.json": "0840473bc125cb2eca66665b02cc545c9d46942f4642b5050f656688a6c756f1",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "0fa68f05db7ce48a2567381dcbe1846203c61c65061026221599c39bb38facad"
+    "tests/verify.py": "3fbf06f2733eabc9a0413a85cd398d3f64b31e28141af69396507e04278b1866"
    }
   },
   {
@@ -407,7 +407,7 @@
     "task.toml": "95e3bdd1d3e86be39d9f800166a76f52e82c3bb2cdc3d2b2e538c0e2c420e498",
     "tests/factset.json": "cfdba822cb4a5e43cebb308c870d25c776a86ce6e26444d7a9325e7ebbb6fd59",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "0fa68f05db7ce48a2567381dcbe1846203c61c65061026221599c39bb38facad"
+    "tests/verify.py": "3fbf06f2733eabc9a0413a85cd398d3f64b31e28141af69396507e04278b1866"
    }
   },
   {
@@ -427,7 +427,7 @@
     "task.toml": "9fdc97c51b5b03b870b88d3a7d592dea96058e423b6bd2d9a9ae206c75677679",
     "tests/factset.json": "5eb552f25d531be1cee663177e80c654e9c9eb53f99ba19703b7ca616f16caba",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "74dd5e9dfc8d3ba74ceeef426993144ffdded3115ecfa02ca42eac43b1dcb9e7"
+    "tests/verify.py": "7063df71e310adfb611c1cf7242d61c45d0260202c5e0139730ba5ed02febf69"
    }
   },
   {
@@ -447,7 +447,7 @@
     "task.toml": "32e5207c0b5a31db981d0d28096c6fe4a9e598e5d40b577df529492759d5c315",
     "tests/factset.json": "a9dd391bb8ee05be929470845548b9ab336b4ff15098e294ddd79ff7a792b2f4",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "d529d13a6782c93f4c772c8d69fb119f9ec29ba3c74c55f5944a667e27d6632b"
+    "tests/verify.py": "6d37a776a486911fd83c4fec8e9b95dd2206c2958e762082d988606787c4097c"
    }
   },
   {
@@ -467,7 +467,7 @@
     "task.toml": "ca8818a7597f245effbcbc18db9f7bed021158cd9fa651baefb8a4731b48448f",
     "tests/factset.json": "42bf51ac550e985b45462c116c44960f8c582d8005c2f9afa6bd66c0f0c476d4",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "74dd5e9dfc8d3ba74ceeef426993144ffdded3115ecfa02ca42eac43b1dcb9e7"
+    "tests/verify.py": "7063df71e310adfb611c1cf7242d61c45d0260202c5e0139730ba5ed02febf69"
    }
   },
   {
@@ -487,7 +487,7 @@
     "task.toml": "8ebfed665f02f27d367b3e6a300c9cab64f385e2da7a093f795264f22c2a37aa",
     "tests/factset.json": "d619a6eeac398f9ff89d249c7db735501d24c558242a93398975af54512d022c",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "406c80b6ff027945a3d8909207277bdcf2fae7d32d6a6efecfec4c1dd3e76f02"
+    "tests/verify.py": "927e723804593c4da1217c48ced03f6c9cb35822058c2b997a474e67f4348628"
    }
   },
   {
@@ -507,7 +507,7 @@
     "task.toml": "bd1876f52d166e1b34419b5d2aca590c08a8a8dcce7b7989249c232ad2784b87",
     "tests/factset.json": "8c97cf9084e758d6abe6b66ccbcecd3076835f869b705176f3fef27f888eb8a4",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "9eb22548e8e5c4270f7ed6bc6023624565af2f3c561830ab07af6d7c7ac0df83"
+    "tests/verify.py": "569836706628096233ea0f4e0485d20138eb421093f1f6cd032b0df4bab59b38"
    }
   }
  ]
