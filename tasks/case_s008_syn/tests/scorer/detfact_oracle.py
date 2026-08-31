@@ -164,7 +164,7 @@ def equivalent(field, a, b):
     a, b = str(a).strip(), str(b).strip()
     if not a or not b or a == b:
         return None
-    # 过长的自由文本不判(不是原子问题)
+    # Overly long free text is not judged (not an atomic question)
     if len(a.split()) > 8 or len(b.split()) > 8:
         return None
     table = _load()
@@ -186,7 +186,7 @@ def equivalent(field, a, b):
     elif all(v == "DIFFERENT" for v in votes):
         verdict = "different"
     else:
-        verdict = "abstain"  # 不一致或有失败 → 弃权,且缓存弃权避免重复咨询
+        verdict = "abstain"  # disagreement or failure -> abstain; cache the abstention to avoid re-asking
     table[k] = {"verdict": verdict, "models": [m.split("/")[-1] for m in QUORUM_MODELS],
                 "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
     _dirty = True
