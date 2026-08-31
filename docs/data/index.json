@@ -16,7 +16,8 @@
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
    "summary_sha256": "31c98c93b9063b89",
-   "note": "Independent reference notes (oracle solutions), scored with the public verifier"
+   "note": "Independent reference notes (oracle solutions), scored with the public verifier",
+   "crit_kind": "calibrated"
   },
   {
    "label": "o3",
@@ -34,7 +35,8 @@
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
    "summary_sha256": "054746ad813db919",
-   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading",
+   "crit_kind": "raw"
   },
   {
    "label": "gpt-4.1",
@@ -52,7 +54,8 @@
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
    "summary_sha256": "196534ba4e9ffa0b",
-   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading",
+   "crit_kind": "raw"
   },
   {
    "label": "gpt-5.2",
@@ -70,7 +73,8 @@
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
    "summary_sha256": "700d603f58249c85",
-   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading",
+   "crit_kind": "raw"
   },
   {
    "label": "gpt-5.5",
@@ -88,7 +92,8 @@
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
    "summary_sha256": "82c9f87fa16ecabe",
-   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading; earlier raw run adjudicated: 15 raw flags -> 0 verified real errors (13 scoring artifacts since fixed, 2 gold defects since fixed)"
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading; earlier raw run adjudicated: 15 raw flags -> 0 verified real errors (13 scoring artifacts since fixed, 2 gold defects since fixed)",
+   "crit_kind": "raw"
   },
   {
    "label": "o4-mini",
@@ -106,7 +111,8 @@
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
    "summary_sha256": "473d4f9c3d936e5f",
-   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading",
+   "crit_kind": "raw"
   },
   {
    "label": "minimax-m3",
@@ -124,7 +130,8 @@
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.0",
    "summary_sha256": "bf5a11b532d75581",
-   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading"
+   "note": "Out-of-pool model; single sample per task; critical_wrong is a raw instrument reading",
+   "crit_kind": "raw"
   }
  ]
 }
