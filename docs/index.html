@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FactBench — results</title>
+<style>
+.viz-root{
+  color-scheme: light;
+  --surface-1:#fcfcfb; --surface-2:#f2f1ee;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#8a8880;
+  --line:#e3e1da;
+  --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a;
+  --series-4:#eda100; --series-5:#e87ba4;
+  --good:#008300; --warn:#b45309;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])) .viz-root{
+    color-scheme: dark;
+    --surface-1:#1a1a19; --surface-2:#242423;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#8a897f;
+    --line:#3a3936;
+    --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
+    --series-4:#c98500; --series-5:#d55181;
+    --good:#3fae3f; --warn:#e0a34c;
+  }
+}
+:root[data-theme="dark"] .viz-root{
+  color-scheme: dark;
+  --surface-1:#1a1a19; --surface-2:#242423;
+  --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#8a897f;
+  --line:#3a3936;
+  --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
+  --series-4:#c98500; --series-5:#d55181;
+  --good:#3fae3f; --warn:#e0a34c;
+}
+body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+     background:var(--surface-1);color:var(--text-primary);line-height:1.5}
+.wrap{max-width:900px;margin:0 auto;padding:20px 16px 60px}
+header{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+h1{font-size:22px;margin:8px 0}
+h2{font-size:16px;margin:28px 0 6px}
+.sub{color:var(--text-secondary);font-size:13.5px;max-width:64em}
+.controls{display:flex;gap:8px;align-items:center}
+select,button{background:var(--surface-2);color:var(--text-primary);
+  border:1px solid var(--line);border-radius:6px;padding:5px 9px;font-size:13px;cursor:pointer}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:18px 0}
+.tile{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile .v{font-size:24px;font-weight:700}
+.tile .k{font-size:12px;color:var(--text-secondary)}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:8px 0}
+th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left}
+th{color:var(--text-secondary);font-weight:600;font-size:12px}
+td.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--text-muted);font-size:12px}
+.explain{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;
+  padding:12px 14px;font-size:13.5px;margin:10px 0}
+.explain b{display:block;margin-bottom:4px}
+svg text{fill:var(--text-secondary);font-size:11px}
+.tooltip{position:fixed;pointer-events:none;background:var(--surface-2);
+  border:1px solid var(--line);border-radius:6px;padding:6px 9px;font-size:12px;
+  box-shadow:0 2px 10px rgba(0,0,0,.18);display:none;z-index:9}
+footer{margin-top:36px;color:var(--text-muted);font-size:12px}
+a{color:var(--series-1)}
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+<header>
+  <h1 data-i="title">FactBench results</h1>
+  <div class="controls">
+    <select id="lang"></select>
+    <button id="theme">◐</button>
+  </div>
+</header>
+<p class="sub" data-i="tagline"></p>
+
+<div class="explain"><b data-i="how_title"></b><span data-i="how_body"></span></div>
+
+<div class="tiles" id="tiles"></div>
+
+<h2 data-i="board_title"></h2>
+<p class="sub" data-i="board_sub"></p>
+<div id="board"></div>
+<div id="board_table"></div>
+
+<h2 data-i="trend_title"></h2>
+<p class="sub" data-i="trend_sub"></p>
+<div id="trend"></div>
+
+<footer>
+  <span data-i="foot"></span>
+  <a href="https://github.com/heidi-health/factbench" id="repo_link">GitHub</a> ·
+  <span class="muted" id="stamp"></span>
+</footer>
+</div>
+<div class="tooltip" id="tt"></div>
+
+<script>
+/* ---------- i18n (plain language; English default) ---------- */
+const I18N = {
+en:{_name:"English",title:"FactBench results",
+ tagline:"FactBench asks AI models to turn a fictional doctor–patient conversation into a clinical note, then checks every important fact with deterministic code — no AI judges, same score every time.",
+ how_title:"How to read this page",
+ how_body:"Coverage = how many of the facts that matter made it into the note (higher is better). Critical errors = dangerous mistakes such as a wrong dose or a stopped drug written as current (lower is better; 0 is the bar). The whisker on each bar shows the 95% confidence range — where the score would likely land if we re-ran with a different sample of cases. Safety flags are advisory warnings (e.g. a date the conversation never mentioned).",
+ board_title:"Latest results per model",board_sub:"Most recent published run for each model. Bars show must-cover fact coverage; whiskers show the 95% confidence interval.",
+ trend_title:"History",trend_sub:"Coverage over time for models with more than one published run.",
+ t_model:"Model",t_date:"Date",t_cov:"Coverage",t_ci:"95% CI",t_pass:"Tasks passed",t_crit:"Critical errors",t_safety:"Safety flags",t_note:"Note",
+ tile_tasks:"benchmark tasks",tile_runs:"published runs",tile_models:"models on the board",tile_proto:"protocol",
+ foot:"All data is fully synthetic (fictional patients). Scoring is open source and reproducible: ",
+ empty:"No published results yet."},
+zh:{_name:"中文",title:"FactBench 跑分结果",
+ tagline:"FactBench 让 AI 模型把一段虚构的医患对话写成病历,然后用确定性代码逐条核对重要事实——不用 AI 当裁判,每次评分完全一致。",
+ how_title:"怎么读懂这页",
+ how_body:"覆盖率 = 重要事实被写进病历的比例(越高越好)。关键错误 = 危险性错误,比如剂量写错、已停药写成在服(越低越好,及格线是 0)。条形上的须线是 95% 置信区间——换一批题目重跑,分数大概率落在这个范围内。安全提示是参考性警告(例如写了对话里从未出现的日期)。",
+ board_title:"各模型最新成绩",board_sub:"每个模型最近一次发布的结果。条形为关键事实覆盖率,须线为 95% 置信区间。",
+ trend_title:"历史趋势",trend_sub:"发布过多次的模型,其覆盖率随时间的变化。",
+ t_model:"模型",t_date:"日期",t_cov:"覆盖率",t_ci:"95% 区间",t_pass:"通过题数",t_crit:"关键错误",t_safety:"安全提示",t_note:"备注",
+ tile_tasks:"基准题目",tile_runs:"已发布跑分",tile_models:"上榜模型",tile_proto:"协议",
+ foot:"所有数据完全虚构(无真实患者)。评分开源可复现:",
+ empty:"暂无发布结果。"},
+es:{_name:"Español",title:"Resultados de FactBench",
+ tagline:"FactBench pide a los modelos de IA convertir una conversación médico-paciente ficticia en una nota clínica y verifica cada hecho importante con código determinista: sin jueces de IA, la misma puntuación cada vez.",
+ how_title:"Cómo leer esta página",
+ how_body:"Cobertura = cuántos hechos importantes llegaron a la nota (más alto es mejor). Errores críticos = errores peligrosos, como una dosis equivocada (más bajo es mejor; el listón es 0). El bigote muestra el intervalo de confianza del 95%. Las alertas de seguridad son avisos consultivos.",
+ board_title:"Últimos resultados por modelo",board_sub:"Ejecución publicada más reciente de cada modelo. Las barras muestran la cobertura; los bigotes, el IC del 95%.",
+ trend_title:"Historial",trend_sub:"Cobertura a lo largo del tiempo para modelos con más de una publicación.",
+ t_model:"Modelo",t_date:"Fecha",t_cov:"Cobertura",t_ci:"IC 95%",t_pass:"Tareas superadas",t_crit:"Errores críticos",t_safety:"Alertas",t_note:"Nota",
+ tile_tasks:"tareas",tile_runs:"publicaciones",tile_models:"modelos",tile_proto:"protocolo",
+ foot:"Todos los datos son sintéticos (pacientes ficticios). La puntuación es de código abierto y reproducible: ",
+ empty:"Aún no hay resultados."},
+fr:{_name:"Français",title:"Résultats FactBench",
+ tagline:"FactBench demande aux modèles d'IA de transformer une conversation médecin-patient fictive en note clinique, puis vérifie chaque fait important par du code déterministe — sans juge IA, le même score à chaque fois.",
+ how_title:"Comment lire cette page",
+ how_body:"Couverture = part des faits importants présents dans la note (plus c'est haut, mieux c'est). Erreurs critiques = erreurs dangereuses, p. ex. une dose fausse (0 est la barre). La moustache indique l'intervalle de confiance à 95 %. Les alertes de sécurité sont consultatives.",
+ board_title:"Derniers résultats par modèle",board_sub:"Dernière exécution publiée de chaque modèle. Barres : couverture ; moustaches : IC 95 %.",
+ trend_title:"Historique",trend_sub:"Évolution de la couverture pour les modèles publiés plusieurs fois.",
+ t_model:"Modèle",t_date:"Date",t_cov:"Couverture",t_ci:"IC 95 %",t_pass:"Tâches réussies",t_crit:"Erreurs critiques",t_safety:"Alertes",t_note:"Note",
+ tile_tasks:"tâches",tile_runs:"publications",tile_models:"modèles",tile_proto:"protocole",
+ foot:"Données entièrement synthétiques (patients fictifs). Notation open source et reproductible : ",
+ empty:"Aucun résultat publié."},
+de:{_name:"Deutsch",title:"FactBench-Ergebnisse",
+ tagline:"FactBench lässt KI-Modelle ein fiktives Arzt-Patient-Gespräch in eine klinische Notiz verwandeln und prüft jeden wichtigen Fakt mit deterministischem Code — ohne KI-Richter, immer dieselbe Bewertung.",
+ how_title:"So liest man diese Seite",
+ how_body:"Abdeckung = Anteil der wichtigen Fakten in der Notiz (höher ist besser). Kritische Fehler = gefährliche Fehler wie eine falsche Dosis (0 ist die Messlatte). Der Whisker zeigt das 95%-Konfidenzintervall. Sicherheitshinweise sind beratend.",
+ board_title:"Neueste Ergebnisse je Modell",board_sub:"Jüngster veröffentlichter Lauf pro Modell. Balken: Abdeckung; Whisker: 95%-KI.",
+ trend_title:"Verlauf",trend_sub:"Abdeckung über die Zeit für mehrfach veröffentlichte Modelle.",
+ t_model:"Modell",t_date:"Datum",t_cov:"Abdeckung",t_ci:"95%-KI",t_pass:"Bestandene Aufgaben",t_crit:"Kritische Fehler",t_safety:"Hinweise",t_note:"Notiz",
+ tile_tasks:"Aufgaben",tile_runs:"Veröffentlichungen",tile_models:"Modelle",tile_proto:"Protokoll",
+ foot:"Alle Daten sind vollständig synthetisch (fiktive Patienten). Bewertung ist Open Source und reproduzierbar: ",
+ empty:"Noch keine Ergebnisse."},
+ja:{_name:"日本語",title:"FactBench 結果",
+ tagline:"FactBench は AI モデルに架空の診察会話からカルテを作成させ、重要な事実を決定的なコードで照合します。AI 審査員なし、常に同じスコアです。",
+ how_title:"このページの読み方",
+ how_body:"カバレッジ = 重要な事実がカルテに書かれた割合(高いほど良い)。重大エラー = 用量の誤りなど危険な間違い(0 が合格ライン)。ひげは 95% 信頼区間。安全フラグは参考情報です。",
+ board_title:"モデル別の最新結果",board_sub:"各モデルの直近の公開結果。バーはカバレッジ、ひげは 95% 信頼区間。",
+ trend_title:"履歴",trend_sub:"複数回公開されたモデルのカバレッジ推移。",
+ t_model:"モデル",t_date:"日付",t_cov:"カバレッジ",t_ci:"95% CI",t_pass:"合格タスク",t_crit:"重大エラー",t_safety:"安全フラグ",t_note:"備考",
+ tile_tasks:"タスク",tile_runs:"公開回数",tile_models:"モデル数",tile_proto:"プロトコル",
+ foot:"データはすべて架空(実在患者なし)。採点はオープンソースで再現可能:",
+ empty:"公開結果はまだありません。"},
+pt:{_name:"Português",title:"Resultados do FactBench",
+ tagline:"O FactBench pede aos modelos de IA que transformem uma conversa médico-paciente fictícia numa nota clínica e verifica cada fato importante com código determinístico — sem juízes de IA, a mesma pontuação sempre.",
+ how_title:"Como ler esta página",
+ how_body:"Cobertura = quantos fatos importantes entraram na nota (quanto maior, melhor). Erros críticos = erros perigosos, como dose errada (0 é a régua). O bigode mostra o intervalo de confiança de 95%. Alertas de segurança são consultivos.",
+ board_title:"Resultados mais recentes por modelo",board_sub:"Execução publicada mais recente de cada modelo. Barras: cobertura; bigodes: IC 95%.",
+ trend_title:"Histórico",trend_sub:"Cobertura ao longo do tempo para modelos com mais de uma publicação.",
+ t_model:"Modelo",t_date:"Data",t_cov:"Cobertura",t_ci:"IC 95%",t_pass:"Tarefas aprovadas",t_crit:"Erros críticos",t_safety:"Alertas",t_note:"Nota",
+ tile_tasks:"tarefas",tile_runs:"publicações",tile_models:"modelos",tile_proto:"protocolo",
+ foot:"Todos os dados são sintéticos (pacientes fictícios). Pontuação open source e reproduzível: ",
+ empty:"Nenhum resultado publicado."},
+ko:{_name:"한국어",title:"FactBench 결과",
+ tagline:"FactBench는 AI 모델이 가상의 진료 대화를 진료 기록으로 작성하게 한 뒤, 중요한 사실을 결정적 코드로 검증합니다. AI 심판 없이 항상 같은 점수입니다.",
+ how_title:"이 페이지 읽는 법",
+ how_body:"커버리지 = 중요한 사실이 기록에 포함된 비율(높을수록 좋음). 치명적 오류 = 용량 오기 등 위험한 실수(기준선은 0). 수염은 95% 신뢰구간입니다. 안전 플래그는 참고용 경고입니다.",
+ board_title:"모델별 최신 결과",board_sub:"각 모델의 최근 공개 결과. 막대: 커버리지, 수염: 95% 신뢰구간.",
+ trend_title:"기록",trend_sub:"여러 번 공개된 모델의 커버리지 추이.",
+ t_model:"모델",t_date:"날짜",t_cov:"커버리지",t_ci:"95% CI",t_pass:"통과 과제",t_crit:"치명적 오류",t_safety:"안전 플래그",t_note:"메모",
+ tile_tasks:"과제",tile_runs:"공개 횟수",tile_models:"모델 수",tile_proto:"프로토콜",
+ foot:"모든 데이터는 가상입니다(실제 환자 없음). 채점은 오픈소스이며 재현 가능합니다: ",
+ empty:"아직 공개된 결과가 없습니다."}
+};
+let LANG = localStorage.getItem("fb_lang") ||
+  (Object.keys(I18N).includes(navigator.language.slice(0,2)) ? navigator.language.slice(0,2) : "en");
+const t = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
+
+/* ---------- theme ---------- */
+const themeBtn = document.getElementById("theme");
+function setTheme(v){ if(v) document.documentElement.dataset.theme=v;
+  else delete document.documentElement.dataset.theme;
+  localStorage.setItem("fb_theme", v||""); }
+setTheme(localStorage.getItem("fb_theme")||"");
+themeBtn.onclick = ()=> setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+
+/* ---------- data ---------- */
+const SERIES = ["--series-1","--series-2","--series-3","--series-4","--series-5"];
+const css = v => getComputedStyle(document.body).getPropertyValue(v).trim();
+const tt = document.getElementById("tt");
+function showTT(e, html){ tt.innerHTML=html; tt.style.display="block";
+  tt.style.left=Math.min(e.clientX+12, innerWidth-220)+"px"; tt.style.top=(e.clientY+12)+"px"; }
+function hideTT(){ tt.style.display="none"; }
+
+let DATA = {entries:[]};
+async function load(){
+  try{ DATA = await (await fetch("data/index.json",{cache:"no-store"})).json(); }
+  catch(e){ DATA = {entries:[]}; }
+  render();
+}
+
+function latestPerModel(){
+  const m = new Map();
+  for(const e of DATA.entries){ // entries are append-only, later wins
+    m.set(e.label, e);
+  }
+  return [...m.values()].sort((a,b)=>b.mean_coverage-a.mean_coverage);
+}
+
+function render(){
+  // language selector
+  const sel = document.getElementById("lang");
+  sel.innerHTML = Object.entries(I18N).map(([k,v])=>
+    `<option value="${k}" ${k===LANG?"selected":""}>${v._name}</option>`).join("");
+  sel.onchange = ()=>{ LANG=sel.value; localStorage.setItem("fb_lang",LANG); render(); };
+  document.documentElement.lang = LANG;
+  document.querySelectorAll("[data-i]").forEach(el=> el.textContent = t(el.dataset.i));
+  document.title = t("title");
+
+  const latest = latestPerModel();
+  // tiles
+  const proto = latest[0] ? latest[0].protocol : "detfact-v2.0";
+  const tiles = [
+    [latest[0]?latest[0].tasks:25, t("tile_tasks")],
+    [DATA.entries.length, t("tile_runs")],
+    [latest.length, t("tile_models")],
+    [proto, t("tile_proto")],
+  ];
+  document.getElementById("tiles").innerHTML = tiles.map(([v,k])=>
+    `<div class="tile"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+
+  renderBoard(latest);
+  renderTable(latest);
+  renderTrend();
+  document.getElementById("stamp").textContent =
+    DATA.entries.length ? "latest: " + DATA.entries[DATA.entries.length-1].date : "";
+}
+
+/* ---------- bar board with CI whiskers (single-hue: entity id lives on the label) ---------- */
+function renderBoard(latest){
+  const el = document.getElementById("board");
+  if(!latest.length){ el.innerHTML = `<p class="muted">${t("empty")}</p>`; return; }
+  const W=860, rowH=34, padL=190, padR=60, H=latest.length*rowH+18;
+  const x = v => padL + v*(W-padL-padR);
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">`;
+  for(const g of [0,.25,.5,.75,1])
+    s += `<line x1="${x(g)}" y1="6" x2="${x(g)}" y2="${H-12}" stroke="var(--line)" stroke-width="1"/>
+          <text x="${x(g)}" y="${H-1}" text-anchor="middle">${g*100}%</text>`;
+  latest.forEach((e,i)=>{
+    const y = 10+i*rowH, bw = Math.max(2, x(e.mean_coverage)-x(0));
+    s += `<text x="${padL-8}" y="${y+13}" text-anchor="end" style="fill:var(--text-primary);font-size:12px">${e.label}</text>`;
+    s += `<rect class="bar" data-i="${i}" x="${x(0)}" y="${y}" width="${bw}" height="18" rx="4"
+           fill="var(--series-1)"/>`;
+    if(e.coverage_ci95){
+      const [lo,hi]=e.coverage_ci95;
+      s += `<line x1="${x(lo)}" x2="${x(hi)}" y1="${y+9}" y2="${y+9}" stroke="var(--text-secondary)" stroke-width="2"/>
+            <line x1="${x(lo)}" x2="${x(lo)}" y1="${y+4}" y2="${y+14}" stroke="var(--text-secondary)" stroke-width="2"/>
+            <line x1="${x(hi)}" x2="${x(hi)}" y1="${y+4}" y2="${y+14}" stroke="var(--text-secondary)" stroke-width="2"/>`;
+    }
+    const lblX = x(e.coverage_ci95 ? Math.max(e.mean_coverage, e.coverage_ci95[1]) : e.mean_coverage) + 8;
+    s += `<text x="${lblX}" y="${y+13}" style="fill:var(--text-primary);font-weight:600">${Math.round(e.mean_coverage*100)}%</text>`;
+  });
+  s += "</svg>";
+  el.innerHTML = s;
+  el.querySelectorAll(".bar").forEach(r=>{
+    const e = latest[+r.dataset.i];
+    r.addEventListener("mousemove",ev=>showTT(ev,
+      `<b>${e.label}</b> · ${e.date}<br>${t("t_cov")}: ${Math.round(e.mean_coverage*100)}%`+
+      (e.coverage_ci95?` (${Math.round(e.coverage_ci95[0]*100)}–${Math.round(e.coverage_ci95[1]*100)}%)`:``)+
+      `<br>${t("t_pass")}: ${DATA.entries.find(x=>x===e)? e.tasks:""}${e.tasks?` · `:``}${t("t_crit")}: ${e.critical_wrong}`));
+    r.addEventListener("mouseleave",hideTT);
+  });
+}
+
+function renderTable(latest){
+  const el = document.getElementById("board_table");
+  if(!latest.length){ el.innerHTML=""; return; }
+  el.innerHTML = `<table><thead><tr>
+    <th>${t("t_model")}</th><th>${t("t_date")}</th><th>${t("t_cov")}</th><th>${t("t_ci")}</th>
+    <th>${t("t_pass")}</th><th>${t("t_crit")}</th><th>${t("t_safety")}</th><th>${t("t_note")}</th>
+    </tr></thead><tbody>`+
+    latest.map(e=>`<tr><td>${e.label}</td><td class="num">${e.date}</td>
+      <td class="num">${(e.mean_coverage*100).toFixed(1)}%</td>
+      <td class="num">${e.coverage_ci95?`${(e.coverage_ci95[0]*100).toFixed(0)}–${(e.coverage_ci95[1]*100).toFixed(0)}%`:"—"}</td>
+      <td class="num">${Math.round(e.pass_rate*e.tasks)}/${e.tasks}</td>
+      <td class="num">${e.critical_wrong}</td><td class="num">${e.safety_flags||0}</td>
+      <td class="muted">${e.note||""}</td></tr>`).join("")+`</tbody></table>`;
+}
+
+/* ---------- history trend (multi-run models; fixed slot order, direct end labels) ---------- */
+function renderTrend(){
+  const el = document.getElementById("trend");
+  const byModel = new Map();
+  for(const e of DATA.entries){
+    if(!byModel.has(e.label)) byModel.set(e.label,[]);
+    byModel.get(e.label).push(e);
+  }
+  const multi = [...byModel.entries()].filter(([,v])=>v.length>1).slice(0,5);
+  if(!multi.length){ el.innerHTML=`<p class="muted">${t("empty")}</p>`; return; }
+  const dates = [...new Set(DATA.entries.map(e=>e.date))].sort();
+  const W=860,H=240,padL=48,padR=130,padT=12,padB=26;
+  const x = d => padL + dates.indexOf(d)/(Math.max(1,dates.length-1))*(W-padL-padR);
+  const y = v => padT + (1-v)*(H-padT-padB);
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">`;
+  for(const g of [0,.25,.5,.75,1])
+    s += `<line x1="${padL}" x2="${W-padR}" y1="${y(g)}" y2="${y(g)}" stroke="var(--line)"/>
+          <text x="${padL-6}" y="${y(g)+4}" text-anchor="end">${g*100}%</text>`;
+  dates.forEach(d=> s += `<text x="${x(d)}" y="${H-8}" text-anchor="middle">${d.slice(5)}</text>`);
+  multi.forEach(([label,runs],i)=>{
+    const col = `var(${SERIES[i%SERIES.length]})`;
+    const pts = runs.map(r=>[x(r.date),y(r.mean_coverage)]);
+    s += `<polyline points="${pts.map(p=>p.join(",")).join(" ")}" fill="none" stroke="${col}" stroke-width="2"/>`;
+    pts.forEach(p=> s += `<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="${col}" stroke="var(--surface-1)" stroke-width="2"/>`);
+    const last = pts[pts.length-1];
+    s += `<text x="${last[0]+8}" y="${last[1]+4}" style="fill:var(--text-primary);font-size:12px">${label}</text>`;
+  });
+  s += "</svg>";
+  el.innerHTML = s;
+}
+
+document.getElementById("lang").addEventListener("change",()=>{});
+load();
+</script>
+</body>
+</html>

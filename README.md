@@ -168,6 +168,16 @@ raw chain-of-thought is never silently scored. The runner uses the benchmark's c
 system prompt and output tags as the reference notes) so comparisons are fair.
 Alternatively, run through the official harbor harness: `harbor run -p tasks -a <agent>`.
 
+## Results site
+
+Published runs are shown on a GitHub Pages leaderboard (see `docs/README.md` to
+enable it: Settings → Pages → branch `main`, folder `/docs`). Publishing a run is
+one command + one commit:
+
+```bash
+python3 scripts/publish_result.py results/<model>/summary.json --label "Model Name"
+```
+
 ## Dataset manifest
 
 `manifest.json` is a dataset-style release manifest (task list, per-file sha256,
