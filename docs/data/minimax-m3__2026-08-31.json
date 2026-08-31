@@ -1,5 +1,5 @@
 {
- "model": "accounts/fireworks/models/minimax-m3",
+ "model": "minimax-m3",
  "tasks": 25,
  "passed": 9,
  "pass_rate": 0.36,

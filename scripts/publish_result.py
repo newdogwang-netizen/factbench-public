@@ -23,7 +23,8 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 REQUIRED = {"model", "tasks", "passed", "pass_rate", "mean_coverage", "rows"}
-SENSITIVE = re.compile(r"/mnt/data2|/home/Admin|127\.0\.0\.1|9093|9094|nemotron", re.I)
+SENSITIVE = re.compile(
+    r"/mnt/data2|/home/Admin|127\.0\.0\.1|9093|9094|nemotron|accounts/fireworks", re.I)
 
 
 def main():
