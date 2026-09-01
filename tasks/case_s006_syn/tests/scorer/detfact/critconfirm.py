@@ -57,7 +57,7 @@ _PASTISH = {"past", "stop", "stopped", "historical", "resolved", "worsened"}
 _PAST_QUOTE_RE = re.compile(
     r"\b(was|were|had|has been|have been|tried|took|caused|gave|made "
     r"(?:me|her|him|them)|stopped|discontinued|resolved|went away|used to|"
-    r"previously|prior|before pregnancy|history of|initially|at first|"
+    r"previously|prior|past|formerly|before pregnancy|history of|initially|at first|"
     r"completed|finished|tapered|"
     r"(?:increased|decreased|reduced|raised|lowered|changed|bumped|titrated)"
     r"\s+(?:from|to)|"
@@ -89,7 +89,7 @@ _FREQ_PATTERNS = [
     ("tid", r"\bthree\s+times\s+(?:a\s+day|daily|per\s+day)\b|\bt\.?i\.?d\.?\b"),
     ("qid", r"\bfour\s+times\s+(?:a\s+day|daily|per\s+day)\b|\bq\.?i\.?d\.?\b"),
     ("qod", r"\bevery\s+other\s+day\b"),
-    ("weekly", r"\bonce\s+a\s+week\b|\bweekly\b|\bevery\s+week\b|\bper\s+week\b"),
+    ("weekly", r"\bonce\s+a\s+week\b|\bweekly\b|\bevery\s+week\b|\bper\s+week\b|\b(?:\d+|one|two|three|four|five|six)(?:\s+or\s+(?:\d+|one|two|three|four|five|six))?\s+days?\s+a\s+week\b"),
     ("monthly", r"\b(?:once|twice|once or twice)\s+a\s+month\b|\bmonthly\b|\bper\s+month\b"),
     ("prn", r"\bas\s+needed\b|\bwhen\s+needed\b|\bp\.?r\.?n\.?\b|\bsometimes\b|\boccasionall?y\b|\bonce in a while\b"),
     ("qhs", r"\bat\s+bed\s?time\b|\bnightly\b|\bat\s+night\b|\bevery\s+night\b|\bq\.?h\.?s\.?\b"),
@@ -377,7 +377,13 @@ def confirm(claim, fact, mismatch_fields, transcript):
         elif field == "time":
             c_time = str(mm.get("claim") or cf.get("time") or "")
             f_time = str(mm.get("fact") or "")
-            if _CLOCK_RE.match(c_time) or _CLOCK_RE.match(f_time):
+            if "prn" in _freq_canon_set(_norm(quote)):
+                # The sentence itself is an as-needed usage description
+                # ("PRN, 3-4 days a week, once those days"): its frequency
+                # words describe usage pattern, not a fixed regimen — a
+                # dimension mix the deterministic layer cannot convict on.
+                demote = "prn_usage_pattern"
+            elif _CLOCK_RE.match(c_time) or _CLOCK_RE.match(f_time):
                 # Clock-of-day values are tiny numbers the deterministic
                 # layer cannot safely convict on; dispute lane decides.
                 demote = "clock_time_dispute"

@@ -209,6 +209,111 @@
    "protocol": "detfact-v2.1",
    "summary_sha256": "a16cf777f0c9b07e",
    "note": "local endpoint; glm family — one pool author (glm-5p2) shares the family; 14/25 notes salvaged (no final tags)"
+  },
+  {
+   "label": "gemini-2.5-flash-lite",
+   "date": "2026-09-01",
+   "file": "gemini-2.5-flash-lite__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.76,
+   "mean_coverage": 0.4667,
+   "coverage_ci95": [
+    0.4248,
+    0.5131
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 7,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "f783a1cdd5c6fb67",
+   "note": "gemini family: an earlier pool author (gemini-2.5-pro) shares the family on part of gold"
+  },
+  {
+   "label": "gemini-3.1-flash-lite",
+   "date": "2026-09-01",
+   "file": "gemini-3.1-flash-lite__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.16,
+   "mean_coverage": 0.3224,
+   "coverage_ci95": [
+    0.2817,
+    0.3702
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 3,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 2,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "ea9e49393845a8d8",
+   "note": "gemini family: an earlier pool author (gemini-2.5-pro) shares the family on part of gold; notably terse notes"
+  },
+  {
+   "label": "gemini-3.5-flash-lite",
+   "date": "2026-09-01",
+   "file": "gemini-3.5-flash-lite__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.52,
+   "mean_coverage": 0.3385,
+   "coverage_ci95": [
+    0.2926,
+    0.3789
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 5,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "88f500d8214cd046",
+   "note": "gemini family: an earlier pool author (gemini-2.5-pro) shares the family on part of gold"
+  },
+  {
+   "label": "claude-haiku-4.5",
+   "date": "2026-09-01",
+   "file": "claude-haiku-4.5__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.6,
+   "mean_coverage": 0.381,
+   "coverage_ci95": [
+    0.3407,
+    0.4178
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 10,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 2,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "dd600bf0763ece9f",
+   "note": "small tier"
+  },
+  {
+   "label": "grok-4.6",
+   "date": "2026-09-01",
+   "file": "grok-4.6__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.72,
+   "mean_coverage": 0.462,
+   "coverage_ci95": [
+    0.4177,
+    0.506
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 6,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "8f3724e424b0cacc",
+   "note": ""
   }
  ]
 }
