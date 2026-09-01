@@ -1,0 +1,1736 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x020_syn",
+    "version": "1",
+    "sha256": "28edfc010cc96376cb6e5f24c93ac9deecaa1d6d1efa145c3b650d42ae1a96f0",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x020_syn",
+    "path": "case_x020_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 212,
+      "certain": 7,
+      "strict_certain": 7,
+      "low_conf": 39,
+      "unique": 166,
+      "unanimous": 12,
+      "low_support": 166
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 15,
+    "unstable_skipped": 29
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "75",
+        "unit": "mcg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75mcg daily (for thyroid)"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 mcg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "3/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Levetiracetam",
+      "canonical_anchor": "med.medication.levetiracetam.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levetiracetam",
+        "value": "1500",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levetiracetam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levetiracetam 1500 mg twice daily (increased from 1000 mg twice daily approximately seven months ago)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.levetiracetam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levetiracetam 1500mg twice daily (for seizures)"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levetiracetam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levetiracetam 1500 mg twice a day."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levetiracetam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levetiracetam 1500 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levetiracetam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levetiracetam 1500 mg twice daily (dose increased from 1000 mg twice daily approximately 7 months ago)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levetiracetam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levetiracetam 1500 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "50",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50mg daily (for mood)"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is taking sertraline 50 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg daily; patient feels it is helping."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sumatriptan",
+      "canonical_anchor": "med.medication.sumatriptan.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sumatriptan",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan for migraines."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan (for migraines) — used approximately once every couple of months"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan for migraines."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan for migraines, used about once every couple of months."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan (as needed for migraines)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan for migraines."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Omeprazole",
+      "canonical_anchor": "med.medication.omeprazole.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "omeprazole",
+        "value": "20",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20mg (for reflux)"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 20 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start calcium 1000 mg daily and vitamin D 1000 IU daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start vitamin D supplementation 1000 IU daily"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start vitamin D 1000 IU daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start vitamin D 1000 IU daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start calcium 1000 mg daily and vitamin D 1000 IU daily for bone health."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start vitamin D 1000 international units daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Start calcium 1000 mg daily",
+      "canonical_anchor": "instruct.start.start_calcium.planned.after_vitamin d_start",
+      "kind": "instruct",
+      "subtype": "start",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "start calcium 1000 mg daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.start_calcium_1000_mg_daily_and_vitamin_d_1000_iu_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start calcium 1000 mg daily and vitamin D 1000 IU daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.start_calcium_1000_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start calcium 1000 mg daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.start_vitamin_d_1000_iu_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start vitamin D 1000 IU daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.start_calcium_1000_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start calcium 1000 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.start_vitamin_d_1000_iu_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start vitamin D 1000 IU daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.start_calcium_1000_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start calcium 1000 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.start_calcium_1000_mg_daily_and_vitamin_d_1000_iu_daily_for_bone_health",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start calcium 1000 mg daily and vitamin D 1000 IU daily for bone health."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": "morning",
+        "location": null,
+        "owner": null,
+        "status": "prior instance",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advise taking calcium at a different time from levothyroxine to avoid interference with absorption; suggested taking levothyroxine in the morning and calcium at lunch or dinner."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Calcium should be taken at a different time from levothyroxine due to absorption interference"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take calcium at a different time from levothyroxine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take calcium at a different time from levothyroxine (e.g., levothyroxine in the morning and calcium at lunch or dinner) because calcium can interfere with levothyroxine absorption."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "History of thyroid condition (on levothyroxine)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take calcium at a different time from levothyroxine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F036",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "5/6",
+            "time": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "by others",
+      "canonical_anchor": "symptom.symptom.by_other.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.by_others",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No staring spells or episodes of unresponsiveness reported by others"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.by_others",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No staring spells or episodes of unresponsiveness reported by others."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.by_others",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies staring spells or episodes of unresponsiveness reported by others."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "If EEG",
+      "canonical_anchor": "demo.demo.if_eeg.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "if eeg",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.if_eeg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If EEG is clear, provider will write a letter clearing patient to drive"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.if_eeg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If EEG is clear, provider will write a letter clearing patient for driving license reinstatement."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.the_eeg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The EEG is not a requirement, but the clinician would feel better having it done."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F071",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sumatriptan helped the migraine",
+      "canonical_anchor": "symptom.symptom.sumatriptan_helped_migraine.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sumatriptan helped the migraine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.sumatriptan_helped_the_migraine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported sumatriptan helped the migraine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.sumatriptan_helped_the_migraine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan helped the migraine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.sumatriptan_helped_the_migraine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan helped the migraine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F091",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient has thyroid disease treated with levothyroxine",
+      "canonical_anchor": "diagnosis.thyroid.thyroid_treated_with_levothyroxine.present",
+      "kind": "diagnosis",
+      "subtype": "thyroid",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.the_patient_has_thyroid_disease_treated_with_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has thyroid disease treated with levothyroxine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.thyroid_condition_treated_with_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Thyroid condition treated with levothyroxine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_patient_has_a_thyroid_condition_treated_with_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has a thyroid condition treated with levothyroxine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F104",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient has reflux treated with omeprazole",
+      "canonical_anchor": "diagnosis.reflux.reflux_treated_with_omeprazole.present",
+      "kind": "diagnosis",
+      "subtype": "reflux",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient has reflux treated with omeprazole",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.the_patient_has_reflux_treated_with_omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has reflux treated with omeprazole."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.reflux_treated_with_omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reflux treated with omeprazole."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_patient_has_reflux_treated_with_omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has reflux treated with omeprazole."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F105",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Take calcium at a different time from levothyroxine",
+      "canonical_anchor": "instruct.take.take_calcium_at_different_time_from_levothyroxine.present",
+      "kind": "instruct",
+      "subtype": "take",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.take_calcium_at_a_different_time_from_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take calcium at a different time from levothyroxine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.take_calcium_at_a_different_time_from_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take calcium at a different time from levothyroxine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.take_calcium_at_a_different_time_from_levothyroxine_e_g_levothyroxine_and_calcium_at_lunch_or_dinner_because_calcium_can_interfere_with_levothyroxine_absorption",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take calcium at a different time from levothyroxine (e.g., levothyroxine in the morning and calcium at lunch or dinner) because calcium can interfere with levothyroxine absorption."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.take_calcium_at_a_different_time_from_levothyroxine_e_g_levothyroxine_calcium_at_lunch_or_dinner_due_to_absorption_interference",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take calcium at a different time from levothyroxine (e.g., levothyroxine in the morning, calcium at lunch or dinner) due to absorption interference."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F122",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "75",
+        "unit": "mcg",
+        "time": "morning",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician advised taking levothyroxine in the morning and calcium at lunch or dinner."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 mcg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine may be taken in the morning and calcium at lunch or dinner."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F123",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6",
+            "time": "2/6",
+            "unit": "1/6",
+            "value": "1/6"
+          }
+        }
+      }
+    }
+  ]
+}

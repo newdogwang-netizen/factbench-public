@@ -1,0 +1,1702 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x009_syn",
+    "version": "1",
+    "sha256": "2bf55a616591d5a220cbf906755a62ff2ddd5bb1e415d7432857636434958dcb",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x009_syn",
+    "path": "case_x009_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 249,
+      "certain": 5,
+      "strict_certain": 5,
+      "low_conf": 32,
+      "unique": 212,
+      "unanimous": 8,
+      "low_support": 212
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 16,
+    "unstable_skipped": 18
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "both knees get stiff if sitting too long",
+      "canonical_anchor": "symptom.symptom.both_knee_get_stiff_if_sitting_too_long.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "both knee get stiff if sitting too long",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.both_knees_get_stiff_if_sitting_too_long",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports both knees get stiff if sitting too long."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.both_knees_get_stiff_if_sitting_too_long",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported both knees get stiff if sitting too long."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.both_knees_get_stiff_after_sitting_too_long",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Both knees get stiff after sitting too long."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F005",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "morning stiffness is about thirty minutes now, compared to two hours previously",
+      "canonical_anchor": "symptom.symptom.morning_stiffness_now_about.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "morning stiffness is now about 30 minute",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.morning_stiffness_is_about_thirty_minutes_now_compared_to_two_hours_previously",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports morning stiffness is about thirty minutes now, compared to two hours previously."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.morning_stiffness_is_now_about_30_minutes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported morning stiffness is now about 30 minutes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.morning_stiffness_is_now_about_30_minutes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Morning stiffness is now about 30 minutes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no chest pain, shortness of breath, fevers, chills, night sweats, rashes, or skin changes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No chest pain, shortness of breath, fevers, chills, night sweats, rashes, or skin changes reported."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied chest pain."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies chest pain."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies chest pain, shortness of breath, fevers, chills, night sweats, rashes, or skin changes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies chest pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "200",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 200 mg over-the-counter, taken a couple of times a week as needed for joint pain."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 200 mg over-the-counter, taken a couple times a week as needed for joint pain."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 200 mg over the counter as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient intermittently takes over-the-counter ibuprofen 200 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 200 mg over-the-counter, taken a couple of times per week as needed for joint pain."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The ibuprofen dose is 200 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "unspecified osteoarthritis, unspecified site (m19 90)",
+      "canonical_anchor": "diagnosis.unspecified.unspecified_osteoarthritis_unspecified_site_m.present",
+      "kind": "diagnosis",
+      "subtype": "unspecified",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "osteoarthritis",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's mother has osteoarthritis"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has osteoarthritis"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has osteoarthritis"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has osteoarthritis"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: osteoarthritis"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.unspecified_osteoarthritis_unspecified_site_m19_90",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has osteoarthritis"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient's mother has osteoarthritis",
+      "canonical_anchor": "famhist.famhist.s_mother_osteoarthritis.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "osteoarthritis",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.patient_s_mother_has_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's mother has osteoarthritis."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_mother_has_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has osteoarthritis."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has osteoarthritis."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has osteoarthritis."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has osteoarthritis."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_osteoarthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: osteoarthritis."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue methotrexate 15 mg weekly",
+      "canonical_anchor": "instruct.continue.continue_methotrexate.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue methotrexate 15 mg weekly",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_methotrexate_15_mg_weekly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue methotrexate 15 mg weekly."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_methotrexate_15_mg_weekly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue methotrexate 15 mg weekly."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_methotrexate_15_mg_once_weekly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue methotrexate 15 mg once weekly."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_methotrexate_15_mg_weekly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue methotrexate 15 mg weekly."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advised to avoid overdoing ibuprofen as it can affect stomach and kidneys."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Consider meloxicam as an alternative to ibuprofen for more targeted anti-inflammatory effect; for now, ibuprofen is acceptable but avoid overuse due to stomach and kidney effects."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Clinician stated ibuprofen is okay for now."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised not to overuse ibuprofen because of possible stomach and kidney effects."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Consider meloxicam as a more RA-specific anti-inflammatory alternative to ibuprofen."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen is okay for now."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient can open jars again",
+      "canonical_anchor": "symptom.symptom.can_open_jar_again.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient can open jar again",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.patient_can_open_jars_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient can open jars again."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_patient_can_open_jars_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient can open jars again."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_can_open_jars_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient can open jars again."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F041",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "afternoon fatigue",
+      "canonical_anchor": "symptom.symptom.afternoon_fatigue.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "afternoon fatigue",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.afternoon_fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports afternoon fatigue."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.afternoon_fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported afternoon fatigue."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.afternoon_fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports afternoon fatigue."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.afternoon_fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports afternoon fatigue."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F045",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "No known family history of thyroid issues",
+      "canonical_anchor": "famhist.famhist.known_family_of_thyroid.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no known family history of thyroid issue",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "family_history.no_known_family_history_of_thyroid_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known family history of thyroid issues."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.no_known_family_history_of_thyroid_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known family history of thyroid issues."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.patient_was_not_aware_of_family_thyroid_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was not aware of family thyroid issues."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "minimax-m3",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "shortness of breath",
+      "canonical_anchor": "symptom.symptom.shortness_of_breath.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "shortness of breath",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.shortness_of_breath",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied shortness of breath."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.shortness_of_breath",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies shortness of breath."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.shortness_of_breath",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies shortness of breath."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F086",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "fevers",
+      "canonical_anchor": "symptom.symptom.fever.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "fever",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.fevers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied fevers."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.fevers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies fevers."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.fevers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies fevers."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F087",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "chills",
+      "canonical_anchor": "symptom.symptom.chill.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "chill",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied chills."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies chills."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies chills."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F088",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "night sweats",
+      "canonical_anchor": "symptom.symptom.night_sweat.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "night sweat",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.night_sweats",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied night sweats."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.night_sweats",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies night sweats."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.night_sweats",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies night sweats."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F089",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "rashes",
+      "canonical_anchor": "symptom.symptom.rashe.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "rashe",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.rashes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied rashes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.rashes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies rashes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.rashes_or_skin_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies rashes or skin changes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F090",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

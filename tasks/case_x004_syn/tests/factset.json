@@ -1,0 +1,2345 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x004_syn",
+    "version": "1",
+    "sha256": "f75ac33e03d70a92f8e3e17e54249b0f9291311381534255124991c1350b0527",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x004_syn",
+    "path": "case_x004_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 445,
+      "certain": 14,
+      "strict_certain": 10,
+      "low_conf": 24,
+      "unique": 407,
+      "unanimous": 15,
+      "low_support": 407
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 17,
+    "unstable_skipped": 15
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "32-year male",
+      "canonical_anchor": "demo.demo.male.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject",
+        "time",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "time",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "age_and_gender",
+        "object": "32-year male",
+        "value": "32",
+        "unit": null,
+        "time": "current",
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.age",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is a 32-year-old male presenting for his first psychiatric visit, referred by his PCP, Dr. Morrison."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.age",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is James, a 32-year-old male, referred by PCP Dr. Morrison for psychiatric evaluation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.age",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "James is a 32-year-old male presenting for his first visit to this psychiatry clinic."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.age",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "32-year-old male presenting for first psychiatric evaluation"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "time",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "time": "4/6",
+            "value": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.present",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports generalized anxiety, feeling anxious and on edge much of the time, with a racing mind, but denies full panic attacks"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.treatment_propranolol_as_needed_for_performance_anxiety_and_melatonin_as_needed_for_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue propranolol as needed for performance anxiety and melatonin as needed for sleep"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety: feels pretty anxious a lot of the time, cannot relax, mind is always racing about things he should be doing or things that are wrong"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.anxiety_feels_pretty_anxious_a_lot_of_the_time_cannot_relax_mind_is_always_racing_about_things_he_should_be_doing_or_things_that_are_wrong",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety: feels pretty anxious a lot of the time, cannot relax, mind is always racing about things he should be doing or things that are wrong."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_propranolol_prn_for_performance_anxiety_no_significant_interaction_with_escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue propranolol PRN for performance anxiety; no significant interaction with escitalopram."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.feeling_anxious_a_lot_of_the_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported feeling anxious a lot of the time."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported performance anxiety"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.patient_may_continue_propranolol_as_needed_for_performance_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient may continue propranolol as needed for performance anxiety."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reported anxiety much of the time"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.anxiety_much_of_the_time",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reported anxiety much of the time."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_propranolol_as_needed_for_performance_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue propranolol as needed for performance anxiety."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Generalized anxiety: difficulty relaxing, mind racing, thinking about things he should be doing"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.generalized_anxiety_difficulty_relaxing_mind_racing_thinking_about_things_he_should_be_doing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Generalized anxiety: difficulty relaxing, mind racing, thinking about things he should be doing"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_propranolol_20_mg_as_needed_for_performance_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue propranolol 20 mg as needed for performance anxiety"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.feeling_anxious_a_lot_of_the_time_with_inability_to_relax_and_a_racing_mind_about_things_he_should_be_doing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reports feeling anxious a lot of the time, with inability to relax and a racing mind about things he should be doing."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.his_family_does_not_know_how_bad_things_have_gotten_he_does_not_want_to_worry_them",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His family does not know how bad things have gotten; he does not want to worry them."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "insomnia / sleep difficulty",
+      "canonical_anchor": "symptom.sleep.insomnia.present",
+      "kind": "symptom",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sleep difficulty",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports insomnia, with trouble falling asleep, early morning awakening (4-5 a.m.), and inability to get back to sleep, averaging 4-5 hours of sleep per night"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports insomnia, with trouble falling asleep, early morning awakening (4-5 a.m.), and inability to get back to sleep, averaging 4-5 hours of sleep per night."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Insomnia: trouble falling asleep, lies there for hours, wakes up early at 4 or 5 AM and cannot get back to sleep; getting approximately 4 to 5 hours of sleep per night"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Insomnia: trouble falling asleep, lies there for hours, wakes up early at 4 or 5 AM and cannot get back to sleep; getting approximately 4 to 5 hours of sleep per night."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.poor_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported poor sleep."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Psychiatrist summarized symptoms of low mood, anhedonia, insomnia, decreased appetite, weight loss, low energy, poor concentration, guilt, hopelessness, and passive suicidal thoughts"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.difficulty_initiating_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reported difficulty initiating sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg is taken as needed for insomnia"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reports insomnia: trouble falling asleep (lying awake for hours), waking at 4-5 AM, and inability to return to sleep"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reports insomnia: trouble falling asleep (lying awake for hours), waking at 4-5 AM, and inability to return to sleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.sleep_disturbance_difficulty_falling_asleep_early_morning_awakening_4_5_am_unable_to_return_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep disturbance: difficulty falling asleep, early morning awakening (4-5 AM), unable to return to sleep"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "fluoxetine",
+      "canonical_anchor": "med.medication.fluoxetine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "fluoxetine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports a past partial response to fluoxetine, which he took for approximately eight months during his first episode; he stopped abruptly and experienced transient \"brain zaps\" for about a week."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "First episode: sophomore year of college; went to college counseling center; was prescribed fluoxetine."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported fluoxetine helped partially."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He was treated with fluoxetine during the college episode."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He had a partial response to fluoxetine: he functioned better and it \"took the edge off,\" but he did not feel well."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Treated with fluoxetine during college episode for approximately eight months"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "brain zaps",
+      "canonical_anchor": "symptom.withdrawal_sensation.brain_zaps.present.after_fluoxetine_stop",
+      "kind": "symptom",
+      "subtype": "withdrawal_sensation",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "had",
+        "object": "brain zap",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.brain_zaps",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports a past partial response to fluoxetine, which he took for approximately eight months during his first episode; he stopped abruptly and experienced transient \"brain zaps\" for about a week."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.patient_reports_a_past_partial_response_to_fluoxetine_which_he_took_for_approximately_eight_months_during_his_first_episode_he_stopped_abruptly_and_experienced_transient_brain_zaps_for_about_a_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports a past partial response to fluoxetine, which he took for approximately eight months during his first episode; he stopped abruptly and experienced transient \"brain zaps\" for about a week."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.brain_zaps",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experienced withdrawal symptoms: brain zaps, felt weird for a bit; symptoms went away after about a week."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.experienced_withdrawal_symptoms_brain_zaps_felt_weird_for_a_bit_symptoms_went_away_after_about_a_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experienced withdrawal symptoms: brain zaps, felt weird for a bit; symptoms went away after about a week."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.brain_zaps",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported possible brief withdrawal symptoms after stopping fluoxetine, including feeling weird and possible brain zaps for about a week."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.patient_reported_possible_brief_withdrawal_symptoms_after_stopping_fluoxetine_including_feeling_weird_and_possible_brain_zaps_for_about_a_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported possible brief withdrawal symptoms after stopping fluoxetine, including feeling weird and possible brain zaps for about a week."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.brain_zaps",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He recalled feeling unusual and possibly experiencing “brain zaps” for approximately one week after stopping fluoxetine."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.he_recalled_feeling_unusual_and_possibly_experiencing_brain_zaps_for_approximately_one_week_after_stopping_fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He recalled feeling unusual and possibly experiencing “brain zaps” for approximately one week after stopping fluoxetine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.brain_zaps",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "After stopping, he recalls feeling \"kinda weird\" with possible \"brain zaps,\" resolving after about a week."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.after_stopping_he_recalls_feeling_kinda_weird_with_possible_brain_zaps_resolving_after_about_a_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "After stopping, he recalls feeling \"kinda weird\" with possible \"brain zaps,\" resolving after about a week."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.brain_zaps",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experienced brain zaps for approximately one week after stopping fluoxetine"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.experienced_brain_zaps_for_approximately_one_week_after_stopping_fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experienced brain zaps for approximately one week after stopping fluoxetine"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "propranolol",
+      "canonical_anchor": "med.medication.propranolol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "propranolol",
+        "value": "20",
+        "unit": "mg",
+        "time": "once a week",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 20 mg as needed, approximately once a week or less, for performance anxiety."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 20 mg PRN for performance anxiety, prescribed by PCP; takes approximately once a week or less depending on work demands."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 20 mg as needed for performance anxiety."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 20 mg is taken as needed for performance anxiety."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 20 mg as needed for performance anxiety, about once a week or less; it helps the physical symptoms (racing heart and shaking)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 20 mg as needed for performance anxiety"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": "3",
+        "unit": "mg",
+        "time": "prn",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg as needed for sleep."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg PRN for sleep; does not take it every night."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg as needed for sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg is taken as needed for insomnia."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg as needed for sleep, not every night."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg as needed for sleep"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 IU over-the-counter."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 IU over-the-counter; PCP noted low levels."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported low vitamin D levels per PCP."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reported that his vitamin D level had been low."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His PCP told him his vitamin D levels were low."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D 2000 IU over-the-counter"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "depression / low mood",
+      "canonical_anchor": "diagnosis.mood_depression.depression.present.regarding_cousin_s_boyfriend_s_suicide",
+      "kind": "diagnosis",
+      "subtype": "mood_depression",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "depression",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "regarding cousin's boyfriend's suicide"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports his mother has depression and takes medication for it"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.patient_reports_his_mother_has_depression_and_takes_medication_for_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports his mother has depression and takes medication for it."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has depression and takes medication for it (name unknown to patient)"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_depression_and_takes_medication_for_it_name_unknown_to_patient",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has depression and takes medication for it (name unknown to patient)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Risk factors: family history of suicide (maternal grandfather), family history of depression and bipolar disorder, recurrent depressive episodes, current severe episode with daily passive suicidal thoughts, hopelessness, social withdrawal, increased alcohol use."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_melatonin_prn_for_sleep_may_see_improvement_in_sleep_as_depression_improves_with_escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin PRN for sleep; may see improvement in sleep as depression improves with escitalopram."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has depression"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has depression."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.experienced_a_persistently_depressed_mood_since_approximately_january",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He has experienced a persistently depressed mood since approximately January."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His mother has depression and takes an unspecified medication"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.his_mother_has_depression_and_takes_an_unspecified_medication",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His mother has depression and takes an unspecified medication."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.he_was_advised_to_minimize_alcohol_because_it_can_worsen_depression_and_increase_medication_adverse_effects",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He was advised to minimize alcohol because it can worsen depression and increase medication adverse effects."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has depression and takes a medication for it (name not recalled)"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_depression_and_takes_a_medication_for_it_name_not_recalled",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has depression and takes a medication for it (name not recalled)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has depression and takes medication for it (name not recalled)"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_has_depression_and_takes_medication_for_it_name_not_recalled",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has depression and takes medication for it (name not recalled)"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "1/6",
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Planned investigations: Order labs to rule out medical causes, including thyroid, CBC, CMP, vitamin D, B12, and a lipid panel; patient agreed to have labs done today at the lab downstairs."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Planned investigations: thyroid panel, CBC, CMP, vitamin D, B12, and lipid panel; labs to be done at the lab downstairs before leaving or on another day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labs ordered included vitamin D."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Laboratory tests ordered include thyroid testing, complete blood count, comprehensive metabolic panel, vitamin D, vitamin B12, and a lipid panel."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Investigations: Labs ordered to rule out medical causes, including thyroid, CBC, CMP, vitamin D, B12, and a lipid panel (baseline given hypertension); patient to have them drawn at the downstairs lab today (open until 5 PM)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Laboratory investigations ordered: thyroid function tests, complete blood count (CBC), comprehensive metabolic panel (CMP), vitamin D, vitamin B12, lipid panel"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F045",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "escitalopram",
+      "canonical_anchor": "med.medication.escitalopram.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "escitalopram",
+        "value": "10",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Start escitalopram 10 mg once daily in the morning; reassess in 4-6 weeks for possible dose increase. Continue propranolol as needed for performance anxiety and melatonin as needed for sleep. Advise minimizing alcohol intake to 1-2 drinks, not daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plan: start escitalopram 10 mg once daily in the morning; reassess in 4 to 6 weeks to determine if dose increase is needed."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Plan to start escitalopram 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start escitalopram 10 mg by mouth once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication: Start escitalopram 10 mg once daily in the morning, beginning tonight or tomorrow, taken at the same time every day."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.escitalopram",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start escitalopram 10 mg orally once daily in the morning"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F047",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "5/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "propranolol",
+      "canonical_anchor": "med.medication.propranolol.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "propranolol",
+        "value": "20",
+        "unit": "mg",
+        "time": "prn",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Start escitalopram 10 mg once daily in the morning; reassess in 4-6 weeks for possible dose increase. Continue propranolol as needed for performance anxiety and melatonin as needed for sleep. Advise minimizing alcohol intake to 1-2 drinks, not daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol 20 mg PRN for performance anxiety, prescribed by PCP; takes approximately once a week or less depending on work demands."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient may continue propranolol as needed for performance anxiety."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue propranolol as needed for performance anxiety."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Propranolol may be continued as needed; no significant interaction with escitalopram."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.propranolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue propranolol 20 mg as needed for performance anxiety"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F048",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "2/6",
+            "value": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": "3",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Start escitalopram 10 mg once daily in the morning; reassess in 4-6 weeks for possible dose increase. Continue propranolol as needed for performance anxiety and melatonin as needed for sleep. Advise minimizing alcohol intake to 1-2 drinks, not daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin PRN for sleep; may see improvement in sleep as depression improves with escitalopram."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient may continue melatonin as needed for sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin as needed for sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin may be continued as needed for sleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg as needed for sleep"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F049",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "1/6",
+            "value": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "to remind himself to eat",
+      "canonical_anchor": "symptom.symptom.to_remind_himself_to_eat.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "to remind himself to eat",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.to_remind_himself_to_eat",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Decreased appetite with approximately 10 pounds of weight loss; has to remind himself to eat."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.to_remind_himself_to_eat",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient stated he has to remind himself to eat."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.to_remind_himself_to_eat",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He has to remind himself to eat."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.lost_approximately_10_pounds_must_remind_himself_to_eat",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Decreased appetite: has lost approximately 10 pounds, must remind himself to eat"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F068",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "fluoxetine",
+      "canonical_anchor": "med.medication.fluoxetine.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "fluoxetine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was on fluoxetine for approximately 8 months; stopped taking it because he was feeling better."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient stopped fluoxetine when he was feeling better."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He stopped fluoxetine abruptly after feeling better."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He took fluoxetine for about eight months, then stopped abruptly at age twenty because he felt better; he did not taper."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.fluoxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Discontinued fluoxetine abruptly without tapering at age 20"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F088",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "depression / low mood",
+      "canonical_anchor": "diagnosis.mood_depression.depression.worsened",
+      "kind": "diagnosis",
+      "subtype": "mood_depression",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "depression",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Risk factors: family history of suicide (maternal grandfather), family history of depression and bipolar disorder, recurrent depressive episodes, current severe episode with daily passive suicidal thoughts, hopelessness, social withdrawal, increased alcohol use"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported alcohol use has increased a little with the depression"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.patient_reported_alcohol_use_has_increased_a_little_with_the_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported alcohol use has increased a little with the depression."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His alcohol use has increased with the depression; he has been drinking more at home alone, about two to three drinks on a typical night"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.his_alcohol_use_has_increased_with_the_depression_he_has_been_drinking_more_at_home_alone_about_two_to_three_drinks_on_a_typical_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His alcohol use has increased with the depression; he has been drinking more at home alone, about two to three drinks on a typical night."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increased alcohol use since depression onset: drinks 2-3 drinks at home alone"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.increased_alcohol_use_since_depression_onset_drinks_2_3_drinks_at_home_alone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increased alcohol use since depression onset: drinks 2-3 drinks at home alone"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.some_days_are_worse_than_others_but_the_depressed_mood_and_sense_of_heaviness_are_consistently_present",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Some days are worse than others, but the depressed mood and sense of heaviness are consistently present."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F104",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "low energy",
+      "canonical_anchor": "symptom.symptom.low_energy.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "low energy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.low_energy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported low energy."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.low_energy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reported low energy."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.low_energy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reports low energy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F130",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    }
+  ]
+}

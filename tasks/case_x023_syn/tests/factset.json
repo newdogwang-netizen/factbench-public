@@ -1,0 +1,1883 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x023_syn",
+    "version": "1",
+    "sha256": "f10d74979bc24f97d62c43bf5f4686865c1b97bd28d51be8870ecf0685777685",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x023_syn",
+    "path": "case_x023_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 264,
+      "certain": 3,
+      "strict_certain": 2,
+      "low_conf": 32,
+      "unique": 229,
+      "unanimous": 3,
+      "low_support": 229
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 17,
+    "unstable_skipped": 15
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "Cough",
+      "canonical_anchor": "demo.demo.cough.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "cough",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.cough",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cough is worse at night and when lying down; sometimes wakes the patient from sleep."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.cough",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cough is dry and non-productive"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.cough",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cough is dry."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.cough",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cough is dry and non-productive."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Throat feels scratchy sometimes after coughing a lot",
+      "canonical_anchor": "symptom.symptom.throat_scratchy_sometime_after_coughing_lot.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "throat feel scratchy sometime after coughing a lot",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.throat_feels_scratchy_sometimes_after_coughing_a_lot",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports throat feels scratchy sometimes after coughing a lot."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.throat_feels_scratchy_sometimes_after_coughing_a_lot",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Throat feels scratchy sometimes after coughing a lot"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.throat_feels_scratchy_sometimes_after_coughing_a_lot",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Throat feels scratchy sometimes after coughing a lot."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_throat_sometimes_feels_scratchy_after_frequent_coughing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The throat sometimes feels scratchy after frequent coughing."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_s_throat_feels_scratchy_sometimes_after_coughing_a_lot",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's throat feels scratchy sometimes after coughing a lot."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Fluticasone",
+      "canonical_anchor": "med.medication.fluticasone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "fluticasone",
+        "value": null,
+        "unit": null,
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler: 2 puffs twice daily (morning and night) for asthma maintenance."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler: two puffs twice daily (morning and night) for asthma maintenance"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler is used daily for asthma maintenance."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler, 2 puffs twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.fluticasone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluticasone inhaler: two puffs twice daily (morning and night) for asthma maintenance."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6",
+            "time": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Omeprazole",
+      "canonical_anchor": "med.medication.omeprazole.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "omeprazole",
+        "value": "40",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole: 40 mg daily, taken before breakfast, approximately 30 minutes before eating."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg: daily, before breakfast, approximately 30 minutes before eating"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole dose is 40 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg every morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg: taken every morning, approximately 30 minutes before breakfast."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "2/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Albuterol",
+      "canonical_anchor": "med.medication.albuterol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "albuterol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol inhaler: as needed, kept in purse, rarely used."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol inhaler: as needed, kept in purse, rarely used (once or twice in the past month)"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol inhaler is used as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol inhaler as needed."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.albuterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Albuterol inhaler: used as needed; patient reports using it only once or twice in the past month."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_father_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has hypertension."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "1/6",
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Mother has a thyroid condition",
+      "canonical_anchor": "famhist.famhist.mother_thyroid.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "mother has a thyroid condition",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has a thyroid condition."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has a thyroid condition"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has a thyroid condition."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has a thyroid condition."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_mother_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has a thyroid condition."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has a thyroid condition."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sister has seasonal allergies",
+      "canonical_anchor": "famhist.famhist.sister_seasonal_allergie.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sister has seasonal allergie",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.sister_has_seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has seasonal allergies."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.sister_has_seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has seasonal allergies"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.sister_has_seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has seasonal allergies."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.sister_has_seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has seasonal allergies."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_sister_has_seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's sister has seasonal allergies."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_sister_has_seasonal_allergies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's sister has seasonal allergies."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "body aches",
+      "canonical_anchor": "symptom.symptom.body_ache.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "body ache",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.fevers_chills_or_body_aches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No fevers, chills, or body aches"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.body_aches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied body aches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.body_aches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies body aches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.body_aches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies body aches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.associated_fevers_chills_or_body_aches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No associated fevers, chills, or body aches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F046",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Patient sometimes eats dinner at 8 or 9 PM and goes to bed at 10 or 11 PM",
+      "canonical_anchor": "symptom.symptom.sometime_eat_dinner_at_and_goe_to_bed.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "patient sometime eat dinner at 8 or 9 pm and goe to bed at 10 or 11 pm",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.patient_sometimes_eats_dinner_at_8_or_9_pm_and_goes_to_bed_at_10_or_11_pm",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient sometimes eats dinner at 8 or 9 PM and goes to bed at 10 or 11 PM"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.patient_sometimes_eats_dinner_at_8_or_9_pm_and_goes_to_bed_at_10_or_11_pm",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient sometimes eats dinner at 8 or 9 PM and goes to bed at 10 or 11 PM."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_sometimes_eats_dinner_at_8_pm",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes eats dinner at 8 PM."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_sometimes_goes_to_bed_at_10_pm",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes goes to bed at 10 PM."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F054",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "insomnia / sleep difficulty",
+      "canonical_anchor": "sochist.sleep.insomnia.present",
+      "kind": "sochist",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sleep difficulty",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "social_history.sleep_poor_due_to_cough_waking_patient_up_at_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep: poor due to cough waking patient up at night"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.sleep_disrupted_by_cough_waking_once_or_twice_per_night_with_difficulty_returning_to_sleep_daytime_fatigue_reported",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep: disrupted by cough, waking once or twice per night with difficulty returning to sleep; daytime fatigue reported."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.difficulty_returning_to_sleep_after_coughing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has difficulty returning to sleep after coughing."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F066",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "minimax-m3",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Start using a spacer with the fluticasone inhaler",
+      "canonical_anchor": "instruct.start.start_using_spacer_with_fluticasone_inhaler.planned",
+      "kind": "instruct",
+      "subtype": "start",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "start using a spacer with the fluticasone inhaler",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.start_using_a_spacer_with_fluticasone_inhaler_spacer_prescription_to_be_sent_to_pharmacy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start using a spacer with fluticasone inhaler; spacer prescription to be sent to pharmacy"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.start_using_a_spacer_with_the_fluticasone_inhaler",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start using a spacer with the fluticasone inhaler."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.start_using_a_spacer_with_the_fluticasone_inhaler",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start using a spacer with the fluticasone inhaler."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F068",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Avoid eating within 3 hours of bedtime",
+      "canonical_anchor": "instruct.avoid.avoid_eating_within_of_bedtime.present",
+      "kind": "instruct",
+      "subtype": "avoid",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "avoid eating within 3 hour of bedtime",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.avoid_eating_within_3_hours_of_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid eating within 3 hours of bedtime"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.avoid_eating_within_3_hours_of_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid eating within 3 hours of bedtime."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.avoid_eating_within_three_hours_of_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid eating within three hours of bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F071",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Labs ordered: CBC, CMP (fasting preferred but not strictly necessary), and Vitamin D"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D level was ordered."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CBC, CMP, and vitamin D laboratory tests to be ordered."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "A vitamin D level will be checked."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F073",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient has never smoked",
+      "canonical_anchor": "sochist.sochist.never_smoked.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient has never smoked",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.patient_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient never smoked."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has never smoked."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has never smoked."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F107",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "A spacer prescription will be sent to the pharmacy",
+      "canonical_anchor": "instruct.spacer.spacer_prescription_will_sent_to_pharmacy.planned",
+      "kind": "instruct",
+      "subtype": "spacer",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "a spacer prescription will be sent to the pharmacy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.spacer_prescription_will_be_sent_to_the_pharmacy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spacer prescription will be sent to the pharmacy."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.a_spacer_prescription_will_be_sent_to_the_pharmacy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "A spacer prescription will be sent to the pharmacy."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.a_spacer_prescription_will_be_sent_to_the_pharmacy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "A spacer prescription will be sent to the pharmacy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F114",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Elevate the head of the bed by 6 to 8 inches",
+      "canonical_anchor": "instruct.elevate.elevate_head_of_bed_by.present",
+      "kind": "instruct",
+      "subtype": "elevate",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "elevate the head of the bed by 6 to 8 inche",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.elevate_the_head_of_the_bed_by_6_to_8_inches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Elevate the head of the bed by 6 to 8 inches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.elevate_the_head_of_the_bed_by_6_to_8_inches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Elevate the head of the bed by 6 to 8 inches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.elevate_the_head_of_the_bed_by_six_to_eight_inches_not_just_extra_pillows",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Elevate the head of the bed by six to eight inches (not just extra pillows)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F119",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

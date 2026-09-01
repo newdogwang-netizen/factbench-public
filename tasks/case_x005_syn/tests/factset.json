@@ -1,0 +1,2417 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x005_syn",
+    "version": "1",
+    "sha256": "2c99287502b068a6401d1eb3d85796f11d82b348d629e8dc2c1298646cc2350d",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x005_syn",
+    "path": "case_x005_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 282,
+      "certain": 8,
+      "strict_certain": 8,
+      "low_conf": 34,
+      "unique": 240,
+      "unanimous": 9,
+      "low_support": 240
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 21,
+    "unstable_skipped": 19
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "word finding / expressive language",
+      "canonical_anchor": "symptom.cognition_language.word_finding.present",
+      "kind": "symptom",
+      "subtype": "cognition_language",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.occasional_mild_word_finding_difficulty_which_may_or_may_not_be_medication_related_patient_does_not_want_to_stop_topiramate_because_it_is_working_well_for_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports occasional mild word-finding difficulty, which may or may not be medication-related; patient does not want to stop topiramate because it is working well for headaches."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.mild_occasional_word_finding_difficulty_unclear_if_medication_related_or_due_to_fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports mild, occasional word-finding difficulty, unclear if medication-related or due to fatigue"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.mild_infrequent_word_finding_difficulty_and_is_unsure_whether_it_is_due_to_the_medication_or_tiredness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports mild, infrequent word-finding difficulty and is unsure whether it is due to the medication or tiredness."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.mild_word_finding_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports mild word-finding difficulty."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sumatriptan",
+      "canonical_anchor": "demo.demo.sumatriptan.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sumatriptan",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is used for breakthrough headaches that do not resolve with ibuprofen; it works within about 20 minutes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is used as abortive for breakthrough headaches that do not respond to ibuprofen"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is used for breakthrough headaches that do not resolve with ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is used for breakthrough headaches that do not resolve with ibuprofen; it works within about 20 minutes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is used as abortive for breakthrough headaches that do not respond to ibuprofen"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes sumatriptan when a headache does not go away with ibuprofen."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan is used for breakthrough headaches that do not resolve with ibuprofen."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen used for headaches that do not resolve on their own."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes sumatriptan when a headache does not go away with ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F011",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports chest tightness with sumatriptan use, occurring almost every time, with consistent intensity, not worsening, lasting about 15 minutes, without shortness of breath or pain radiating to arm or jaw."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Chest tightness occurs after taking sumatriptan, described as a squeezing feeling, not severely painful"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician advised the patient to go to the ER if pain radiates to the arm."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The chest tightness is uncomfortable but not very painful."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Severity of remaining headaches is described as less intense than before, though still painful."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The chest tightness is not super painful."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "insomnia / sleep difficulty",
+      "canonical_anchor": "symptom.sleep.insomnia.present",
+      "kind": "symptom",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sleep difficulty",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.sleep_of_about_6_7_hours_most_nights_with_some_nights_of_difficulty_falling_or_staying_asleep_which_can_trigger_a_headache_the_next_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports sleep of about 6-7 hours most nights, with some nights of difficulty falling or staying asleep, which can trigger a headache the next day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.getting_a_headache_the_next_day_after_poor_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported getting a headache the next day after poor sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.poor_sleep_is_a_headache_trigger_for_the_patient",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Poor sleep is a headache trigger for the patient."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.some_nights_the_patient_wakes_and_cannot_get_back_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Some nights the patient wakes and cannot get back to sleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.patient_experiences_some_nights_with_difficulty_falling_asleep_and_returning_to_sleep_followed_by_headaches_the_next_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient experiences some nights with difficulty falling asleep and returning to sleep, followed by headaches the next day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "MRI from last year was normal",
+      "canonical_anchor": "diagnosis.mri.mri_from_normal.present",
+      "kind": "diagnosis",
+      "subtype": "mri",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "mri from last year was normal",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.mri_from_last_year_was_normal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "MRI from last year was normal."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.mri_from_last_year_was_normal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "MRI from last year was normal"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.the_mri_from_last_year_was_normal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The MRI from last year was normal."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.mri_from_last_year_was_normal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "MRI from last year was normal."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.mri_from_last_year_was_normal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "MRI from last year was normal."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Topiramate",
+      "canonical_anchor": "med.medication.topiramate.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "topiramate",
+        "value": "100",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 100 mg daily, taken as 50 mg in the morning and 50 mg at night."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 100mg per day, taken as 50mg in the morning and 50mg at night"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 50 mg in the morning and 50 mg at night (100 mg per day)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.topiramate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Topiramate 100 mg daily, split as 50 mg in the morning and 50 mg at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6",
+            "time": "2/6",
+            "unit": "3/6",
+            "value": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sumatriptan",
+      "canonical_anchor": "med.medication.sumatriptan.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sumatriptan",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan as needed for breakthrough headaches."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan as needed for breakthrough headaches"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan as needed for breakthrough headaches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sumatriptan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan used as abortive medication for breakthrough headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "magnesium",
+      "canonical_anchor": "med.medication.magnesium.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "magnesium",
+        "value": "400",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium supplement 400 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium 400mg once daily"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is taking magnesium 400 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium 400 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Magnesium supplement 400 mg once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes magnesium 400 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure; no history of heart attacks"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.father_has_high_blood_pressure_no_history_of_heart_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure; no history of heart attacks."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's blood pressure was 120/78"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_s_blood_pressure_was_120_78",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's blood pressure was 120/78."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Migraine with aura",
+      "canonical_anchor": "diagnosis.migraine.migraine_with_aura.present",
+      "kind": "diagnosis",
+      "subtype": "migraine",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "migraine with aura",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.migraine_with_aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Migraine with aura."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.migraine_with_aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Migraine with aura"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.migraine_with_aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Migraine with aura."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.migraine_with_aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Migraine with aura."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.patient_has_migraine_with_aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has migraine with aura."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.migraine_with_aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Migraine with aura."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue sumatriptan as needed for breakthrough headaches",
+      "canonical_anchor": "instruct.continue.continue_sumatriptan_needed_for_breakthrough_headache.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue sumatriptan as needed for breakthrough headache",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_sumatriptan_as_needed_for_breakthrough_headaches_up_to_2_doses_in_24_hours_maximum_200_mg_in_24_hours",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sumatriptan as needed for breakthrough headaches, up to 2 doses in 24 hours, maximum 200 mg in 24 hours."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_sumatriptan_as_needed_for_breakthrough_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sumatriptan as needed for breakthrough headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_sumatriptan_as_needed_for_breakthrough_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sumatriptan as needed for breakthrough headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_sumatriptan_as_needed_for_breakthrough_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sumatriptan as needed for breakthrough headaches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_sumatriptan_as_needed_for_breakthrough_headaches_with_maximum_of_two_doses_in_a_24_hour_period",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sumatriptan as needed for breakthrough headaches, with maximum of two doses in a 24-hour period."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F038",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "magnesium",
+      "canonical_anchor": "med.medication.magnesium.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "magnesium",
+        "value": "400",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400mg once daily"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.magnesium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F039",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue magnesium 400 mg once daily",
+      "canonical_anchor": "instruct.continue.continue_magnesium.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "magnesium",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_magnesium_400_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_magnesium_400mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400mg once daily"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_magnesium_400_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_magnesium_400_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_magnesium_400_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_magnesium_400_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue magnesium 400 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F040",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "1200",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan may be taken together with ibuprofen; maximum ibuprofen dose is 1200 mg in 24 hours."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Maximum ibuprofen dose is 1200mg in 24 hours, ideally less"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician told the patient it is generally safe to take sumatriptan and ibuprofen together."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen should not exceed 1200 mg in 24 hours."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue ibuprofen as needed for headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan can be taken with ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F042",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "3/6",
+            "value": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Aura",
+      "canonical_anchor": "demo.demo.aura.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "aura",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aura is still present but less frequent"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aura is still present but less frequent."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.aura",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aura is still present."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F054",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sumatriptan works within approximately 20 minutes",
+      "canonical_anchor": "symptom.symptom.sumatriptan_work_within_approximately.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sumatriptan work within approximately 20 minute",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.sumatriptan_works_within_approximately_20_minutes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan works within approximately 20 minutes"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.sumatriptan_works_within_approximately_20_minutes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan works within approximately 20 minutes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.sumatriptan_works_within_about_20_minutes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sumatriptan works within about 20 minutes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F062",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Cholesterol",
+      "canonical_anchor": "demo.demo.cholesterol.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "cholesterol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cholesterol was normal at last checkup"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cholesterol was fine at the last checkup."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cholesterol was reported as fine at last checkup."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F071",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sleep",
+      "canonical_anchor": "demo.demo.sleep.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sleep",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is okay, patient gets 6-7 hours most nights"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep was identified previously as a migraine trigger."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is 6 to 7 hours most nights, which is better than before."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is better than it was."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F073",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "No family history of heart attacks or heart disease",
+      "canonical_anchor": "famhist.famhist.family_of_heart_attack_or_heart_disease",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no family history of heart attack or heart disease",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "family_history.no_family_history_of_heart_attacks_or_heart_disease",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No family history of heart attacks or heart disease"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.no_family_history_of_heart_attacks_or_heart_disease",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No family history of heart attacks or heart disease."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.no_family_history_of_heart_attacks_or_heart_disease",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No family history of heart attacks or heart disease."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_reported_no_family_history_of_heart_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported no family history of heart attacks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_reported_no_family_history_of_heart_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported no family history of heart attacks."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F087",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "The patient has never smoked",
+      "canonical_anchor": "sochist.sochist.never_smoked.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient has never smoked",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has never smoked."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has never smoked."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has never smoked."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F131",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3100 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x013_syn",
+    "version": "1",
+    "sha256": "19ff52f5dec3446985de3172738627a322fc0b518a3d80e4607c912f4b7b9a6d",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x013_syn",
+    "path": "case_x013_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 263,
+      "certain": 12,
+      "strict_certain": 10,
+      "low_conf": 38,
+      "unique": 213,
+      "unanimous": 12,
+      "low_support": 213
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 26,
+    "unstable_skipped": 19
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports blood pressure has been \"okay\" at home, usually around 130/80"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.blood_pressure_has_been_okay_at_home_usually_around_130_80",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports blood pressure has been \"okay\" at home, usually around 130/80."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports blood pressure has been okay, with home readings usually around 130/80"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.blood_pressure_has_been_okay_with_home_readings_usually_around_130_80",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports blood pressure has been okay, with home readings usually around 130/80."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "social_history.patient_was_advised_to_walk_30_minutes_a_few_times_a_week_for_blood_pressure_kidney_health_and_overall_health",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was advised to walk 30 minutes a few times a week for blood pressure, kidney health, and overall health."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported blood pressure has been \"okay.\""
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.blood_pressure_has_been_okay",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported blood pressure has been \"okay.\""
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.father_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports his blood pressure has been okay"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.his_blood_pressure_has_been_okay",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports his blood pressure has been okay."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had high blood pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reports home blood pressure readings around 130/80"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.home_blood_pressure_readings_around_130_80",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reports home blood pressure readings around 130/80."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reports his blood pressure has been okay"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.his_blood_pressure_has_been_okay",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He reports his blood pressure has been okay."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.father_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.walking_is_recommended_for_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Walking is recommended for blood pressure."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "2/6",
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previous high potassium level (5.7) associated with lisinopril use."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was previously on lisinopril, which was stopped due to high potassium."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previous hyperkalemia (potassium 5.7) associated with lisinopril use."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient previously took lisinopril."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "History of hyperkalemia on lisinopril (resolved after switch to losartan; current potassium 4.8)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previous high potassium while taking lisinopril."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Losartan",
+      "canonical_anchor": "med.medication.losartan.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "losartan",
+        "value": "50",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 50 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 50 mg once a day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 50 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 50 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 50 mg once daily (for blood pressure)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 50 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "amlodipine",
+      "canonical_anchor": "med.medication.amlodipine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "amlodipine",
+        "value": "5",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amlodipine 5 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amlodipine 5 mg once a day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amlodipine 5 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amlodipine 5 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amlodipine 5 mg once daily (for blood pressure)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amlodipine 5 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Metoprolol",
+      "canonical_anchor": "med.medication.metoprolol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metoprolol",
+        "value": "50",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol 50 mg twice daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol 50 mg twice a day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol 50 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol 50 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol 50 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol 50 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F011",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Furosemide",
+      "canonical_anchor": "med.medication.furosemide.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "furosemide",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 20 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 20 mg once a day."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 20 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 20 mg once daily (to be increased to 40 mg once daily)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 20 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "5/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once a day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tylenol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking Tylenol for headaches."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol as needed for headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol taken as needed for headache."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol taken as needed for headaches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol (occasional, over-the-counter, for headaches)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol as needed for headache."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports he stopped taking lisinopril as instructed due to high potassium."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was previously stopped due to high potassium."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was stopped because of high potassium."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was previously stopped due to high potassium."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "History of hyperkalemia (potassium 5.7) on lisinopril, which was discontinued."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He stopped lisinopril because his potassium was too high."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Mother has type 2 diabetes",
+      "canonical_anchor": "famhist.famhist.mother_type.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "mother has type 2 diabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has type 2 diabetes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has type 2 diabetes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has type 2 diabetes."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: type 2 diabetes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.mother_has_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has type 2 diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sister has a thyroid condition",
+      "canonical_anchor": "famhist.famhist.sister_thyroid.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sister has a thyroid condition",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.sister_has_a_thyroid_condition_name_not_recalled",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has a thyroid condition (name not recalled)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.sister_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has a thyroid condition."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.sister_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has a thyroid condition."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Hypocalcemia (calcium 8 9)",
+      "canonical_anchor": "diagnosis.hypocalcemia.hypocalcemia_calcium.present",
+      "kind": "diagnosis",
+      "subtype": "hypocalcemia",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "hypocalcemia (calcium 8.9)",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.hypocalcemia_calcium_8_9_low",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypocalcemia (calcium 8.9, low)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.hypocalcemia_calcium_8_9",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypocalcemia (calcium 8.9)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hypocalcemia_calcium_8_9",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypocalcemia (calcium 8.9)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan, amlodipine, metoprolol, and atorvastatin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan 50 mg once a day, amlodipine 5 mg once a day, metoprolol 50 mg twice a day, and atorvastatin 20 mg once a day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin is to be continued."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan, amlodipine, metoprolol, and atorvastatin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan 50 mg daily, amlodipine 5 mg daily, metoprolol 50 mg twice daily, and atorvastatin 20 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "2/6",
+            "value": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "amlodipine",
+      "canonical_anchor": "med.medication.amlodipine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "amlodipine",
+        "value": "5",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan, amlodipine, metoprolol, and atorvastatin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan 50 mg once a day, amlodipine 5 mg once a day, metoprolol 50 mg twice a day, and atorvastatin 20 mg once a day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amlodipine is to be continued."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan, amlodipine, metoprolol, and atorvastatin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan 50 mg daily, amlodipine 5 mg daily, metoprolol 50 mg twice daily, and atorvastatin 20 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue amlodipine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "2/6",
+            "value": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue losartan, amlodipine, metoprolol, and atorvastatin",
+      "canonical_anchor": "instruct.continue.continue_losartan_amlodipine_metoprolol_and_atorvastatin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "atorvastatin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_losartan_amlodipine_metoprolol_and_atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan, amlodipine, metoprolol, and atorvastatin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_losartan_50_mg_once_a_day_amlodipine_5_mg_once_a_day_metoprolol_50_mg_twice_a_day_and_atorvastatin_20_mg_once_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan 50 mg once a day, amlodipine 5 mg once a day, metoprolol 50 mg twice a day, and atorvastatin 20 mg once a day."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_losartan_amlodipine_metoprolol_and_atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan, amlodipine, metoprolol, and atorvastatin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_losartan_50_mg_daily_amlodipine_5_mg_daily_metoprolol_50_mg_twice_daily_and_atorvastatin_20_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan 50 mg daily, amlodipine 5 mg daily, metoprolol 50 mg twice daily, and atorvastatin 20 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue losartan."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue amlodipine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metoprolol."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tylenol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advise patient to limit Tylenol to no more than 2 grams per day (about four extra-strength tablets) due to kidney function."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Limit Tylenol to no more than 2 grams per day, approximately four extra-strength tablets per day, due to kidney function."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tylenol should be limited to no more than 2 grams per day."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Limit Tylenol to no more than 2 grams a day (about four extra-strength tablets)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Limit Tylenol to no more than 2 grams per day (approximately four extra-strength tablets)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Limit Tylenol to no more than 2 grams per day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advise patient to avoid NSAIDs (e.g., ibuprofen, naproxen) as they can harm kidneys."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid NSAIDs such as ibuprofen and naproxen, as they can further harm the kidneys."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to avoid NSAIDs such as ibuprofen and naproxen."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No NSAIDs such as ibuprofen or naproxen."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid NSAIDs (ibuprofen, naproxen) due to kidney function."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid NSAIDs such as ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F037",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advise patient to call immediately if swelling gets much worse, or if he develops shortness of breath or chest pain."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient instructed to call right away if swelling gets a lot worse, or if he experiences shortness of breath or chest pain."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was instructed to call right away if chest pain occurs."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient instructed to call right away if the swelling gets a lot worse, or if he develops shortness of breath or chest pain."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient instructed to call immediately if swelling worsens significantly, or if shortness of breath or chest pain develops."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call right away if chest pain occurs."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F043",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Swelling",
+      "canonical_anchor": "demo.demo.swell.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "swell",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.swelling",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Swelling is in both legs from the knee down and goes away mostly overnight."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.swelling",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Swelling is in both legs from the knee down."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.swelling",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Swelling is bilateral, from the knees down, and resolves mostly overnight."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "PTH",
+      "canonical_anchor": "demo.demo.pth.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "pth",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.pth",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "PTH is 118, which is elevated."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.pth",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "PTH was elevated."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.the_pth",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The PTH is elevated."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F063",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin taken occasionally."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin taken sometimes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin taken sometimes (over the counter)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (occasional, over-the-counter)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin sometimes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F069",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Lisinopril",
+      "canonical_anchor": "demo.demo.lisinopril.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was previously stopped due to high potassium."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was stopped because of high potassium."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was previously stopped due to high potassium."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was stopped because of high potassium."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F071",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The swelling mostly goes away overnight",
+      "canonical_anchor": "symptom.symptom.swell_mostly_goe_away_overnight.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the swell mostly goe away overnight",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_swelling_mostly_goes_away_overnight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The swelling mostly goes away overnight."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.swelling_mostly_goes_away_overnight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Swelling mostly goes away overnight."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_swelling_mostly_goes_away_overnight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The swelling mostly goes away overnight."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F090",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "One brother is okay as far as the patient knows",
+      "canonical_anchor": "famhist.famhist.one_brother_okay_far_know.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "one brother is okay as far as the patient know",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.one_brother_is_okay_as_far_as_the_patient_knows",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "One brother is okay as far as the patient knows."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.one_brother_is_okay_as_far_as_the_patient_knows",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "One brother is okay as far as the patient knows."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.one_brother_who_is_okay_as_far_as_the_patient_knows",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "One brother, who is okay as far as the patient knows."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F100",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Omeprazole can be refilled",
+      "canonical_anchor": "instruct.omeprazole.omeprazole_can_refilled.present",
+      "kind": "instruct",
+      "subtype": "omeprazole",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "omeprazole can be refilled",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.omeprazole_can_be_refilled",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole can be refilled."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.omeprazole_can_be_refilled",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole can be refilled."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.omeprazole_can_be_refilled",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole can be refilled."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F132",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "risk.pain.pain.present",
+      "kind": "risk",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "risk.the_patient_was_instructed_to_call_right_away_if_chest_pain_occurs",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was instructed to call right away if chest pain occurs."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "risk.patient_instructed_to_call_the_clinic_right_away_if_leg_swelling_worsens_significantly_or_if_shortness_of_breath_or_chest_pain_develops",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient instructed to call the clinic right away if leg swelling worsens significantly, or if shortness of breath or chest pain develops."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "risk.call_right_away_if_chest_pain_occurs",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call right away if chest pain occurs."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F143",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

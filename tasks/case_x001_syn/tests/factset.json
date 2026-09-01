@@ -1,0 +1,2879 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x001_syn",
+    "version": "1",
+    "sha256": "e18bf704eb31555534339277ad4af894359e13cd16c352bab21a44d8a84c811e",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x001_syn",
+    "path": "case_x001_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 223,
+      "certain": 10,
+      "strict_certain": 10,
+      "low_conf": 32,
+      "unique": 181,
+      "unanimous": 13,
+      "low_support": 181
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 22,
+    "unstable_skipped": 19
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.improved",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": "6",
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is improved, rating it a 6 out of 10, down from an 8 or 9 previously"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.anxiety_is_improved_rating_it_a_6_out_of_10_down_from_an_8_or_9_previously",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is improved, rating it a 6 out of 10, down from an 8 or 9 previously."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety has improved from 8-9/10 to 6/10 on a self-rated scale"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.longer_experiencing_full_on_panic_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is no longer experiencing full-on panic attacks."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported that anxiety is somewhat better"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.that_anxiety_is_somewhat_better",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported that anxiety is somewhat better."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.longer_experiencing_full_panic_episodes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is no longer experiencing full panic episodes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety symptoms have improved but remain present"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety has improved; no longer experiencing full-on panic attacks"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.improved_no_longer_experiencing_full_on_panic_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety has improved; no longer experiencing full-on panic attacks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported that anxiety is somewhat better"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.that_anxiety_is_somewhat_better",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported that anxiety is somewhat better."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.present",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": "6",
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is most noticeable in the afternoon, around 2 or 3 o'clock, with a feeling in the chest"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.anxiety_is_most_noticeable_around_2_or_3_o_clock_with_a_feeling_in_the_chest",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety is most noticeable in the afternoon, around 2 or 3 o'clock, with a feeling in the chest."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_anxiety_and_takes_medication_for_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety and takes medication for it."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.advise_incorporating_exercise_such_as_a_20_minute_walk_to_help_with_anxiety_sleep_and_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advise incorporating exercise, such as a 20-minute walk, to help with anxiety, sleep, and headaches."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is most noticeable in the afternoon, around 2-3 PM, with a feeling in the chest."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is most noticeable in the afternoon, around 2-3 PM, with a feeling in the chest"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.anxiety_is_most_noticeable_around_2_3_pm_with_a_feeling_in_the_chest",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is most noticeable in the afternoon, around 2-3 PM, with a feeling in the chest."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_anxiety_and_takes_medication_for_it_specific_medication_unknown",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety and takes medication for it (specific medication unknown)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.recommend_exercise_even_a_20_minute_walk_to_help_with_anxiety_sleep_and_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Recommend exercise, even a 20-minute walk, to help with anxiety, sleep, and headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient estimated current anxiety at about 6/10"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_estimated_current_anxiety_at_about_6_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient estimated current anxiety at about 6/10."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_mother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has anxiety."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.the_clinician_stated_cbt_could_help_with_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician stated CBT could help with anxiety."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports improvement in anxiety since the prior visit"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.current_anxiety_severity_is_approximately_6_10_compared_with_89_10_previously",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Current anxiety severity is approximately 6/10, compared with 8–9/10 previously."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is most noticeable around 2–3 PM."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_mother_has_anxiety_and_takes_an_unspecified_medication",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has anxiety and takes an unspecified medication."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.cognitive_behavioral_therapy_may_also_address_anxiety_relaxation_techniques_and_headache_symptoms",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cognitive behavioral therapy may also address anxiety, relaxation techniques, and headache symptoms."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Current anxiety rated 6/10 on a scale of 1-10, previously rated 8-9/10"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.current_anxiety_rated_6_10_on_a_scale_of_1_10_previously_rated_8_9_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Current anxiety rated 6/10 on a scale of 1-10, previously rated 8-9/10."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety is most prominent in the afternoon, around 2-3 PM, with a feeling in the chest."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_has_anxiety_and_takes_medication_for_it_specific_medication_not_recalled_by_patient",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety and takes medication for it (specific medication not recalled by patient)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.resume_or_increase_exercise_such_as_a_20_minute_walk_to_help_with_anxiety_sleep_and_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Resume or increase exercise, such as a 20-minute walk, to help with anxiety, sleep, and headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient rates current anxiety as about 6 out of 10"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_rates_current_anxiety_as_about_6_out_of_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient rates current anxiety as about 6 out of 10."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has anxiety."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.thyroid_issues_can_cause_anxiety_sleep_problems_and_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Thyroid issues can cause anxiety, sleep problems, and headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "insomnia / sleep difficulty",
+      "canonical_anchor": "symptom.sleep.insomnia.present",
+      "kind": "symptom",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sleep difficulty",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.sleep_remains_poor_getting_approximately_3_to_4_hours_per_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports sleep remains poor, getting approximately 3 to 4 hours per night."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer patient to cognitive behavioral therapy (CBT), including CBT for insomnia"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.refer_patient_to_cognitive_behavioral_therapy_cbt_including_cbt_for_insomnia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer patient to cognitive behavioral therapy (CBT), including CBT for insomnia."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.sleep_remains_poor_with_patient_getting_approximately_3_4_hours_per_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep remains poor, with patient getting approximately 3-4 hours per night."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Insomnia"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.refer_patient_to_cbt_cognitive_behavioral_therapy_including_cbt_for_insomnia_which_can_also_help_with_headaches_through_relaxation_techniques",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer patient to CBT (cognitive behavioral therapy), including CBT for insomnia, which can also help with headaches through relaxation techniques."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.sleep_is_still_very_poor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported sleep is still very poor."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician stated CBT for insomnia could help with sleep"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.the_clinician_stated_cbt_for_insomnia_could_help_with_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician stated CBT for insomnia could help with sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.sleep_remains_poor_at_approximately_34_hours_per_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep remains poor at approximately 3–4 hours per night."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Persistent insomnia is present"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.sleep_remains_poor_with_approximately_3_4_hours_per_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep remains poor, with approximately 3-4 hours per night."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep difficulties/insomnia"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.refer_to_cognitive_behavioral_therapy_cbt_for_anxiety_and_insomnia_including_cbt_for_insomnia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer to cognitive behavioral therapy (CBT) for anxiety and insomnia, including CBT for insomnia."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.sleep_is_still_really_bad",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports sleep is still really bad."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CBT for insomnia can be really effective"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.cbt_for_insomnia_can_be_really_effective",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CBT for insomnia can be really effective."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen (Advil) provides some relief for headaches."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen sometimes helps with the headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen helps the headaches a little."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen provides some relief."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen/Advil provides some relief."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen/Advil helps the headaches a little."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F008",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.worsened",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stress worsens headaches, particularly on days with worse anxiety"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.stress_worsens_headaches_particularly_on_days_with_worse_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stress worsens headaches, particularly on days with worse anxiety."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stress and bad anxiety days make headaches worse"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.stress_and_bad_anxiety_days_make_headaches_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stress and bad anxiety days make headaches worse."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient stated that on bad anxiety days the headache is worse"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_stated_that_on_bad_anxiety_days_the_headache_is_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient stated that on bad anxiety days the headache is worse."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stress and worse anxiety exacerbate the headaches"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.stress_and_worse_anxiety_exacerbate_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stress and worse anxiety exacerbate the headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The headaches are worse on bad anxiety days"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_headaches_are_worse_on_bad_anxiety_days",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The headaches are worse on bad anxiety days."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "trazodone",
+      "canonical_anchor": "med.medication.trazodone.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "trazodone",
+        "value": "50",
+        "unit": "mg",
+        "time": "morning",
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient previously tried trazodone for sleep, which was stopped due to morning grogginess; dose was approximately 50 mg."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient previously tried trazodone 50mg for sleep but stopped due to morning grogginess, described as inability to function and feeling like a zombie."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was stopped because of morning grogginess."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone was discontinued because of severe morning grogginess and impaired morning functioning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously tried trazodone 50 mg; discontinued due to morning grogginess."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient stopped trazodone."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "6/6",
+            "time": "5/6",
+            "unit": "2/6",
+            "value": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Patient previously tried trazodone for sleep, which was stopped due to morning grogginess; dose was approximately 50 mg",
+      "canonical_anchor": "diagnosis.previously.previously_tried_trazodone_for_sleep_which_stopped_due.present",
+      "kind": "diagnosis",
+      "subtype": "previously",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "trazodone",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.patient_previously_tried_trazodone_for_sleep_which_was_stopped_due_to_morning_grogginess_dose_was_approximately_50_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient previously tried trazodone for sleep, which was stopped due to morning grogginess; dose was approximately 50 mg."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.patient_previously_tried_trazodone_50mg_for_sleep_but_stopped_due_to_morning_grogginess_described_as_inability_to_function_and_feeling_like_a_zombie",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient previously tried trazodone 50mg for sleep but stopped due to morning grogginess, described as inability to function and feeling like a zombie."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_patient_previously_tried_trazodone_for_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient previously tried trazodone for sleep."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient previously tried melatonin for sleep without significant effect."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient previously tried melatonin for sleep without benefit."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin was previously ineffective for sleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously tried melatonin; did not provide significant benefit."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's father has high blood pressure"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has high blood pressure."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "100",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 100 mg daily, taken in the morning with breakfast."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 100mg daily, taken in the morning with breakfast."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes sertraline 100 mg in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 100 mg every morning at the time of the visit."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 100 mg daily, taken in the morning (for anxiety)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes sertraline 100 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "3/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "birth control",
+      "canonical_anchor": "med.medication.birth_control.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "birth control",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lo Loestrin (birth control)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lo Loestrin (birth control)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lo Loestrin birth control."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lo Loestrin (birth control)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes Lo Loestrin birth control."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": null,
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D (due to previously low levels)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D supplement."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes vitamin D because a doctor said the level was low."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D supplement."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D (started because a doctor said levels were low)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes vitamin D."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "150",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100 mg to 150 mg daily, taken in the morning."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100mg to 150mg daily; continue taking in the morning; may take with food if jitteriness occurs."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline was planned to be increased from 100 mg to 150 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100 mg to 150 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100 mg to 150 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline will be increased from 100 mg to 150 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "4/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Increase sertraline from 100 mg to 150 mg daily",
+      "canonical_anchor": "instruct.increase.increase_sertraline_from_to.present",
+      "kind": "instruct",
+      "subtype": "increase",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "sertraline",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.increase_sertraline_from_100_mg_to_150_mg_daily_taken",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100 mg to 150 mg daily, taken in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.increase_sertraline_from_100_mg_to_150_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100 mg to 150 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.increase_sertraline_from_100_mg_to_150_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase sertraline from 100 mg to 150 mg daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advise limiting ibuprofen to no more than a couple times per week to avoid rebound headaches."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen may be used as needed for headaches but no more than a couple times per week to avoid rebound headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised that ibuprofen could be taken as needed for headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue ibuprofen as needed for headaches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue ibuprofen as needed for headaches, but limit to no more than a couple of times per week to avoid rebound headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen may be taken as needed for headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F037",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "tylenol",
+      "canonical_anchor": "med.medication.tylenol.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": null,
+        "object": "tylenol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advise acetaminophen (Tylenol) as an alternative for severe headaches."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol) may be tried for severe headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was told acetaminophen such as Tylenol could be tried if headaches are really bad."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol) may be tried for headaches if needed."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tylenol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen/Tylenol may be tried if headaches are really bad."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F039",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Acetaminophen (Tylenol) may be tried for severe headaches",
+      "canonical_anchor": "instruct.acetaminophen.acetaminophen_tylenol_may_tried_for_severe_headache.present",
+      "kind": "instruct",
+      "subtype": "acetaminophen",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "tylenol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.acetaminophen_tylenol_may_be_tried_for_severe_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol) may be tried for severe headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.acetaminophen_may_be_tried_for_severe_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen may be tried for severe headaches."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.acetaminophen_tylenol_may_be_tried_for_headaches_if_needed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Acetaminophen (Tylenol) may be tried for headaches if needed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F063",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "difficulty falling asleep",
+      "canonical_anchor": "symptom.symptom.difficulty_falling_asleep.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "difficulty falling asleep",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.difficulty_falling_asleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported difficulty falling asleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.difficulty_falling_asleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has difficulty falling asleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.difficulty_falling_asleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has difficulty falling asleep."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F071",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "trazodone",
+      "canonical_anchor": "med.medication.trazodone.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "trazodone",
+        "value": "50",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone had previously been tried for sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was previously treated with trazodone 50 mg for sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient previously tried trazodone for sleep."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F079",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6",
+            "unit": "1/6",
+            "value": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient sometimes drinks a soda",
+      "canonical_anchor": "sochist.sochist.sometime_drink_soda.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient sometime drink a soda",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_sometimes_drinks_a_soda",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes drinks a soda in the afternoon."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_sometimes_drinks_soda",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes drinks soda in the afternoon."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_sometimes_drinks_a_soda",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes drinks a soda in the afternoon."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F096",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient does not drink alcohol during the week",
+      "canonical_anchor": "sochist.sochist.doe_drink_alcohol_during.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient doe not drink alcohol during the week",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_does_not_drink_alcohol_during_the_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient does not drink alcohol during the week."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_does_not_drink_alcohol_during_the_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient does not drink alcohol during the week."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_does_not_drink_alcohol_during_the_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient does not drink alcohol during the week."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F098",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

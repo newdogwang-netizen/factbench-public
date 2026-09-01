@@ -24,34 +24,53 @@ def main():
         name = os.path.basename(td)
         fs = json.load(open(os.path.join(td, "tests", "factset.json")))
         note = open(os.path.join(td, "solution", "note.md"), encoding="utf-8").read()
-        hit = None
+        tr_p = os.path.join(td, "environment", "transcript.txt")
+        tr = open(tr_p, encoding="utf-8").read() if os.path.isfile(tr_p) else None
+        done = False
         for f in fs["facts"]:
+            if done:
+                break
             sal = f.get("salience") or {}
             flds = f.get("fields") or {}
             drug, val = (flds.get("object") or ""), str(flds.get("value") or "")
             if not sal.get("must_not_err") or not drug or not val.isdigit():
                 continue
-            m = re.search(re.escape(drug) + r"[^.\n]{0,60}?\b" + re.escape(val) + r"\b",
-                          note, re.I)
-            if m and re.search(r"[/]\s*" + re.escape(val) + r"\b|\b" + re.escape(val) + r"\s*/",
-                               m.group(0)):
-                continue  # ratio formulations (250/50) are not single-value doses; mutation invalid
-            if m:
-                hit = (drug, val, m)
+            flip = str(int(val) * 2)
+            # Injection validity: the parser must actually bind the flipped
+            # value at the chosen site (a narrative sentence the parser reads
+            # as prose is not a valid injection point). Try each occurrence.
+            for m in re.finditer(re.escape(drug) + r"[^.\n]{0,60}?\b" + re.escape(val) + r"\b",
+                                 note, re.I):
+                seg = m.group(0)
+                if re.search(r"[/]\s*" + re.escape(val) + r"\b|\b" + re.escape(val) + r"\s*/", seg):
+                    continue  # ratio formulations are not single-value doses
+                mutated = note[:m.start()] + seg.replace(val, flip, 1) + note[m.end():]
+                claims = parse_template_claims(mutated)["claims"]
+                if not any(str((c.get("fields") or {}).get("value")) == flip for c in claims):
+                    continue  # parser did not bind the flip here: invalid site
+                rep = evaluate(fs, claims, transcript=tr)
+                fkey = f.get("key")
+                reached = any(
+                    r.get("matched_fact_key") == fkey
+                    and str((claims[r["index"]].get("fields") or {}).get("value")) == flip
+                    for r in rep["per_claim"])
+                if not reached:
+                    continue  # flip bound to a parser-junk anchor: invalid site
+                crit = rep["counts"].get("critical_wrong", 0)
+                ambiguous = any(
+                    r.get("crit") == "dispute" and any(
+                        (d.get("reason") or "").endswith("anchored_in_source")
+                        for d in (r.get("crit_detail") or {}).get("demoted") or [])
+                    for r in rep["per_claim"])
+                if ambiguous:
+                    continue  # flip coincides with a real source value: invalid
+                tested += 1
+                if crit > 0:
+                    caught += 1
+                else:
+                    misses.append("{}: {} {}->{}".format(name, drug, val, flip))
+                done = True
                 break
-        if not hit:
-            continue
-        tested += 1
-        drug, val, m = hit
-        mutated = note[:m.start()] + m.group(0).replace(val, str(int(val) * 2), 1) + note[m.end():]
-        rep = evaluate(fs, parse_template_claims(mutated)["claims"])
-        mne = {x["key"] for x in fs["facts"] if (x.get("salience") or {}).get("must_not_err")}
-        crit = sum(1 for r in rep["per_claim"]
-                   if r.get("verdict") == "wrong_fact" and r.get("matched_fact_key") in mne)
-        if crit > 0:
-            caught += 1
-        else:
-            misses.append("{}: {} {}->{}".format(name, drug, val, int(val) * 2))
     print("mutation check: {}/{} dose flips caught".format(caught, tested))
     for miss in misses:
         print("  MISS", miss)
@@ -60,5 +79,4 @@ def main():
     print("MUTATION CHECK PASS")
 
 
-if __name__ == "__main__":
-    main()
+main()

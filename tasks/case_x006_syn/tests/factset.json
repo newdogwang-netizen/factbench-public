@@ -1,0 +1,2652 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x006_syn",
+    "version": "1",
+    "sha256": "d4655d40fe1ebe0331aa80d40a8beeead2a2e947dc289037114ca08f93280fc5",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x006_syn",
+    "path": "case_x006_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 293,
+      "certain": 8,
+      "strict_certain": 8,
+      "low_conf": 42,
+      "unique": 243,
+      "unanimous": 12,
+      "low_support": 243
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 23,
+    "unstable_skipped": 20
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "memory impairment",
+      "canonical_anchor": "symptom.cognition_memory.memory_impairment.present",
+      "kind": "symptom",
+      "subtype": "cognition_memory",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports brain fog, difficulty concentrating, and forgetfulness (e.g., forgetting why she entered a room)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brain fog: difficulty processing information at work, staring at screen without comprehension, forgetfulness such as entering rooms and forgetting why."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports forgetting things, such as entering a room and forgetting why."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports forgetfulness."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports forgetfulness, such as going into a room and forgetting why she went there."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports forgetfulness."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F005",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "symptom.gastrointestinal.constipation.worsened",
+      "kind": "symptom",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.some_constipation_more_than_usual",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports some constipation, more than usual."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.mild_constipation_more_than_usual",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has mild constipation, more than usual."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.constipation_is_more_than_usual",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports constipation is more than usual."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F008",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "low appetite",
+      "canonical_anchor": "symptom.symptom.low_appetite.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "low appetite",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.low_appetite_but_eating_comfort_foods_like_pasta_and_bread",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports low appetite but eating comfort foods like pasta and bread."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.low_appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports low appetite."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.low_appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports low appetite."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "dizziness and giddiness",
+      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.present",
+      "kind": "diagnosis",
+      "subtype": "neuro_vestibular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports occasional dizziness when standing up too fast"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.occasional_dizziness_when_standing_up_too_fast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports occasional dizziness when standing up too fast."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mild dizziness when standing up too fast"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.mild_dizziness_when_standing_up_too_fast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mild dizziness when standing up too fast."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports occasional mild dizziness when standing quickly"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.occasional_mild_dizziness_when_standing_quickly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports occasional mild dizziness when standing quickly."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports occasional mild dizziness when standing up too fast"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.occasional_mild_dizziness_when_standing_up_too_fast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports occasional mild dizziness when standing up too fast."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports occasional mild dizziness when standing up too fast"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.occasional_mild_dizziness_when_standing_up_too_fast",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports occasional mild dizziness when standing up too fast."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking ibuprofen sometimes for headaches, but mostly tries water and rest."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Headaches: 2-3 times per week for approximately the last month, described as dull ache in forehead, temples, and over eyes, without nausea or sensitivity to light or sound; takes ibuprofen occasionally, otherwise drinks water and rests."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes ibuprofen for headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes ibuprofen for headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She takes ibuprofen occasionally for the headaches and otherwise drinks water and rests."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes ibuprofen for headaches if they are bad enough."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has high blood pressure"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.patient_s_mother_has_high_blood_pressure_and_high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's mother has high blood pressure and high cholesterol."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitals: blood pressure 128/82, heart rate 64, weight 168 pounds (up approximately 8 pounds from 160 at last visit), temperature 97.2°F (low)"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.vitals_blood_pressure_128_82_heart_rate_64_weight_168_pounds_up_approximately_8_pounds_from_160_at_last_visit_temperature_97_2f_low",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitals: blood pressure 128/82, heart rate 64, weight 168 pounds (up approximately 8 pounds from 160 at last visit), temperature 97.2°F (low)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension (currently on lisinopril)"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is treated with lisinopril."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is treated with lisinopril"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.hypertension_is_treated_with_lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is treated with lisinopril."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 128/82 mmHg"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.blood_pressure_is_128_82_mmhg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 128/82 mmHg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patients_mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s mother has high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vital signs today: blood pressure 128/82, heart rate 64, temperature 97.2"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.vital_signs_today_blood_pressure_128_82_heart_rate_64_temperature_97_2",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vital signs today: blood pressure 128/82, heart rate 64, temperature 97.2."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension, treated with lisinopril"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_high_blood_pressure_and_high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure and high cholesterol."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Today's blood pressure was 128/82"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.today_s_blood_pressure_was_128_82",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Today's blood pressure was 128/82."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has high blood pressure."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "3/6",
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "100",
+        "unit": null,
+        "time": "every morning",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 100 micrograms, taken every morning."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 100 micrograms daily (being increased to 125 micrograms)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient had been taking levothyroxine with breakfast."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has been taking levothyroxine 100 micrograms every morning with breakfast."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 100 micrograms every morning, currently taken with breakfast rather than on an empty stomach."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes levothyroxine 100 micrograms every morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "4/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 milligrams once a day for blood pressure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily for blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 milligrams once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 milligrams once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 milligrams for cholesterol."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg for cholesterol."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg for cholesterol."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 milligrams for cholesterol."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 milligrams."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F024",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Meloxicam",
+      "canonical_anchor": "med.medication.meloxicam.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "meloxicam",
+        "value": null,
+        "unit": null,
+        "time": "once a week",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam taken sometimes, about once a week or less, for knee pain."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam as needed, approximately once a week, for knee pain."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam is taken about once a week or less."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam is taken as needed for knee pain, approximately once weekly or less."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam as needed for knee pain, approximately once a week or less."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam about once weekly as needed for knee pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin, taken daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6",
+            "time": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Calcium",
+      "canonical_anchor": "med.medication.calcium.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "calcium",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.calcium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Calcium supplement, taken daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.calcium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Calcium supplement daily for bone health."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.calcium",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Calcium supplement."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6",
+            "time": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "125",
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase levothyroxine from 100 micrograms to 125 micrograms."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase levothyroxine from 100 micrograms to 125 micrograms daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine is to be increased from 100 micrograms to 125 micrograms."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase levothyroxine from 100 micrograms to 125 micrograms."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase levothyroxine from 100 micrograms to 125 micrograms daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine will be increased from 100 micrograms to 125 micrograms."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F041",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Increase levothyroxine from 100 micrograms to 125 micrograms",
+      "canonical_anchor": "instruct.increase.increase_levothyroxine_from_to.present",
+      "kind": "instruct",
+      "subtype": "increase",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.increase_levothyroxine_from_100_micrograms_to_125_micrograms",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase levothyroxine from 100 micrograms to 125 micrograms."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.increase_levothyroxine_from_100_micrograms_to_125_micrograms_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase levothyroxine from 100 micrograms to 125 micrograms daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.increase_levothyroxine_from_100_micrograms_to_125_micrograms",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase levothyroxine from 100 micrograms to 125 micrograms."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.increase_levothyroxine_from_100_micrograms_to_125_micrograms_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase levothyroxine from 100 micrograms to 125 micrograms daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F042",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Fatigue",
+      "canonical_anchor": "demo.demo.fatigue.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "fatigue",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fatigue is severe: patient crashes after work, unable to make dinner or do activities, sleeps 10-12 hours on weekends which is more than usual."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fatigue is described as pretty bad."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.fatigue",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fatigue is significant: she crashes after work and is unable to make dinner or do anything."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F055",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Take levothyroxine on an empty stomach, first thing , 30-60 minutes before eating or drinking anything except water",
+      "canonical_anchor": "instruct.take.take_levothyroxine_empty_stomach_first_thing_before_eating.present",
+      "kind": "instruct",
+      "subtype": "take",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.take_levothyroxine_on_an_empty_stomach_first_thing_30_60_minutes_before_eating_or_drinking_anything_except_water",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take levothyroxine on an empty stomach, first thing in the morning, 30-60 minutes before eating or drinking anything except water."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.take_levothyroxine_on_an_empty_stomach_first_thing_3060_minutes_before_eating_or_drinking_anything_except_water",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take levothyroxine on an empty stomach first thing in the morning, 30–60 minutes before eating or drinking anything except water."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.take_levothyroxine_on_an_empty_stomach_first_thing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Take levothyroxine on an empty stomach first thing in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F074",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "On weekends, the patient sleeps 10 to 12 hours",
+      "canonical_anchor": "symptom.symptom.weekend_sleep.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "on weekends, the patient sleep 10 to 12 hour",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.on_weekends_the_patient_sleeps_10_to_12_hours",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "On weekends, the patient sleeps 10 to 12 hours."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.on_weekends_the_patient_sleeps_10_to_12_hours",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "On weekends, the patient sleeps 10 to 12 hours."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_patient_often_sleeps_1012_hours_on_weekends",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient often sleeps 10–12 hours on weekends."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F092",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "dry skin",
+      "canonical_anchor": "symptom.symptom.dry_skin.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "dry skin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.dry_skin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports dry skin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.dry_skin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports dry skin."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.dry_skin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports dry skin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F095",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "brittle nails",
+      "canonical_anchor": "symptom.symptom.brittle_nail.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "brittle nail",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.brittle_nails",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports brittle nails."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.brittle_nails",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports brittle nails."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.brittle_nails",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports brittle nails."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.her_nails_have_become_brittle",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her nails have become brittle."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F098",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "trouble getting back to sleep",
+      "canonical_anchor": "symptom.sleep.trouble_getting_back_to_sleep.present",
+      "kind": "symptom",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "trouble getting back to sleep",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.trouble_getting_back_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes has trouble getting back to sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.trouble_getting_back_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She falls asleep easily but wakes a few times during the night and has trouble getting back to sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.trouble_getting_back_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes has trouble getting back to sleep."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F108",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "nausea with the headaches",
+      "canonical_anchor": "symptom.symptom.nausea_with_headache.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "nausea with the headache",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.nausea_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies nausea with the headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.nausea_with_the_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies nausea with the headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.the_headaches_are_not_associated_with_nausea_or_sensitivity_to_light_or_sound",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The headaches are not associated with nausea or sensitivity to light or sound."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F119",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient sometimes takes ibuprofen for headaches",
+      "canonical_anchor": "symptom.symptom.sometime_take_ibuprofen_for_headache.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_sometimes_takes_ibuprofen_for_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes ibuprofen for headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_patient_sometimes_takes_ibuprofen_for_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes ibuprofen for headaches."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_sometimes_takes_ibuprofen_for_headaches_if_they_are_bad_enough",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes ibuprofen for headaches if they are bad enough."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F120",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The",
+      "canonical_anchor": "med.medication.medication.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "the",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.the",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes a multivitamin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.the",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes a multivitamin."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.the",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes calcium because her doctor advised it for her bones."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F132",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

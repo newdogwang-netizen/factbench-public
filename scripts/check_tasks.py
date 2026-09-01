@@ -23,12 +23,12 @@ REQUIRED = ["task.toml", "instruction.md", "environment/transcript.txt",
             "tests/factset.json", "tests/verify.py", "tests/test.sh"]
 
 
-def score(fs, text, min_cov):
+def score(fs, text, min_cov, transcript=None):
     claims = parse_template_claims(text)["claims"] if text.strip() else []
-    rep = evaluate(fs, claims)
-    mne = {f["key"] for f in fs["facts"] if (f.get("salience") or {}).get("must_not_err")}
-    crit = sum(1 for r in rep["per_claim"]
-               if r.get("verdict") == "wrong_fact" and r.get("matched_fact_key") in mne)
+    # Same channel as the shipped verifier: two-vote crit confirmation
+    # against the source transcript (raw wrong_facts demote to disputes).
+    rep = evaluate(fs, claims, transcript=transcript)
+    crit = rep["counts"].get("critical_wrong", 0)
     mct = sum(1 for f in fs["facts"] if (f.get("salience") or {}).get("must_cover"))
     cov = rep["counts"].get("must_cover_hit", 0) / max(1, mct)
     return cov, crit, (crit == 0 and cov >= min_cov)
@@ -52,8 +52,9 @@ def main():
                       open(os.path.join(td, "tests", "verify.py")).read())
         min_cov = float(m.group(1)) if m else 0.5
         cov, crit, ok = score(fs, open(os.path.join(td, "solution", "note.md"),
-                                       encoding="utf-8").read(), min_cov)
-        _, _, noop_ok = score(fs, "", min_cov)
+                                       encoding="utf-8").read(), min_cov,
+                              transcript=tr)
+        _, _, noop_ok = score(fs, "", min_cov, transcript=tr)
         print("{}: oracle cov={:.0%} crit={} pass={} | no-op pass={}".format(
             name, cov, crit, ok, noop_ok))
         if not ok:

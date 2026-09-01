@@ -1,0 +1,1660 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x017_syn",
+    "version": "1",
+    "sha256": "e1655bc99990f3b303299b7340a0767036a9c77f97c7e63fd0f31d081b2add08",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x017_syn",
+    "path": "case_x017_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 243,
+      "certain": 7,
+      "strict_certain": 6,
+      "low_conf": 25,
+      "unique": 211,
+      "unanimous": 12,
+      "low_support": 211
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 12,
+    "unstable_skipped": 17
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "Last mood episode was approximately four months ago, described as a depressive episode",
+      "canonical_anchor": "symptom.mood_behavior.mood_episode_approximately_four_ago_described_depressive_episode.present",
+      "kind": "symptom",
+      "subtype": "mood_behavior",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "depression",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.last_mood_episode_was_approximately_four_months_ago_described_as_a_depressive_episode",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Last mood episode was approximately four months ago, described as a depressive episode."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_most_recent_mood_episode_was_a_depressive_episode_approximately_four_months_ago_or_slightly_longer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The most recent mood episode was a depressive episode approximately four months ago or slightly longer."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.last_mood_episode_occurred_approximately_four_months_ago_and_was_a_depressive_episode",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Last mood episode occurred approximately four months ago and was a depressive episode."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Appetite",
+      "canonical_anchor": "demo.demo.appetite.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "appetite",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is good."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is good."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is good."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Appetite is good",
+      "canonical_anchor": "symptom.symptom.appetite_good.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "appetite is good",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.appetite_is_good",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is good."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.appetite_is_good",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported appetite is good."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.appetite_is_good",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is good."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.appetite_is_good",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is good."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.good_appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports good appetite."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.present",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Some situational anxiety related to big projects at work; anxiety goes away once the task is completed"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.some_situational_anxiety_related_to_big_projects_at_work_anxiety_goes_away_once_the_task_is_completed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Some situational anxiety related to big projects at work; anxiety goes away once the task is completed."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.brother_has_been_dealing_with_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has been dealing with anxiety."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.being_a_little_anxious_sometimes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported being a little anxious sometimes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported anxiety is mostly situational"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.patient_reported_a_brother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported a brother has anxiety."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports mild situational anxiety associated with work projects"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.mild_situational_anxiety_associated_with_work_projects",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports mild situational anxiety associated with work projects."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patients_brother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s brother has anxiety."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports mild situational anxiety related to big projects at work, which resolves once the project is completed"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.mild_situational_anxiety_related_to_big_projects_at_work_which_resolves_once_the_project_is_completed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports mild situational anxiety related to big projects at work, which resolves once the project is completed."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.brother_has_been_dealing_with_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has been dealing with anxiety."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports some situational anxiety related to work projects, but no panic attacks"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.some_situational_anxiety_related_to_work_projects_but_no_panic_attacks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports some situational anxiety related to work projects, but no panic attacks."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.brother_has_been_dealing_with_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother has been dealing with anxiety."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports occasional anxiety"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.occasional_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports occasional anxiety."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patients_brother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s brother has anxiety."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "depression / low mood",
+      "canonical_anchor": "diagnosis.mood_depression.depression.present",
+      "kind": "diagnosis",
+      "subtype": "mood_depression",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "depression",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.bipolar_disorder_with_last_depressive_episode_approximately_four_months_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bipolar disorder, with last depressive episode approximately four months ago."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.aunt_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aunt has depression."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported an aunt has depression"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.patient_reported_an_aunt_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported an aunt has depression."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s aunt has depression"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patients_aunt_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s aunt has depression."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aunt has depression, per the patient's understanding"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.aunt_has_depression_per_the_patient_s_understanding",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aunt has depression, per the patient's understanding."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.no_significant_depressive_symptoms_no_persistent_low_mood_no_loss_of_interest_no_changes_in_appetite_or_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no significant depressive symptoms (no persistent low mood, no loss of interest, no changes in appetite or sleep)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aunt has depression"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.aunt_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aunt has depression."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s aunt has depression"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patients_aunt_has_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s aunt has depression."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lamotrigine",
+      "canonical_anchor": "med.medication.lamotrigine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lamotrigine",
+        "value": "200",
+        "unit": "mg",
+        "time": "every morning",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lamotrigine 200 mg, taken every morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is taking lamotrigine 200 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lamotrigine 200 mg every morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lamotrigine 200 mg, taken every morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lamotrigine 200 mg, taken every morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes lamotrigine 200 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "4/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "50",
+        "unit": "mg",
+        "time": "every morning",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg, taken every morning at the same time as lamotrigine; has been on sertraline for approximately one year or a little more."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is taking sertraline 50 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg every morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg, taken every morning at the same time as the lamotrigine."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg, taken every morning at the same time as the lamotrigine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes sertraline 50 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F024",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "4/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported father has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.patient_reported_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported father has high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s father has high blood pressure"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patients_father_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s father has high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s father has hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patients_father_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s father has hypertension."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "1/6",
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lamotrigine",
+      "canonical_anchor": "med.medication.lamotrigine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lamotrigine",
+        "value": "200",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lamotrigine 200 mg daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Plan is to continue lamotrigine 200 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lamotrigine 200 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lamotrigine 200 mg daily at the current dose."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Lamotrigine 200 mg daily in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lamotrigine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lamotrigine 200 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F038",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "4/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue lamotrigine 200 mg daily",
+      "canonical_anchor": "instruct.continue.continue_lamotrigine.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "lamotrigine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_lamotrigine_200_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lamotrigine 200 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_lamotrigine_200_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lamotrigine 200 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_lamotrigine_200_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Lamotrigine 200 mg daily in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_lamotrigine_200_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lamotrigine 200 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_lamotrigine_200_mg_daily_at_the_current_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lamotrigine 200 mg daily at the current dose."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F039",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "50",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sertraline 50 mg daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Plan is to continue sertraline 50 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sertraline 50 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sertraline 50 mg daily at the current dose."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Sertraline 50 mg daily in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sertraline 50 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F040",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "4/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue sertraline 50 mg daily",
+      "canonical_anchor": "instruct.continue.continue_sertraline.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "sertraline",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_sertraline_50_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sertraline 50 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_sertraline_50_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sertraline 50 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_sertraline_50_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Sertraline 50 mg daily in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_sertraline_50_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sertraline 50 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_sertraline_50_mg_daily_at_the_current_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue sertraline 50 mg daily at the current dose."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F041",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    }
+  ]
+}

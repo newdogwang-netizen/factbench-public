@@ -1,0 +1,1325 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x021_syn",
+    "version": "1",
+    "sha256": "a010814ac752ec2deca60529cb863bbbd1bace81522d4bd152641d6c331673fd",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x021_syn",
+    "path": "case_x021_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 228,
+      "certain": 3,
+      "strict_certain": 3,
+      "low_conf": 26,
+      "unique": 199,
+      "unanimous": 5,
+      "low_support": 199
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 11,
+    "unstable_skipped": 16
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "anxiety",
+      "canonical_anchor": "symptom.mood_anxiety.anxiety.present",
+      "kind": "symptom",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.feeling_a_little_anxious_due_to_the_thoughts_but_denies_feeling_depressed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports feeling a little anxious due to the thoughts, but denies feeling depressed."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's mother has anxiety and takes medication for it"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.patient_s_mother_has_anxiety_and_takes_medication_for_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's mother has anxiety and takes medication for it."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.psychosocial_interventions_advise_patient_to_get_some_exercise_such_as_walking_20_to_30_minutes_a_day_to_help_with_anxiety_and_overall_mood",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Psychosocial interventions: Advise patient to get some exercise, such as walking 20 to 30 minutes a day, to help with anxiety and overall mood."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.feeling_a_little_anxious_due_to_intrusive_thoughts",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports feeling a little anxious due to intrusive thoughts."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety and takes medication for it"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_anxiety_and_takes_medication_for_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety and takes medication for it."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.recommend_regular_exercise_such_as_walking_20_to_30_minutes_per_day_to_help_with_anxiety_and_overall_mood",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Recommend regular exercise such as walking 20 to 30 minutes per day to help with anxiety and overall mood."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.feeling_a_little_anxious_because_of_the_thoughts",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported feeling a little anxious because of the thoughts."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has anxiety"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_mother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has anxiety."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports anxiety associated with the intrusive thoughts"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.anxiety_associated_with_the_intrusive_thoughts",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports anxiety associated with the intrusive thoughts."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patients_mother_has_anxiety_and_takes_medication_for_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s mother has anxiety and takes medication for it."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.feeling_a_little_anxious_because_of_the_thoughts",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports feeling \"a little anxious\" because of the thoughts."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety and takes medication for it"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_anxiety_and_takes_medication_for_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has anxiety and takes medication for it."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.encouraged_physical_activity_such_as_walking_20_to_30_minutes_per_day_to_help_with_anxiety_and_overall_mood",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Encouraged physical activity, such as walking 20 to 30 minutes per day, to help with anxiety and overall mood."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.feeling_a_little_anxious_because_of_the_thoughts",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports feeling a little anxious because of the thoughts."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has anxiety"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has anxiety."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.psychosocial_intervention_walking_may_help_with_anxiety_and_overall_mood",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Psychosocial intervention: Walking may help with anxiety and overall mood."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "appetite is fine",
+      "canonical_anchor": "symptom.symptom.appetite_fine.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "appetite is fine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.appetite_is_fine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports appetite is fine."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.appetite_is_fine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported appetite is fine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.appetite_is_fine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports appetite is fine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F011",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Fluvoxamine",
+      "canonical_anchor": "med.medication.fluvoxamine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "fluvoxamine",
+        "value": "150",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.fluvoxamine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluvoxamine 150 mg daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.fluvoxamine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluvoxamine 150 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.fluvoxamine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluvoxamine 150 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.fluvoxamine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fluvoxamine 150 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6",
+            "time": "1/6",
+            "unit": "4/6",
+            "value": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin sometimes for sleep."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin occasionally for sleep."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes melatonin for sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin as needed for sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin occasionally for sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes melatonin for sleep."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "aripiprazole",
+      "canonical_anchor": "med.medication.aripiprazole.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "aripiprazole",
+        "value": "1",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.aripiprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Start aripiprazole 1 mg once daily, with a plan to increase to 2 mg after a week or two if tolerated; continue fluvoxamine 150 mg; aripiprazole can be taken in the morning or at night; monitor for weight gain and changes in blood sugar and cholesterol."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.aripiprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start aripiprazole 1 mg once daily; may increase to 2 mg after one to two weeks if tolerated."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.aripiprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The clinician planned to start aripiprazole 1 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.aripiprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start aripiprazole 1 mg once daily as augmentation for persistent intrusive thoughts."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.aripiprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start aripiprazole 1 mg once daily; may be taken in the morning or at night."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.aripiprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aripiprazole 1 mg once daily was prescribed to start."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Appetite",
+      "canonical_anchor": "demo.demo.appetite.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "appetite",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is fine with no changes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is unchanged."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is fine with no changes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F043",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Works approximately 40 to 45 hours per week",
+      "canonical_anchor": "sochist.sochist.work_approximately.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "work approximately 40 to 45 hour per week",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "social_history.works_approximately_40_to_45_hours_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Works approximately 40 to 45 hours per week."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_works_approximately_4045_hours_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient works approximately 40–45 hours per week."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.works_approximately_40_to_45_hours_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Works approximately 40 to 45 hours per week."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F049",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Work",
+      "canonical_anchor": "demo.demo.work.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "work",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.work",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Work is busy and stressful due to tax season but manageable."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.work",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Work is busy and stressful during tax season but remains manageable."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.work",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Work is busy due to tax season and has been stressful but manageable."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.work",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Work is busy during tax season."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue fluvoxamine 150 mg",
+      "canonical_anchor": "instruct.continue.continue_fluvoxamine.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue fluvoxamine 150 mg",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_fluvoxamine_150_mg_as_currently_prescribed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue fluvoxamine 150 mg as currently prescribed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_fluvoxamine_150_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue fluvoxamine 150 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_fluvoxamine_150_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue fluvoxamine 150 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F058",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient is not currently exercising",
+      "canonical_anchor": "sochist.sochist.currently_exercising.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient is not currently exercising",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_reported_not_currently_exercising_regularly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported not currently exercising regularly."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_is_not_currently_exercising",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is not currently exercising."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_is_not_currently_exercising",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is not currently exercising."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F094",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

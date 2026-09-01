@@ -1,0 +1,1879 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x016_syn",
+    "version": "1",
+    "sha256": "433a69730c8fbf5acea44914bf5bb63648dd8b511f3be8827f7bf38028cea4d4",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x016_syn",
+    "path": "case_x016_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 202,
+      "certain": 9,
+      "strict_certain": 9,
+      "low_conf": 25,
+      "unique": 168,
+      "unanimous": 12,
+      "low_support": 168
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 15,
+    "unstable_skipped": 17
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "feeling better since the last visit",
+      "canonical_anchor": "symptom.symptom.better_since_visit.improved",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "feeling better since the last visit",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.feeling_better_since_the_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports feeling better since the last visit."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.feeling_better_since_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports feeling better since last visit."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.feeling_better_since_the_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported feeling better since the last visit."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.feeling_better_since_the_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports feeling better since the last visit."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.feeling_better_since_the_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports feeling better since the last visit."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.feeling_better_since_the_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported feeling better since the last visit."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "initial mild stomach discomfort with metformin that resolved",
+      "canonical_anchor": "symptom.symptom.initial_mild_stomach_discomfort_with_metformin_that_resolved.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "metformin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "resolved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.initial_mild_stomach_discomfort_with_metformin_that_resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports initial mild stomach discomfort with metformin that resolved."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.initial_stomach_upset_with_metformin_that_has_since_resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports initial stomach upset with metformin that has since resolved."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.that_the_initial_stomach_symptoms_with_metformin_resolved",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported that the initial stomach symptoms with metformin resolved."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F005",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "1000",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice a day (two in the morning and two at night)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily (two pills in the morning and two pills at night)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice a day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1,000 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily (one in the morning, one at night)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice a day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Mother",
+      "canonical_anchor": "demo.demo.mother.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "mother",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.mother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is healthy."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.mother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is reportedly pretty healthy."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.mother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother is reported as healthy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sister has pre-diabetes",
+      "canonical_anchor": "famhist.famhist.sister_pre_diabete.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sister has pre-diabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.sister_has_pre_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has pre-diabetes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.sister_has_pre_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has pre-diabetes."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.sister_has_pre_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister has pre-diabetes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.patient_s_sister_has_pre_diabetes_according_to_the_patient",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's sister has pre-diabetes, according to the patient."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_sister_has_pre_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's sister has pre-diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "minimax-m3",
+          "gpt-5_4",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "1000",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice a day."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice a day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1,000 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice a day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue metformin 1000 mg twice a day",
+      "canonical_anchor": "instruct.continue.continue_metformin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "metformin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_metformin_1000_mg_twice_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice a day."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_metformin_1000_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_metformin_1000_mg_twice_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice a day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_metformin_1_000_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1,000 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_metformin_1000_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_metformin_1000_mg_twice_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 1000 mg twice a day."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril and atorvastatin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was advised to take atorvastatin on the morning of the lab draw with a sip of water."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "4/6",
+            "value": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril and atorvastatin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was advised to take lisinopril on the morning of the lab draw with a sip of water."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "3/6",
+            "value": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue lisinopril",
+      "canonical_anchor": "instruct.continue.continue_lisinopril.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_lisinopril_and_atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril and atorvastatin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_atorvastatin_20_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_lisinopril_10_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_atorvastatin_20_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_lisinopril_10_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_atorvastatin_20_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_lisinopril_10_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_atorvastatin_20_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Empagliflozin",
+      "canonical_anchor": "demo.demo.empagliflozin.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "empagliflozin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin is the generic name; brand name is Jardiance; insurance likely covers generic."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin is being added primarily for kidney protection and also provides some blood sugar lowering."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin is to be taken in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin is being added primarily for long-term kidney protection."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.empagliflozin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Empagliflozin is an SGLT2 inhibitor."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F039",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure was 128/76"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.blood_pressure_was_128_76",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure was 128/76."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 128/76 mmHg"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension (implied by lisinopril use)"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hypertension_implied_by_lisinopril_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension (implied by lisinopril use)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure was 128/76 and described as well controlled"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.blood_pressure_was_128_76_and_described_as_well_controlled",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure was 128/76 and described as well controlled."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F077",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "condition": "1/6",
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "weight",
+      "canonical_anchor": "demo.metabolic.weight.present",
+      "kind": "demo",
+      "subtype": "metabolic",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "weight",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.weight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight was 210 pounds."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.weight_was_210_pounds",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight was 210 pounds."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.weight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight is 210 pounds."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.weight",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight was 210 pounds."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.weight_was_210_pounds",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Weight was 210 pounds."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F078",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

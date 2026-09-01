@@ -1,0 +1,2668 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x025_syn",
+    "version": "1",
+    "sha256": "ad9d4f8ae2c225eb7066b38b7b8b3b6e64c9d0250bb6c319ad921c7ea45291c6",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x025_syn",
+    "path": "case_x025_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 5,
+      "n_facts": 263,
+      "certain": 11,
+      "strict_certain": 10,
+      "low_conf": 73,
+      "unique": 179,
+      "unanimous": 17,
+      "low_support": 226
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 24,
+    "unstable_skipped": 13
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "The patient was seen for follow-up about six weeks after the last visit",
+      "canonical_anchor": "symptom.symptom.seen_for_follow_up_about_six_after_visit.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient was seen for follow-up about six week after the last visit",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_was_seen_for_follow_up_about_six_weeks_after_the_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was seen for follow-up about six weeks after the last visit."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_was_seen_for_follow_up_about_six_weeks_after_the_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was seen for follow-up about six weeks after the last visit."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.patient_returns_for_follow_up_approximately_six_weeks_after_last_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient returns for follow-up approximately six weeks after last visit."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient wakes once or twice",
+      "canonical_anchor": "symptom.symptom.wake_or.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient wake once or twice",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_wakes_once_or_twice",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient wakes once or twice during the night."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_patient_wakes_once_or_twice",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient wakes once or twice during the night."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_wakes_once_or_twice",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient wakes once or twice during the night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F038",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg at night."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg is taken nightly."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg at night."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg at night."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes atorvastatin 20 mg at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F047",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "4/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes lisinopril for blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patients_father_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s father had high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is present."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is present"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.hypertension_is_present",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is present."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.his_father_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "His father had high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High blood pressure, treated with lisinopril"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_had_heart_problems_and_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had heart problems and high blood pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension (chronic medical condition)"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hypertension_chronic_medical_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension (chronic medical condition)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_had_heart_problems_and_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had heart problems and high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has high blood pressure treated with lisinopril"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_father_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father had high blood pressure."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F049",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "condition": "2/6",
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "morning",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg is taken in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes lisinopril 10 mg in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "5/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient had a low vitamin D level per the primary doctor."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes vitamin D."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Low vitamin D level, as noted by the patient's primary doctor."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D supplement (over-the-counter)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's primary doctor said his vitamin D was a little low."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Carbidopa-levodopa",
+      "canonical_anchor": "med.medication.carbidopa_levodopa.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "carbidopa-levodopa",
+        "value": "100",
+        "unit": "mg",
+        "time": "four times daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.carbidopa_levodopa",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Carbidopa-levodopa 25-100 four times a day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.carbidopa_levodopa",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Carbidopa-levodopa 25/100 mg is taken four times daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.carbidopa_levodopa",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Carbidopa-levodopa 25-100 mg four times daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.carbidopa_levodopa",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Carbidopa-levodopa 25-100 mg, four times daily (7 AM, noon, 5 PM, 10 PM)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F053",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6",
+            "time": "3/6",
+            "unit": "3/6",
+            "value": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (over-the-counter)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F054",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": "3",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg sometimes to help with sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes melatonin 3 mg for sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg, taken sometimes to help with sleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin 3 mg occasionally for sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's melatonin dose is 3 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F055",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient is retired",
+      "canonical_anchor": "sochist.sochist.retired.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient is retired",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_is_retired",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is retired."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_is_retired",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is retired."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_is_retired",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is retired."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.retired_high_school_math_teacher_taught_for_about_thirty_years",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Retired high school math teacher; taught for about thirty years."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.retired_high_school_math_teacher_with_approximately_30_years_of_teaching_experience",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Retired high school math teacher with approximately 30 years of teaching experience."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F060",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient was a high school teacher",
+      "canonical_anchor": "sochist.sochist.high_school_teacher.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient was a high school teacher",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_was_a_high_school_teacher",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was a high school teacher."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_was_a_high_school_teacher",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was a high school teacher."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.he_previously_worked_as_a_high_school_mathematics_teacher_for_approximately_30_years",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "He previously worked as a high school mathematics teacher for approximately 30 years."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F061",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Wearing-off phenomenon",
+      "canonical_anchor": "diagnosis.wearing.wearing_phenomenon.present",
+      "kind": "diagnosis",
+      "subtype": "wearing",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "wearing-off phenomenon",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.wearing_off_phenomenon",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wearing-off phenomenon."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.wearing_off_phenomenon",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wearing-off phenomenon."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.wearing_off_phenomenon_motor_fluctuations_with_shortened_benefit_from_each_carbidopa_levodopa_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Wearing-off phenomenon (motor fluctuations) with shortened benefit from each carbidopa-levodopa dose."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F068",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Possible REM sleep behavior disorder",
+      "canonical_anchor": "diagnosis.possible.possible_rem_sleep_behavior_disorder.present",
+      "kind": "diagnosis",
+      "subtype": "possible",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "possible rem sleep behavior disorder",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.possible_rem_sleep_behavior_disorder",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Possible REM sleep behavior disorder."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.possible_rem_sleep_behavior_disorder",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Possible REM sleep behavior disorder."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.possible_rem_sleep_behavior_disorder",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Possible REM sleep behavior disorder."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F070",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "diagnosis.gastrointestinal.constipation.present.after_docusate_increase",
+      "kind": "diagnosis",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.the_patient_was_advised_to_increase_fluid_intake_for_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to increase fluid intake for constipation."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.constipation_associated_with_parkinson_s_disease",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation associated with Parkinson's disease."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.the_patient_was_advised_to_increase_fluid_intake_for_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to increase fluid intake for constipation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.constipation_a_common_non_motor_symptom_of_parkinson_s_disease",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation, a common non-motor symptom of Parkinson's disease."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.constipation_management_increase_fluid_intake_increase_dietary_fiber_with_fruits_vegetables_and_whole_grains_if_insufficient_try_an_over_the_counter_stool_softener_such_as_docusate_or_a_fiber_supplement_such_as_metamucil_call_the_office_if_there_is_no_improvement_in_a_couple_of_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation management: Increase fluid intake; increase dietary fiber with fruits, vegetables, and whole grains; if insufficient, try an over-the-counter stool softener such as docusate or a fiber supplement such as Metamucil; call the office if there is no improvement in a couple of weeks."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.constipation_likely_related_to_parkinson_s_disease_autonomic_dysfunction",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation, likely related to Parkinson's disease/autonomic dysfunction."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.increase_fluid_intake_for_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Increase fluid intake for constipation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F071",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Entacapone will be taken four times daily",
+      "canonical_anchor": "instruct.entacapone.entacapone_will_taken_four_time.planned",
+      "kind": "instruct",
+      "subtype": "entacapone",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "entacapone will be taken four time daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.entacapone_will_be_taken_four_times_a_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Entacapone will be taken four times a day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.entacapone_will_be_taken_four_times_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Entacapone will be taken four times daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.entacapone_will_be_taken_four_times_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Entacapone will be taken four times daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F073",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": "3",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin for sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg for sleep-related symptoms."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Start entacapone 200 mg taken with each dose of carbidopa-levodopa, four times daily; prescription to be sent to the pharmacy today; entacapone to be prescribed as a separate pill for now, with the option to switch to a combination pill later if it works well and dosing is stable; patient counseled that entacapone side effects are generally mild and may include nausea, diarrhea, and harmless brownish or dark yellow discoloration of the urine; continue melatonin 3 mg for sleep; clonazepam discussed as a possible option if melatonin is not sufficient, but deferred in favor of melatonin due to potential side effects of drowsiness and balance issues; continue carbidopa-levodopa 25-100 mg four times daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Add entacapone 200 mg, to be taken with each dose of carbidopa-levodopa (four times daily); prescription to be sent to pharmacy today. Continue carbidopa-levodopa 25-100 mg four times daily. Continue atorvastatin 20 mg at night. Continue lisinopril 10 mg in the morning. Continue multivitamin and vitamin D. Continue melatonin 3 mg for sleep; may increase dose if needed before considering clonazepam. For constipation: increase fluid intake, increase dietary fiber (fruits, vegetables, whole grains); may try over-the-counter docusate or Metamucil; contact office if no improvement in a couple of weeks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin for sleep."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F077",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "unit": "3/6",
+            "value": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue melatonin for sleep",
+      "canonical_anchor": "instruct.continue.continue_melatonin_for_sleep.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "melatonin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_melatonin_for_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin for sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_melatonin_for_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin for sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_melatonin_3_mg_for_sleep_related_symptoms",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue melatonin 3 mg for sleep-related symptoms."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F078",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "clonazepam",
+      "canonical_anchor": "med.medication.clonazepam.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "clonazepam",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Clonazepam was discussed as a possible future prescription option if needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Clonazepam may be considered if needed for sleep behaviors."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Start entacapone 200 mg taken with each dose of carbidopa-levodopa, four times daily; prescription to be sent to the pharmacy today; entacapone to be prescribed as a separate pill for now, with the option to switch to a combination pill later if it works well and dosing is stable; patient counseled that entacapone side effects are generally mild and may include nausea, diarrhea, and harmless brownish or dark yellow discoloration of the urine; continue melatonin 3 mg for sleep; clonazepam discussed as a possible option if melatonin is not sufficient, but deferred in favor of melatonin due to potential side effects of drowsiness and balance issues; continue carbidopa-levodopa 25-100 mg four times daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Add entacapone 200 mg, to be taken with each dose of carbidopa-levodopa (four times daily); prescription to be sent to pharmacy today. Continue carbidopa-levodopa 25-100 mg four times daily. Continue atorvastatin 20 mg at night. Continue lisinopril 10 mg in the morning. Continue multivitamin and vitamin D. Continue melatonin 3 mg for sleep; may increase dose if needed before considering clonazepam. For constipation: increase fluid intake, increase dietary fiber (fruits, vegetables, whole grains); may try over-the-counter docusate or Metamucil; contact office if no improvement in a couple of weeks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Clonazepam may be considered if melatonin is insufficient."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F080",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": "3",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D level."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order a vitamin D level."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Investigations: CBC, CMP, vitamin D level, and lipid panel ordered; fasting for about eight hours is required for the lipid panel, with a morning visit before breakfast suggested."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Add entacapone 200 mg, to be taken with each dose of carbidopa-levodopa (four times daily); prescription to be sent to pharmacy today. Continue carbidopa-levodopa 25-100 mg four times daily. Continue atorvastatin 20 mg at night. Continue lisinopril 10 mg in the morning. Continue multivitamin and vitamin D. Continue melatonin 3 mg for sleep; may increase dose if needed before considering clonazepam. For constipation: increase fluid intake, increase dietary fiber (fruits, vegetables, whole grains); may try over-the-counter docusate or Metamucil; contact office if no improvement in a couple of weeks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D level."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F084",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "unit": "1/6",
+            "value": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Order vitamin D level",
+      "canonical_anchor": "instruct.order.order_vitamin_d_level.planned",
+      "kind": "instruct",
+      "subtype": "order",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.order_vitamin_d_level",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D level."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.order_a_vitamin_d_level",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order a vitamin D level."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.order_vitamin_d_level",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D level."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F085",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Order lipid panel",
+      "canonical_anchor": "instruct.order.order_lipid_panel.planned",
+      "kind": "instruct",
+      "subtype": "order",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "order lipid panel",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.order_lipid_panel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order lipid panel."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.order_a_lipid_panel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order a lipid panel."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.order_lipid_panel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order lipid panel."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F086",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Refer to physical therapy",
+      "canonical_anchor": "instruct.refer.refer_to_physical.present",
+      "kind": "instruct",
+      "subtype": "refer",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "refer to physical therapy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.refer_to_physical_therapy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer to physical therapy."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.refer_to_physical_therapy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer to physical therapy."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.refer_to_physical_therapy_for_big_therapy_targeting_large_amplitude_movement_gait_and_balance",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Refer to physical therapy for BIG therapy targeting large-amplitude movement, gait, and balance."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F089",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "docusate",
+      "canonical_anchor": "med.medication.docusate.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "docusate",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate was discussed as an over-the-counter option for constipation if needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Docusate or a fiber supplement such as Metamucil may be tried if fluid and dietary fiber are insufficient."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation management: Increase fluid intake; increase dietary fiber with fruits, vegetables, and whole grains; if insufficient, try an over-the-counter stool softener such as docusate or a fiber supplement such as Metamucil; call the office if there is no improvement in a couple of weeks."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Add entacapone 200 mg, to be taken with each dose of carbidopa-levodopa (four times daily); prescription to be sent to pharmacy today. Continue carbidopa-levodopa 25-100 mg four times daily. Continue atorvastatin 20 mg at night. Continue lisinopril 10 mg in the morning. Continue multivitamin and vitamin D. Continue melatonin 3 mg for sleep; may increase dose if needed before considering clonazepam. For constipation: increase fluid intake, increase dietary fiber (fruits, vegetables, whole grains); may try over-the-counter docusate or Metamucil; contact office if no improvement in a couple of weeks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.docusate",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "An over-the-counter stool softener such as docusate can be tried if needed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F092",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "symptom.gastrointestinal.constipation.worsened",
+      "kind": "symptom",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.recent_constipation_that_is_more_pronounced_than_usual",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports recent constipation that is more pronounced than usual."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.the_patient_prefers_to_try_increased_water_and_dietary_fiber_before_adding_medication_for_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient prefers to try increased water and dietary fiber before adding medication for constipation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.constipation_recently_worse_than_usual",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports constipation recently, worse than usual."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.increased_constipation_recently",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports increased constipation recently."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_constipation_is_more_than_usual",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The constipation is more than usual."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F121",
+        "support": "4/4",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    }
+  ]
+}

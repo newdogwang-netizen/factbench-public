@@ -1,0 +1,1952 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x015_syn",
+    "version": "1",
+    "sha256": "3fa630436ee35335e5eb6ba5d809d95b49746ba77fe51481dfcb4ce23eb3d654",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x015_syn",
+    "path": "case_x015_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 271,
+      "certain": 12,
+      "strict_certain": 12,
+      "low_conf": 22,
+      "unique": 237,
+      "unanimous": 15,
+      "low_support": 237
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 14,
+    "unstable_skipped": 18
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "insomnia / sleep difficulty",
+      "canonical_anchor": "symptom.sleep.insomnia.present",
+      "kind": "symptom",
+      "subtype": "sleep",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sleep difficulty",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.taking_zolpidem_10_mg_at_night_for_sleep_he_falls_asleep_okay_but_sometimes_wakes_in_the_middle_of_the_night_around_2_or_3_am_and_cannot_get_back_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking zolpidem 10 mg at night for sleep; he falls asleep okay but sometimes wakes in the middle of the night around 2 or 3 AM and cannot get back to sleep."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.zolpidem_helps_patient_fall_asleep_but_patient_wakes_up_around_2_or_3am_and_cannot_get_back_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Zolpidem helps patient fall asleep, but patient wakes up around 2 or 3am and cannot get back to sleep."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce zolpidem from 10mg to 5mg (half dose) by breaking the pill in half, to reduce fall risk and dizziness; taper rather than stop abruptly to avoid rebound insomnia"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.reduce_zolpidem_from_10mg_to_5mg_half_dose_by_breaking_the_pill_in_half_to_reduce_fall_risk_and_dizziness_taper_rather_than_stop_abruptly_to_avoid_rebound_insomnia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce zolpidem from 10mg to 5mg (half dose) by breaking the pill in half, to reduce fall risk and dizziness; taper rather than stop abruptly to avoid rebound insomnia."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "risk.if_zolpidem_at_half_dose_causes_severe_insomnia_after_three_or_four_nights_call_the_office",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If zolpidem at half dose causes severe insomnia after three or four nights, call the office."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_patient_sometimes_awakens_around_23_am_and_cannot_return_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes awakens around 2–3 AM and cannot return to sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient should call the office if severe sleep difficulty persists after three or four nights"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.the_patient_should_call_the_office_if_severe_sleep_difficulty_persists_after_three_or_four_nights",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient should call the office if severe sleep difficulty persists after three or four nights."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.patient_falls_asleep_okay_but_sometimes_wakes_up_around_2_or_3_am_and_cannot_get_back_to_sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient falls asleep okay but sometimes wakes up around 2 or 3 AM and cannot get back to sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Zolpidem to be tapered rather than stopped abruptly to avoid rebound insomnia"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "risk.call_the_office_if_sleep_remains_very_poor_after_three_or_four_nights_on_the_reduced_zolpidem_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call the office if sleep remains very poor after three or four nights on the reduced zolpidem dose."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_cannot_get_back_to_sleep_after_waking_around_2_or_3_am",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient cannot get back to sleep after waking around 2 or 3 AM."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.sleep_difficulty",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Abruptly stopping zolpidem can cause rebound insomnia"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "memory impairment",
+      "canonical_anchor": "symptom.cognition_memory.memory_impairment.present",
+      "kind": "symptom",
+      "subtype": "cognition_memory",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "memory impairment",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking donepezil for memory, prescribed by his neurologist about two years ago; he still forgets things (e.g., where he put his keys, what he had for breakfast), but his wife says it is better than before."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.patient_has_memory_issues_managed_by_a_neurologist",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has memory issues managed by a neurologist."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memory impairment (on donepezil and memantine; donepezil prescribed by neurologist approximately two years ago)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.memory_impairment_on_donepezil_and_memantine_donepezil_prescribed_by_neurologist_approximately_two_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memory impairment (on donepezil and memantine; donepezil prescribed by neurologist approximately two years ago)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has memory impairment treated by a neurologist."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.the_patient_has_memory_impairment_treated_by_a_neurologist",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has memory impairment treated by a neurologist."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memory problems, treated by a neurologist who started donepezil approximately two years ago."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memory condition being treated with donepezil (started approximately two years ago by neurologist) and memantine."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.memory_condition_being_treated_with_donepezil_started_approximately_two_years_ago_by_neurologist_and_memantine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memory condition being treated with donepezil (started approximately two years ago by neurologist) and memantine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.memory_impairment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has memory problems."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_patient_has_memory_problems",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has memory problems."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F005",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "memory impairment",
+      "canonical_anchor": "symptom.cognition_memory.memory_impairment.improved",
+      "kind": "symptom",
+      "subtype": "cognition_memory",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "memory impairment",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.taking_donepezil_for_memory_prescribed_by_his_neurologist_about_two_years_ago_he_still_forgets_things_e_g_where_he_put_his_keys_what_he_had_for_breakfast_but_his_wife_says_it_is_better_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking donepezil for memory, prescribed by his neurologist about two years ago; he still forgets things (e.g., where he put his keys, what he had for breakfast), but his wife says it is better than before."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.his_memory_is_better_than_before_starting_donepezil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's wife reports his memory is better than before starting donepezil."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.his_memory_is_better_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's wife reports his memory is better than before."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.memory_is_better_than_before_donepezil_was_started",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's wife reports memory is better than before donepezil was started."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.the_patient_s_wife_believes_memory_is_better_than_before_treatment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's wife believes memory is better than before treatment."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": null,
+        "unit": null,
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking atorvastatin at night for cholesterol for about 10 years, with no muscle aches or pains out of the ordinary."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin, at night (for cholesterol)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin is taken at night for cholesterol."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin, taken at night."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin, taken at night, for cholesterol (approximately 10 years)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin at night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking atorvastatin at night for cholesterol for about 10 years, with no muscle aches or pains out of the ordinary."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies chest pain or pressure associated with shortness of breath."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports no associated chest pain or pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no muscle aches or pains out of the ordinary on atorvastatin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Denies chest pain or pressure associated with shortness of breath."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports no chest pain with the shortness of breath."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "aspirin",
+      "canonical_anchor": "med.medication.aspirin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "aspirin",
+        "value": "81",
+        "unit": "mg",
+        "time": "every morning",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.aspirin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking aspirin 81 mg every morning with food, with no stomach upset."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.aspirin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aspirin 81mg, every morning with food (for heart)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.aspirin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aspirin 81 mg is taken every morning with food."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.aspirin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aspirin 81 mg, taken every morning with his other pills and with food."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.aspirin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aspirin 81 mg, taken every morning with other pills."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.aspirin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aspirin 81 mg every morning with food."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking metoprolol twice daily (morning and night) for blood pressure and heart; home blood pressure readings are around 120/70"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.taking_metoprolol_twice_daily_morning_and_night_for_blood_pressure_and_heart_home_blood_pressure_readings_are_around_120_70",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports taking metoprolol twice daily (morning and night) for blood pressure and heart; home blood pressure readings are around 120/70."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "High blood pressure (on metoprolol)"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has a history of blood pressure treatment"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's home blood pressure readings are around 120/70"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.patient_s_home_blood_pressure_readings_are_around_120_70",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient's home blood pressure readings are around 120/70."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension (treated with metoprolol)"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hypertension_treated_with_metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension (treated with metoprolol)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's home blood pressure readings are around 120 over 70"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_s_home_blood_pressure_readings_are_around_120_over_70",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's home blood pressure readings are around 120 over 70."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "1/6",
+            "polarity": "6/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Zolpidem",
+      "canonical_anchor": "med.medication.zolpidem.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "zolpidem",
+        "value": "10",
+        "unit": "mg",
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.zolpidem",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Zolpidem 10 mg, one pill at night for sleep."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.zolpidem",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Zolpidem 10mg, one pill at night (for sleep)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.zolpidem",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Zolpidem 10 mg is taken as one tablet nightly for sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.zolpidem",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Zolpidem 10 mg, one pill at night before bed."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.zolpidem",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Zolpidem 10 mg, one tablet at night, for sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.zolpidem",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Zolpidem 10 mg one pill at night before bed."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "5/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Donepezil",
+      "canonical_anchor": "med.medication.donepezil.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "donepezil",
+        "value": null,
+        "unit": null,
+        "time": "every night",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.donepezil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Donepezil, taken every night with dinner for memory."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.donepezil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Donepezil, every night with dinner (for memory)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.donepezil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Donepezil is taken nightly with dinner for memory."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.donepezil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Donepezil, taken every night with dinner."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.donepezil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Donepezil, taken every night with dinner, for memory (started approximately two years ago by neurologist)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.donepezil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Donepezil every night with dinner."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Memantine",
+      "canonical_anchor": "med.medication.memantine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "memantine",
+        "value": null,
+        "unit": null,
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.memantine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memantine, taken twice a day (morning and night) for memory."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.memantine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memantine, twice a day, morning and night (for memory)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.memantine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memantine is taken twice daily in the morning and at night for memory."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.memantine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memantine, taken twice a day (morning and night)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.memantine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memantine, twice daily (morning and night), for memory."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.memantine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Memantine twice daily, morning and night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Furosemide",
+      "canonical_anchor": "med.medication.furosemide.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "furosemide",
+        "value": "40",
+        "unit": "mg",
+        "time": "morning",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide, taken in the morning for swelling."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40mg, in the morning (for swelling)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40 mg is taken in the morning for swelling."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40 mg, taken in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40 mg, taken in the morning, for swelling."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40 mg in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Spironolactone",
+      "canonical_anchor": "med.medication.spironolactone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "spironolactone",
+        "value": null,
+        "unit": null,
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone, taken once a day in the morning for heart failure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone, once a day in the morning (for heart failure)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone is taken once daily in the morning for heart failure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone, taken once a day in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone, once daily in the morning, for heart failure (prescribed by cardiologist)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Metoprolol",
+      "canonical_anchor": "med.medication.metoprolol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metoprolol",
+        "value": null,
+        "unit": null,
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol, taken twice a day (morning and night) for blood pressure and heart."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol, twice a day, morning and night (for blood pressure and heart)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol is taken twice daily in the morning and at night for blood pressure and the heart."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol, taken twice a day (morning and night)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol, twice daily (morning and night), for blood pressure and heart."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metoprolol twice daily, morning and night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "dizziness and giddiness",
+      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.present",
+      "kind": "diagnosis",
+      "subtype": "neuro_vestibular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Insight: Patient recognizes that the dizziness scared him and that he does not want to fall, acknowledging that falling is bad"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.fall_risk_identified_due_to_near_fall_last_week_with_nocturnal_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fall risk identified due to near fall last week with nocturnal dizziness."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient experienced dizziness and a mild spinning sensation after standing"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.dizziness_and_a_mild_spinning_sensation_after_standing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient experienced dizziness and a mild spinning sensation after standing."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no dizziness with spironolactone"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.no_dizziness_with_spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no dizziness with spironolactone."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reports occasional dizziness when turning quickly or bending down to pick something up"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.occasional_dizziness_when_turning_quickly_or_bending_down_to_pick_something_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reports occasional dizziness when turning quickly or bending down to pick something up."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.reduce_zolpidem_from_10_mg_to_5_mg_half_tablet_at_night_reassess_sleep_and_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce zolpidem from 10 mg to 5 mg (half tablet) at night; reassess sleep and dizziness."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The dizziness with turning or bending lasts for a second"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_dizziness_with_turning_or_bending_lasts_for_a_second",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The dizziness with turning or bending lasts for a second."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F038",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "5/6"
+          }
+        }
+      }
+    }
+  ]
+}

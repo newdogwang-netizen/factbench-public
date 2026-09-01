@@ -1,0 +1,2647 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x026_syn",
+    "version": "1",
+    "sha256": "bf045a294c191d2f6e1e726c5559b7920634ced01120f44b604e46c8022f4159",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x026_syn",
+    "path": "case_x026_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 205,
+      "certain": 14,
+      "strict_certain": 14,
+      "low_conf": 23,
+      "unique": 168,
+      "unanimous": 17,
+      "low_support": 168
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 21,
+    "unstable_skipped": 12
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no chest pain or pressure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No chest pain or pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported no chest pain."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies chest pain."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies chest pain or pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Denies chest pain or pressure."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Heart failure",
+      "canonical_anchor": "diagnosis.heart.heart_failure.present",
+      "kind": "diagnosis",
+      "subtype": "heart",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "heart failure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.heart_failure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heart failure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.heart_failure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heart failure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.heart_failure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heart failure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.heart_failure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heart failure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.heart_failure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heart failure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.heart_failure_chronic_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Heart failure (chronic condition)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "type 2 dm without complications",
+      "canonical_anchor": "diagnosis.type.type_complication.present",
+      "kind": "diagnosis",
+      "subtype": "type",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes mellitus"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes mellitus"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.type_2_dm_without_complications",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 2 diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F008",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Atrial fibrillation",
+      "canonical_anchor": "diagnosis.atrial.atrial_fibrillation.present",
+      "kind": "diagnosis",
+      "subtype": "atrial",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "atrial fibrillation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.atrial_fibrillation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atrial fibrillation."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.atrial_fibrillation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atrial fibrillation."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.atrial_fibrillation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atrial fibrillation."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.atrial_fibrillation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atrial fibrillation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.atrial_fibrillation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atrial fibrillation."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.atrial_fibrillation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atrial fibrillation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Bisoprolol",
+      "canonical_anchor": "med.medication.bisoprolol.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "bisoprolol",
+        "value": "5",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.bisoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bisoprolol 5 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.bisoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bisoprolol 5 mg once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.bisoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bisoprolol 5 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.bisoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bisoprolol 5 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.bisoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bisoprolol 5 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.bisoprolol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bisoprolol 5 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Spironolactone",
+      "canonical_anchor": "med.medication.spironolactone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "spironolactone",
+        "value": "25",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone 25 mg once daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone 25 mg once daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone 25 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone 25 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone 25 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.spironolactone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Spironolactone 25 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Furosemide",
+      "canonical_anchor": "med.medication.furosemide.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "furosemide",
+        "value": "40",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40 mg twice daily (morning and evening)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide was being taken at 40 mg twice daily before today’s dose reduction."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40 mg twice daily (morning and evening)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.furosemide",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Furosemide 40 mg twice daily (morning and evening)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "5/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "1000",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice a day."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 1000 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "40",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 40 mg."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 40 mg."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 40 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 40 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 40 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 40 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "apixaban",
+      "canonical_anchor": "med.medication.apixaban.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "apixaban",
+        "value": "5",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.apixaban",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Apixaban 5 mg twice a day."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.apixaban",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Apixaban 5 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.apixaban",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Apixaban 5 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.apixaban",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Apixaban 5 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.apixaban",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Apixaban 5 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.apixaban",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Apixaban 5 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Father had a heart attack in his 60s",
+      "canonical_anchor": "famhist.famhist.father_heart_attack_in_his.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "father had a heart attack in his 60s",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.father_had_a_heart_attack_in_his_60s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had a heart attack in his 60s."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_had_a_heart_attack_in_his_60s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had a heart attack in his 60s."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_had_a_heart_attack_in_his_60s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had a heart attack in his 60s."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.father_had_heart_disease_and_a_heart_attack_in_his_60s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had heart disease and a heart attack in his 60s."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_father_had_a_heart_attack_in_his_60s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father had a heart attack in his 60s."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k3",
+          "minimax-m3",
+          "glm-5p2",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Father had diabetes",
+      "canonical_anchor": "famhist.famhist.father_diabete.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "father had diabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.father_had_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had diabetes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.father_had_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had diabetes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patients_father_had_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s father had diabetes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_had_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had diabetes."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_had_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had diabetes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_father_had_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father had diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.patient_advised_to_check_blood_pressure_at_home_a_few_times_a_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to check blood pressure at home a few times a week."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "On exam: heart rate 64, blood pressure 118/72, lungs clear, no significant leg edema, jugular venous pressure normal"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.check_blood_pressure_at_home_a_few_times_a_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Check blood pressure at home a few times a week."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.the_patient_s_mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.check_blood_pressure_a_few_times_a_week_at_home",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Check blood pressure a few times a week at home."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s mother has high blood pressure"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patients_mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s mother has high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.check_blood_pressure_at_home_at_least_a_few_times_weekly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Check blood pressure at home at least a few times weekly."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has a home blood pressure machine but does not always check it"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.a_home_blood_pressure_machine_but_does_not_always_check_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has a home blood pressure machine but does not always check it."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.check_blood_pressure_a_few_times_per_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Check blood pressure a few times per week."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.instruct_patient_to_check_blood_pressure_at_home_a_few_times_a_week",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Instruct patient to check blood pressure at home a few times a week."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Reduce furosemide from 40 mg twice daily to 40 mg once daily",
+      "canonical_anchor": "instruct.reduce.reduce_furosemide_from_to.present",
+      "kind": "instruct",
+      "subtype": "reduce",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "reduce furosemide from 40 mg twice daily to 40 mg once daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.reduce_furosemide_dose_from_40_mg_twice_daily_to_40_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce furosemide dose from 40 mg twice daily to 40 mg once daily in the morning."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.reduce_furosemide_from_40_mg_twice_daily_to_40_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce furosemide from 40 mg twice daily to 40 mg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.reduce_furosemide_from_40_mg_twice_daily_to_40_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce furosemide from 40 mg twice daily to 40 mg once daily in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.reduce_furosemide_from_40_mg_twice_daily_to_40_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce furosemide from 40 mg twice daily to 40 mg once daily in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.reduce_furosemide_from_40_mg_twice_daily_to_40_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce furosemide from 40 mg twice daily to 40 mg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.reduce_furosemide_to_40_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce furosemide to 40 mg once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to avoid ACE inhibitors (e.g., lisinopril, enalapril) while on sacubatril-valsartan."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid ACE inhibitors (e.g., lisinopril, enalapril) while on sacubitril-valsartan."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised not to take an ACE inhibitor such as lisinopril or enalapril with sacubitril-valsartan."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Do not take an ACE inhibitor such as lisinopril or enalapril concurrently with sacubitril-valsartan."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient counseled not to take an ACE inhibitor (e.g., lisinopril, enalapril) while on sacubatril-valsartan."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Counsel patient to avoid ACE inhibitors (e.g., lisinopril, enalapril) while on sacubitril-valsartan and to inform any other doctor of this medication."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to avoid NSAIDs (e.g., ibuprofen, naproxen) and to use acetaminophen (Tylenol) for pain instead."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid NSAIDs (e.g., ibuprofen, naproxen); use acetaminophen for pain instead."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to avoid NSAIDs such as ibuprofen and naproxen."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid NSAIDs such as ibuprofen and naproxen because they may worsen heart failure and affect kidney function."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to avoid NSAIDs such as ibuprofen and naproxen because they can worsen heart failure and affect kidney function."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Counsel patient to avoid NSAIDs (e.g., ibuprofen, naproxen) due to risk of worsening heart failure and kidney function; recommend acetaminophen (Tylenol) for pain instead."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F036",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sleep",
+      "canonical_anchor": "demo.demo.sleep.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sleep",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is okay; wakes up once or twice to go to the bathroom."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is otherwise okay."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is okay; wakes up once or twice to use the bathroom."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F046",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sometimes takes ibuprofen for headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has sometimes used ibuprofen for headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occasional headaches, for which the patient sometimes takes ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F052",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sometimes takes ibuprofen for headaches",
+      "canonical_anchor": "symptom.symptom.sometime_take_ibuprofen_for_headache.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.sometimes_takes_ibuprofen_for_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sometimes takes ibuprofen for headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.sometimes_used_ibuprofen_for_headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has sometimes used ibuprofen for headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.occasional_headaches_for_which_the_patient_sometimes_takes_ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occasional headaches, for which the patient sometimes takes ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F053",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sacubitril-valsartan",
+      "canonical_anchor": "med.medication.sacubitril_valsartan.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sacubitril-valsartan",
+        "value": null,
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.sacubitril_valsartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sacubitril-valsartan (Entresto) 49-51 mg twice daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.sacubitril_valsartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sacubitril-valsartan 49 mg-51 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sacubitril_valsartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sacubitril-valsartan 49-51 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sacubitril_valsartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sacubitril-valsartan (Entresto) 49-51 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F058",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6",
+            "time": "4/6",
+            "unit": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue spironolactone 25 mg once daily",
+      "canonical_anchor": "instruct.continue.continue_spironolactone.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue spironolactone 25 mg once daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_spironolactone_25_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue spironolactone 25 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_spironolactone_25_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue spironolactone 25 mg once daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_spironolactone_25_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue spironolactone 25 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F133",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

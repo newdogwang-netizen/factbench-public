@@ -6,41 +6,41 @@
    "file": "gpt-5.5__2026-09-01.json",
    "tasks": 25,
    "pass_rate": 1.0,
-   "mean_coverage": 0.6213,
+   "mean_coverage": 0.7731,
    "coverage_ci95": [
-    0.586,
-    0.6562
+    0.7323,
+    0.814
    ],
    "critical_wrong": 0,
-   "frame_disputes": 16,
+   "frame_disputes": 7,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
-   "safety_flags": 1,
-   "benchmark_version": "1.0.0",
+   "safety_flags": 2,
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "e6b3e5191516c4b2",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "70d036c677a17816",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
-   "label": "gpt-5.2",
+   "label": "claude-opus-5",
    "date": "2026-09-01",
-   "file": "gpt-5.2__2026-09-01.json",
+   "file": "claude-opus-5__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.92,
-   "mean_coverage": 0.5442,
+   "pass_rate": 0.96,
+   "mean_coverage": 0.7501,
    "coverage_ci95": [
-    0.4976,
-    0.5907
+    0.67,
+    0.8165
    ],
    "critical_wrong": 0,
-   "frame_disputes": 12,
+   "frame_disputes": 5,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
-   "safety_flags": 1,
-   "benchmark_version": "1.0.0",
+   "safety_flags": 0,
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "2f905e510488af62",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "90e6d6312603f817",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
    "label": "reference-notes",
@@ -48,125 +48,104 @@
    "file": "reference-notes__2026-09-01.json",
    "tasks": 25,
    "pass_rate": 1.0,
-   "mean_coverage": 0.5029,
+   "mean_coverage": 0.7201,
    "coverage_ci95": [
-    0.4673,
-    0.5381
+    0.6788,
+    0.762
    ],
    "critical_wrong": 0,
-   "frame_disputes": 0,
-   "adjudicated_crit": null,
-   "crit_kind": "confirmed",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
+   "frame_disputes": 5,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 1,
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "4f1d4b87ada2c51e",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "2250674e1fe9fcf7",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+  },
+  {
+   "label": "claude-sonnet-5",
+   "date": "2026-09-01",
+   "file": "claude-sonnet-5__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.96,
+   "mean_coverage": 0.674,
+   "coverage_ci95": [
+    0.6284,
+    0.7197
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 4,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "2.2.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "0826db74d5a3dd49",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
    "label": "minimax-m3",
    "date": "2026-09-01",
    "file": "minimax-m3__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.92,
-   "mean_coverage": 0.4524,
+   "pass_rate": 0.96,
+   "mean_coverage": 0.6653,
    "coverage_ci95": [
-    0.4185,
-    0.4865
+    0.6136,
+    0.7149
    ],
    "critical_wrong": 0,
-   "frame_disputes": 13,
+   "frame_disputes": 4,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
-   "safety_flags": 6,
-   "benchmark_version": "1.0.0",
+   "safety_flags": 1,
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "50260538fe788e04",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "b7f7d272580f5763",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+  },
+  {
+   "label": "gpt-5.2",
+   "date": "2026-09-01",
+   "file": "gpt-5.2__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.84,
+   "mean_coverage": 0.6345,
+   "coverage_ci95": [
+    0.5797,
+    0.6906
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 4,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "2.2.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "c11a3de16253122d",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
    "label": "gemini-2.5-flash-lite",
    "date": "2026-09-01",
    "file": "gemini-2.5-flash-lite__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.76,
-   "mean_coverage": 0.4329,
+   "pass_rate": 0.8,
+   "mean_coverage": 0.6146,
    "coverage_ci95": [
-    0.3933,
-    0.4762
+    0.5515,
+    0.6771
    ],
    "critical_wrong": 0,
-   "frame_disputes": 7,
+   "frame_disputes": 4,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
-   "benchmark_version": "1.0.0",
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "fb8e412e1aff3aa2",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
-  },
-  {
-   "label": "glm-v3",
-   "date": "2026-09-01",
-   "file": "glm-v3__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.72,
-   "mean_coverage": 0.4287,
-   "coverage_ci95": [
-    0.381,
-    0.4738
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 7,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "d7772572405401e6",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
-  },
-  {
-   "label": "grok-4.6",
-   "date": "2026-09-01",
-   "file": "grok-4.6__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.72,
-   "mean_coverage": 0.4219,
-   "coverage_ci95": [
-    0.3689,
-    0.4705
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 6,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "b9780935679b22c1",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
-  },
-  {
-   "label": "dsv3-opus4p5-52k-pe",
-   "date": "2026-09-01",
-   "file": "dsv3-opus4p5-52k-pe__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.72,
-   "mean_coverage": 0.4074,
-   "coverage_ci95": [
-    0.3711,
-    0.4439
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 12,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 4,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "a34c246ab3f7de5c",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "74522e2baabd26f1",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
    "label": "gpt-4.1",
@@ -174,188 +153,188 @@
    "file": "gpt-4.1__2026-09-01.json",
    "tasks": 25,
    "pass_rate": 0.76,
-   "mean_coverage": 0.3872,
+   "mean_coverage": 0.6126,
    "coverage_ci95": [
-    0.3503,
-    0.4191
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 7,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "74660cd73212d18c",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
-  },
-  {
-   "label": "diffusiongemma-26b",
-   "date": "2026-09-01",
-   "file": "diffusiongemma-26b__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.64,
-   "mean_coverage": 0.3807,
-   "coverage_ci95": [
-    0.3414,
-    0.4223
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 5,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "62913be855bfc1cd",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
-  },
-  {
-   "label": "claude-haiku-4.5",
-   "date": "2026-09-01",
-   "file": "claude-haiku-4.5__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.52,
-   "mean_coverage": 0.3599,
-   "coverage_ci95": [
-    0.3153,
-    0.4013
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 10,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 2,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "74ba713d77ed7294",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
-  },
-  {
-   "label": "o4-mini",
-   "date": "2026-09-01",
-   "file": "o4-mini__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.44,
-   "mean_coverage": 0.33,
-   "coverage_ci95": [
-    0.2897,
-    0.3683
+    0.5479,
+    0.6821
    ],
    "critical_wrong": 0,
    "frame_disputes": 2,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
-   "benchmark_version": "1.0.0",
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "7512dc95a0055040",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "6e8dce1a39d52725",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
-   "label": "o3",
+   "label": "glm-v3",
    "date": "2026-09-01",
-   "file": "o3__2026-09-01.json",
+   "file": "glm-v3__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.4,
-   "mean_coverage": 0.3201,
+   "pass_rate": 0.92,
+   "mean_coverage": 0.6008,
    "coverage_ci95": [
-    0.2783,
-    0.3636
+    0.5517,
+    0.6466
    ],
    "critical_wrong": 0,
-   "frame_disputes": 9,
+   "frame_disputes": 1,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
-   "benchmark_version": "1.0.0",
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "8f0fef77b774306f",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "f76fde2ef472d4c2",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
-   "label": "gemini-3.5-flash-lite",
+   "label": "grok-4.6",
    "date": "2026-09-01",
-   "file": "gemini-3.5-flash-lite__2026-09-01.json",
+   "file": "grok-4.6__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.44,
-   "mean_coverage": 0.3176,
+   "pass_rate": 0.8,
+   "mean_coverage": 0.5801,
    "coverage_ci95": [
-    0.2686,
-    0.3619
+    0.5019,
+    0.652
    ],
    "critical_wrong": 0,
-   "frame_disputes": 5,
+   "frame_disputes": 6,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
-   "benchmark_version": "1.0.0",
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "099b02cefecc8c69",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "cedf57470e3cb160",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+  },
+  {
+   "label": "dsv3-opus4p5-52k-pe",
+   "date": "2026-09-01",
+   "file": "dsv3-opus4p5-52k-pe__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.68,
+   "mean_coverage": 0.5606,
+   "coverage_ci95": [
+    0.5004,
+    0.6271
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 1,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 3,
+   "benchmark_version": "2.2.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "474093d2b1a2822b",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
    "label": "gemini-3.1-flash-lite",
    "date": "2026-09-01",
    "file": "gemini-3.1-flash-lite__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.28,
-   "mean_coverage": 0.3051,
+   "pass_rate": 0.76,
+   "mean_coverage": 0.5346,
    "coverage_ci95": [
-    0.2659,
-    0.3454
+    0.4816,
+    0.5861
    ],
    "critical_wrong": 0,
-   "frame_disputes": 3,
+   "frame_disputes": 2,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
-   "safety_flags": 2,
-   "benchmark_version": "1.0.0",
+   "safety_flags": 0,
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "4ccf8320946e652a",
-   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+   "summary_sha256": "50418dcd2f697bcb",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
-   "label": "claude-opus-5",
+   "label": "claude-haiku-4.5",
    "date": "2026-09-01",
-   "file": "claude-opus-5__2026-09-01.json",
+   "file": "claude-haiku-4.5__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 1.0,
-   "mean_coverage": 0.5664,
+   "pass_rate": 0.64,
+   "mean_coverage": 0.5318,
    "coverage_ci95": [
-    0.5352,
-    0.6
+    0.4722,
+    0.5965
    ],
    "critical_wrong": 0,
-   "frame_disputes": 13,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 3,
-   "benchmark_version": "1.0.0",
+   "frame_disputes": 0,
+   "adjudicated_crit": null,
+   "crit_kind": "confirmed",
+   "safety_flags": 0,
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "ddbe541c46e4cc4c",
-   "note": ""
+   "summary_sha256": "322d572ff09981d9",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   },
   {
-   "label": "claude-sonnet-5",
+   "label": "gemini-3.5-flash-lite",
    "date": "2026-09-01",
-   "file": "claude-sonnet-5__2026-09-01.json",
+   "file": "gemini-3.5-flash-lite__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.92,
-   "mean_coverage": 0.4842,
+   "pass_rate": 0.64,
+   "mean_coverage": 0.5134,
    "coverage_ci95": [
-    0.4405,
-    0.5291
+    0.4541,
+    0.5796
    ],
    "critical_wrong": 0,
-   "frame_disputes": 16,
+   "frame_disputes": 4,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
-   "safety_flags": 4,
-   "benchmark_version": "1.0.0",
+   "safety_flags": 0,
+   "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "e22413d6a49164b6",
-   "note": ""
+   "summary_sha256": "4b5f3fe2ffcb6bde",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+  },
+  {
+   "label": "o4-mini",
+   "date": "2026-09-01",
+   "file": "o4-mini__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.64,
+   "mean_coverage": 0.5014,
+   "coverage_ci95": [
+    0.454,
+    0.5476
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 2,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "2.2.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "6194acf34a5121df",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+  },
+  {
+   "label": "o3",
+   "date": "2026-09-01",
+   "file": "o3__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.68,
+   "mean_coverage": 0.4967,
+   "coverage_ci95": [
+    0.4502,
+    0.5462
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 4,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "2.2.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "888b1ea3f8dbfe7b",
+   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
   }
  ]
 }

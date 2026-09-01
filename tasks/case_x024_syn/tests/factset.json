@@ -1,0 +1,3025 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x024_syn",
+    "version": "1",
+    "sha256": "887a5e149f3493181fa4b79240bd4f251719de944d9b5b84ef57e01abcec3df9",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x024_syn",
+    "path": "case_x024_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 294,
+      "certain": 12,
+      "strict_certain": 12,
+      "low_conf": 43,
+      "unique": 239,
+      "unanimous": 16,
+      "low_support": 239
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 26,
+    "unstable_skipped": 24
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "clonazepam",
+      "canonical_anchor": "med.medication.clonazepam.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "clonazepam",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient stopped taking clonazepam a few weeks ago and reports feeling good, using meditation and breathing exercises instead."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient stopped clonazepam a few weeks ago."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient stopped clonazepam several weeks ago."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient stopped clonazepam a few weeks ago and reports feeling good without it."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Clonazepam discontinued a few weeks ago."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Clonazepam was stopped a few weeks ago."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "insulin",
+      "canonical_anchor": "med.medication.insulin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "insulin",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Type 1 diabetes on insulin pump."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Basal insulin was about 22 to 23 units daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Average total daily insulin dose is approximately 45 units."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Total daily insulin dose approximately 45 units, up to 48 units on days when the patient eats more."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Total daily insulin dose approximately 45 to 48 units."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Total daily insulin dose was about 45 units, and about 48 units on days when the patient eats more."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_high_blood_pressure_high_cholesterol_and_hashimoto_s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure, high cholesterol, and Hashimoto's."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was prescribed for kidney protection and mildly elevated blood pressure"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_mother_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has hypertension."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_hypertension_hypercholesterolemia_and_hashimoto_s_thyroiditis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: hypertension, hypercholesterolemia, and Hashimoto's thyroiditis."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.home_blood_pressure_monitoring_approximately_once_weekly_typically_around_120_70s",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Home blood pressure monitoring approximately once weekly, typically around 120/70s."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.vital_signs_today_blood_pressure_118_74_mmhg_heart_rate_72_bpm_weight_152_pounds_bmi_23_8",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vital signs today: blood pressure 118/74 mmHg; heart rate 72 bpm; weight 152 pounds; BMI 23.8."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient stated the primary care clinician wanted lisinopril due to diabetes and mildly high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.patient_stated_the_primary_care_clinician_wanted_lisinopril_due_to_diabetes_and_mildly_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient stated the primary care clinician wanted lisinopril due to diabetes and mildly high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient checks blood pressure at home about once a week; it is usually around 120 over seventy-something"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.patient_checks_blood_pressure_at_home_about_once_a_week_it_is_usually_around_120_over_seventy_something",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient checks blood pressure at home about once a week; it is usually around 120 over seventy-something."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_high_blood_pressure_and_high_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has high blood pressure and high cholesterol."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported blood pressure had been a little high"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_high_blood_pressure_and_cholesterol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has high blood pressure and cholesterol."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "3/6",
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.present.after_clonazepam_stop",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "History of anxiety, previously treated with clonazepam; patient discontinued it a few weeks ago with primary care doctor's approval"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.history_of_anxiety_previously_treated_with_clonazepam_patient_discontinued_it_a_few_weeks_ago_with_primary_care_doctor_s_approval",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "History of anxiety, previously treated with clonazepam; patient discontinued it a few weeks ago with primary care doctor's approval."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient had previously been taking clonazepam for anxiety"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.previously_been_taking_clonazepam_for_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient had previously been taking clonazepam for anxiety."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety was previously treated with clonazepam."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has a history of anxiety"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_practices_meditation_for_anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient practices meditation for anxiety."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety, previously treated with clonazepam"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports stopping clonazepam a few weeks ago and managing anxiety with meditation and breathing exercises"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.stopping_clonazepam_a_few_weeks_ago_and_managing_anxiety_with_meditation_and_breathing_exercises",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports stopping clonazepam a few weeks ago and managing anxiety with meditation and breathing exercises."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has a history of anxiety"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "clonazepam",
+      "canonical_anchor": "med.medication.clonazepam.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "clonazepam",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "History of anxiety, previously treated with clonazepam; patient discontinued it a few weeks ago with primary care doctor's approval."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient had previously been taking clonazepam for anxiety."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety, previously treated with clonazepam."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.clonazepam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was previously treated with clonazepam for anxiety."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "100",
+        "unit": "mcg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 100 micrograms."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was still on levothyroxine 100 micrograms."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine is taken at 100 micrograms."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 100 micrograms."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 100 mcg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 100 micrograms."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril is taken at 10 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 milligrams."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F024",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin is taken at 20 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 milligrams."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Brother",
+      "canonical_anchor": "demo.demo.brother.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "brother",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.brother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother is healthy."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.brother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother is healthy."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.brother",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Brother is healthy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "100",
+        "unit": "mcg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continuing all current medications: Novolog in pump, levothyroxine, lisinopril, atorvastatin."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 100 micrograms."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Novolog via insulin pump, levothyroxine, lisinopril, and atorvastatin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 100 mcg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F043",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "2/6",
+            "value": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continuing all current medications: Novolog in pump, levothyroxine, lisinopril, atorvastatin."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Novolog via insulin pump, levothyroxine, lisinopril, and atorvastatin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F044",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "2/6",
+            "value": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continuing all current medications: Novolog in pump, levothyroxine, lisinopril, atorvastatin."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Novolog via insulin pump, levothyroxine, lisinopril, and atorvastatin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F045",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "2/6",
+            "value": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ordering labs: CBC, CMP, A1C, TSH, free T4, lipid panel, urine microalbumin, vitamin D, and C-peptide."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitamin D level was ordered."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order a vitamin D level."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Planned investigations: CBC, CMP, A1C, TSH, free T4, lipid panel, urine microalbumin, vitamin D level, and C-peptide to document type 1 status."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D level (previously low, not followed up)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F047",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "more energy and feeling more clearheaded",
+      "canonical_anchor": "symptom.symptom.more_energy_and_more_clearheaded.worsened",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "more energy and feeling more clearheaded",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.more_energy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported more energy."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.more_energy_and_feeling_more_clearheaded",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports more energy and feeling more clearheaded."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.more_energy_and_feeling_more_clearheaded",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported more energy and feeling more clearheaded."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F052",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "GMI",
+      "canonical_anchor": "demo.demo.gmi.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "gmi",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.gmi",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "GMI was 7.1."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.prior_gmi",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prior GMI was 8.2."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.gmi",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "GMI is 7.1, down from 8.2."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.gmi",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "GMI was 7.1, down from 8.2."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F058",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue levothyroxine",
+      "canonical_anchor": "instruct.continue.continue_levothyroxine.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_levothyroxine_100_micrograms",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 100 micrograms."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_levothyroxine_100_mcg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 100 mcg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_novolog_via_insulin_pump_levothyroxine_lisinopril_and_atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Novolog via insulin pump, levothyroxine, lisinopril, and atorvastatin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F145",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue lisinopril",
+      "canonical_anchor": "instruct.continue.continue_lisinopril.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_lisinopril_10_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_lisinopril_10_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F146",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue atorvastatin",
+      "canonical_anchor": "instruct.continue.continue_atorvastatin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "atorvastatin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_atorvastatin_20_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_atorvastatin_20_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F147",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "insulin",
+      "canonical_anchor": "med.medication.insulin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "insulin",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Total daily insulin dose may increase to approximately 48 units on days with greater food intake."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Novolog via insulin pump, levothyroxine, lisinopril, and atorvastatin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue current insulin pump settings (basal rates unchanged)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.insulin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Novolog in the insulin pump."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F185",
+        "support": "4/4",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6",
+            "time": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient's mother has Hashimoto's disease",
+      "canonical_anchor": "famhist.famhist.s_mother_hashimoto_s_disease.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient' mother has hashimoto' disease",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_mother_has_hashimoto_s_disease",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has Hashimoto's disease."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_hashimoto_s_disease",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has Hashimoto's disease."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_hashimoto_s_disease_per_patient",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has Hashimoto's disease, per patient."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F190",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient usually sleeps six to seven hours",
+      "canonical_anchor": "sochist.sochist.usually_sleep_six_to_seven.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient usually sleep six to seven hour",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_usually_sleeps_six_to_seven_hours",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient usually sleeps six to seven hours."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_usually_sleeps_six_to_seven_hours",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient usually sleeps six to seven hours."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.sleep_approximately_six_to_seven_hours_per_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep approximately six to seven hours per night."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F193",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Order TSH",
+      "canonical_anchor": "instruct.order.order_tsh.planned",
+      "kind": "instruct",
+      "subtype": "order",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "order tsh",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.order_tsh",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order TSH."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.order_tsh",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order TSH."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.order_thyroid_stimulating_hormone_tsh_and_free_t4",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order thyroid-stimulating hormone (TSH) and free T4."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F215",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Order lipid panel",
+      "canonical_anchor": "instruct.order.order_lipid_panel.planned",
+      "kind": "instruct",
+      "subtype": "order",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "order lipid panel",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.order_a_lipid_panel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order a lipid panel."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.order_lipid_panel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order lipid panel."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.order_lipid_panel",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order lipid panel."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F217",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Order urine microalbumin",
+      "canonical_anchor": "instruct.order.order_urine_microalbumin.planned",
+      "kind": "instruct",
+      "subtype": "order",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "order urine microalbumin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.order_urine_microalbumin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order urine microalbumin."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.order_urine_microalbumin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order urine microalbumin."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.order_urine_microalbumin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order urine microalbumin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F218",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Order a vitamin D level",
+      "canonical_anchor": "instruct.order.order_vitamin_d_level.planned",
+      "kind": "instruct",
+      "subtype": "order",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.order_a_vitamin_d_level",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order a vitamin D level."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.order_vitamin_d_level_previously_low_not_followed_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D level (previously low, not followed up)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.order_vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F219",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Adjust breakfast carb ratio from 1:10 to 1:8",
+      "canonical_anchor": "instruct.adjust.adjust_breakfast_carb_ratio_from.present",
+      "kind": "instruct",
+      "subtype": "adjust",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "adjust breakfast carb ratio from 1:10 to 1:8",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "kimi-k3",
+          "key": "treatment.adjust_breakfast_carb_ratio_from_1_10_to_1_8",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Adjust breakfast carb ratio from 1:10 to 1:8."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.adjust_breakfast_carb_ratio_from_1_10_to_1_8",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Adjust breakfast carb ratio from 1:10 to 1:8."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.adjust_breakfast_carbohydrate_ratio_from_1_10_to_1_8",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Adjust breakfast carbohydrate ratio from 1:10 to 1:8."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F241",
+        "support": "3/3",
+        "models": [
+          "kimi-k3",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    }
+  ]
+}

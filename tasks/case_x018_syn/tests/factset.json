@@ -1,0 +1,1427 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x018_syn",
+    "version": "1",
+    "sha256": "a01110332b87619ea9b2493bdebd2e7a6e383991f68447e3a324bb1b8bbdd0b3",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x018_syn",
+    "path": "case_x018_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 97,
+      "certain": 3,
+      "strict_certain": 3,
+      "low_conf": 19,
+      "unique": 75,
+      "unanimous": 3,
+      "low_support": 75
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 13,
+    "unstable_skipped": 5
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports approximately 60% improvement in pain since the injection."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain has been better since the cervical epidural."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain has improved by approximately 60% since the injection."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports the pain is approximately 60% better since the cervical epidural injection."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports approximately 60% improvement in pain since the injection."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports the pain is about 60% better since the injection."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "demo.pain.pain.present",
+      "kind": "demo",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is not gone but is more manageable."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is still in the neck."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is now described as a dull ache rather than the previous sharp, burning pain."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is more manageable but not completely gone."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Numbness",
+      "canonical_anchor": "demo.demo.numbness.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "numbness",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly gone."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly gone."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly resolved."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly gone."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly gone."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F005",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Numbness is mostly gone",
+      "canonical_anchor": "symptom.symptom.numbness_mostly_gone.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "numbness is mostly gone",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.numbness_is_mostly_gone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly gone."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.numbness_is_mostly_gone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly gone."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.numbness_is_mostly_gone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly gone."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.numbness_is_mostly_gone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is mostly gone."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_numbness_is_mostly_gone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The numbness is mostly gone."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Pregabalin",
+      "canonical_anchor": "med.medication.pregabalin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "pregabalin",
+        "value": "75",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 75 mg twice a day, taken in the morning and at night around 8 or 9 PM."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 75 mg twice a day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 75 mg is taken twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 75 mg twice daily, taken in the morning and at night around 8 or 9."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 75 mg twice daily (taken in the morning and at night around 8–9 PM)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 75 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": "200",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 200 mg over-the-counter, taken one or two times per day depending on pain level; patient tries not to take more than two in a day."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes ibuprofen 200 mg tablets."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Over-the-counter ibuprofen 200 mg is taken as needed for pain."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 200 mg over-the-counter (regular strength), one to two tablets per day depending on pain; patient tries not to take more than two in a day."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen 200 mg (over-the-counter regular strength), 1–2 tablets per day as needed."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Over-the-counter ibuprofen 200 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Meloxicam",
+      "canonical_anchor": "demo.demo.meloxicam.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "meloxicam",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam was taken for about a week after the injection and then stopped, as the patient did not feel it was needed once the injection started working."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam was taken for approximately one week after the injection."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam was taken for approximately one week after the injection, then discontinued."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam was taken for about a week after the injection."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F011",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Meloxicam",
+      "canonical_anchor": "med.medication.meloxicam.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "meloxicam",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam was taken for about a week after the injection and then stopped, as the patient did not feel it was needed once the injection started working."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam was discontinued after the injection began providing relief."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam was taken for approximately one week after the injection, then discontinued."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue pregabalin 75 mg twice daily for now",
+      "canonical_anchor": "instruct.continue.continue_pregabalin_for_now.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue pregabalin 75 mg twice daily for now",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_pregabalin_75_mg_twice_a_day_for_now",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 75 mg twice a day for now."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_pregabalin_75_mg_twice_daily_for_now",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 75 mg twice daily for now."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_pregabalin_75_mg_twice_daily_for_now",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 75 mg twice daily for now."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_pregabalin_75_mg_twice_daily_for_now",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 75 mg twice daily for now."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_pregabalin_75_mg_twice_daily_for_now",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 75 mg twice daily for now."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "instruct.pain.pain.improved",
+      "kind": "instruct",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.patient_experiences_mild_discomfort_with_some_pt_exercises_involving_turning_the_head_to_the_left_which_is_described_as_normal_stretching_discomfort_not_sharp_shooting_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient experiences mild discomfort with some PT exercises involving turning the head to the left, which is described as normal stretching discomfort, not sharp shooting pain."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.if_pain_is_still_at_this_level_or_better_at_the_next_visit_the_plan_is_to_start_tapering_pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If pain is still at this level or better at the next visit, the plan is to start tapering pregabalin."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.if_pain_remains_controlled_at_the_current_level_or_better_at_the_next_visit_begin_weaning_the_pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If pain remains controlled at the current level or better at the next visit, begin weaning the pregabalin."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.if_pain_remains_controlled_at_the_current_level_or_better_plan_to_taper_pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "If pain remains controlled at the current level or better, plan to taper pregabalin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.improved",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_physical_therapist_told_the_patient_that_stretching_discomfort_is_normal_as_long_as_it_is_not_sharp_shooting_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The physical therapist told the patient that stretching discomfort is normal as long as it is not sharp shooting pain."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.the_pain_is_approximately_60_better_since_the_cervical_epidural_injection",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports the pain is approximately 60% better since the cervical epidural injection."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_pain_is_about_60_better_since_the_injection",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports the pain is about 60% better since the injection."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Cervical radiculopathy",
+      "canonical_anchor": "diagnosis.cervical.cervical_radiculopathy.present",
+      "kind": "diagnosis",
+      "subtype": "cervical",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "cervical radiculopathy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.cervical_radiculopathy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cervical radiculopathy."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.cervical_radiculopathy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Cervical radiculopathy."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.patient_has_cervical_radiculopathy_referenced_by_clinician_in_context_of_posture_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has cervical radiculopathy (referenced by clinician in context of posture issues)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "instruct.pain.pain.ordered",
+      "kind": "instruct",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.at_follow_up_consider_tapering_pregabalin_if_pain_remains_at_the_current_level_or_improves",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "At follow-up, consider tapering pregabalin if pain remains at the current level or improves."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.follow_up_visit_planned_to_reassess_pain_level_and_consider_starting_the_pregabalin_taper",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow-up visit planned to reassess pain level and consider starting the pregabalin taper."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.follow_up_appointment_planned_to_reassess_pain_control_and_consider_medication_taper",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Follow-up appointment planned to reassess pain control and consider medication taper."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F052",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

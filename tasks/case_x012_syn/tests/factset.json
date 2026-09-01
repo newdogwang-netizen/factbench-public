@@ -1,0 +1,1282 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x012_syn",
+    "version": "1",
+    "sha256": "99a35341bda18382cf8373ef8b61f35885c0b966f57464b10ab9b16202aa4e6f",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x012_syn",
+    "path": "case_x012_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 171,
+      "certain": 4,
+      "strict_certain": 4,
+      "low_conf": 24,
+      "unique": 143,
+      "unanimous": 4,
+      "low_support": 143
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 12,
+    "unstable_skipped": 15
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has a history of severe cystic acne, which was painful and made it difficult to touch the face."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously had painful cystic acne that was tender to touch."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient previously had painful cystic acne."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient previously could not touch the face without pain."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The painful cystic lesions present before treatment have resolved."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient previously had painful cystic acne and could not touch the face without hurting."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Initial presentation included painful cystic acne; patient could not touch face without pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Isotretinoin",
+      "canonical_anchor": "med.medication.isotretinoin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "isotretinoin",
+        "value": "40",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.isotretinoin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Isotretinoin 40 mg once daily, taken with food (e.g., avocado or peanut butter)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.isotretinoin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Isotretinoin 40 mg once daily, taken with dinner with fatty food (e.g., avocado or peanut butter) for absorption."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.isotretinoin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Isotretinoin 40 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.isotretinoin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Isotretinoin 40 mg orally once daily with dinner."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.isotretinoin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Isotretinoin 40 mg once daily, taken with dinner with fatty food (e.g., avocado or peanut butter)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.isotretinoin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Isotretinoin 40 mg once daily, taken with dinner (with fatty food such as avocado or peanut butter)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F008",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "CeraVe",
+      "canonical_anchor": "med.medication.cerave.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "cerave",
+        "value": null,
+        "unit": null,
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.cerave",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CeraVe ceramide cream, applied twice daily (morning and night)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.cerave",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CeraVe ceramide cream, applied twice daily (morning and bedtime)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.cerave",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CeraVe cream twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.cerave",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CeraVe ceramide cream is applied twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.cerave",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CeraVe ceramide cream applied twice daily (morning and at night before bed)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.cerave",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "CeraVe ceramide cream applied twice daily (morning and night before bed)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Aquaphor",
+      "canonical_anchor": "med.medication.aquaphor.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "aquaphor",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.aquaphor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aquaphor healing ointment for lips, used frequently (about one tube per week)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.aquaphor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aquaphor healing ointment, applied to lips as needed."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.aquaphor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aquaphor healing ointment for lips."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.aquaphor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aquaphor healing ointment is used frequently for dry lips."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.aquaphor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aquaphor healing ointment for the lips."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.aquaphor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Aquaphor healing ointment for lips, applied frequently."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin gummy, which may contain vitamin A."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin gummy (patient thinks it may contain vitamin A; not certain)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin gummy (likely contains vitamin A; advised to switch to one without vitamin A, such as Centrum)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F011",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient is finishing junior year",
+      "canonical_anchor": "sochist.sochist.finishing_junior.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient is finishing junior year",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "social_history.patient_is_a_junior_in_college_finishing_up_the_school_year_with_finals_coming_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is a junior in college, finishing up the school year with finals coming up."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_is_finishing_junior_year",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is finishing junior year."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_is_finishing_junior_year",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient is finishing junior year."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F012",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "birth control",
+      "canonical_anchor": "med.medication.birth_control.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "birth control",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": null,
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Insight: Patient demonstrates understanding of the need for birth control during and after isotretinoin treatment and the risks of pregnancy."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mirena IUD (birth control)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient uses two forms of birth control."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Insight: Demonstrates understanding of the need for two forms of birth control and continuation for one month after stopping isotretinoin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": true,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {}
+        }
+      }
+    },
+    {
+      "key": "birth control",
+      "canonical_anchor": "med.medication.birth_control.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "birth control",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to continue two forms of birth control (Mirena IUD and condoms) for at least one month after stopping isotretinoin, and to discuss with clinician or gynecologist before stopping."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Judgment: Patient adheres to treatment plan, uses two forms of birth control concurrently, and takes medication as directed with food."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.birth_control",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue two forms of birth control: Mirena IUD and condoms."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": true
+      }
+    },
+    {
+      "key": "rash",
+      "canonical_anchor": "symptom.symptom.rash.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "rash",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.rash_reported",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No rash reported."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.rash",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied rash."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.rash",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies rash."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.rash",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies rash."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F036",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue isotretinoin 40 mg once daily with food",
+      "canonical_anchor": "instruct.continue.continue_isotretinoin_with_food.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue isotretinoin 40 mg once daily with food",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_isotretinoin_40_mg_once_daily_with_food_for_two_additional_months_total_course_of_six_months",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue isotretinoin 40 mg once daily with food for two additional months (total course of six months)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_isotretinoin_40_mg_once_daily_with_food",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue isotretinoin 40 mg once daily with food."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_isotretinoin_40_mg_once_daily_with_food",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue isotretinoin 40 mg once daily with food."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue two forms of birth control (Mirena IUD and condoms) for at least one month after completing isotretinoin course (approximately three months from now)",
+      "canonical_anchor": "instruct.continue.continue_two_form_of_birth_control_mirena_iud.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "birth control",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_two_forms_of_birth_control_mirena_iud_and_condoms_for_at_least_one_month_after_completing_isotretinoin_course_approximately_three_months_from_now",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue two forms of birth control (Mirena IUD and condoms) for at least one month after completing isotretinoin course (approximately three months from now)."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_two_forms_of_birth_control_mirena_iud_and_condoms",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue two forms of birth control: Mirena IUD and condoms."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_two_forms_of_contraception_mirena_iud_and_condoms_for_at_least_one_month_after_completing_isotretinoin_course",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue two forms of contraception (Mirena IUD and condoms) for at least one month after completing isotretinoin course."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F056",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient sometimes stays up late studying",
+      "canonical_anchor": "sochist.sochist.sometime_stay_up_late_studying.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient sometime stay up late studying",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_sometimes_stays_up_late_studying",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes stays up late studying."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_sometimes_stays_up_late_studying",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes stays up late studying."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.sleep_mostly_adequate_sometimes_stays_up_late_studying_tries_to_get_seven_to_eight_hours",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep: mostly adequate; sometimes stays up late studying; tries to get seven to eight hours."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F086",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    }
+  ]
+}

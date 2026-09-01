@@ -1,0 +1,2595 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x014_syn",
+    "version": "1",
+    "sha256": "b19e52bfd64d67c7816a102a83172261654d5a240219ef126958175ab76c6790",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x014_syn",
+    "path": "case_x014_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 328,
+      "certain": 11,
+      "strict_certain": 11,
+      "low_conf": 26,
+      "unique": 291,
+      "unanimous": 13,
+      "low_support": 291
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 22,
+    "unstable_skipped": 14
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "prenatal",
+      "canonical_anchor": "med.medication.prenatal.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "prenatal",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prenatal vitamin with iron and folic acid, taken daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prenatal vitamins with iron and folic acid, taken daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presented for a 28 week prenatal checkup."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient takes a prescribed prenatal vitamin containing iron and folic acid daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prenatal vitamin with iron and folic acid, taken daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes a prenatal vitamin daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Patient presents for 28-week prenatal checkup",
+      "canonical_anchor": "symptom.symptom.present_for_prenatal_checkup.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "prenatal",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.patient_presents_for_28_week_prenatal_checkup",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for 28-week prenatal checkup."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.patient_presents_for_28_week_prenatal_checkup",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for 28-week prenatal checkup."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.patient_presented_for_a_28_week_prenatal_checkup",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presented for a 28 week prenatal checkup."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.patient_presents_for_her_28_week_prenatal_checkup",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for her 28-week prenatal checkup."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "tums tums",
+      "canonical_anchor": "med.medication.tums_tum.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tums",
+        "value": null,
+        "unit": null,
+        "time": "night",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports heartburn at night, partially relieved by Tums."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports heartburn at night, taking Tums with some relief."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported Tums help her heartburn some."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums provide some relief for the heartburn."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums helps the heartburn some, but it is still sometimes bad at night."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes Tums for heartburn."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F005",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "headaches",
+      "canonical_anchor": "symptom.symptom.headache.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "headache",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.no_headaches_and_no_vision_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no headaches and no vision changes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies headaches."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.vision_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies vision changes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied headaches."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.vision_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denied vision changes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.vision_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies vision changes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.vision_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies vision changes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.headaches",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports back pain by end of day, helped by sitting on a stool at work."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports back pain by end of day from being on feet at work."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported back pain by the end of the work day."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports back pain by the end of the workday."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports back pain by the end of the day over the last few weeks."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports back pain by the end of the day over the last few weeks."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "75",
+        "unit": "mcg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms, taken every morning on an empty stomach."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms daily, taken every morning on an empty stomach, for hypothyroidism."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient takes levothyroxine 75 micrograms every morning on an empty stomach."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms daily, taken every morning on an empty stomach."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient takes levothyroxine 75 micrograms daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "4/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Mother has a thyroid condition and takes levothyroxine",
+      "canonical_anchor": "famhist.famhist.mother_thyroid_and_take_levothyroxine.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_a_thyroid_condition_and_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has a thyroid condition and takes levothyroxine."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_has_thyroid_condition_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has thyroid condition, takes levothyroxine."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_takes_levothyroxine_for_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother takes levothyroxine for a thyroid condition."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_hypothyroidism_and_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has hypothyroidism and takes levothyroxine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patients_mother_has_a_thyroid_condition",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s mother has a thyroid condition."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_mother_takes_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The mother takes levothyroxine."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Maternal grandmother had high blood pressure"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.maternal_grandmother_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Maternal grandmother had high blood pressure."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Grandmother had high blood pressure"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.grandmother_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Grandmother had high blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Grandmother had high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.grandmother_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Grandmother had high blood pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient’s grandmother had high blood pressure"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.patients_grandmother_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient’s grandmother had high blood pressure."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Grandmother had high blood pressure"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.grandmother_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Grandmother had high blood pressure."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "At the visit, blood pressure was 118/72"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.at_the_visit_blood_pressure_was_118_72",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "At the visit, blood pressure was 118/72."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patients_grandmother_had_high_blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s grandmother had high blood pressure."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "No known family history of preeclampsia or premature births",
+      "canonical_anchor": "famhist.famhist.known_family_of_preeclampsia_or_premature_birth",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no known family history of preeclampsia or premature birth",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.no_known_family_history_of_preeclampsia_or_premature_births",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known family history of preeclampsia or premature births."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.no_known_family_history_of_preeclampsia_or_premature_births",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known family history of preeclampsia or premature births."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.patient_is_not_aware_of_a_family_history_of_preeclampsia_or_premature_birth",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient is not aware of a family history of preeclampsia or premature birth."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Patient denies alcohol use",
+      "canonical_anchor": "sochist.sochist.denie_alcohol_use.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "patient denie alcohol use",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "social_history.patient_denies_smoking_and_alcohol_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies smoking and alcohol use."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "social_history.patient_denies_alcohol_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies alcohol use."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.patient_denies_alcohol_use",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies alcohol use."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Hypothyroidism, on levothyroxine 75 mcg daily",
+      "canonical_anchor": "diagnosis.hypothyroidism.hypothyroidism_levothyroxine.present",
+      "kind": "diagnosis",
+      "subtype": "hypothyroidism",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.hypothyroidism_on_levothyroxine_75_mcg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism, on levothyroxine 75 mcg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.hypothyroidism_on_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism, on levothyroxine."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.hypothyroidism_pre_existing_managed_with_levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypothyroidism (pre-existing, managed with levothyroxine)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k3",
+          "glm-5p2"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "levothyroxine",
+      "canonical_anchor": "med.medication.levothyroxine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "levothyroxine",
+        "value": "75",
+        "unit": "mcg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue prenatal vitamins. Continue levothyroxine 75 micrograms daily, adjust if thyroid labs are off. For heartburn, continue Tums; if insufficient relief, may try famotidine 20 mg once or twice daily as needed (Pepcid, over the counter). Avoid ibuprofen and other NSAIDs after 20 weeks; acetaminophen is acceptable."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 micrograms daily; adjust dose if thyroid labs are abnormal."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Levothyroxine 75 micrograms daily to be continued."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 micrograms daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 micrograms daily; dose to be adjusted if thyroid labs are abnormal."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.levothyroxine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to continue levothyroxine 75 micrograms daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue prenatal vitamins. Continue levothyroxine 75 micrograms daily, adjust if thyroid labs are off. For heartburn, continue Tums; if insufficient relief, may try famotidine 20 mg once or twice daily as needed (Pepcid, over the counter). Avoid ibuprofen and other NSAIDs after 20 weeks; acetaminophen is acceptable."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "For back pain: recommend stretching exercises, maternity support belt, and warm compresses; no ibuprofen or NSAIDs after 20 weeks of pregnancy; acetaminophen is acceptable; non-medication measures likely more effective."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen was advised against in pregnancy."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Avoid ibuprofen and naproxen after 20 weeks of pregnancy."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to avoid ibuprofen and naproxen (NSAIDs) after 20 weeks of pregnancy; acetaminophen is acceptable."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The provider advised avoiding ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "prenatal",
+      "canonical_anchor": "med.medication.prenatal.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "prenatal",
+        "value": "75",
+        "unit": "mcg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue prenatal vitamins. Continue levothyroxine 75 micrograms daily, adjust if thyroid labs are off. For heartburn, continue Tums; if insufficient relief, may try famotidine 20 mg once or twice daily as needed (Pepcid, over the counter). Avoid ibuprofen and other NSAIDs after 20 weeks; acetaminophen is acceptable."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamins."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prenatal vitamins to be continued."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue the daily prenatal vitamin."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamin daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.prenatal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The prenatal vitamin was prescribed by the provider."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "1/6",
+            "value": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "tums tums",
+      "canonical_anchor": "med.medication.tums_tum.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tums",
+        "value": "20",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue prenatal vitamins. Continue levothyroxine 75 micrograms daily, adjust if thyroid labs are off. For heartburn, continue Tums; if insufficient relief, may try famotidine 20 mg once or twice daily as needed (Pepcid, over the counter). Avoid ibuprofen and other NSAIDs after 20 weeks; acetaminophen is acceptable."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "For heartburn: continue Tums; may try famotidine 20 mg once or twice daily as needed (OTC, brand name Pepcid, safe in pregnancy)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums may be continued for heartburn."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Tums for heartburn."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue Tums for heartburn; if relief is insufficient, famotidine (Pepcid) 20 milligrams once or twice daily as needed, available over the counter."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to continue Tums for heartburn."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "2/6",
+            "value": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue prenatal vitamins",
+      "canonical_anchor": "instruct.continue.continue_prenatal_vitamin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "prenatal",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.treatment_continue_prenatal_vitamins",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue prenatal vitamins"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_prenatal_vitamins",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamins."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_the_daily_prenatal_vitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue the daily prenatal vitamin."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_prenatal_vitamin_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue prenatal vitamin daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Patient has never smoked",
+      "canonical_anchor": "sochist.sochist.never_smoked.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "patient has never smoked",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "social_history.patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has never smoked."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.patient_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient never smoked."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has never smoked."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has never smoked."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_has_never_smoked",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has never smoked."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F056",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Pregnancy at 28 weeks",
+      "canonical_anchor": "diagnosis.pregnancy.pregnancy_at.present",
+      "kind": "diagnosis",
+      "subtype": "pregnancy",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pregnancy at 28 week",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.pregnancy_at_28_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregnancy at 28 weeks."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.pregnancy_at_28_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregnancy at 28 weeks."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.pregnancy_at_28_weeks",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregnancy at 28 weeks."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.pregnancy_at_28_weeks_gestation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregnancy at 28 weeks gestation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F059",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue levothyroxine 75 micrograms daily; adjust dose if thyroid labs are abnormal",
+      "canonical_anchor": "instruct.continue.continue_levothyroxine_adjust_dose_if_thyroid_abnormal.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "levothyroxine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_levothyroxine_75_micrograms_daily_adjust_dose_if_thyroid_labs_are_abnormal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 micrograms daily; adjust dose if thyroid labs are abnormal."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_levothyroxine_75_micrograms_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 micrograms daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_levothyroxine_75_micrograms_daily_dose_to_be_adjusted_if_thyroid_labs_are_abnormal",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue levothyroxine 75 micrograms daily; dose to be adjusted if thyroid labs are abnormal."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F067",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "the baby has been moving around a lot more than before",
+      "canonical_anchor": "symptom.symptom.baby_been_moving_around_lot_more_than_before.worsened",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the baby has been moving around a lot more than before",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_baby_has_been_moving_around_a_lot_more_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported the baby has been moving around a lot more than before."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_baby_has_been_moving_around_a_lot_more_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports the baby has been moving around a lot more than before."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.the_baby_is_moving_a_lot_more_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports the baby is moving a lot more than before."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F080",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Patient does not drink alcohol",
+      "canonical_anchor": "sochist.sochist.doe_drink_alcohol.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "patient doe not drink alcohol",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.patient_does_not_drink_alcohol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient does not drink alcohol."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.patient_does_not_drink_alcohol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient does not drink alcohol."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_does_not_drink_alcohol",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient does not drink alcohol."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F093",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "instruct.pain.pain.present",
+      "kind": "instruct",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.stretching_exercises_were_recommended_for_back_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stretching exercises were recommended for back pain."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.use_stretching_exercises_for_back_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Use stretching exercises for back pain."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.for_back_pain_stretching_exercises_maternity_support_belt_and_warm_compresses_recommended",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "For back pain: stretching exercises, maternity support belt, and warm compresses recommended."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.the_provider_recommended_stretching_exercises_for_back_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The provider recommended stretching exercises for back pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F120",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "4/6"
+          }
+        }
+      }
+    }
+  ]
+}

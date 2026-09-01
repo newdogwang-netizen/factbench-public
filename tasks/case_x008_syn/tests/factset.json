@@ -1,0 +1,1740 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x008_syn",
+    "version": "1",
+    "sha256": "4da1c3f3f64ed3ac9afa63cf86c3027aa708dc2cd378602cac1194f638bc2a2a",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x008_syn",
+    "path": "case_x008_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 335,
+      "certain": 6,
+      "strict_certain": 6,
+      "low_conf": 31,
+      "unique": 298,
+      "unanimous": 9,
+      "low_support": 298
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 15,
+    "unstable_skipped": 20
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "Bloating",
+      "canonical_anchor": "demo.demo.bloating.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "bloating",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is worse after eating, especially after a large dinner, with stomach feeling tight and pressure under the ribs, described as lower in the belly and different from reflux."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is worse after eating, especially after a big dinner, with stomach feeling tight and uncomfortable by bedtime."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is worse after eating, especially after a large dinner, and is worst by bedtime."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.bloating",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating is worse after eating, particularly after a large dinner, with abdominal tightness and pressure under the ribs (described as different from reflux, located lower in the belly)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "symptom.gastrointestinal.constipation.present",
+      "kind": "symptom",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "diarrhea",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.alternating_bowel_habits_for_approximately_three_months_possibly_starting_before_the_bloating_constipation_for_3_4_days_followed_by_1_2_days_of_loose_stools_diarrhea_then_back_to_constipation_in_a_repeating_cycle",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports alternating bowel habits for approximately three months, possibly starting before the bloating: constipation for 3-4 days followed by 1-2 days of loose stools/diarrhea, then back to constipation, in a repeating cycle."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.bowel_pattern_alternates_between_constipation_lasting_3_4_days_and_diarrhea_with_loose_stools_lasting_1_2_days_cycling_repeatedly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bowel pattern alternates between constipation lasting 3-4 days and diarrhea with loose stools lasting 1-2 days, cycling repeatedly."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.bowel_habits_have_alternated_between_constipation_and_diarrhea_for_approximately_3_months_or_slightly_longer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bowel habits have alternated between constipation and diarrhea for approximately 3 months or slightly longer."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.irritable_bowel_syndrome_is_the_suspected_cause_of_the_bloating_and_alternating_constipation_and_diarrhea",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Irritable bowel syndrome is the suspected cause of the bloating and alternating constipation and diarrhea."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.bowel_habits_alternate_between_constipation_lasting_three_to_four_days_and_diarrhea_with_loose_stools_lasting_one_to_two_days_in_a_repeating_cycle",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bowel habits alternate between constipation lasting three to four days and diarrhea with loose stools lasting one to two days, in a repeating cycle."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.alternating_bowel_habits_constipation_for_34_days_followed_by_loose_stools_diarrhea_for_12_days_cycling_repeatedly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports alternating bowel habits: constipation for 3–4 days followed by loose stools/diarrhea for 1–2 days, cycling repeatedly."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.bloating_and_alternating_constipation_diarrhea_for_approximately_3_months",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Bloating and alternating constipation/diarrhea for approximately 3 months."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_pattern_then_returns_to_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The pattern then returns to constipation."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.fodmaps_can_cause_bloating_gas_diarrhea_or_constipation_in_people_with_ibs",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "FODMAPs can cause bloating, gas, diarrhea, or constipation in people with IBS."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F007",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports crampy abdominal pain, especially before the diarrhea episodes, which improves after bowel movements; bloating does not improve after bowel movements."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Abdominal exam: soft with mild distension especially in lower abdomen, no guarding or rigidity, bowel sounds normal, no hepatosplenomegaly, no rebound tenderness, mild tenderness in left lower quadrant that does not reproduce the described pain or pressure."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to contact the office for severe or persistent abdominal pain."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has crampy abdominal pain before diarrhea that resolves after a bowel movement."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Crampy abdominal pain occurs before diarrhea episodes and resolves after bowel movement."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Crampy abdominal pain occurs sometimes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "diarrhea",
+      "canonical_anchor": "symptom.gastrointestinal.diarrhea.present",
+      "kind": "symptom",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "diarrhea",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.no_blood_in_stool_no_black_tarry_stools_stool_color_is_normal_brown_sometimes_lighter_with_diarrhea",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no blood in stool, no black/tarry stools; stool color is normal brown, sometimes lighter with diarrhea."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.blood_in_stool_no_black_or_tarry_stools_stool_is_brown_sometimes_lighter_with_diarrhea",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No blood in stool, no black or tarry stools; stool is brown, sometimes lighter with diarrhea."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.stools_may_be_lighter_during_diarrhea",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stools may be lighter during diarrhea."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.seen_no_blood_in_the_stool_and_no_black_or_tarry_stools_stool_is_brown_sometimes_lighter_with_diarrhea",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has seen no blood in the stool and no black or tarry stools; stool is brown, sometimes lighter with diarrhea."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.blood_in_stool_stools_are_brown_occasionally_lighter_in_color_during_diarrhea_episodes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No blood in stool; stools are brown, occasionally lighter in color during diarrhea episodes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.diarrhea_for_one_to_two_days",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient then has diarrhea for one to two days."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The patient has GERD",
+      "canonical_anchor": "diagnosis.gerd.gerd.present",
+      "kind": "diagnosis",
+      "subtype": "gerd",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient has gerd",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.patient_has_gerd_previously_evaluated_and_treated_with_omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has GERD, previously evaluated and treated with omeprazole."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.the_patient_has_gerd",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has GERD."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_patient_has_gerd",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has GERD."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Omeprazole",
+      "canonical_anchor": "med.medication.omeprazole.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "omeprazole",
+        "value": "40",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily in the morning, taken regularly every day."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40mg once daily, taken in the morning."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg orally once daily in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily in the morning; taken every day without missed doses."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg orally once daily in the morning (taking regularly without missed doses)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.omeprazole",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Omeprazole 40 mg once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (e.g., Centrum) taken regularly."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (Centrum or similar)."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (Centrum) daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (Centrum or similar)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "tums tums",
+      "canonical_anchor": "med.medication.tums_tum.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "tums",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously took Tums for reflux before starting omeprazole, but no longer takes them."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously took Tums for reflux but no longer uses them."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "GERD, previously managed with Tums before starting omeprazole."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No longer takes Tums."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tums are no longer taken."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.tums",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Previously took Tums for reflux; no longer taking."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Maternal grandmother had diverticulitis in her seventies",
+      "canonical_anchor": "famhist.famhist.maternal_grandmother_diverticulitis_in_her_seventie.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "maternal grandmother had diverticulitis in her seventie",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.maternal_grandmother_had_diverticulitis_in_her_seventies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Maternal grandmother had diverticulitis in her seventies."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.maternal_grandmother_had_diverticulitis_in_her_seventies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Maternal grandmother had diverticulitis in her seventies."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.maternal_grandmother_had_diverticulitis_in_her_seventies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Maternal grandmother had diverticulitis in her seventies."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.maternal_grandmother_diverticulitis_in_her_seventies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Maternal grandmother: diverticulitis in her seventies."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.maternal_grandmother_had_diverticulitis_in_her_seventies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Maternal grandmother had diverticulitis in her seventies."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_maternal_grandmother_had_diverticulitis_in_her_seventies",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's maternal grandmother had diverticulitis in her seventies."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Father",
+      "canonical_anchor": "demo.demo.father.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "father",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.father",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is healthy with no significant issues."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.father",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is healthy with no real issues."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.father",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is healthy with no significant issues."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.father",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father is healthy."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "risk.pain.pain.present",
+      "kind": "risk",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "risk.patient_advised_to_call_the_office_sooner_if_any_red_flags_occur_blood_in_stool_black_tarry_stools_unintentional_weight_loss_severe_persistent_pain_or_fevers_chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient advised to call the office sooner if any red flags occur: blood in stool, black/tarry stools, unintentional weight loss, severe persistent pain, or fevers/chills."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "risk.patient_instructed_to_call_the_office_and_come_in_sooner_if_any_of_the_following_occur_blood_in_stool_black_tarry_stools_unintentional_weight_loss_severe_persistent_pain_fevers_or_chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient instructed to call the office and come in sooner if any of the following occur: blood in stool, black tarry stools, unintentional weight loss, severe persistent pain, fevers, or chills."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "risk.the_patient_was_advised_to_contact_the_office_for_severe_or_persistent_abdominal_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to contact the office for severe or persistent abdominal pain."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "risk.advised_to_call_the_office_and_be_seen_sooner_if_she_develops_blood_in_the_stool_black_or_tarry_stools_unintentional_weight_loss_severe_pain_that_does_not_go_away_or_fevers_or_chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advised to call the office and be seen sooner if she develops blood in the stool, black or tarry stools, unintentional weight loss, severe pain that does not go away, or fevers or chills."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "risk.red_flags_warranting_earlier_contact_visit_blood_in_stool_black_or_tarry_stools_unintentional_weight_loss_severe_persistent_abdominal_pain_fever_or_chills",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Red flags warranting earlier contact/visit: blood in stool, black or tarry stools, unintentional weight loss, severe persistent abdominal pain, fever, or chills."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "risk.call_the_office_and_come_in_sooner_if_pain_becomes_severe_and_does_not_go_away",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Call the office and come in sooner if pain becomes severe and does not go away."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F043",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "not kept a food diary",
+      "canonical_anchor": "symptom.symptom.kept_food_diary.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "not kept a food diary",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.not_kept_a_food_diary_advised_to_do_so",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has not kept a food diary; advised to do so."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.not_kept_a_food_diary",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has not kept a food diary."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.not_kept_a_food_diary",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has not kept a food diary."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.not_kept_a_food_diary",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has not kept a food diary."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.not_kept_a_food_diary",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has not kept a food diary."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitals: weight 155 pounds, blood pressure 118/74"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.vitals_weight_155_pounds_blood_pressure_118_74",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Vitals: weight 155 pounds, blood pressure 118/74."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 118/74 mmHg"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 118/74"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 118/74"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.blood_pressure_is_118_74",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Blood pressure is 118/74."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F060",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Simethicone",
+      "canonical_anchor": "med.medication.simethicone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "simethicone",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.simethicone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Simethicone (Gas-X) used occasionally for bloating, with minimal benefit."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.simethicone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Simethicone (Gas-X) used occasionally for bloating with minimal benefit."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.simethicone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Simethicone (Gas-X) has been tried a few times for bloating."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F065",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "GERD",
+      "canonical_anchor": "demo.demo.gerd.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "gerd",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.gerd",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "GERD is well controlled on omeprazole."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.gerd",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "GERD is well controlled on omeprazole."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.gerd",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "GERD is well-controlled on omeprazole 40 mg once daily; heartburn occurs approximately once weekly, typically after eating spicy food."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.gerd",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "GERD is well controlled on omeprazole."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F122",
+        "support": "4/4",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6"
+          }
+        }
+      }
+    }
+  ]
+}

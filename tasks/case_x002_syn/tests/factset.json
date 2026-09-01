@@ -1,0 +1,2239 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x002_syn",
+    "version": "1",
+    "sha256": "2206c87f21a99e4bd5a0e439673afe337b8626e2b9241eacdf1d5bcedeff8639",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x002_syn",
+    "path": "case_x002_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 229,
+      "certain": 5,
+      "strict_certain": 5,
+      "low_conf": 41,
+      "unique": 183,
+      "unanimous": 10,
+      "low_support": 183
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 20,
+    "unstable_skipped": 25
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "Numbness",
+      "canonical_anchor": "demo.demo.numbness.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "numbness",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is not painful; patient cannot feel it when touched."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is not painful; patient cannot feel touch over the affected area."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.numbness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is not painful; patient reports inability to feel touch on the affected area."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lower back pain is about the same as before, located right above the buttocks area."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has chronic low back pain from an old lifting injury."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has chronic low back pain from a prior lifting injury."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for follow-up of chronic low back pain, last seen about three months ago."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Chronic low back pain from an old lifting injury persists."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has chronic low back pain from an old lifting injury."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F004",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The numbness is not painful",
+      "canonical_anchor": "symptom.symptom.numbness_painful.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the numbness is not painful",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.numbness_is_not_painful_patient_cannot_feel_it_when_touched",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Numbness is not painful; patient cannot feel it when touched."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_numbness_is_not_painful",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The numbness is not painful."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_numbness_is_not_painful",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The numbness is not painful."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F005",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "weight",
+      "canonical_anchor": "symptom.metabolic.weight.present",
+      "kind": "symptom",
+      "subtype": "metabolic",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "unexplained weight loss",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.unexplained_weight_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No unexplained weight loss."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.unexplained_weight_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denied unexplained weight loss."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.unexplained_weight_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies unexplained weight loss."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.unexplained_weight_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No unexplained weight loss."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.unexplained_weight_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies unexplained weight loss."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.unexplained_weight_loss",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "There is no unexplained weight loss."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F013",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.improved",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain_is_approximately_30_better_compared_to_before_possibly_from_medication_or_physical_therapy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is approximately 30% better compared to before, possibly from medication or physical therapy."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.the_patient_estimated_pain_was_about_30_better_compared_with_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient estimated pain was about 30% better compared with before."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_low_back_pain_is_approximately_30_better_with_treatment",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The low back pain is approximately 30% better with treatment."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.patient_estimates_pain_is_about_30_better_compared_to_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient estimates pain is about 30% better compared to before."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.back_pain_is_approximately_the_same_as_before_not_worse",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Back pain is approximately the same as before (not worse)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_estimates_the_pain_is_about_30_better_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient estimates the pain is about 30% better than before."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F015",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "reason",
+      "canonical_anchor": "symptom.symptom.reason.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "reason",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.reason",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sometimes wakes up for no reason."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.reason",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes wakes for no reason."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.sometimes_waking_for_no_clear_reason",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient also reported sometimes waking for no clear reason."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "qwen3p8-max",
+          "gpt-5_4"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "diagnosis.pain.pain.present",
+      "kind": "diagnosis",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.chronic_low_back_pain_from_an_old_lifting_injury",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Chronic low back pain from an old lifting injury."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.the_patient_has_chronic_low_back_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has chronic low back pain."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.the_patient_has_chronic_low_back_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has chronic low back pain."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.chronic_low_back_pain_from_an_old_lifting_injury",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Chronic low back pain from an old lifting injury."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.chronic_low_back_pain_secondary_to_an_old_lifting_injury",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Chronic low back pain secondary to an old lifting injury."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.the_patient_has_chronic_low_back_pain_from_an_old_lifting_injury",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has chronic low back pain from an old lifting injury."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Gabapentin",
+      "canonical_anchor": "demo.demo.gabapentin.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "gabapentin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "demo.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October due to dizziness; dizziness improved quickly after stopping."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "demo.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October because of dizziness."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was discontinued in October because of severe dizziness."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October due to dizziness."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was discontinued in October due to dizziness; dizziness resolved shortly after stopping."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "dizziness and giddiness",
+      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.improved.after_gabapentin_stop",
+      "kind": "diagnosis",
+      "subtype": "neuro_vestibular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October due to dizziness; dizziness improved quickly after stopping"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.gabapentin_was_stopped_in_october_due_to_dizziness_dizziness_improved_quickly_after_stopping",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October due to dizziness; dizziness improved quickly after stopping."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported dizziness improved quickly after stopping gabapentin"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The dizziness improved quickly after gabapentin was discontinued"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.the_dizziness_improved_quickly_after_gabapentin_was_discontinued",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The dizziness improved quickly after gabapentin was discontinued."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The dizziness improved fairly quickly after gabapenten was stopped"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_dizziness_improved_fairly_quickly_after_gabapenten_was_stopped",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The dizziness improved fairly quickly after gabapenten was stopped."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "gabapentin",
+      "canonical_anchor": "med.medication.gabapentin.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "gabapentin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October due to dizziness; dizziness improved quickly after stopping."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October because of dizziness."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was discontinued in October because of severe dizziness."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October due to dizziness."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dizziness resolved quickly after gabapentin was stopped."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was discontinued in October due to dizziness; dizziness resolved shortly after stopping."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.gabapentin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was discontinued in October due to dizziness; dizziness resolved shortly after stopping."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "duloxetine",
+      "canonical_anchor": "med.medication.duloxetine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "duloxetine",
+        "value": "60",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 60 mg daily, taken in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 60 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 60 mg daily is taken in the morning."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 60 mg daily, taken in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine 60 mg daily (taken in the morning)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "5/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Meloxicam",
+      "canonical_anchor": "med.medication.meloxicam.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "meloxicam",
+        "value": "15",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam 15 mg daily, taken in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam 15 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam 15 mg daily was being taken before the medication change addressed at this visit."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam 15 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.meloxicam",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Meloxicam 15 mg daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "5/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "dizziness and giddiness",
+      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.present.after_gabapentin_stop",
+      "kind": "diagnosis",
+      "subtype": "neuro_vestibular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was previously stopped in October due to dizziness"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October because of dizziness"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.gabapentin_was_stopped_in_october_because_of_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October because of dizziness."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was discontinued in October because of severe dizziness"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.gabapentin_was_discontinued_in_october_because_of_severe_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was discontinued in October because of severe dizziness."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October due to dizziness"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.gabapentin_was_stopped_in_october_due_to_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was stopped in October due to dizziness."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapentin was discontinued in October due to dizziness; dizziness resolved shortly after stopping"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapenten was stopped in October because of dizziness"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.gabapenten_was_stopped_in_october_because_of_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Gabapenten was stopped in October because of dizziness."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "6/6",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "duloxetine",
+      "canonical_anchor": "med.medication.duloxetine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "duloxetine",
+        "value": "60",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue duloxetine 60 mg daily."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine was continued."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue duloxetine 60 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue duloxetine 60 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue duloxetine 60 mg daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "5/5",
+        "models": [
+          "glm-5p2",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "4/6",
+            "unit": "4/6",
+            "value": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue duloxetine 60 mg daily",
+      "canonical_anchor": "instruct.continue.continue_duloxetine.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "duloxetine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_duloxetine_60_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue duloxetine 60 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_duloxetine_60_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue duloxetine 60 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_duloxetine_60_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue duloxetine 60 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_duloxetine_60_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue duloxetine 60 mg daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue physical therapy",
+      "canonical_anchor": "instruct.continue.continue_physical.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue physical therapy",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_physical_therapy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue physical therapy twice a week."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_physical_therapy",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue physical therapy."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_physical_therapy_twice_weekly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue physical therapy twice weekly."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F052",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Smoking cessation to be addressed at a future visit",
+      "canonical_anchor": "instruct.smoking.smoking_cessation_to_addressed_at_future_visit.present",
+      "kind": "instruct",
+      "subtype": "smoking",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "smoking cessation to be addressed at a future visit",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "treatment.smoking_cessation_to_be_addressed_at_a_future_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Smoking cessation to be addressed at a future visit."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.smoking_cessation_to_be_addressed_at_a_future_visit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Smoking cessation to be addressed at a future visit."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.smoking_cessation_to_be_discussed_at_a_future_visit_if_the_patient_wishes_to_work_on_it",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Smoking cessation to be discussed at a future visit if the patient wishes to work on it."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F054",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "minimax-m3",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "The patient works in warehousing",
+      "canonical_anchor": "sochist.sochist.work_in_warehousing.present",
+      "kind": "sochist",
+      "subtype": "sochist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "the patient work in warehousing",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "social_history.the_patient_works_in_warehousing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient works in warehousing."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "social_history.the_patient_works_in_warehousing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient works in warehousing."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "social_history.the_patient_works_in_warehousing",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient works in warehousing."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "social_history.patient_works_in_warehousing_at_the_same_employer",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient works in warehousing at the same employer."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "social_history.occupation_works_in_warehousing_recently_transferred_to_an_inventory_computer_based_position_with_no_heavy_lifting",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Occupation: works in warehousing; recently transferred to an inventory/computer-based position with no heavy lifting."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F087",
+        "support": "5/5",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "The MRI",
+      "canonical_anchor": "demo.demo.mri.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "the mri",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.the_mri",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The MRI was to evaluate the new numbness."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.the_mri",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The MRI is expected to be scheduled within one to two weeks, depending on insurance."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.the_mri",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The MRI is being obtained to evaluate for disc herniation or nerve compression."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F100",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Reduce meloxicam from 15 mg to 7 5 mg daily",
+      "canonical_anchor": "instruct.reduce.reduce_meloxicam_from_to.present",
+      "kind": "instruct",
+      "subtype": "reduce",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "reduce meloxicam from 15 mg to 7.5 mg daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.reduce_meloxicam_from_15_mg_daily_to_7_5_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce meloxicam from 15 mg daily to 7.5 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.reduce_meloxicam_from_15_mg_to_7_5_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce meloxicam from 15 mg to 7.5 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.reduce_meloxicam_from_15_mg_to_7_5_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Reduce meloxicam from 15 mg to 7.5 mg daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F144",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    }
+  ]
+}

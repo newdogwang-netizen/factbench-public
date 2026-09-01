@@ -173,7 +173,9 @@ def main():
     args = ap.parse_args()
     base = os.environ.get("OPENAI_BASE_URL")
     key = os.environ.get("OPENAI_API_KEY", "")
-    model = os.environ.get("MODEL") or (args.label or "score-only")
+    # score-only mode: an explicit --label must win over a leftover MODEL env
+    model = (args.label if args.notes_dir and args.label
+             else os.environ.get("MODEL") or (args.label or "score-only"))
     if not args.notes_dir and (not base or not os.environ.get("MODEL")):
         raise SystemExit("set OPENAI_BASE_URL and MODEL, or use --notes-dir for score-only mode")
     out = args.out or os.path.join(ROOT, "results", re.sub(r"[^\w.-]+", "_", model))

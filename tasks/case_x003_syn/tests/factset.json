@@ -1,0 +1,2256 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x003_syn",
+    "version": "1",
+    "sha256": "8c1895d64752adf369020c21c6c02af794e45239a8605eb1dbd2f8dc2804dd13",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x003_syn",
+    "path": "case_x003_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 175,
+      "certain": 7,
+      "strict_certain": 7,
+      "low_conf": 26,
+      "unique": 142,
+      "unanimous": 7,
+      "low_support": 142
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 18,
+    "unstable_skipped": 12
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for follow-up regarding blood pressure management"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.patient_presents_for_follow_up_regarding_blood_pressure_management",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for follow-up regarding blood pressure management."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has hypertension"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.father_has_blood_pressure_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has blood pressure issues."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was seen for blood pressure follow-up"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.patient_was_seen_for_blood_pressure_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was seen for blood pressure follow-up."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.father_has_blood_pressure_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has blood pressure issues."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient presented for blood pressure follow-up"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_patient_presented_for_blood_pressure_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient presented for blood pressure follow-up."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_father_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has hypertension."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is much better controlled after increasing lisinopril to 20 mg daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for follow-up of blood pressure management"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.patient_presents_for_follow_up_of_blood_pressure_management",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for follow-up of blood pressure management."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_has_blood_pressure_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has blood pressure issues."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for follow-up of blood pressure management"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.patient_presents_for_follow_up_of_blood_pressure_management",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for follow-up of blood pressure management."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.father_has_blood_pressure_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father has blood pressure issues."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient presented for blood pressure follow-up"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_presented_for_blood_pressure_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient presented for blood pressure follow-up."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_father_has_blood_pressure_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's father has blood pressure issues."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "condition",
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "5/6",
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 20 mg once daily in the morning."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 20 mg once daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was increased from 10 mg to 20 mg daily last month."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 20 mg once daily, taken in the morning."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 20 mg once daily, taken in the morning."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 20 mg once daily in the morning."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "5/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "dizziness and giddiness",
+      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.present.after_lisinopril_increase",
+      "kind": "diagnosis",
+      "subtype": "neuro_vestibular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no side effects from the higher lisinopril dose, including no headaches or dizziness"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.no_side_effects_from_the_higher_lisinopril_dose_including_no_headaches_or_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no side effects from the higher lisinopril dose, including no headaches or dizziness."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was previously worried the higher dose might cause dizziness"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.patient_was_previously_worried_the_higher_dose_might_cause_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient was previously worried the higher dose might cause dizziness."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient had worried a higher dose might cause dizziness, but reports no dizziness"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.worried_a_higher_dose_might_cause_dizziness_but_reports_no_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient had worried a higher dose might cause dizziness, but reports no dizziness."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no side effects from the higher dose, including no headaches and no dizziness"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.no_side_effects_from_the_higher_dose_including_no_headaches_and_no_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no side effects from the higher dose, including no headaches and no dizziness."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies dizziness"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies dizziness."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F004",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "amlodipine",
+      "canonical_anchor": "med.medication.amlodipine.stop",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "amlodipine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "stop",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports that ankle/foot swelling has resolved after stopping amlodipine."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported the swelling went away after stopping amlodipine."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prior ankle and foot swelling resolved after amlodipine was discontinued."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Amlodipine was previously discontinued because of ankle and foot swelling."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The ankle swelling went away pretty much right after amlodipine was stopped."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ankle and foot swelling reported at the last visit resolved after amlodipine was stopped."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F005",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "no excessive thirst",
+      "canonical_anchor": "symptom.symptom.excessive_thirst.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no excessive thirst",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.diabetes_is_stable_with_no_excessive_thirst",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports diabetes is stable, with no excessive thirst."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.no_excessive_thirst",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported no excessive thirst."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.no_excessive_thirst",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports no excessive thirst."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.no_excessive_thirst",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports no excessive thirst."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.excessive_thirst",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient denies excessive thirst."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F009",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "amlodipine",
+      "canonical_anchor": "med.medication.amlodipine.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "amlodipine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "resolved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient previously had ankle swelling attributed to amlodipine, which resolved after discontinuation."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prior ankle swelling while taking amlodipine."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prior amlodipine use was associated with ankle swelling; amlodipine was discontinued and the patient was switched to lisinopril alone."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ankle swelling previously reported has resolved after discontinuation of amlodipine."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.amlodipine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was switched from amlodipine to lisinopril."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F014",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "2/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily, morning and with dinner."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg by mouth twice daily, taken in the morning and with dinner."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily, taken in the morning and with dinner."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily, taken in the morning and with dinner."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Multivitamin",
+      "canonical_anchor": "med.medication.multivitamin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "multivitamin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (over-the-counter)."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (over the counter)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.multivitamin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Multivitamin (over-the-counter)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F017",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen occasionally for headaches (rare use)."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient takes ibuprofen rarely for headaches."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen occasionally as needed for a headache."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen occasionally for headache, described as rare use."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ibuprofen occasionally for headaches (rare)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient sometimes takes ibuprofen for headache."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F018",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Mother has diabetes",
+      "canonical_anchor": "famhist.famhist.mother_diabete.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "mother has diabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_has_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has diabetes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.mother_has_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has diabetes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_has_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has diabetes."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_has_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother has diabetes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patient_s_mother_has_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has diabetes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_s_mother_has_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient's mother has diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F019",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "No new family health issues reported",
+      "canonical_anchor": "famhist.famhist.new_family_health_reported.ordered",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no new family health issue reported",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.no_new_family_health_issues_reported",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No new family health issues reported."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.no_new_family_health_issues_reported",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No new family health issues reported."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.the_patient_reports_no_new_family_health_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports no new family health issues."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "20",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue lisinopril 20 mg once daily; continue metformin 500 mg twice daily; no medication changes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 20 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 20 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 20 mg once daily; no change."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: continue lisinopril 20 mg once daily; continue metformin 500 mg twice daily; no changes to current regimen."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 20 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "5/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Continue lisinopril 20 mg once daily; continue metformin 500 mg twice daily; no medication changes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily; no change."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: continue lisinopril 20 mg once daily; continue metformin 500 mg twice daily; no changes to current regimen."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Lisinopril",
+      "canonical_anchor": "demo.demo.lisinopril.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "demo.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was increased last month from 10 mg to 20 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "demo.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was increased from 10 mg to 20 mg daily last month."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril was increased last month from 10 mg to 20 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "being able to wear regular shoes again",
+      "canonical_anchor": "symptom.symptom.able_to_wear_regular_shoe_again.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "being able to wear regular shoe again",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.being_able_to_wear_regular_shoes_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reported being able to wear regular shoes again."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.being_able_to_wear_regular_shoes_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports being able to wear regular shoes again."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_patient_can_wear_regular_shoes_again",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient can wear regular shoes again."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F043",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Continue lisinopril 20 mg once daily",
+      "canonical_anchor": "instruct.continue.continue_lisinopril.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "lisinopril",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_lisinopril_20_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 20 mg daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_lisinopril_20_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 20 mg once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_lisinopril_20_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 20 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_lisinopril_20_mg_once_daily_no_change",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 20 mg once daily; no change."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F052",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue metformin 500 mg twice daily",
+      "canonical_anchor": "instruct.continue.continue_metformin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "metformin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "treatment.continue_metformin_500_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_metformin_500_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_metformin_500_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_metformin_500_mg_twice_daily_no_change",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily; no change."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F053",
+        "support": "4/4",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.improved.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is much better controlled after increasing lisinopril to 20 mg daily"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.hypertension_is_much_better_controlled_after_increasing_lisinopril_to_20_mg_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension is much better controlled after increasing lisinopril to 20 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension, improved on current regimen"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hypertension_improved_on_current_regimen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension, improved on current regimen."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports the new blood pressure medication dose is working better"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.the_new_blood_pressure_medication_dose_is_working_better",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports the new blood pressure medication dose is working better."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F078",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "2/6",
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    }
+  ]
+}

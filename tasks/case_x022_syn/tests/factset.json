@@ -1,0 +1,4989 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x022_syn",
+    "version": "1",
+    "sha256": "e53f50165920ad990f954d0d435eac54e9b7212cd8c79a937b8f17477160f1df",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x022_syn",
+    "path": "case_x022_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 6,
+      "n_facts": 285,
+      "certain": 23,
+      "strict_certain": 21,
+      "low_conf": 35,
+      "unique": 227,
+      "unanimous": 27,
+      "low_support": 227
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 41,
+    "unstable_skipped": 11
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "Patient presents for fibromyalgia follow-up",
+      "canonical_anchor": "symptom.symptom.present_for_fibromyalgia_follow_up.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "patient present for fibromyalgia follow-up",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.patient_presents_for_fibromyalgia_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for fibromyalgia follow-up."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.patient_presents_for_fibromyalgia_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for fibromyalgia follow-up."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.patient_presents_for_fibromyalgia_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for fibromyalgia follow-up."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.patient_presents_for_fibromyalgia_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient presents for fibromyalgia follow-up."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.the_patient_presented_for_fibromyalgia_follow_up",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient presented for fibromyalgia follow-up."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.visit_is_a_follow_up_for_fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Visit is a follow-up for fibromyalgia."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F001",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "qwen3p8-max",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.present",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "reports",
+        "object": "pain",
+        "value": "5",
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain improved since pregabalin was increased to 150 mg twice daily; pain score decreased from 7/10 to 5/10."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lower back pain persists but is now manageable."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Current pain is rated 5/10."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Current pain score is 5/10, down from 7/10 previously."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain score decreased from 7/10 to 5/10."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports current pain score is 5/10."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F002",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6",
+            "value": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "symptom.pain.pain.improved",
+      "kind": "symptom",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": "7",
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.pain_improved_since_pregabalin_was_increased_to_150_mg_twice_daily_pain_score_decreased_from_7_10_to_5_10",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain improved since pregabalin was increased to 150 mg twice daily; pain score decreased from 7/10 to 5/10."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.widespread_bilateral_pain_involving_upper_and_lower_body_persists_but_is_less_intense_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Widespread bilateral pain involving upper and lower body persists but is less intense than before."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.widespread_bilateral_pain_in_upper_and_lower_body_persists_but_is_less_intense",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Widespread bilateral pain in upper and lower body persists but is less intense."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.pain_improved_after_pregabalin_dose_was_increased_from_75_mg_to_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain improved after pregabalin dose was increased from 75 mg to 150 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pain_is_less_intense_than_before",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain is less intense than before."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F003",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "value": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Sleep",
+      "canonical_anchor": "demo.demo.sleep.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "sleep",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is hit or miss: some nights 5-6 hours, other nights wakes 2-3 times and cannot get back to sleep; pain sometimes wakes her."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is variable: some nights 5–6 hours, other nights wakes up 2–3 times and cannot get back to sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is inconsistent: some nights she sleeps 5-6 hours, other nights she wakes 2-3 times and cannot get back to sleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is inconsistent: some nights 5–6 hours, other nights she wakes 2–3 times and cannot return to sleep."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.sleep",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sleep is inconsistent."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F006",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "trazodone",
+      "canonical_anchor": "med.medication.trazodone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "trazodone",
+        "value": "50",
+        "unit": "mg",
+        "time": "10:30 pm",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime helps with falling asleep but not staying asleep."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime helps with sleep onset but not sleep maintenance."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime (taken around 10-10:30 pm)."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg at bedtime (approximately 10:00–10:30 PM)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient takes trazodone 50 mg at night around 10:30."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F008",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "1/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "50",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Depression; previously treated with sertraline 50 mg for about eight months; initial nausea resolved; experienced decreased libido as a side effect."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Was on sertraline 50 mg for approximately 8 months before stopping."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She initially did not refill sertraline because she felt she might no longer need it."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She previously took sertraline 50 mg for approximately eight months."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Depression, previously treated with sertraline 50 mg for approximately 8 months."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past psychiatric diagnosis: depression, previously treated with sertraline 50 mg for approximately 8 months."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient stopped sertraline because she felt okay and thought she might not need it."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F010",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Appetite",
+      "canonical_anchor": "demo.demo.appetite.present",
+      "kind": "demo",
+      "subtype": "demo",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "name",
+        "object": "appetite",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": null,
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is okay but she does not enjoy food as before; unintentional weight loss of about 4-5 pounds."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is okay but does not enjoy food the way she used to."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is intact but she no longer enjoys food the way she used to."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is present but food is no longer enjoyable."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.appetite",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Appetite is okay."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F016",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "ibuprofen",
+      "canonical_anchor": "med.medication.ibuprofen.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Has tension headaches about two or three times a week, treated with over-the-counter ibuprofen."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tension headaches occur 2–3 times per week; treated with over-the-counter ibuprofen."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She uses over-the-counter ibuprofen for tension headaches."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tension headaches occur 2-3 times per week, treated with over-the-counter ibuprofen."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tension headaches occur approximately 2–3 times per week, treated with over-the-counter ibuprofen."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient takes over-the-counter ibuprofen for tension headaches."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F022",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "dizziness and giddiness",
+      "canonical_anchor": "diagnosis.neuro_vestibular.dizziness.present",
+      "kind": "diagnosis",
+      "subtype": "neuro_vestibular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": null,
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experiences some dizziness when standing up fast, attributed to pregabalin"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.some_dizziness_when_standing_up_fast_attributed_to_pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experiences some dizziness when standing up fast, attributed to pregabalin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experiences dizziness when standing up quickly, attributed to pregabalin"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.dizziness_when_standing_up_quickly_attributed_to_pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experiences dizziness when standing up quickly, attributed to pregabalin."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.counselled_patient_to_stand_up_slowly_especially_due_to_dizziness_associated_with_pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Counselled patient to stand up slowly, especially in the morning, due to dizziness associated with pregabalin."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports occasional dizziness when standing quickly"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.occasional_dizziness_when_standing_quickly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports occasional dizziness when standing quickly."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.stand_up_slowly_especially_due_to_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stand up slowly, especially in the morning, due to dizziness."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dizziness occurs when standing up quickly, which the patient attributes to pregabalin"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.dizziness_occurs_when_standing_up_quickly_which_the_patient_attributes_to_pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dizziness occurs when standing up quickly, which the patient attributes to pregabalin."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.advised_to_stand_up_slowly_especially_due_to_dizziness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Advised to stand up slowly, especially in the morning, due to dizziness."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dizziness occurs when standing up quickly, attributed by patient to pregabalin"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.dizziness_occurs_when_standing_up_quickly_attributed_by_patient_to_pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Dizziness occurs when standing up quickly, attributed by patient to pregabalin."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.dizziness_and_giddiness",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient experiences dizziness when standing up quickly"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.dizziness_when_standing_up_quickly",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient experiences dizziness when standing up quickly."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F024",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "constipation",
+      "canonical_anchor": "symptom.gastrointestinal.constipation.present",
+      "kind": "symptom",
+      "subtype": "gastrointestinal",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "constipation",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.intermittent_constipation_attributed_to_pregabalin_treated_with_fiber_metamucil_with_partial_benefit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Has intermittent constipation, attributed to pregabalin, treated with fiber (Metamucil) with partial benefit."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.intermittent_constipation_attributed_to_pregabalin_takes_metamucil_fiber_supplement_with_partial_benefit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Experiences intermittent constipation, attributed to pregabalin; takes Metamucil fiber supplement with partial benefit."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.intermittent_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She reports intermittent constipation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.constipation_occurs_off_and_on_which_the_patient_attributes_to_pregabalin_she_takes_metamucil_fiber_with_partial_benefit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation occurs off and on, which the patient attributes to pregabalin; she takes Metamucil fiber with partial benefit."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.intermittent_constipation_attributed_by_patient_to_pregabalin_managed_with_metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Intermittent constipation, attributed by patient to pregabalin, managed with Metamucil."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.intermittent_constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has intermittent constipation."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "demo.constipation",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Constipation is common with pregabalin."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Fibromyalgia",
+      "canonical_anchor": "diagnosis.fibromyalgia.fibromyalgia.present",
+      "kind": "diagnosis",
+      "subtype": "fibromyalgia",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "fibromyalgia",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.patient_has_fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has fibromyalgia."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F026",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Prediabetes",
+      "canonical_anchor": "diagnosis.prediabete.prediabete.present",
+      "kind": "diagnosis",
+      "subtype": "prediabete",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "prediabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.prediabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prediabetes."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.prediabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prediabetes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.prediabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prediabetes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.prediabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Prediabetes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.patient_has_prediabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has prediabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Chronic medical conditions: fibromyalgia, prediabetes, hypertension, hyperlipidemia"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.chronic_medical_conditions_fibromyalgia_prediabetes_hypertension_hyperlipidemia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Chronic medical conditions: fibromyalgia, prediabetes, hypertension, hyperlipidemia."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin can lower blood pressure a little bit"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.pregabalin_can_lower_blood_pressure_a_little_bit",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin can lower blood pressure a little bit."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "condition",
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "condition": "5/6",
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "depression / low mood",
+      "canonical_anchor": "diagnosis.mood_depression.depression.present.after_sertraline_decrease",
+      "kind": "diagnosis",
+      "subtype": "mood_depression",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "depression",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Depression; previously treated with sertraline 50 mg for about eight months; initial nausea resolved; experienced decreased libido as a side effect"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.depression_previously_treated_with_sertraline_50_mg_for_about_eight_months_initial_nausea_resolved_experienced_decreased_libido_as_a_side_effect",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Depression; previously treated with sertraline 50 mg for about eight months; initial nausea resolved; experienced decreased libido as a side effect."
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.sister_takes_medication_for_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister takes medication for depression."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Depression symptoms have recurred after stopping sertraline approximately 2–3 weeks ago"
+        },
+        {
+          "model": "glm-5p2",
+          "key": "symptom.depression_symptoms_have_recurred_after_stopping_sertraline_approximately_23_weeks_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Depression symptoms have recurred after stopping sertraline approximately 2–3 weeks ago."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.sister_takes_medication_for_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister takes medication for depression."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.duloxetine_selected_for_dual_benefit_in_treating_both_depression_and_fibromyalgia_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine selected for dual benefit in treating both depression and fibromyalgia pain."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Depression"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.her_sister_takes_medication_for_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Her sister takes medication for depression."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Depression, previously treated with sertraline 50 mg for approximately 8 months"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.sister_takes_medication_for_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister takes medication for depression."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Past psychiatric diagnosis: depression, previously treated with sertraline 50 mg for approximately 8 months"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.sister_takes_medication_for_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister: takes medication for depression."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has depression"
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.sister_takes_medication_for_depression",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sister takes medication for depression."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.duloxetine_is_being_used_to_treat_both_depression_and_fibromyalgia_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine is being used to treat both depression and fibromyalgia pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": false,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Pregabalin",
+      "canonical_anchor": "med.medication.pregabalin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "pregabalin",
+        "value": "150",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.pregabalin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pregabalin 150 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F032",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily (for prediabetes)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metformin 500 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg (for blood pressure)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lisinopril 10 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F034",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": "daily",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg (for cholesterol)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Atorvastatin 20 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F035",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "2/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "famhist.pain.pain.present",
+      "kind": "famhist",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.mother_had_chronic_pain_and_achiness_tiredness_possibly_fibromyalgia_though_not_formally_diagnosed",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother had chronic pain and achiness/tiredness, possibly fibromyalgia though not formally diagnosed."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.mother_had_chronic_pain_always_achy_and_tired_unclear_if_formally_diagnosed_with_fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother had chronic pain, always achy and tired; unclear if formally diagnosed with fibromyalgia."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.mother_had_chronic_pain_achiness_and_fatigue_it_is_unknown_whether_this_was_ever_diagnosed_as_fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother had chronic pain, achiness, and fatigue; it is unknown whether this was ever diagnosed as fibromyalgia."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.mother_history_of_chronic_pain_achiness_and_fatigue_possible_undiagnosed_fibromyalgia",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mother: history of chronic pain, achiness, and fatigue; possible undiagnosed fibromyalgia."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "family_history.patients_mother_was_always_in_pain",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient’s mother was always in pain."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F036",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "No known family history of autoimmune conditions such as lupus or rheumatoid arthritis",
+      "canonical_anchor": "famhist.famhist.known_family_of_autoimmune_such_lupus_or_rheumatoid",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "no known family history of autoimmune condition such as lupus or rheumatoid arthritis",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.no_known_family_history_of_autoimmune_conditions_such_as_lupus_or_rheumatoid_arthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known family history of autoimmune conditions such as lupus or rheumatoid arthritis."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "family_history.no_known_family_history_of_autoimmune_conditions_such_as_lupus_or_rheumatoid_arthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known family history of autoimmune conditions such as lupus or rheumatoid arthritis."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.no_known_family_history_of_autoimmune_conditions_such_as_lupus_or_rheumatoid_arthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known family history of autoimmune conditions such as lupus or rheumatoid arthritis."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.no_known_family_history_of_autoimmune_conditions_such_as_lupus_or_rheumatoid_arthritis",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No known family history of autoimmune conditions such as lupus or rheumatoid arthritis."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F038",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": "50",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Insight: Patient recognizes that stopping sertraline contributed to recurrence of depressive symptoms; acknowledges she did not realize how much it was helping."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Sertraline 50 mg — ran out approximately 2–3 weeks ago; not refilled."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She has been off sertraline 50 mg for approximately 2–3 weeks."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Ongoing side effect of sertraline: decreased libido, which was problematic for the patient."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient took sertraline 50 mg for depression for about eight months."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F044",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "unit": "3/6",
+            "value": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Patient denies any thoughts of hurting herself",
+      "canonical_anchor": "diagnosis.denie.denie_any_thought_of_hurting_herself.present",
+      "kind": "diagnosis",
+      "subtype": "denie",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "patient denie any thought of hurting herself",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.patient_denies_any_thoughts_of_hurting_herself",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies any thoughts of hurting herself."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.patient_denies_any_thoughts_of_hurting_herself",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies any thoughts of hurting herself."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.patient_denies_thoughts_of_hurting_herself",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies thoughts of hurting herself."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F045",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "pain",
+      "canonical_anchor": "diagnosis.pain.pain.improved",
+      "kind": "diagnosis",
+      "subtype": "pain",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "pain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.fibromyalgia_pain_improved_with_pregabalin_150_mg_twice_daily_pain_score_down_from_7_to_5_tender_points_present_at_occiput_trapezius_bilaterally_supraspinatus_low_back_and_greater_trochanters_bilaterally_7_of_18_classic_points",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia: pain improved with pregabalin 150 mg twice daily; pain score down from 7 to 5; tender points present at occiput, trapezius bilaterally, supraspinatus, low back, and greater trochanters bilaterally (7 of 18 classic points)."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "diagnosis.fibromyalgia_with_pain_improved_on_pregabalin_150_mg_twice_daily_pain_score_reduced_from_7_to_5",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia, with pain improved on pregabalin 150 mg twice daily; pain score reduced from 7 to 5."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.fibromyalgia_with_improved_pain_on_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia with improved pain on pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.fibromyalgia_pain_improved_with_pregabalin_150_mg_twice_daily_with_pain_score_down_from_7_to_5",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia: pain improved with pregabalin 150 mg twice daily, with pain score down from 7 to 5."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.fibromyalgia_pain_improved_on_pregabalin_150_mg_twice_daily_7_of_18_classic_tender_points_positive_on_exam_occiput_bilateral_trapezius_supraspinatus_low_back_bilateral_greater_trochanters",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia: pain improved on pregabalin 150 mg twice daily; 7 of 18 classic tender points positive on exam (occiput, bilateral trapezius, supraspinatus, low back, bilateral greater trochanters)."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "diagnosis.fibromyalgia_pain_improved_with_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Fibromyalgia pain improved with pregabalin 150 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F046",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue pregabalin 150 mg twice daily",
+      "canonical_anchor": "instruct.continue.continue_pregabalin.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "continue pregabalin 150 mg twice daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_pregabalin_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue pregabalin 150 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F047",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "duloxetine",
+      "canonical_anchor": "med.medication.duloxetine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "duloxetine",
+        "value": "30",
+        "unit": "mg",
+        "time": "once daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily; follow up in four weeks to assess response and consider increasing to 60 mg."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily; may increase to 60 mg after 1–2 weeks based on response."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily; plan to increase to 60 mg after follow-up if tolerated."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily; reassess in four weeks with potential increase to 60 mg."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.duloxetine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F048",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "trazodone",
+      "canonical_anchor": "med.medication.trazodone.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "trazodone",
+        "value": "50",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F050",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "6/6",
+            "value": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue trazodone 50 mg at bedtime",
+      "canonical_anchor": "instruct.continue.continue_trazodone_at_bedtime.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "trazodone",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_trazodone_50_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_trazodone_50_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_trazodone_50_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_trazodone_50_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_trazodone_50_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_trazodone_50_mg_at_bedtime",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg at bedtime."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F051",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "atorvastatin",
+      "canonical_anchor": "med.medication.atorvastatin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "atorvastatin",
+        "value": "20",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at the current dose."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.atorvastatin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin at current dose."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F052",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "1/6",
+            "value": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "lisinopril",
+      "canonical_anchor": "med.medication.lisinopril.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg at the current dose."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.lisinopril",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril at current dose."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F053",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "unit": "1/6",
+            "value": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "metformin",
+      "canonical_anchor": "med.medication.metformin.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metformin",
+        "value": "500",
+        "unit": "mg",
+        "time": "twice daily",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.metformin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin at current dose."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F054",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6",
+            "time": "1/6",
+            "unit": "1/6",
+            "value": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Continue metformin, lisinopril, and atorvastatin at current doses",
+      "canonical_anchor": "instruct.continue.continue_metformin_lisinopril_and_atorvastatin_at_current_dose.present",
+      "kind": "instruct",
+      "subtype": "continue",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "atorvastatin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "treatment.continue_metformin_lisinopril_and_atorvastatin_at_current_doses",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "treatment.continue_metformin_lisinopril_and_atorvastatin_at_current_doses",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.continue_metformin_lisinopril_and_atorvastatin_at_current_doses",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.continue_metformin_lisinopril_and_atorvastatin_at_current_doses",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin, lisinopril, and atorvastatin at current doses."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_metformin_500_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin 500 mg twice daily."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_lisinopril_10_mg_at_the_current_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril 10 mg at the current dose."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.continue_atorvastatin_20_mg_at_the_current_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin 20 mg at the current dose."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_metformin_at_current_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue metformin at current dose."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_lisinopril_at_current_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue lisinopril at current dose."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.continue_atorvastatin_at_current_dose",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue atorvastatin at current dose."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F055",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "gpt-5_6-sol",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "vitamin d",
+      "canonical_anchor": "med.medication.vitamin_d.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "vitamin d",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order routine labs: CBC, CMP, TSH, and vitamin D level."
+        },
+        {
+          "model": "glm-5p2",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order routine laboratory tests: CBC, CMP, TSH, and vitamin D level."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D level."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Investigations: CBC, CMP, TSH, and vitamin D level ordered; vitamin D deficiency can contribute to fatigue and pain."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Laboratory orders: CBC, CMP, TSH, and vitamin D level."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.vitamin_d",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Order vitamin D level."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F058",
+        "support": "6/6",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "glm-5p2",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 6,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "6/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Tension headaches occur 2–3 times per week; treated with over-the-counter ibuprofen",
+      "canonical_anchor": "symptom.symptom.tension_headache_occur_treated_with_over_counter_ibuprofen.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "ibuprofen",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "symptom.tension_headaches_occur_23_times_per_week_treated_with_over_the_counter_ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tension headaches occur 2–3 times per week; treated with over-the-counter ibuprofen."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.tension_headaches_occur_2_3_times_per_week_treated_with_over_the_counter_ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tension headaches occur 2-3 times per week, treated with over-the-counter ibuprofen."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.tension_headaches_occur_approximately_23_times_per_week_treated_with_over_the_counter_ibuprofen",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Tension headaches occur approximately 2–3 times per week, treated with over-the-counter ibuprofen."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F077",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Metamucil",
+      "canonical_anchor": "med.medication.metamucil.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "metamucil",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil fiber supplement as needed for constipation."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil fiber for constipation."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.metamucil",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Metamucil for constipation."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F080",
+        "support": "3/3",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "sertraline",
+      "canonical_anchor": "med.medication.sertraline.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "sertraline",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "glm-5p2",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine expected to have fewer sexual side effects than sertraline."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Counseled that duloxetine may cause initial nausea that usually resolves after about a week, takes 4-6 weeks for full effect, may show some improvement in sleep and energy within 1-2 weeks, and tends to cause fewer sexual side effects than sertraline."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient education: duloxetine typically takes 4–6 weeks for full effect, with possible early improvement in sleep and energy within 1–2 weeks; transient nausea possible; lower risk of sexual side effects compared with sertraline; rare risk of serotonin syndrome discussed given concurrent pregabalin."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "medication.sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine does not tend to cause as much sexual side effects as sertraline."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F088",
+        "support": "4/4",
+        "models": [
+          "glm-5p2",
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "improved since pregabalin was increased from 75 mg to 150 mg twice daily",
+      "canonical_anchor": "symptom.symptom.improved_since_pregabalin_increased_from_to.improved",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "improved since pregabalin was increased from 75 mg to 150 mg twice daily",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "improved",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.improved_since_pregabalin_was_increased_to_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Widespread bilateral upper- and lower-body pain has improved since pregabalin was increased to 150 mg twice daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.improved_since_pregabalin_was_increased_from_75_mg_to_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain has improved since pregabalin was increased from 75 mg to 150 mg twice daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.improved_since_pregabalin_was_increased_from_75_mg_to_150_mg_twice_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Pain has improved since pregabalin was increased from 75 mg to 150 mg twice daily."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F096",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "llm",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "urinary issues",
+      "canonical_anchor": "symptom.symptom.urinary.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "urinary issue",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.urinary_symptoms",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denied urinary symptoms."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.urinary_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No urinary issues."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.urinary_issues",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies urinary issues."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F115",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "rashes or skin changes",
+      "canonical_anchor": "symptom.symptom.rashe_or_skin_change.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "rashe or skin change",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "negative",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.rashes_or_skin_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "She denied rashes or skin changes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "symptom.rashes_or_skin_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "No rashes or skin changes."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.rashes_or_skin_changes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient denies rashes or skin changes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F116",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": false,
+        "must_cover_source": null,
+        "must_not_err": false
+      }
+    },
+    {
+      "key": "Start duloxetine 30 mg once daily",
+      "canonical_anchor": "instruct.start.start_duloxetine.planned",
+      "kind": "instruct",
+      "subtype": "start",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "duloxetine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "planned",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.start_duloxetine_30_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.start_duloxetine_30_mg_once_daily",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.start_duloxetine_30_mg_once_daily_plan_to_increase_to_60_mg_after_follow_up_if_tolerated",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily; plan to increase to 60 mg after follow-up if tolerated."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "treatment.start_duloxetine_30_mg_once_daily_reassess_in_four_weeks_with_potential_increase_to_60_mg",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Start duloxetine 30 mg once daily; reassess in four weeks with potential increase to 60 mg."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F137",
+        "support": "4/4",
+        "models": [
+          "gpt-5_6-sol",
+          "qwen3p8-max",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "medication effect",
+      "canonical_anchor": "instruct.med_effect.medication_effect.present",
+      "kind": "instruct",
+      "subtype": "med_effect",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "planned",
+        "object": "duloxetine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_6-sol",
+          "key": "treatment.the_patient_was_advised_that_duloxetine_may_take_46_weeks_for_full_effect",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised that duloxetine may take 4–6 weeks for full effect."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "treatment.counseled_that_duloxetine_may_cause_initial_nausea_that_usually_resolves_after_about_a_week_takes_4_6_weeks_for_full_effect_may_show_some_improvement_in_sleep_and_energy_within_1_2_weeks_and_tends_to_cause_fewer_sexual_side_effects_than_sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Counseled that duloxetine may cause initial nausea that usually resolves after about a week, takes 4-6 weeks for full effect, may show some improvement in sleep and energy within 1-2 weeks, and tends to cause fewer sexual side effects than sertraline."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "treatment.duloxetine_typically_takes_four_to_six_weeks_for_full_effect",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Duloxetine typically takes four to six weeks for full effect."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F139",
+        "support": "3/3",
+        "models": [
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "been \"up and down\" since stopping sertraline; some days she feels \"really, really down\" and wants to stay in bed all day",
+      "canonical_anchor": "symptom.symptom.been_up_and_down_since_stopping_sertraline.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "sertraline",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "kimi-k3",
+          "key": "symptom.been_up_and_down_since_stopping_sertraline_some_days_she_feels_really_really_down_and_wants_to_stay_in_bed_all_day",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mood has been \"up and down\" since stopping sertraline; some days she feels \"really, really down\" and wants to stay in bed all day."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.been_up_and_down_since_stopping_sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mood has been \"up and down\" since stopping sertraline."
+        },
+        {
+          "model": "qwen3p8-max",
+          "key": "symptom.been_up_and_down_since_stopping_sertraline",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mood has been up and down since stopping sertraline."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F157",
+        "support": "3/3",
+        "models": [
+          "kimi-k3",
+          "minimax-m3",
+          "qwen3p8-max"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    }
+  ]
+}

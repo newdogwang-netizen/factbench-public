@@ -1,0 +1,1625 @@
+{
+  "protocol_version": "detfact/factset/v1",
+  "factset": {
+    "id": "case_x011_syn",
+    "version": "1",
+    "sha256": "827387a32f5bc792efdaf90571dd2d4ae0f316a1f575e9c3cff87e93b34c200f",
+    "reviewed": false
+  },
+  "source": {
+    "kind": "note_consensus_v2",
+    "case": "case_x011_syn",
+    "path": "case_x011_syn.json",
+    "sha256": null,
+    "stats": {
+      "n_models": 5,
+      "n_facts": 272,
+      "certain": 10,
+      "strict_certain": 10,
+      "low_conf": 63,
+      "unique": 199,
+      "unanimous": 13,
+      "low_support": 232
+    }
+  },
+  "selection": {
+    "policy": "note_consensus_threshold",
+    "gold_scope": "high_precision_subset",
+    "unmatched_claims": "not_in_factset",
+    "k_support": 3,
+    "statuses": [
+      "release"
+    ],
+    "fact_count": 14,
+    "unstable_skipped": 23
+  },
+  "rules": {
+    "version": "detfact-rules/0.7",
+    "identity": "canonical_anchor exact equality",
+    "field_normalization": "detfact_consensus.norm_field"
+  },
+  "facts": [
+    {
+      "key": "blackout curtains",
+      "canonical_anchor": "symptom.symptom.blackout_curtain.present",
+      "kind": "symptom",
+      "subtype": "symptom",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blackout curtain",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.bedroom_has_blackout_curtains_and_is_quiet_temperature_is_about_70_degrees_which_is_warmer_than_he_prefers",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports bedroom has blackout curtains and is quiet; temperature is about 70 degrees, which is warmer than he prefers."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "symptom.blackout_curtains",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The bedroom has blackout curtains."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.blackout_curtains",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The bedroom has blackout curtains."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F020",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.worsened",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "worsened",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety that is worse at night when things quiet down"
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "symptom.anxiety_that_is_worse_at_night_when_things_quiet_down",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety that is worse at night when things quiet down."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Mood: The patient reported anxiety that is worse at night"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports that anxiety is worse at night"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "symptom.that_anxiety_is_worse_at_night",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports that anxiety is worse at night."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has not previously received medication or therapy specifically for anxiety"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports lifelong tendency to worry, with anxiety worsening at night when things quiet down"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "symptom.lifelong_tendency_to_worry_with_anxiety_worsening_at_night_when_things_quiet_down",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports lifelong tendency to worry, with anxiety worsening at night when things quiet down."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F021",
+        "support": "4/4",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 4,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "blood pressure",
+      "canonical_anchor": "diagnosis.cardiovascular.blood_pressure.present.hypertension",
+      "kind": "diagnosis",
+      "subtype": "cardiovascular",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity",
+        "condition"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "blood pressure",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": "hypertension"
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient has high blood pressure"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has hypertension"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.the_patient_has_hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has hypertension."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.blood_pressure",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.hypertension",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hypertension."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F023",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "condition",
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "condition": "4/6",
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "anxiety",
+      "canonical_anchor": "diagnosis.mood_anxiety.anxiety.present",
+      "kind": "diagnosis",
+      "subtype": "mood_anxiety",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "anxiety",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports anxiety, never treated with medication or therapy"
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reported some anxiety"
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient reports longstanding anxiety and describes himself as a lifelong worrier"
+        },
+        {
+          "model": "kimi-k3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety; patient describes being a worrier his whole life"
+        },
+        {
+          "model": "minimax-m3",
+          "key": "diagnosis.anxiety",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Anxiety (lifelong, self-described as a \"worrier,\" never treated with medication or therapy)"
+        }
+      ],
+      "provenance": {
+        "audit_id": "F025",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "4/6",
+            "status": "4/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Losartan",
+      "canonical_anchor": "med.medication.losartan.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "losartan",
+        "value": "100",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 100 mg for blood pressure."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 100 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan approximately 100 mg."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 100 mg for blood pressure."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.losartan",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Losartan 100 mg (for blood pressure)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F027",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "hydroxyzine",
+      "canonical_anchor": "med.medication.hydroxyzine.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "hydroxyzine",
+        "value": "25",
+        "unit": "mg",
+        "time": "8:00",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg for allergies and sometimes to help sleep, taken around 8-9 PM."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg, usually taken around 8:00 or 9:00 PM for allergies and sometimes for sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg, usually taken around 8 or 9 PM before bed, for allergies and sometimes to help sleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Hydroxyzine 25 mg (for allergies and sometimes for sleep, taken around 8-9 PM)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F028",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "1/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Lipitor",
+      "canonical_anchor": "med.medication.lipitor.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "lipitor",
+        "value": "40",
+        "unit": "mg",
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.lipitor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lipitor 40 mg for cholesterol."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.lipitor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lipitor 40 mg for cholesterol."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.lipitor",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Lipitor 40 mg (for cholesterol)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F029",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6",
+            "unit": "3/6",
+            "value": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "trazodone",
+      "canonical_anchor": "med.medication.trazodone.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "trazodone",
+        "value": "50",
+        "unit": "mg",
+        "time": "weekly",
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg as needed for sleep, taken a few times a week when unable to fall back asleep."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg as needed for sleep, usually three or four times weekly."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg as needed, about three or four times a week, sometimes taken when waking and unable to fall back asleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Trazodone 50 mg (as needed for sleep, taken 3-4 times per week when unable to fall back asleep)."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F030",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "1/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.present",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "past",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient tried melatonin in the past but has not taken it since starting CPAP."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient tried melatonin in the past before starting CPAP."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient reports trying melatonin previously but not since starting CPAP."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F031",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "text",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Father had a heart attack a few years ago",
+      "canonical_anchor": "famhist.famhist.father_heart_attack_few_ago.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "father had a heart attack a few year ago",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.father_had_a_heart_attack_a_few_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had a heart attack a few years ago."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.father_had_a_heart_attack_a_few_years_ago",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had a heart attack a few years ago."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.father_had_a_heart_attack_a_few_years_ago_and_is_okay_now",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Father had a heart attack a few years ago and is okay now."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F033",
+        "support": "3/3",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/6",
+            "status": "3/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "Paternal grandfather had type 2 diabetes",
+      "canonical_anchor": "famhist.famhist.paternal_grandfather_type.present",
+      "kind": "famhist",
+      "subtype": "famhist",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "has",
+        "object": "paternal grandfather had type 2 diabete",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "present",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "family_history.paternal_grandfather_had_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Paternal grandfather had type 2 diabetes."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "family_history.paternal_grandfather_had_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Paternal grandfather had type 2 diabetes."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "family_history.the_patients_paternal_grandfather_had_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient’s paternal grandfather had type 2 diabetes."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "family_history.paternal_grandfather_had_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Paternal grandfather had type 2 diabetes."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "family_history.paternal_grandfather_type_2_diabetes",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Paternal grandfather: type 2 diabetes."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F036",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": false,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "hydroxyzine",
+      "canonical_anchor": "med.medication.hydroxyzine.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "hydroxyzine",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Increase CPAP pressure from 8 to 10, to be adjusted remotely. Continue trazodone 50 mg as needed, not every night. Stop hydroxyzine for sleep; discuss switching to a non-sedating antihistamine (e.g., Claritin or Zyrtec) with primary care doctor for allergies."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to stop taking hydroxyzine for sleep."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stop using hydroxyzine for sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Stop hydroxyzine for sleep because it can suppress REM sleep and worsen sleep quality."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.hydroxyzine",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Discontinue hydroxyzine for sleep (interferes with REM sleep architecture); discuss non-sedating antihistamine (e.g., Claritin or Zyrtec) with primary care for daytime allergy management."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F043",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "trazodone",
+      "canonical_anchor": "med.medication.trazodone.ordered",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject",
+        "time",
+        "unit",
+        "value"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "value",
+        "unit",
+        "time",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "trazodone",
+        "value": "50",
+        "unit": "mg",
+        "time": "every night",
+        "location": null,
+        "owner": null,
+        "status": "ordered",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "deepseek-v4-flash-0731",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Medication plans: Increase CPAP pressure from 8 to 10, to be adjusted remotely. Continue trazodone 50 mg as needed, not every night. Stop hydroxyzine for sleep; discuss switching to a non-sedating antihistamine (e.g., Claritin or Zyrtec) with primary care doctor for allergies."
+        },
+        {
+          "model": "gpt-5_4",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient was advised to continue trazodone 50 mg as needed."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg as needed when unable to return to sleep."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg as needed when waking and unable to fall back asleep."
+        },
+        {
+          "model": "minimax-m3",
+          "key": "medication.trazodone",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Continue trazodone 50 mg as needed for sleep, but not every night, to avoid dependence."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F044",
+        "support": "5/5",
+        "models": [
+          "deepseek-v4-flash-0731",
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3",
+          "minimax-m3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 5,
+        "transcript_anchored": false
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [
+          "polarity",
+          "status",
+          "unit",
+          "value"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/6",
+            "status": "5/6",
+            "time": "2/6",
+            "unit": "5/6",
+            "value": "5/6"
+          }
+        }
+      }
+    },
+    {
+      "key": "melatonin",
+      "canonical_anchor": "med.medication.melatonin.active",
+      "kind": "med",
+      "subtype": "medication",
+      "identity_fields": [
+        "canonical_anchor"
+      ],
+      "check_fields": [
+        "object",
+        "polarity",
+        "status",
+        "subject"
+      ],
+      "coverage_fields": [
+        "subject",
+        "object",
+        "status",
+        "polarity"
+      ],
+      "fields": {
+        "subject": "patient",
+        "predicate": "takes",
+        "object": "melatonin",
+        "value": null,
+        "unit": null,
+        "time": null,
+        "location": null,
+        "owner": null,
+        "status": "active",
+        "polarity": "positive",
+        "condition": null
+      },
+      "evidence": [
+        {
+          "model": "gpt-5_4",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "The patient has not taken melatonin since starting CPAP."
+        },
+        {
+          "model": "gpt-5_6-sol",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Melatonin was tried before CPAP treatment but has not been used recently."
+        },
+        {
+          "model": "kimi-k3",
+          "key": "medication.melatonin",
+          "source": [
+            "generated_output"
+          ],
+          "quote": "Patient tried melatonin before starting CPAP and has not taken it since."
+        }
+      ],
+      "provenance": {
+        "audit_id": "F107",
+        "support": "3/3",
+        "models": [
+          "gpt-5_4",
+          "gpt-5_6-sol",
+          "kimi-k3"
+        ],
+        "status": "release",
+        "field_stable": true,
+        "strict_field_stable": true,
+        "policy": "note_consensus_threshold",
+        "k_support": 3,
+        "n_supporters": 3,
+        "transcript_anchored": true
+      },
+      "salience": {
+        "must_cover": true,
+        "must_cover_source": "parser",
+        "must_not_err": true,
+        "cover_fields": [],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 6,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "2/6",
+            "status": "2/6"
+          }
+        }
+      }
+    }
+  ]
+}
