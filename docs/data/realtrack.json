@@ -1,0 +1,64 @@
+{
+ "date": "2026-09-01",
+ "cases": 21,
+ "instrument": "detfact-v2.1",
+ "note": "Private real-ASR consultation track. Transcripts, notes and gold are never published (privacy); only these aggregates are. All models are in-pool (they also authored the gold consensus), so absolute levels carry familiarity advantage; the track exists for validity findings, not leaderboard ranking.",
+ "entries": [
+  {
+   "label": "kimi-k3",
+   "mean_coverage": 0.8219,
+   "critical_wrong": 0,
+   "frame_disputes": 4,
+   "adjudicated_crit": 2,
+   "crit_kind": "confirmed+llm"
+  },
+  {
+   "label": "minimax-m3",
+   "mean_coverage": 0.7532,
+   "critical_wrong": 0,
+   "frame_disputes": 6,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm"
+  },
+  {
+   "label": "deepseek-v4-flash-0731",
+   "mean_coverage": 0.6367,
+   "critical_wrong": 0,
+   "frame_disputes": 9,
+   "adjudicated_crit": 1,
+   "crit_kind": "confirmed+llm"
+  },
+  {
+   "label": "kimi-k2p6",
+   "mean_coverage": 0.5963,
+   "critical_wrong": 1,
+   "frame_disputes": 4,
+   "adjudicated_crit": 1,
+   "crit_kind": "confirmed+llm"
+  },
+  {
+   "label": "qwen3p8-max",
+   "mean_coverage": 0.5957,
+   "critical_wrong": 0,
+   "frame_disputes": 8,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm"
+  },
+  {
+   "label": "google_gemini-2_5-pro",
+   "mean_coverage": 0.4759,
+   "critical_wrong": 0,
+   "frame_disputes": 3,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm"
+  },
+  {
+   "label": "glm-5p2",
+   "mean_coverage": 0.4584,
+   "critical_wrong": 1,
+   "frame_disputes": 3,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm"
+  }
+ ]
+}

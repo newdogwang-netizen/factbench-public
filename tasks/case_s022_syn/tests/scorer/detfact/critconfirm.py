@@ -57,7 +57,7 @@ _PASTISH = {"past", "stop", "stopped", "historical", "resolved", "worsened"}
 _PAST_QUOTE_RE = re.compile(
     r"\b(was|were|had|has been|have been|tried|took|caused|gave|made "
     r"(?:me|her|him|them)|stopped|discontinued|resolved|went away|used to|"
-    r"previously|prior|past|formerly|before pregnancy|history of|initially|at first|"
+    r"previously|previous|prior|past|formerly|temporarily|switched back|back to|before pregnancy|history of|initially|at first|"
     r"completed|finished|tapered|"
     r"(?:increased|decreased|reduced|raised|lowered|changed|bumped|titrated)"
     r"\s+(?:from|to)|"
@@ -68,7 +68,7 @@ _PAST_QUOTE_RE = re.compile(
 # Explicit negation morphology inside the claim's own sentence: if present, a
 # parser verdict of polarity=positive is a list-parse failure, not evidence.
 _NEG_QUOTE_RE = re.compile(
-    r"^\s*no\b|\bno (?:known|current|regular|new|other|significant)\b"
+    r"^\s*no\b|\bno (?:known|current|regular|new|other|significant|side effects?|issues?|problems?|complaints?|reactions?)\b"
     r"|\bdenies\b|\bdenied\b|\bwithout\b|\bnegative for\b|\bnone\b"
     r"|\bnot? (?:allerg|need|use|tak)", re.I)
 
@@ -311,6 +311,23 @@ def confirm(claim, fact, mismatch_fields, transcript):
     """
     cf = claim.get("fields") or {}
     quote = str(claim.get("evidence_quote") or "")
+    qn_early = _norm(quote)
+    # Headings ("**Allergies:**") assert nothing at all.
+    if re.match(r"^\W*[\w /()&-]+:\s*\W*$", quote.strip()):
+        return False, {"surviving": [],
+                       "demoted": [{"field": "*",
+                                    "reason": "heading_no_assertion"}]}
+    # A bare noun phrase ("Remeron (Mirtazapine)") carries no frame of its
+    # own — its parsed status is inherited from lost list context, so status
+    # convictions on it are untrusted. It DOES assert existence (a note
+    # listing a finding asserts it), so polarity/value convictions stand.
+    _bare = len(re.findall(r"[a-z]+", qn_early)) <= 4 and not re.search(
+        r"\b(is|are|was|were|takes?|taking|reports?|denies|denied|"
+        r"continues?|started|stopped|has|have|had|no|not)\b", qn_early)
+    # Alias/terminology statements ("mirtazapine is also called Remeron")
+    # assert naming, not status.
+    _alias = bool(re.search(r"\b(?:also (?:called|known as)|a\.?k\.?a\.?)\b",
+                            qn_early))
     tnorm = _norm(transcript)
     windows = fuzzy_windows(tnorm, _entity_tokens(claim, fact))
     if not windows:
@@ -397,6 +414,12 @@ def confirm(claim, fact, mismatch_fields, transcript):
             if _value_anchored(cf.get("value"), windows, unit=cf.get("unit")):
                 demote = "value_unit_anchored_in_source"
         elif field == "time":
+            if _PAST_QUOTE_RE.search(quote):
+                # Historical/temporary regimen sentences: their frequency
+                # describes a past arrangement, not the current schedule.
+                demoted.append({"field": field,
+                                "reason": "quote_past_morphology"})
+                continue
             c_time = str(mm.get("claim") or cf.get("time") or "")
             f_time = str(mm.get("fact") or "")
             if "prn" in _freq_canon_set(_norm(quote)):
@@ -424,7 +447,11 @@ def confirm(claim, fact, mismatch_fields, transcript):
                         demote = "time_value_anchored_in_source"
         elif field == "status":
             c_stat = str(mm.get("claim") or cf.get("status") or "").lower()
-            if _NEG_QUOTE_RE.search(quote):
+            if _alias:
+                demote = "alias_statement"
+            elif _bare:
+                demote = "bare_mention_status_untrusted"
+            elif _NEG_QUOTE_RE.search(quote):
                 # Explicit negation sentences ("No known drug allergies other
                 # than...") get unreliable status parses; same reasoning as
                 # the polarity list-parse guard.
@@ -441,7 +468,15 @@ def confirm(claim, fact, mismatch_fields, transcript):
                     demote = "quote_past_morphology"
         elif field == "polarity":
             c_pol = str(mm.get("claim") or cf.get("polarity") or "").lower()
-            if c_pol == "positive" and _NEG_QUOTE_RE.search(quote):
+            if c_pol == "negative" and re.search(
+                    r"\b(?:no|not|without)\s+(?:any\s+)?(?:change|changes|"
+                    r"modification|modifications|adjustment|adjustments)\b",
+                    qn_early):
+                # "continue ... without any changes": the negation scopes the
+                # change-word, not the entity — a continuation idiom, not a
+                # denial.
+                demote = "negation_scopes_change_word"
+            elif c_pol == "positive" and _NEG_QUOTE_RE.search(quote):
                 # The sentence itself is an explicit negation ("No known
                 # allergy to..."): polarity=positive is a list-parse
                 # failure on the claim side, not evidence.
