@@ -73,6 +73,9 @@ transparency but plays no role in scores.
 - Specialty coverage is bounded by the parser's clinical rule domain; tasks
   ship only for specialties that pass the domain gate.
 
+Design rationale for every rule above (and the comparison with direct
+LLM-judge scoring) lives in `docs/DESIGN.md`.
+
 The full internal protocol (real-transcript validity track, per-class mutation
 recall card, sealed hashes) is maintained privately; this file is the public,
 self-contained summary.

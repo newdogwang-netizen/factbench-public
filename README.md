@@ -58,6 +58,11 @@ positive-control card double as cheat-trials.
 
 ## Known limits (published, not hidden)
 
+**Why the rules are shaped this way** — pass-bar calibration, quorum-demanded
+coverage, the two-vote critical channel, and why the score is produced by a
+deterministic scorer with LLMs confined to an appeals lane (vs. direct
+LLM-judge grading) — is documented in [`docs/DESIGN.md`](docs/DESIGN.md).
+
 See `PROTOCOL.md` (Known limits): narrative-tense residuals, weak primary-channel
 recall on whole-drug-swap and plan-fabrication (covered by fabrication alarms and
 coverage-drop channels), specialty domain gate (out-of-domain cases are excluded
