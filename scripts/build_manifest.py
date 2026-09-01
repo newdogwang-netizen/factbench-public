@@ -42,7 +42,7 @@ def main():
     manifest = {
         "name": "factbench",
         "version": "1.0.0",
-        "protocol": "detfact-v2.0",
+        "protocol": "detfact-v2.1",
         "license": "Apache-2.0",
         "homepage": "https://github.com/newdogwang-netizen/factbench-public",
         "data_provenance": "fully synthetic (fictional patients); no real patient data",

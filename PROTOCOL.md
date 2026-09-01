@@ -1,4 +1,4 @@
-# Protocol `detfact-v2.0` — public summary
+# Protocol `detfact-v2.1` — public summary
 
 ## How gold was built
 1. Seven models each wrote a note from the same fictional transcript

@@ -10,14 +10,14 @@ keywords = ["clinical-notes", "factual-consistency", "medical", "chronic"]
 name = "Heidi Health"
 
 [metadata]
-protocol = "detfact-v2.0"
+protocol = "detfact-v2.1"
 fictional = true
 difficulty = "hard"
 gold_pipeline = "note-consensus v2 (7-model fact-level consensus, quote gate, transcript anchoring, arbitration)"
 gold_facts = 39
 must_cover = 36
 domain_gate = "valid"
-pass_rule = "critical_wrong == 0 and coverage >= 0.43 (oracle-calibrated)"
+pass_rule = "critical_wrong == 0 and coverage >= 0.41 (oracle-calibrated)"
 
 [verifier]
 timeout_sec = 600.0

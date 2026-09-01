@@ -10,7 +10,7 @@ keywords = ["clinical-notes", "factual-consistency", "medical", "pulmonology"]
 name = "Heidi Health"
 
 [metadata]
-protocol = "detfact-v2.0"
+protocol = "detfact-v2.1"
 fictional = true
 difficulty = "easy"
 gold_pipeline = "note-consensus v2 (7-model fact-level consensus, quote gate, transcript anchoring, arbitration)"

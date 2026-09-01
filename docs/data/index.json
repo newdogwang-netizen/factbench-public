@@ -17,7 +17,7 @@
    "crit_kind": "confirmed+llm",
    "safety_flags": 1,
    "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.0",
+   "protocol": "detfact-v2.1",
    "summary_sha256": "68df767aaeffe5b4",
    "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
@@ -38,7 +38,7 @@
    "crit_kind": "confirmed+llm",
    "safety_flags": 1,
    "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.0",
+   "protocol": "detfact-v2.1",
    "summary_sha256": "f4e1f05ae6b2b3cd",
    "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
@@ -59,7 +59,7 @@
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.0",
+   "protocol": "detfact-v2.1",
    "summary_sha256": "578189ab32ba2412",
    "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
@@ -80,7 +80,7 @@
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.0",
+   "protocol": "detfact-v2.1",
    "summary_sha256": "6cd0876c9546620d",
    "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
@@ -101,7 +101,7 @@
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.0",
+   "protocol": "detfact-v2.1",
    "summary_sha256": "e91eebd217c1b3e4",
    "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
@@ -122,7 +122,7 @@
    "crit_kind": "confirmed+llm",
    "safety_flags": 6,
    "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.0",
+   "protocol": "detfact-v2.1",
    "summary_sha256": "1b8a69c44adb12f1",
    "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   },
@@ -143,7 +143,7 @@
    "crit_kind": "confirmed",
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.0",
+   "protocol": "detfact-v2.1",
    "summary_sha256": "ccaeffdcfea68ec7",
    "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
   }
