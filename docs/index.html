@@ -285,15 +285,17 @@ function renderTable(latest){
   const el = document.getElementById("board_table");
   if(!latest.length){ el.innerHTML=""; return; }
   el.innerHTML = `<table><thead><tr>
-    <th>${t("t_model")}</th><th>${t("t_date")}</th><th>${t("t_cov")}</th><th>${t("t_ci")}</th>
-    <th>${t("t_pass")}</th><th>${t("t_crit")}</th><th>${t("t_disp")}</th><th>${t("t_safety")}</th><th>${t("t_note")}</th>
+    <th>${t("t_model")}</th><th>${t("t_date")}</th>
+    <th>${t("t_disp")}</th><th>${t("t_crit")}</th><th>${t("t_cov")}</th><th>${t("t_ci")}</th>
+    <th>${t("t_pass")}</th><th>${t("t_safety")}</th><th>${t("t_note")}</th>
     </tr></thead><tbody>`+
     latest.map(e=>`<tr><td>${e.label}</td><td class="num">${e.date}</td>
+      <td class="num">${e.frame_disputes==null?"—":`${e.frame_disputes}${e.adjudicated_crit!=null?` (${e.adjudicated_crit})`:""}`}</td>
+      <td class="num">${e.critical_wrong}${(e.crit_kind||"").startsWith("confirmed")||e.crit_kind==="calibrated"?" ✓":""} <span class="muted">${e.crit_kind==="calibrated"?t("crit_cal"):(e.crit_kind||"").startsWith("confirmed")?t("crit_conf"):t("crit_raw")}</span></td>
       <td class="num">${(e.mean_coverage*100).toFixed(1)}%</td>
       <td class="num">${e.coverage_ci95?`${(e.coverage_ci95[0]*100).toFixed(0)}–${(e.coverage_ci95[1]*100).toFixed(0)}%`:"—"}</td>
       <td class="num">${Math.round(e.pass_rate*e.tasks)}/${e.tasks}</td>
-      <td class="num">${e.critical_wrong}${(e.crit_kind||"").startsWith("confirmed")||e.crit_kind==="calibrated"?" ✓":""} <span class="muted">${e.crit_kind==="calibrated"?t("crit_cal"):(e.crit_kind||"").startsWith("confirmed")?t("crit_conf"):t("crit_raw")}</span></td>
-      <td class="num">${e.frame_disputes==null?"—":`${e.frame_disputes}${e.adjudicated_crit!=null?` (${e.adjudicated_crit})`:""}`}</td><td class="num">${e.safety_flags||0}</td>
+      <td class="num">${e.safety_flags||0}</td>
       <td class="muted">${e.note||""}</td></tr>`).join("")+`</tbody></table>`;
 }
 
