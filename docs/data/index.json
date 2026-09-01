@@ -167,6 +167,48 @@
    "protocol": "detfact-v2.1",
    "summary_sha256": "21a5da5fa6a1603e",
    "note": "local deployment (localhost vLLM-style endpoint); quorum coverage, two-vote crit (detfact-v2.1)"
+  },
+  {
+   "label": "dsv3-opus4p5-52k-pe",
+   "date": "2026-09-01",
+   "file": "dsv3-opus4p5-52k-pe__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.68,
+   "mean_coverage": 0.4234,
+   "coverage_ci95": [
+    0.3867,
+    0.4613
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 12,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 4,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "895eb036724d96c8",
+   "note": "Heidi fine-tune, local endpoint; deepseek-family base — one pool author (deepseek-v4-flash) shares the family"
+  },
+  {
+   "label": "glm-v3",
+   "date": "2026-09-01",
+   "file": "glm-v3__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.72,
+   "mean_coverage": 0.4357,
+   "coverage_ci95": [
+    0.3913,
+    0.479
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 7,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "a16cf777f0c9b07e",
+   "note": "local endpoint; glm family — one pool author (glm-5p2) shares the family; 14/25 notes salvaged (no final tags)"
   }
  ]
 }
