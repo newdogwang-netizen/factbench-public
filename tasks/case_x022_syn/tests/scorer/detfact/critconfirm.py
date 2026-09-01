@@ -438,7 +438,7 @@ def confirm(claim, fact, mismatch_fields, transcript):
                     if others:
                         tn3 = _norm(transcript)
                         owin = fuzzy_windows(tn3, sorted(set(others))[:6])
-                        # 不要求单位邻接:口语里数值与单位常被应答词隔开
+                        # No unit adjacency required: speech separates numbers from units
                         if owin and _value_anchored(val, owin):
                             demote = "enumeration_value_attribution"
                 except Exception:
