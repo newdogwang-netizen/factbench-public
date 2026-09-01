@@ -402,7 +402,12 @@ def confirm(claim, fact, mismatch_fields, transcript):
                         demote = "time_value_anchored_in_source"
         elif field == "status":
             c_stat = str(mm.get("claim") or cf.get("status") or "").lower()
-            if c_stat in _ACTIVE and _PAST_QUOTE_RE.search(quote):
+            if _NEG_QUOTE_RE.search(quote):
+                # Explicit negation sentences ("No known drug allergies other
+                # than...") get unreliable status parses; same reasoning as
+                # the polarity list-parse guard.
+                demote = "quote_negation_morphology"
+            elif c_stat in _ACTIVE and _PAST_QUOTE_RE.search(quote):
                 demote = "quote_past_morphology"
             elif c_stat in _PASTISH:
                 # Past-tense status sentences are exactly the surface the

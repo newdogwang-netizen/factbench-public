@@ -51,6 +51,29 @@ change?"). FactBench is built the other way around:
   (`make check`, `make mutation-check`), and the design audits that forced
   each rule (`docs/DESIGN.md`).
 
+## Related work — why this slot was empty
+
+Existing healthcare evals measure something adjacent, not this:
+
+- **Medical-knowledge QA** (MedQA, MMLU-Med, and successors) tests what a
+  model *knows*, not whether it stays factual when transcribing a specific
+  patient's consultation.
+- **Physician-rubric conversation evals** (e.g. HealthBench-style) grade
+  open-ended clinical dialogue with LLM/rubric judges — valuable for
+  bedside-manner-and-safety breadth, but the grading is judge-dependent and
+  not auditable at the level of "this dose contradicts this sentence".
+- **Dialogue-to-note datasets** (ACI-Bench, MTS-Dialog, MEDIQA tasks) are the
+  closest task-wise, but score with n-gram/embedding overlap (ROUGE,
+  BERTScore) or LLM judges — a note can fabricate a dose and still score
+  well on overlap, or be graded differently when the judge model changes.
+
+To our knowledge there is no public, deterministic, sentence-appealable
+leaderboard for **factual consistency of generated clinical notes**. That is
+the slot FactBench fills: fact-level scoring where every conviction is
+confirmed against the source transcript and every rule has a published
+control gate. (If we missed a comparable effort, open an issue — the
+comparison table has room.)
+
 ## How gold is built (note-consensus v2)
 
 The transcript is never mined directly (ASR noise poisons facts). Instead:

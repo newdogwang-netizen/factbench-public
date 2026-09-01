@@ -1,0 +1,393 @@
+{
+ "model": "claude-opus-5",
+ "tasks": 25,
+ "passed": 25,
+ "pass_rate": 1.0,
+ "mean_coverage": 0.5664,
+ "coverage_ci95": [
+  0.5352,
+  0.6
+ ],
+ "total_critical_wrong": 0,
+ "total_frame_disputes": 13,
+ "adjudicated_crit": 0,
+ "safety_flags": {
+  "unsupported_laterality": 2,
+  "medication_near_miss": 0,
+  "unsupported_date_admin": 0,
+  "unsupported_date": 1
+ },
+ "rows": [
+  {
+   "task": "case_s001_syn",
+   "generation": "external",
+   "coverage": 0.5435,
+   "must_cover_hit": 25,
+   "safety_flags": {},
+   "must_cover_total": 46,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.38,
+   "pass": true
+  },
+  {
+   "task": "case_s002_syn",
+   "generation": "external",
+   "coverage": 0.5581,
+   "must_cover_hit": 24,
+   "safety_flags": {},
+   "must_cover_total": 43,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.39,
+   "pass": true
+  },
+  {
+   "task": "case_s003_syn",
+   "generation": "external",
+   "coverage": 0.6429,
+   "must_cover_hit": 18,
+   "safety_flags": {},
+   "must_cover_total": 28,
+   "critical_wrong": 0,
+   "frame_disputes": 1,
+   "potential_fabrication": 0,
+   "min_coverage": 0.27,
+   "pass": true,
+   "dispute_adjudication": {
+    "error": 0,
+    "faithful": 1,
+    "unclear": 0
+   }
+  },
+  {
+   "task": "case_s004_syn",
+   "generation": "external",
+   "coverage": 0.5152,
+   "must_cover_hit": 17,
+   "safety_flags": {},
+   "must_cover_total": 33,
+   "critical_wrong": 0,
+   "frame_disputes": 2,
+   "potential_fabrication": 0,
+   "min_coverage": 0.36,
+   "pass": true,
+   "dispute_adjudication": {
+    "error": 0,
+    "faithful": 2,
+    "unclear": 0
+   }
+  },
+  {
+   "task": "case_s005_syn",
+   "generation": "external",
+   "coverage": 0.4286,
+   "must_cover_hit": 9,
+   "safety_flags": {},
+   "must_cover_total": 21,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.27,
+   "pass": true
+  },
+  {
+   "task": "case_s006_syn",
+   "generation": "external",
+   "coverage": 0.4444,
+   "must_cover_hit": 12,
+   "safety_flags": {},
+   "must_cover_total": 27,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 1,
+   "min_coverage": 0.29,
+   "pass": true
+  },
+  {
+   "task": "case_s007_syn",
+   "generation": "external",
+   "coverage": 0.6486,
+   "must_cover_hit": 24,
+   "safety_flags": {},
+   "must_cover_total": 37,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.38,
+   "pass": true
+  },
+  {
+   "task": "case_s008_syn",
+   "generation": "external",
+   "coverage": 0.4872,
+   "must_cover_hit": 19,
+   "safety_flags": {},
+   "must_cover_total": 39,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.18,
+   "pass": true
+  },
+  {
+   "task": "case_s009_syn",
+   "generation": "external",
+   "coverage": 0.4762,
+   "must_cover_hit": 10,
+   "safety_flags": {},
+   "must_cover_total": 21,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 1,
+   "min_coverage": 0.33,
+   "pass": true
+  },
+  {
+   "task": "case_s010_syn",
+   "generation": "external",
+   "coverage": 0.5312,
+   "must_cover_hit": 17,
+   "safety_flags": {},
+   "must_cover_total": 32,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.31,
+   "pass": true
+  },
+  {
+   "task": "case_s011_syn",
+   "generation": "external",
+   "coverage": 0.5625,
+   "must_cover_hit": 9,
+   "safety_flags": {
+    "unsupported_laterality": 1
+   },
+   "must_cover_total": 16,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 1,
+   "min_coverage": 0.35,
+   "pass": true
+  },
+  {
+   "task": "case_s012_syn",
+   "generation": "external",
+   "coverage": 0.7143,
+   "must_cover_hit": 15,
+   "safety_flags": {},
+   "must_cover_total": 21,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.47,
+   "pass": true
+  },
+  {
+   "task": "case_s013_syn",
+   "generation": "external",
+   "coverage": 0.6047,
+   "must_cover_hit": 26,
+   "safety_flags": {},
+   "must_cover_total": 43,
+   "critical_wrong": 0,
+   "frame_disputes": 1,
+   "potential_fabrication": 0,
+   "min_coverage": 0.37,
+   "pass": true,
+   "dispute_adjudication": {
+    "error": 0,
+    "faithful": 1,
+    "unclear": 0
+   }
+  },
+  {
+   "task": "case_s014_syn",
+   "generation": "external",
+   "coverage": 0.55,
+   "must_cover_hit": 33,
+   "safety_flags": {},
+   "must_cover_total": 60,
+   "critical_wrong": 0,
+   "frame_disputes": 1,
+   "potential_fabrication": 1,
+   "min_coverage": 0.37,
+   "pass": true,
+   "dispute_adjudication": {
+    "error": 0,
+    "faithful": 1,
+    "unclear": 0
+   }
+  },
+  {
+   "task": "case_s015_syn",
+   "generation": "external",
+   "coverage": 0.4167,
+   "must_cover_hit": 20,
+   "safety_flags": {
+    "unsupported_laterality": 1
+   },
+   "must_cover_total": 48,
+   "critical_wrong": 0,
+   "frame_disputes": 3,
+   "potential_fabrication": 1,
+   "min_coverage": 0.39,
+   "pass": true,
+   "dispute_adjudication": {
+    "error": 0,
+    "faithful": 3,
+    "unclear": 0
+   }
+  },
+  {
+   "task": "case_s016_syn",
+   "generation": "external",
+   "coverage": 0.6774,
+   "must_cover_hit": 21,
+   "safety_flags": {},
+   "must_cover_total": 31,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.36,
+   "pass": true
+  },
+  {
+   "task": "case_s017_syn",
+   "generation": "external",
+   "coverage": 0.561,
+   "must_cover_hit": 23,
+   "safety_flags": {},
+   "must_cover_total": 41,
+   "critical_wrong": 0,
+   "frame_disputes": 1,
+   "potential_fabrication": 0,
+   "min_coverage": 0.36,
+   "pass": true,
+   "dispute_adjudication": {
+    "error": 0,
+    "faithful": 1,
+    "unclear": 0
+   }
+  },
+  {
+   "task": "case_s018_syn",
+   "generation": "external",
+   "coverage": 0.7,
+   "must_cover_hit": 14,
+   "safety_flags": {},
+   "must_cover_total": 20,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.32,
+   "pass": true
+  },
+  {
+   "task": "case_s019_syn",
+   "generation": "external",
+   "coverage": 0.5833,
+   "must_cover_hit": 21,
+   "safety_flags": {},
+   "must_cover_total": 36,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.35,
+   "pass": true
+  },
+  {
+   "task": "case_s020_syn",
+   "generation": "external",
+   "coverage": 0.5238,
+   "must_cover_hit": 11,
+   "safety_flags": {},
+   "must_cover_total": 21,
+   "critical_wrong": 0,
+   "frame_disputes": 2,
+   "potential_fabrication": 0,
+   "min_coverage": 0.3,
+   "pass": true,
+   "dispute_adjudication": {
+    "error": 0,
+    "faithful": 2,
+    "unclear": 0
+   }
+  },
+  {
+   "task": "case_s021_syn",
+   "generation": "external",
+   "coverage": 0.6522,
+   "must_cover_hit": 15,
+   "safety_flags": {},
+   "must_cover_total": 23,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.49,
+   "pass": true
+  },
+  {
+   "task": "case_s022_syn",
+   "generation": "external",
+   "coverage": 0.6389,
+   "must_cover_hit": 23,
+   "safety_flags": {},
+   "must_cover_total": 36,
+   "critical_wrong": 0,
+   "frame_disputes": 2,
+   "potential_fabrication": 0,
+   "min_coverage": 0.39,
+   "pass": true,
+   "dispute_adjudication": {
+    "error": 0,
+    "faithful": 2,
+    "unclear": 0
+   }
+  },
+  {
+   "task": "case_s023_syn",
+   "generation": "external",
+   "coverage": 0.6667,
+   "must_cover_hit": 12,
+   "safety_flags": {},
+   "must_cover_total": 18,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.43,
+   "pass": true
+  },
+  {
+   "task": "case_s024_syn",
+   "generation": "external",
+   "coverage": 0.55,
+   "must_cover_hit": 11,
+   "safety_flags": {},
+   "must_cover_total": 20,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 0,
+   "min_coverage": 0.39,
+   "pass": true
+  },
+  {
+   "task": "case_s025_syn",
+   "generation": "external",
+   "coverage": 0.4828,
+   "must_cover_hit": 28,
+   "safety_flags": {
+    "unsupported_date": 1
+   },
+   "must_cover_total": 58,
+   "critical_wrong": 0,
+   "frame_disputes": 0,
+   "potential_fabrication": 1,
+   "min_coverage": 0.31,
+   "pass": true
+  }
+ ]
+}
