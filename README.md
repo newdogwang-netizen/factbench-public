@@ -1,6 +1,8 @@
 # FactBench — factual-consistency benchmark for clinical note generation
 
-*Protocol `detfact-v2.0` · fully synthetic public track · harbor-style task layout*
+*Protocol `detfact-v2.1` · fully synthetic public track · harbor-style task layout*
+
+**Live leaderboard:** https://newdogwang-netizen.github.io/factbench-public/
 
 FactBench measures whether an LLM/agent can turn a (fictional) doctor–patient
 consultation transcript into a **factually consistent** clinical note. Scoring is
@@ -9,19 +11,45 @@ verdict is reproducible and auditable down to the transcript quote.
 
 ## Why another benchmark
 
-Clinical-note factuality failures are quiet and dangerous: a dose written as 50 mg
-instead of 100 mg, a current medication written as past, a fabricated order. LLM
-judges are themselves noisy on exactly these details. FactBench's instrument was
-therefore calibrated like lab equipment:
+Clinical-note factuality failures are quiet and dangerous: a dose written as
+50 mg instead of 100 mg, a stopped medication written as current, a fabricated
+order. Nearly every existing note benchmark hands the grading to a stronger
+LLM judge — which is precisely the component that is noisy on these details,
+open to prompt injection from the note itself, biased toward its own model
+family, and impossible to audit ("did the model improve, or did the judge
+change?"). FactBench is built the other way around:
 
-- **Negative control**: an independent reference note (never part of gold
-  construction) must score **zero critical errors** on every task.
-- **Positive control**: a per-class mutation recall card (dose flip, frequency flip,
-  negation flip, history flip, resolve flip, drug swap, plan fabrication) is re-run on
-  every change; recall may not drop beyond tolerance.
-- Both gates ship in this repo: `make check` (oracle passes / empty note fails) and
-  `make mutation-check` (dose-flip mutations must be caught). CI runs both on PRs
-  and pushes; contributors can also run them locally.
+- **The score is a measurement, not an opinion.** Coverage and critical
+  errors come from a deterministic parser + tiered fact matcher: offline,
+  no network, bit-for-bit reproducible; every point traces to a sealed gold
+  fact with 7–8 quoted supporting sentences and a transcript anchor.
+- **A critical error is non-overturnable by construction.** It must both
+  contradict the answer key *and* be confirmed against the source transcript
+  (the claimed value appears nowhere near the entity). To appeal one you
+  would need to find the value in the source — and then it would never have
+  been convicted. We adjudicated 34 consecutive raw flags against frontier
+  models by hand; every rule that let a faithful sentence be accused was
+  fixed at the root, and the faithful-sentence corpus is sealed as a
+  permanent regression gate.
+- **The instrument's own error rates are measured and published, like lab
+  equipment.** Negative controls: reference notes and a 24-note
+  adjudicated-faithful corpus must score zero false convictions. Positive
+  controls: a per-class error-injection recall card (dose flips, negation
+  flips, history flips, drug swaps...) re-runs on every change with a sealed
+  drop tolerance. An LLM-judge benchmark can state none of these numbers.
+- **Coverage charges only for what is provably achievable.** A fact enters
+  the denominator only if the answer-key pool's own notes score it through
+  this exact pipeline; required fields are what a majority of those notes
+  actually carried. Name-dropping a drug without its dose earns nothing;
+  nobody is punished for extraction noise.
+- **LLMs sit only in a published appeals lane.** Ambiguous sentences
+  (~1–2% of claims) are listed as `frame_disputes` and may be re-examined by
+  two family-isolated judges — unanimous verdicts only, and they can never
+  mint or remove a single point of score.
+- **Everything needed to disagree with us ships in the repo**: sealed gold
+  with per-fact provenance, the scorer source, the control gates
+  (`make check`, `make mutation-check`), and the design audits that forced
+  each rule (`docs/DESIGN.md`).
 
 ## How gold is built (note-consensus v2)
 
@@ -43,6 +71,28 @@ The transcript is never mined directly (ASR noise poisons facts). Instead:
 5. importance is separated from existence: **must-cover** labels come from an
    independent reference note (its author model is excluded from the consensus pool).
 
+## Scoring semantics (what the numbers mean)
+
+Two independent axes, never blended:
+
+- **Coverage** — of the must-cover facts, how many the note earns credit for.
+  Charging is *empirically derived*: a fact charges only if ≥3 of the pool's
+  own notes score it through this exact pipeline, and only for the fields a
+  majority of those notes carried (`salience.cover_fields` / `cover_probe`).
+  Naming a drug without its dose earns nothing where the pool wrote doses.
+- **Critical errors** — confirmed dangerous mistakes under the *two-vote
+  rule*: the claim must contradict a must-not-err gold fact **and** be
+  deterministically confirmed against the source transcript (a dose that
+  appears nowhere near the drug, etc.). Unconfirmed candidates surface as
+  **`frame_disputes`** — published, outside the pass rule, optionally
+  re-examined by a dual-judge LLM lane (unanimous verdicts only,
+  `adjudicated_crit`).
+- **Pass** per task = `critical_wrong == 0 AND coverage ≥ MIN_COVERAGE`
+  (reference coverage × 0.7, capped at 0.5).
+
+Full rationale with the audits that forced each rule: [`docs/DESIGN.md`](docs/DESIGN.md);
+mechanics: [`PROTOCOL.md`](PROTOCOL.md).
+
 ## Task layout (harbor-style)
 
 ```
@@ -58,8 +108,8 @@ positive-control card double as cheat-trials.
 
 ## Known limits (published, not hidden)
 
-**Why the rules are shaped this way** — pass-bar calibration, quorum-demanded
-coverage, the two-vote critical channel, and why the score is produced by a
+**Why the rules are shaped this way** — pass-bar calibration, empirically
+derived coverage, the two-vote critical channel, and why the score is produced by a
 deterministic scorer with LLMs confined to an appeals lane (vs. direct
 LLM-judge grading) — is documented in [`docs/DESIGN.md`](docs/DESIGN.md).
 
@@ -85,27 +135,14 @@ exactly what the tasks contain. Difficulty tiers are in task metadata; noisier
 ASR-like transcript recipes are on the roadmap.
 
 
-## Baseline results (informational)
+## Results
 
-Scores of the seven gold-pool models' own notes against the released gold
-(canonical protocol, deterministic scoring). **Read with care**: these models
-participated in gold consensus, so in-pool scores carry a structural familiarity
-advantage and are published for orientation only, not as a leaderboard.
-`critical_wrong` counts are raw instrument readings (known narrative-tense
-artifact classes included, not individually adjudicated).
-
-| model | must-cover coverage | critical_wrong (raw) | tasks |
-|---|---|---|---|
-| qwen3-max | 78% | 10 | 22 |
-| gpt-5.4 | 77% | 16 | 25 |
-| gpt-5.6-sol | 72% | 11 | 25 |
-| glm-5p2 | 61% | 4 | 21 |
-| kimi-k3 | 61% | 5 | 21 |
-| minimax-m3 | 57% | 3 | 20 |
-| deepseek-v4-flash | 54% | 5 | 21 |
-
-To benchmark an outside model, use the Quickstart below — its scores are directly
-comparable to the coverage column (same protocol, same verifier).
+The live leaderboard (all published runs, deterministic + dual-judge
+adjudicated, 8 languages) is at
+**https://newdogwang-netizen.github.io/factbench-public/**. Gold-pool models'
+own scores are annotated on the board where applicable — in-pool models carry
+a structural familiarity advantage, so read same-family rows with the notes
+column.
 
 ## How to run
 
@@ -175,8 +212,9 @@ Alternatively, run through the official harbor harness: `harbor run -p tasks -a 
 
 ## Results site
 
-Published runs are shown on a GitHub Pages leaderboard (see `docs/README.md` to
-enable it: Settings → Pages → branch `main`, folder `/docs`). Publishing a run is
+Published runs are shown on a GitHub Pages leaderboard at
+https://newdogwang-netizen.github.io/factbench-public/ (GitHub Pages, branch
+`master`, folder `/docs`). Publishing a run is
 one command + one commit:
 
 ```bash
