@@ -90,7 +90,8 @@ a{color:var(--series-1)}
 
 <h2 data-i="rt_title"></h2>
 <p class="sub" data-i="rt_body"></p>
-<div id="realtrack"></div>
+<div id="realtrack_board"></div>
+<div id="realtrack_table"></div>
 
 <footer>
   <span data-i="foot"></span>
@@ -251,20 +252,19 @@ function render(){
 }
 
 async function renderRealtrack(){
-  const el=document.getElementById("realtrack");
   try{
     const rt=await (await fetch("data/realtrack.json?v="+Date.now())).json();
-    el.innerHTML=`<table><thead><tr><th>${t("t_model")}</th><th>${t("t_disp")}</th><th>${t("t_crit")}</th><th>${t("t_cov")}</th></tr></thead><tbody>`+
-      rt.entries.map(e=>`<tr><td>${e.label}</td>
-        <td class="num">${e.frame_disputes} (${e.adjudicated_crit})</td>
-        <td class="num">${e.critical_wrong}${e.critical_wrong===0?" \u2713":""} <span class="muted">${t("crit_conf")}</span></td>
-        <td class="num">${(e.mean_coverage*100).toFixed(1)}%</td></tr>`).join("")+`</tbody></table>`;
-  }catch(err){ el.innerHTML=""; }
+    renderBoard(rt.entries,"realtrack_board");
+    renderTable(rt.entries,"realtrack_table");
+  }catch(err){
+    document.getElementById("realtrack_board").innerHTML="";
+    document.getElementById("realtrack_table").innerHTML="";
+  }
 }
 
 /* ---------- bar board with CI whiskers (single-hue: entity id lives on the label) ---------- */
-function renderBoard(latest){
-  const el = document.getElementById("board");
+function renderBoard(latest, elId){
+  const el = document.getElementById(elId||"board");
   if(!latest.length){ el.innerHTML = `<p class="muted">${t("empty")}</p>`; return; }
   const W=860, rowH=34, padL=190, padR=60, H=latest.length*rowH+18;
   const x = v => padL + v*(W-padL-padR);
@@ -298,8 +298,8 @@ function renderBoard(latest){
   });
 }
 
-function renderTable(latest){
-  const el = document.getElementById("board_table");
+function renderTable(latest, elId){
+  const el = document.getElementById(elId||"board_table");
   if(!latest.length){ el.innerHTML=""; return; }
   el.innerHTML = `<table><thead><tr>
     <th>${t("t_model")}</th><th>${t("t_date")}</th>

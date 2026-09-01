@@ -2,63 +2,151 @@
  "date": "2026-09-01",
  "cases": 21,
  "instrument": "detfact-v2.1",
- "note": "Private real-ASR consultation track. Transcripts, notes and gold are never published (privacy); only these aggregates are. All models are in-pool (they also authored the gold consensus), so absolute levels carry familiarity advantage; the track exists for validity findings, not leaderboard ranking.",
+ "note": "Private real-ASR track: transcripts, notes and gold never published; aggregates only. All models are in-pool (they also authored gold); reference-notes = the clinician note that sets each case's pass bar (x0.7).",
  "entries": [
   {
    "label": "kimi-k3",
+   "tasks": 21,
+   "passed": 21,
    "mean_coverage": 0.8219,
+   "coverage_ci95": [
+    0.7624,
+    0.8748
+   ],
    "critical_wrong": 0,
    "frame_disputes": 4,
    "adjudicated_crit": 2,
-   "crit_kind": "confirmed+llm"
+   "safety_flags": 16,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 1.0,
+   "note": "in-pool (also authored gold)"
   },
   {
    "label": "minimax-m3",
+   "tasks": 21,
+   "passed": 20,
    "mean_coverage": 0.7532,
+   "coverage_ci95": [
+    0.6552,
+    0.8344
+   ],
    "critical_wrong": 0,
    "frame_disputes": 6,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm"
+   "adjudicated_crit": 1,
+   "safety_flags": 3,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.9524,
+   "note": "in-pool (also authored gold)"
   },
   {
    "label": "deepseek-v4-flash-0731",
+   "tasks": 21,
+   "passed": 17,
    "mean_coverage": 0.6367,
+   "coverage_ci95": [
+    0.5005,
+    0.7558
+   ],
    "critical_wrong": 0,
    "frame_disputes": 9,
    "adjudicated_crit": 1,
-   "crit_kind": "confirmed+llm"
+   "safety_flags": 6,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.8095,
+   "note": "in-pool (also authored gold)"
   },
   {
    "label": "kimi-k2p6",
+   "tasks": 21,
+   "passed": 16,
    "mean_coverage": 0.5963,
+   "coverage_ci95": [
+    0.4768,
+    0.7064
+   ],
    "critical_wrong": 1,
    "frame_disputes": 4,
    "adjudicated_crit": 1,
-   "crit_kind": "confirmed+llm"
+   "safety_flags": 9,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.7619,
+   "note": "in-pool (also authored gold)"
   },
   {
    "label": "qwen3p8-max",
+   "tasks": 21,
+   "passed": 17,
    "mean_coverage": 0.5957,
+   "coverage_ci95": [
+    0.45,
+    0.73
+   ],
    "critical_wrong": 0,
    "frame_disputes": 8,
+   "adjudicated_crit": 1,
+   "safety_flags": 3,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.8095,
+   "note": "in-pool (also authored gold)"
+  },
+  {
+   "label": "reference-notes",
+   "tasks": 21,
+   "passed": 21,
+   "mean_coverage": 0.5883,
+   "coverage_ci95": [
+    0.5118,
+    0.664
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 0,
    "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm"
+   "safety_flags": 11,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 1.0,
+   "note": "clinician reference (sets each pass bar)"
   },
   {
    "label": "google_gemini-2_5-pro",
+   "tasks": 21,
+   "passed": 14,
    "mean_coverage": 0.4759,
+   "coverage_ci95": [
+    0.355,
+    0.5928
+   ],
    "critical_wrong": 0,
    "frame_disputes": 3,
    "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm"
+   "safety_flags": 1,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.6667,
+   "note": "in-pool (also authored gold)"
   },
   {
    "label": "glm-5p2",
+   "tasks": 21,
+   "passed": 11,
    "mean_coverage": 0.4584,
+   "coverage_ci95": [
+    0.2901,
+    0.6209
+   ],
    "critical_wrong": 1,
    "frame_disputes": 3,
    "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm"
+   "safety_flags": 2,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.5238,
+   "note": "in-pool (also authored gold)"
   }
  ]
 }
