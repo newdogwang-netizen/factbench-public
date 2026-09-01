@@ -20,7 +20,7 @@ The pass rule per task is `critical_wrong == 0 AND coverage >= MIN_COVERAGE`:
 one fabrication vetoes the task outright; being merely error-free is not
 enough if the note is hollow.
 
-## 2. Why the pass bar is relative (reference coverage × 0.7, clamped 30–50%)
+## 2. Why the pass bar is relative (reference coverage × 0.7, capped at 50%)
 
 An absolute bar ("all notes need 60% coverage") pretends every consultation
 is equally writable. It is not: our tasks range from tidy follow-ups to
@@ -28,7 +28,8 @@ rambling multi-topic visits. So each task's bar is anchored to an
 **independent reference note** — written by a model excluded from that case's
 answer-key consensus pool, under the same prompt as every contestant:
 
-- `MIN_COVERAGE = reference coverage × 0.7`, clamped to [0.30, 0.50].
+- `MIN_COVERAGE = reference coverage × 0.7`, capped at 0.50; no artificial
+  floor — the empty-note-must-fail gate guards degenerate tasks.
 - Meaning: *reach at least 70% of the information completeness that an
   independent, competent writer achieved on this exact transcript.*
 - The bar scales with real task difficulty, is identical for every
@@ -38,7 +39,7 @@ answer-key consensus pool, under the same prompt as every contestant:
   everyone equally. This is the price of difficulty-adaptive standards; it
   cannot change rankings.
 
-## 3. Quorum-demanded coverage: no hand-picked field list
+## 3. Empirically-derived coverage: the pool's notes are the probes
 
 Naive coverage ("the note mentioned the drug") is farmable: name every drug,
 skip every dose, collect the points. Strict coverage ("match every field of
@@ -47,8 +48,8 @@ morning` no human would write). Both fail; both were measured before being
 replaced.
 
 The rule that replaced them derives the requirement from the same consensus
-that built the answer key. Every gold fact ships with the verbatim sentences
-of the 7–8 pool models that supported it. At seal time we compute, per fact:
+that built the answer key — by running the production pipeline over the
+pool's own complete notes. At seal time we compute, per fact:
 
 > **Coverage may charge only for what real notes have proven measurable:
 > a fact is chargeable iff at least k_support (3) of the pool's own complete
@@ -75,8 +76,8 @@ Consequences, all by construction rather than by tuning:
   gold's extraction noise.
 - Fields may be assembled across sentences — "one atomic fact per bullet" is
   rewarded, not punished.
-- No human ever picks the field list; it is recomputed from evidence and is
-  auditable per fact (`cover_fields_votes`).
+- No human ever picks the field list; it is recomputed from the probes and
+  is auditable per fact (`cover_probe`).
 
 The lenient mention-count is still published (`must_cover_hit_any`) so anyone
 can see exactly how much water the strict rule squeezed out.
