@@ -2,14 +2,14 @@
  "entries": [
   {
    "label": "gpt-5.5",
-   "date": "2026-08-31",
-   "file": "gpt-5.5__2026-08-31.json",
+   "date": "2026-09-01",
+   "file": "gpt-5.5__2026-09-01.json",
    "tasks": 25,
    "pass_rate": 1.0,
-   "mean_coverage": 0.6817,
+   "mean_coverage": 0.6213,
    "coverage_ci95": [
-    0.6448,
-    0.7168
+    0.586,
+    0.6562
    ],
    "critical_wrong": 0,
    "frame_disputes": 16,
@@ -18,19 +18,19 @@
    "safety_flags": 1,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "68df767aaeffe5b4",
-   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
+   "summary_sha256": "e6b3e5191516c4b2",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
   },
   {
    "label": "gpt-5.2",
-   "date": "2026-08-31",
-   "file": "gpt-5.2__2026-08-31.json",
+   "date": "2026-09-01",
+   "file": "gpt-5.2__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.88,
-   "mean_coverage": 0.5894,
+   "pass_rate": 0.92,
+   "mean_coverage": 0.5442,
    "coverage_ci95": [
-    0.5391,
-    0.64
+    0.4976,
+    0.5907
    ],
    "critical_wrong": 0,
    "frame_disputes": 12,
@@ -39,103 +39,19 @@
    "safety_flags": 1,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "f4e1f05ae6b2b3cd",
-   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
-  },
-  {
-   "label": "gpt-4.1",
-   "date": "2026-08-31",
-   "file": "gpt-4.1__2026-08-31.json",
-   "tasks": 25,
-   "pass_rate": 0.6,
-   "mean_coverage": 0.4151,
-   "coverage_ci95": [
-    0.3824,
-    0.4491
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 7,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "578189ab32ba2412",
-   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
-  },
-  {
-   "label": "o3",
-   "date": "2026-08-31",
-   "file": "o3__2026-08-31.json",
-   "tasks": 25,
-   "pass_rate": 0.28,
-   "mean_coverage": 0.3272,
-   "coverage_ci95": [
-    0.2909,
-    0.3647
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 9,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "6cd0876c9546620d",
-   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
-  },
-  {
-   "label": "o4-mini",
-   "date": "2026-08-31",
-   "file": "o4-mini__2026-08-31.json",
-   "tasks": 25,
-   "pass_rate": 0.36,
-   "mean_coverage": 0.3444,
-   "coverage_ci95": [
-    0.3053,
-    0.3805
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 2,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "e91eebd217c1b3e4",
-   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
-  },
-  {
-   "label": "minimax-m3",
-   "date": "2026-08-31",
-   "file": "minimax-m3__2026-08-31.json",
-   "tasks": 25,
-   "pass_rate": 0.92,
-   "mean_coverage": 0.471,
-   "coverage_ci95": [
-    0.4406,
-    0.5021
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 13,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 6,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "1b8a69c44adb12f1",
-   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
+   "summary_sha256": "2f905e510488af62",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
   },
   {
    "label": "reference-notes",
-   "date": "2026-08-31",
-   "file": "reference-notes__2026-08-31.json",
+   "date": "2026-09-01",
+   "file": "reference-notes__2026-09-01.json",
    "tasks": 25,
    "pass_rate": 1.0,
-   "mean_coverage": 0.5404,
+   "mean_coverage": 0.5029,
    "coverage_ci95": [
-    0.5037,
-    0.5742
+    0.4673,
+    0.5381
    ],
    "critical_wrong": 0,
    "frame_disputes": 0,
@@ -144,71 +60,29 @@
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "ccaeffdcfea68ec7",
-   "note": "quorum-demanded coverage + two-vote crit (detfact-v2.1)"
+   "summary_sha256": "4f1d4b87ada2c51e",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
   },
   {
-   "label": "diffusiongemma-26b",
+   "label": "minimax-m3",
    "date": "2026-09-01",
-   "file": "diffusiongemma-26b__2026-09-01.json",
+   "file": "minimax-m3__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.52,
-   "mean_coverage": 0.3948,
+   "pass_rate": 0.92,
+   "mean_coverage": 0.4524,
    "coverage_ci95": [
-    0.354,
-    0.437
+    0.4185,
+    0.4865
    ],
    "critical_wrong": 0,
-   "frame_disputes": 5,
+   "frame_disputes": 13,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
+   "safety_flags": 6,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "21a5da5fa6a1603e",
-   "note": "local deployment (localhost vLLM-style endpoint); quorum coverage, two-vote crit (detfact-v2.1)"
-  },
-  {
-   "label": "dsv3-opus4p5-52k-pe",
-   "date": "2026-09-01",
-   "file": "dsv3-opus4p5-52k-pe__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.68,
-   "mean_coverage": 0.4234,
-   "coverage_ci95": [
-    0.3867,
-    0.4613
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 12,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 4,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "895eb036724d96c8",
-   "note": "Heidi fine-tune, local endpoint; deepseek-family base — one pool author (deepseek-v4-flash) shares the family"
-  },
-  {
-   "label": "glm-v3",
-   "date": "2026-09-01",
-   "file": "glm-v3__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.72,
-   "mean_coverage": 0.4357,
-   "coverage_ci95": [
-    0.3913,
-    0.479
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 7,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 0,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "a16cf777f0c9b07e",
-   "note": "local endpoint; glm family — one pool author (glm-5p2) shares the family; 14/25 notes salvaged (no final tags)"
+   "summary_sha256": "50260538fe788e04",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
   },
   {
    "label": "gemini-2.5-flash-lite",
@@ -216,10 +90,10 @@
    "file": "gemini-2.5-flash-lite__2026-09-01.json",
    "tasks": 25,
    "pass_rate": 0.76,
-   "mean_coverage": 0.4667,
+   "mean_coverage": 0.4329,
    "coverage_ci95": [
-    0.4248,
-    0.5131
+    0.3933,
+    0.4762
    ],
    "critical_wrong": 0,
    "frame_disputes": 7,
@@ -228,71 +102,29 @@
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "f783a1cdd5c6fb67",
-   "note": "gemini family: an earlier pool author (gemini-2.5-pro) shares the family on part of gold"
+   "summary_sha256": "fb8e412e1aff3aa2",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
   },
   {
-   "label": "gemini-3.1-flash-lite",
+   "label": "glm-v3",
    "date": "2026-09-01",
-   "file": "gemini-3.1-flash-lite__2026-09-01.json",
+   "file": "glm-v3__2026-09-01.json",
    "tasks": 25,
-   "pass_rate": 0.16,
-   "mean_coverage": 0.3224,
+   "pass_rate": 0.72,
+   "mean_coverage": 0.4287,
    "coverage_ci95": [
-    0.2817,
-    0.3702
+    0.381,
+    0.4738
    ],
    "critical_wrong": 0,
-   "frame_disputes": 3,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 2,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "ea9e49393845a8d8",
-   "note": "gemini family: an earlier pool author (gemini-2.5-pro) shares the family on part of gold; notably terse notes"
-  },
-  {
-   "label": "gemini-3.5-flash-lite",
-   "date": "2026-09-01",
-   "file": "gemini-3.5-flash-lite__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.52,
-   "mean_coverage": 0.3385,
-   "coverage_ci95": [
-    0.2926,
-    0.3789
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 5,
+   "frame_disputes": 7,
    "adjudicated_crit": 0,
    "crit_kind": "confirmed+llm",
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "88f500d8214cd046",
-   "note": "gemini family: an earlier pool author (gemini-2.5-pro) shares the family on part of gold"
-  },
-  {
-   "label": "claude-haiku-4.5",
-   "date": "2026-09-01",
-   "file": "claude-haiku-4.5__2026-09-01.json",
-   "tasks": 25,
-   "pass_rate": 0.6,
-   "mean_coverage": 0.381,
-   "coverage_ci95": [
-    0.3407,
-    0.4178
-   ],
-   "critical_wrong": 0,
-   "frame_disputes": 10,
-   "adjudicated_crit": 0,
-   "crit_kind": "confirmed+llm",
-   "safety_flags": 2,
-   "benchmark_version": "1.0.0",
-   "protocol": "detfact-v2.1",
-   "summary_sha256": "dd600bf0763ece9f",
-   "note": "small tier"
+   "summary_sha256": "d7772572405401e6",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
   },
   {
    "label": "grok-4.6",
@@ -300,10 +132,10 @@
    "file": "grok-4.6__2026-09-01.json",
    "tasks": 25,
    "pass_rate": 0.72,
-   "mean_coverage": 0.462,
+   "mean_coverage": 0.4219,
    "coverage_ci95": [
-    0.4177,
-    0.506
+    0.3689,
+    0.4705
    ],
    "critical_wrong": 0,
    "frame_disputes": 6,
@@ -312,8 +144,176 @@
    "safety_flags": 0,
    "benchmark_version": "1.0.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "8f3724e424b0cacc",
-   "note": ""
+   "summary_sha256": "b9780935679b22c1",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+  },
+  {
+   "label": "dsv3-opus4p5-52k-pe",
+   "date": "2026-09-01",
+   "file": "dsv3-opus4p5-52k-pe__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.72,
+   "mean_coverage": 0.4074,
+   "coverage_ci95": [
+    0.3711,
+    0.4439
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 12,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 4,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "a34c246ab3f7de5c",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+  },
+  {
+   "label": "gpt-4.1",
+   "date": "2026-09-01",
+   "file": "gpt-4.1__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.76,
+   "mean_coverage": 0.3872,
+   "coverage_ci95": [
+    0.3503,
+    0.4191
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 7,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "74660cd73212d18c",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+  },
+  {
+   "label": "diffusiongemma-26b",
+   "date": "2026-09-01",
+   "file": "diffusiongemma-26b__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.64,
+   "mean_coverage": 0.3807,
+   "coverage_ci95": [
+    0.3414,
+    0.4223
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 5,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "62913be855bfc1cd",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+  },
+  {
+   "label": "claude-haiku-4.5",
+   "date": "2026-09-01",
+   "file": "claude-haiku-4.5__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.52,
+   "mean_coverage": 0.3599,
+   "coverage_ci95": [
+    0.3153,
+    0.4013
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 10,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 2,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "74ba713d77ed7294",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+  },
+  {
+   "label": "o4-mini",
+   "date": "2026-09-01",
+   "file": "o4-mini__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.44,
+   "mean_coverage": 0.33,
+   "coverage_ci95": [
+    0.2897,
+    0.3683
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 2,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "7512dc95a0055040",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+  },
+  {
+   "label": "o3",
+   "date": "2026-09-01",
+   "file": "o3__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.4,
+   "mean_coverage": 0.3201,
+   "coverage_ci95": [
+    0.2783,
+    0.3636
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 9,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "8f0fef77b774306f",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+  },
+  {
+   "label": "gemini-3.5-flash-lite",
+   "date": "2026-09-01",
+   "file": "gemini-3.5-flash-lite__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.44,
+   "mean_coverage": 0.3176,
+   "coverage_ci95": [
+    0.2686,
+    0.3619
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 5,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 0,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "099b02cefecc8c69",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
+  },
+  {
+   "label": "gemini-3.1-flash-lite",
+   "date": "2026-09-01",
+   "file": "gemini-3.1-flash-lite__2026-09-01.json",
+   "tasks": 25,
+   "pass_rate": 0.28,
+   "mean_coverage": 0.3051,
+   "coverage_ci95": [
+    0.2659,
+    0.3454
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 3,
+   "adjudicated_crit": 0,
+   "crit_kind": "confirmed+llm",
+   "safety_flags": 2,
+   "benchmark_version": "1.0.0",
+   "protocol": "detfact-v2.1",
+   "summary_sha256": "4ccf8320946e652a",
+   "note": "empirical coverage regime: charges only pool-note-proven measurable facts (detfact-v2.1)"
   }
  ]
 }

@@ -17,7 +17,7 @@ gold_pipeline = "note-consensus v2 (7-model fact-level consensus, quote gate, tr
 gold_facts = 44
 must_cover = 39
 domain_gate = "valid"
-pass_rule = "critical_wrong == 0 and coverage >= 0.3 (oracle-calibrated)"
+pass_rule = "critical_wrong == 0 and coverage >= 0.18 (oracle-calibrated)"
 
 [verifier]
 timeout_sec = 600.0

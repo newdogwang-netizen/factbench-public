@@ -37,7 +37,7 @@ except Exception:
 safety_counts = {}
 for _f in safety:
     safety_counts[_f["type"]] = safety_counts.get(_f["type"], 0) + 1
-MIN_COVERAGE = 0.43  # oracle-calibrated threshold (reference-note coverage x 0.7)
+MIN_COVERAGE = 0.47  # oracle-calibrated threshold (reference-note coverage x 0.7)
 result = {"must_cover_hit": mc_hit, "must_cover_total": mc_total,
           "coverage": round(mc_hit / max(1, mc_total), 4),
           "critical_wrong": crit, "frame_disputes": disputes,

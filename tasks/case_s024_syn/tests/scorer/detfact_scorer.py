@@ -976,9 +976,16 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
         mc_total = mc_hit = 0
         err_fact_keys = set()
         mc_hit_any = 0
+        mc_exempt = 0
         for pos, fact in enumerate(factset.get("facts", [])):
             sal = fact.get("salience") or {}
-            if sal.get("must_cover"):
+            if sal.get("must_cover") and sal.get("coverage_chargeable") is False:
+                # Sensor-visibility gate: facts that fewer than k_support
+                # pool notes could actually score through this exact
+                # pipeline stay out of the coverage denominator
+                # (salience.cover_probe records the evidence).
+                mc_exempt += 1
+            elif sal.get("must_cover"):
                 mc_total += 1
                 sup = supported_by_fact.get(pos)
                 if sup:
@@ -1039,6 +1046,7 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
         counts["must_cover_total"] = mc_total
         counts["must_cover_hit"] = mc_hit
         counts["must_cover_hit_any"] = mc_hit_any  # lenient, for display only
+        counts["must_cover_exempt"] = mc_exempt
         counts["critical_wrong"] = critical_wrong
         counts["frame_disputes"] = frame_disputes
 

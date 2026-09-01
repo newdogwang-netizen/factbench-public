@@ -16,7 +16,7 @@
    "gold_facts": 46,
    "must_cover": 46,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.37 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.38 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -24,10 +24,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "f45d826205743b824bfe734744260562322695dd8a35e739def4cda2400e4bf9",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "655dc1db64224c027d0ff378d6bddff071149c643a3d26b5b0baa061d09db830",
-    "tests/factset.json": "1694de67617557a229d3eee69d7254f0493089388cb47c923f81512f9b367fc1",
+    "task.toml": "28f3ac0f3db8c7106e41eef5d858f0945e89bc75115ffb082993c2baae1d8ceb",
+    "tests/factset.json": "2abb293bce6481b2cc3fdffc83c67f0b10593e8a0671533ab74fc4fbb13d9a58",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "3c8bee0e0bc0111672579f2d0789aa42797cdd22d080e0f4339712af402f3a98"
+    "tests/verify.py": "3fbb267a84638a4551afb11e02581635577bc15880a7b0529a9346ecd59e121a"
    }
   },
   {
@@ -45,7 +45,7 @@
     "solution/note.md": "fa44931255e99f8a2f64deefea4fb7e1e84b62564b5e915285f54191d11bb281",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
     "task.toml": "b9a2d10350bec05eb2581e507b1615ea49e67a664d1f262d229f175a5cd40a50",
-    "tests/factset.json": "e78ed4dfb575888f650f82b4723e07b0115da2cfea0e0c33c0177c31817cb565",
+    "tests/factset.json": "1e78d34e19682859f41e2a3b2f90c9a8cd302170bcfc7d4861c4d31e5e613779",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
     "tests/verify.py": "ebd0bdeaa7ec6ec7a7b7d2673bc927ff68ac11d063e2da559c9841013bbe508e"
    }
@@ -56,7 +56,7 @@
    "gold_facts": 30,
    "must_cover": 28,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.3 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.27 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -64,10 +64,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "ffbae3ef642d7ba3978af0d96d25741d5eb0e7a856bce459667f75ef3d2ca406",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "09d3c119ada2398cf70fee900c78df98508df2c116563aa21fbbcff33caf9646",
-    "tests/factset.json": "59297f8e713eee9aa0afdd5e2d603e8ecc4a9e9333abce54bb97171de2c28a95",
+    "task.toml": "2af040e3ee6ac3b0738f7909ad302f74a580d8bd6c8f95c7a8b6303e270baddc",
+    "tests/factset.json": "b2180880477dde1162c4e2515db0741cdd89647ee19c3fafe6b771ac01b6b1b0",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "004ed0beea7d25e5ad72dd7834daa82453398aa71ba8dba09d5819a046e6ea3a"
+    "tests/verify.py": "4b9b51336890dc5305444a11f493993035443e13cdbd93bfe1d6a875f94336af"
    }
   },
   {
@@ -76,7 +76,7 @@
    "gold_facts": 35,
    "must_cover": 33,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.38 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.36 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -84,10 +84,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "105f3cc142ae420b9706d6206278ba3ce65d833b4b337b204708600c0ce53b5f",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "1c8a901b4930458207adedd63349303159d53fa77fac384ba7447df1b1cc4f42",
-    "tests/factset.json": "d32d397c24971b16fa234e3fe83fd0c34ed339c740d0eebcb0d3839fd8999dcd",
+    "task.toml": "525de1c89cefbe7ff62473ecad74f1abf7b402887c1dd1bbf21f9e37bc3563fa",
+    "tests/factset.json": "fb272882604d22414c0773b09e1d7bff6e070475eee965f2b2f426d4b8bd6aaf",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "3fbb267a84638a4551afb11e02581635577bc15880a7b0529a9346ecd59e121a"
+    "tests/verify.py": "7b6804947d97239c066472ab5027446f84d8b8411f7abe3e95f9e04698bde414"
    }
   },
   {
@@ -96,7 +96,7 @@
    "gold_facts": 24,
    "must_cover": 21,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.3 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.27 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -104,10 +104,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "5867f4bde0569da12230783edd1f8155a314d3f574a862d6c6121a13626839ab",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "3b8b8990550844606c3a5faf81ce5b372ce884095a8a1fdd3c4183b29c0e1536",
-    "tests/factset.json": "75c1019ba13b5c96c64353c6388f2243db25bb3df7815f8119de6cac690db2b5",
+    "task.toml": "3e2794eeafc159d049e59d49eaae6350f75c3b6f65366fe13ba410db9c20a4f2",
+    "tests/factset.json": "96d107a348da88bd99941b0c3c13bca25e703f17586da51a8f9cede2df482005",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "004ed0beea7d25e5ad72dd7834daa82453398aa71ba8dba09d5819a046e6ea3a"
+    "tests/verify.py": "4b9b51336890dc5305444a11f493993035443e13cdbd93bfe1d6a875f94336af"
    }
   },
   {
@@ -116,7 +116,7 @@
    "gold_facts": 27,
    "must_cover": 27,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.39 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.29 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -124,10 +124,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "87410d6064893fad8f7d36c07fc4ccbe4f951748fe9180654eedcf6216c5828a",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "7fdcea22f28f418b0b1d0360adc6445189b3c8c7a16433e1a01ecc34df99d894",
-    "tests/factset.json": "c5f784cab9a7a3da9da031cebea40ee9a208b2c3006c10b0a21f538acb8b8173",
+    "task.toml": "e90f5070548fc7c152840e9065d7b0ebdec2e07924c402527690cc3202f46e22",
+    "tests/factset.json": "44c4c0481ccde26f9619d0949a7e47568d2deba01f9635d27af1a8a38690e1a3",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "ebd0bdeaa7ec6ec7a7b7d2673bc927ff68ac11d063e2da559c9841013bbe508e"
+    "tests/verify.py": "970ffe3a61ea6421294a204ae4de790af90643a6ac059512a7c103ac8eb82059"
    }
   },
   {
@@ -136,7 +136,7 @@
    "gold_facts": 39,
    "must_cover": 37,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.4 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.38 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -144,10 +144,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "43494d6fc894c01216300b7ff09e7ccfc888cf3beb9f274ca855322110e14289",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "d03374aa3e2f619c277125e43ee68ff5437d085bdc4fe1f60e4a1944904ede5a",
-    "tests/factset.json": "6de53e45b7bd1ef2af1a4a237d25adf116d8b16b58d9856265012e37964c8b62",
+    "task.toml": "4bd97182a8f4980d764b0129e5c3d03e410b9c584a1584ee0d4664c9ed109c18",
+    "tests/factset.json": "48be61496f000b0b9ac2aef4733ccdbb4cbbdf2e9bd5d32069057464d31dab25",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "8d164a247c748e68f78b9ef02010f2e25708def001de7a7c86daaf7d9f30ee58"
+    "tests/verify.py": "3fbb267a84638a4551afb11e02581635577bc15880a7b0529a9346ecd59e121a"
    }
   },
   {
@@ -156,7 +156,7 @@
    "gold_facts": 44,
    "must_cover": 39,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.3 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.18 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -164,10 +164,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "775dcbb0976ef9bc383d11bcbe751d41e3b8e28e1e8be2d6a3be437028dc1140",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "cef86ddd741788ab728b27b8c5be6f9760a09d293c2b301b36fdedb7705257f7",
-    "tests/factset.json": "3e1f22c2b044c88c3ed0e50ff4d9093cb5fd135fafd0c20fc18d131290b720bd",
+    "task.toml": "7da422c0f027154f55ecda9069533a49a3d13fdf83d3855a8143137d39972585",
+    "tests/factset.json": "079ac02c98ee896e152e7ef29f413a67a3fa657d4f3fca66754e493e9905be8f",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "004ed0beea7d25e5ad72dd7834daa82453398aa71ba8dba09d5819a046e6ea3a"
+    "tests/verify.py": "593c4c20919664db7066a05b8f1d8f1319e5c0dfb9939720cd3a5050a4f9e1c7"
    }
   },
   {
@@ -185,7 +185,7 @@
     "solution/note.md": "9a144c25b7bfd4dd664b6db0a91a7db6e6756ac486bdc6a97c0c7d32b1a2f511",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
     "task.toml": "b99a6ca509e99a8174d554eee79449d9b1141bf47b5d25ab28316d23599c65a9",
-    "tests/factset.json": "ad7a480d65baf4d018e16b4533f776b397ccce4c49bc66686a7ab883061403c5",
+    "tests/factset.json": "06759ed7dbfae23723c4a56b840167ef348f768641fad151ac71c30e7b193fca",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
     "tests/verify.py": "9a0a5a5f9752089e47670017f0d0f7e0d51d30aaf93c1c9eb7fecab7f1520dd6"
    }
@@ -196,7 +196,7 @@
    "gold_facts": 36,
    "must_cover": 32,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.37 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.31 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -204,10 +204,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "c1d75399169a5e786f47b3a494559c285122e45f4a2032ef0e4a87e6d98695e5",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "84bc0b467a2bf219c58c9c5e3a8a53799ef3bc395e04872cd60275d3c9a3cd0e",
-    "tests/factset.json": "b3af9a3710a6cbe979fea4b3a603b0d5b26291f9737ff0e937a9922807ebeec1",
+    "task.toml": "ffccd5f19bc87d5ac0d01527ba45bedb23ba9add405504dfbf643cc3383a97b9",
+    "tests/factset.json": "e2d9652c9b6d7759534f9faf8efa7eb0021a78c2192cba89a28a3cd520adeb9c",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "3c8bee0e0bc0111672579f2d0789aa42797cdd22d080e0f4339712af402f3a98"
+    "tests/verify.py": "829cc18a05a58924fc1ed6b28528e6b2c8fe63030d982a317647bc95fb1af083"
    }
   },
   {
@@ -216,7 +216,7 @@
    "gold_facts": 18,
    "must_cover": 16,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.48 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.35 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -224,10 +224,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "445fc09267b7872fefbd17ee849599af87736fcfd90d122c0111d97c8f683a24",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "b472f0f092ac0752a157b2a7e46eb84db70b516ccdc61e3b5050b324116e2294",
-    "tests/factset.json": "f05d9eb2e76b63a9bb49b62687b9ef96f27ecb208ed1aa597c65955a946d14f4",
+    "task.toml": "60581d9d8fd73774033bed5318948a57cb6aec312e9d4f8296559f2dc9dfca43",
+    "tests/factset.json": "76aa3a1e992b43c0d164bb784b921ecafb838f695db061a4556f38c8f6b2914f",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "67141ba11706a5567064b730aa9c8d6af4d044f058ce50acb1e315bac7eca049"
+    "tests/verify.py": "0655ac342beabd74498d6d6ee5f73933c62040196d1369b9ae068271330dd79f"
    }
   },
   {
@@ -236,7 +236,7 @@
    "gold_facts": 21,
    "must_cover": 21,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.43 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.47 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -244,10 +244,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "a07b964fe171eca92b1803cd299fd9351315b6792185b0f6d6938958ffe3012f",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "c43720f4cb168971d10328903e58dcefec81101f7bf323770e3c048b70847bc4",
-    "tests/factset.json": "e85352d3916f72d2cf45ef61626ad3ca1466d9985568d54344ed220028abc692",
+    "task.toml": "396665b2c9d95a2910d8aea08dd8a17042da904858481930123e981629a2971f",
+    "tests/factset.json": "8da39c36cf20ae67ee43dc6922a232ff3df22c5e3470b7d7ac7963f93670e9b8",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "531a645214e182a7fac6aa2b4f4e7f3682f54148da87b830ecc6255cc508b6d4"
+    "tests/verify.py": "285e187bd36d30f575b860dac8180afd80f17847498107c58341adb89c0deb01"
    }
   },
   {
@@ -256,7 +256,7 @@
    "gold_facts": 50,
    "must_cover": 43,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.41 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.37 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -264,10 +264,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "b40b6edcd5ea1b1f4b66d6e7da9d976e4b877b8d15456c4dee3040c670fb4b7f",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "112afbbc415bc6b52626a84cd87590e53fd9087af92d9c32413a1ec257d4e20e",
-    "tests/factset.json": "43e11ee12f81ca7f9a60edf084ba952c1de9fb6c8ff651048899759dd40ca2bd",
+    "task.toml": "829a9d8b315abb10ea74d51d16cb5da9602cb4c699d9d75a85dc40be16f65e0a",
+    "tests/factset.json": "87bdba0ac512edd8d42dca968ba8a0579796825f0dbce60cfb86df4e751fd86c",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "e2575d6fba3217e9f830ed72916f65778afa414f8b1c7562f3c72f75fcfadcbf"
+    "tests/verify.py": "3c8bee0e0bc0111672579f2d0789aa42797cdd22d080e0f4339712af402f3a98"
    }
   },
   {
@@ -285,7 +285,7 @@
     "solution/note.md": "16423ceefc981fc0d4c7c4535d525e95d43ca8206d5271b1936cbd12b9c9e5a3",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
     "task.toml": "071e4f7757592a5100c5fafd0891b67fb6c8f38177d1ccf866307f3c9e818149",
-    "tests/factset.json": "dbb1f992a8bb4cc357c33be9a8024436437eba6ec925a5e99fce293778caabf2",
+    "tests/factset.json": "5f49987c9f12e47e410e1d2de3c03e7a2a9935a57d78c15ab09d5e1bc7db57db",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
     "tests/verify.py": "3c8bee0e0bc0111672579f2d0789aa42797cdd22d080e0f4339712af402f3a98"
    }
@@ -305,7 +305,7 @@
     "solution/note.md": "b0ed8e26eca2cbf69de93dbc182552ba505994e21bdf4f17ab117098792743a4",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
     "task.toml": "1e467920a3e264ed442b03f11e5c84a36206d09d1459a8c4c0e5f857f18af4f8",
-    "tests/factset.json": "0368753f71c5b83f808a6e96962e89b26a478fa5c3c77f4ac53b07f42c68962d",
+    "tests/factset.json": "d94bcdbe070b15eb4976cfdfd25a0e85a21aeac19fb4bf660a057062e09086f7",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
     "tests/verify.py": "ebd0bdeaa7ec6ec7a7b7d2673bc927ff68ac11d063e2da559c9841013bbe508e"
    }
@@ -316,7 +316,7 @@
    "gold_facts": 31,
    "must_cover": 31,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.5 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.36 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -324,10 +324,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "21a62a7c60f9b47c3c5d970236f08b861c636a94cf982cde845629903f2afcb7",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "6f3681bf01b17ad563d8f834f1bef444d314b568c4901260390848fd2eba45d0",
-    "tests/factset.json": "c4a8f459c57b9532b2f58f50aa77e089dd51568f3ec1f0f44525caec5fce5aa5",
+    "task.toml": "595c59f1fb71812b70c7e876b9cc7d2f1f7704da96c99ec02f01efeb64a6b238",
+    "tests/factset.json": "312274f1878ebc8bec79b8883c30395b14791dad89b913177786fe9c1d7ae701",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "56ea0b83189c6122ada231663258daaa3a49fce801741bc76f9010b161fa42e1"
+    "tests/verify.py": "7b6804947d97239c066472ab5027446f84d8b8411f7abe3e95f9e04698bde414"
    }
   },
   {
@@ -336,7 +336,7 @@
    "gold_facts": 41,
    "must_cover": 41,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.34 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.36 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -344,10 +344,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "1e0a4f3d1fcacca072cac85071538924c3b0428a2efe457d58e513ed84127826",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "d6ee4fc7c1864f5e4f35020da8bfce5a94e597e29b8aa830b6c2a9e63c7003c9",
-    "tests/factset.json": "93a893495565ce7af64c5be66b32431dcbd9b8cdb6bd3ecc76116692077de887",
+    "task.toml": "7c0a7752c1e67bcfa4a338258b0028cc39300729b1c1ceda8591c29b01351b8b",
+    "tests/factset.json": "391528ba7c45ff5fcf708ce258b6af60d3682f32ed02ac03980a240dbf3c2fb3",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "9079dbe9358f04c6b3bfb50ba8e9563e8c9037f50570cf95e0aaee647545c2c3"
+    "tests/verify.py": "7b6804947d97239c066472ab5027446f84d8b8411f7abe3e95f9e04698bde414"
    }
   },
   {
@@ -356,7 +356,7 @@
    "gold_facts": 24,
    "must_cover": 20,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.35 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.32 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -364,10 +364,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "e9fdae8940b8e488aa9e43973834c562391bc0465e517ae3b7afcbc98c9aed97",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "4596144f4967beafe0cd756b77340af99fce1da46869b1d31d7005e82f0fcd57",
-    "tests/factset.json": "5e52550c41ec3d429fae2d348b11a9b910a515efd12efc5636c62d8b91baf8c7",
+    "task.toml": "70e054fde91ae976447d1ca7789f39c45802b54ed56023ca9cc4827677711dfe",
+    "tests/factset.json": "b448ef712f54be6c93832a8c10174cab6dd0d89db6996b9ab0578be979cc87bd",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "0655ac342beabd74498d6d6ee5f73933c62040196d1369b9ae068271330dd79f"
+    "tests/verify.py": "32ca6a0a279384f0febbda92b6c9ebaa19b3ec96fc52943e50fdd275f2dd268f"
    }
   },
   {
@@ -385,7 +385,7 @@
     "solution/note.md": "f6e57ae75ad2436a0a163ffdd5ffc9ae33ca3502faba30eb3f622d230ddd6282",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
     "task.toml": "c57b9739ccf6046107c2abe439d2a99e7792a5318d5eea8ee6eb1e04b4e7f526",
-    "tests/factset.json": "00f3b24dbf5d8c53a0591277c289c529c19d63324eb1a281055a7382f32c3e0c",
+    "tests/factset.json": "654cdb299961c65146263e85e8fda2c0d5d374a20a32828e5f4090b2a65b33b4",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
     "tests/verify.py": "0655ac342beabd74498d6d6ee5f73933c62040196d1369b9ae068271330dd79f"
    }
@@ -396,7 +396,7 @@
    "gold_facts": 27,
    "must_cover": 21,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.33 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.3 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -404,10 +404,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "cb2c55af705ed308998c24ead3909176c4cf34b22715167468243dec9d20277a",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "50b27e135fdf8b2d8090d612285ac7d23c21c9ca26f9f97ead70b3efe0cbab4e",
-    "tests/factset.json": "548a23319e8620d71f32dad291d110ba171a6182cdf40d1d1fdbec26c8bbd250",
+    "task.toml": "810b8172eed88f7e26ae5cb431f8665657cae5c661edb8582e0016271c286a2e",
+    "tests/factset.json": "42c2a6fd25f33450d1ef75d543625089d783e30b0713f0c43503f33b5d6f311c",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "9a0a5a5f9752089e47670017f0d0f7e0d51d30aaf93c1c9eb7fecab7f1520dd6"
+    "tests/verify.py": "004ed0beea7d25e5ad72dd7834daa82453398aa71ba8dba09d5819a046e6ea3a"
    }
   },
   {
@@ -416,7 +416,7 @@
    "gold_facts": 24,
    "must_cover": 23,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.43 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.49 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -424,10 +424,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "a90d9b61c95442a75c97333078345e7d71a27851c0e3dd44b19e4f795121b816",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "5e6e3c59c972bf0583440fb1d9be003371f2125861b11f77f58e9cd368834b99",
-    "tests/factset.json": "40b2d96fcb717e726f300b20d18693da84d792ecdbb4f0a129ad241c898857e5",
+    "task.toml": "d6088a4e69de378a7d2e5b82a0a0b657413e202361ccf98dac840f9b3a506dab",
+    "tests/factset.json": "f98ad88e0a5d547b0fcb815dc609a373be2c288d6be85237b56cf36f2a0dd2fd",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "531a645214e182a7fac6aa2b4f4e7f3682f54148da87b830ecc6255cc508b6d4"
+    "tests/verify.py": "6350f6e9455d570a50ce002f6b4fd17d41fe2d8fd0926a6ac1a1d3a489bd6584"
    }
   },
   {
@@ -436,7 +436,7 @@
    "gold_facts": 39,
    "must_cover": 36,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.41 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.39 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -444,10 +444,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "2c1de78eb9f74f27be761f28caafe506f23b93b05baa9b840e9959a7f9579e1e",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "e90a08a733299afde9eb7d9abb6ed332d6b2a6bfb5f24498be59b021dc603941",
-    "tests/factset.json": "22f677e48d36c2abdd8a79a5d4983a456d0dd36eb92b14e90dcce3cd41fa127a",
+    "task.toml": "ffdf77f3c24af30e311b3f2cf24a26f7e3b57f37571a047f64e1b4a0d00d419b",
+    "tests/factset.json": "62b180f27257bd6403acf3ca0ade583e5c2ef909c41858d2829eaeba6ab44758",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "e2575d6fba3217e9f830ed72916f65778afa414f8b1c7562f3c72f75fcfadcbf"
+    "tests/verify.py": "ebd0bdeaa7ec6ec7a7b7d2673bc927ff68ac11d063e2da559c9841013bbe508e"
    }
   },
   {
@@ -456,7 +456,7 @@
    "gold_facts": 20,
    "must_cover": 18,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.5 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.43 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -464,10 +464,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "dab26d32df8459374aa8b2c9f57e10cf2d3ac20a526d5c5931717ac6c550ceb4",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "a9fcb5e697ac2cfc06cffd7e06a0500bf765ebf34c879f1a6f7c7790bb922a48",
-    "tests/factset.json": "0b6dd631124ebbe8bcf746e1a29901365df772e96cc4c33ef892c49ffd93f1bd",
+    "task.toml": "35bc7240e1bb18845f3e4cb41b0fff25cbe1ce8c6f4b40e13693f003386b3dd0",
+    "tests/factset.json": "48e09e462d99294d2de421b0995fa03967115f533192ce28918cb64eb43b2ca8",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "56ea0b83189c6122ada231663258daaa3a49fce801741bc76f9010b161fa42e1"
+    "tests/verify.py": "531a645214e182a7fac6aa2b4f4e7f3682f54148da87b830ecc6255cc508b6d4"
    }
   },
   {
@@ -476,7 +476,7 @@
    "gold_facts": 20,
    "must_cover": 20,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.42 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.39 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -484,10 +484,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "c76493a95112b4d542c2f8db004a85263066fd9252026ab864c48d97f0cd6530",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "6b1b13c4ca8e63543799ff781cfc00e3723846eb08c77df5392823f8f25386d2",
-    "tests/factset.json": "7afb5959f148ba8199d6a20d899ef78a9f78b0308bb02f477f088a6c5cfd1819",
+    "task.toml": "4d401ad5d754594b179dfe48dcb5aecd33d96e47ed3ef97c95bbad28cd52ca16",
+    "tests/factset.json": "cc3d2f849bc1a484ea98a226cd31bc178e163ea5939965d75d6c39b9f20d6135",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "f3fa96ddfb7866e3474502f630ef71b51c469faadda2b60c0ebd7c0f5dfdd40f"
+    "tests/verify.py": "ebd0bdeaa7ec6ec7a7b7d2673bc927ff68ac11d063e2da559c9841013bbe508e"
    }
   },
   {
@@ -496,7 +496,7 @@
    "gold_facts": 59,
    "must_cover": 58,
    "reviewed": false,
-   "pass_rule": "critical_wrong == 0 and coverage >= 0.3 (oracle-calibrated)",
+   "pass_rule": "critical_wrong == 0 and coverage >= 0.31 (oracle-calibrated)",
    "files": {
     "environment/Dockerfile": "183261132e48b84e29addc21b11ae1416ceb92685a4d00cb5d2e12b8d400e2ff",
     "environment/template.txt": "e5463b5e8393c5cc3311549bc3c9960b8060c93ec238f1748bed56c14ddc9e1b",
@@ -504,10 +504,10 @@
     "instruction.md": "4d51d5fcf3a81770eeb45bfc2b960686270ea0f2ed9467fda7e91b562f90206e",
     "solution/note.md": "f252de04f209be60a9eec1e5520fc9e5734e9604edda1b6d5ea18c13e0ee2abc",
     "solution/solve.sh": "52bec7644d0ff0ea18e60af319d269affc816a8d9331d8e9c09e68f32a4cd969",
-    "task.toml": "9b81eca49c004c182257c9bc5c0aa467482cdcb867503b6e075a1af09b921ff0",
-    "tests/factset.json": "832d36312a7d7e832db572d73c31e58610eb7f906f5c9452511bd5c14e18261a",
+    "task.toml": "4938375a63f00be88d1e654968f8cad9480eda844b859d4fa133f241813a30df",
+    "tests/factset.json": "db413f1b20e447388ee2170b51d93882e7c2189a6c63897a14d949bab4ad34eb",
     "tests/test.sh": "0c7894a9ac7d066474e6b83cb4c3f0fac4ecc28dc60391d0c137dcb8e6e78c8a",
-    "tests/verify.py": "004ed0beea7d25e5ad72dd7834daa82453398aa71ba8dba09d5819a046e6ea3a"
+    "tests/verify.py": "829cc18a05a58924fc1ed6b28528e6b2c8fe63030d982a317647bc95fb1af083"
    }
   }
  ]

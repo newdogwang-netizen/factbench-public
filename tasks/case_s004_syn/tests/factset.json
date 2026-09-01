@@ -3,7 +3,7 @@
   "factset": {
     "id": "case_s004_syn",
     "version": "1",
-    "sha256": "760f1013ab242b1206763267cebeeb94e961810cd0fc1c07272d4747f249c038",
+    "sha256": "afb327215b6db919d75b5243aba2be033d946d83e4bd3227f5916c11fff13e8e",
     "reviewed": false
   },
   "source": {
@@ -267,8 +267,19 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7"
+          }
+        }
       }
     },
     {
@@ -368,8 +379,19 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/7",
+            "status": "4/7"
+          }
+        }
       }
     },
     {
@@ -449,8 +471,17 @@
         "must_cover": true,
         "must_cover_source": "text",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/7"
+          }
+        }
       }
     },
     {
@@ -586,9 +617,20 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {
-          "time": "0/9"
+        "cover_fields": [
+          "polarity",
+          "status",
+          "time"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7",
+            "time": "7/7"
+          }
         }
       }
     },
@@ -884,8 +926,19 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7"
+          }
+        }
       }
     },
     {
@@ -1053,8 +1106,21 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "condition",
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "condition": "6/7",
+            "polarity": "7/7",
+            "status": "7/7"
+          }
+        }
       }
     },
     {
@@ -1188,14 +1254,23 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
-          "value",
+          "polarity",
+          "status",
+          "time",
           "unit",
-          "time"
+          "value"
         ],
-        "cover_fields_votes": {
-          "value": "7/8",
-          "unit": "7/8",
-          "time": "6/8"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7",
+            "time": "6/7",
+            "unit": "6/7",
+            "value": "6/7"
+          }
         }
       }
     },
@@ -1328,12 +1403,21 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
-          "value",
-          "unit"
+          "polarity",
+          "status",
+          "unit",
+          "value"
         ],
-        "cover_fields_votes": {
-          "value": "6/8",
-          "unit": "7/8"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/7",
+            "status": "6/7",
+            "unit": "5/7",
+            "value": "5/7"
+          }
         }
       }
     },
@@ -1468,14 +1552,23 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
-          "value",
+          "polarity",
+          "status",
+          "time",
           "unit",
-          "time"
+          "value"
         ],
-        "cover_fields_votes": {
-          "value": "8/8",
-          "unit": "8/8",
-          "time": "7/8"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7",
+            "time": "5/7",
+            "unit": "6/7",
+            "value": "6/7"
+          }
         }
       }
     },
@@ -1610,14 +1703,23 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
-          "value",
+          "polarity",
+          "status",
+          "time",
           "unit",
-          "time"
+          "value"
         ],
-        "cover_fields_votes": {
-          "value": "8/8",
-          "unit": "8/8",
-          "time": "5/8"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7",
+            "time": "4/7",
+            "unit": "6/7",
+            "value": "6/7"
+          }
         }
       }
     },
@@ -1737,8 +1839,21 @@
         "must_cover": true,
         "must_cover_source": "llm",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "location",
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "location": "7/7",
+            "polarity": "7/7",
+            "status": "7/7"
+          }
+        }
       }
     },
     {
@@ -1872,13 +1987,22 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
-          "value",
-          "unit"
+          "polarity",
+          "status",
+          "unit",
+          "value"
         ],
-        "cover_fields_votes": {
-          "value": "7/8",
-          "unit": "7/8",
-          "time": "1/8"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7",
+            "time": "1/7",
+            "unit": "6/7",
+            "value": "6/7"
+          }
         }
       }
     },
@@ -1982,9 +2106,14 @@
         "cover_fields": [
           "status"
         ],
-        "cover_fields_votes": {
-          "status": "5/5",
-          "polarity": "0/5"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "5/7"
+          }
         }
       }
     },
@@ -2208,12 +2337,16 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
-          "status",
           "polarity"
         ],
-        "cover_fields_votes": {
-          "status": "12/20",
-          "polarity": "18/20"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/7",
+            "status": "1/7"
+          }
         }
       }
     },
@@ -2333,10 +2466,17 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
+          "polarity",
           "status"
         ],
-        "cover_fields_votes": {
-          "status": "6/7"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7"
+          }
         }
       }
     },
@@ -2455,9 +2595,18 @@
         "must_cover": true,
         "must_cover_source": "text",
         "must_not_err": true,
-        "cover_fields": [],
-        "cover_fields_votes": {
-          "status": "3/7"
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "7/7",
+            "status": "7/7"
+          }
         }
       }
     },
@@ -2574,13 +2723,22 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
-          "value",
-          "unit"
+          "polarity",
+          "status",
+          "unit",
+          "value"
         ],
-        "cover_fields_votes": {
-          "value": "5/6",
-          "unit": "5/6",
-          "time": "1/6"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/7",
+            "status": "5/7",
+            "time": "1/7",
+            "unit": "5/7",
+            "value": "5/7"
+          }
         }
       }
     },
@@ -2844,8 +3002,19 @@
         "must_cover": true,
         "must_cover_source": "llm",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "3/7"
+          }
+        }
       }
     },
     {
@@ -2939,9 +3108,14 @@
         "cover_fields": [
           "status"
         ],
-        "cover_fields_votes": {
-          "status": "4/4",
-          "polarity": "0/4"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 7,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "4/7"
+          }
         }
       }
     },
@@ -3049,8 +3223,17 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/7"
+          }
+        }
       }
     },
     {
@@ -3174,8 +3357,19 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "6/7",
+            "status": "6/7"
+          }
+        }
       }
     },
     {
@@ -3258,10 +3452,17 @@
         "must_cover_source": "llm",
         "must_not_err": false,
         "cover_fields": [
-          "polarity"
+          "polarity",
+          "status"
         ],
-        "cover_fields_votes": {
-          "polarity": "3/3"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/7",
+            "status": "4/7"
+          }
         }
       }
     },
@@ -3362,11 +3563,16 @@
         "must_cover_source": "llm",
         "must_not_err": true,
         "cover_fields": [
-          "status"
+          "polarity"
         ],
-        "cover_fields_votes": {
-          "value": "0/4",
-          "status": "4/4"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/7",
+            "status": "3/7"
+          }
         }
       }
     },
@@ -3450,7 +3656,15 @@
         "must_cover_source": "parser",
         "must_not_err": false,
         "cover_fields": [],
-        "cover_fields_votes": {}
+        "coverage_chargeable": false,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 2,
+          "field_votes": {
+            "polarity": "2/7",
+            "status": "2/7"
+          }
+        }
       }
     },
     {
@@ -3557,13 +3771,20 @@
         "must_cover_source": "parser",
         "must_not_err": true,
         "cover_fields": [
+          "polarity",
           "status"
         ],
-        "cover_fields_votes": {
-          "value": "2/5",
-          "unit": "2/5",
-          "time": "2/5",
-          "status": "5/5"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 6,
+          "field_votes": {
+            "polarity": "5/7",
+            "status": "5/7",
+            "time": "2/7",
+            "unit": "2/7",
+            "value": "2/7"
+          }
         }
       }
     },
@@ -3646,8 +3867,19 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "3/7"
+          }
+        }
       }
     },
     {
@@ -3730,10 +3962,17 @@
         "must_cover_source": "llm",
         "must_not_err": false,
         "cover_fields": [
-          "polarity"
+          "polarity",
+          "status"
         ],
-        "cover_fields_votes": {
-          "polarity": "3/3"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "3/7"
+          }
         }
       }
     },
@@ -3816,8 +4055,19 @@
         "must_cover": true,
         "must_cover_source": "text",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "3/7"
+          }
+        }
       }
     },
     {
@@ -3899,8 +4149,19 @@
         "must_cover": true,
         "must_cover_source": "llm",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "3/7"
+          }
+        }
       }
     },
     {
@@ -3982,8 +4243,19 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "3/7"
+          }
+        }
       }
     },
     {
@@ -4065,8 +4337,19 @@
         "must_cover": true,
         "must_cover_source": "parser",
         "must_not_err": false,
-        "cover_fields": [],
-        "cover_fields_votes": {}
+        "cover_fields": [
+          "polarity",
+          "status"
+        ],
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 3,
+          "field_votes": {
+            "polarity": "3/7",
+            "status": "3/7"
+          }
+        }
       }
     },
     {
@@ -4149,10 +4432,17 @@
         "must_cover_source": "parser",
         "must_not_err": false,
         "cover_fields": [
-          "polarity"
+          "polarity",
+          "status"
         ],
-        "cover_fields_votes": {
-          "polarity": "3/3"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 4,
+          "field_votes": {
+            "polarity": "4/7",
+            "status": "4/7"
+          }
         }
       }
     },
@@ -4236,10 +4526,17 @@
         "must_cover_source": "text",
         "must_not_err": false,
         "cover_fields": [
+          "polarity",
           "status"
         ],
-        "cover_fields_votes": {
-          "status": "3/3"
+        "coverage_chargeable": true,
+        "cover_probe": {
+          "pool_notes": 7,
+          "supported": 5,
+          "field_votes": {
+            "polarity": "5/7",
+            "status": "5/7"
+          }
         }
       }
     }

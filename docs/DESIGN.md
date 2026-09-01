@@ -50,8 +50,20 @@ The rule that replaced them derives the requirement from the same consensus
 that built the answer key. Every gold fact ships with the verbatim sentences
 of the 7–8 pool models that supported it. At seal time we compute, per fact:
 
-> **A field is chargeable if and only if a strict majority of the pool
-> authors actually expressed it in their own sentence.**
+> **Coverage may charge only for what real notes have proven measurable:
+> a fact is chargeable iff at least k_support (3) of the pool's own complete
+> notes score it through the production pipeline; a field is demanded iff a
+> strict majority of those notes carried it.**
+
+The probes are the pool notes themselves, run through the exact scorer that
+grades contestants — no textual heuristics and no assumptions about the
+parser. Measurability is therefore not a separate gate but a corollary: if
+most real notes scored the point in situ, the sensor demonstrably sees it;
+facts the sensor cannot see (or duplicated sibling frames no single note can
+multiply support) leave the denominator automatically, with the probe
+evidence sealed per fact (`salience.cover_probe`) and counts published.
+Identity fields (object/subject) are never demanded — anchor-tier support
+already establishes identity.
 
 Sealed as `salience.cover_fields`; scoring then requires the union of the
 note's supporting sentences to include every chargeable field.

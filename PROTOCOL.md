@@ -36,21 +36,29 @@ Optionally, a runner with an LLM gateway can re-examine disputes
 source excerpts and the sentence; only unanimous verdicts are reported
 (`adjudicated_crit`). Without a gateway, disputes are simply retained.
 
-## Quorum-demanded coverage (2026-08-31)
-Coverage credit for a must-cover fact requires the union of the note's
-supporting sentences to include every field that a **strict majority of the
-consensus-pool authors actually wrote** in their own sentences for that fact
-(sealed per fact as `salience.cover_fields`, derived deterministically from
-the fact's evidence quotes — no hand-picked field list). Consequences:
-- Naming a drug without its dose earns nothing when the pool wrote the dose.
-- A field no competent author writes (e.g. an extraction-noise time value)
-  cannot cost anyone credit.
-- Fields may be assembled across sentences ("one atomic fact per bullet" is
-  rewarded, not punished); duplicate-anchor sentences merge by strict upgrade
-  (a more complete restatement replaces a sparser one only when no filled
-  field conflicts).
-The lenient mention-count is still reported as `must_cover_hit_any` for
-transparency but plays no role in scores.
+## Empirically-derived coverage (2026-09-01)
+Coverage charging is derived by running the production scoring pipeline over
+the consensus pool's own complete notes — no textual heuristics, no
+hand-picked field lists, no parser assumptions:
+
+- A must-cover fact is **chargeable** iff at least `k_support` (3) pool notes
+  actually score it through this exact pipeline in their natural context —
+  the same evidence threshold that admitted the fact into gold. Facts below
+  it leave the coverage denominator with the probe recorded
+  (`salience.cover_probe`, counts published); duplicated sibling frames and
+  sensor-hard phrasings exit automatically.
+- A field is **demanded** iff a strict majority of those scoring notes carried
+  it (`salience.cover_fields`). Identity fields (object/subject) are never
+  demanded: anchor-tier support already establishes identity.
+- Consequences by construction: every charged point has been achieved by
+  real independent notes through the real scorer; naming a drug without its
+  dose earns nothing where the pool wrote doses; nobody is charged for
+  extraction noise or for facts the sensor cannot see in situ; when the
+  parser improves, re-derivation re-admits facts automatically.
+- The pass bar is `reference coverage x 0.7`, capped at 0.5, with no
+  artificial floor — the empty-note-fails gate guards degenerate tasks.
+- The lenient mention-count (`must_cover_hit_any`) and the exempt count
+  (`must_cover_exempt`) are reported for transparency.
 
 ## Calibration (both gates re-run on every change)
 - Negative control: reference notes score critical_wrong == 0 on all 25 tasks,
