@@ -371,6 +371,28 @@ def confirm(claim, fact, mismatch_fields, transcript):
                     demote = "value_anchored_in_source"
             elif _value_anchored(val, windows):
                 demote = "value_anchored_in_source"
+            else:
+                # Enumeration attribution: the sentence names several drugs
+                # ("estradiol 10 mg, testosterone, and progesterone 300 mg")
+                # and the matcher may bind one drug's value to another's
+                # fact. If the disputed value anchors in the topic window of
+                # ANY OTHER drug named in the same sentence, attribution is
+                # ambiguous -> dispute lane.
+                try:
+                    from detfact_consensus import DRUG_NAMES
+                    qn = _norm(quote)
+                    fact_toks = set(_entity_tokens(claim, fact))
+                    others = [d.lower() for d in DRUG_NAMES
+                              if len(str(d)) >= 5 and d.lower() in qn
+                              and d.lower() not in fact_toks]
+                    if others:
+                        tn3 = _norm(transcript)
+                        owin = fuzzy_windows(tn3, sorted(set(others))[:6])
+                        # 不要求单位邻接:口语里数值与单位常被应答词隔开
+                        if owin and _value_anchored(val, owin):
+                            demote = "enumeration_value_attribution"
+                except Exception:
+                    pass
         elif field == "unit":
             if _value_anchored(cf.get("value"), windows, unit=cf.get("unit")):
                 demote = "value_unit_anchored_in_source"
