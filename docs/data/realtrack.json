@@ -1,5 +1,5 @@
 {
- "date": "2026-09-01",
+ "date": "2026-09-02",
  "cases": 21,
  "instrument": "detfact-v2.1",
  "note": "Private real-ASR track: transcripts, notes and gold never published; aggregates only. All models are in-pool (they also authored gold); reference-notes = the clinician note that sets each case's pass bar (x0.7).",
@@ -15,10 +15,10 @@
    ],
    "critical_wrong": 0,
    "frame_disputes": 4,
-   "adjudicated_crit": 2,
+   "adjudicated_crit": 0,
    "safety_flags": 16,
    "crit_kind": "confirmed+llm",
-   "date": "2026-09-01",
+   "date": "2026-09-02",
    "pass_rate": 1.0,
    "note": "in-pool (also authored gold)"
   },
@@ -36,7 +36,7 @@
    "adjudicated_crit": 1,
    "safety_flags": 3,
    "crit_kind": "confirmed+llm",
-   "date": "2026-09-01",
+   "date": "2026-09-02",
    "pass_rate": 0.9524,
    "note": "in-pool (also authored gold)"
   },
@@ -51,29 +51,29 @@
    ],
    "critical_wrong": 0,
    "frame_disputes": 9,
-   "adjudicated_crit": 1,
+   "adjudicated_crit": 2,
    "safety_flags": 6,
    "crit_kind": "confirmed+llm",
-   "date": "2026-09-01",
+   "date": "2026-09-02",
    "pass_rate": 0.8095,
    "note": "in-pool (also authored gold)"
   },
   {
    "label": "kimi-k2p6",
    "tasks": 21,
-   "passed": 16,
+   "passed": 17,
    "mean_coverage": 0.5963,
    "coverage_ci95": [
     0.4768,
     0.7064
    ],
-   "critical_wrong": 1,
-   "frame_disputes": 4,
+   "critical_wrong": 0,
+   "frame_disputes": 5,
    "adjudicated_crit": 1,
    "safety_flags": 9,
    "crit_kind": "confirmed+llm",
-   "date": "2026-09-01",
-   "pass_rate": 0.7619,
+   "date": "2026-09-02",
+   "pass_rate": 0.8095,
    "note": "in-pool (also authored gold)"
   },
   {
@@ -90,7 +90,7 @@
    "adjudicated_crit": 1,
    "safety_flags": 3,
    "crit_kind": "confirmed+llm",
-   "date": "2026-09-01",
+   "date": "2026-09-02",
    "pass_rate": 0.8095,
    "note": "in-pool (also authored gold)"
   },
@@ -108,7 +108,7 @@
    "adjudicated_crit": 0,
    "safety_flags": 11,
    "crit_kind": "confirmed+llm",
-   "date": "2026-09-01",
+   "date": "2026-09-02",
    "pass_rate": 1.0,
    "note": "clinician reference (sets each pass bar)"
   },
@@ -126,7 +126,7 @@
    "adjudicated_crit": 0,
    "safety_flags": 1,
    "crit_kind": "confirmed+llm",
-   "date": "2026-09-01",
+   "date": "2026-09-02",
    "pass_rate": 0.6667,
    "note": "in-pool (also authored gold)"
   },
@@ -144,7 +144,7 @@
    "adjudicated_crit": 0,
    "safety_flags": 2,
    "crit_kind": "confirmed+llm",
-   "date": "2026-09-01",
+   "date": "2026-09-02",
    "pass_rate": 0.5238,
    "note": "in-pool (also authored gold)"
   }

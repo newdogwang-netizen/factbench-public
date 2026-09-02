@@ -58,7 +58,7 @@ _PAST_QUOTE_RE = re.compile(
     r"\b(was|were|had|has been|have been|tried|took|caused|gave|made "
     r"(?:me|her|him|them)|stopped|stopping|quitting|discontinued|discontinuing|resolved|went away|used to|"
     r"previously|previous|prior|past|formerly|temporarily|switched back|back to|before pregnancy|history of|initially|at first|"
-    r"completed|finished|tapered|used|felt|being (?:prescribed|given|started|tried)|were prescribed|"
+    r"completed|finished|tapered|used|felt|recalls?|recalled|remembers?|remembered|being (?:prescribed|given|started|tried)|were prescribed|"
     r"(?:increased|decreased|reduced|raised|lowered|changed|bumped|titrated|improved|worsened)"
     r"(?:\s+\S+){0,3}?\s+(?:from|to)\b|"
     r"back (?:in|then)|(?:years?|months?|weeks?|days?) ago|last "
@@ -334,7 +334,7 @@ def _freq_anchored(claim_time, windows):
     return False
 
 
-def confirm(claim, fact, mismatch_fields, transcript):
+def confirm(claim, fact, mismatch_fields, transcript, factset=None):
     """Second vote on a candidate crit.
 
     Returns (confirmed: bool, detail: dict). confirmed=False means every
@@ -372,6 +372,36 @@ def confirm(claim, fact, mismatch_fields, transcript):
         demote = None
         if field in ("value",):
             val = cf.get("value")
+            # Sibling-frame value match: if another gold fact under the
+            # same anchor carries exactly the claimed value, the claim hit
+            # the wrong sibling frame — a matcher artifact, not an error.
+            if factset is not None and val not in (None, ""):
+                _anchor_base = ".".join(
+                    str(fact.get("canonical_anchor") or "").split(".")[:3])
+                for _of in factset.get("facts", []):
+                    if _of is fact:
+                        continue
+                    if ".".join(str(_of.get("canonical_anchor") or "")
+                                .split(".")[:3]) != _anchor_base:
+                        continue
+                    if str((_of.get("fields") or {}).get("value")) == str(val):
+                        demoted.append({"field": field,
+                                        "reason": "sibling_value_match"})
+                        break
+                else:
+                    _of = None
+                if demoted and demoted[-1]["reason"] == "sibling_value_match":
+                    continue
+            # A value the parser claims but which does not literally appear
+            # in the evidence sentence is a parse artifact ("300" read as
+            # "30"), never evidence.
+            if val not in (None, "") and not any(
+                    re.search(r"(?<![\w.])" + re.escape(v) + r"(?![\w.])",
+                              _norm(quote))
+                    for v in _num_variants(val)):
+                demoted.append({"field": field,
+                                "reason": "value_not_in_quote"})
+                continue
             _sv = re.escape(str(val or ""))
             if _sv and re.search(
                     r"\bfrom\s+" + _sv + r"(?:\s*/\s*10)?\s*(?:to|down to|"
@@ -552,10 +582,10 @@ def confirm(claim, fact, mismatch_fields, transcript):
                 # faithful-history surface in both directions.
                 demote = "quote_past_morphology"
             elif c_pol == "negative" and any(
-                    re.search(r"\bwithout\b|\bno\s", w) and any(
+                    re.search(r"\bwithout\b|\bno\s|\bnot\b|\bdenie[sd]\b", w) and any(
                         t in w for t in _entity_tokens(claim, fact))
                     for w in windows) and re.search(
-                        r"\bwithout\b|\bno\s", qn_early):
+                        r"\bwithout\b|\bno\s|\bnot\b|\bdenie[sd]\b", qn_early):
                 # The negation phrasing itself is anchored in the source near
                 # this entity ("sleeps just fine without trazodone"): the
                 # note repeats the source's own negation.

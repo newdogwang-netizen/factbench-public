@@ -1029,7 +1029,7 @@ def evaluate(factset, claims, check_mode="factset", strict_extra_fields=False,
                 ok, detail = critconfirm.confirm(
                     claims[row["index"]],
                     fact_by_key.get(row.get("matched_fact_key")) or {},
-                    mmf, transcript)
+                    mmf, transcript, factset=factset)
                 if ok:
                     critical_wrong += 1
                     row["crit"] = "confirmed"
