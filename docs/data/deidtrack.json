@@ -1,0 +1,189 @@
+{
+ "date": "2026-09-01",
+ "cases": 20,
+ "instrument": "detfact-v2.1",
+ "input": "de-identified real ASR transcripts",
+ "entries": [
+  {
+   "label": "claude-opus-5",
+   "tasks": 20,
+   "passed": 15,
+   "mean_coverage": 0.5462,
+   "coverage_ci95": [
+    0.4462,
+    0.6438
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 4,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.75,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "gpt-5.5",
+   "tasks": 20,
+   "passed": 12,
+   "mean_coverage": 0.4677,
+   "coverage_ci95": [
+    0.3703,
+    0.5611
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 10,
+   "adjudicated_crit": 1,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.6,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "gpt-5.2",
+   "tasks": 20,
+   "passed": 12,
+   "mean_coverage": 0.4209,
+   "coverage_ci95": [
+    0.3309,
+    0.5213
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 3,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.6,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "gemini-2.5-flash-lite",
+   "tasks": 20,
+   "passed": 13,
+   "mean_coverage": 0.4108,
+   "coverage_ci95": [
+    0.3232,
+    0.5027
+   ],
+   "critical_wrong": 1,
+   "frame_disputes": 3,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.65,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "glm-v3",
+   "tasks": 20,
+   "passed": 11,
+   "mean_coverage": 0.4035,
+   "coverage_ci95": [
+    0.2926,
+    0.5138
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 2,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.55,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "claude-sonnet-5",
+   "tasks": 20,
+   "passed": 12,
+   "mean_coverage": 0.395,
+   "coverage_ci95": [
+    0.2937,
+    0.4893
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 8,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.6,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "claude-haiku-4.5",
+   "tasks": 20,
+   "passed": 12,
+   "mean_coverage": 0.395,
+   "coverage_ci95": [
+    0.3282,
+    0.4623
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 4,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.6,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "grok-4.6",
+   "tasks": 20,
+   "passed": 9,
+   "mean_coverage": 0.3768,
+   "coverage_ci95": [
+    0.3061,
+    0.4451
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 3,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.45,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "dsv3-opus4p5-52k-pe",
+   "tasks": 20,
+   "passed": 11,
+   "mean_coverage": 0.3579,
+   "coverage_ci95": [
+    0.2768,
+    0.4354
+   ],
+   "critical_wrong": 0,
+   "frame_disputes": 7,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.55,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  },
+  {
+   "label": "o3",
+   "tasks": 20,
+   "passed": 8,
+   "mean_coverage": 0.3143,
+   "coverage_ci95": [
+    0.2226,
+    0.4007
+   ],
+   "critical_wrong": 1,
+   "frame_disputes": 8,
+   "adjudicated_crit": 0,
+   "gen_failures": 0,
+   "crit_kind": "confirmed+llm",
+   "date": "2026-09-01",
+   "pass_rate": 0.4,
+   "note": "de-identified real ASR input; scored against sealed real gold"
+  }
+ ],
+ "note": "De-identified real consultation recordings (automated PII removal; one over-redacted case excluded). Models generate from the de-identified transcript only; scoring runs privately against the sealed real-track answer key. Known limit: chart-attachment facts were not part of the model input."
+}
