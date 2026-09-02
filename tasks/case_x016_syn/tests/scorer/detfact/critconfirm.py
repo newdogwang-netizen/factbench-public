@@ -56,11 +56,11 @@ _PASTISH = {"past", "stop", "stopped", "historical", "resolved", "worsened"}
 # verdict of "active/positive" cannot be trusted enough to convict.
 _PAST_QUOTE_RE = re.compile(
     r"\b(was|were|had|has been|have been|tried|took|caused|gave|made "
-    r"(?:me|her|him|them)|stopped|discontinued|resolved|went away|used to|"
+    r"(?:me|her|him|them)|stopped|stopping|quitting|discontinued|discontinuing|resolved|went away|used to|"
     r"previously|previous|prior|past|formerly|temporarily|switched back|back to|before pregnancy|history of|initially|at first|"
-    r"completed|finished|tapered|used|"
+    r"completed|finished|tapered|used|felt|being (?:prescribed|given|started|tried)|were prescribed|"
     r"(?:increased|decreased|reduced|raised|lowered|changed|bumped|titrated|improved|worsened)"
-    r"\s+(?:from|to)|"
+    r"(?:\s+\S+){0,3}?\s+(?:from|to)\b|"
     r"back (?:in|then)|(?:years?|months?|weeks?|days?) ago|last "
     r"(?:year|month|week|spring|summer|fall|autumn|winter)|in the "
     r"(?:spring|summer|fall|autumn|winter)|no longer)\b", re.I)
@@ -203,6 +203,21 @@ def _edit_le(a, b, maxd):
             return False
         prev = cur
     return prev[-1] <= maxd
+
+
+def _multi_drug(text_norm):
+    try:
+        from detfact_consensus import DRUG_NAMES
+    except Exception:
+        return False
+    n = 0
+    for d in DRUG_NAMES:
+        d = str(d).lower()
+        if len(d) >= 5 and d in text_norm:
+            n += 1
+            if n >= 2:
+                return True
+    return False
 
 
 def _entity_tokens(claim, fact):
@@ -482,6 +497,10 @@ def confirm(claim, fact, mismatch_fields, transcript):
             c_stat = str(mm.get("claim") or cf.get("status") or "").lower()
             if _HEDGE_QUOTE_RE.search(quote):
                 demote = "hedged_conditional_mention"
+            elif " including " in qn_early and _multi_drug(qn_early):
+                # "longstanding use of ... including A, B, C": a summarizing
+                # enumeration carries no per-item status assertion.
+                demote = "enumeration_status_untrusted"
             elif _alias:
                 demote = "alias_statement"
             elif _bare:
@@ -507,6 +526,14 @@ def confirm(claim, fact, mismatch_fields, transcript):
                 demote = "hedged_conditional_mention"
             elif c_pol == "negative" and _ADVICE_NEG_RE.search(quote):
                 demote = "advice_negation"
+            elif (c_pol == "negative"
+                  and (_wm := re.search(r"\bwithout\s+([a-z]{4,})", qn_early))
+                  and _wm.group(1) not in set(re.findall(
+                      r"[a-z]{5,}", _norm(str((fact.get("fields") or {})
+                                              .get("object") or ""))))):
+                # "melatonin (helps ... without trazodone)": the negation
+                # scopes a different entity, not this claim's anchor.
+                demote = "negation_scopes_other_entity"
             elif c_pol == "negative" and re.search(
                     r"\b(?:no|not|without)\s+(?:any\s+)?(?:change|changes|"
                     r"modification|modifications|adjustment|adjustments)\b",
@@ -524,6 +551,15 @@ def confirm(claim, fact, mismatch_fields, transcript):
                 # Past-framed sentence (resolved side effect, prior trial):
                 # faithful-history surface in both directions.
                 demote = "quote_past_morphology"
+            elif c_pol == "negative" and any(
+                    re.search(r"\bwithout\b|\bno\s", w) and any(
+                        t in w for t in _entity_tokens(claim, fact))
+                    for w in windows) and re.search(
+                        r"\bwithout\b|\bno\s", qn_early):
+                # The negation phrasing itself is anchored in the source near
+                # this entity ("sleeps just fine without trazodone"): the
+                # note repeats the source's own negation.
+                demote = "negation_anchored_in_source"
             elif c_pol == "negative" and any(
                     _STOP_WINDOW_RE.search(w) for w in windows):
                 # Model negates; source has stop/resolution language nearby.

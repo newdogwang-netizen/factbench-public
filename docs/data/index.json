@@ -18,8 +18,8 @@
    "safety_flags": 2,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "70d036c677a17816",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "a44c6367ad3f538f",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "claude-opus-5",
@@ -39,8 +39,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "90e6d6312603f817",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "bba97dd39186cc63",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "reference-notes",
@@ -60,8 +60,8 @@
    "safety_flags": 1,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "2250674e1fe9fcf7",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "c9d46e51c6d8d801",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "claude-sonnet-5",
@@ -81,8 +81,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "0826db74d5a3dd49",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "fc09318ef1799de2",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "minimax-m3",
@@ -102,8 +102,8 @@
    "safety_flags": 1,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "b7f7d272580f5763",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "70eeb0893801cac7",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "gpt-5.2",
@@ -123,8 +123,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "c11a3de16253122d",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "b4b1dd948a554d31",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "gemini-2.5-flash-lite",
@@ -144,8 +144,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "74522e2baabd26f1",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "f0cc4feb9c87440f",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "gpt-4.1",
@@ -165,8 +165,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "6e8dce1a39d52725",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "b6eeef7a8501f396",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "glm-v3",
@@ -186,8 +186,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "f76fde2ef472d4c2",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "f6191c11fb9e8787",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "grok-4.6",
@@ -207,8 +207,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "cedf57470e3cb160",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "a92ce50b9d22f68c",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "dsv3-opus4p5-52k-pe",
@@ -228,8 +228,8 @@
    "safety_flags": 3,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "474093d2b1a2822b",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "8011a35fa81196c0",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "gemini-3.1-flash-lite",
@@ -249,8 +249,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "50418dcd2f697bcb",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "a0bdd46a46035880",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "claude-haiku-4.5",
@@ -270,8 +270,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "322d572ff09981d9",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "50536da2c3dbd77b",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "gemini-3.5-flash-lite",
@@ -291,8 +291,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "4b5f3fe2ffcb6bde",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "2d5445e83702e93d",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "o4-mini",
@@ -312,8 +312,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "6194acf34a5121df",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "8beabee2aa373660",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   },
   {
    "label": "o3",
@@ -333,8 +333,8 @@
    "safety_flags": 0,
    "benchmark_version": "2.2.0",
    "protocol": "detfact-v2.1",
-   "summary_sha256": "888b1ea3f8dbfe7b",
-   "note": "task set v2.2: 25 higher-realism synthetic consults (regenerated scenarios + new HF case)"
+   "summary_sha256": "202f4f8b304429a7",
+   "note": "task set v2.2: 25 higher-realism synthetic consults"
   }
  ]
 }

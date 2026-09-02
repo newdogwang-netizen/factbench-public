@@ -13,9 +13,9 @@
  "adjudicated_crit": null,
  "safety_flags": {
   "medication_near_miss": 0,
-  "unsupported_laterality": 0,
+  "unsupported_date_admin": 0,
   "unsupported_date": 0,
-  "unsupported_date_admin": 0
+  "unsupported_laterality": 0
  },
  "rows": [
   {
