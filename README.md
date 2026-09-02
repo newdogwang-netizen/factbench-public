@@ -27,12 +27,15 @@ change?"). FactBench is built the other way around:
   contradict the answer key *and* be confirmed against the source transcript
   (the claimed value appears nowhere near the entity). To appeal one you
   would need to find the value in the source — and then it would never have
-  been convicted. We adjudicated 34 consecutive raw flags against frontier
-  models by hand; every rule that let a faithful sentence be accused was
-  fixed at the root, and the faithful-sentence corpus is sealed as a
-  permanent regression gate.
+  been convicted. We have hand-adjudicated more than sixty raw flags against frontier
+  models across three tracks; all but two were overturned, every rule
+  that let a faithful sentence be accused was fixed at the root, and
+  the faithful-sentence corpus is sealed as a permanent regression
+  gate. (The two survivors — an asserted psychiatric risk finding the
+  audio never contains, and an unsupported dosing frequency — are the
+  kind of error this benchmark exists to catch.)
 - **The instrument's own error rates are measured and published, like lab
-  equipment.** Negative controls: reference notes and a 24-note
+  equipment.** Negative controls: reference notes and a 25-note
   adjudicated-faithful corpus must score zero false convictions. Positive
   controls: a per-class error-injection recall card (dose flips, negation
   flips, history flips, drug swaps...) re-runs on every change with a sealed

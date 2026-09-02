@@ -110,6 +110,15 @@ The burden of proof is flipped by construction, not by review.
 Candidates failing vote 2 are **frame disputes**: published per task, never
 part of the pass rule.
 
+Running tally: across the synthetic, de-identified-real and private-real
+tracks, more than sixty raw flags have been hand-adjudicated against their
+sources. All but two were overturned and root-fixed (each fix gated); the two
+survivors — an asserted psychiatric risk finding the audio never contains,
+and an unsupported dosing frequency — are exactly the error class the
+channel exists to catch. One earlier published verdict was itself corrected
+after re-audit (a spoken "one fifty" the digit-only search had missed): the
+appeals discipline applies to our own rulings too.
+
 ## 5. The LLM appeals lane — and why this is not "an LLM judge with extra steps"
 
 Disputes may optionally be re-examined by LLM judges (environment-gated;
@@ -128,7 +137,7 @@ benchmark. The differences are structural, not cosmetic:
 | Reproducibility | changes when the judge model, prompt, or temperature changes | deterministic score is bit-reproducible offline; the LLM lane can only re-label a *displayed* dispute |
 | Audit trail | a scalar and maybe a rationale | every point traces to a sealed gold fact with 7–8 quoted supporters, a transcript anchor, and a named rule; every penalty is appealable sentence-by-sentence |
 | Prompt injection via the note | a real attack surface (notes can flatter or instruct the judge) | the scorer never "reads" the note as instructions; it parses it |
-| Judge error rate | unknown, unmeasured | measured and sealed: mutation recall card per error class (positive control), 0-FP floors on doctor notes and a 24-note adjudicated-faithful corpus (negative controls) |
+| Judge error rate | unknown, unmeasured | measured and sealed: mutation recall card per error class (positive control), 0-FP floors on doctor notes and a 25-note adjudicated-faithful corpus (negative controls) |
 | Self-preference / family bias | systematic and documented in the literature | judges family-isolated from contestants; unanimity required; a judge can only move a dispute to "real error", never mint or remove coverage |
 | Drift over time | "did the model improve or did the judge change?" is undecidable | any instrument change must re-pass both control gates; baselines are sealed and diffed |
 

@@ -2,8 +2,8 @@
 
 This directory is a static leaderboard served by GitHub Pages.
 
-## One-time setup (after pushing the repo)
-Repository **Settings → Pages → Source: "Deploy from a branch" → Branch: `main`, folder: `/docs`** → Save.
+## One-time setup (already done for this repo — kept for forks)
+Repository **Settings → Pages → Source: "Deploy from a branch" → Branch: `master`, folder: `/docs`** → Save.
 The site appears at `https://<org>.github.io/<repo>/` within a minute.
 
 ## Publishing a new result
