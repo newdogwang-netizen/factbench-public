@@ -11,48 +11,58 @@ verdict is reproducible and auditable down to the transcript quote.
 
 ## Why another benchmark
 
-Clinical-note factuality failures are quiet and dangerous: a dose written as
-50 mg instead of 100 mg, a stopped medication written as current, a fabricated
-order. Nearly every existing note benchmark hands the grading to a stronger
-LLM judge — which is precisely the component that is noisy on these details,
-open to prompt injection from the note itself, biased toward its own model
-family, and impossible to audit ("did the model improve, or did the judge
-change?"). FactBench is built the other way around:
+An AI scribe listens to a doctor–patient conversation and writes the clinical
+note. The dangerous failures are quiet: a dose written as 50 mg instead of
+100 mg, a stopped medication written as current, an order that was never
+given. FactBench measures exactly one thing: **does the note stay faithful to
+what was actually said?**
 
-- **The score is a measurement, not an opinion.** Coverage and critical
-  errors come from a deterministic parser + tiered fact matcher: offline,
-  no network, bit-for-bit reproducible; every point traces to a sealed gold
-  fact with 7–8 quoted supporting sentences and a transcript anchor.
-- **A critical error is non-overturnable by construction.** It must both
-  contradict the answer key *and* be confirmed against the source transcript
-  (the claimed value appears nowhere near the entity). To appeal one you
-  would need to find the value in the source — and then it would never have
-  been convicted. We have hand-adjudicated more than sixty raw flags against frontier
-  models across three tracks; all but two were overturned, every rule
-  that let a faithful sentence be accused was fixed at the root, and
-  the faithful-sentence corpus is sealed as a permanent regression
-  gate. (The two survivors — an asserted psychiatric risk finding the
-  audio never contains, and an unsupported dosing frequency — are the
-  kind of error this benchmark exists to catch.)
-- **The instrument's own error rates are measured and published, like lab
-  equipment.** Negative controls: reference notes and a 25-note
-  adjudicated-faithful corpus must score zero false convictions. Positive
-  controls: a per-class error-injection recall card (dose flips, negation
-  flips, history flips, drug swaps...) re-runs on every change with a sealed
-  drop tolerance. An LLM-judge benchmark can state none of these numbers.
-- **Coverage charges only for what is provably achievable.** A fact enters
-  the denominator only if the answer-key pool's own notes score it through
-  this exact pipeline; required fields are what a majority of those notes
-  actually carried. Name-dropping a drug without its dose earns nothing;
-  nobody is punished for extraction noise.
-- **LLMs sit only in a published appeals lane.** Ambiguous sentences
-  (~1–2% of claims) are listed as `frame_disputes` and may be re-examined by
-  two family-isolated judges — unanimous verdicts only, and they can never
-  mint or remove a single point of score.
-- **Everything needed to disagree with us ships in the repo**: sealed gold
-  with per-fact provenance, the scorer source, the control gates
-  (`make check`, `make mutation-check`), and the design audits that forced
-  each rule (`docs/DESIGN.md`).
+Most existing evals grade notes with a stronger LLM ("the judge"). That has
+three problems this benchmark is built to avoid:
+
+1. **The judge is noisy on exactly the details that matter.** LLMs misread
+   doses, tenses and negations — the same failure modes they are supposed to
+   grade.
+2. **The score is not reproducible.** Change the judge model, its prompt, or
+   the temperature, and the number moves. You cannot tell "the model
+   improved" from "the judge changed".
+3. **The score is not auditable.** A judge returns a number and a paragraph.
+   When a vendor disputes a penalty, there is nothing to appeal against.
+
+FactBench takes the opposite architecture:
+
+- **Scoring is code, not opinion.** A rule-based clinical parser extracts
+  atomic claims from the note; a deterministic matcher compares them to a
+  sealed answer key. Zero network, zero LLM calls at scoring time —
+  re-running produces byte-identical results.
+- **Every penalty is a case file.** A flagged sentence points to the exact
+  answer-key fact it contradicts, the 6–8 independent note sentences that
+  established that fact, and the transcript anchor behind it. Anyone can
+  re-try the verdict against the source.
+- **A "critical error" cannot be argued away.** It only counts when the note
+  states something (say, a dose) that appears *nowhere* in the source
+  conversation — checked automatically, spelled-number variants included. If
+  the value does appear (an old dose, a titration step), the flag is
+  downgraded to a published **dispute** instead of a penalty. So a confirmed
+  error is non-overturnable by construction: overturning it would require
+  finding the value in the source, and then it would never have been
+  confirmed.
+- **The instrument itself is under test.** Every change to the scorer must
+  re-pass two control gates: reference notes and a sealed corpus of
+  hand-verified faithful sentences must score **zero** false errors
+  (false-positive floor), and a battery of injected errors — dose flips,
+  negation removals, status flips — must still be caught (sensitivity
+  floor). An LLM judge can publish neither number.
+- **LLMs appear in exactly one place**: an optional appeals lane where two
+  judges from families unrelated to the contestants re-read the small,
+  published dispute list. They can re-label a dispute; they can never add or
+  remove a single point of score.
+
+Everything needed to disagree with us ships in this repo: the sealed answer
+keys with per-fact provenance, the scorer source, the control gates
+(`make check`, `make mutation-check`), and the design history
+([`docs/DESIGN.md`](docs/DESIGN.md)). See the [FAQ](#faq) for the questions
+this design gets asked most.
 
 ## Related work — why this slot was empty
 
@@ -76,6 +86,54 @@ the slot FactBench fills: fact-level scoring where every conviction is
 confirmed against the source transcript and every rule has a published
 control gate. (If we missed a comparable effort, open an issue — the
 comparison table has room.)
+
+## Architecture
+
+Three planes: a **private answer-key factory** builds and seals the tasks; the
+**public repo** ships tasks + scorer + gates; **scoring** is deterministic with
+one optional, bounded LLM lane.
+
+```mermaid
+flowchart TD
+    subgraph FACTORY["Answer-key factory (private, offline)"]
+        T[Fictional consultation transcript] --> P1[7 pool models each write a note]
+        P1 --> P2[Deterministic parser extracts atomic facts from every note]
+        P2 --> P3["Fact-level consensus: >= 3 independent supporters,<br/>stable fields, transcript anchoring"]
+        P3 --> P4[LLM arbitration - family-isolated - plus recorded human overrides]
+        P4 --> P5["Salience labels from an independent clinician-role note<br/>(its author is excluded from the pool)"]
+        P5 --> P6["Empirical coverage charging: a fact/field is chargeable only if<br/>the pool notes themselves score it through the production pipeline"]
+        P6 --> SEAL["Sealed gold factset (sha256) + calibration gates"]
+    end
+
+    SEAL --> TASK["Public task (harbor 1.4):<br/>transcript + template + verify.py + embedded scorer"]
+
+    subgraph SCORING["Scoring a contestant note (deterministic, offline)"]
+        N[note.md] --> PARSE[Clinical parser -> atomic claims]
+        PARSE --> MATCH[Tiered fact matcher vs sealed gold]
+        MATCH --> COV["Coverage: union of supporting sentences must include<br/>every pool-proven chargeable field"]
+        MATCH --> V1["Vote 1: claim contradicts a must-not-err fact"]
+        V1 --> V2{"Vote 2: value/assertion absent from the<br/>source transcript? (ASR-tolerant, spelled variants)"}
+        V2 -- yes --> CRIT["Confirmed critical error (non-overturnable)"]
+        V2 -- no --> DISP["Published frame dispute (outside the pass rule)"]
+        DISP -. optional, env-gated .-> LLM["Two family-isolated LLM judges;<br/>unanimous verdicts only"]
+    end
+
+    CRIT --> PASSRULE["pass = zero confirmed errors AND<br/>coverage >= reference x 0.7"]
+    COV --> PASSRULE
+
+    subgraph GATES["Control gates (re-run on every change)"]
+        G1["Negative: reference notes + 25 adjudicated-faithful notes -> 0 false errors"]
+        G2["Positive: injected dose/negation/status flips must be caught"]
+        G3["Oracle passes 25/25 (official harbor CLI); empty note fails 25/25"]
+    end
+```
+
+The same instrument runs on three datasets: the public **synthetic v2.2**
+tasks, a **de-identified real** track (models see de-identified transcripts;
+scoring stays private against the sealed real answer key; aggregates
+published), and a **private real** track (in-pool models, validity findings
+only). The leaderboard leads with the cross-dataset comparison because that
+gap — every model drops 14–30 points on real audio — is the headline finding.
 
 ## How gold is built (note-consensus v2)
 
@@ -253,6 +311,74 @@ python3 scripts/publish_result.py results/<model>/summary.json --label "Model Na
 difficulty tiers, pass rules, provenance, review status) for research pipelines,
 leaderboards, and third-party eval frameworks. Rebuild with
 `python3 scripts/build_manifest.py`; `CITATION.cff` has the citation entry.
+
+## FAQ
+
+**Q: Isn't a rule-based parser too brittle for clinical language?**
+The parser's misreadings are real but contained by architecture: a parser
+mistake can lose coverage (measurable, symmetric — the same parser built the
+answer key from the pool notes, so extraction bias largely cancels) but it
+cannot convict anyone by itself. A critical error additionally requires the
+claimed value to be absent from the source. When audits found parser-hostile
+sentence shapes, each became a *linguistic-class* guard (never an instance
+list), gated by the sensitivity battery before merging. Coverage charges only
+what the pool's own notes proved the pipeline can score — so nobody is ever
+graded on something the sensor cannot see.
+
+**Q: You still use LLMs (answer-key arbitration, the appeals lane). How is
+that different from an LLM judge?**
+Position, not presence. LLMs are used where judgment is genuinely needed —
+building the answer key by multi-model consensus, and re-reading a small
+published list of ambiguous sentences — and are structurally barred from the
+part that produces the number. A judge in the appeals lane answers one atomic
+question ("is this sentence supported by these excerpts?"), needs a unanimous
+partner verdict, and can only re-label a dispute that was already public.
+
+**Q: What stops a model from gaming the benchmark?**
+The attacks we actually ran, and what happened: *name-dropping* (listing
+drugs without doses) earns nothing, because a fact only pays out when the
+fields most pool authors wrote are present; *transcript stuffing* (pasting
+the dialogue as bullets) parses to almost nothing and fails the pass bar;
+*dose flips* are caught by the mutation gate (and the gate itself verifies
+each injection is parser-visible before counting it); training on the public
+set is detectable via the held-out track (see EVALUATORS.md).
+
+**Q: Why is the pass bar relative instead of a fixed percentage?**
+Consultations differ in how writable they are. Each task's bar is 70% of what
+an independent clinician-role note achieved on that same transcript (capped
+at 50%), so the bar tracks true difficulty, is identical for every
+contestant, and the shipped reference solution passes by construction —
+which is what keeps the official harness green (oracle 25/25).
+
+**Q: Why do you publish "disputes" instead of just counting them as errors?**
+Because we hand-adjudicated over sixty raw flags against their sources and
+almost all were faithful history colliding with a current-state answer key
+("was on 10 mg before the increase"). Counting those as errors punishes
+exactly the models that document history properly. Disputes stay visible —
+nothing is hidden — but only source-confirmed contradictions score.
+
+**Q: How do I know the answer key itself is right?**
+Every fact carries its provenance: supporter count, the verbatim sentences of
+the independent notes that established it, a transcript anchor, arbitration
+and any human-override decisions. Facts only charge coverage if the pool
+notes themselves can score them. And the key is challengeable: one published
+verdict was reversed after re-audit (a spoken "one fifty" that a digit-only
+search had missed) — the appeals discipline applies to our own rulings too.
+
+**Q: Scores dropped when you changed the metric. Doesn't that make the
+numbers meaningless?**
+Metric versions are explicit (protocol id, benchmark version, manifest sha in
+every published entry), old entries are retired rather than silently mixed,
+and every metric change shipped with an A/B accounting showing absolute
+detection counts were preserved. Rankings have been stable across regimes;
+absolute numbers are only comparable within a version.
+
+**Q: Why don't synthetic rankings match the real-audio rankings?**
+They measure different capability axes: writing from clean scripted dialogue
+vs surviving noisy, disfluent, one-sided ASR. That non-transfer (visible in
+the comparison chart, and Spearman ~0.46 in the internal study) is a finding,
+not a bug — and the reason the benchmark keeps a real-transcript track at
+all.
 
 ## License
 
